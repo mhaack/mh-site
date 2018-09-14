@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import Footer from '../components/Footer'
-import avatar from '../assets/images/markus.jpeg'
+import avatar from '../assets/images/markus.jpg'
 
 const Header = () => (
     <header id="header">
