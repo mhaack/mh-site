@@ -1,13 +1,13 @@
-# gatsby-starter-strata
-Gatsby starter based on the Strata site template, designed by [HTML5 UP](https://html5up.net/strata). Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+# Personal Website
+Code for my personal site at [www.markus-haack.de](http://www.markus-haack.de).
 
-## Preview
+# Gatsby.js ?
+The initial version of the siet was created using a gatsby starter by [Code Bushi](https://codebushi.com/gatsby-starters/). It is based on the Strata site template, designed by [HTML5 UP](https://html5up.net/strata).
 
-http://gatsby-strata.surge.sh/
-
-## Installation
-
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-strata https://github.com/ChangoMan/gatsby-starter-strata`
-
-Run `gatsby develop` in the terminal to start.
+## Technologies
+* [Gatsby.js](https://www.gatsbyjs.org)
+  * Gatsby is a static site generator for React.
+* React
+* Markdown
+* Webpack
+* GraphQl
