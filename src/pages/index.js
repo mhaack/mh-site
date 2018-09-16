@@ -123,7 +123,7 @@ export const query = graphql`
                                 }
                             }
                         }
-                        title_link
+                        link
                         github
                     }
                 }

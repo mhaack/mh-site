@@ -1,27 +1,40 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const Project = ({ project }) => (
-    <article className="6u 12u$(xsmall) work-item">
-        <a href={project.node.frontmatter.github} target="__blank" className="image fit">
-            <Img sizes={project.node.frontmatter.image.childImageSharp.sizes} />
-        </a>
+class Project extends React.Component {
+    render() {
+        const project = this.props.project
 
-        <h3>{project.node.frontmatter.title}</h3>
-        <p>{project.node.frontmatter.description}</p>
-
-        <ul className="actions">
-            <li>
+        let github = ''
+        if (project.node.frontmatter.github) {
+            github = (
                 <p>
                     More on{' '}
                     <a href={project.node.frontmatter.github} target="__blank" className="icon fa-github">
                         <span className="label">Github</span>
                     </a>
                 </p>
-            </li>
-        </ul>
-    </article>
-)
+            )
+        }
+
+        return (
+            <article className="6u 12u$(xsmall) work-item">
+                <a href={project.node.frontmatter.link} target="__blank" className="image fit">
+                    <Img sizes={project.node.frontmatter.image.childImageSharp.sizes} />
+                </a>
+
+                <h3>{project.node.frontmatter.title}</h3>
+                <p>{project.node.frontmatter.description}</p>
+
+                <ul className="actions">
+                    <li>
+                        {github}
+                    </li>
+                </ul>
+            </article>
+        )
+    }
+}
 
 const Projects = ({ projects }) => (
     <div>
