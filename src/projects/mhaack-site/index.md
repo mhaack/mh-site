@@ -1,10 +1,10 @@
 ---
 title: "This Site"
 type: "project"
-published: false
+published: true
 link: "http://markus-haack.de/"
-description: "My personal site ..."
+description: "My personal website project. I wanted to play with some modern web technologies and relaunched the site in summer 2018."
 tech_used: ["Gatsby", "React", "JavaScript", "Graphql"]
 github: "https://github.com/mhaack/mh-site"
-image: "./project.png"
+image: "./site.png"
 ---
