@@ -110,7 +110,7 @@ export default IndexPage
 
 export const query = graphql`
     query PageQuery {
-        projects: allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" }, published: { eq: true } } }) {
+        projects: allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
             edges {
                 node {
                     frontmatter {
