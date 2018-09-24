@@ -46,6 +46,15 @@ module.exports = {
                 icon: 'src/assets/images/icon_hi_res_512.png',
             },
         },
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: "UA-126340503-1",
+              head: true,
+              anonymize: true,
+              respectDNT: true
+            },
+          },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
