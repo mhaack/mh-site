@@ -7,7 +7,7 @@ const Header = () => (
     <header id="header">
         <div className="inner">
             <Link to="/" className="image avatar">
-                <img src={avatar} alt="" />
+                <img src={avatar} alt="Markus" />
             </Link>
             <h1>
                 <strong>Hi, my name is Markus</strong>

@@ -12,13 +12,14 @@ const Template = ({ children }) => (
                 site {
                     siteMetadata {
                         title
+                        description
                     }
                 }
             }
         `}
         render={data => (
             <>
-                <Helmet>
+                <Helmet htmlAttributes={{ lang: "en" }}>
                     <title>{data.site.siteMetadata.title}</title>
                     <meta name="description" content={data.site.siteMetadata.description} />
                 </Helmet>

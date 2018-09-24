@@ -10,7 +10,7 @@ class Project extends React.Component {
             github = (
                 <p>
                     More on{' '}
-                    <a href={project.node.frontmatter.github} target="__blank" className="icon fa-github">
+                    <a href={project.node.frontmatter.github} target="__blank" className="icon fa-github" title="More on Github">
                         <span className="label">Github</span>
                     </a>
                 </p>
@@ -19,7 +19,11 @@ class Project extends React.Component {
 
         return (
             <article className="6u 12u$(xsmall) work-item">
-                <a href={project.node.frontmatter.link} target="__blank" className="image fit">
+                <a
+                    href={project.node.frontmatter.link}
+                    target="__blank"
+                    className="image fit"
+                    title={project.node.frontmatter.title}>
                     <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                 </a>
 
@@ -27,9 +31,7 @@ class Project extends React.Component {
                 <p>{project.node.frontmatter.description}</p>
 
                 <ul className="actions">
-                    <li>
-                        {github}
-                    </li>
+                    <li>{github}</li>
                 </ul>
             </article>
         )
