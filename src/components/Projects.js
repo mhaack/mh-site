@@ -20,7 +20,7 @@ class Project extends React.Component {
         return (
             <article className="6u 12u$(xsmall) work-item">
                 <a href={project.node.frontmatter.link} target="__blank" className="image fit">
-                    <Img sizes={project.node.frontmatter.image.childImageSharp.sizes} />
+                    <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                 </a>
 
                 <h3>{project.node.frontmatter.title}</h3>

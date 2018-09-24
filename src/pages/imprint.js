@@ -1,8 +1,8 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import Layout from '../components/Layout'
 
 const ImprintPage = () => (
-    <div>
+    <Layout>
         <div id="main">
             <section id="one">
                 <header className="major">
@@ -107,7 +107,7 @@ const ImprintPage = () => (
                 </div>
             </section>
         </div>
-    </div>
+    </Layout>
 )
 
 export default ImprintPage
