@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => (
                     <h2>I'm ...</h2>
                 </header>
                 <p>
-                    ... a developer, a engineer and a proud dad of a wonderful daughter, based in the beautiful city of
+                    ... a developer, a engineer, a husband of a wonderful wife and a proud dad, based in the beautiful city of
                     Leipzig, Germany. I have a bachelors in computer science and even a good old Dipl-Ing lol. Currently
                     I'm a Senior Technical Lead at{' '}
                     <a href="https://www.adobe.com" target="__blank">
