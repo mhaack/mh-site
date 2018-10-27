@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 import Footer from '../components/Footer'
 import avatar from '../assets/images/markus.jpg'
 

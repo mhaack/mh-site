@@ -1,8 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
 const ImprintPage = () => (
     <Layout>
+        <Helmet>
+            <title>Imprint / Impressum</title>
+        </Helmet>
         <div id="main">
             <section id="one">
                 <header className="major">
@@ -84,13 +88,13 @@ const ImprintPage = () => (
                     </p>
                     <h3>Google Analytics</h3>
                     <p>
-                        Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. (''Google'').
-                        Google Analytics verwendet sog. ''Cookies'', Textdateien, die auf Ihrem Computer gespeichert
-                        werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie
-                        erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich Ihrer IP-Adresse)
-                        wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese
-                        Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die
-                        Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der
+                        Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc.
+                        (&quot;Google&quot;). Google Analytics verwendet sog. ’Cookies’, Textdateien, die auf Ihrem
+                        Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht.
+                        Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website (einschließlich
+                        Ihrer IP-Adresse) wird an einen Server von Google in den USA übertragen und dort gespeichert.
+                        Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports
+                        über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der
                         Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird
                         Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich
                         vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in
