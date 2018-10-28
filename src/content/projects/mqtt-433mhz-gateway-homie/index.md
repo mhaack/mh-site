@@ -5,5 +5,6 @@ description: 'This project is a simple bidirectional gateway to transmit and rec
 tech_used: ['Arduino', 'ESP8266', 'C++', 'BMP085']
 link: 'https://www.hackster.io/markushaack/smart-home-433mhz-rf-mqtt-gateway-with-some-extras-bbb1ca'
 github: 'https://github.com/mhaack/mqtt-433mhz-gateway-homie'
+hacksterio: 'https://www.hackster.io/markushaack/smart-home-433mhz-rf-mqtt-gateway-with-some-extras-bbb1ca'
 image: './mqtt-gateway-with-temp.png'
 ---
