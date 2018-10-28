@@ -1,5 +1,5 @@
 import React from 'react'
-import { object } from 'prop-types'
+import { object, arrayOf } from 'prop-types'
 import Img from 'gatsby-image'
 
 class Project extends React.Component {
@@ -10,18 +10,36 @@ class Project extends React.Component {
     render() {
         const project = this.props.project
 
-        let github = ''
+        let githubLink = ''
+        let hacksterioLink = ''
         if (project.node.frontmatter.github) {
-            github = (
+            githubLink = (
+                <a
+                    href={project.node.frontmatter.github}
+                    target="__blank"
+                    className="icon simple-github"
+                    title="More on Github">
+                    <span className="label">Github</span>
+                </a>
+            )
+        }
+        if (project.node.frontmatter.hacksterio) {
+            hacksterioLink = (
+                <a
+                    href={project.node.frontmatter.hacksterio}
+                    target="__blank"
+                    className="icon simple-hackster"
+                    title="More on Hackster.io">
+                    <span className="label">Hackster.io</span>
+                </a>
+            )
+        }
+
+        let moreLinks = ''
+        if (githubLink || hacksterioLink) {
+            moreLinks = (
                 <p>
-                    More on{' '}
-                    <a
-                        href={project.node.frontmatter.github}
-                        target="__blank"
-                        className="icon fa-github"
-                        title="More on Github">
-                        <span className="label">Github</span>
-                    </a>
+                    More on {githubLink} {hacksterioLink}
                 </p>
             )
         }
@@ -40,7 +58,7 @@ class Project extends React.Component {
                 <p>{project.node.frontmatter.description}</p>
 
                 <ul className="actions">
-                    <li>{github}</li>
+                    <li>{moreLinks}</li>
                 </ul>
             </article>
         )
@@ -58,7 +76,7 @@ const Projects = ({ projects }) => (
     </div>
 )
 Projects.propTypes = {
-    projects: object.isRequired
+    projects: arrayOf(object).isRequired
 }
 
 export default Projects

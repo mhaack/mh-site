@@ -5,5 +5,6 @@ description: 'The mqtt-bme280-homie project is a small and easy to integrate tem
 tech_used: ['Arduino', 'ESP8266', 'C++', 'BME280']
 link: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
 github: 'https://github.com/mhaack/mqtt-bme280-homie'
+hacksterio: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
 image: './sensor.jpg'
 ---
