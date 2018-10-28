@@ -22,19 +22,10 @@
         font-size: 1.5em;
     }
 
-    .simple-github:before {
+    .icon-hackster:before {
         display: inline-block;
         overflow: hidden;
-        content: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg');
-        filter: invert(0.5);
-        height: 20px;
-        width: 20px;
-    }
-    .simple-hackster:before {
-        display: inline-block;
-        overflow: hidden;
-        content: url('https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/hackster.svg');
-        filter: invert(0.5);
+        content: url('images/hackster.svg');
         height: 20px;
         width: 20px;
     }

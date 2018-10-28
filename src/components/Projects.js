@@ -17,7 +17,7 @@ class Project extends React.Component {
                 <a
                     href={project.node.frontmatter.github}
                     target="__blank"
-                    className="icon simple-github"
+                    className="icon fa-github"
                     title="More on Github">
                     <span className="label">Github</span>
                 </a>
@@ -28,7 +28,7 @@ class Project extends React.Component {
                 <a
                     href={project.node.frontmatter.hacksterio}
                     target="__blank"
-                    className="icon simple-hackster"
+                    className="icon icon-hackster"
                     title="More on Hackster.io">
                     <span className="label">Hackster.io</span>
                 </a>
