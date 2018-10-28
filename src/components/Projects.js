@@ -65,7 +65,7 @@ class Project extends React.Component {
 
 const Projects = ({ projects }) => (
     <div>
-        <h2>Stuff I’ve Worked On</h2>
+        <h2>Stuff I've Worked On</h2>
         <div className="row">
             {projects.map(project => (
                 <Project key={project.node.frontmatter.title} project={project} />
@@ -73,6 +73,7 @@ const Projects = ({ projects }) => (
         </div>
     </div>
 )
+
 Projects.propTypes = {
     projects: arrayOf(object).isRequired
 }

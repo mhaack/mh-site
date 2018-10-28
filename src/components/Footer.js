@@ -39,16 +39,11 @@ const Footer = () => (
             <ul className="copyright">
                 <li>&copy; Markus Haack</li>
                 <li>
-                    Built with:{' '}
-                    <a href="https://www.gatsbyjs.org/" title="Gatsby.js">
-                        Gatsby.js
-                    </a>{' '}
-                    &amp; <a href="http://html5up.net">HTML5 UP</a>
+                    Built with: <a href="https://www.gatsbyjs.org/" title="Gatsby.js">Gatsby.js</a> &amp;{' '}
+                    <a href="http://html5up.net">HTML5 UP</a>
                 </li>
                 <li>
-                    <Link to="imprint" title="Impressum">
-                        Impressum
-                    </Link>
+                    <Link to="imprint" title="Impressum">Impressum</Link>
                 </li>
             </ul>
         </div>
