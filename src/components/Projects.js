@@ -7,42 +7,40 @@ class Project extends React.Component {
         project: object.isRequired
     }
 
-    render() {
-        const project = this.props.project
+    renderActionLinks(frontmatter) {
+        const githubLink = frontmatter.github ? (
+            <a href={frontmatter.github} target="__blank" className="icon fa-github" title="More on Github">
+                <span className="label">Github</span>
+            </a>
+        ) : (
+            ''
+        )
 
-        let githubLink = ''
-        let hacksterioLink = ''
-        if (project.node.frontmatter.github) {
-            githubLink = (
-                <a
-                    href={project.node.frontmatter.github}
-                    target="__blank"
-                    className="icon fa-github"
-                    title="More on Github">
-                    <span className="label">Github</span>
-                </a>
-            )
-        }
-        if (project.node.frontmatter.hacksterio) {
-            hacksterioLink = (
-                <a
-                    href={project.node.frontmatter.hacksterio}
-                    target="__blank"
-                    className="icon icon-hackster"
-                    title="More on Hackster.io">
-                    <span className="label">Hackster.io</span>
-                </a>
-            )
-        }
+        const hacksterLink = frontmatter.hacksterio ? (
+            <a
+                href={frontmatter.hacksterio}
+                target="__blank"
+                className="icon icon-hackster"
+                title="More on Hackster.io">
+                <span className="label">Hackster.io</span>
+            </a>
+        ) : (
+            ''
+        )
 
-        let moreLinks = ''
-        if (githubLink || hacksterioLink) {
-            moreLinks = (
+        let actionLinks = ''
+        if (githubLink || hacksterLink) {
+            actionLinks = (
                 <p>
-                    More on {githubLink} {hacksterioLink}
+                    More on {githubLink} {hacksterLink}
                 </p>
             )
         }
+        return actionLinks
+    }
+
+    render() {
+        const project = this.props.project
 
         return (
             <article className="6u 12u$(xsmall) work-item">
@@ -58,7 +56,7 @@ class Project extends React.Component {
                 <p>{project.node.frontmatter.description}</p>
 
                 <ul className="actions">
-                    <li>{moreLinks}</li>
+                    <li>{this.renderActionLinks(project.node.frontmatter)}</li>
                 </ul>
             </article>
         )
