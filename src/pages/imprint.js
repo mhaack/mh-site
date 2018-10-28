@@ -1,8 +1,12 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import Layout from '../components/Layout'
 
 const ImprintPage = () => (
     <Layout>
+        <Helmet>
+            <title>Imprint / Impressum</title>
+        </Helmet>
         <div id="main">
             <section id="one">
                 <header className="major">
