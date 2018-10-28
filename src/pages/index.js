@@ -1,5 +1,4 @@
 import React from 'react'
-import { object } from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Projects from '../components/Projects'
@@ -9,16 +8,16 @@ const IndexPage = ({ data }) => (
         <div id="main">
             <section id="one">
                 <header className="major">
-                    <h2>I’m ...</h2>
+                    <h2>I'm ...</h2>
                 </header>
                 <p>
-                    ... a developer, a engineer, a husband of a wonderful wife and a proud dad, based in the beautiful
-                    city of Leipzig, Germany. I have a bachelors in computer science and even a good old Dipl-Ing lol.
-                    Currently I’m a Senior Technical Lead at{' '}
+                    ... a developer, a engineer, a husband of a wonderful wife and a proud dad, based in the beautiful city of
+                    Leipzig, Germany. I have a bachelors in computer science and even a good old Dipl-Ing lol. Currently
+                    I'm a Senior Technical Lead at{' '}
                     <a href="https://www.adobe.com" target="__blank">
                         Adobe
                     </a>
-                    .<br />I play with LEGO and various of electronic &amp; IOT stuff and I’m keen in automating our
+                    .<br />I play with LEGO and various of electronic &amp; IOT stuff and I'm keen in automating our
                     house with all kinds of usefull and useless smart devices.
                 </p>
             </section>
@@ -75,9 +74,6 @@ const IndexPage = ({ data }) => (
         </div>
     </Layout>
 )
-IndexPage.propTypes = {
-    data: object.isRequired
-}
 
 export default IndexPage
 

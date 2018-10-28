@@ -1,12 +1,7 @@
 import React from 'react'
-import { object } from 'prop-types'
 import Img from 'gatsby-image'
 
 class Project extends React.Component {
-    static propTypes = {
-        project: object.isRequired
-    }
-
     render() {
         const project = this.props.project
 
@@ -15,11 +10,7 @@ class Project extends React.Component {
             github = (
                 <p>
                     More on{' '}
-                    <a
-                        href={project.node.frontmatter.github}
-                        target="__blank"
-                        className="icon fa-github"
-                        title="More on Github">
+                    <a href={project.node.frontmatter.github} target="__blank" className="icon fa-github" title="More on Github">
                         <span className="label">Github</span>
                     </a>
                 </p>
@@ -49,7 +40,7 @@ class Project extends React.Component {
 
 const Projects = ({ projects }) => (
     <div>
-        <h2>Stuff I’ve Worked On</h2>
+        <h2>Stuff I've Worked On</h2>
         <div className="row">
             {projects.map(project => (
                 <Project key={project.node.frontmatter.title} project={project} />
@@ -57,8 +48,5 @@ const Projects = ({ projects }) => (
         </div>
     </div>
 )
-Projects.propTypes = {
-    projects: object.isRequired
-}
 
 export default Projects
