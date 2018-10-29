@@ -55,13 +55,13 @@ const IndexPage = ({ data }) => (
                                 <div className="12u">
                                     <textarea name="message" id="message" placeholder="Message" rows="4" />
                                 </div>
+                                <ul className="actions">
+                                    <li>
+                                        <input type="submit" value="Send Message" />
+                                    </li>
+                                </ul>
                             </div>
                         </form>
-                        <ul className="actions">
-                            <li>
-                                <input type="submit" value="Send Message" />
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </section>
