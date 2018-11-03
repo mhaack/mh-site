@@ -1,5 +1,6 @@
 ---
 title: 'Creepy Halloween Eyes'
+date: '2018-10-30'
 type: 'project'
 description: 'My first 2018 halloween project - a creepy pumpkin watching you. Every step you take, every move you make is seen by this little guy.'
 tech_used: ['Arduino', 'ESP8266', 'C++']

@@ -1,5 +1,6 @@
 ---
 title: 'This Site'
+date: '2018-09-14'
 type: 'project'
 link: 'http://markus-haack.de/'
 description: 'My personal website project. I wanted to play with some modern web technologies and relaunched the site in summer 2018.'

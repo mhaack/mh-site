@@ -77,7 +77,10 @@ export default IndexPage
 
 export const query = graphql`
     query PageQuery {
-        projects: allMarkdownRemark(filter: { frontmatter: { type: { eq: "project" } } }) {
+        projects: allMarkdownRemark(
+            filter: { frontmatter: { type: { eq: "project" } } }
+            sort: { fields: [frontmatter___date], order: DESC }
+        ) {
             edges {
                 node {
                     frontmatter {
