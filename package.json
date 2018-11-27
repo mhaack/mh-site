@@ -21,7 +21,13 @@
         "node-sass": "^4.9.3",
         "react": "^16.5.1",
         "react-dom": "^16.5.1",
-        "react-helmet": "^5.2.0"
+        "react-helmet": "^5.2.0",
+        "react-scroll-to-element": "^0.2.0",
+        "react-scrollspy": "^3.3.5",
+        "react-waypoint": "^8.0.3"
+    },
+    "devDependencies": {
+        "prettier": "^1.12.0"
     },
     "homepage": "https://github.com/mhaack/mh-site",
     "license": "MIT",
@@ -30,7 +36,6 @@
         "url": "https://github.com/mhaack/mh-site.git"
     },
     "scripts": {
-        "dev": "gatsby develop",
         "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
         "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",

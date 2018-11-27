@@ -9,7 +9,7 @@ class Project extends React.Component {
 
     renderActionLinks(frontmatter) {
         const githubLink = frontmatter.github ? (
-            <a href={frontmatter.github} target="__blank" className="icon fa-github" title="More on Github">
+            <a href={frontmatter.github} target="__blank" className="icon fab fa-github" title="More on Github">
                 <span className="label">Github</span>
             </a>
         ) : (
@@ -31,9 +31,12 @@ class Project extends React.Component {
         let actionLinks = ''
         if (githubLink || hacksterLink) {
             actionLinks = (
-                <p>
-                    More on {githubLink} {hacksterLink}
-                </p>
+                <>
+                    <br />
+                    <span className="more">
+                        {githubLink} {hacksterLink}
+                    </span>
+                </>
             )
         }
         return actionLinks
@@ -41,37 +44,31 @@ class Project extends React.Component {
 
     render() {
         const project = this.props.project
-
         return (
-            <article className="6u 12u$(xsmall) work-item">
-                <a
-                    href={project.node.frontmatter.link}
-                    target="__blank"
-                    className="image fit"
-                    title={project.node.frontmatter.title}>
-                    <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
+            <li>
+                <a href={project.node.frontmatter.link} target="__blank" title={project.node.frontmatter.title}>
+                    <h3>{project.node.frontmatter.title}</h3>
                 </a>
-
-                <h3>{project.node.frontmatter.title}</h3>
-                <p>{project.node.frontmatter.description}</p>
-
-                <ul className="actions">
-                    <li>{this.renderActionLinks(project.node.frontmatter)}</li>
-                </ul>
-            </article>
+                <p>
+                    <span class="image left">
+                        <a href={project.node.frontmatter.link} target="__blank" title={project.node.frontmatter.title}>
+                            <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
+                        </a>
+                    </span>
+                    {project.node.frontmatter.description}
+                    {this.renderActionLinks(project.node.frontmatter)}
+                </p>
+            </li>
         )
     }
 }
 
 const Projects = ({ projects }) => (
-    <div>
-        <h2>Stuff I've Worked On</h2>
-        <div className="row">
-            {projects.map(project => (
-                <Project key={project.node.frontmatter.title} project={project} />
-            ))}
-        </div>
-    </div>
+    <ul>
+        {projects.map(project => (
+            <Project key={project.node.frontmatter.title} project={project} />
+        ))}
+    </ul>
 )
 
 Projects.propTypes = {

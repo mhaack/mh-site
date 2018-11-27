@@ -1,85 +1,103 @@
 import React from 'react'
-import { object } from 'prop-types'
 import { graphql } from 'gatsby'
+import Waypoint from 'react-waypoint'
+
 import Layout from '../components/Layout'
+import Header from '../components/HeaderMain'
 import Projects from '../components/Projects'
+import Nav from '../components/Nav'
 
-const IndexPage = ({ data }) => (
-    <Layout>
-        <div id="main">
-            <section id="one">
-                <header className="major">
-                    <h2>I'm ...</h2>
-                </header>
-                <p>
-                    ... a developer, a engineer, a husband of a wonderful wife and a proud dad, based in the beautiful
-                    city of Leipzig, Germany. I have a bachelors in computer science and even a good old Dipl-Ing lol.
-                    Currently I'm a Senior Technical Lead at{' '}
-                    <a href="https://www.adobe.com" target="__blank">
-                        Adobe
-                    </a>
-                    .<br />I play with LEGO and various of electronic &amp; IOT stuff and I'm keen in automating our
-                    house with all kinds of usefull and useless smart devices.
-                </p>
-            </section>
-            <section id="two">
-                <Projects projects={data.projects.edges} />
-                <ul className="actions">
-                    <li>
-                        <a href="https://github.com/mhaack" className="button">
-                            More on GitHub
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section id="three">
-                <h2>Get In Touch</h2>
-                <p>Want to have a chat? Send me a message.</p>
-                <div className="row">
-                    <div>
-                        <form
-                            name="contact"
-                            method="post"
-                            action="/success"
-                            data-netlify="true"
-                            data-netlify-honeypot="bot-field">
-                            <input type="hidden" name="bot-field" />
+import avatar from '../assets/images/markus.jpg'
 
-                            <div className="row uniform 50%">
-                                <div className="6u 12u$(xsmall)">
-                                    <input type="text" name="name" id="name" placeholder="Name" />
-                                </div>
-                                <div className="6u 12u$(xsmall)">
-                                    <input type="email" name="email" id="email" placeholder="Email" />
-                                </div>
-                                <div className="12u">
-                                    <textarea name="message" id="message" placeholder="Message" rows="4" />
-                                </div>
-                                <ul className="actions">
-                                    <li>
-                                        <input type="submit" value="Send Message" />
-                                    </li>
-                                </ul>
+class Index extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            stickyNav: false
+        }
+    }
+
+    _handleWaypointEnter = () => {
+        this.setState(() => ({ stickyNav: false }))
+    }
+
+    _handleWaypointLeave = () => {
+        this.setState(() => ({ stickyNav: true }))
+    }
+
+    render() {
+        return (
+            <Layout>
+                <Header />
+                <Waypoint onEnter={this._handleWaypointEnter} onLeave={this._handleWaypointLeave} />
+                <Nav sticky={this.state.stickyNav} />
+
+                <div id="main">
+                    <section id="intro" className="main">
+                        <div className="spotlight">
+                            <div className="content">
+                                <header className="major">
+                                    <h2>Hello I'm ...</h2>
+                                </header>
+                                <p>
+                                    ...Markus Haack, a developer, a engineer, a husband of a wonderful wife and a proud
+                                    dad, based in the beautiful city of Leipzig, Germany. I have a bachelors in computer
+                                    science and even a good old Dipl-Ing lol.
+                                    <br />
+                                    Currently I'm a Senior Technical Lead at{' '}
+                                    <a href="https://www.adobe.com" target="__blank">
+                                        Adobe
+                                    </a>{' '}
+                                    working on commerce and Adobe Experince Manager.
+                                </p>
+                                <p>
+                                    I play with LEGO and various of electronic &amp; IOT stuff and I'm keen in
+                                    automating our house with all kinds of usefull and useless smart devices.
+                                </p>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </Layout>
-)
+                            <span className="image">
+                                <img src={avatar} alt="Markus" />
+                            </span>
+                        </div>
+                    </section>
 
-IndexPage.propTypes = {
-    data: object.isRequired
+                    <section id="projects" className="main projects">
+                        <header className="special major">
+                            <h2>My Latest Projects</h2>
+                            <p>Stuff I worked on recently</p>
+                        </header>
+
+                        <Projects projects={this.props.data.projects.edges} />
+
+                        {/* <footer className="major">
+                            <ul className="actions">
+                                <li>
+                                    <Link to="/projects" className="button">
+                                        Explore all my projects
+                                    </Link>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/mhaack" className="button">
+                                        More on GitHub
+                                    </a>
+                                </li>
+                            </ul>
+                        </footer> */}
+                    </section>
+                </div>
+            </Layout>
+        )
+    }
 }
 
-export default IndexPage
+export default Index
 
 export const query = graphql`
     query PageQuery {
         projects: allMarkdownRemark(
             filter: { frontmatter: { type: { eq: "project" } } }
             sort: { fields: [frontmatter___date], order: DESC }
+            limit: 10
         ) {
             edges {
                 node {
@@ -88,7 +106,7 @@ export const query = graphql`
                         description
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 500) {
+                                fluid(maxWidth: 200) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
