@@ -1,4 +1,5 @@
 import React from 'react'
+import { node } from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import Footer from './Footer'
@@ -6,6 +7,10 @@ import Footer from './Footer'
 import '../assets/scss/main.scss'
 
 class Template extends React.Component {
+    static propTypes = {
+        children: node.isRequired
+    }
+    
     constructor(props) {
         super(props)
         this.state = {

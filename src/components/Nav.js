@@ -1,4 +1,5 @@
 import React from 'react'
+import { string } from 'prop-types'
 import Scrollspy from 'react-scrollspy'
 import Scroll from './Scroll'
 
@@ -23,5 +24,9 @@ const Nav = props => (
         </Scrollspy>
     </nav>
 )
+
+Nav.propTypes = {
+    sticky: string
+}
 
 export default Nav

@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-const Footer = props => (
+const Footer = () => (
     <footer id="footer">
         <section id="contact">
             <h2>Get In Touch</h2>
@@ -11,7 +11,7 @@ const Footer = props => (
 
                 <div className="row uniform 50%">
                     <div className="6u 12u$(xsmall)">
-                        <input type="text" name="name" id="name" placeholder="Name" aria-label="Name"/>
+                        <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" />
                     </div>
                     <div className="6u 12u$(xsmall)">
                         <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" />

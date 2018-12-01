@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../assets/images/logo.svg'
+import { object } from 'prop-types';
 
 class HeaderGeneric extends React.Component {
     render() {
@@ -20,6 +21,10 @@ class HeaderGeneric extends React.Component {
             </header>
         )
     }
+}
+
+HeaderGeneric.propTypes = {
+    header: object
 }
 
 export default HeaderGeneric
