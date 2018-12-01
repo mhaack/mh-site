@@ -1,4 +1,5 @@
 import React from 'react'
+import { shape, object, arrayOf } from 'prop-types'
 import { graphql } from 'gatsby'
 import Waypoint from 'react-waypoint'
 
@@ -88,6 +89,12 @@ class Index extends React.Component {
             </Layout>
         )
     }
+}
+
+Index.propTypes = {
+    data: shape({
+        projects: arrayOf(object).isRequired
+      }).isRequired
 }
 
 export default Index

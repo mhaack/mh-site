@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import logo from '../assets/images/logo.svg'
 
-const Header = props => (
+const Header = () => (
     <header id="header" className="alt">
         <span className="logo">
             <Link to="/" title="Back to home">
