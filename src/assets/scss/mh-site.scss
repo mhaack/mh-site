@@ -1,5 +1,11 @@
 /* Work Item aka. project animation */
 
+%hackster-icon {
+    display: inline-block;
+    overflow: hidden;
+    content: url('../images/hackster.svg');
+}
+
 .main.projects {
     li {
         display: inline-block;
@@ -25,11 +31,30 @@
         }
     }
     .icon-hackster:before {
-        display: inline-block;
-        overflow: hidden;
-        content: url('../images/hackster.svg');
-        height: 19px;
+        @extend %hackster-icon;
+        height: 17px;
         width: 20px;
+    }
+}
+
+.project-page {
+    p {
+        margin: 0 0 1em 0;
+    }
+    a.gatsby-resp-image-link {
+        border-bottom: none;
+    }
+    .project-meta {
+        display: inherit;
+        font-size: 0.8em;
+    }
+    .icon {
+        font-size: 1.5em;
+    }
+    .icon-hackster:before {
+        @extend %hackster-icon;
+        height: 26px;
+        width: 24px;
     }
 }
 

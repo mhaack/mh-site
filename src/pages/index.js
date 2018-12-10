@@ -5,7 +5,7 @@ import Waypoint from 'react-waypoint'
 
 import Layout from '../components/Layout'
 import Header from '../components/HeaderMain'
-import Projects from '../components/Projects'
+import ProjectList from '../components/ProjectList'
 import Nav from '../components/Nav'
 
 import avatar from '../assets/images/markus.jpg'
@@ -68,7 +68,7 @@ class Index extends React.Component {
                             <p>Stuff I worked on recently</p>
                         </header>
 
-                        <Projects projects={this.props.data.projects.edges} />
+                        <ProjectList projects={this.props.data.projects.edges} />
 
                         {/* <footer className="major">
                             <ul className="actions">
@@ -94,7 +94,7 @@ class Index extends React.Component {
 Index.propTypes = {
     data: shape({
         projects: arrayOf(object).isRequired
-      }).isRequired
+    }).isRequired
 }
 
 export default Index
@@ -108,6 +108,9 @@ export const query = graphql`
         ) {
             edges {
                 node {
+                    fields {
+                        slug
+                    }
                     frontmatter {
                         title
                         description
@@ -118,7 +121,6 @@ export const query = graphql`
                                 }
                             }
                         }
-                        link
                         github
                         hacksterio
                     }
