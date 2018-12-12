@@ -49,15 +49,15 @@ class Project extends React.Component {
                 <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
                     <h3>{project.node.frontmatter.title}</h3>
                 </a>
-                <p>
-                    <span class="image left">
+                <div>
+                    <span className="image left">
                         <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
                             <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                         </a>
                     </span>
                     {project.node.frontmatter.description}
                     {this.renderActionLinks(project.node.frontmatter)}
-                </p>
+                </div>
             </li>
         )
     }

@@ -42,6 +42,9 @@ export const query = graphql`
         ) {
             edges {
                 node {
+                    fields {
+                        slug
+                    }
                     frontmatter {
                         title
                         description
