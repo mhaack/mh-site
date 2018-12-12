@@ -11,7 +11,7 @@ image: './pumpkin-header.jpg'
 ## Story
 Halloween is coming in a few days and here is the first of my Halloween projects this year. I wanted to rebuild an cool Arduino project I found on [YouTube](https://youtu.be/ryUNHPJ3leY) - the pumpkin with moving eyes.
 
-<iframe width="615" height="352" src="https://www.youtube.com/embed/8-jia1-PfCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="video-container"><iframe width="615" height="352" src="https://www.youtube.com/embed/8-jia1-PfCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 The project is not that complicated and easy to rebuild. Now we see how to do that. 
 

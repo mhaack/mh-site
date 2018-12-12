@@ -5,7 +5,7 @@ type: 'project'
 description: 'This project is a simple bidirectional gateway to transmit and receive 433Mhz RF signals connected to MQTT. It is built with a cost-effective ESP8266 WiFi chip, simple 433Mhz RF modules and an additional BMP085 sensor.'
 github: 'https://github.com/mhaack/mqtt-433mhz-gateway-homie'
 hacksterio: 'https://www.hackster.io/markushaack/smart-home-433mhz-rf-mqtt-gateway-with-some-extras-bbb1ca'
-image: './box.jpg'
+image: './header.jpg'
 ---
 
 ## Smart Home 433Mhz RF <-> MQTT Gateway with Some Extras
@@ -18,6 +18,10 @@ It enables you to:
 
 The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable an easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
 
+The final assembly looks like this:
+
+![final assembly](electronics-1.jpg)
+
 ### Hardware
 
 - ESP8266 (Wemos D1 mini, Nodemcu)
@@ -28,7 +32,13 @@ The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) t
 I got the RF modules form https://www.sparkfun.com, others will do as well. Additional I got some [Wemos Protoboards](https://www.wemos.cc/product/protoboard.html), an USB power supply with a very short cable
 and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to keep all together.
 
+The circuit inside the enclosure box:
+
+![final assembly in box](electronics-2.jpg)
+
 ### Building the circuit
+
+The wireing of the gateway project is very easy. The sensor, the transmitter and the receiver must be connected to VIN & GND and the GPIO pins of the ESP8266 board as shown in the table below.
 
 ![Fritzing Diagram](fritzing.jpg)
 
