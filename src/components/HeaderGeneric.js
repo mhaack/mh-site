@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../assets/images/logo.svg'
-import { object } from 'prop-types';
+import { object } from 'prop-types'
 
 class HeaderGeneric extends React.Component {
     render() {
-        const headerTitle = this.props.header.title ? <h1>{this.props.header.title}</h1> : ''
-        const headerDescription = this.props.header.description ? <p>{this.props.header.description}</p> : ''
+        const title = this.props.header.title ? <h1>{this.props.header.title}</h1> : ''
+        const description = this.props.header.description ? <p>{this.props.header.description}</p> : ''
 
         return (
             <header id="header">
@@ -16,8 +16,8 @@ class HeaderGeneric extends React.Component {
                         <img src={logo} alt="" />
                     </Link>
                 </span>
-                {headerTitle}
-                {headerDescription}
+                {title}
+                {description}
             </header>
         )
     }

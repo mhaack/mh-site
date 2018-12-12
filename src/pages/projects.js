@@ -3,7 +3,7 @@ import { object } from 'prop-types'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
-import Projects from '../components/Projects'
+import ProjectList from '../components/ProjectList'
 import Layout from '../components/Layout'
 import Header from '../components/HeaderGeneric'
 
@@ -22,7 +22,7 @@ const ProjectsPage = ({ data }) => (
                 <header className="special major">
                     <h2>Stuff I worked on recently</h2>
                 </header>
-                <Projects projects={data.projects.edges} />
+                <ProjectList projects={data.projects.edges} />
             </section>
         </div>
     </Layout>
@@ -42,6 +42,9 @@ export const query = graphql`
         ) {
             edges {
                 node {
+                    fields {
+                        slug
+                    }
                     frontmatter {
                         title
                         description

@@ -2,7 +2,6 @@
 @import 'libs/functions';
 @import 'libs/mixins';
 @import 'libs/skel';
-@import 'mh-site';
 @import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
@@ -79,3 +78,6 @@
 @import 'layout/main';
 @import 'layout/footer';
 @import 'layout/wrapper';
+
+// Custom
+@import 'mh-site';

@@ -46,24 +46,24 @@ class Project extends React.Component {
         const project = this.props.project
         return (
             <li>
-                <a href={project.node.frontmatter.link} target="__blank" title={project.node.frontmatter.title}>
+                <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
                     <h3>{project.node.frontmatter.title}</h3>
                 </a>
-                <p>
-                    <span class="image left">
-                        <a href={project.node.frontmatter.link} target="__blank" title={project.node.frontmatter.title}>
+                <div>
+                    <span className="image left">
+                        <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
                             <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
                         </a>
                     </span>
                     {project.node.frontmatter.description}
                     {this.renderActionLinks(project.node.frontmatter)}
-                </p>
+                </div>
             </li>
         )
     }
 }
 
-const Projects = ({ projects }) => (
+const ProjectList = ({ projects }) => (
     <ul>
         {projects.map(project => (
             <Project key={project.node.frontmatter.title} project={project} />
@@ -71,8 +71,8 @@ const Projects = ({ projects }) => (
     </ul>
 )
 
-Projects.propTypes = {
+ProjectList.propTypes = {
     projects: arrayOf(object).isRequired
 }
 
-export default Projects
+export default ProjectList
