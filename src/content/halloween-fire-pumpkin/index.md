@@ -1,5 +1,5 @@
 ---
-title: 'Jack-O-Lantern Flamethrower'
+title: 'IoT enabled Jack-O-Lantern Flamethrower'
 date: '2018-11-03'
 type: 'project'
 description: 'A flame throwing Jack-O-Lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing Jack-O-Lantern is even better.'
