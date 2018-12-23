@@ -9,36 +9,42 @@ image: './pumpkin-header.jpg'
 ---
 
 ## Story
+
 Halloween is coming in a few days and here is the first of my Halloween projects this year. I wanted to rebuild an cool Arduino project I found on [YouTube](https://youtu.be/ryUNHPJ3leY) - the pumpkin with moving eyes.
 
 <div class="video-container"><iframe width="615" height="352" src="https://www.youtube.com/embed/8-jia1-PfCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-The project is not that complicated and easy to rebuild. Now we see how to do that. 
+The project is not that complicated and easy to rebuild. Now we see how to do that.
 
 ### Parts
+
 The following components are used for this project:
-* A pumpkin 
-* 10 creepy plastic eyes
-* 10 mini servos, for example SG90
-* Thin wire
-* Thin nails
-* Plastic tube (inner diameter a little bit bigger than the eyes)
-* Wooden or plastic stick with ~ 8mm diameter
-* Wemos / Lolin D1 (or equivalent NodeMCU board)
-* Wemos ProtoBoard (or any other proto board will do as well)
-* PCB male and female pin header
-* AA Battery box holding 4 batteries 
+
+-   A pumpkin
+-   10 creepy plastic eyes
+-   10 mini servos, for example SG90
+-   Thin wire
+-   Thin nails
+-   Plastic tube (inner diameter a little bit bigger than the eyes)
+-   Wooden or plastic stick with ~ 8mm diameter
+-   Wemos / Lolin D1 (or equivalent NodeMCU board)
+-   Wemos ProtoBoard (or any other proto board will do as well)
+-   PCB male and female pin header
+-   AA Battery box holding 4 batteries
 
 ### Tools
-These are the tools needed:
- * A cutting knife
- * A small drill
- * A marker
- * Some pliers
- * Hot glue
- * Soldering iron with solder
 
-## Eyes 
+These are the tools needed:
+
+-   A cutting knife
+-   A small drill
+-   A marker
+-   Some pliers
+-   Hot glue
+-   Soldering iron with solder
+
+## Eyes
+
 The trickiest part of this project are the eyes. Tricky because they should be assembled all in the same way, especially the length of the wooden stick and position of the servo should be equally to use the same servo swing parameters for all eyes.
 
 _Instructions:_
@@ -47,6 +53,7 @@ Cut the tube and the wooden stick to the same length ~ 40mm. Hot glue the wooden
 To mount the servo hot glue it in 90-degree angle to the wooden stick on the back side of the plastic tube. Use the wire to connect servo with the end of the wooden stick. The wire must be strong enough not to bend and move the eye.
 
 ## Electronics
+
 To move 10 servos with a small Wemos board we need some extra power. These small ESP8266 boards can only handle a current of ~500 mA in total max, enough to control two or three servo motors. To solve this, I use AA batteries as additional power source to run all 10 servos. 2 boxes of 4 AA batteries in parallel provide 6 volts and enough juice to run the servos.
 
 ![Fritzing Diagram](fritzing.png)
@@ -57,18 +64,20 @@ Solder the pin header to the Wemos D1 and solder female pin header to the protot
 
 ![Electronics](electronics-3.jpg)
 
-The battery box(es) are connected with ground row (black wire) and positive row (red wire). If more than one battery box is used to provide more power they must be connected in parallel. 
+The battery box(es) are connected with ground row (black wire) and positive row (red wire). If more than one battery box is used to provide more power they must be connected in parallel.
 
 ![Electronics](electronics-1.jpg)
 
 ## Software
+
 Compared to the hardware assembly the software is relatively simple. The small program controls an array of 10 servos and changes them randomly between an min and max position value. A short delay makes the overall eye movements more random. The full code is on [GitHub](https://github.com/mhaack/halloween-pumpkin-eyes).
 
-## The pumpkin 
-The pumpkin is of course the most important part of this project 😉 
+## The pumpkin
+
+The pumpkin is of course the most important part of this project 😉
 
 _Instructions:_
-Use the marker to mark 10 circles with the size of the plastic tube used for the eyes. These should not be too close to each other to still have enough space inside. 
+Use the marker to mark 10 circles with the size of the plastic tube used for the eyes. These should not be too close to each other to still have enough space inside.
 
 ![Pumkpin](pumpkin-1.jpg)
 
@@ -88,4 +97,4 @@ Connect all servos to the headers on the board. Pay attention to the right conne
 
 ![Pumkpin](pumpkin-3.jpg)
 
-I placed some Bluetooth speaker next to the pumpkin playing some Halloween tunes from YouTube to have nice spooky sound effects. 
+I placed some Bluetooth speaker next to the pumpkin playing some Halloween tunes from YouTube to have nice spooky sound effects.
