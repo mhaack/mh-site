@@ -44,19 +44,21 @@ class Project extends React.Component {
 
     render() {
         const project = this.props.project
+        const projectFrontmatter = project.node.frontmatter
+        const projectLink = projectFrontmatter.project ? projectFrontmatter.project : project.node.fields.slug
         return (
             <li>
-                <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
-                    <h3>{project.node.frontmatter.title}</h3>
+                <a href={projectLink} title={projectFrontmatter.title}>
+                    <h3>{projectFrontmatter.title}</h3>
                 </a>
                 <div>
                     <span className="image left">
-                        <a href={project.node.fields.slug} title={project.node.frontmatter.title}>
-                            <Img fluid={project.node.frontmatter.image.childImageSharp.fluid} />
+                        <a href={projectLink} title={projectFrontmatter.title}>
+                            <Img fluid={projectFrontmatter.image.childImageSharp.fluid} />
                         </a>
                     </span>
-                    {project.node.frontmatter.description}
-                    {this.renderActionLinks(project.node.frontmatter)}
+                    {projectFrontmatter.description}
+                    {this.renderActionLinks(projectFrontmatter)}
                 </div>
             </li>
         )

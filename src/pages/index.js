@@ -121,6 +121,7 @@ export const query = graphql`
                                 }
                             }
                         }
+                        project
                         github
                         hacksterio
                     }
