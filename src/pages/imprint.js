@@ -105,6 +105,13 @@ const ImprintPage = () => (
                     Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch
                     Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
                 </p>
+                <h3>Kontaktformular</h3>
+                <p>
+                    Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus dem
+                    Anfrageformular inklusive der von Ihnen dort angegebenen Kontaktdaten zwecks Bearbeitung der Anfrage
+                    und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre
+                    Einwilligung weiter.
+                </p>
                 <p>
                     Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a>
                 </p>
