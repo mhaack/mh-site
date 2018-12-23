@@ -25,19 +25,20 @@ This is actually my second version of the flame throwing jack-o'-lantern 😀 I 
 If you are going to rebuild this project you do it at your own risks. Read the warning above - twice! Also make sure the place the pumpkin at a safe location to not harm anybody or burn down your own house!
 
 ### Hardware
+
 The following components are needed:
 
-* A big pumpkin
-* Penetrating fluid like WD-40 or cheaper replacement, it's just going to be burned anyway
-* A tea candle
-* Material for the flamethrower construction to hold the spray can
-* ESP8266 (Wemos D1 mini, Nodemcu) or ESP32
-* 1-3 PIR motion sensors
-* Strong servo motor
-* SSD1306 display (optional)
-* Prototyping board
-* male & female pin headers
-* USB cable and power supply
+-   A big pumpkin
+-   Penetrating fluid like WD-40 or cheaper replacement, it's just going to be burned anyway
+-   A tea candle
+-   Material for the flamethrower construction to hold the spray can
+-   ESP8266 (Wemos D1 mini, Nodemcu) or ESP32
+-   1-3 PIR motion sensors
+-   Strong servo motor
+-   SSD1306 display (optional)
+-   Prototyping board
+-   male & female pin headers
+-   USB cable and power supply
 
 The display is not really needed for this project, it is just used for fun to display some little animation and information which of the motion sensors triggered the fire.
 
@@ -46,12 +47,13 @@ As usual I got the most parts from [Aliexpress](https://www.aliexpress.com) but 
 ###Tools
 These are the tools needed:
 
-* A cutting knife
-* A marker
-* Soldering iron with solder
-* Tools to construct the flame throwing mechanism
+-   A cutting knife
+-   A marker
+-   Soldering iron with solder
+-   Tools to construct the flame throwing mechanism
 
 ## The flamethrower
+
 Ok, again: only build this if you have read the warning and are sure what you are doing!
 
 The key element of this project is burning penetrating fluid which if sprayed direct into a candle burns like a small flamethrower.
@@ -63,6 +65,7 @@ There are multiple ways to build the flamethrower. I used old wood pieces covere
 Bend the thick wire like on the picture above. It should be a big lever as possible to make the most of the power of the servo motor. Hot glue or screw down the servo at the side of the construction and mount it with the wire. The lever will press down the spray nozzle when the servo is activated.
 
 ## The pumpkin
+
 The pumpkin is of course the most important part for a project like this 😉
 
 First cut around the stem of the pumpkin at an angle. The top cover should be big enough, so you can later easily mount the flame thrower construction. After done cutting all the way around, remove the stem and the guts from the pumpkin. Depending on the size of the project you also need to cut out the bottom to fit in the flamethrower construction. If you have a very large pumpkin this might not be needed.
@@ -80,6 +83,7 @@ The PIR motions sensors got some protection cover and and habe been places to re
 ![pumpkin](fire-4.jpg)
 
 ## The electronics
+
 The PIR motion sensors and the servo must be connected to the Wemos / ESP8266 board, you can use any of the Dx pins, expect D0 & D1. These two will be used by the OLED display. Connect power via USB adapter or battery pack.
 
 ![Fritzing Diagram](fritzing.png)
@@ -87,6 +91,7 @@ The PIR motion sensors and the servo must be connected to the Wemos / ESP8266 bo
 Find detailed wiring instructions and an overview which pins are used by the software on [GitHub](https://github.com/mhaack/halloween-pumpkin-fire).
 
 ## The software
+
 The software project for the ESP8288 board can be found in my [GitHub](https://github.com/mhaack/halloween-pumpkin-fire) repository.
 
 After uploading the software to the board it has to be configured to connect to WiFi and MQTT. Homie provides multiple ways to do this, I prefer to create and upload a config file. Alternatively the configuration UI can be used.
@@ -131,6 +136,7 @@ The following config parameters are available via config file or MQTT message (s
 | flipScreen   | bool | flip the display screen vertically                                                              |
 
 ## The final result
+
 This is the Jack-O-Lantern on fire.
 
 ![Jack-O-Lantern](pumpkin-fire.jpg)
