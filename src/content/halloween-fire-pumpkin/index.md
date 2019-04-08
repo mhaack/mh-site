@@ -2,7 +2,7 @@
 title: 'IoT enabled Jack-O-Lantern Flamethrower'
 date: '2018-11-03'
 type: 'project'
-description: 'A flame throwing Jack-O-Lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing Jack-O-Lantern is even better.'
+description: 'A flame-throwing Jack-O-Lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing Jack-O-Lantern is even better.'
 github: 'https://github.com/mhaack/halloween-pumpkin-fire'
 hacksterio: 'https://www.hackster.io/markushaack/iot-halloween-jack-o-lantern-flamethrower-using-esp8266-e340a6'
 image: './header.jpg'
@@ -10,19 +10,19 @@ image: './header.jpg'
 
 ## Jack-O-Lantern Flamethrower
 
-A flame throwing jack-o'-lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing jack-o'-lantern is even better.
+A flame-throwing jack-o'-lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing jack-o'-lantern is even better.
 
 This Jack-O-Lantern is internet connected and can be controlled via MQTT protocol. That way the project can be integrated into a home automation solution like [OpenHab](https://www.openhab.org) or [Home Assistant](https://www.home-assistant.io) to control the flamethrower from there or via Alexa or Google Home.
 
 <div class="video-container"><iframe width="615" height="352" src="https://www.youtube.com/embed/jMbAKtgw04k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-Your are "not so much" interested in Halloween? This is for you as well, a little fire will make even the most bold of people think twice about approaching your door.
+You are "not so much" interested in Halloween? This is for you as well, a little fire will make even the most bold of people think twice about approaching your door.
 
-This is actually my second version of the flame throwing jack-o'-lantern 😀 I already build one last year using a modified room spray (like [this project](https://www.hackster.io/Dlbates/iot-flaming-and-talking-pumpkin-using-aws-and-esp8266-49934f)). But these do not allow to control the flame directly so I decided I need to build a more pro version which allows to control the duration of the flame.
+This is actually my second version of the flame-throwing jack-o'-lantern 😀 I already build one last year using a modified room spray (like [this project](https://www.hackster.io/Dlbates/iot-flaming-and-talking-pumpkin-using-aws-and-esp8266-49934f)). But these do not allow to control the flame directly so I decided I need to build a more pro version which allows controlling the duration of the flame.
 
 **Warning**: This pumpkin and playing with fire is extremely dangerous and you definitely should not make one of these. I do not endorse the manufacture or use of flamethrowers jack-o'-lanterns. The following project description is posted here are for research and entertainment purposes only.
 
-If you are going to rebuild this project you do it at your own risks. Read the warning above - twice! Also make sure the place the pumpkin at a safe location to not harm anybody or burn down your own house!
+If you are going to rebuild this project you do it at your own risks. Read the warning above - twice! Also, make sure the place the pumpkin at a safe location to not harm anybody or burn down your own house!
 
 ### Hardware
 
@@ -42,7 +42,7 @@ The following components are needed:
 
 The display is not really needed for this project, it is just used for fun to display some little animation and information which of the motion sensors triggered the fire.
 
-As usual I got the most parts from [Aliexpress](https://www.aliexpress.com) but all the parts should be available via other sources like ebay or amazon.com as well.
+As usual, I got the most parts from [Aliexpress](https://www.aliexpress.com) but all the parts should be available via other sources like ebay or amazon.com as well.
 
 ###Tools
 These are the tools needed:
@@ -50,13 +50,13 @@ These are the tools needed:
 -   A cutting knife
 -   A marker
 -   Soldering iron with solder
--   Tools to construct the flame throwing mechanism
+-   Tools to construct the flame-throwing mechanism
 
 ## The flamethrower
 
 Ok, again: only build this if you have read the warning and are sure what you are doing!
 
-The key element of this project is burning penetrating fluid which if sprayed direct into a candle burns like a small flamethrower.
+The key element of this project is burning penetrating fluid which if sprayed directly into a candle burns like a small flamethrower.
 
 There are multiple ways to build the flamethrower. I used old wood pieces covered with aluminum foil to mount the spray can and candle. Maybe not the optimal solution but working, using metal parts would be a slightly better way.
 
@@ -66,19 +66,19 @@ Bend the thick wire like on the picture above. It should be a big lever as possi
 
 ## The pumpkin
 
-The pumpkin is of course the most important part for a project like this 😉
+The pumpkin is, of course, the most important part for a project like this 😉
 
 First cut around the stem of the pumpkin at an angle. The top cover should be big enough, so you can later easily mount the flame thrower construction. After done cutting all the way around, remove the stem and the guts from the pumpkin. Depending on the size of the project you also need to cut out the bottom to fit in the flamethrower construction. If you have a very large pumpkin this might not be needed.
 
 Use the marker to mark jack-o'-lanterns face. The mouth should be at the position of the spray nozzle, so that the flame can flow out well. Make sure it is big enough so that there is no setback of the flame. I the pumpkin is not big enough the flame can also be fired through a bigger nose hole. Cut the face as marked.
 
-Place the flamethrower construction inside the pumpkin. Fix it with hot glue to stabilize it. Connect the electronics with the servo motor wires. If enough space the electronics can be place inside the pumpkin and the PIR sensors can be inside jack-o'-lanterns eyes. Make sure you have a sufficient distance between the electronic parts and the flame.
+Place the flamethrower construction inside the pumpkin. Fix it with hot glue to stabilize it. Connect the electronics with the servo motor wires. If enough space the electronics can be placed inside the pumpkin and the PIR sensors can be inside jack-o'-lanterns eyes. Make sure you have a sufficient distance between the electronic parts and the flame.
 
 ![pumpkin](fire-2.jpg)
 
 If you have a smaller pumpkin, with not enough space inside the electronics can also be placed outside. I prefer this setup because it makes you more flexible when placing the PIR motion sensors.
 
-The PIR motions sensors got some protection cover and and habe been places to recognise the movement of approaching trick-or-treaters.
+The PIR motions sensors got some protection cover and habe been places to recognize the movement of approaching trick-or-treaters.
 
 ![pumpkin](fire-4.jpg)
 
@@ -94,13 +94,13 @@ Find detailed wiring instructions and an overview which pins are used by the sof
 
 The software project for the ESP8288 board can be found in my [GitHub](https://github.com/mhaack/halloween-pumpkin-fire) repository.
 
-After uploading the software to the board it has to be configured to connect to WiFi and MQTT. Homie provides multiple ways to do this, I prefer to create and upload a config file. Alternatively the configuration UI can be used.
+After uploading the software to the board it has to be configured to connect to WiFi and MQTT. Homie provides multiple ways to do this, I prefer to create and upload a config file. Alternatively, the configuration UI can be used.
 
 My test setup looked like this:
 
 ![pumpkin](fire-3.jpg)
 
-The code is writen in C++, `halloween.cpp` is the main class.
+The code is written in C++, `halloween.cpp` is the main class.
 
 The following software libraries are used. If using PlatformIO all dependencies are resolved automatically.
 

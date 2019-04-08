@@ -14,7 +14,7 @@ Halloween is coming in a few days and here is the first of my Halloween projects
 
 <div class="video-container"><iframe width="615" height="352" src="https://www.youtube.com/embed/8-jia1-PfCQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
-The project is not that complicated and easy to rebuild. Now we see how to do that.
+The project is not complicated and easy to rebuild. Now we see how to do that.
 
 ### Parts
 
@@ -28,7 +28,7 @@ The following components are used for this project:
 -   Plastic tube (inner diameter a little bit bigger than the eyes)
 -   Wooden or plastic stick with ~ 8mm diameter
 -   Wemos / Lolin D1 (or equivalent NodeMCU board)
--   Wemos ProtoBoard (or any other proto board will do as well)
+-   Wemos ProtoBoard (or any other protoboard will do as well)
 -   PCB male and female pin header
 -   AA Battery box holding 4 batteries
 
@@ -48,13 +48,13 @@ These are the tools needed:
 The trickiest part of this project are the eyes. Tricky because they should be assembled all in the same way, especially the length of the wooden stick and position of the servo should be equally to use the same servo swing parameters for all eyes.
 
 _Instructions:_
-Cut the tube and the wooden stick to the same length ~ 40mm. Hot glue the wooden stick to the back of the eye. Drill a hole at the end of the wooden stick. Also drill a hole into the side of the eye and one on the opposite side (see photo). Put the nail through the holes, place the eye inside the tube and hot glue both ends onto the tube edge.Move the stick at the back side of the tube should now be moving the eye.
+Cut the tube and the wooden stick to the same length ~ 40mm. Hot glue the wooden stick to the back of the eye. Drill a hole at the end of the wooden stick. Also drill a hole into the side of the eye and one on the opposite side (see photo). Put the nail through the holes, place the eye inside the tube and hot glue both ends onto the tube edge. Move the stick at the back side of the tube should now be moving the eye.
 
-To mount the servo hot glue it in 90-degree angle to the wooden stick on the back side of the plastic tube. Use the wire to connect servo with the end of the wooden stick. The wire must be strong enough not to bend and move the eye.
+To mount the servo hot glue it in a 90-degree angle to the wooden stick on the back side of the plastic tube. Use the wire to connect servo with the end of the wooden stick. The wire must be strong enough not to bend and move the eye.
 
 ## Electronics
 
-To move 10 servos with a small Wemos board we need some extra power. These small ESP8266 boards can only handle a current of ~500 mA in total max, enough to control two or three servo motors. To solve this, I use AA batteries as additional power source to run all 10 servos. 2 boxes of 4 AA batteries in parallel provide 6 volts and enough juice to run the servos.
+To move 10 servos with a small Wemos board we need some extra power. These small ESP8266 boards can only handle a current of ~500 mA in total max, enough to control two or three servo motors. To solve this, I use AA batteries as an additional power source to run all 10 servos. 2 boxes of 4 AA batteries in parallel provide 6 volts and enough juice to run the servos.
 
 ![Fritzing Diagram](fritzing.png)
 
@@ -74,18 +74,18 @@ Compared to the hardware assembly the software is relatively simple. The small p
 
 ## The pumpkin
 
-The pumpkin is of course the most important part of this project 😉
+The pumpkin is, of course, the most important part of this project 😉
 
 _Instructions:_
 Use the marker to mark 10 circles with the size of the plastic tube used for the eyes. These should not be too close to each other to still have enough space inside.
 
 ![Pumkpin](pumpkin-1.jpg)
 
-Cut around the stem of the pumpkin at an angle. Make it big enough, this will make connecting the eyes later much easier. After done cutting all the way around, remove the stem and the guts from the pumpkin.
+Cut around the stem of the pumpkin at an angle. Make it big enough, this will make connecting the eyes later much easier. After done cutting, all the way around, remove the stem and the guts from the pumpkin.
 
 Next cut the 10 circle holes for the eyes. Make sure to cut with an angle to get a little bigger hole inside.
 
-Place the eyes in the holes and fix them from the inside with hot glue. The challenge is hot glue does not stick so well on pumpkin pulp. I turned screws into the pulp to help fixing it.
+Place the eyes in the holes and fix them from the inside with hot glue. The challenge is hot glue does not stick so well on pumpkin pulp. I turned screws into the pulp to help to fix it.
 
 ![Pumkpin](pumpkin-2.jpg)
 

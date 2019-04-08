@@ -18,7 +18,7 @@ It enables you to:
 -   receive 433Mhz signal from a traditional remote, optional map it to a channel and publish the data to a MQTT topic.
 -   additionally, a simple temperature sensor can record the room temperature of the room where the gateway is installed.
 
-The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable an easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
+The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
 
 The final assembly looks like this:
 
@@ -31,7 +31,7 @@ The final assembly looks like this:
 -   RF Transmitter 433MHz
 -   BMP085 or BMP180 sensor breakout
 
-I got the RF modules form https://www.sparkfun.com, others will do as well. Additional I got some [Wemos Protoboards](https://www.wemos.cc/product/protoboard.html), an USB power supply with a very short cable
+I got the RF modules from https://www.sparkfun.com, others will do as well. Additional I got some [Wemos Protoboards](https://www.wemos.cc/product/protoboard.html), a USB power supply with a very short cable
 and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to keep all together.
 
 The circuit inside the enclosure box:
@@ -65,7 +65,7 @@ The following software libraries are used. When using PlatformIO all dependencie
 
 ### MQTT
 
-For a detailed documentation of the MQTT topics and commands used see [Homie documentation](https://homie-esp8266.readme.io/docs).
+For detailed documentation of the MQTT topics and commands used see [Homie documentation](https://homie-esp8266.readme.io/docs).
 
 Sample gateway messages:
 
@@ -74,7 +74,7 @@ Sample gateway messages:
 homie/mqtt-gateway-livingroom/temperature/degrees 23.70
 ```
 
-Temperature value send form device.
+Temperature value send from device.
 
 ```
 # send RF command via MQTT & response
@@ -83,7 +83,7 @@ homie/mqtt-gateway-livingroom/MQTTto433/on 1394001
 ```
 
 First line: MQTT command send from MQTT client or smart home solution. Translates into the code send by the RF transmitter.
-Second line: Response from device after RF signal was send.
+Second line: Response from a device after the RF signal was transmitted.
 
 ## Config
 
