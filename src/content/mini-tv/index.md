@@ -3,8 +3,8 @@ title: 'Dollhouse Mini TV'
 date: '2019-02-03'
 type: 'project'
 description: "The dollhouse Mini TV is a small Arduino project using a cost-efficient ESP8266 chip and an SSD1306 OLED display to build a small working TV for my daughter's birthday."
-github: 'https://github.com/mhaack/mqtt-bme280-homie'
-hacksterio: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
+github: 'https://github.com/mhaack/arduino-dollhouse-tv'
+hacksterio: 'https://www.hackster.io/markushaack/arduino-dollhouse-mini-tv-9d9af1'
 image: './mini-tv.jpg'
 ---
 
