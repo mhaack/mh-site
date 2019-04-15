@@ -24,7 +24,7 @@ The TV is powered via dollhouse cabling. All rooms have mini sockets installed p
 
 The display shows 4 screens (can be extended) in a carousel mode. Most of them are little cat or dinosaur animations but it has real weather forecast and a nice clock as well.
 
-#### Hardware components & tools
+### Hardware components & tools
 
 -   Wemos D1 mini
 -   SSD1306 OLED Display
@@ -37,7 +37,7 @@ The display shows 4 screens (can be extended) in a carousel mode. Most of them a
 
 Wiring is pretty simple the display connects via I2C bus to the Wemos board and the button just needs two wires.
 
-#### Software
+### Software
 
 Like some of my other Arduino projects I used [Homie](https://github.com/marvinroger/homie-esp8266) as base library for this project. This is actually not really necessary for the Mini TV as it has no special requirements and does not need MQTT. But since it use the same SSD1306 OLED display I could reuse some code from the [mqtt-bme280-homie project](../mqtt-bme280-homie/). Additionally, I get OTA update with Homie as well, which is important here, because I hot glued the board to the rear wall of the TV and could not access the USB connector anymore.
 
@@ -49,6 +49,8 @@ The following software libraries are used for this project:
 - [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
 - PlatformIO environment for building the code
 
+#### Code structure
+
 As usual, the source code and configuration details can be found on GitHub: https://github.com/mhaack/arduino-dollhouse-tv
 It is organized into 4 main modules:
 
@@ -56,3 +58,9 @@ It is organized into 4 main modules:
 - DisplayNode - generic class to control the SSD1306 display
 - ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
 - WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
+
+#### Your own screens and animations
+
+You can add as many screens as you want and add them to `dollhouse-tv.cpp` via the `setup` method. Each screen animation goes into its own method, for an animation example see `drawCat`. These animations can be built out of a sequence of XBM bitmaps. The workflow to add a new image animation is simple. First get the image either as an animated gif or independent image files, ideally in black and white format. Gifs have to be split into individual image files. These can be converted that to a XBM bitmap file using some image tool or a online service like https://convertio.co/gif-xbm/. Put the XBM files into the project src folder or merge them into `images.h`. After that, they can be loaded in the code by using `drawXbm`. Make sure you add the `x` & `y` coordinates from the method parameters when drawing on the screen to have smooth transitions if the screen is changed to the next one.
+
+That's it have fun with the Mini TV.
