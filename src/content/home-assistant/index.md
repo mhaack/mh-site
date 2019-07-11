@@ -1,6 +1,6 @@
 ---
 title: 'Home Assistant - The big move'
-date: '2019-21-05'
+date: '2019-05-21'
 type: 'project'
 description: 'This “project” is about the change I did from OpenHab to Home Assistant for our smart home automation system. Ok maybe the headline sounds a bit too sensational but change our entire home automation setup from one system we used for 2+ years now to a completely new one requires quite some heavy lifting.'
 github: 'https://github.com/mhaack/home-assistant-config'
@@ -66,6 +66,6 @@ So far I only asked a handful of questions on the community forum and always got
 
 ## Some final thoughts
 
-While I would consider my switch to Home Assistant as done and already have archived my OpenHab installation I know it will never be really finished. There is always some stuff to tinker and improve.  I already have a to-do list of 15 items ;-)
+While I would consider my switch to Home Assistant as done and already have archived my OpenHab installation I know it will never be really finished. There is always some stuff to tinker and improve. I already have a to-do list of 15 items ;-)
 
 I am sure, for me, moving to Home Assistant was the right choice. And I definitely recommend to everybody who is willing to invest some time into building a local and flexible smart home solution to have a look at Home Assistant. Is Home Assistant a perfect solution? No, no smart home hub is, all have strengths and weaknesses. Also as written above OpenHab is a mature piece of software. But among these both - Home Assistant and OpenHab - Home Assistant is now the perfect fit for me.
