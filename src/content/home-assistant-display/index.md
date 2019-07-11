@@ -2,7 +2,7 @@
 title: 'Home Assistant - Homematic HM-Dis-EP-WM55 e-paper display'
 date: '2019-07-08'
 type: 'project'
-description: 'This “project” is about smooth Home Assistant integration of the Homematic HM-Dis-EP-WM55 e-paper display.'
+description: 'My second Home Assistant project is about the integration of the Homematic HM-Dis-EP-WM55 e-paper display in my HA setup. I am sharing some reusable scripts for this or similar devices.'
 github: 'https://github.com/mhaack/home-assistant-config'
 image: './header.jpg'
 ---
