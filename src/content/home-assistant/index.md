@@ -44,18 +44,17 @@ Over time we collected a long list of devices from different vendors. These are 
 * Xaiomi ZigBee sensors
 * Apple HomeKit
 * Rademacher Duofern
-* Alexa
-* Sonos
-* Roomba
-* Landorid lawnmower robot
-* IFTTT
-* SonOff
+* Amazon Echo
+* Sonos Players
+* Roomba E5
+* Worx Landorid lawnmower robot
+* SonOff devices (using [Tasmota](https://github.com/arendst/Sonoff-Tasmota))
 * DIY Arduino devices connected via MQTT
-* Uquiti network stuff
+* Uquiti Unifi network equipment
 * Qnap NAS
 * Fritzbox
 
-Home Assistant support has integrations for 1000+ systems and devices and also OpenHab’s add-on list is at the same length.
+Home Assistant support has integrations for 1000+ systems and devices and also OpenHab’s add-on list is at the same length. Add details list of all hubs, devices, sensors etc. I used is available on my [Home Assistant config](https://github.com/mhaack/home-assistant-config) on GitHub.
 
 ## Community support
 
