@@ -1,7 +1,7 @@
 import React from 'react'
 import { shape, object, arrayOf } from 'prop-types'
 import { graphql } from 'gatsby'
-import Waypoint from 'react-waypoint'
+import { Waypoint } from 'react-waypoint'
 
 import Layout from '../components/Layout'
 import Header from '../components/HeaderMain'
