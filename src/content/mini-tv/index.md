@@ -28,7 +28,7 @@ The display shows 4 screens (can be extended) in a carousel mode. Most of them a
 
 -   Wemos D1 mini
 -   SSD1306 OLED Display
--   Tactile Button Switch 
+-   Tactile Button Switch
 -   Dollhouse plug (fitting into the sockets the dollhouse already has)
 -   USB cable (for programming only)
 -   Some wires
@@ -43,21 +43,21 @@ Like some of my other Arduino projects I used [Homie](https://github.com/marvinr
 
 The following software libraries are used for this project:
 
-- [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
-- [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
-- [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
-- [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
-- PlatformIO environment for building the code
+-   [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
+-   [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
+-   [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
+-   [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
+-   PlatformIO environment for building the code
 
 #### Code structure
 
 As usual, the source code and configuration details can be found on GitHub: https://github.com/mhaack/arduino-dollhouse-tv
 It is organized into 4 main modules:
 
-- dollhouse-tv.cpp - the main program drawing all the TV screens and assembling all together
-- DisplayNode - generic class to control the SSD1306 display
-- ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
-- WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
+-   dollhouse-tv.cpp - the main program drawing all the TV screens and assembling all together
+-   DisplayNode - generic class to control the SSD1306 display
+-   ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
+-   WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
 
 #### Your own screens and animations
 

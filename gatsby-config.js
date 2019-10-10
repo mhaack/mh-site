@@ -49,12 +49,12 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-              trackingId: "UA-126340503-1",
-              head: true,
-              anonymize: true,
-              respectDNT: true
+                trackingId: "UA-126340503-1",
+                head: true,
+                anonymize: true,
+                respectDNT: true
             },
-          },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-react-helmet`,
