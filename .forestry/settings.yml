@@ -9,8 +9,8 @@ sections:
   label: Content
   create: all
   match: "**/*"
-upload_dir: uploads
-public_path: "/src/assets"
+upload_dir: src/assets
+public_path: ''
 front_matter_path: ''
 use_front_matter_path: true
 file_template: ":filename:"
