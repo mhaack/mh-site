@@ -1,0 +1,25 @@
+---
+label: Project
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: type
+  label: type
+- type: textarea
+  name: description
+  label: description
+- type: text
+  name: github
+  label: github
+- type: text
+  name: hacksterio
+  label: hacksterio
+- type: file
+  name: image
+  label: image
