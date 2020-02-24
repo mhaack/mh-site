@@ -52,8 +52,9 @@ class Index extends React.Component {
                                     working on commerce and Adobe Experince Manager.
                                 </p>
                                 <p>
-                                    I play with Nintendo and various of electronic &amp; IOT stuff and I'm keen in
-                                    automating our house with all kinds of usefull and useless smart devices.
+                                    I play with Nintendo and various of electronic &amp; IOT stuff and I'm passionate
+                                    about smart homes, Home Assistant particular and automating our house with all kinds
+                                    of usefull and useless smart devices.
                                 </p>
                             </div>
                             <span className="image">
