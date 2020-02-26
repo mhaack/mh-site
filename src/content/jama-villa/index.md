@@ -23,6 +23,8 @@ Other main gear we use:
 | [Arlo](https://www.arlo.com/) | Arlo camera system integration, currently we have 5 outdoor cameras connected. We are early day Arlo users, started with the 1st generation cameras, later we added Arlo Pro 2 devices. |
 | [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme) | Wireless controller for our electric roller shutters. In fact, the roller shutters were the first smart devices in our house installed 5 years ago, long before Home Assistant took over the control. |
 | [Ubiquiti UniFi](https://unifi-network.ui.com/) | Our home network is operated by UniFi wired and wireless devices. Router, Switches, Wireless Access Points, ... all UniFi. Only the DSL Modem is from DrayTek. |
+| [Amazon Echo](https://en.wikipedia.org/wiki/Amazon_Echo) & [Apple Siri](https://www.apple.com/siri/) | For voice control we mostly use Alexa in Echo devices and build into the Sonos speaker. On the mobile, Siri is used as well.|
+| [Sonos speaker](https://www.sonos.com/) | We are Sonos all over the place and have speakers in many rooms in our house, even before the entire smart home thing started. |
 
 The entire system looks like this:
 ![Setup](setup.png)
