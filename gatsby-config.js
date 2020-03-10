@@ -1,64 +1,62 @@
 module.exports = {
     siteMetadata: {
-        title: 'Markus Haack // Software Engineer',
-        author: 'Markus Haack',
-        description: 'Software Engineer working at Adobe and proud dad of a wonderful daughter.',
+        title: `Markus Haack // Software Engineer`,
+        name: `| Made with ❤ by Markus Haack | Built with: Gatsby.js & Novela theme`,
+        siteUrl: `https://novela.narative.co`,
+        description: `Software Engineer working at Adobe and proud dad of a wonderful daughter.`,
+        hero: {
+            heading: `Hi, my name is Markus`,
+            subHeading: `Software engineer at Adobe and proud dad`,
+            maxWidth: 652
+        },
+        social: [
+            {
+                name: `twitter`,
+                url: `https://twitter.com/mhaack`
+            },
+            {
+                name: `instagram`,
+                url: `https://instagram.com/mhaack`
+            },
+            {
+                name: `github`,
+                url: `https://github.com/mhaack`
+            },
+            {
+                name: `linkedin`,
+                url: `https://de.linkedin.com/in/markushaack`
+            }
+        ]
     },
-    pathPrefix: '/',
     plugins: [
         {
-            resolve: `gatsby-source-filesystem`,
+            resolve: "@narative/gatsby-theme-novela",
             options: {
-                path: `${__dirname}/src/content`,
-                name: 'pages',
-            },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/src/assets/images`,
-                name: `images`,
-            },
-        },
-        {
-            resolve: `gatsby-transformer-remark`,
-            options: {
-                plugins: [
-                    {
-                        resolve: `gatsby-remark-images`,
-                        options: {
-                            maxWidth: 630,
-                        },
-                    },
-                    'gatsby-remark-copy-linked-files',
-                ],
-            },
+                contentPosts: "content/posts",
+                contentAuthors: "content/authors",
+                basePath: "/",
+                authorsPage: false,
+                sources: {
+                    local: true
+                    // contentful: true,
+                }
+            }
         },
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: 'Markus Haack Website',
-                short_name: 'Markus H.',
-                start_url: '/',
-                background_color: '#333333',
-                theme_color: '#49bf9d',
-                display: 'minimal-ui',
-                icon: 'src/assets/images/icon_hi_res_512.png',
-            },
+                name: `Markus Haack // Software Engineer`,
+                short_name: `MH`,
+                start_url: `/`,
+                background_color: `#fff`,
+                theme_color: `#fff`,
+                display: `standalone`,
+                icon: `src/assets/favicon.png`
+            }
         },
         {
-            resolve: `gatsby-plugin-google-analytics`,
-            options: {
-                trackingId: "UA-126340503-1",
-                head: true,
-                anonymize: true,
-                respectDNT: true
-            },
-        },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
-        `gatsby-plugin-react-helmet`,
-        `gatsby-plugin-sass`,
-        `gatsby-plugin-offline`
-    ],
-}
+            resolve: `gatsby-plugin-netlify-cms`,
+            options: {}
+        }
+    ]
+};

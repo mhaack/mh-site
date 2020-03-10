@@ -1,49 +1,22 @@
 {
-    "name": "mh-site",
-    "description": "Personal website for Markus Haack, created with Gatsby",
-    "version": "1.0.0",
-    "author": "Markus Haack",
-    "dependencies": {
-        "gatsby": "^2.15.35",
-        "gatsby-image": "^2.2.27",
-        "gatsby-plugin-google-analytics": "^2.1.21",
-        "gatsby-plugin-manifest": "^2.2.21",
-        "gatsby-plugin-offline": "^3.0.14",
-        "gatsby-plugin-react-helmet": "^3.1.11",
-        "gatsby-plugin-sass": "^2.1.18",
-        "gatsby-plugin-sharp": "^2.2.29",
-        "gatsby-remark-copy-linked-files": "^2.1.26",
-        "gatsby-remark-images": "^3.1.26",
-        "gatsby-source-filesystem": "^2.1.31",
-        "gatsby-transformer-remark": "^2.6.28",
-        "gatsby-transformer-sharp": "^2.2.21",
-        "lodash": "^4.17.11",
-        "node-sass": "^4.12.0",
-        "react": "^16.8.6",
-        "react-dom": "^16.8.6",
-        "react-helmet": "^5.2.1",
-        "react-scroll-to-element": "^0.2.0",
-        "react-scrollspy": "^3.4.0",
-        "react-waypoint": "^9.0.2"
-    },
-    "devDependencies": {
-        "babel-eslint": "^10.0.3",
-        "eslint": "^6.5.1",
-        "eslint-plugin-react": "^7.16.0",
-        "prettier": "^1.18.2"
-    },
-    "homepage": "https://github.com/mhaack/mh-site",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/mhaack/mh-site.git"
-    },
-    "scripts": {
-        "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
-        "develop": "gatsby develop",
-        "build": "gatsby build",
-        "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
-    }
+  "private": true,
+  "name": "site",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "clean": "gatsby clean",
+    "proxy": "netlify-cms-proxy-server"
+  },
+  "dependencies": {
+    "@narative/gatsby-theme-novela": "^0.*",
+    "gatsby": "^2.13.41",
+    "gatsby-plugin-manifest": "^2.2.4",
+    "gatsby-plugin-netlify-cms": "^4.1.40",
+    "netlify-cms-app": "^2.11.23",
+    "netlify-cms-proxy-server": "^1.1.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }
