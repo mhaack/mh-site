@@ -1,0 +1,10 @@
+name: Markus
+bio: |
+    Software Engineer working at Adobe and proud dad of a wonderful daughter.
+avatar: ./avatars/markus.jpeg
+social:
+    - url: https://twitter.com/mhaack
+    - url: https://instagram.com/mhaack
+    - url: https://github.com/mhaack
+    - url: https://linkedin.com/in/markushaack
+featured: true

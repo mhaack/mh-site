@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://markus-haack.netlify.com/* https://www.markus-haack.com/:splat 301!
