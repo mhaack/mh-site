@@ -1,22 +1,29 @@
 {
-  "private": true,
-  "name": "site",
-  "version": "1.0.0",
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "dev": "gatsby develop",
-    "clean": "gatsby clean",
-    "proxy": "netlify-cms-proxy-server"
-  },
-  "dependencies": {
-    "@narative/gatsby-theme-novela": "^0.*",
-    "gatsby": "^2.13.41",
-    "gatsby-plugin-manifest": "^2.2.4",
-    "gatsby-plugin-netlify-cms": "^4.1.40",
-    "netlify-cms-app": "^2.11.23",
-    "netlify-cms-proxy-server": "^1.1.4",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+    "private": true,
+    "name": "site",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "build": "gatsby build",
+        "dev": "gatsby develop",
+        "clean": "gatsby clean",
+        "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
+        "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+        "proxy": "netlify-cms-proxy-server"
+    },
+    "dependencies": {
+        "@narative/gatsby-theme-novela": "^0.*",
+        "eslint-plugin-react": "^7.19.0",
+        "gatsby": "^2.13.41",
+        "gatsby-plugin-manifest": "^2.2.4",
+        "gatsby-plugin-netlify-cms": "^4.1.40",
+        "netlify-cms-app": "^2.11.23",
+        "netlify-cms-proxy-server": "^1.1.4",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6"
+    },
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "prettier": "1.19.1"
+    }
 }
