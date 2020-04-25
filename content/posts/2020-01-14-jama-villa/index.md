@@ -1,14 +1,15 @@
 ---
 title: Our home sweet smart home
 slug: jama-villa
-date: 2020-01-14
 author: Markus
-excerpt: Our Home Assistant setup is pretty simple - everything currently runs on a single board computer - smooth and stable for 12+ months. This is how our setup looks like.
+date: 2020-01-14T00:00:00.000Z
+excerpt: >-
+  Our Home Assistant setup is pretty simple - everything currently runs on a
+  single board computer - smooth and stable for 12+ months. This is how our
+  setup looks like.
 hero: ./images/dashboard-teaser.png
 ---
-
-I try to gather and describe our Home Assitant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-)
-I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
+I try to gather and describe our Home Assitant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-) I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
 
 ## Overview
 
@@ -16,15 +17,16 @@ Our Home Assistant setup is pretty simple - everything currently runs on a singl
 
 Other main gear we use:
 
-| Device / Solution | Usage |
-| ----------------- | ----- |
-| [Homematic CCU3](https://www.eq-3.com/start.html) | Used to control all Homematic devices, mainly security devices like window/door sensors, motion sensors or sirene. Plus a few switch relays for DIN rail mounting. |
-| [Phoson Conbee II](https://phoscon.de/en/conbee2) | The main ZigBee Hub and second wireless device network. All Ikea & Hue light bulbs und LED stripes are connected to the Conbee ZigBee network. In addition temperature sensors in every room and a few contact sensors, we installed lately. |
-| [Arlo](https://www.arlo.com/) | Arlo camera system integration, currently we have 5 outdoor cameras connected. We are early day Arlo users, started with the 1st generation cameras, later we added Arlo Pro 2 devices. |
-| [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme) | Wireless controller for our electric roller shutters. In fact, the roller shutters were the first smart devices in our house installed 5 years ago, long before Home Assistant took over the control. |
-| [Ubiquiti UniFi](https://unifi-network.ui.com/) | Our home network is operated by UniFi wired and wireless devices. Router, Switches, Wireless Access Points, ... all UniFi. Only the DSL Modem is from DrayTek. |
+| Device / Solution                                                                | Usage                                                                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Homematic CCU3](https://www.eq-3.com/start.html)                                | Used to control all Homematic devices, mainly security devices like window/door sensors, motion sensors or sirene. Plus a few switch relays for DIN rail mounting.                                                                           |
+| [Phoson Conbee II](https://phoscon.de/en/conbee2)                                | The main ZigBee Hub and second wireless device network. All Ikea & Hue light bulbs und LED stripes are connected to the Conbee ZigBee network. In addition temperature sensors in every room and a few contact sensors, we installed lately. |
+| [Arlo](https://www.arlo.com/)                                                    | Arlo camera system integration, currently we have 5 outdoor cameras connected. We are early day Arlo users, started with the 1st generation cameras, later we added Arlo Pro 2 devices.                                                      |
+| [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme) | Wireless controller for our electric roller shutters. In fact, the roller shutters were the first smart devices in our house installed 5 years ago, long before Home Assistant took over the control.                                        |
+| [Ubiquiti UniFi](https://unifi-network.ui.com/)                                  | Our home network is operated by UniFi wired and wireless devices. Router, Switches, Wireless Access Points, ... all UniFi. Only the DSL Modem is from DrayTek.                                                                               |
 
 The entire system looks like this:
+
 <div className="Image__Medium">
   <img src="./images/setup.png" alt="This is our setup" />
 </div>
@@ -57,15 +59,15 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 
 Like any other Home Assistant setup we have many integrations. And with almost every update or new toys I get the list gets longer. The five most important integrates our setup relies on are:
 
-| Integration | Config |
-| ----------- |------- |
-| [Homematic](https://www.home-assistant.io/components/homematic/) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/homematic.yaml) |
-| [deCONZ](https://www.home-assistant.io/components/deconz/) | - |
-| [Unifi](https://www.home-assistant.io/components/unifi/) | - |
-| [MQTT](https://www.home-assistant.io/components/mqtt/) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/mqtt.yaml) |
-| [AdGuard Home](https://www.home-assistant.io/integrations/adguard/) | - |
-| [Mobile App](https://www.home-assistant.io/integrations/mobile_app/) | - |
-| [Sonos](https://www.home-assistant.io/integrations/sonos) | - |
+| Integration                                                          | Config                                                                                                |
+| -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| [Homematic](https://www.home-assistant.io/components/homematic/)     | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/homematic.yaml) |
+| [deCONZ](https://www.home-assistant.io/components/deconz/)           | \-                                                                                                    |
+| [Unifi](https://www.home-assistant.io/components/unifi/)             | \-                                                                                                    |
+| [MQTT](https://www.home-assistant.io/components/mqtt/)               | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/mqtt.yaml)      |
+| [AdGuard Home](https://www.home-assistant.io/integrations/adguard/)  | \-                                                                                                    |
+| [Mobile App](https://www.home-assistant.io/integrations/mobile_app/) | \-                                                                                                    |
+| [Sonos](https://www.home-assistant.io/integrations/sonos)            | \-                                                                                                    |
 
 <github url="https://github.com/mhaack/home-assistant-config/tree/master/config/integrations" title="The full list is available on Github"/>
 
@@ -73,11 +75,11 @@ Like any other Home Assistant setup we have many integrations. And with almost e
 
 While Home Assistant already includes more than 1.500 integrations there are still some devices or services which are not integrated yet. Additionally, there is a large ecosystem of so-called custom integrations. They are not natively integrated into Home Assistant and must be loaded sideways via some special folder. Luckily there is HACS (Home Assistant Community Store) which helps to manage custom integration and Lovelace UI plug-ins and which is a custom integration on its own.
 
-| Custom Integration | Config |
-| ------------------ | ------ |
-| [aarlo](https://github.com/twrecked/hass-aarlo) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/aarlo.yaml) |
-| [Rademacher DuoFern](https://github.com/gluap/pyduofern) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/duofern.yaml) |
-| [hacs](https://github.com/custom-components/hacs) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/hacs.yaml) |
+| Custom Integration                                             | Config                                                                                                  |
+| -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [aarlo](https://github.com/twrecked/hass-aarlo)                | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/aarlo.yaml)       |
+| [Rademacher DuoFern](https://github.com/gluap/pyduofern)       | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/duofern.yaml)     |
+| [hacs](https://github.com/custom-components/hacs)              | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/hacs.yaml)        |
 | [browser_mod](https://github.com/thomasloven/hass-browser_mod) | [Git](https://github.com/mhaack/home-assistant-config/blob/master/config/integrations/browser_mod.yaml) |
 
 All, except Rademacher DuoFern integration, are managed via hacs and regularly updated.
@@ -86,11 +88,11 @@ All, except Rademacher DuoFern integration, are managed via hacs and regularly u
 
 To pimp the Lovelace dashboard we use a bunch of custom lovelace cards. The three most used are:
 
-| Custom Card | Documentation / GitHub |
-| ----------- | ---------------------- |
-| Mini Media Player | [Docs](https://community.home-assistant.io/t/lovelace-mini-media-player/68459), [Git](https://github.com/kalkih/mini-media-player) |
-| Custom Header | [Docs](https://maykar.github.io/custom-header/#intro/intro), [Git](https://github.com/maykar/custom-header) |
-| Layout Card | [Docs](https://community.home-assistant.io/t/layout-card-take-control-of-where-your-cards-end-up/147805), [Git](https://github.com/thomasloven/lovelace-layout-card) |
+| Custom Card       | Documentation / GitHub                                                                                                                                               |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Mini Media Player | [Docs](https://community.home-assistant.io/t/lovelace-mini-media-player/68459), [Git](https://github.com/kalkih/mini-media-player)                                   |
+| Custom Header     | [Docs](https://maykar.github.io/custom-header/#intro/intro), [Git](https://github.com/maykar/custom-header)                                                          |
+| Layout Card       | [Docs](https://community.home-assistant.io/t/layout-card-take-control-of-where-your-cards-end-up/147805), [Git](https://github.com/thomasloven/lovelace-layout-card) |
 
 A full list of all custom cards currently used is in [Git](https://github.com/mhaack/home-assistant-config/tree/master/config/lovelace/resources). Just like the custom integrations, the custom Lovelace cards are managed via hacs.
 
