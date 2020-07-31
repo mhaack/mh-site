@@ -12,10 +12,10 @@ const About: React.FC = ({ author }) => {
             <AboutSpotlight>
                 <AboutContent>
                     <p>
-                        I'm a developer, a engineer, a husband of a wonderful
+                        I'm a developer, an engineer, a husband of a wonderful
                         wife and a proud dad, based in the beautiful city of
-                        Leipzig, Germany. I have a bachelors in computer science
-                        and even a good old Dipl-Ing.
+                        Leipzig, Germany. I have a bachelor's in computer
+                        science and even a good old Dipl-Ing.
                         <br />
                         Currently I'm a Senior Technical Lead at{" "}
                         <a href="https://www.adobe.com" target="__blank">
@@ -33,13 +33,13 @@ const About: React.FC = ({ author }) => {
                             href="https://www.adobe.com/marketing/experience-manager.html"
                             target="__blank"
                         >
-                            Adobe Experince Manager
+                            Adobe Experience Manager
                         </a>
                         .
                     </p>
                     <p>
-                        I play with Nintendo and various of electronic &amp; IOT
-                        stuff and I'm passionate about smart homes,{" "}
+                        I play with Nintendo and various electronic &amp; IOT
+                        stuff. I'm passionate about smart homes,{" "}
                         <a
                             href="https://www.home-assistant.io/"
                             target="__blank"
@@ -47,7 +47,7 @@ const About: React.FC = ({ author }) => {
                             Home Assistant
                         </a>{" "}
                         particular and automating our house with all kinds of
-                        usefull and useless smart devices.
+                        useful and useless smart devices.
                     </p>
                 </AboutContent>
                 <AboutImage>
