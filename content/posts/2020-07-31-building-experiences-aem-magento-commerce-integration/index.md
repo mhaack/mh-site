@@ -12,6 +12,8 @@ On July 28th I was a guest on Mark Szulc's [Building Experiences using Adobe Exp
 
 Mark does regular live streams on different topics around Adobe Experience Cloud, check out [his site](https://www.markszulc.com/).
 
+<github url="https://github.com/adobe/aem-core-cif-components" title="AEM CIF Core Components"/><github url="https://github.com/adobe/aem-core-cif-components" title="AEM CIF Core Components"/>
+
 Some AEM Commerce and CIF additional resources:
 
 * [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components)
