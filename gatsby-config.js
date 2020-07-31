@@ -2,7 +2,7 @@ module.exports = {
     siteMetadata: {
         title: `Markus Haack // Software Engineer`,
         name: `| Made with ❤ by Markus Haack | Built with: Gatsby.js & Novela theme`,
-        siteUrl: `https://novela.narative.co`,
+        siteUrl: `https://www.markus-haack.com`,
         description: `Software Engineer working at Adobe and proud dad of a wonderful daughter.`,
         hero: {
             heading: `Hi, my name is Markus`,
