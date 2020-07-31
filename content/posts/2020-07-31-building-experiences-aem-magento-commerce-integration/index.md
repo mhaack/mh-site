@@ -17,7 +17,8 @@ Check out the recording of the live stream:
  
 `youtube: https://youtu.be/6LUHYCEx4GU`
 
-All our projects are open-source, public on GitHub. 
+
+All our projects are open-source, public on GitHub.
 
 <github url="https://github.com/adobe/aem-core-cif-components" title="AEM CIF Core Components"/>
 <github url="https://github.com/adobe/aem-cif-guides-venia" title="AEM Venia Reference Store"/>
