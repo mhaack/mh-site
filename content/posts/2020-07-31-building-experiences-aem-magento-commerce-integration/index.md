@@ -2,6 +2,7 @@
 title: Building Experiences - AEM & Magento Commerce Integration
 author: Markus
 date: 2020-07-31
+slug: building-experiences-with-aem-and-magento
 excerpt: On July 28th I was a guest on Mark Szulc's Building Experiences using
   Adobe Experience Cloud show. We discussed how Adobe Experience Manager works
   together with Magento, using the latest release of the Commerce Integration
