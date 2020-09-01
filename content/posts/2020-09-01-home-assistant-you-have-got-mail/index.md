@@ -8,7 +8,7 @@ Today I want to share a little holiday project I build this week: a mailbox sens
 
 ## How does it work?
 
-The project is build using two Xiaomi ZigBee contact sensors I had leftover. Our smart home setup <link> already has a ZigBee network running using a Conbee II stick. Of course, it is integrated with Home Assistant already.
+The project is build using two Xiaomi ZigBee contact sensors I had leftover. Our [smart home setup](/jama-villa) already has a ZigBee network running using a Conbee II stick. Of course, it is integrated with Home Assistant already.
 
 ZEICHNUG
 
