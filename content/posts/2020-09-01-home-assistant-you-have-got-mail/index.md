@@ -10,7 +10,7 @@ Today I want to share a little holiday project I build this week: a mailbox sens
 
 The project is build using two Xiaomi ZigBee contact sensors I had leftover. Our smart home setup <link> already has a ZigBee network running using a Conbee II stick. Of course, it is integrated with Home Assistant already.
 
-<zeichnung>
+---zeichnung---
 
 ## The hard(ware) part
 
@@ -25,14 +25,14 @@ The setup depends a little on the construction of the actual mailbox. Ours has a
 
 For a first prototype, I just duck taped the sensor inside the mailbox. The door the original magnet was too small so I replaced it with a bigger one.
 
-<foto>
+---foto---
 https://www.flickr.com/photos/8058853@N06/2685196800
 
 ## The fun part
 
 With the hardware part assembled we can now have a look at the software part. Since our ZigBee network was already running it was easy to connect the two new sensors via the Deconz UI.
 
-<screenshot>
+---screenshot---
 
 With Deconz integrated into Home Assistant the new sensors are immediately available in Home Assistant as well. Adding some ZigBee sensors to Home Assistant - pretty easy.
 
@@ -44,6 +44,8 @@ The third step is to build out the automations. I’m still having all automatio
 
 The reminder automation is also very simple. At a certain time it checks the mailbox state and sends us a reminder in case there is still mail in the mailbox. We decided to have two reminders: first at 6 pm, second at 8pm.
 
-<code>
+```
+some code
+```
 
 That is, not much needed for this little fun project. Our complete Home Assistant config can be found at GitHub.
