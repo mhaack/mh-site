@@ -36,11 +36,13 @@ With the hardware part assembled we can now have a look at the software part. Si
 
 With Deconz integrated into Home Assistant the new sensors are immediately available in Home Assistant as well.
 
-![](images/mailbox-deconz.jpg)
+![Mailbox sensors in Home Assistant](images/mailbox-deconz.jpg)
 
-Adding some ZigBee sensors to Home Assistant - pretty easy.
+Adding some ZigBee sensors to Home Assistant - pretty easy. Additionally to the two deCONZ sensors I use one boolean input helper plus a coresponding template sensor to keep the state of there is mail or not. deCONZ also creates battery level sensors for each battery-powered device. These are not really used here, but there are other automations that notify us on batteries running low.  For convinence one more boolean input helper is used to enable / disable the mailbox notifications. In total there are 5 sensors and 2 inputs used for this project.
 
-The third step is to build out the automations. I’m still having all automations in YAML, so the mailbox automations are added here as well. For the mailbox sensor three automations are needed:
+![Mailbox sensors in Home Assistant](images/mailbox-sensors.jpg)
+
+The last step is to build out the automations. I’m still having all automations in YAML, so the mailbox automations are added here as well. For the mailbox sensor three automations are needed:
 
 1. set the mailbox state if the mail was inserted
 2. Reset the mailbox state once we have cleared the mailbox
