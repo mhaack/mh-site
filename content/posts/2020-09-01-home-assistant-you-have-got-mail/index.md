@@ -2,15 +2,19 @@
 title: "Home Assistant: You have got mail"
 author: Markus
 date: 2020-09-01
+excerpt: "Today I want to share a little holiday project I build this week: a
+  mailbox sensor to make a dumb mailbox smart and notifying us if we got new
+  mail. I’m talking about real physical mail here - letters, postcards,
+  newspapers etc. dropped into our mailbox."
 hero: images/you-ve_got_mail_-2685196800-.jpg
 ---
-Today I want to share a little holiday project I build this week: a mailbox sensor notifying us if we got new mail. Including a reminder to empty the mailbox in case we forgot about that.
+Today I want to share a little holiday project I build this week: a mailbox sensor to make a dumb mailbox smart and notifying us if we got new mail. I’m talking about real physical mail here - letters, postcards, newspapers etc. dropped into our mailbox.
 
 ## How does it work?
 
-The project is build using two Xiaomi ZigBee contact sensors I had leftover. Our [smart home setup](/jama-villa) already has a ZigBee network running using a Conbee II stick. Of course, it is integrated with Home Assistant already.
+The project is build using two Xiaomi ZigBee contact sensors I had leftover. You can get these from Gearbest, AliExpress, or Amazon. Our [smart home setup](/jama-villa) already has a ZigBee network running using a [Conbee II stick](https://phoscon.de/en/conbee2). Of course, it is integrated with [Home Assistant](https://www.home-assistant.io) already.
 
-This is a how it looks like:
+This is how it looks like:
 
 ![Overview](images/mailbox-sensor-diagram.png)
 
@@ -119,6 +123,7 @@ action:
           thread-id: "ha-mailbox-notification-group"
 ```
 
+<github url="https://github.com/mhaack/home-assistant-config" title="Source code on GitHub"/>
+
 That is, not much needed for this little fun project.
 
-Our complete Home Assistant config can be found at GitHub.
