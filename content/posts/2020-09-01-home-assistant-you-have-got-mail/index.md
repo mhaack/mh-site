@@ -34,7 +34,11 @@ With the hardware part assembled we can now have a look at the software part. Si
 
 ![Mailbox sensor in deCONZ](images/deconz-sensor.jpg)
 
-With Deconz integrated into Home Assistant the new sensors are immediately available in Home Assistant as well. Adding some ZigBee sensors to Home Assistant - pretty easy.
+With Deconz integrated into Home Assistant the new sensors are immediately available in Home Assistant as well.
+
+![](images/mailbox-deconz.jpg)
+
+Adding some ZigBee sensors to Home Assistant - pretty easy.
 
 The third step is to build out the automations. I’m still having all automations in YAML, so the mailbox automations are added here as well. For the mailbox sensor three automations are needed:
 
