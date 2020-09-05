@@ -7,7 +7,7 @@ excerpt: On July 28th I was a guest on Mark Szulc's Building Experiences using
   Adobe Experience Cloud show. We discussed how Adobe Experience Manager works
   together with Magento, using the latest release of the Commerce Integration
   Framework.
-hero: images/bems-08c.png
+hero: images/bems-08c.jpg
 ---
 I want to share some professional projects I'm working on: Commerce Integration Framework and the [AEM CIF Core Components](https://github.com/adobe/aem-core-cif-components) are built by the team I'm working for at Adobe. 
 
