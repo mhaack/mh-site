@@ -1,7 +1,7 @@
 ---
 title: "Home Assistant: You have got mail"
 author: Markus
-date: 2020-09-01
+date: 2020-09-05
 excerpt: "Today I want to share a little holiday project I build this week: a
   mailbox sensor to make a dumb mailbox smart and notifying us if we got new
   mail. I’m talking about real physical mail here - letters, postcards,
