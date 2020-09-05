@@ -3,11 +3,10 @@ title: Our home sweet smart home
 slug: jama-villa
 author: Markus
 date: 2020-01-14T00:00:00.000Z
-excerpt: >-
-  Our Home Assistant setup is pretty simple - everything currently runs on a
-  single board computer - smooth and stable for 12+ months. This is how our
+excerpt: Our Home Assistant setup is pretty simple - everything currently runs
+  on a single board computer - smooth and stable for 12+ months. This is how our
   setup looks like.
-hero: ./images/dashboard-teaser.jpg
+hero: images/dashboard-teaser.jpg
 ---
 I try to gather and describe our Home Assitant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-) I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
 
