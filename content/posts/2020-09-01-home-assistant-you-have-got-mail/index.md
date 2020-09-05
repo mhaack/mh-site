@@ -35,8 +35,6 @@ For a first prototype, I just duck taped the sensor inside the mailbox. The door
 
 ![First prototype](images/img_0755.jpg)
 
-https://www.flickr.com/photos/8058853@N06/2685196800
-
 ## The fun part
 
 With the hardware part assembled we can now have a look at the software part. Since our ZigBee network was already running it was easy to connect the two new sensors via the Deconz UI.
@@ -129,3 +127,5 @@ action:
 <github url="https://github.com/mhaack/home-assistant-config" title="Source code on GitHub"/>
 
 That is, not much needed for this little fun project.
+
+Soure hero image: [Flickr - Helgi Halldórsson](https://www.flickr.com/photos/8058853@N06/2685196800)
