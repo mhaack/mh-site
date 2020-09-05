@@ -31,8 +31,9 @@ The setup depends a little on the construction of the actual mailbox. Ours has a
 
 For a first prototype, I just duck taped the sensor inside the mailbox. The door the original magnet was too small so I replaced it with a bigger one.
 
-![](images/img_0755.jpg)
+![Mailbox flap with magnet](images/img_0758.jpg)
 
+![First prototype](images/img_0755.jpg)
 
 https://www.flickr.com/photos/8058853@N06/2685196800
 
