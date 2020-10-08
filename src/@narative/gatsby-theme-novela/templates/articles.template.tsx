@@ -1,21 +1,21 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
-import Section from "@components/Section";
-import SEO from "@components/SEO";
-import Layout from "@components/Layout";
-import Paginator from "@components/Navigation/Navigation.Paginator";
+import Section from '@components/Section'
+import SEO from '@components/SEO'
+import Layout from '@components/Layout'
+import Paginator from '@components/Navigation/Navigation.Paginator'
 
-import ArticlesHero from "@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero";
-import ArticlesList from "@narative/gatsby-theme-novela/src/sections/articles/Articles.List";
+import ArticlesHero from '@narative/gatsby-theme-novela/src/sections/articles/Articles.Hero'
+import ArticlesList from '@narative/gatsby-theme-novela/src/sections/articles/Articles.List'
 
-import { Template } from "@types";
+import { Template } from '@types'
 
-import Contact from "../../../components/Contact";
+import Contact from '../../../components/Contact'
 
 const ArticlesPage: Template = ({ location, pageContext }) => {
-    const articles = pageContext.group;
-    const authors = pageContext.additionalContext.authors;
+    const articles = pageContext.group
+    const authors = pageContext.additionalContext.authors
 
     return (
         <Layout>
@@ -30,10 +30,10 @@ const ArticlesPage: Template = ({ location, pageContext }) => {
             <Contact />
             <ArticlesGradient />
         </Layout>
-    );
-};
+    )
+}
 
-export default ArticlesPage;
+export default ArticlesPage
 
 const ArticlesGradient = styled.div`
     position: absolute;
@@ -45,8 +45,8 @@ const ArticlesGradient = styled.div`
     pointer-events: none;
     background: ${p => p.theme.colors.gradient};
     transition: ${p => p.theme.colorModeTransition};
-`;
+`
 
 const ArticlesPaginator = styled.div<{ show: boolean }>`
     ${p => p.show && `margin-top: 95px;`}
-`;
+`

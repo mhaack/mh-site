@@ -1,26 +1,26 @@
-import React from "react";
+import React from 'react'
 
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import { MDXProvider } from "@mdx-js/react";
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 
-import styled from "@emotion/styled";
-import { css } from "@emotion/core";
-import { useColorMode } from "theme-ui";
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { useColorMode } from 'theme-ui'
 
-import Anchor from "@components/Anchor";
-import Blockquote from "@components/Blockquote";
-import Code from "@components/Code";
-import Headings from "@components/Headings";
-import HorizontalRule from "@components/HorizontalRule";
-import Lists from "@components/Lists";
-import Paragraph from "@components/Paragraph";
-import Tables from "@components/Tables";
-import { ImageZoom } from "@components/Image";
-import Figcaption from "@components/Figcaption";
-import Github from "../../../../components/Github";
+import Anchor from '@components/Anchor'
+import Blockquote from '@components/Blockquote'
+import Code from '@components/Code'
+import Headings from '@components/Headings'
+import HorizontalRule from '@components/HorizontalRule'
+import Lists from '@components/Lists'
+import Paragraph from '@components/Paragraph'
+import Tables from '@components/Tables'
+import { ImageZoom } from '@components/Image'
+import Figcaption from '@components/Figcaption'
+import Github from '../../../../components/Github'
 
-import mediaqueries from "@styles/media";
-import { toKebabCase } from "@utils";
+import mediaqueries from '@styles/media'
+import { toKebabCase } from '@utils'
 
 const components = {
     img: ImageZoom,
@@ -44,34 +44,34 @@ const components = {
     td: Tables.Cell,
     figcaption: Figcaption,
     github: Github
-};
+}
 
 interface MDXProps {
-    content: React.ReactNode;
+    content: React.ReactNode
 }
 
 const MDX: React.FC<MDXProps> = ({ content, children, ...props }) => {
-    const [colorMode] = useColorMode();
+    const [colorMode] = useColorMode()
 
     return (
         <MDXProvider components={components}>
             <MDXBody>
-                <MDXRenderer isDark={colorMode === "dark"} {...props}>
+                <MDXRenderer isDark={colorMode === 'dark'} {...props}>
                     {content}
                 </MDXRenderer>
                 {children}
             </MDXBody>
         </MDXProvider>
-    );
-};
+    )
+}
 
-export default MDX;
+export default MDX
 
 const IMAGE_WIDTHS = {
-    regular: "680px",
-    large: "1004px",
-    full: "100vw"
-};
+    regular: '680px',
+    large: '1004px',
+    full: '100vw'
+}
 
 const ARTICLE_WIDTH = css`
     width: 100%;
@@ -88,7 +88,7 @@ const ARTICLE_WIDTH = css`
     ${mediaqueries.phablet`
     padding: 0 20px;
   `};
-`;
+`
 
 const HeadingsCSS = css`
     h1,
@@ -124,7 +124,7 @@ const HeadingsCSS = css`
     h6 {
         ${ARTICLE_WIDTH};
     }
-`;
+`
 
 const PrismCSS = p => css`
     .prism-code {
@@ -144,9 +144,7 @@ const PrismCSS = p => css`
 
             ${Object.keys(p.theme.colors.prism)
                 .map(key => {
-                    return `.${toKebabCase(key)}{color:${
-                        p.theme.colors.prism[key]
-                    };}`;
+                    return `.${toKebabCase(key)}{color:${p.theme.colors.prism[key]};}`
                 })
                 .reduce((curr, next) => curr + next, ``)};
 
@@ -211,7 +209,7 @@ const PrismCSS = p => css`
       position: relative;
     `};
     }
-`;
+`
 
 const ImageCSS = css`
     .gatsby-resp-image-background-image {
@@ -314,7 +312,7 @@ const ImageCSS = css`
       margin: 0 auto 25px;
     `};
     }
-`;
+`
 
 /**
  * MDXBody
@@ -332,4 +330,4 @@ const MDXBody = styled.div`
   ${HeadingsCSS}
   ${PrismCSS}
   ${ImageCSS}
-`;
+`
