@@ -5,10 +5,11 @@
     "license": "MIT",
     "scripts": {
         "build": "gatsby build",
-        "dev": "gatsby develop",
+        "develop": "gatsby develop",
         "clean": "gatsby clean",
-        "format": "prettier --write 'src/**/*.js' 'src/**/*.md'",
+        "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,md}\"",
         "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+        "serve": "gatsby serve",
         "proxy": "netlify-cms-proxy-server"
     },
     "dependencies": {
