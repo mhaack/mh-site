@@ -1,70 +1,32 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
-import Headings from "@narative/gatsby-theme-novela/src/components/Headings";
-import Image from "@narative/gatsby-theme-novela/src/components/Image";
-import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import Headings from '@narative/gatsby-theme-novela/src/components/Headings'
+import Image from '@narative/gatsby-theme-novela/src/components/Image'
+import mediaqueries from '@narative/gatsby-theme-novela/src/styles/media'
+import Anchor from '@components/Anchor'
 
 const About: React.FC = ({ author }) => {
     return (
         <AboutContainer>
             <AboutHeading>About Me</AboutHeading>
             <AboutSpotlight>
-                <AboutContent>
-                    <p>
-                        I'm a developer, an engineer, a husband of a wonderful
-                        wife and a proud dad, based in the beautiful city of
-                        Leipzig, Germany. I have a bachelor's in computer
-                        science and even a good old Dipl-Ing.
-                        <br />
-                        Currently I'm a Senior Technical Lead at{" "}
-                        <a href="https://www.adobe.com" target="__blank">
-                            Adobe
-                        </a>{" "}
-                        working on{" "}
-                        <a
-                            href="https://github.com/adobe/aem-core-cif-components"
-                            target="__blank"
-                        >
-                            commerce
-                        </a>{" "}
-                        and{" "}
-                        <a
-                            href="https://www.adobe.com/marketing/experience-manager.html"
-                            target="__blank"
-                        >
-                            Adobe Experience Manager
-                        </a>
-                        .
-                    </p>
-                    <p>
-                        I play with Nintendo and various electronic &amp; IOT
-                        stuff. I'm passionate about smart homes,{" "}
-                        <a
-                            href="https://www.home-assistant.io/"
-                            target="__blank"
-                        >
-                            Home Assistant
-                        </a>{" "}
-                        particular and automating our house with all kinds of
-                        useful and useless smart devices.
-                    </p>
-                </AboutContent>
+                <AboutContent dangerouslySetInnerHTML={{ __html: author.bio }}></AboutContent>
                 <AboutImage>
                     <RoundedImage src={author.avatar.medium} />
                 </AboutImage>
             </AboutSpotlight>
         </AboutContainer>
-    );
-};
+    )
+}
 
-export default About;
+export default About
 
 const AboutContainer = styled.div`
     ${mediaqueries.tablet`
         width: 100%;
     `}
-`;
+`
 
 const AboutSpotlight = styled.div`
     margin: 20px 0;
@@ -74,7 +36,7 @@ const AboutSpotlight = styled.div`
         width: 100%;
         flex-direction: column-reverse;
     `}
-`;
+`
 
 const AboutHeading = styled(Headings.h2)`
     color: ${p => p.theme.colors.primary};
@@ -82,7 +44,7 @@ const AboutHeading = styled(Headings.h2)`
     a {
         color: ${p => p.theme.colors.accent};
     }
-`;
+`
 
 const AboutContent = styled.div`
     font-size: 21px;
@@ -92,7 +54,20 @@ const AboutContent = styled.div`
     p {
         margin: 0 0 2em;
     }
-`;
+
+    a {
+        transition: ${p => p.theme.colorModeTransition};
+        color: ${p => p.theme.colors.accent};
+        &:visited {
+            color: ${p => p.theme.colors.accent};
+            opacity: 0.85;
+        }
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+`
 
 const AboutImage = styled.div`
     width: 300px;
@@ -110,10 +85,10 @@ const AboutImage = styled.div`
     ${mediaqueries.tablet`
         margin: 1em auto;
     `};
-`;
+`
 
 const RoundedImage = styled(Image)`
     padding: 0.65em;
     margin: 10px;
     border-radius: 50%;
-`;
+`
