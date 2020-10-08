@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled'
 
-import Section from "@narative/gatsby-theme-novela/src/components/Section";
-import Headings from "@narative/gatsby-theme-novela/src/components/Headings";
-import mediaqueries from "@narative/gatsby-theme-novela/src/styles/media";
+import Section from '@narative/gatsby-theme-novela/src/components/Section'
+import Headings from '@narative/gatsby-theme-novela/src/components/Headings'
+import mediaqueries from '@narative/gatsby-theme-novela/src/styles/media'
 
 const Contact: React.FC = () => {
     return (
@@ -16,28 +16,15 @@ const Contact: React.FC = () => {
                         method="post"
                         action="/success"
                         data-netlify="true"
-                        data-netlify-honeypot="bot-field"
-                    >
+                        data-netlify-honeypot="bot-field">
                         <input type="hidden" name="bot-field" />
 
                         <Row>
                             <Field>
-                                <Input
-                                    type="text"
-                                    name="name"
-                                    id="name"
-                                    placeholder="Name"
-                                    aria-label="Name"
-                                />
+                                <Input type="text" name="name" id="name" placeholder="Name" aria-label="Name" />
                             </Field>
                             <Field>
-                                <Input
-                                    type="email"
-                                    name="email"
-                                    id="email"
-                                    placeholder="Email"
-                                    aria-label="Email"
-                                />
+                                <Input type="email" name="email" id="email" placeholder="Email" aria-label="Email" />
                             </Field>
                         </Row>
                         <Row>
@@ -60,10 +47,10 @@ const Contact: React.FC = () => {
                 </Content>
             </ContactContainer>
         </Section>
-    );
-};
+    )
+}
 
-export default Contact;
+export default Contact
 
 const ContactContainer = styled.div`
     position: relative;
@@ -81,7 +68,7 @@ const ContactContainer = styled.div`
     ${mediaqueries.phablet`
         margin: -20px auto 80px;
     `}
-`;
+`
 
 const Content = styled.div`
     margin: 0 auto;
@@ -97,14 +84,14 @@ const Content = styled.div`
             padding: 0 24px;
         }
     `}
-`;
+`
 
 const Heading = styled(Headings.h3)`
     margin-bottom: 20px;
     ${mediaqueries.tablet`
     margin-bottom: 15px;
   `}
-`;
+`
 
 const Text = styled.p`
     margin: 0 auto 30px;
@@ -115,7 +102,7 @@ const Text = styled.p`
         padding: 0 10px;
         margin: 0 auto 25px;
     `}
-`;
+`
 
 const Row = styled.div`
     display: flex;
@@ -135,11 +122,11 @@ const Row = styled.div`
     padding: 0 26px;
 
   `}
-`;
+`
 
 const ActionRow = styled(Row)`
     justify-content: flex-start;
-`;
+`
 
 const Field = styled.div`
     width: 100%;
@@ -152,7 +139,7 @@ const Field = styled.div`
         background: ${p => p.theme.colors.hover};
         box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
     }
-`;
+`
 
 const Input = styled.input`
     width: 100%;
@@ -162,18 +149,23 @@ const Input = styled.input`
     border: none;
     border-radius: 4px;
     background: ${p => p.theme.colors.inputBackground};
-    color: ${p => p.theme.colors.gray};
+    color: ${p => p.theme.colors.primary};
     outline: none;
     box-shadow: 0px 4px 20px 0px transparent;
-    transition: 0.3s background-color ease, 0.3s box-shadow ease,
-        0.3s padding ease;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease, 0.3s padding ease;
     resize: none;
 
     ::placeholder {
         color: ${p => p.theme.colors.track};
         opacity: 1;
     }
-`;
+    :-ms-input-placeholder {
+        color: ${p => p.theme.colors.track};
+    }
+    ::-ms-input-placeholder {
+        color: ${p => p.theme.colors.track};
+    }
+`
 
 const TextArea = styled.textarea`
     width: 100%;
@@ -183,18 +175,23 @@ const TextArea = styled.textarea`
     border: none;
     border-radius: 4px;
     background: ${p => p.theme.colors.inputBackground};
-    color: ${p => p.theme.colors.gray};
+    color: ${p => p.theme.colors.primary};
     outline: none;
     box-shadow: 0px 4px 20px 0px transparent;
-    transition: 0.3s background-color ease, 0.3s box-shadow ease,
-        0.3s padding ease;
+    transition: 0.3s background-color ease, 0.3s box-shadow ease, 0.3s padding ease;
     resize: none;
 
     ::placeholder {
         color: ${p => p.theme.colors.track};
         opacity: 1;
     }
-`;
+    :-ms-input-placeholder {
+        color: ${p => p.theme.colors.track};
+    }
+    ::-ms-input-placeholder {
+        color: ${p => p.theme.colors.track};
+    }
+`
 
 const Button = styled.button`
     height: 40px;
@@ -209,4 +206,4 @@ const Button = styled.button`
     :hover {
         border-bottom-color: ${p => p.theme.colors.accent};
     }
-`;
+`

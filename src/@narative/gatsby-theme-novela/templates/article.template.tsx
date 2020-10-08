@@ -1,38 +1,38 @@
-import React, { useRef, useState, useEffect } from "react";
-import styled from "@emotion/styled";
-import throttle from "lodash/throttle";
+import React, { useRef, useState, useEffect } from 'react'
+import styled from '@emotion/styled'
+import throttle from 'lodash/throttle'
 
-import Layout from "@components/Layout";
-import MDXRenderer from "@components/MDX";
-import Progress from "@components/Progress";
-import Section from "@components/Section";
-import Subscription from "@components/Subscription";
+import Layout from '@components/Layout'
+import MDXRenderer from '@components/MDX'
+import Progress from '@components/Progress'
+import Section from '@components/Section'
+import Subscription from '@components/Subscription'
 
-import mediaqueries from "@styles/media";
-import { debounce } from "@utils";
+import mediaqueries from '@styles/media'
+import { debounce } from '@utils'
 
-import ArticleAside from "@narative/gatsby-theme-novela/src/sections/article/Article.Aside";
-import ArticleHero from "@narative/gatsby-theme-novela/src/sections/article/Article.Hero";
-import ArticleControls from "@narative/gatsby-theme-novela/src/sections/article/Article.Controls";
-import ArticlesNext from "@narative/gatsby-theme-novela/src/sections/article/Article.Next";
-import ArticleSEO from "@narative/gatsby-theme-novela/src/sections/article/Article.SEO";
-import ArticleShare from "@narative/gatsby-theme-novela/src/sections/article/Article.Share";
+import ArticleAside from '@narative/gatsby-theme-novela/src/sections/article/Article.Aside'
+import ArticleHero from '@narative/gatsby-theme-novela/src/sections/article/Article.Hero'
+import ArticleControls from '@narative/gatsby-theme-novela/src/sections/article/Article.Controls'
+import ArticlesNext from '@narative/gatsby-theme-novela/src/sections/article/Article.Next'
+import ArticleSEO from '@narative/gatsby-theme-novela/src/sections/article/Article.SEO'
+import ArticleShare from '@narative/gatsby-theme-novela/src/sections/article/Article.Share'
 
-import { Template } from "@types";
+import { Template } from '@types'
 
 const Article: Template = ({ pageContext, location }) => {
-    const contentSectionRef = useRef<HTMLElement>(null);
+    const contentSectionRef = useRef<HTMLElement>(null)
 
-    const [hasCalculated, setHasCalculated] = useState<boolean>(false);
-    const [contentHeight, setContentHeight] = useState<number>(0);
+    const [hasCalculated, setHasCalculated] = useState<boolean>(false)
+    const [contentHeight, setContentHeight] = useState<number>(0)
 
-    const { article, authors, mailchimp, next } = pageContext;
+    const { article, authors, mailchimp, next } = pageContext
 
     useEffect(() => {
         const calculateBodySize = throttle(() => {
-            const contentSection = contentSectionRef.current;
+            const contentSection = contentSectionRef.current
 
-            if (!contentSection) return;
+            if (!contentSection) return
 
             /**
              * If we haven't checked the content's height before,
@@ -40,35 +40,31 @@ const Article: Template = ({ pageContext, location }) => {
              * imagery to recheck when it's loaded
              */
             if (!hasCalculated) {
-                const debouncedCalculation = debounce(calculateBodySize);
-                const $imgs = contentSection.querySelectorAll("img");
+                const debouncedCalculation = debounce(calculateBodySize)
+                const $imgs = contentSection.querySelectorAll('img')
 
                 $imgs.forEach($img => {
                     // If the image hasn't finished loading then add a listener
-                    if (!$img.complete) $img.onload = debouncedCalculation;
-                });
+                    if (!$img.complete) $img.onload = debouncedCalculation
+                })
 
                 // Prevent rerun of the listener attachment
-                setHasCalculated(true);
+                setHasCalculated(true)
             }
 
             // Set the height and offset of the content area
-            setContentHeight(contentSection.getBoundingClientRect().height);
-        }, 20);
+            setContentHeight(contentSection.getBoundingClientRect().height)
+        }, 20)
 
-        calculateBodySize();
-        window.addEventListener("resize", calculateBodySize);
+        calculateBodySize()
+        window.addEventListener('resize', calculateBodySize)
 
-        return () => window.removeEventListener("resize", calculateBodySize);
-    }, []);
+        return () => window.removeEventListener('resize', calculateBodySize)
+    }, [])
 
     return (
         <Layout>
-            <ArticleSEO
-                article={article}
-                authors={authors}
-                location={location}
-            />
+            <ArticleSEO article={article} authors={authors} location={location} />
             <ArticleHero article={article} authors={authors} />
             <ArticleAside contentHeight={contentHeight}>
                 <Progress contentHeight={contentHeight} />
@@ -90,10 +86,10 @@ const Article: Template = ({ pageContext, location }) => {
                 </NextArticle>
             )}
         </Layout>
-    );
-};
+    )
+}
 
-export default Article;
+export default Article
 
 const MobileControls = styled.div`
     position: relative;
@@ -104,7 +100,7 @@ const MobileControls = styled.div`
     ${mediaqueries.tablet_up`
     display: none;
   `}
-`;
+`
 
 const ArticleBody = styled.article`
   position: relative;
@@ -123,11 +119,11 @@ const ArticleBody = styled.article`
   ${mediaqueries.phablet`
     padding: 60px 0;
   `}
-`;
+`
 
 const NextArticle = styled(Section)`
     display: block;
-`;
+`
 
 const FooterNext = styled.h3`
   position: relative;
@@ -161,8 +157,8 @@ const FooterNext = styled.h3`
       width: 90px
     `}
   }
-`;
+`
 
 const FooterSpacer = styled.div`
     margin-bottom: 65px;
-`;
+`

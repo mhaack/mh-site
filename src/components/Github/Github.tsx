@@ -1,18 +1,14 @@
-import Icons from "@icons";
-import styled from "@emotion/styled";
-import mediaqueries from "@styles/media";
+import Icons from '@icons'
+import styled from '@emotion/styled'
+import mediaqueries from '@styles/media'
 
 type GithubProps = {
-    url: string;
-    title?: string;
-    fill?: string;
-};
+    url: string
+    title?: string
+    fill?: string
+}
 
-const Github = ({
-    url,
-    title = "View on GitHub",
-    fill = "#73737D"
-}: GithubProps) => (
+const Github = ({ url, title = 'View on GitHub', fill = '#73737D' }: GithubProps) => (
     <GithubActionContainer>
         <GithubImage>
             <GithubLink href={url} alt={title} target="_blank">
@@ -25,9 +21,9 @@ const Github = ({
             </GithubLink>
         </GithubBadge>
     </GithubActionContainer>
-);
+)
 
-export default Github;
+export default Github
 
 const GithubActionContainer = styled.div`
     position: relative;
@@ -48,7 +44,7 @@ const GithubActionContainer = styled.div`
     ${mediaqueries.tablet`
         height: 3em;
     `};
-`;
+`
 
 const GithubImage = styled.div`
     position: absolute;
@@ -69,7 +65,7 @@ const GithubImage = styled.div`
         margin-top: 0.6em;
         margin-left: 0.8em;
     `};
-`;
+`
 
 const GithubBadge = styled.div`
     display: flex;
@@ -82,8 +78,8 @@ const GithubBadge = styled.div`
     ${mediaqueries.tablet`
         margin-left: 2em;
     `};
-`;
+`
 
 const GithubLink = styled.a`
     color: ${p => p.theme.colors.accent};
-`;
+`

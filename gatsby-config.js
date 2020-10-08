@@ -30,11 +30,11 @@ module.exports = {
     },
     plugins: [
         {
-            resolve: "@narative/gatsby-theme-novela",
+            resolve: '@narative/gatsby-theme-novela',
             options: {
-                contentPosts: "content/posts",
-                contentAuthors: "content/authors",
-                basePath: "/",
+                contentPosts: 'content/posts',
+                contentAuthors: 'content/authors',
+                basePath: '/',
                 authorsPage: false,
                 sources: {
                     local: true
@@ -57,15 +57,15 @@ module.exports = {
         {
             resolve: `gatsby-plugin-google-analytics`,
             options: {
-                trackingId: "UA-126340503-1",
+                trackingId: 'UA-126340503-1',
                 head: true,
                 anonymize: true,
                 respectDNT: true
-            },
+            }
         },
         {
             resolve: `gatsby-plugin-netlify-cms`,
             options: {}
         }
     ]
-};
+}
