@@ -1,15 +1,18 @@
 ---
-title: Dollhouse Mini TV
-slug: mini-tv
+title: Arduino Dollhouse Mini TV
 author: Markus
-date: 2019-02-03
-excerpt: The dollhouse Mini TV is a small Arduino project using a cost-efficient ESP8266 chip and an SSD1306 OLED display to build a small working TV for my daughter's birthday.
+date: 2020-12-13
+slug: mini-tv
+excerpt: The dollhouse Mini TV is a small Arduino project using a ESP8266 chip
+  and an SSD1306 OLED display to build a small working TV for my daughter's
+  birthday.
 hero: ./images/mini-tv.jpg
 ---
-
 ## A mini TV for my daughter's dollhouse
 
-The dollhouse Mini TV is a small Arduino project using a cost-efficient ESP8266 chip and an SSD1306 OLED display to build a small working TV for my daughters birthday. She already had an older plastic TV showing some yellowed picture and the project brings that TV to live.
+This project and the blog post about it were originally created in February 2019. A few weeks ago I updated the Mini TV software so it was time to update the blog post as well.
+
+The dollhouse Mini TV is a small Arduino project using a ESP8266 chip on a Wemos D1 baord and an SSD1306 OLED display to build a small working TV for my daughters birthday. She already had this older plastic TV showing some yellowed picture and the project brings that TV to life.
 
 The TV displays an endless loop of different TV "channels" showing animations, a clock, and a weather forecast. With a small button at the side, one could stop the loop and watch the current channel. A second button press continues the loop.
 
@@ -23,14 +26,14 @@ The display shows 4 screens (can be extended) in a carousel mode. Most of them a
 
 ### Hardware components & tools
 
--   Wemos D1 mini
--   SSD1306 OLED Display
--   Tactile Button Switch
--   Dollhouse plug (fitting into the sockets the dollhouse already has)
--   USB cable (for programming only)
--   Some wires
--   Soldering iron
--   Hot glue
+* Wemos D1 mini
+* SSD1306 OLED Display
+* Tactile Button Switch
+* Dollhouse plug (fitting into the sockets the dollhouse already has)
+* USB cable (for programming only)
+* Some wires
+* Soldering iron
+* Hot glue
 
 Wiring is pretty simple the display connects via I2C bus to the Wemos board and the button just needs two wires.
 
@@ -42,21 +45,21 @@ Like some of my other Arduino projects I used [Homie](https://github.com/marvinr
 
 The following software libraries are used for this project:
 
--   [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
--   [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
--   [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
--   [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
--   PlatformIO environment for building the code
+* [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
+* [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
+* [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
+* [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
+* PlatformIO environment for building the code
 
 #### Code structure
 
 As usual, the source code and configuration details can be found on GitHub: https://github.com/mhaack/arduino-dollhouse-tv
 It is organized into 4 main modules:
 
--   dollhouse-tv.cpp - the main program drawing all the TV screens and assembling all together
--   DisplayNode - generic class to control the SSD1306 display
--   ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
--   WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
+* dollhouse-tv.cpp - the main program drawing all the TV screens and assembling all together
+* DisplayNode - generic class to control the SSD1306 display
+* ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
+* WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
 
 #### Your own screens and animations
 
