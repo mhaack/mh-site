@@ -12,17 +12,17 @@ hero: ./images/mini-tv.jpg
 
 This project and the blog post about it were originally created in February 2019. A few weeks ago I updated the Mini TV software so it was time to update the blog post as well.
 
-The dollhouse Mini TV is a small Arduino project using a ESP8266 chip on a Wemos D1 baord and an SSD1306 OLED display to build a small working TV for my daughters birthday. She already had this older plastic TV showing some yellowed picture and the project brings that TV to life.
+The dollhouse Mini TV is a small Arduino project using an ESP8266 chip on a Wemos D1 board and an SSD1306 OLED display to build a small working TV for my daughter's birthday. She already had this older plastic TV showing some yellowed picture and the project brings that TV to life.
 
 The TV displays an endless loop of different TV "channels" showing animations, a clock, and a weather forecast. With a small button at the side, one could stop the loop and watch the current channel. A second button press continues the loop.
 
 ### From prototype to working mini TV
 
-The display size for this project was predefined by the frame size of the old dollhouse TV. There were only a few options and I had an SSD1306 OLED display laying around. A normal NodeMCU or Adafruit feather was too big for the small frame, so I decided for a Wemos D1 which fitted nicely into the old TV.
+The display size for this project was predefined by the frame size of the old dollhouse TV. There were only a few options and I had an SSD1306 OLED display laying around. A normal NodeMCU or Adafruit feather was too big for the small frame, so I decided on a Wemos D1 which fitted nicely into the old TV.
 
-The TV is powered via dollhouse cabling. All rooms have mini sockets installed providing 4.5 volts out of 3 AA batteries, enough to power the mini TV. Only the DC polarity is a small problem for the TV, it needs to be plugged in the correct way.
+The TV is powered via dollhouse cabling. All rooms have mini sockets installed providing 4.5 volts, enough to power the mini TV. Only the DC polarity is a small problem for the TV, it needs to be plugged in the correct way.
 
-The display shows 4 screens (can be extended) in a carousel mode. Most of them are little cat or dinosaur animations but it has real weather forecast and a nice clock as well.
+The display shows 5 screens (can be extended) in a carousel mode. Most of them are little cat or dinosaur animations but it has a real weather forecast and a nice clock as well. Additionally, I added some real black & white pictures of our cats with the last update.
 
 ### Hardware components & tools
 
@@ -35,17 +35,17 @@ The display shows 4 screens (can be extended) in a carousel mode. Most of them a
 * Soldering iron
 * Hot glue
 
-Wiring is pretty simple the display connects via I2C bus to the Wemos board and the button just needs two wires.
+The wiring is pretty simple the display connects via I2C bus to the Wemos board and the button just needs two wires.
 
 ### Software
 
-Like some of my other Arduino projects I used [Homie](https://github.com/marvinroger/homie-esp8266) as base library for this project. This is actually not really necessary for the Mini TV as it has no special requirements and does not need MQTT. But since it use the same SSD1306 OLED display I could reuse some code from the [mqtt-bme280-homie project](../mqtt-bme280-homie/). Additionally, I get OTA update with Homie as well, which is important here, because I hot glued the board to the rear wall of the TV and could not access the USB connector anymore.
+Like some of my other Arduino projects, I used [Homie](https://github.com/marvinroger/homie-esp8266) as a base library for this project. This is actually not really necessary for the Mini TV as it has no special requirements and does not need MQTT. But since it uses the same SSD1306 OLED display I could reuse some of the Homie node classes from the [mqtt-bme280-homie project](../mqtt-bme280-homie/). Additionally, with Homie one gets OTA update as well, which is important here because I hot glued the board to the rear wall of the TV and could not access the USB connector anymore.
 
 <github url="https://github.com/mhaack/arduino-dollhouse-tv"/>
 
 The following software libraries are used for this project:
 
-* [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
+* [Homie V3 for ESP8266](https://github.com/homieiot/homie-esp8266) including dependencies
 * [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
 * [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
 * [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
