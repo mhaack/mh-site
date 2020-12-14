@@ -49,20 +49,62 @@ The following software libraries are used for this project:
 * [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
 * [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
 * [ESP8266 Weather Station](https://github.com/ThingPulse/esp8266-weather-station)
-* PlatformIO environment for building the code
+* [PlatformIO](https://platformio.org/) environment for building the code
 
 #### Code structure
 
 As usual, the source code and configuration details can be found on GitHub: https://github.com/mhaack/arduino-dollhouse-tv
 It is organized into 4 main modules:
 
-* dollhouse-tv.cpp - the main program drawing all the TV screens and assembling all together
-* DisplayNode - generic class to control the SSD1306 display
-* ButtonNode - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
-* WundergroundNode - Homie wrapper class around the WundergroundClient (from ESP8266 Weather Station)
+* `dollhouse-tv.cpp` - the main program drawing all the TV screens and assembling them all together
+* `DisplayNode.h / .cpp` - generic class to control the SSD1306 display
+* `ButtonNode.h / .cpp` - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
+* WeatherStationNode.h / .cpp` - Homie wrapper class around the OpenWeatherMap client of the ESP8266 Weather Station project
+
+Additionally, we have `WeatherStationFonts.h` storing the weather icons like sun, clouds, etc. for the weather display. And `images.h` which has a list of array constants storing the images & bitmaps.
+
+#### Configuration
+
+Like all Homie-based projects, this project needs a configuration file as well. To configure the device, you have to create and manually flash the configuration file to the device SPIFFS at the `/homie/config.json`. The following sample configuration file can be used for upload. This file is in the GitHub repository as well.
+
+```json
+{
+    "name": "Dollhous TV",
+    "device_id": "mqtt-dollhouse-tv",
+    "wifi": {
+        "ssid": "<wifi ssid>",
+        "password": "<wifi password>"
+    },
+    "mqtt": {
+        "host": "<mqtt server hostname or ip>",
+        "port": 1883,
+        "auth": true, // if MQTT server requieres authentication
+        "username": "<mqtt username>",
+        "password": "<mqtt password>"
+    },
+    "ota": {
+        "enabled": true
+    },
+    "settings": {
+        "flipScreen": true,
+        "WeatherApiKey": "<your open weather map api key",
+        "WeatherLanguage": "en",
+        "WeatherLocation": "2950159",
+        "WeatherUpdate": 15
+    }
+}
+```
+
+As an altertive to the file upload configuration Homie ESP8266 also allows configuration via [HTTP JSON API](https://homieiot.github.io/homie-esp8266/docs/stable/configuration/http-json-api/). Once the device is running and connected individual configuration settings can be changed via MQTT as well.
 
 #### Your own screens and animations
 
-You can add as many screens as you want and add them to `dollhouse-tv.cpp` via the `setup` method. Each screen animation goes into its own method, for an animation example see `drawCat`. These animations can be built out of a sequence of XBM bitmaps. The workflow to add a new image animation is simple. First get the image either as an animated gif or independent image files, ideally in black and white format. Gifs have to be split into individual image files. These can be converted that to a XBM bitmap file using some image tool or a online service like https://convertio.co/gif-xbm/. Put the XBM files into the project src folder or merge them into `images.h`. After that, they can be loaded in the code by using `drawXbm`. Make sure you add the `x` & `y` coordinates from the method parameters when drawing on the screen to have smooth transitions if the screen is changed to the next one.
+You can add as many screens as you want and add them to `dollhouse-tv.cpp` via the `setup` method. Each screen animation goes into its own "drawXYZ" method, for an animation example see `drawCat`. 
+
+If you want to build animations out of a sequence of XBM bitmaps you can follow the procedure below. 
+
+The workflow to add a new image animation is simple. First get the image either as an animated gif or independent image files, ideally in black and white format. The size of the image should match the screen size of the display. For the SSD1306 OLED display it must have a width of 128 pixels and a height of 64 pixels. Gif animations have to be split into individual image files.
+
+These can be converted that to an XBM bitmap file using some image tool or an online service like <https://convertio.co/gif-xbm/>. Put the XBM files into the project src folder or merge them into `images.h`. After that, they can be loaded in the code by using `drawXbm`. Make sure you add the `x` & `y` coordinates from the method parameters when drawing on the screen to have smooth transitions if the screen is changed to the next one.
 
 That's it have fun with the Mini TV.
