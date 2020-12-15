@@ -14,7 +14,7 @@ This project and the blog post about it were originally created in February 2019
 
 The dollhouse Mini TV is a small Arduino project using an ESP8266 chip on a Wemos D1 board and an SSD1306 OLED display to build a small working TV for my daughter's birthday. She already had this older plastic TV showing some yellowed picture and the project brings that TV to life.
 
-The TV displays an endless loop of different TV "channels" showing animations, a clock, and a weather forecast. With a small button at the side, one could stop the loop and watch the current channel. A second button press continues the loop.
+The TV displays an endless loop of different TV "channels" showing animations, a clock, and a weather forecast. With a small button at the side, one could stop the loop and watch the current channel. Another button press continues the loop.
 
 ### From prototype to working mini TV
 
@@ -39,7 +39,9 @@ The wiring is pretty simple the display connects via I2C bus to the Wemos board 
 
 ### Software
 
-Like some of my other Arduino projects, I used [Homie](https://github.com/marvinroger/homie-esp8266) as a base library for this project. This is actually not really necessary for the Mini TV as it has no special requirements and does not need MQTT. But since it uses the same SSD1306 OLED display I could reuse some of the Homie node classes from the [mqtt-bme280-homie project](../mqtt-bme280-homie/). Additionally, with Homie one gets OTA update as well, which is important here because I hot glued the board to the rear wall of the TV and could not access the USB connector anymore.
+Like some of my other Arduino projects, I used [Homie](https://github.com/marvinroger/homie-esp8266) as a base library for this project. This is actually not really necessary for the Mini TV as it has no special requirements and does not need MQTT. But since it uses the same SSD1306 OLED display I could reuse some of the Homie node classes from the [mqtt-bme280-homie project](../mqtt-bme280-homie/).
+
+Additionally, with Homie one gets OTA update as well, which is important here because I hot glued the board to the rear wall of the TV and could not access the USB connector anymore.
 
 <github url="https://github.com/mhaack/arduino-dollhouse-tv"/>
 
@@ -94,6 +96,16 @@ Like all Homie-based projects, this project needs a configuration file as well. 
     }
 }
 ```
+
+The important configuration settings here are the wifi username & password, the MQTT settings, and the parameters for the OpenWeatherMap client.
+
+For MQTT you need to provide the server's hostname or IP address. If authentication is used username and password are required here as well. If not you don't need to include these in your config.
+
+To retrieve OpenWeatherMap weather three configuration parameters are needed:
+
+* `WeatherApiKey` - To load weather data from OpenWeatherMap you need an API key, [follow the instructions](https://openweathermap.org/appid) create one for your needs.
+* `WeatherLanguage` - set this to get the output in your language, see https://openweathermap.org/current#multi for available languages
+* `WeatherLocation`- this is the identifier of the location you want to load the weather data for. To get it open the weather details for the place you are interested in and copy the number of the location from the URL. For example for Berlin the OpenWeatherMap page is https://openweathermap.org/city/2950159, you take `2950159` from the URL.
 
 As an alternative to the file upload configuration, Homie ESP8266 also allows configuration via [HTTP JSON API](https://homieiot.github.io/homie-esp8266/docs/stable/configuration/http-json-api/). Once the device is running and connected individual configuration settings can be changed via MQTT as well.
 
