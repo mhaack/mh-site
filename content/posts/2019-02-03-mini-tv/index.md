@@ -61,9 +61,39 @@ It is organized into 4 main modules:
 * `dollhouse-tv.cpp` - the main program drawing all the TV screens and assembling them all together
 * `DisplayNode.h / .cpp` - generic class to control the SSD1306 display
 * `ButtonNode.h / .cpp` - simple and generic class to capture the button press (this is from http://github.com/luebbe Homie node collection)
-* WeatherStationNode.h / .cpp` - Homie wrapper class around the OpenWeatherMap client of the ESP8266 Weather Station project
+* `WeatherStationNode.h / .cpp` - Homie wrapper class around the OpenWeatherMap client of the ESP8266 Weather Station project
 
-Additionally, we have `WeatherStationFonts.h` storing the weather icons like sun, clouds, etc. for the weather display. And `images.h` which has a list of array constants storing the images & bitmaps.
+Additionally, we have `WeatherStationFonts.h` to store the weather icons like sun, clouds, etc. for the weather display. And `images.h` which has a list of array constants storing the images & bitmaps.
+
+The TV logic itself is very simple. For each screen aka. channel there is a "draw" method defined in `dollhouse-tv.cpp`:
+
+```cpp
+void drawCat(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+void drawStars(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+void drawClock(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+void drawWeather(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+void drawDino(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+void drawPictures(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y);
+```
+
+Each method is used to draw the channel-specific information or images on the screen. They contain mostly painting method calls and have access to the entire display. For transitions between the different screens the draw method gets virtual x & y coordinate. This is used to have a smooth animation while the current screen is transition in and out.
+
+```cpp
+void drawDino(OLEDDisplay *display, OLEDDisplayUiState *state, int16_t x, int16_t y) {
+    display->setColor(WHITE);
+    display->drawXbm(x + dinoPosX, y, dino_width, dino_height, dinoPointers[dinoState]);
+
+    dinoState++;
+    if (dinoState >= 16) {
+        dinoState = 0;
+    }
+    dinoPosX++;
+    if (dinoPosX > 128) {
+        dinoPosX = -64;
+    }
+}
+```
+The above example shows a dinosaur animation build-out of different sprites. It sets the color (there are only white and black on an SSD1306 OLED display) and draws the bitmap image. Then it moves to the next sprite and one pixel to the right on the x coordinates until the dinosaur reaches the edge of the screen.
 
 #### Configuration
 
@@ -105,7 +135,7 @@ To retrieve OpenWeatherMap weather three configuration parameters are needed:
 
 * `WeatherApiKey` - To load weather data from OpenWeatherMap you need an API key, [follow the instructions](https://openweathermap.org/appid) create one for your needs.
 * `WeatherLanguage` - set this to get the output in your language, see https://openweathermap.org/current#multi for available languages
-* `WeatherLocation`- this is the identifier of the location you want to load the weather data for. To get it open the weather details for the place you are interested in and copy the number of the location from the URL. For example for Berlin the OpenWeatherMap page is https://openweathermap.org/city/2950159, you take `2950159` from the URL.
+* `WeatherLocation`- this is the identifier of the location you want to load the weather data for. To get it open the weather details for the place you are interested in and copy the number of the location from the URL. For example for Berlin the OpenWeatherMap page is <https://openweathermap.org/city/2950159>, you take `2950159` from the URL.
 
 As an alternative to the file upload configuration, Homie ESP8266 also allows configuration via [HTTP JSON API](https://homieiot.github.io/homie-esp8266/docs/stable/configuration/http-json-api/). Once the device is running and connected individual configuration settings can be changed via MQTT as well.
 
