@@ -95,7 +95,7 @@ Like all Homie-based projects, this project needs a configuration file as well. 
 }
 ```
 
-As an altertive to the file upload configuration Homie ESP8266 also allows configuration via [HTTP JSON API](https://homieiot.github.io/homie-esp8266/docs/stable/configuration/http-json-api/). Once the device is running and connected individual configuration settings can be changed via MQTT as well.
+As an alternative to the file upload configuration, Homie ESP8266 also allows configuration via [HTTP JSON API](https://homieiot.github.io/homie-esp8266/docs/stable/configuration/http-json-api/). Once the device is running and connected individual configuration settings can be changed via MQTT as well.
 
 #### Your own screens and animations
 
@@ -105,6 +105,6 @@ If you want to build animations out of a sequence of XBM bitmaps you can follow 
 
 The workflow to add a new image animation is simple. First get the image either as an animated gif or independent image files, ideally in black and white format. The size of the image should match the screen size of the display. For the SSD1306 OLED display it must have a width of 128 pixels and a height of 64 pixels. Gif animations have to be split into individual image files.
 
-These can be converted that to an XBM bitmap file using some image tool or an online service like <https://convertio.co/gif-xbm/>. Put the XBM files into the project src folder or merge them into `images.h`. After that, they can be loaded in the code by using `drawXbm`. Make sure you add the `x` & `y` coordinates from the method parameters when drawing on the screen to have smooth transitions if the screen is changed to the next one.
+These can be converted to an XBM bitmap file using some image tool or an online service like <https://convertio.co/gif-xbm/>. Put the XBM files into the project src folder or merge them into `images.h`. After that, they can be loaded into the code by using `drawXbm`. Make sure you add the `x` & `y` coordinates from the method parameters when drawing on the screen to have smooth transitions if the screen is changed to the next one.
 
 That's it have fun with the Mini TV.
