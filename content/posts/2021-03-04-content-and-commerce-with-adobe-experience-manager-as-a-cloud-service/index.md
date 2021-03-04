@@ -9,11 +9,7 @@ I held a session on "Content and Commerce with Adobe Experience Manager" at the 
 
 The recording for my talk is now up. If you couldn't join the session, please watch and learn about how to get started with Commerce on Adobe Experience Manager as a Cloud Service.
 
-<iframe allowfullscreen="" src="https://video.tv.adobe.com/v/331851/?quality=12&amp;learn=on&amp;hidetitle=true&amp;captions=eng" style="width: 800px; height: 600px;"><source src="https://video.tv.adobe.com/v/331851/?quality=12&learn=on&hidetitle=true" type="" /><p>Your browser does not support the iframe element.</p></iframe>
-
-MH Test 1
-
-`youtube: https://video.tv.adobe.com/v/331851/?quality=12&amp;learn=on&amp;hidetitle=true&amp;captions=eng`
+<iframe width="680" height="400" allowfullscreen="" src="https://video.tv.adobe.com/v/331851/?quality=12&amp;learn=on&amp;hidetitle=true&amp;captions=eng" style="width: 800px; height: 600px;"><source src="https://video.tv.adobe.com/v/331851/?quality=12&learn=on&hidetitle=true" type="" /><p>Your browser does not support the iframe element.</p></iframe>
 
 MH Test 2
 
