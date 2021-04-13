@@ -8,11 +8,11 @@ excerpt: Our Home Assistant setup is pretty simple - everything currently runs
   setup looks like.
 hero: images/dashboard-teaser.jpg
 ---
-I try to gather and describe our Home Assitant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-) I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
+I try to gather and describe our Home Assistant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-) I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
 
 ## Overview
 
-Our Home Assistant setup is pretty simple - everything currently runs on a single board [Odroid N2](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram/). The N2 has only recently replaced the Raspberry Pi 3B. Like may Home Assistant beginners we started with Raspberry Pi (it was used for [OpenHab](/home-assistant/) before as well) and were pretty ok with it. Until the SD Card broke, that was a good opportunity to move the entire system to the Odroid N2.
+Our Home Assistant setup is simple - everything currently runs on a single board [Odroid N2](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram/). The N2 has only recently replaced the Raspberry Pi 3B. Like may Home Assistant beginners we started with Raspberry Pi (it was used for [OpenHab](/home-assistant/) before as well) and were pretty ok with it. Until the SD Card broke, that was a good opportunity to move the entire system to the Odroid N2.
 
 Other main gear we use:
 
@@ -72,7 +72,7 @@ Like any other Home Assistant setup we have many integrations. And with almost e
 
 ### Custom Integrations
 
-While Home Assistant already includes more than 1.500 integrations there are still some devices or services which are not integrated yet. Additionally, there is a large ecosystem of so-called custom integrations. They are not natively integrated into Home Assistant and must be loaded sideways via some special folder. Luckily there is HACS (Home Assistant Community Store) which helps to manage custom integration and Lovelace UI plug-ins and which is a custom integration on its own.
+While Home Assistant already includes more than 1.500 integrations there are still some devices or services which are not integrated yet. Additionally, there is a large ecosystem of so-called custom integrations. They are not natively integrated into Home Assistant and must be loaded sideways via some special folder. Luckily there is HACS (Home Assistant Community Store) which helps to manage custom integration and Lovelace UI plug-ins, and which is a custom integration on its own.
 
 | Custom Integration                                                                     | Config                                                                                                  |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -85,7 +85,7 @@ While Home Assistant already includes more than 1.500 integrations there are sti
 
 ### Custom Lovelace cards
 
-To pimp the Lovelace dashboard we use a bunch of custom lovelace cards. The three most used are:
+To pimp the Lovelace dashboard, we use a bunch of custom lovelace cards. The three most used are:
 
 | Custom Card       | Documentation / GitHub                                                                                                                                               |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
