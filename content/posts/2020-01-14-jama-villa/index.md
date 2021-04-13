@@ -56,7 +56,7 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 
 ## Integrations
 
-Like any other Home Assistant setup we have many integrations. And with almost every update or new toys I get the list gets longer. The five most important integrates our setup relies on are:
+Like any other Home Assistant setup, we have many integrations. And with every update or new toys I get the list gets longer. The five most important integrates our setup relies on are:
 
 | Integration                                                          | Config                                                                                                |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
