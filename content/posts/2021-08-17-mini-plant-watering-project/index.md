@@ -5,7 +5,7 @@ date: 2021-08-17
 slug: "mini plant watering "
 hero: images/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
 ---
-I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's Mimosa plants need some water while we were on vacation so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.
+I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's Mimosa plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.
 
 `youtube: https://youtu.be/0LImGXfNvG4`
 
@@ -15,7 +15,7 @@ It was built very quick shortly before we went out to our summer vacation place.
 
 * The plants 🪴
 * Water hose
-* Water bottle, a bucket or some container
+* Water bottle, a bucket, or some container
 * A [mini pump](https://www.aliexpress.com/item/33006096807.html)
 * A 5V power supply
 * A smart socket outlet which can be controlled by Home Assistant
@@ -29,23 +29,23 @@ Ok there is not much assembly needed for this project, no soldering, no screws, 
 
 The little bench for the plants was already there before I only had to mount the little bridge holding   water hose. It is fixed with cable ties and locked with two cable ties at the end to prevent the water from leaking. Above the plants I made a tiny hole in it with a small screwdriver. Be careful it should be super small so that the water can slowly drip out. 
 
-The aquarium pump can be  mounted anywhere. It fixes it directly to the water bottle with cable tiers. Depending how long and how often the irrigation should run you might need a bigger water container. Then connect the water hose to the pump. Almost done. 
+The aquarium pump can be mounted anywhere. It fixes it directly to the water bottle with cable tiers. Depending how long and how often the irrigation should run you might need a bigger water container. Then connect the water hose to the pump. Almost done. 
 
-The pump, in my case, requires 6 volts. I had this old power supply that can deliver 5 volts, enough to run the pump for a few seconds. The wires from the pump are connected to the plug at the end of the power supply cable and fixed with some tape. Pay attention to the correct polarity.  Ok not very professional but it works and it is low voltage only so it will not burn down our house. 
+The pump, in my case, requires 6 volts. I had this old power supply that can deliver 5 volts, enough to run the pump for a few seconds. The wires from the pump are connected to the plug at the end of the power supply cable and fixed with some tape. Pay attention to the correct polarity.  Ok not very professional but it works, and it is low voltage only so it will not burn down our house. 
 
 ![Sonoff S20](images/8bce2361-f2e5-4962-b38e-b13568460be3.jpeg)
 
 The last step is to connect the power supply with some smart socket which can be controlled by Home Assistant. I use a [Sonoff S20](https://sonoff.tech/) which I have left from another project. It is already flashed with [Tasmota](https://tasmota.github.io/docs/) firmware which works perfectly with Home Assistant. I just had to rename the device. Other controllable socket outlets like a Shelly Plug S will work as well. The socket should be connected to you Wifi network, if not already done before.
 
-Place the plants directly under the holes in the hose and put some water into the bottle. Maybe also have a towel at hand in case something goes next to the flower pot.
+Place the plants directly under the holes in the hose and put some water into the bottle. Maybe also have a towel at hand in case something goes next to the flowerpot.
 
 And now - it is time for the first "dry-run".
 
 ## Home Assistant
 
-First why do you need Home Assistant here? The answer is you don't. But it makes the project so much easier. Even the job for Home Assistant for this particular project is only on simple task: switch on/of the pump at a scheduled time. This can all be done by having a timer on the smart outlet directly (both Tasmota & Shelly firmware can do this) or by using a micro controller with a relay. 
+First why do you need Home Assistant here? The answer is you don't. But it makes the project so much easier. Even the job for Home Assistant for this project is only on simple task: switch on/off the pump at a scheduled time. This can all be done by having a timer on the smart outlet directly (both Tasmota & Shelly firmware can do this) or by using a micro controller with a relay. 
 
-Doing this with Home Assistant is simple and fun, plus you get the user interface and app to control the socket manually for free. You get logs and events when and how often the pump runs. And with Home Assistant & Nabu Casa you get access to your plant watering from everywhere in the world - thats cool. 
+Doing this with Home Assistant is simple and fun, plus you get the user interface and app to control the socket manually for free. You get logs and events when and how often the pump runs. And with Home Assistant & Nabu Casa you get access to your plant watering from everywhere in the world - that's cool. 
 
 The first step in HA is to add the controllable socket via the Home Assistant integration page. Depending on the device it might be already automatically discovered by Home Assistant. Since I reuse a Sonoff S20 I had used before I just did some double check.
 
@@ -87,4 +87,4 @@ Here is the full YAML for reference (id and device_id's will be different) :
       domain: switch
 ```
 
-With that you are go to go on holiday a little longer without hesitation and the plants will survive.
+With that you are good to go on holiday a little longer without hesitation and the plants will survive.
