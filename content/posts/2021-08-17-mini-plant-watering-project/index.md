@@ -9,6 +9,7 @@ I would like to show you my new half 30 minutes no coding holiday [Home Assistan
 
 `youtube: https://youtu.be/0LImGXfNvG4`
 
+
 It was built very quick shortly before we went out to our summer vacation place. I only used parts that I already had lying around. It took ~ 30min to build the project. 
 
 ## Parts
@@ -86,5 +87,6 @@ Here is the full YAML for reference (id and device_id's will be different) :
       entity_id: switch.sonoff_nursery_watering
       domain: switch
 ```
+
 
 With that you are good to go on holiday a little longer without hesitation and the plants will survive.
