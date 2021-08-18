@@ -5,7 +5,7 @@ date: 2021-08-17
 slug: "mini plant watering "
 hero: images/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
 ---
-I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's Mimosa plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.
+I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's [Mimosa](https://en.wikipedia.org/wiki/Mimosa_pudica) plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.
 
 `youtube: https://youtu.be/0LImGXfNvG4`
 
