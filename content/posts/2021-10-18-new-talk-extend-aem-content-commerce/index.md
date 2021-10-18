@@ -15,4 +15,6 @@ Interested? The recording for my talk is now available on YouTube.
 
 Projects build by our team mentioned in the talk:
 
+<github url="https://github.com/adobe/aem-core-cif-components" title="AEM CIF Core Components"/>
+<github url="https://github.com/adobe/commerce-cif-graphql-integration-reference" title="3rd-Party GraphQL integration with AEM Commerce and CIF on Adobe I/O Runtime"/>
 
