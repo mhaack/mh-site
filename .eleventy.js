@@ -9,7 +9,7 @@ const path = require('path')
 const isDev = process.env.ELEVENTY_ENV === 'development'
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
-const manifestPath = path.resolve(__dirname, 'public', 'assets', 'manifest.json')
+const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'manifest.json')
 
 const manifest = isDev
     ? {
