@@ -7,9 +7,9 @@ github: 'https://github.com/mhaack/halloween-pumpkin-eyes'
 image: /images/2018-10-30-halloween-creepy-eyes/pumpkin-header.jpg
 category: project
 tags:
-  - arduino
-  - development
-  - halloween
+    - arduino
+    - development
+    - halloween
 ---
 
 ## Story

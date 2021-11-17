@@ -7,8 +7,8 @@ description: This project is about the change I did from OpenHab to Home Assista
 image: /images/2019-05-21-home-assistant/header.jpg
 category: project
 tags:
-  - home-automation
-  - home-assistant
+    - home-automation
+    - home-assistant
 ---
 
 ## From OpenHab to Home Assistant

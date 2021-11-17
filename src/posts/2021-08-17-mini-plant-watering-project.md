@@ -2,14 +2,14 @@
 title: Mini plant watering project
 author: Markus
 description: I would like to show you my new half 30 minutes no coding holiday
-  Home Assistant project.
-image:  /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
+    Home Assistant project.
+image: /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
 date: 2021-08-17
 permalink: mini-plant-watering/
 category: project
 tags:
-  - home-automation
-  - home-assistant
+    - home-automation
+    - home-assistant
 ---
 
 I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's [Mimosa](https://en.wikipedia.org/wiki/Mimosa_pudica) plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.

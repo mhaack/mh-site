@@ -7,8 +7,8 @@ description: My second Home Assistant project is about the integration of the Ho
 image: /images/2019-07-08-home-assistant-display/header.jpg
 category: project
 tags:
-  - home-automation
-  - home-assistant
+    - home-automation
+    - home-assistant
 ---
 
 ## Home Assistant
@@ -35,14 +35,14 @@ I created some python scripts to concatenate all the text lines, icons, LED colo
 
 The scripts are split into two parts:
 
-- A generic *[update_display.py](https://github.com/mhaack/home-assistant-config/blob/master/config/python_scripts/update_display.py)* script which does all the encoding and construction of the proprietary string format – this one can be reused directly
-- A second, custom to my/your setup script to extract the data from my devices, collecting all and sending it to the first script
+-   A generic _[update_display.py](https://github.com/mhaack/home-assistant-config/blob/master/config/python_scripts/update_display.py)_ script which does all the encoding and construction of the proprietary string format – this one can be reused directly
+-   A second, custom to my/your setup script to extract the data from my devices, collecting all and sending it to the first script
 
-The *update_display.py* script constructs the string beginning with the three text lines and icons, encoding special characters, followed by the beeper code and LED color. This is sent to the device `homematic.set_device_value`.
+The _update_display.py_ script constructs the string beginning with the three text lines and icons, encoding special characters, followed by the beeper code and LED color. This is sent to the device `homematic.set_device_value`.
 The second script is included in my automation's, once called it collects all the device variables and merges all data into a JSON object. Some values like the device id or display text which does not change are hardcoded. This JSON is sent to the first python script.
 
 The button press events (`homematic.keypress`) can be captured by a simple automation. See [Homematic Home Assistant integration](https://www.home-assistant.io/components/homematic/) for more details.
 
 <github url="https://github.com/mhaack/home-assistant-config"/>
 
-The full scripts are available in [my Home Assistant config repo](https://github.com/mhaack/home-assistant-config) in the *python_scripts* folder on GitHub. These are my first python baby steps, feedback and improvements are always welcome.
+The full scripts are available in [my Home Assistant config repo](https://github.com/mhaack/home-assistant-config) in the _python_scripts_ folder on GitHub. These are my first python baby steps, feedback and improvements are always welcome.

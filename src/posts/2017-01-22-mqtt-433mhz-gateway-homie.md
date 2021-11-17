@@ -7,8 +7,8 @@ description: This project is a simple bidirectional gateway to transmit and rece
 image: '/images/2017-01-22-mqtt-433mhz-gateway-homie/header.jpg'
 category: project
 tags:
-  - arduino
-  - development
+    - arduino
+    - development
 ---
 
 ## Smart Home 433Mhz RF <-> MQTT Gateway with Some Extras

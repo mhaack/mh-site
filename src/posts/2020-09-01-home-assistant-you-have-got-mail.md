@@ -1,20 +1,21 @@
 ---
-title: "Home Assistant: You have got mail"
+title: 'Home Assistant: You have got mail'
 author: Markus
 date: 2020-09-05
 permalink: you-have-got-mail/
-description: "Today I want to share a little holiday project I build this week: a
-  mailbox sensor to make a dumb mailbox smart and notifying us if we got new
-  mail. I’m talking about real physical mail here - letters, postcards,
-  newspapers etc. dropped into our mailbox."
+description: 'Today I want to share a little holiday project I build this week: a
+    mailbox sensor to make a dumb mailbox smart and notifying us if we got new
+    mail. I’m talking about real physical mail here - letters, postcards,
+    newspapers etc. dropped into our mailbox.'
 image: /images/2020-09-01-home-assistant-you-have-got-mail/you-ve_got_mail_-2685196800-.jpg
 category: project
 tags:
-  - home-automation
-  - home-assistant
-  - zigbee
-  - mailbox
+    - home-automation
+    - home-assistant
+    - zigbee
+    - mailbox
 ---
+
 Today I want to share a little holiday project I build this week: a mailbox sensor to make a dumb mailbox smart and notifying us if we got new mail. I’m talking about real physical mail here - letters, postcards, newspapers etc. dropped into our mailbox.
 
 ## How does it work?
@@ -29,10 +30,10 @@ This is how the setup looks like:
 
 Not much is needed for this project:
 
-* 2 ZigBee contact sensors (e.g. Xiaomi...)
-* ZigBee network (for example via Deconz)
-* Home Assistant
-* Duck tape, hot glue, etc. to fix the sensors 
+-   2 ZigBee contact sensors (e.g. Xiaomi...)
+-   ZigBee network (for example via Deconz)
+-   Home Assistant
+-   Duck tape, hot glue, etc. to fix the sensors
 
 The setup depends a little on the construction of the actual mailbox. Ours has a flap on the front side where the mail is thrown in and a door on the backside to empty it. So I needed two sensors, one to detect if the mail was inserted and a second one to detect when we cleared the mailbox. For a mailbox with just one door or flap, only one sensor would be needed. Our mailbox is made of metal, like most mailboxes here, built into a concrete column. I first thought having a metal frame like this might be problematic with the ZigBee signal but that is not the case.
 
@@ -70,69 +71,69 @@ The mail detection automation is executed when the flap of the mailbox has been 
 
 ```yaml
 ---
-alias: "[Mailbox] Mail detection"
+alias: '[Mailbox] Mail detection'
 trigger:
-  - platform: state
-    entity_id: binary_sensor.garden_mailbox_flap
-    from: "off"
-    to: "on"
+    - platform: state
+      entity_id: binary_sensor.garden_mailbox_flap
+      from: 'off'
+      to: 'on'
 action:
-  - service: input_boolean.turn_on
-    data:
-      entity_id: input_boolean.garden_mailbox
-  - condition: state
-    entity_id: input_boolean.garden_mailbox_notification
-    state: "on"
-  - service: notify.mobile_app_xyz
-    data:
-      title: JaMa Villa - 📬
-      message: Trari, trara, die Post ✉️ ist da!
+    - service: input_boolean.turn_on
       data:
-        push:
-          thread-id: "ha-mailbox-notification-group"
+          entity_id: input_boolean.garden_mailbox
+    - condition: state
+      entity_id: input_boolean.garden_mailbox_notification
+      state: 'on'
+    - service: notify.mobile_app_xyz
+      data:
+          title: JaMa Villa - 📬
+          message: Trari, trara, die Post ✉️ ist da!
+          data:
+              push:
+                  thread-id: 'ha-mailbox-notification-group'
 ```
 
 The mailbox door automation is even simpler. It just resets the mail status to off if the mailbox door got open which is the indication that the mailbox has been emptied.
 
 ```yaml
 ---
-alias: "[Mailbox] Reset"
+alias: '[Mailbox] Reset'
 trigger:
-  - platform: state
-    entity_id: binary_sensor.garden_mailbox_door
-    from: "off"
-    to: "on"
+    - platform: state
+      entity_id: binary_sensor.garden_mailbox_door
+      from: 'off'
+      to: 'on'
 action:
-  - service: input_boolean.turn_off
-    data:
-      entity_id: input_boolean.garden_mailbox
+    - service: input_boolean.turn_off
+      data:
+          entity_id: input_boolean.garden_mailbox
 ```
 
 The reminder automation is also very simple. At a certain time it checks the mailbox state and sends us a reminder in case there is still mail in the mailbox. We decided to have two reminders: first at 6 pm, second at 8 pm.
 
 ```yaml
 ---
-alias: "[Mailbox] Notification"
+alias: '[Mailbox] Notification'
 trigger:
-  - platform: time
-    at:
-      - "18:00:00"
-      - "20:00:00"
+    - platform: time
+      at:
+          - '18:00:00'
+          - '20:00:00'
 condition:
-  - condition: state
-    entity_id: input_boolean.garden_mailbox_notification
-    state: "on"
-  - condition: state
-    entity_id: input_boolean.garden_mailbox
-    state: "on"
+    - condition: state
+      entity_id: input_boolean.garden_mailbox_notification
+      state: 'on'
+    - condition: state
+      entity_id: input_boolean.garden_mailbox
+      state: 'on'
 action:
-  - service: notify.mobile_app_xzy
-    data:
-      title: JaMa Villa - 📬
-      message: Der Briefkasten wurde noch nicht geleert, da ist noch ✉️ drin.
+    - service: notify.mobile_app_xzy
       data:
-        push:
-          thread-id: "ha-mailbox-notification-group"
+          title: JaMa Villa - 📬
+          message: Der Briefkasten wurde noch nicht geleert, da ist noch ✉️ drin.
+          data:
+              push:
+                  thread-id: 'ha-mailbox-notification-group'
 ```
 
 {% githubBadge "mhaackhome-assistant-config" %}

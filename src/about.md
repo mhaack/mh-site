@@ -1,7 +1,7 @@
 ---
 layout: about.njk
 name: Markus
-image:  '/images/markus.jpeg'
+image: '/images/markus.jpeg'
 ---
 
 I'm a developer, an engineer, a husband of a wonderful wife and a proud dad,

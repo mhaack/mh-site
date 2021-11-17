@@ -8,37 +8,37 @@ Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs.
 
 ## Features
 
-- Fully responsive
+-   Fully responsive
 
-- SEO metadata and Open Graph tags
+-   SEO metadata and Open Graph tags
 
-- Maximize lighthouse score
+-   Maximize lighthouse score
 
-- Cache busting
+-   Cache busting
 
-- 404 page
+-   404 page
 
-- RSS feed for posts
+-   RSS feed for posts
 
-- Tags support
+-   Tags support
 
-- Pagination support
+-   Pagination support
 
-- Syntax highlighting with PrismJS
+-   Syntax highlighting with PrismJS
 
 ## Getting Started
 
-- [Generate a new repo from this repository template](https://github.com/yinkakun/eleventy-duo/generate) which will copy this project into your own new repo.
+-   [Generate a new repo from this repository template](https://github.com/yinkakun/eleventy-duo/generate) which will copy this project into your own new repo.
 
-- Clone your new repository with `git clone https://github.com/YOUR_REPO`,
+-   Clone your new repository with `git clone https://github.com/YOUR_REPO`,
 
-- Navigate to the newly created repo
+-   Navigate to the newly created repo
 
-- Install dependencies with `yarn install`
+-   Install dependencies with `yarn install`
 
-- Serve the site locally with `yarn dev`
+-   Serve the site locally with `yarn dev`
 
-- Use `yarn build` to build a production version of the site.
+-   Use `yarn build` to build a production version of the site.
 
 ## Customize
 
@@ -127,15 +127,15 @@ Once the site is imported in Forestry, go to settings/previews to start the prev
 
 The basic CMS setup allows you to edit the following:
 
-- Home page: Edit the content on your homepage.
+-   Home page: Edit the content on your homepage.
 
-- About page: Edit the content of your about page.
+-   About page: Edit the content of your about page.
 
-- Posts: Create and edit blog posts.
+-   Posts: Create and edit blog posts.
 
-- Generic pages: Create generic pages that use a similar layout to posts.
+-   Generic pages: Create generic pages that use a similar layout to posts.
 
-- Global site data: Various bits of global site data such as your url, title, and other details.
+-   Global site data: Various bits of global site data such as your url, title, and other details.
 
 You can add new blog posts, [data files](https://forestry.io/docs/editing/data-files/), or entire pages to fit your needs. You can also customize [how media is handled](https://forestry.io/docs/media/), by configurating gitLFS, Cloudinary, S3, or Netlify Large Media.
 
@@ -145,27 +145,27 @@ You can set up a [remote admin](https://forestry.io/docs/editing/remote-admin/) 
 
 [Netlify](https://netlify.com) is a great way to easily deploy sites. There's no special setup you need to do with Forestry to deploy with Netlify. When Forestry makes commits to your repo, Netlify will auto-trigger a rebuild / deploy when new commits are made.
 
-- Create a new site in Netlify and import your repository.
+-   Create a new site in Netlify and import your repository.
 
-- Set the build command to `yarn build`
+-   Set the build command to `yarn build`
 
-- Set the publish directory to `public`
+-   Set the publish directory to `public`
 
 ## Built with
 
-- Eleventy for site generation (obviously)
+-   Eleventy for site generation (obviously)
 
-- Webpack for asset bundling
+-   Webpack for asset bundling
 
-- PostCSS for CSS processing
+-   PostCSS for CSS processing
 
-- Autoprefixer for vendor prefixing CSS
+-   Autoprefixer for vendor prefixing CSS
 
-- PostCSS Preset Env for transpiling css
+-   PostCSS Preset Env for transpiling css
 
-- PurgeCSS for unused CSS removal
+-   PurgeCSS for unused CSS removal
 
-- CSSNano for CSS minification
+-   CSSNano for CSS minification
 
 ## License
 

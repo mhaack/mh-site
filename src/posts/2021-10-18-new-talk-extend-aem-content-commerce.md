@@ -1,5 +1,5 @@
 ---
-title: "New Talk: Extend AEM Content & Commerce"
+title: 'New Talk: Extend AEM Content & Commerce'
 author: Markus
 date: 2021-10-18
 permalink: extend-aem-commerce/
@@ -11,6 +11,7 @@ tags:
     - commerce
     - cif
 ---
+
 At the last Adobe Developers Live conference I gave a talk about how to extend AEM Content & Commerce with new Adobe Developer App Builder.
 
 In this talk I discuss AEM Commerce integration & extensibility patterns using App Builder. I explain how you can integrate your eCommerce solution, either in house home grown services or an off the shelf commercial solution, with Adobe Experience Manager. The talk covers the overall integration architecture, how we use GraphQL in the Commerce Integration Framework (CIF) and how you can easily build your own integration.

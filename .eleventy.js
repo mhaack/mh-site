@@ -27,7 +27,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
     eleventyConfig.addPassthroughCopy('admin')
-    
+
     eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] })
 
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')

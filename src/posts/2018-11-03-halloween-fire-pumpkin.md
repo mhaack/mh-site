@@ -7,9 +7,9 @@ description: A flame-throwing Jack-O-Lantern is a real Halloween highlight and d
 image: /images/2018-11-03-halloween-fire-pumpkin/header.jpg
 category: project
 tags:
-  - arduino
-  - development
-  - halloween
+    - arduino
+    - development
+    - halloween
 ---
 
 ## Jack-O-Lantern Flamethrower
@@ -32,17 +32,17 @@ If you are going to rebuild this project you do it at your own risks. Read the w
 
 The following components are needed:
 
-- A big pumpkin
-- Penetrating fluid like WD-40 or cheaper replacement, it's just going to be burned anyway
-- A tea candle
-- Material for the flamethrower construction to hold the spray can
-- ESP8266 (Wemos D1 mini, Nodemcu) or ESP32
-- 1-3 PIR motion sensors
-- Strong servo motor
-- SSD1306 display (optional)
-- Prototyping board
-- male & female pin headers
-- USB cable and power supply
+-   A big pumpkin
+-   Penetrating fluid like WD-40 or cheaper replacement, it's just going to be burned anyway
+-   A tea candle
+-   Material for the flamethrower construction to hold the spray can
+-   ESP8266 (Wemos D1 mini, Nodemcu) or ESP32
+-   1-3 PIR motion sensors
+-   Strong servo motor
+-   SSD1306 display (optional)
+-   Prototyping board
+-   male & female pin headers
+-   USB cable and power supply
 
 The display is not really needed for this project, it is just used for fun to display some little animation and information which of the motion sensors triggered the fire.
 
@@ -52,10 +52,10 @@ As usual, I got the most parts from [Aliexpress](https://www.aliexpress.com) but
 
 These are the tools needed:
 
-- A cutting knife
-- A marker
-- Soldering iron with solder
-- Tools to construct the flame-throwing mechanism
+-   A cutting knife
+-   A marker
+-   Soldering iron with solder
+-   Tools to construct the flame-throwing mechanism
 
 ## The flamethrower
 
@@ -109,10 +109,10 @@ The code is written in C++, `halloween.cpp` is the main class.
 
 The following software libraries are used. If using PlatformIO all dependencies are resolved automatically.
 
-- [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
-- [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
-- [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
-- Optionally PlatformIO environment for building the code
+-   [Homie V2](https://github.com/marvinroger/homie-esp8266) including dependencies
+-   [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
+-   [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
+-   Optionally PlatformIO environment for building the code
 
 ## The IoT part
 
@@ -124,7 +124,7 @@ The flamethrower supports one import command: switch on the fire 😀. It can be
 
 Command line example:
 
-``` bash
+```bash
 mosquitto_pub -h <mqtt broker host> -t homie/<device id>/fire/on/set -m true
 ```
 
