@@ -130,7 +130,7 @@ module.exports = function (eleventyConfig) {
     return {
         dir: {
             input: 'src',
-            output: 'public',
+            output: 'dist',
             passthroughFileCopy: true,
             templateFormats: ['html', 'njk', 'md'],
             htmlTemplateEngine: 'njk',
