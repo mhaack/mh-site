@@ -1,0 +1,26 @@
+backend: # Set up your backend
+  name: github
+  repo: mhaack/mh-site
+
+local_backend: true
+
+publish_mode: editorial_workflow
+media_folder: src/images
+public_folder: /images
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    media_folder: "/src/images/"
+    public_folder: "/images"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
+      - { label: "Slug", name: "permalink", widget: "string" }
+      - { label: "Excerpt", name: "description", widget: "text", required: false }
+      - { label: "Tags", name: "tags", widget: "list", default: ["project"] }
+      - { label: "Hero", name: "image", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }
