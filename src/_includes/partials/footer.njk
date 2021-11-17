@@ -1,0 +1,49 @@
+<footer class="footer">
+  <div class="footer__content">
+    <ul class="footer__social-links">
+      {%- if site.socialLinks %}
+        {%- for item in site.socialLinks -%}
+          {% set externalAttribute = '' %}
+          {% if item.external -%}
+            {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+          {%- endif -%}
+          <li>
+            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}">
+              {% if item.icon -%}
+              <i class="{{ item.icon }} fa-2x"></i>
+              <span>Link to {{ item.text }}</span>
+              {%- else -%}
+              Link to {{ item.text }}
+              {%- endif %}
+            </a>
+          </li>
+        {%- endfor -%}
+      {%- endif %}
+      {%- if site.footerLinks %}
+        {%- for item in site.footerLinks -%}
+          {% set externalAttribute = '' %}
+          {% if item.external -%}
+            {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+          {%- endif -%}
+          <li>
+            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}">
+              {% if item.icon -%}
+              <i class="{{ item.icon }} fa-2x"></i>
+              <span>Link to {{ item.text }}</span>
+              {%- else -%}
+              Link to {{ item.text }}
+              {%- endif %}
+            </a>
+          </li>
+        {%- endfor %}
+      {%- endif %}
+    </ul>
+    <p class="footer__attribution">
+      <span>© {% currentYear %}
+      </span>
+      {%- if site.footerAttribution -%}
+        {{ site.footerAttribution | safe }}
+      {%- endif %}
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+---
+layout: base
+---
+
+<article class="post">
+  <header class="post__header">
+    <h1>{{ title }}</h1>
+    <div class="post__details">
+      <time datetime="{{ page.date | htmlDateString }}">
+        {{ page.date | readableDate }}
+      </time>
+      <span> | </span>
+      <span>{{ content | readingTime }} read</span>
+    </div>
+    {% if image -%}
+    <figure class="post__feature__image">
+        <img src="{{ image }}" alt="{{ title }}" loading="lazy" decoding="async">
+    </figure>
+    {% endif %}
+  </header>
+  
+  <main class="post__content">
+    {{ content | safe }}
+  </main>
+
+  <aside class="post__aside">
+    <div class="post__tags">
+      {% for tag in tags | pageTags %}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+      {% endfor %}
+    </div>
+
+    <h3>Read More</h3>
+    <nav class="post__pagination">
+      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+      {%- if nextPost %}
+        <div>
+        <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+        <div class="post__pagination__meta">
+          <time datetime="{{ nextPost.date | htmlDateString }}">
+            {{- nextPost.date | readableDate -}}
+          </time>
+          <span> · </span>
+          <span>{{ nextPost | readingTime }} read</span>
+        </div>
+        </div>
+
+      {% endif %}
+
+      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+      {%- if previousPost %}
+
+         <div>
+        <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+                <div class="post__pagination__meta">
+          <time datetime="{{ previousPost.date | htmlDateString }}">
+            {{- previousPost.date | readableDate -}}
+          </time>
+          <span> · </span>
+          <span>{{ previousPost | readingTime }} read</span>
+        </div>
+        </div>
+
+      {% endif %}
+    </nav>
+  </aside>
+
+</article>

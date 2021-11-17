@@ -1,0 +1,48 @@
+---
+layout: base
+---
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="intro">
+      {{ content | safe }}
+    </div>
+  </div>
+</header>
+
+<section class="post-list__wrapper">
+  <h2 class="post-list__heading">My latest projects & posts</h2>
+
+  {% set postslist = collections.posts | head(-5) %}
+  {% include "partials/posts-list.njk" %}
+
+  <a class="all-posts-link" href="{{ '/projects/' | url }}">View All Projects</a>
+</section>
+
+<section class="contact">
+  <div class="contact__container">
+    <div class="contact__content">
+      <h3>Get In Touch</h3>
+      <p class="css-1mp4qkz eju0huw3">Want to have a chat? Send me a message.</p>
+      <form name="contact" method="post" action="/success">
+        <input type="hidden" name="form-name" value="contact">
+        <div class="contact__row">
+          <div>
+            <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" class="css-1maxubx eju0huw7" spellcheck="false" data-ms-editor="true">
+          </div>
+          <div>
+            <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" class="css-1maxubx eju0huw7">
+          </div>
+        </div>
+        <div class="contact__row">
+          <div>
+            <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="4" class="css-1tztzr7 eju0huw8" spellcheck="false" data-ms-editor="true"></textarea>
+          </div>
+        </div>
+        <div class="contact__actionrow">
+          <button type="submit" value="Send Message" class="css-axbaxi eju0huw9">Send Message</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </section>

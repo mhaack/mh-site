@@ -1,0 +1,13 @@
+--- 
+layout: base
+---
+
+<h1 class="post-list__heading">Some of my professional projects</h1>
+
+<div class="tags">
+  {% include "partials/tags-list.njk" %}
+</div>
+
+{% set postslist = collections.posts | category("work") %}
+{% set showtaglist = true %}
+{% include "partials/posts-list.njk" %}
