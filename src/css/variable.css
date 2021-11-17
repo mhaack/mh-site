@@ -1,0 +1,8 @@
+:root {
+    --accent: rgba(0, 128, 0, 0.65);
+    --background: #fffffe;
+    --color: rgb(41, 41, 41);
+    --gray: rgb(117, 117, 117);
+    --input-background: rgba(0,0,0,0.07);
+    --input-hover: rgba(0,0,0,0.15);
+}

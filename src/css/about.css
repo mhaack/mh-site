@@ -1,0 +1,41 @@
+.about h1 {
+    margin-bottom: 2rem;
+}
+
+.about__image {
+    border-radius: 50%;
+    border: solid 1px #e6e6e6;
+    float: none;
+    margin-left: 4em;
+    margin-right: auto;
+    margin-top: 0;
+    width: 300px;
+    height: 300px;
+}
+.about__image img {
+    padding: 0.65em;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.about__heading {
+  font-size: var(--text-3xl);
+  margin-bottom: 1rem;
+}
+
+.about__heading:before {
+  color: rgba(0, 128, 0, 0.65);
+  content: "//";
+  font-weight: 600;
+  margin-right: .5rem;
+}
+
+@media (min-width: 35.9375em) {
+    .about__image {
+        width: 200px;
+        height: 200px;
+        float: right;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+    }
+}

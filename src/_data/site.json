@@ -1,0 +1,69 @@
+{
+    "name": "Markus Haack // Software Engineer",
+    "description": "Software Engineer working at Adobe and proud dad of a wonderful daughter.",
+    "url": "https://markus-haack.com",
+    "author": {
+        "name": "Markus Haack",
+        "email": "author@site.com",
+        "twitterHandle": "mhaack"
+    },
+    "defaultSocialImage": "/images/default-social-image.png",
+    "headerLinks": [
+        {
+            "text": "Projects",
+            "url": "/projects",
+            "external": false
+        },
+        {
+            "text": "Work",
+            "url": "/work",
+            "external": false
+        },
+        {
+            "text": "About",
+            "url": "/about",
+            "external": false
+        }
+    ],
+    "socialLinks": [
+        {
+            "text": "Twitter",
+            "url": "https://twitter.com/",
+            "icon": "fab fa-twitter",
+            "external": true
+        },
+        {
+            "text": "Instagram",
+            "url": "https://instagram.com/",
+            "icon": "fab fa-instagram",
+            "external": true
+        },
+        {
+            "text": "GitHub",
+            "url": "https://github.com/yinkakun/eleventy-duo",
+            "icon": "fab fa-github",
+            "external": true
+        },
+        {
+            "text": "LinkedIn",
+            "url": "https://de.linkedin.com/in/markushaack",
+            "icon": "fab fa-linkedin",
+            "external": true
+        },
+        {
+            "text": "Medium",
+            "url": "https://de.linkedin.com/in/markushaack",
+            "icon": "fab fa-medium",
+            "external": true
+        }
+    ],
+    "footerLinks": [
+        {
+            "text": "RSS",
+            "url": "/feed.xml",
+            "icon": "fa fa-rss",
+            "external": true
+        }
+    ],
+    "footerAttribution": "| Made by <a href=\"https://twitter.com/mhaack\" target=\"_blank\" rel=\"noopener\">Markus Haack</a> | Built with: <a href=\"https://www.11ty.dev\" target=\"_blank\" rel=\"noopener\">Eleventy</a> & Eleventy Duo Theme"
+}

@@ -1,0 +1,45 @@
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+    {% bundledcss %}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>
+      {%- if title -%} 
+        {{  title | escape }}
+      {%- else -%}
+        {{ site.name }}
+      {%- endif -%}
+    </title>
+
+    <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
+
+    <meta property="og:title" content="{{  title or site.name | escape }}">
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ site.url + page.url }}"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    {%- if site.author.twitterHandle -%}
+    <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
+    {%- endif -%}
+    {% set desc = description %}
+    {%- if not desc -%}
+      {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {%- if desc -%}
+    <meta name="description" content="{{ desc | escape  }}">
+    <meta property="og:description" content="{{ desc | escape }}">
+    {%- endif -%}
+{# 
+    {%- if not socialImage -%}
+      {% set socialImage = site.defaultSocialImage %}
+    {%- endif -%}
+    {%- if socialImage %}
+    <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+    <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+    {% endif %}
+     #}
+  </head>
