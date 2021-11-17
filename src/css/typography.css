@@ -22,6 +22,7 @@ body {
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
   font-family: 'IBM Plex Sans', sans-serif;
+  font-display: swap;
 }
 
 h1,
