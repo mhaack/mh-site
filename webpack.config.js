@@ -13,7 +13,7 @@ module.exports = {
     path.resolve(__dirname, 'src', 'css', 'main.css'),
   ],
   output: {
-    path: path.resolve(__dirname, 'public', 'assets'),
+    path: path.resolve(__dirname, 'dist', 'assets'),
     filename: `${baseFilename}.js`,
   },
 
