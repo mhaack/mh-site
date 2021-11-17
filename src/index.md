@@ -5,4 +5,4 @@ title: 'Markus Haack // Software Engineer'
 
 # Hi, my name is Markus 
 
-Software engineer at Adobe and proud dad
+I'm a developer, home automation enthusiast, proud dad and a Software Engineer at Adobe from Leipzig, Germany.

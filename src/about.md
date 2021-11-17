@@ -1,6 +1,6 @@
 ---
 layout: about.njk
-name: Markus Haack
+name: Markus
 image:  '/images/markus.jpeg'
 ---
 
