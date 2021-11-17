@@ -89,11 +89,11 @@
     border-bottom: 2px solid transparent;
     background-color: transparent;
     transition: 0.3s border ease;
-    color: var(--accent);
+    color: var(--accent-dark);
 }
 .contact__actionrow button:focus,
 .contact__actionrow button:hover {
-    border-bottom-color: var(--accent);
+    border-bottom-color: var(--accent-dark);
 }
 
 @media (max-width: 45.9375em) {
