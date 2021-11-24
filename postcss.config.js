@@ -2,6 +2,7 @@ const autoprefixer = require('autoprefixer');
 const postcssColorMod = require('postcss-color-mod-function');
 const postcssPresetEnv = require('postcss-preset-env');
 const atImport = require('postcss-import');
+const {postcssFontGrabber} = require('postcss-font-grabber');
 
 const plugins = [
   atImport,
@@ -14,6 +15,10 @@ const plugins = [
     },
   }),
   postcssColorMod,
+  postcssFontGrabber({
+    cssSrc: 'src/css/',
+    cssDest: 'src/css/',
+  })
 ];
 
 const isDev = process.env.APP_ENV === 'development';
