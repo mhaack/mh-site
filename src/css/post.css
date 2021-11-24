@@ -86,11 +86,11 @@
 }
 
 .post__pagination > *:first-child {
-    margin-right: 0.5rem;
+    margin-right: 0;
+    width: 100%;
 }
-
 .post__pagination > *:last-child {
-    margin-left: 0.5rem;
+    display: none;
 }
 
 .post__pagination > *:only-child {
@@ -104,19 +104,16 @@
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 0 transparent, 0 0 transparent,
-        0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    box-shadow: 0 0 transparent, 0 0 transparent, 0 20px 25px -5px rgba(0, 0, 0, 0.1),
         0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-    transition-property: background-color, border-color, color, fill, stroke,
-        opacity, box-shadow, transform;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 0.3s;
 
     --scale-x: 1;
     --scale-y: 1;
-    transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0)
-        scaleX(var(--scale-x)) scaleY(var(--scale-y));
+    transform: translateX(0) translateY(0) rotate(0) skewX(0) skewY(0) scaleX(var(--scale-x)) scaleY(var(--scale-y));
 }
 
 .post__pagination > div:hover {
@@ -144,12 +141,13 @@
     margin-left: 0.5rem;
 }
 
-@media (max-width: 45.9375em) {
+@media (min-width: 35.9375em) {
     .post__pagination > *:first-child {
-        margin-right: 0;
-        width: 100%;
+        margin-right: 0.5rem;
     }
+
     .post__pagination > *:last-child {
-        display: none;
+        margin-left: 0.5rem;
+        display: block;
     }
 }

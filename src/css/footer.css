@@ -32,10 +32,15 @@
 }
 
 .footer li {
-  margin-right: 2rem;
+  margin-right: 1rem;
+}
+
+.footer li:last-child {
+  margin-right: 0;
 }
 
 .footer__social-links a {
+  font-size: 2rem;
   text-decoration: none;
 }
 
