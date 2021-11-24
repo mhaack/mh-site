@@ -10,7 +10,7 @@
           <li>
             <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}">
               {% if item.icon -%}
-              <i class="{{ item.icon }} fa-2x"></i>
+              <i class="{{ item.icon }}"></i>
               <span>Link to {{ item.text }}</span>
               {%- else -%}
               Link to {{ item.text }}
@@ -28,7 +28,7 @@
           <li>
             <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}">
               {% if item.icon -%}
-              <i class="{{ item.icon }} fa-2x"></i>
+              <i class="{{ item.icon }}"></i>
               <span>Link to {{ item.text }}</span>
               {%- else -%}
               Link to {{ item.text }}

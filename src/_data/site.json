@@ -29,31 +29,31 @@
         {
             "text": "Twitter",
             "url": "https://twitter.com/",
-            "icon": "fab fa-twitter",
+            "icon": "icon icon-twitter",
             "external": true
         },
         {
             "text": "Instagram",
             "url": "https://instagram.com/",
-            "icon": "fab fa-instagram",
+            "icon": "icon icon-instagram",
             "external": true
         },
         {
             "text": "GitHub",
             "url": "https://github.com/yinkakun/eleventy-duo",
-            "icon": "fab fa-github",
+            "icon": "icon icon-github",
             "external": true
         },
         {
             "text": "LinkedIn",
             "url": "https://de.linkedin.com/in/markushaack",
-            "icon": "fab fa-linkedin",
+            "icon": "icon icon-linkedin",
             "external": true
         },
         {
             "text": "Medium",
             "url": "https://de.linkedin.com/in/markushaack",
-            "icon": "fab fa-medium",
+            "icon": "icon icon-medium",
             "external": true
         }
     ],
@@ -61,7 +61,7 @@
         {
             "text": "RSS",
             "url": "/feed.xml",
-            "icon": "fa fa-rss",
+            "icon": "icon icon-rss",
             "external": true
         }
     ],

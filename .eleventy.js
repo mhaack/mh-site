@@ -26,6 +26,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true)
 
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
+    eleventyConfig.addPassthroughCopy('src/assets')
     eleventyConfig.addPassthroughCopy('admin')
 
     eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] })
