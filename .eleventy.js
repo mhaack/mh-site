@@ -2,21 +2,12 @@ const { DateTime } = require('luxon')
 const readingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const purgeCssPlugin = require('eleventy-plugin-purgecss')
+const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
-const fs = require('fs')
-const path = require('path')
+const { minify } = require('terser')
 
-const isDev = process.env.ELEVENTY_ENV === 'development'
 const isProd = process.env.ELEVENTY_ENV === 'production'
-
-const manifestPath = path.resolve(__dirname, 'dist', 'assets', 'manifest.json')
-
-const manifest = isDev
-    ? {
-          'main.js': '/assets/main.js',
-          'main.css': '/assets/main.css',
-      }
-    : JSON.parse(fs.readFileSync(manifestPath, { encoding: 'utf8' }))
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(readingTime)
@@ -26,24 +17,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true)
 
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
+    eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
     eleventyConfig.addPassthroughCopy('admin')
-
-    eleventyConfig.setBrowserSyncConfig({ files: [manifestPath] })
+    eleventyConfig.addWatchTarget("./src/_css/");
 
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
-
-    eleventyConfig.addShortcode('bundledcss', function () {
-        return manifest['main.css'] ? `<link href="${manifest['main.css']}" rel="stylesheet" />` : ''
-    })
-
-    eleventyConfig.addShortcode('bundledjs', function () {
-        return manifest['main.js'] ? `<script src="${manifest['main.js']}"></script>` : ''
-    })
 
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./lib/shortcodes/currentYear'))
     eleventyConfig.addShortcode('youtubeEmbed', require('./lib/shortcodes/youtubeEmbed'))
-
     eleventyConfig.addShortcode('githubBadge', require('./lib/shortcodes/githubBadge'))
 
     eleventyConfig.addFilter('excerpt', (post) => {
@@ -115,15 +97,41 @@ module.exports = function (eleventyConfig) {
             })
     })
 
+    // clean-css filter
+    eleventyConfig.addFilter('cssmin', function (code) {
+        return new CleanCSS({}).minify(code).styles
+    })
+
+    // purgeCss filter
+    if (isProd) {
+        eleventyConfig.addPlugin(purgeCssPlugin, {
+            config: './purgecss.config.js',
+            quiet: false,
+        })
+    }
+
+    // inline js filter
+    eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
+        try {
+            const minified = await minify(code)
+            callback(null, minified.code)
+        } catch (err) {
+            console.error('Terser error: ', err)
+            // Fail gracefully.
+            callback(null, code)
+        }
+    })
+
+    // minify html filter
     eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
         if (outputPath && outputPath.endsWith('.html') && isProd) {
-            return htmlmin.minify(content, {
+            let minified = htmlmin.minify(content, {
+                useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
-                useShortDoctype: true,
             })
+            return minified
         }
-
         return content
     })
 
