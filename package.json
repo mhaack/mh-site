@@ -17,7 +17,7 @@
     "scripts": {
         "dev": "env ELEVENTY_ENV=development eleventy --serve",
         "build": "env ELEVENTY_ENV=production eleventy",
-        "format": "prettier --write \"{src,lib}/**/*.{js,json,md}\"",
+        "format": "prettier --write \"src/**/*.{js,json,md}\"",
         "clean": "rm -rf ./public"
     }
 }
