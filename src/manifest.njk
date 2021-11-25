@@ -1,0 +1,26 @@
+---
+permalink: assets/manifest.webmanifest
+eleventyExcludeFromCollections: true
+---
+{
+    "name": "{{ site.name }}",
+    "short_name": "{{ site.name }}",
+    "author": "{{ site.author.name }}",
+    "description": "{{ site.description }}",
+    "start_url": "/",
+    "background_color": "#fff",
+    "theme_color": "#fff",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/assets/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
