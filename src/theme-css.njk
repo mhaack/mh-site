@@ -1,0 +1,22 @@
+---
+permalink: assets/theme.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "./_css/main.css" %}
+  {% include "./_css/global.css" %}
+  {% include "./_css/variable.css" %}
+  {% include "./_css/prism-theme.css" %}
+  {% include "./_css/typography.css" %}
+  {% include "./_css/icon-font.css" %}
+  {% include "./_css/post-list.css" %}
+  {% include "./_css/hero.css" %}
+  {% include "./_css/header.css" %}
+  {% include "./_css/footer.css" %}
+  {% include "./_css/post.css" %}
+  {% include "./_css/about.css" %}
+  {% include "./_css/media.css" %}
+  {% include "./_css/github.css" %}
+  {% include "./_css/contact.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

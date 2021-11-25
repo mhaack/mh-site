@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('../assets/font/iconfont.eot?68074734');
-  src: url('../assets/font/iconfont.eot?68074734#iefix') format('embedded-opentype'),
-       url('../assets/font/iconfont.woff2?68074734') format('woff2'),
-       url('../assets/font/iconfont.woff?68074734') format('woff'),
-       url('../assets/font/iconfont.ttf?68074734') format('truetype'),
-       url('../assets/font/iconfont.svg?68074734#iconfont') format('svg');
+  src: url('../assets/font/iconfont.eot');
+  src: url('../assets/font/iconfont.eot#iefix') format('embedded-opentype'),
+       url('../assets/font/iconfont.woff2') format('woff2'),
+       url('../assets/font/iconfont.woff') format('woff'),
+       url('../assets/font/iconfont.ttf') format('truetype'),
+       url('../assets/font/iconfont.svg#iconfont') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -16,7 +16,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'iconfont';
-    src: url('../font/iconfont.svg?68074734#iconfont') format('svg');
+    src: url('../font/iconfont.svg#iconfont') format('svg');
   }
 }
 */
