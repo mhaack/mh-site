@@ -44,7 +44,7 @@
 
 @media (min-width: 35.9375em) {
     .github__badge {
-        margin: 1rem 1rem 1rem 0;
+        margin: 1rem 1rem 0 0;
         height: 4rem;
         font-size: var(--text-base);
     }
