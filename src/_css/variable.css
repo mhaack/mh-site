@@ -6,4 +6,6 @@
     --gray: rgb(88, 88, 88);
     --input-background: rgba(0,0,0,0.07);
     --input-hover: rgba(0,0,0,0.15);
+    --table-head: rgba(0, 0, 0, 0.1);
+    --table-row-even: rgba(0, 0, 0, 0.02); 
 }

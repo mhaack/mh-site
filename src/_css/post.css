@@ -41,10 +41,22 @@
 }
 
 .post__content table {
-    border-radius: 5px;
     overflow: hidden;
     border-collapse: separate;
     line-height: 1.65;
+}
+
+.post__content table thead tr:first-child {
+    background: var(--table-head);
+}
+
+.post__content table thead th {
+    border-bottom: 1px solid var(--accent-dark);
+}
+
+
+.post__content table tr:nth-child(even) {
+    background: var(--table-row-even);
 }
 
 .post__aside {
