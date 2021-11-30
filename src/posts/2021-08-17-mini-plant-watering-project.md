@@ -10,6 +10,8 @@ category: project
 tags:
     - home-automation
     - home-assistant
+    - plants
+    - watering
 ---
 
 I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's [Mimosa](https://en.wikipedia.org/wiki/Mimosa_pudica) plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.

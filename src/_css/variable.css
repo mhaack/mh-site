@@ -8,4 +8,5 @@
     --input-hover: rgba(0,0,0,0.15);
     --table-head: rgba(0, 0, 0, 0.1);
     --table-row-even: rgba(0, 0, 0, 0.02); 
+    --tags-background: rgba(88, 88, 88, 0.03);
 }
