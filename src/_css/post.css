@@ -8,6 +8,10 @@
     margin-top: 3rem;
 }
 
+.post__header {
+    text-align: center;
+}
+
 .post__header h1:before {
     color: var(--accent);
     content: '//';
@@ -15,7 +19,7 @@
     margin-right: 0.5rem;
 }
 
-.post__feature__image {
+.post__header .post__feature__image {
     margin-left: -5rem;
     margin-right: -5rem;
 }
@@ -54,13 +58,12 @@
     border-bottom: 1px solid var(--accent-dark);
 }
 
-
 .post__content table tr:nth-child(even) {
     background: var(--table-row-even);
 }
 
 .post__aside {
-    margin-top: 2rem;
+    margin-top: 4rem;
 }
 
 .post__aside h3 {
@@ -84,6 +87,26 @@
 .post__tags {
     opacity: 0.8;
     font-size: var(--text-sm);
+    margin: 1rem 0;
+}
+
+.post__tags a {
+    text-decoration: none;
+    align-items: center;
+    background-color: var(--tags-background);
+    border-radius: 0.375em;
+    display: inline-flex;
+    font-size: 0.8rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
+
+.post__tags a:hover {
+    color: var(--accent);
 }
 
 .post__tags * + * {
