@@ -34,8 +34,9 @@ layout: base
     <nav class="post__pagination">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- if nextPost %}
+        <a href="{{ nextPost.url | url }}">
         <div>
-          <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a>
+          <h4 class="post__pagination__title">{{ nextPost.data.title }}</h4>
           <div class="post__pagination__meta">
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
@@ -44,12 +45,14 @@ layout: base
             <span>{{ nextPost | readingTime }} read</span>
           </div>
         </div>
+        </a>
       {% endif %}
 
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if previousPost %}
+        <a href="{{ previousPost.url | url }}">
         <div>
-          <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a>
+          <h4 class="post__pagination__title">{{ previousPost.data.title }}</h4>
           <div class="post__pagination__meta">
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}
@@ -58,6 +61,7 @@ layout: base
             <span>{{ previousPost | readingTime }} read</span>
           </div>
         </div>
+        </a>
       {% endif %}
     </nav>
   </aside>
