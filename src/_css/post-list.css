@@ -49,6 +49,10 @@
     list-style: none;
 }
 
+.post-list__item a {
+    text-decoration: none;
+}
+
 .post-list__item article {
     padding: 1rem;
     border-radius: 0.5rem;
@@ -70,6 +74,11 @@
     --scale-y: 1.05;
 }
 
+.post-list__item article:hover .post-list__title {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+}
+
 .post-list__item {
     display: flex;
     flex-direction: column;
@@ -84,18 +93,8 @@
 
 .post-list__title {
     font-size: var(--text-2xl);
-    margin-top: 0.5rem;
-}
-
-.post-list__title a {
+    margin-top: 0.5rem;;
     font-weight: normal;
-    text-decoration: none;
-    color: rgb(41, 41, 41);
-}
-
-.post-list__title a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
 }
 
 .post-list__meta {

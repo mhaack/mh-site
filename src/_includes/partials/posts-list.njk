@@ -1,38 +1,40 @@
 <ul class="post-list">
   {% for post in postslist | reverse -%}
     <li class="post-list__item">
-      <article>
-        {%- if showtaglist -%}
-          <div>
-            <div class="post-list__tags">
-              {%- for tag in post.data.tags %}
-                {%- if collections.tagList.indexOf(tag) != -1 -%}
-                  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                  <a href="{{ tagUrl | url }}">#{{ tag }}</a>
-                {%- endif -%}
-              {% endfor %}
+      <a data-a11y="false" href="{{ post.url }}">
+        <article>
+          {%- if showtaglist -%}
+            <div>
+              <div class="post-list__tags">
+                {%- for tag in post.data.tags %}
+                  {%- if collections.tagList.indexOf(tag) != -1 -%}
+                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+                    <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+                  {%- endif -%}
+                {% endfor %}
+              </div>
             </div>
+          {% endif %}
+          <h3 class="post-list__title">
+            {{ post.data.title }}
+          </h3>
+          <div class="post-list__meta">
+            <time datetime="{{ post.date | htmlDateString }}">
+              {{- post.date | readableDate -}}
+            </time>
+            <span> · </span>
+            <span>{{ post | readingTime }} read</span>
           </div>
-        {% endif %}
-        <h3 class="post-list__title">
-          <a data-a11y="false" href="{{ post.url }}">{{ post.data.title }}</a>
-        </h3>
-        <div class="post-list__meta">
-          <time datetime="{{ post.date | htmlDateString }}">
-            {{- post.date | readableDate -}}
-          </time>
-          <span> · </span>
-          <span>{{ post | readingTime }} read</span>
-        </div>
-        <p class="post-list__excerpt">
-        {%- if post.data.description %}
-          {{ post.data.description }}
-        {% else %}
-          {{ post.templateContent | excerpt | safe }}
-        {% endif -%}
-        </p>
-        <a class="post-list__read-more" href="{{ post.url }}">read article</a>
-      </article>
+          <p class="post-list__excerpt">
+          {%- if post.data.description %}
+            {{ post.data.description }}
+          {% else %}
+            {{ post.templateContent | excerpt | safe }}
+          {% endif -%}
+          </p>
+          {# <a class="post-list__read-more" href="{{ post.url }}">read article</a> #}
+        </article>
+      </a>
     </li>
   {% endfor -%}
 </ul>
