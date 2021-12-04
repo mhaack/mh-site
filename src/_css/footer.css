@@ -24,6 +24,7 @@
 
 .footer__attribution {
   font-size: var(--text-sm);
+  text-align: center;
 }
 
 .footer ul {
