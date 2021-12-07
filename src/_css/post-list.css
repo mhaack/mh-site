@@ -107,36 +107,6 @@
     margin-left: 0.75rem;
 }
 
-.post-list__tags {
-    text-decoration: none;
-    font-size: var(--text-sm);
-    margin-top: 0.1rem;
-}
-
-.post-list__tags a {
-    text-decoration: none;
-    color: rgb(117, 117, 117);
-    align-items: center;
-    background-color: var(--tags-background);
-    border-radius: 0.375em;
-    display: inline-flex;
-    font-size: 0.8rem;
-    height: 2em;
-    justify-content: center;
-    line-height: 1.5;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    white-space: nowrap;
-}
-
-.post-list__tags a:hover {
-    color: var(--accent);
-}
-
-.post-list__tags > * + * {
-    margin-left: 1rem;
-}
-
 .post-list__excerpt {
     margin: 1rem 0;
     color: rgba(0, 0, 0, 0.8);
