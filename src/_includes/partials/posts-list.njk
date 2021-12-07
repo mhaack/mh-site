@@ -3,18 +3,6 @@
     <li class="post-list__item">
       <a data-a11y="false" href="{{ post.url }}">
         <article>
-          {%- if showtaglist -%}
-            <div>
-              <div class="post-list__tags">
-                {%- for tag in post.data.tags %}
-                  {%- if collections.tagList.indexOf(tag) != -1 -%}
-                    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-                    <a href="{{ tagUrl | url }}">#{{ tag }}</a>
-                  {%- endif -%}
-                {% endfor %}
-              </div>
-            </div>
-          {% endif %}
           <h3 class="post-list__title">
             {{ post.data.title }}
           </h3>

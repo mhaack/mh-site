@@ -5,10 +5,9 @@ permalink: /projects/
 
 <h1 class="post-list__heading">All Projects</h1>
 
-{# <div class="tags">
+<div class="tags">
   {% include "partials/tags-list.njk" %}
-</div> #}
+</div>
 
 {% set postslist = collections.posts | category("project") %}
-{% set showtaglist = true %}
 {% include "partials/posts-list.njk" %}
