@@ -6,6 +6,8 @@ const purgeCssPlugin = require('eleventy-plugin-purgecss')
 const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const { minify } = require('terser')
+const markdownIt = require('markdown-it')
+const mdIterator = require("markdown-it-for-inline")
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
@@ -19,7 +21,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
     eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
     eleventyConfig.addPassthroughCopy('admin')
-    eleventyConfig.addWatchTarget("./src/_css/");
+    eleventyConfig.addWatchTarget('./src/_css/')
 
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 
@@ -96,6 +98,22 @@ module.exports = function (eleventyConfig) {
                 return !generalTags.includes(tag)
             })
     })
+
+    // Markdown overrides
+    let markdownLibrary = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true,
+    })
+        .use(mdIterator, 'url_new_win', 'link_open', function (tokens, idx) {
+            const [attrName, href] = tokens[idx].attrs.find((attr) => attr[0] === 'href')
+
+            if (href && !href.includes('markus-haack.com') && !href.startsWith('/') && !href.startsWith('#')) {
+                tokens[idx].attrPush(['target', '_blank'])
+                tokens[idx].attrPush(['rel', 'noopener noreferrer'])
+            }
+        })
+    eleventyConfig.setLibrary('md', markdownLibrary)
 
     // clean-css filter
     eleventyConfig.addFilter('cssmin', function (code) {
