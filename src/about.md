@@ -27,7 +27,7 @@ Do you want to contact me? You can find me in the following places:
 -   LinkedIn - [linkedin.com/in/markushaack](https://de.linkedin.com/in/markushaack)
 -   Xing - [xing.com/profile/Markus_Haack](https://www.xing.com/profile/Markus_Haack/)
 
-Or just drop me a note via the contact from.
+Or just drop me a note via the [contact from](/#contact).
 
 ### Proffessional writing
 
