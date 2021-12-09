@@ -7,7 +7,8 @@ const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const { minify } = require('terser')
 const markdownIt = require('markdown-it')
-const mdIterator = require("markdown-it-for-inline")
+const markdownItAnchor = require('markdown-it-anchor')
+const markdownIterator = require('markdown-it-for-inline')
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
@@ -105,13 +106,18 @@ module.exports = function (eleventyConfig) {
         breaks: true,
         linkify: true,
     })
-        .use(mdIterator, 'url_new_win', 'link_open', function (tokens, idx) {
+        .use(markdownIterator, 'url_new_win', 'link_open', function (tokens, idx) {
             const [attrName, href] = tokens[idx].attrs.find((attr) => attr[0] === 'href')
 
             if (href && !href.includes('markus-haack.com') && !href.startsWith('/') && !href.startsWith('#')) {
                 tokens[idx].attrPush(['target', '_blank'])
                 tokens[idx].attrPush(['rel', 'noopener noreferrer'])
             }
+        })
+        .use(markdownItAnchor, {
+            permalink: true,
+            permalinkClass: 'direct-link',
+            permalinkSymbol: '#',
         })
     eleventyConfig.setLibrary('md', markdownLibrary)
 
