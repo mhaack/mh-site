@@ -17,7 +17,10 @@ CIF is a powerful Adobe Experience Manager extension for building integrated and
 
 [Architecting a Better Ecommerce Experience with Commerce Integration Framework](https://medium.com/adobetech/architecting-a-better-ecommerce-experience-with-adobe-experience-managers-commerce-integration-712feef5de8)
 
-The second post on CIF explains the high level architecture and goes through the main build blocks of the integration.
+The second post on CIF explains the high level architecture, cloud-native integration concepts and explains the core elements of the Commerce Integration Framework: 
+* [Commerce Add-on](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+* [Commerce Core Components](https://github.com/adobe/aem-core-cif-components)
+* [AEM Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)
 
 [How CIF Integrates with Adobe Commerce and Third-Party Commerce Solutions](https://medium.com/adobetech/how-cif-integrates-with-adobe-commerce-and-third-party-commerce-solutions-5a5efb8da2a0)
 
