@@ -1,4 +1,6 @@
 {
+    "permalink": "{{title|slug}}/",
     "layout": "post",
     "tags": ["posts"]
+
 }
