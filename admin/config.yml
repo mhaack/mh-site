@@ -19,7 +19,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
-      - { label: "Slug", name: "permalink", widget: "string" }
+      - { label: "Slug", name: "permalink", widget: "string", required: false }
       - { label: "Excerpt", name: "description", widget: "text", required: false }
       - { label: "Tags", name: "tags", widget: "list", default: ["project"] }
       - { label: "Hero", name: "image", widget: "image" }
