@@ -16,19 +16,19 @@
     margin-right: auto;
 }
 
-.direct-link {
+.header-anchor {
     font-family: sans-serif;
     text-decoration: none;
     font-size: var(--text-lg);
 }
 
-a[href].direct-link,
-a[href].direct-link:visited {
+a[href].header-anchor,
+a[href].header-anchor:visited {
     color: transparent;
 }
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited {
+a[href].header-anchor:focus,
+a[href].header-anchor:focus:visited,
+:hover > a[href].header-anchor,
+:hover > a[href].header-anchor:visited {
     color: var(--gray);
 }

@@ -111,10 +111,9 @@ module.exports = function (eleventyConfig) {
             }
         })
         .use(markdownItAnchor, {
-            permalink: true,
-            permalinkClass: 'direct-link',
-            permalinkSymbol: '#',
+            permalink: markdownItAnchor.permalink.linkInsideHeader(),
         })
+
     eleventyConfig.setLibrary('md', markdownLibrary)
 
     // clean-css filter
