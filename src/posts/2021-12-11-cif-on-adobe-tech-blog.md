@@ -1,5 +1,5 @@
 ---
-title: CIF on Adobe Tech Blog
+title: cif-adobe-tech-blog
 date: 2021-12-11
 permalink: CIF on Adobe Tech Blog
 description: In the last few weeks and months, I and my colleagues have written
