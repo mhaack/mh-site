@@ -80,7 +80,7 @@
     background: var(--gray);
     width: 88.5965%;
     height: 1px;
-    right: 0px;
+    right: -30px;
     top: 11px;
 }
 
@@ -124,6 +124,7 @@
     margin-right: 0;
     width: 100%;
 }
+
 .post__pagination > *:last-child {
     display: none;
 }
@@ -181,5 +182,9 @@
     .post__pagination > *:last-child {
         margin-left: 0.5rem;
         display: block;
+    }
+
+    .post__aside h3::after {
+        right: 0px;
     }
 }
