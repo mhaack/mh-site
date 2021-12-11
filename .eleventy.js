@@ -58,10 +58,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter('category', (items, category) => items.filter((item) => item.data.category === category))
 
-    eleventyConfig.addCollection('projects', function (collection) {
-        return collection.getFilteredByTags('home-assistant')
-    })
-
     eleventyConfig.addCollection('tagList', function (collection) {
         let tagSet = new Set()
         collection.getAll().forEach(function (item) {

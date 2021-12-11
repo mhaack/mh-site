@@ -2,9 +2,13 @@
 title: CIF on Adobe Tech Blog
 date: 2021-12-11
 description: "An intro and summary about some professional writing I did in the
-  last few weeks and months for the Adobe Tech Blog. "
+  last few weeks and months for the Adobe Tech Blog."
+category: work
 tags:
-  - work
+    - adobe
+    - aem
+    - commerce
+    - cif
 image: /images/cif-adobe-tech-blog.jpeg
 ---
 In the last few weeks and months, my colleagues and I have written several articles for the [Adobe Tech Blog](https://medium.com/adobetech). Since I am also presenting some of my professional projects here, I wanted to take the opportunity and briefly introduce them.

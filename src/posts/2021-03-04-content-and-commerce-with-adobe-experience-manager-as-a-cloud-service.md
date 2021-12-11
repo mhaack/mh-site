@@ -4,6 +4,7 @@ author: Markus
 date: 2021-03-04
 permalink: content-and-commerce/
 image: /images/2021-03-04-content-and-commerce-with-adobe-experience-manager-as-a-cloud-service/content-and-commerce.png
+category: work
 tags:
     - adobe
     - aem

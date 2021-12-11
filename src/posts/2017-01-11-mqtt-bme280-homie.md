@@ -7,6 +7,7 @@ description: The mqtt-bme280-homie project is a small and easy to integrate temp
 github: 'https://github.com/mhaack/mqtt-bme280-homie'
 hacksterio: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
 image: '/images/2017-01-11-mqtt-bme280-homie/sensor.jpg'
+category: project
 tags:
     - arduino
     - development
