@@ -1,7 +1,7 @@
 ---
-title: cif-adobe-tech-blog
+title: CIF on Adobe Tech Blog
 date: 2021-12-11
-permalink: CIF on Adobe Tech Blog
+permalink: cif-adobe-tech-blog
 description: "An intro and summary about some professional writing I did in the
   last few weeks and months for the Adobe Tech Blog. "
 tags:
