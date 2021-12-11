@@ -6,9 +6,9 @@ description: "An intro and summary about some professional writing I did in the
   last few weeks and months for the Adobe Tech Blog. "
 tags:
   - work
-image: https://miro.medium.com/max/1400/1*ksbBCTpszMkcOdMZBzRCSA.jpeg
+image: /images/cif-adobe-tech-blog.jpeg
 ---
-In the last few weeks and months, I and my colleagues have written several articles for the [Adobe Tech Blog](https://medium.com/adobetech). Since I am also presenting some of my professional projects here, I wanted to take the opportunity and briefly introduce them.
+In the last few weeks and months, my colleagues and I have written several articles for the [Adobe Tech Blog](https://medium.com/adobetech). Since I am also presenting some of my professional projects here, I wanted to take the opportunity and briefly introduce them.
 
 [Taking a Deep Dive into Adobe Experience Manager’s Commerce Integration Framework](https://medium.com/adobetech/taking-a-deep-dive-into-adobe-experience-managers-commerce-integration-framework-631947b0a9a7)
 
