@@ -36,6 +36,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 -   [Taking a Deep Dive into Adobe Experience Manager’s Commerce Integration Framework](https://medium.com/adobetech/taking-a-deep-dive-into-adobe-experience-managers-commerce-integration-framework-631947b0a9a7)
 -   [Architecting a Better Ecommerce Experience with Commerce Integration Framework](https://medium.com/adobetech/architecting-a-better-ecommerce-experience-with-adobe-experience-managers-commerce-integration-712feef5de8)
 -   [How CIF Integrates with Adobe Commerce and Third-Party Commerce Solutions](https://medium.com/adobetech/how-cif-integrates-with-adobe-commerce-and-third-party-commerce-solutions-5a5efb8da2a0)
+-   [Building Rich Content and Commerce Experiences with CIF](https://medium.com/adobetech/building-rich-content-and-commerce-experiences-with-cif-754685dc2927)
 
 ### Talks
 
