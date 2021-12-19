@@ -10,9 +10,6 @@ const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 
-const Image = require('@11ty/eleventy-img');
-const path = require('path');
-
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = function (eleventyConfig) {
