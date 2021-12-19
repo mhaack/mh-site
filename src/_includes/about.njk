@@ -4,6 +4,8 @@ layout: base
 
 <div class="about">
   <h1 class="about__heading">About {{ name }}</h1>
-  <div class="about__image"><img src="{{ image | url }}" alt="{{ name }}"></div>
+  <div class="about__image">
+    {% imageNjk image, name %}
+  </div>
   {{ content | safe }}
 </div>

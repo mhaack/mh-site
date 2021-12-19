@@ -31,7 +31,7 @@ Other main gear we use:
 
 The entire system looks like this:
 
-<img src="/images/2020-01-14-jama-villa/setup.png" alt="This is our setup" loading="lazy" decoding="async"/>
+{% image "/images/2020-01-14-jama-villa/setup.png", "The setup" %}
 
 ## Dashboards
 
@@ -39,20 +39,18 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 
 #### Main info view
 
-<img src="/images/2020-01-14-jama-villa/dashboard-main.png" alt="Main Lovelace Dashboard" loading="lazy" decoding="async" class="large" />
+{% image "/images/2020-01-14-jama-villa/dashboard-main.png", "Main Lovelace Dashboard", "large" %}
 
 #### House view
 
-<img src="/images/2020-01-14-jama-villa/dashboard-house.png" alt="House Dashboard" loading="lazy" decoding="async" class="large" />
-
+{% image "/images/2020-01-14-jama-villa/dashboard-house.png", "House Dashboard", "large" %}
 #### Garden view
 
-<img src="/images/2020-01-14-jama-villa/dashboard-garden.png" alt="Garden Dashboard" loading="lazy" decoding="async" class="large" />
+{% image "/images/2020-01-14-jama-villa/dashboard-garden.png", "Garden Dashboard", "large" %}
 
 #### System view
 
-<img src="/images/2020-01-14-jama-villa/dashboard-system.png" alt="System Dashboard" loading="lazy" decoding="async" class="large" />
-
+{% image "/images/2020-01-14-jama-villa/dashboard-system.png", "System Dashboard", "large" %}
 ## Integrations
 
 Like any other Home Assistant setup, we have many integrations. And with every update or new toys I get the list gets longer. The five most important integrates our setup relies on are:

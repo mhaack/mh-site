@@ -20,7 +20,7 @@ layout: base
     </div>
     {% if image -%}
     <figure class="post__feature__image">
-        <img src="{{ image }}" alt="{{ title }}" loading="lazy" decoding="async">
+        {% imageNjk image, title %}
     </figure>
     {% endif %}
   </header>

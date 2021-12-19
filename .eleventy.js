@@ -1,21 +1,24 @@
 const { DateTime } = require('luxon')
-const readingTime = require('eleventy-plugin-reading-time')
-const pluginRss = require('@11ty/eleventy-plugin-rss')
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const purgeCssPlugin = require('eleventy-plugin-purgecss')
+const { minify } = require('terser')
 const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
-const { minify } = require('terser')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownIterator = require('markdown-it-for-inline')
+const pluginPurgeCss = require('eleventy-plugin-purgecss')
+const pluginReadingTime = require('eleventy-plugin-reading-time')
+const pluginRss = require('@11ty/eleventy-plugin-rss')
+const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+
+const Image = require('@11ty/eleventy-img');
+const path = require('path');
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPlugin(readingTime)
+    eleventyConfig.addPlugin(pluginReadingTime)
     eleventyConfig.addPlugin(pluginRss)
-    eleventyConfig.addPlugin(syntaxHighlight)
+    eleventyConfig.addPlugin(pluginSyntaxHighlight)
 
     eleventyConfig.setDataDeepMerge(true)
 
@@ -30,6 +33,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode('currentYear', require('./lib/shortcodes/currentYear'))
     eleventyConfig.addShortcode('youtubeEmbed', require('./lib/shortcodes/youtubeEmbed'))
     eleventyConfig.addShortcode('githubBadge', require('./lib/shortcodes/githubBadge'))
+    eleventyConfig.addShortcode('image', require('./lib/shortcodes/image'));
+    eleventyConfig.addNunjucksAsyncShortcode('imageNjk', require('./lib/shortcodes/image'));
+
 
     eleventyConfig.addFilter('excerpt', (post) => {
         const content = post.replace(/(<([^>]+)>)/gi, '')
@@ -123,7 +129,7 @@ module.exports = function (eleventyConfig) {
 
     // purgeCss filter
     if (isProd) {
-        eleventyConfig.addPlugin(purgeCssPlugin, {
+        eleventyConfig.addPlugin(pluginPurgeCss, {
             config: './purgecss.config.js',
             quiet: false,
         })
