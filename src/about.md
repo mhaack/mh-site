@@ -16,7 +16,7 @@ Together with my wonderful wife, our daughter, and our 2 cats I live in the beau
 
 If time allows I play with Nintendo consoles, old and new ones. I'm interested in various electronic topics, Arduino microcontrollers & IOT stuff. I'm passionate about smart homes, [Home Assistant](https://www.home-assistant.io/) in particular and automating our house with all kinds of useful and useless smart devices. I wrote about my [Home Assistant journey](/home-assistant) and some of [my projects](/projects) here as well.
 
-## Home on the world wide web
+### Home on the world wide web
 
 Do you want to contact me? You can find me in the following places:
 
