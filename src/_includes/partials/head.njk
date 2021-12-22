@@ -43,6 +43,7 @@
     <meta name="description" content="{{ desc | escape  }}">
     <meta property="og:description" content="{{ desc | escape }}">
     {%- endif -%}
+    <meta name="author" content="{{ site.author.name }}">
   {# 
     {%- if not socialImage -%}
       {% set socialImage = site.defaultSocialImage %}
@@ -53,7 +54,7 @@
     {% endif %}
       #}
 
-    {% if site.googleAnalyticsId  %}
+    {% if site.googleAnalyticsId and env.isProd  %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalyticsId }}">
     </script>
     <script>
