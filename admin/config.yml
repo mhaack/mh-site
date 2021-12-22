@@ -16,13 +16,136 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     media_folder: "/src/images/"
     public_folder: "/images"
+    summary: "{{title}} ({{date}})"
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", default: ["project"], options: ["project", "work"]}
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Hero", name: "image", widget: "image" }
-      - { label: "Excerpt", name: "description", widget: "text", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", dateFormat: "YYYY-MM-DD", timeFormat: false }
-      - { label: "Slug", name: "permalink", widget: "string", required: false }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        default: ["project"]
+        options: ["project", "work"]
+      - label: "Tags"
+        name: "tags"
+        widget: "relation"
+        collection: "tags"
+        value_field: "name"
+        search_fields: ["name"]
+        multiple: true
+      - label: "Hero"
+        name: "image"
+        widget: "image"
+      - label: "Excerpt"
+        name: "description"
+        widget: "text"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        format: "YYYY-MM-DD"
+        dateFormat: "YYYY-MM-DD"
+        timeFormat: false
+      - label: "Slug"
+        name: "permalink"
+        widget: "string"
+        required: false
 
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "site"
+        label: "Site settings"
+        delete: false
+        editor:
+          preview: false
+        file: "src/_data/site.json"
+        fields:
+          - label: "Site name"
+            name: "name"
+            widget: "string"
+          - label: "Site meta description"
+            name: "description"
+            widget: "string"
+          - label: "Site Language"
+            name: "language"
+            widget: "string"
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            fields:
+              - label: "Name"
+                name: "name"
+                widget: "string"
+              - label: "E-Mail"
+                name: "email"
+                widget: "string"
+              - label: "Twitter"
+                name: "twitterHandle"
+                widget: "string"
+          - label: "Default Social Image"
+            name: "defaultSocialImage"
+            widget: "string"
+          - label: "Header Links"
+            name: "headerLinks"
+            widget: "list"
+            summary: "{{fields.text}}"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: "string"
+              - label: "Url"
+                name: "url"
+                widget: "string"
+              - label: "External Link"
+                name: "external"
+                widget: "boolean"
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "list"
+            summary: "{{fields.text}}"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: "string"
+              - label: "Url"
+                name: "url"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "string"
+              - label: "External Link"
+                name: "external"
+                widget: "boolean"
+          - label: "Footer Links"
+            name: "footerLinks"
+            widget: "list"
+            summary: "{{fields.text}}"
+            fields:
+              - label: "Text"
+                name: "text"
+                widget: "string"
+              - label: "Url"
+                name: "url"
+                widget: "string"
+              - label: "Icon"
+                name: "icon"
+                widget: "string"
+              - label: "External Link"
+                name: "external"
+                widget: "boolean"
+          - label: "Footer Attribution"
+            name: "footerAttribution"
+            widget: "string"
+
+  - name: "tags"
+    label: "Tags"
+    folder: "src/tags"
+    create: true
+    identifier_field: "name"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Tag Name", name: "name", widget: string }
