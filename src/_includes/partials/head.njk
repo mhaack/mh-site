@@ -1,6 +1,9 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if ignore %}
+    <meta name="robots" content="noindex"/>
+    {% endif %}
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="/assets/iconfont.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,4 +52,17 @@
     <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
     {% endif %}
       #}
+
+    {% if site.googleAnalyticsId  %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalyticsId }}">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', '{{ site.googleAnalyticsId }}');
+    </script>
+    {% endif %}
   </head>
