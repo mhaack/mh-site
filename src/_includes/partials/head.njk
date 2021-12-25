@@ -62,7 +62,7 @@
         dataLayer.push(arguments);
       }
       gtag('js', new Date());
-      gtag('config', '{{ site.googleAnalyticsId }}');
+      gtag('config', '{{ site.googleAnalyticsId }}', {'anonymize_ip': true});
     </script>
     {% endif %}
   </head>
