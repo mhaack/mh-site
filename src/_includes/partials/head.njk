@@ -48,11 +48,11 @@
     {%- if not socialImage -%}
       {% set socialImage = site.defaultSocialImage %}
     {%- endif -%}
-    {%- if socialImage %}
-    <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
-    <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+  #}  
+    {%- if image %}
+    <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}"/>
+    <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}"/>
     {% endif %}
-      #}
 
     {% if site.googleAnalyticsId and env.isProd %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalyticsId }}"></script>
