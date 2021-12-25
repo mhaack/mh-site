@@ -66,6 +66,6 @@
             "external": true
         }
     ],
-    "footerAttribution": "| Made by <a href=\"https://twitter.com/mhaack\" target=\"_blank\" rel=\"noopener\">Markus Haack</a> | Built with: <a href=\"https://www.11ty.dev\" target=\"_blank\" rel=\"noopener\">Eleventy</a> & Eleventy Duo Theme",
+   
     "googleAnalyticsId": "UA-126340503-1"
 }
