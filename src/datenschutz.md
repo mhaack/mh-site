@@ -59,7 +59,7 @@ Immischweg, 3
 04279 Leipzig
 Deutschland
 
-E-Mail: markus.haack@gmail.com
+E-Mail: info@markus-haack.de
 Website: www.markus-haack.com
 
 ### 3. Erfassung von allgemeinen Daten und Informationen
