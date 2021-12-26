@@ -6,8 +6,8 @@
     {% endif %}
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preload" href="/assets/iconfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link href="{{ '/assets/theme.css' | url }}" rel="stylesheet">
+    <link rel="preload" href="/assets/iconfont.woff2?{% version %}" as="font" type="font/woff2" crossorigin>
+    <link href="{{ '/assets/theme.css' | url }}?{% version %}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
     <title>
       {%- if title -%} 
@@ -17,12 +17,12 @@
       {%- endif -%}
     </title>
 
-    <link rel="icon" type= “image/x-icon” href="/assets/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type= “image/x-icon” href="/assets/favicon.ico?{% version %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?{% version %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png?{% version %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png?{% version %}">
     <link rel="manifest" href="/assets/manifest.webmanifest">
-    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg?{% version %}" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 

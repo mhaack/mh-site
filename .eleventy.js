@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode('currentYear', require('./lib/shortcodes/currentYear'))
     eleventyConfig.addShortcode('youtubeEmbed', require('./lib/shortcodes/youtubeEmbed'))
     eleventyConfig.addShortcode('githubBadge', require('./lib/shortcodes/githubBadge'))
+    eleventyConfig.addShortcode('version', require('./lib/shortcodes/version'))
     eleventyConfig.addShortcode('image', require('./lib/shortcodes/image'));
     eleventyConfig.addNunjucksAsyncShortcode('imageNjk', require('./lib/shortcodes/image'));
 
