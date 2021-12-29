@@ -15,7 +15,7 @@ layout: base
     <div class="my-4 text-sm">
       {% for tag in tags | pageTags %}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-gray-100 px-3 h-6 inline-flex text-light-primary/80 hover:text-accent hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md ml-2 first:ml-0">#{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-gray-100 px-3 h-6 inline-flex text-light-primary/80 hover:text-emerald-700 hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md ml-2 first:ml-0">#{{ tag }}</a>
       {% endfor %}
     </div>
     {% if image -%}
@@ -36,7 +36,7 @@ layout: base
       {%- if nextPost %}
         <a href="{{ nextPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300  no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="hover:underline hover:decoration-accent">{{ nextPost.data.title }}</h4>
+          <h4 class="hover:underline hover:decoration-emerald-700">{{ nextPost.data.title }}</h4>
           <div class="mt-2 text-sm text-gray-400 font-light">
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
@@ -52,7 +52,7 @@ layout: base
       {%- if previousPost %}
         <a href="{{ previousPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300  no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="hover:underline hover:decoration-accent">{{ previousPost.data.title }}</h4>
+          <h4 class="hover:underline hover:decoration-emerald-700">{{ previousPost.data.title }}</h4>
           <div class="mt-2 text-sm text-gray-400 font-light">
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}

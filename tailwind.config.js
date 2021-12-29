@@ -10,7 +10,6 @@ module.exports = {
             },
             colors: {
                 body: 'rgb(41, 41, 41)',
-                accent: 'rgba(0, 128, 0, 0.65)',
                 light: {
                     background: '#fffffe',
                     primary: 'rgb(41, 41, 41)',

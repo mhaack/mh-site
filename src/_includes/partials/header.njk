@@ -31,7 +31,7 @@
           {%- set currentAttribute = 'aria-current="page"' -%}
         {%- endif -%}
         <li class="mr-8 last:mr-0">
-          <a href="{{ item.url | url }}" {{- currentAttribute | safe -}} {{- externalAttribute | safe -}} class="font-light text-gray-600 hover:text-accent hover:no-underline mt-4 mb-4">{{ item.text }}</a>
+          <a href="{{ item.url | url }}" {{- currentAttribute | safe -}} {{- externalAttribute | safe -}} class="font-light text-gray-600 hover:text-emerald-700 hover:no-underline mt-4 mb-4">{{ item.text }}</a>
         </li>
       {% endfor -%}
     </ul>
