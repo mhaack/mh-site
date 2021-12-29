@@ -1,3 +1,10 @@
+const isProd = process.env.ELEVENTY_ENV === 'production'
+
 module.exports = {
-    plugins: [require('tailwindcss'), require('autoprefixer')],
+    
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+        ...(isProd ? { cssnano: {} } : {}),
+    },
 }

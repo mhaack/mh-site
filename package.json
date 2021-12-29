@@ -10,6 +10,7 @@
         "@tailwindcss/typography": "^0.5.0",
         "autoprefixer": "^10.4.0",
         "clean-css": "^5.2.2",
+        "cssnano": "^5.0.14",
         "eleventy-plugin-purgecss": "^0.1.2",
         "eleventy-plugin-reading-time": "^0.0.1",
         "html-minifier": "^4.0.0",
@@ -26,10 +27,10 @@
     "scripts": {
         "dev": "npm-run-all clean --parallel dev:* --print-label",
         "dev:11ty": "env ELEVENTY_ENV=development eleventy --serve",
-        "dev:twnd": "postcss src/css/tailwind.css -o dist/assets/css/theme.css --watch",
+        "dev:twnd": "env ELEVENTY_ENV=development postcss src/css/tailwind.css -o dist/assets/css/theme.css --watch",
         "build": "npm-run-all clean build:* --print-label",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
-        "build:twnd": "postcss src/css/tailwind.css -o dist/assets/css/theme.css",
+        "build:twnd": "env ELEVENTY_ENV=production postcss src/css/tailwind.css -o dist/assets/css/theme.css",
         "format": "prettier --write \"src/**/*.{js,json,md}\"",
         "clean": "rm -rf ./dist"
     }

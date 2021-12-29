@@ -1,3 +1,4 @@
+const isDev = process.env.ELEVENTY_ENV === 'development'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
@@ -25,6 +26,6 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/typography'),
-        ...(process.env.NODE_ENV === 'development' ? [require('tailwindcss-debug-screens')] : []),
+        ...(isDev ? [require('tailwindcss-debug-screens')] : []),
     ],
 }
