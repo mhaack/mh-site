@@ -4,7 +4,7 @@ layout: base
 
 <header>
   <h1 class="mb-8 text-center sm:text-left">{{ heading }}</h1>
-  <div class="float-none sm:float-right my-auto mx-0 sm:mb-4 sm:ml-4 w-48 h-48 border border-solid border-gray-300 rounded-full">
+  <div class="float-none sm:float-right my-0 mx-auto sm:mb-4 sm:ml-4 w-48 h-48 border border-solid border-gray-300 rounded-full">
     {% imageNjk image, name , 'rounded-full p-2'%}
   </div>
   {{ content | safe }}
@@ -27,17 +27,17 @@ layout: base
       <form name="contact" method="post" action="/success">
         <input type="hidden" name="form-name" value="contact">
         <div class="grid grid-cols-2 gap-4 mt-2">
-          <div class="">
+          <div class="mt-4">
             <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true">
           </div>
-          <div class="">
+          <div class="mt-4">
             <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out">
           </div>
         </div>
-        <div class="mt-2">
+        <div class="mt-4">
           <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="4" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true"></textarea>
         </div>        
-        <div class="mt-2">
+        <div class="mt-4">
           <button type="submit" value="Send Message" class="h-8 px-4 bg-accent text-white text-xs leading-tight rounded shadow-md hover:bg-accent/90 hover:shadow-lg focus:bg-accent/90 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-accent/80 active:shadow-lg transition duration-150 ease-in-out">Send Message</button>
         </div>
       </form>

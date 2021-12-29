@@ -73,21 +73,17 @@
     }
 
     .content img.large {
-        margin-left: -10rem;
-        margin-right: -10rem;
-        width: calc(100% + 20rem);
-        max-width: calc(100% + 20rem);
+        @apply sm:-mx-40 sm:w-[calc(100%+20rem)] sm:max-w-[calc(100%+20rem)];
     }
 
     .content table {
-        @apply overflow-hidden border-separate leading-6 mt-4 min-w-full;
+        @apply overflow-hidden border-separate leading-6 mt-4 sm:min-w-full max-w-sm sm:max-w-none;
     }
-    
+
     .content table thead tr:first-child {
         @apply bg-gray-200;
-        
     }
-    
+
     .content table th {
         @apply border-b border-green-900 text-left;
     }
@@ -96,8 +92,20 @@
     .content table td {
         @apply p-4;
     }
-    
+
     .content table tr:nth-child(even) {
         @apply bg-gray-100;
+    }
+
+    blockquote {
+        @apply my-4 pl-4 border-l-2 border-accent italic;
+    }
+
+    .content pre {
+        @apply whitespace-pre-wrap text-sm p-4 mt-4 bg-gray-100 max-w-sm sm:max-w-none;
+    }
+
+    .content code {
+        @apply whitespace-pre-wrap text-sm p-1 bg-gray-100;
     }
 }
