@@ -1,0 +1,9 @@
+---
+permalink: assets/css/main.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "./_css/icon-font.css" %}
+  {% include "./_css/prism-theme.css" %}
+{% endset %}
+{{ css | cssmin | safe }}

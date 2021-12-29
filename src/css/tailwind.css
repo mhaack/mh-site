@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    a {
+        @apply text-accent transition-colors font-semibold;
+    }
+
+    a:hover {
+        @apply underline;
+    }
+
+    h1 {
+        @apply text-4xl text-body leading-tight font-semibold before:text-accent before:font-semibold before:mr-2 before:content-['//'];
+    }
+
+    h2 {
+        @apply text-3xl text-body leading-tight font-normal;
+    }
+
+    h3 {
+        @apply text-2xl text-body leading-tight font-normal;
+    }
+
+    h4 {
+        @apply text-xl text-body leading-tight font-normal;
+    }
+
+    h4 {
+        @apply text-lg text-body leading-tight font-normal;
+    }
+
+    p {
+        @apply text-lg text-body font-normal;
+    }
+
+    .content * + h1,
+    .content * + h2 {
+        @apply mt-12;
+    }
+
+    .content * + h3,
+    .content * + h4,
+    .content * + h5 {
+        @apply mt-8;
+    }
+
+    .content * + p {
+        @apply mt-6;
+    }
+
+    .content h2 + p,
+    .content h3 + p,
+    .content h4 + p {
+        @apply mt-4;
+    }
+
+    .content ol {
+        @apply mt-2 list-inside;
+    }
+
+    .content ol ol {
+        @apply list-alpha;
+    }
+
+    .content ul {
+        @apply mt-2 list-inside list-square;
+    }
+
+    .content li {
+        @apply pb-2;
+    }
+
+    .content img.large {
+        margin-left: -10rem;
+        margin-right: -10rem;
+        width: calc(100% + 20rem);
+        max-width: calc(100% + 20rem);
+    }
+
+    .content table {
+        @apply overflow-hidden border-separate leading-6 mt-4 min-w-full;
+    }
+    
+    .content table thead tr:first-child {
+        @apply bg-gray-200;
+        
+    }
+    
+    .content table th {
+        @apply border-b border-green-900 text-left;
+    }
+
+    .content table th,
+    .content table td {
+        @apply p-4;
+    }
+    
+    .content table tr:nth-child(even) {
+        @apply bg-gray-100;
+    }
+}

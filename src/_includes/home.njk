@@ -2,45 +2,43 @@
 layout: base
 ---
 
-<header class="hero">
-  <div class="hero-content">
-    <div class="intro">
-      {{ content | safe }}
-    </div>
+<header>
+  <h1 class="mb-8 text-center sm:text-left">{{ heading }}</h1>
+  <div class="float-none sm:float-right my-auto mx-0 sm:mb-4 sm:ml-4 w-48 h-48 border border-solid border-gray-300 rounded-full">
+    {% imageNjk image, name , 'rounded-full p-2'%}
   </div>
+  {{ content | safe }}
 </header>
 
-<section class="post-list__wrapper">
-  <h2 class="post-list__heading">My latest projects & posts</h2>
+<section class="mt-8">
+  <h2 class="mb-4">My latest projects & posts</h2>
 
   {% set postslist = collections.posts | head(-5) %}
   {% include "partials/posts-list.njk" %}
 
-  <a class="all-posts-link" href="{{ '/projects/' | url }}">View All Projects</a>
+  <a class="w-full inline-block text-center pb-12 my-12 mx-auto border-b" href="{{ '/projects/' | url }}">View All Projects</a>
 </section>
 
-<section class="contact" id="contact">
-  <div class="contact__container">
-    <div class="contact__content">
-      <h3>Get In Touch</h3>
-      <p class="css-1mp4qkz eju0huw3">Want to have a chat? Send me a message.</p>
+<section id="contact">
+  <div class="relative flex flex-col p-8 rounded-lg my-4 mx-auto shadow-lg">
+    <div class="w-full max-w-screen-sm mx-auto">
+      <h3 class="mb-1">Get In Touch</h3>
+      <p class="text-sm text-light-secondary">Want to have a chat? Send me a message.</p>
       <form name="contact" method="post" action="/success">
         <input type="hidden" name="form-name" value="contact">
-        <div class="contact__row">
-          <div>
-            <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" class="css-1maxubx eju0huw7" spellcheck="false" data-ms-editor="true">
+        <div class="grid grid-cols-2 gap-4 mt-2">
+          <div class="">
+            <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true">
           </div>
-          <div>
-            <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" class="css-1maxubx eju0huw7">
-          </div>
-        </div>
-        <div class="contact__row">
-          <div>
-            <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="4" class="css-1tztzr7 eju0huw8" spellcheck="false" data-ms-editor="true"></textarea>
+          <div class="">
+            <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out">
           </div>
         </div>
-        <div class="contact__actionrow">
-          <button type="submit" value="Send Message">Send Message</button>
+        <div class="mt-2">
+          <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="4" class="w-full bg-gray-200 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true"></textarea>
+        </div>        
+        <div class="mt-2">
+          <button type="submit" value="Send Message" class="h-8 px-4 bg-accent text-white text-xs leading-tight rounded shadow-md hover:bg-accent/90 hover:shadow-lg focus:bg-accent/90 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-accent/80 active:shadow-lg transition duration-150 ease-in-out">Send Message</button>
         </div>
       </form>
     </div>

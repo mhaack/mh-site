@@ -44,6 +44,7 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 #### House view
 
 {% image "/images/2020-01-14-jama-villa/dashboard-house.png", "House Dashboard", "large" %}
+
 #### Garden view
 
 {% image "/images/2020-01-14-jama-villa/dashboard-garden.png", "Garden Dashboard", "large" %}
@@ -51,6 +52,7 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 #### System view
 
 {% image "/images/2020-01-14-jama-villa/dashboard-system.png", "System Dashboard", "large" %}
+
 ## Integrations
 
 Like any other Home Assistant setup, we have many integrations. And with every update or new toys I get the list gets longer. The five most important integrates our setup relies on are:
