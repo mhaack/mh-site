@@ -34,7 +34,7 @@ layout: base
     <nav class="mt-8 flex justify-between items-center">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- if nextPost %}
-        <a href="{{ nextPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300  no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
+        <a href="{{ nextPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
           <h4 class="hover:underline hover:decoration-emerald-700">{{ nextPost.data.title }}</h4>
           <div class="mt-2 text-sm text-gray-500 font-light">
@@ -50,7 +50,7 @@ layout: base
 
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if previousPost %}
-        <a href="{{ previousPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300  no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
+        <a href="{{ previousPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
           <h4 class="hover:underline hover:decoration-emerald-700">{{ previousPost.data.title }}</h4>
           <div class="mt-2 text-sm text-gray-500 font-light">
