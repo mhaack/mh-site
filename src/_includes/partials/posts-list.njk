@@ -1,26 +1,25 @@
-<ul class="post-list">
+<ul class="!list-none">
   {% for post in postslist | reverse -%}
-    <li class="post-list__item">
-      <a data-a11y="false" href="{{ post.url }}">
-        <article>
-          <h3 class="post-list__title">
+    <li class="flex flex-col pb-4 pt-4 first:pt-12 first:border-t">
+      <a data-a11y="false" href="{{ post.url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
+        <article class="">
+          <h3 class="mt-2 text-2xl hover:underline hover:decoration-emerald-700">
             {{ post.data.title }}
           </h3>
-          <div class="post-list__meta">
+          <div class="mt-2 text-sm text-gray-500 font-light">
             <time datetime="{{ post.date | htmlDateString }}">
               {{- post.date | readableDate -}}
             </time>
-            <span> · </span>
+            <span class="mx-2"> · </span>
             <span>{{ post | readingTime }} read</span>
           </div>
-          <p class="post-list__excerpt">
+          <p class="my-4">
           {%- if post.data.description %}
             {{ post.data.description }}
           {% else %}
             {{ post.templateContent | excerpt | safe }}
           {% endif -%}
           </p>
-          {# <a class="post-list__read-more" href="{{ post.url }}">read article</a> #}
         </article>
       </a>
     </li>

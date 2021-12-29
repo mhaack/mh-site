@@ -1,20 +1,21 @@
 ---
 author: Markus
-title: "Home Assistant: You have got mail"
+title: 'Home Assistant: You have got mail'
 category: project
 tags:
-  - home-automation
-  - home-assistant
-  - zigbee
-  - mailbox
+    - home-automation
+    - home-assistant
+    - zigbee
+    - mailbox
 image: /images/2020-09-01-home-assistant-you-have-got-mail/you-ve_got_mail_-2685196800-.jpg
-description: "Today I want to share a little holiday project I build this week:
-  a mailbox sensor to make a dumb mailbox smart and notifying us if we got new
-  mail. I’m talking about real physical mail here - letters, postcards,
-  newspapers etc. dropped into our mailbox."
+description: 'Today I want to share a little holiday project I build this week:
+    a mailbox sensor to make a dumb mailbox smart and notifying us if we got new
+    mail. I’m talking about real physical mail here - letters, postcards,
+    newspapers etc. dropped into our mailbox.'
 date: 2020-09-05
 permalink: you-have-got-mail/
 ---
+
 Today I want to share a little holiday project I build this week: a mailbox sensor to make a dumb mailbox smart and notifying us if we got new mail. I’m talking about real physical mail here - letters, postcards, newspapers etc. dropped into our mailbox.
 
 ## How does it work?
@@ -29,10 +30,10 @@ This is how the setup looks like:
 
 Not much is needed for this project:
 
-* 2 ZigBee contact sensors (e.g. Xiaomi...)
-* ZigBee network (for example via Deconz)
-* Home Assistant
-* Duck tape, hot glue, etc. to fix the sensors
+-   2 ZigBee contact sensors (e.g. Xiaomi...)
+-   ZigBee network (for example via Deconz)
+-   Home Assistant
+-   Duck tape, hot glue, etc. to fix the sensors
 
 The setup depends a little on the construction of the actual mailbox. Ours has a flap on the front side where the mail is thrown in and a door on the backside to empty it. So I needed two sensors, one to detect if the mail was inserted and a second one to detect when we cleared the mailbox. For a mailbox with just one door or flap, only one sensor would be needed. Our mailbox is made of metal, like most mailboxes here, built into a concrete column. I first thought having a metal frame like this might be problematic with the ZigBee signal but that is not the case.
 

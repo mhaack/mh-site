@@ -3,5 +3,5 @@ const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = {
     environment,
-    isProd
+    isProd,
 }

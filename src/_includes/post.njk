@@ -2,46 +2,46 @@
 layout: base
 ---
 
-<article class="post">
-  <header class="post__header">
+<article class="flex flex-col justify-center">
+  <header class="text-center">
     <h1>{{ title }}</h1>
-    <div class="post__details">
+    <div class="mt-4 text-sm opacity-60">
       <time datetime="{{ page.date | htmlDateString }}">
         {{ page.date | readableDate }}
       </time>
-      <span> | </span>
-      <span>{{ content | readingTime }} read</span>
+      <span class="ml-2"> | </span>
+      <span class="ml-2">{{ content | readingTime }} read</span>
     </div>
-    <div class="post__tags">
+    <div class="my-4 text-sm">
       {% for tag in tags | pageTags %}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-gray-100 px-3 h-6 inline-flex text-light-primary/80 hover:text-emerald-700 hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md ml-2 first:ml-0">#{{ tag }}</a>
       {% endfor %}
     </div>
     {% if image -%}
-    <figure class="post__feature__image">
-        {% imageNjk image, title %}
+    <figure class="sm:-mx-20">
+        {% imageNjk image, title, "mt-8 w-full" %}
     </figure>
     {% endif %}
   </header>
   
-  <main class="post__content">
+  <main class="break-words pt-12">
     {{ content | safe }}
   </main>
 
-  <aside class="post__aside">
-    <h3>Read More</h3>
-    <nav class="post__pagination">
+  <aside class="mt-16">
+    <h3 class="relative font-normal text-base text-gray-600 opacity-25 after:absolute after:h-px after:bg-gray-600 after:top-4 after:left-20 after:w-9/12 after:sm:w-10/12 after:content-['']">Read More</h3>
+    <nav class="mt-8 flex justify-between items-center">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- if nextPost %}
-        <a href="{{ nextPost.url | url }}">
+        <a href="{{ nextPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="post__pagination__title">{{ nextPost.data.title }}</h4>
-          <div class="post__pagination__meta">
+          <h4 class="hover:underline hover:decoration-emerald-700">{{ nextPost.data.title }}</h4>
+          <div class="mt-2 text-sm text-gray-500 font-light">
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
             </time>
-            <span> · </span>
+            <span class="mx-2"> · </span>
             <span>{{ nextPost | readingTime }} read</span>
           </div>
         </div>
@@ -50,14 +50,14 @@ layout: base
 
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if previousPost %}
-        <a href="{{ previousPost.url | url }}">
+        <a href="{{ previousPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="post__pagination__title">{{ previousPost.data.title }}</h4>
-          <div class="post__pagination__meta">
+          <h4 class="hover:underline hover:decoration-emerald-700">{{ previousPost.data.title }}</h4>
+          <div class="mt-2 text-sm text-gray-500 font-light">
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}
             </time>
-            <span> · </span>
+            <span class="mx-2"> · </span>
             <span>{{ previousPost | readingTime }} read</span>
           </div>
         </div>
@@ -65,5 +65,4 @@ layout: base
       {% endif %}
     </nav>
   </aside>
-
 </article>

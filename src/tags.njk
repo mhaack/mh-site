@@ -16,7 +16,7 @@ eleventyComputed:
   title: "#{{ tag }}"
   description: "All posts tagged “{{ tag }}”"
 ---
-<h1 class="post-list__heading">#{{ tag }}</h1>
+<h1 class="mb-4 text-3xl">#{{ tag }}</h1>
 
 {% set postslist = collections[tag] %}
 {% include "partials/posts-list.njk" %}

@@ -23,6 +23,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
+    eleventyConfig.addWatchTarget('./src/css/')
 
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 
@@ -122,7 +123,7 @@ module.exports = function (eleventyConfig) {
 
     // clean-css filter
     eleventyConfig.addFilter('cssmin', function (code) {
-        return new CleanCSS({}).minify(code).styles
+        return isProd ? new CleanCSS({}).minify(code).styles : code;
     })
 
     // purgeCss filter
