@@ -13,27 +13,27 @@
     }
 
     h1 {
-        @apply text-4xl text-body leading-tight font-semibold before:text-emerald-700 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-4xl text-primary leading-tight font-semibold before:text-emerald-700 before:font-semibold before:mr-2 before:content-['//'];
     }
 
     h2 {
-        @apply text-3xl text-body leading-tight font-normal;
+        @apply text-3xl text-primary leading-tight font-normal;
     }
 
     h3 {
-        @apply text-2xl text-body leading-tight font-normal;
+        @apply text-2xl text-primary leading-tight font-normal;
     }
 
     h4 {
-        @apply text-xl text-body leading-tight font-normal;
+        @apply text-xl text-primary leading-tight font-normal;
     }
 
     h4 {
-        @apply text-lg text-body leading-tight font-normal;
+        @apply text-lg text-primary leading-tight font-normal;
     }
 
     p {
-        @apply text-lg text-body font-normal;
+        @apply text-lg text-primary font-normal;
     }
 
     .content * + h1,
@@ -86,7 +86,7 @@
     }
 
     .content table th {
-        @apply border-b border-green-900 text-left;
+        @apply border-b border-emerald-700 text-left;
     }
 
     .content table th,

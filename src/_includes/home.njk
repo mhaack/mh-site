@@ -4,8 +4,8 @@ layout: base
 
 <header>
   <h1 class="mb-8 text-center sm:text-left">{{ heading }}</h1>
-  <div class="float-none sm:float-right my-0 mx-auto sm:mb-4 sm:ml-4 w-48 h-48 border border-solid border-gray-300 rounded-full">
-    {% imageNjk image, name , 'rounded-full p-2'%}
+  <div class="float-none sm:float-right my-0 mx-auto sm:mb-4 sm:ml-4 w-48 h-48">
+    {% imageNjk image, name , "rounded-full object-cover ring-1 ring-gray-200 ring-offset-8"%}
   </div>
   {{ content | safe }}
 </header>
@@ -23,7 +23,7 @@ layout: base
   <div class="relative flex flex-col p-8 rounded-lg my-4 mx-auto shadow-lg">
     <div class="w-full max-w-screen-sm mx-auto">
       <h3 class="mb-1">Get In Touch</h3>
-      <p class="text-sm text-light-secondary">Want to have a chat? Send me a message.</p>
+      <p class="text-sm text-gray-500">Want to have a chat? Send me a message.</p>
       <form name="contact" method="post" action="/success">
         <input type="hidden" name="form-name" value="contact">
         <div class="grid grid-cols-2 gap-4 mt-2">

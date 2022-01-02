@@ -8,7 +8,7 @@
             {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
           {%- endif -%}
           <li class="mr-4 last:mr-0">
-            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-light-primary hover:text-emerald-700 hover:no-underline">
+            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-primary hover:text-emerald-700 hover:no-underline">
               {% if item.icon -%}
               <i class="{{ item.icon }}"></i>
               <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -26,7 +26,7 @@
             {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
           {%- endif -%}
           <li class="mr-4 last:mr-0">
-            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-light-primary hover:text-emerald-700 hover:no-underline">
+            <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-primary hover:text-emerald-700 hover:no-underline">
               {% if item.icon -%}
               <i class="{{ item.icon }}"></i>
               <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
