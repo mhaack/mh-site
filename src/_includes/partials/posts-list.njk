@@ -1,27 +1,37 @@
-<ul class="!list-none">
-  {% for post in postslist | reverse -%}
-    <li class="flex flex-col pb-4 pt-4 first:pt-12 first:border-t">
-      <a data-a11y="false" href="{{ post.url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
-        <article class="">
-          <h3 class="mt-2 text-2xl hover:underline hover:decoration-emerald-700">
-            {{ post.data.title }}
-          </h3>
-          <div class="mt-2 text-sm text-gray-500 font-light">
-            <time datetime="{{ post.date | htmlDateString }}">
-              {{- post.date | readableDate -}}
-            </time>
-            <span class="mx-2"> · </span>
-            <span>{{ post | readingTime }} read</span>
-          </div>
-          <p class="my-4">
-          {%- if post.data.description %}
-            {{ post.data.description }}
-          {% else %}
-            {{ post.templateContent | excerpt | safe }}
-          {% endif -%}
-          </p>
-        </article>
-      </a>
-    </li>
-  {% endfor -%}
+<ul class="!list-none border-t">
+    {% for post in postslist | reverse -%}
+        <li class=" mx-auto overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800 mb-6 md:mb-4 first:mt-8 transition ease-in-out
+                delay-150 duration-300 hover:scale-105">
+            <a data-a11y="false" href="{{ post.url }}" class="hover:no-underline">
+                {% if post.data.image -%}
+                    <figure>
+                        {% imageNjk post.data.image, post.data.title, "max-h-40 w-full object-cover" %}
+                    </figure>
+                {% endif %}
+                <div class="p-4">
+                    <div>
+                        <h3 class="block mt-2 text-2xl font-semibold text-primary dark:text-white hover:underline hover:decoration-emerald-700">
+                            {{ post.data.title }}
+                        </h3>
+                        <span class="text-xs text-gray-500 dark:text-gray-300">
+                            <time datetime="{{ post.date | htmlDateString }}">
+                                {{ post.date | readableDate }}
+                            </time>
+                            <span class="mx-2">
+                                ·
+                            </span>
+                            <span>{{ post | readingTime }} read</span>
+                        </span>
+                        <p class="mt-2 text-base">
+                            {%- if post.data.description %}
+                                {{ post.data.description }}
+                            {% else %}
+                                {{ post.templateContent | excerpt | safe }}
+                            {% endif -%}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {% endfor -%}
 </ul>
