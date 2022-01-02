@@ -1,11 +1,9 @@
 const { DateTime } = require('luxon')
 const { minify } = require('terser')
-const CleanCSS = require('clean-css')
 const htmlmin = require('html-minifier')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownIterator = require('markdown-it-for-inline')
-const pluginPurgeCss = require('eleventy-plugin-purgecss')
 const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
@@ -23,7 +21,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
-    eleventyConfig.addWatchTarget('./src/css/')
 
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 
@@ -121,19 +118,6 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setLibrary('md', markdownLibrary)
 
-    // clean-css filter
-    eleventyConfig.addFilter('cssmin', function (code) {
-        return isProd ? new CleanCSS({}).minify(code).styles : code;
-    })
-
-    // purgeCss filter
-    if (isProd) {
-        eleventyConfig.addPlugin(pluginPurgeCss, {
-            config: './purgecss.config.js',
-            quiet: false,
-        })
-    }
-
     // inline js filter
     eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
         try {
@@ -153,6 +137,7 @@ module.exports = function (eleventyConfig) {
                 useShortDoctype: true,
                 removeComments: true,
                 collapseWhitespace: true,
+                minifyJS: true,
             })
             return minified
         }
