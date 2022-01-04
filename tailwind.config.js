@@ -3,18 +3,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: ['./src/**/*.njk', './src/**/*.md', './lib/shortcodes/*.js'],
+    darkMode: 'class',
     theme: {
         extend: {
             fontFamily: {
                 sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                body: 'rgb(41, 41, 41)',
-                light: {
-                    background: '#fffffe',
-                    primary: 'rgb(41, 41, 41)',
-                    secondary: 'rgb(88, 88, 88)',
-                },
+                primary: 'rgb(41, 41, 41)',
             },
             listStyleType: {
                 none: 'none',
@@ -23,8 +19,5 @@ module.exports = {
             },
         },
     },
-    plugins: [
-        require('@tailwindcss/typography'),
-        ...(isDev ? [require('tailwindcss-debug-screens')] : []),
-    ],
+    plugins: [require('@tailwindcss/typography'), ...(isDev ? [require('tailwindcss-debug-screens')] : [])],
 }
