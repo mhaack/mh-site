@@ -15,7 +15,7 @@ layout: base
     <div class="my-4 text-sm">
       {% for tag in tags | pageTags %}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-gray-100 px-3 h-6 inline-flex text-primary/80 hover:text-emerald-700 hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md ml-2 first:ml-0">#{{ tag }}</a>
+        <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-cool-green-100 dark:bg-cool-green-700 px-3 h-6 inline-flex text-primary dark:text-cool-green-300 hover:text-cool-green-500 hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md ml-2 first:ml-0">#{{ tag }}</a>
       {% endfor %}
     </div>
     {% if image -%}
@@ -30,14 +30,14 @@ layout: base
   </main>
 
   <aside class="mt-16">
-    <h3 class="relative font-normal text-base text-gray-600 opacity-25 after:absolute after:h-px after:bg-gray-600 after:top-4 after:left-20 after:w-9/12 after:sm:w-10/12 after:content-['']">Read More</h3>
+    <h3 class="relative font-normal text-base text-gray-500 after:absolute after:h-px after:bg-gray-500 after:top-4 after:left-20 after:w-9/12 after:sm:w-10/12 after:content-['']">Read More</h3>
     <nav class="mt-8 flex justify-between items-center">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
       {%- if nextPost %}
-        <a href="{{ nextPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
+        <a href="{{ nextPost.url | url }}" class="dark:bg-cool-green-900 rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="hover:underline hover:decoration-emerald-700">{{ nextPost.data.title }}</h4>
-          <div class="mt-2 text-sm text-gray-500 font-light">
+          <h4 class="text-primary dark:text-white hover:underline hover:decoration-cool-green-500">{{ nextPost.data.title }}</h4>
+          <div class="mt-2 text-sm text-gray-400 dark:text-gray-600 font-light">
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
             </time>
@@ -50,10 +50,10 @@ layout: base
 
       {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {%- if previousPost %}
-        <a href="{{ previousPost.url | url }}" class="rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
+        <a href="{{ previousPost.url | url }}" class="dark:bg-cool-green-900 rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
-          <h4 class="hover:underline hover:decoration-emerald-700">{{ previousPost.data.title }}</h4>
-          <div class="mt-2 text-sm text-gray-500 font-light">
+          <h4 class="text-primary dark:text-white hover:underline hover:decoration-cool-green-500">{{ previousPost.data.title }}</h4>
+          <div class="mt-2 text-sm text-gray-400 dark:text-gray-600 font-light">
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}
             </time>

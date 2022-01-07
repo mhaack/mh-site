@@ -1,39 +1,39 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "components.css";
-@import "tailwindcss/utilities";
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'components.css';
+@import 'tailwindcss/utilities';
 
 @layer base {
     a {
-        @apply text-emerald-700 transition-colors font-semibold;
+        @apply text-cool-green-600 dark:text-cool-green-400 transition-colors font-semibold;
     }
 
     a:hover {
-        @apply underline;
+        @apply underline hover:decoration-cool-green-500;
     }
 
     h1 {
-        @apply text-4xl text-primary leading-tight font-semibold before:text-emerald-700 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-4xl leading-tight font-semibold dark:before:text-cool-green-400 before:text-cool-green-600 before:font-semibold before:mr-2 before:content-['//'];
     }
 
     h2 {
-        @apply text-3xl text-primary leading-tight font-normal;
+        @apply text-3xl leading-tight font-normal;
     }
 
     h3 {
-        @apply text-2xl text-primary leading-tight font-normal;
+        @apply text-2xl leading-tight font-normal;
     }
 
     h4 {
-        @apply text-xl text-primary leading-tight font-normal;
+        @apply text-xl leading-tight font-normal;
     }
 
     h4 {
-        @apply text-lg text-primary leading-tight font-normal;
+        @apply text-lg leading-tight font-normal;
     }
 
     p {
-        @apply text-lg text-primary font-normal;
+        @apply text-lg font-normal;
     }
 
     .content * + h1,
@@ -82,11 +82,11 @@
     }
 
     .content table thead tr:first-child {
-        @apply bg-gray-200;
+        @apply bg-cool-green-100 dark:bg-cool-green-800;
     }
 
     .content table th {
-        @apply border-b border-emerald-700 text-left;
+        @apply border-b border-gray-700 dark:border-cool-green-300 text-left;
     }
 
     .content table th,
@@ -95,18 +95,18 @@
     }
 
     .content table tr:nth-child(even) {
-        @apply bg-gray-100;
+        @apply bg-cool-green-100 dark:bg-cool-green-700;
     }
 
     blockquote {
-        @apply my-4 pl-4 border-l-2 border-emerald-700 italic;
+        @apply my-4 pl-4 border-l-2 border-cool-green-500 italic;
     }
 
     .content pre {
-        @apply whitespace-pre-wrap text-sm p-4 mt-4 bg-gray-100 max-w-sm sm:max-w-none;
+        @apply whitespace-pre-wrap text-sm p-4 mt-4 bg-cool-green-100 dark:bg-cool-green-700 max-w-sm sm:max-w-none;
     }
 
     .content code {
-        @apply whitespace-pre-wrap text-sm p-1 bg-gray-100;
+        @apply whitespace-pre-wrap text-sm p-1 bg-cool-green-100 dark:bg-cool-green-700;
     }
 }
