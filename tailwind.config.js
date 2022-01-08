@@ -28,6 +28,78 @@ module.exports = {
                 square: 'square',
                 alpha: 'lower-alpha',
             },
+            typography: ({ theme }) => ({
+                DEFAULT: {
+                    css: {
+                        '--tw-prose-links': theme('colors.cool-green.700'),
+                        '--tw-prose-th-borders': theme('colors.gray.700'),
+                        '--tw-prose-bullets': theme('colors.gray.300'),
+                        '--tw-prose-counters': theme('colors.gray.500'),
+                        '--tw-prose-quote-borders': theme('colors.cool-green.500'),
+                        '--tw-prose-invert-links': theme('colors.cool-green.400'),
+                        '--tw-prose-invert-bullets': theme('colors.gray.500'),
+                        '--tw-prose-invert-counters': theme('colors.white'),
+                        '--tw-prose-th-borders': theme('colors.cool-green.300'),
+                        'max-width': '100%',
+                        color: theme('colors.primary'),
+                        a: {
+                            'text-decoration-line': 'none',
+                        },
+                        ul: {
+                            'list-style-type': 'square',
+                        },
+                        code: {
+                            backgroundColor: theme('colors.cool-green.100'),
+                            'font-weight': 400,
+                        },
+                        'tbody tr': {
+                            borderBottomWidth: '0',
+                        },
+                        'thead th': {
+                            backgroundColor: theme('colors.cool-green.50'),
+                        },
+                        'tbody tr:nth-child(even)': {
+                            backgroundColor: theme('colors.cool-green.50'),
+                        },
+                    },
+                },
+                invert: {
+                    css: {
+                        code: {
+                            backgroundColor: theme('colors.cool-green.700'),
+                        },
+                        'thead th': {
+                            backgroundColor: theme('colors.cool-green.900'),
+                        },
+                        'tbody tr:nth-child(even)': {
+                            backgroundColor: theme('colors.cool-green.900'),
+                        },
+                    },
+                },
+                lg: {
+                    css: {
+                        code: {
+                            padding: '0.25rem',
+                        },
+                        li: {
+                            marginTop: '0',
+                            marginBottom: '0.25rem',
+                        },
+                        'thead th': {
+                            padding: '1rem',
+                        },
+                        'thead th:first-child': {
+                            paddingLeft: '1rem',
+                        },
+                        'tbody td': {
+                            padding: '1rem',
+                        },
+                        'tbody td:first-child': {
+                            paddingLeft: '1rem',
+                        },
+                    },
+                },
+            }),
         },
     },
     plugins: [require('@tailwindcss/typography'), ...(isDev ? [require('tailwindcss-debug-screens')] : [])],

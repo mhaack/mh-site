@@ -2,10 +2,12 @@
 layout: base
 ---
 
-<div class="content">
+<section>
   <h1 class="mb-8 text-center sm:text-left">About {{ name }}</h1>
-  <div class="float-none sm:float-right mx-auto mb-8 sm:mb-4 sm:ml-4 w-48 h-48">
+  <div class="float-none sm:float-right mx-auto mb-8 sm:ml-4 w-48 h-48">
     {% imageNjk image, name , "rounded-full object-cover ring-1 ring-gray-200 ring-offset-8"%}
   </div>
+  <div class="prose dark:prose-invert prose-lg">
   {{ content | safe }}
-</div>
+  </div>
+</section>
