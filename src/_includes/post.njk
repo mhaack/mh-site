@@ -5,12 +5,12 @@ layout: base
 <article class="flex flex-col justify-center">
   <header class="text-center">
     <h1>{{ title }}</h1>
-    <div class="mt-4 text-sm opacity-60">
+    <div class="mt-4 text-sm text-gray-500">
       <time datetime="{{ page.date | htmlDateString }}">
         {{ page.date | readableDate }}
       </time>
-      <span class="ml-2"> | </span>
-      <span class="ml-2">{{ content | readingTime }} read</span>
+      <span class="mx-2">·</span>
+      <span>{{ content | readingTime }} read</span>
     </div>
     <div class="my-4 text-sm">
       {% for tag in tags | pageTags %}
@@ -25,9 +25,9 @@ layout: base
     {% endif %}
   </header>
   
-  <main class="break-words pt-12 content">
+  <section class="break-words pt-12 prose dark:prose-invert prose-lg max-w-none">
     {{ content | safe }}
-  </main>
+  </section>
 
   <aside class="mt-16">
     <h3 class="relative font-normal text-base text-gray-500 after:absolute after:h-px after:bg-gray-500 after:top-4 after:left-20 after:w-9/12 after:sm:w-10/12 after:content-['']">Read More</h3>
@@ -37,11 +37,11 @@ layout: base
         <a href="{{ nextPost.url | url }}" class="dark:bg-cool-green-900 rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
           <h4 class="text-primary dark:text-white hover:underline hover:decoration-cool-green-500">{{ nextPost.data.title }}</h4>
-          <div class="mt-2 text-sm text-gray-400 dark:text-gray-600 font-light">
+          <div class="mt-2 text-sm text-gray-500 font-light">
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
             </time>
-            <span class="mx-2"> · </span>
+            <span class="mx-2">·</span>
             <span>{{ nextPost | readingTime }} read</span>
           </div>
         </div>
@@ -53,11 +53,11 @@ layout: base
         <a href="{{ previousPost.url | url }}" class="dark:bg-cool-green-900 rounded-lg shadow-lg transition ease-in-out delay-150 hover:scale-105 duration-300 no-underline p-4 first:mr-2 first:w-full last:ml-2 only:mx-auto min-h-[8rem] min-w-[40%] hover:no-underline">
         <div>
           <h4 class="text-primary dark:text-white hover:underline hover:decoration-cool-green-500">{{ previousPost.data.title }}</h4>
-          <div class="mt-2 text-sm text-gray-400 dark:text-gray-600 font-light">
+          <div class="mt-2 text-sm text-gray-500 font-light">
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}
             </time>
-            <span class="mx-2"> · </span>
+            <span class="mx-2">·</span>
             <span>{{ previousPost | readingTime }} read</span>
           </div>
         </div>
