@@ -9,8 +9,8 @@ layout: base
       <time datetime="{{ page.date | htmlDateString }}">
         {{ page.date | readableDate }}
       </time>
-      <span class="ml-2"> | </span>
-      <span class="ml-2">{{ content | readingTime }} read</span>
+      <span class="mx-2">·</span>
+      <span>{{ content | readingTime }} read</span>
     </div>
     <div class="my-4 text-sm">
       {% for tag in tags | pageTags %}
@@ -41,7 +41,7 @@ layout: base
             <time datetime="{{ nextPost.date | htmlDateString }}">
               {{- nextPost.date | readableDate -}}
             </time>
-            <span class="mx-2"> · </span>
+            <span class="mx-2">·</span>
             <span>{{ nextPost | readingTime }} read</span>
           </div>
         </div>
@@ -57,7 +57,7 @@ layout: base
             <time datetime="{{ previousPost.date | htmlDateString }}">
               {{- previousPost.date | readableDate -}}
             </time>
-            <span class="mx-2"> · </span>
+            <span class="mx-2">·</span>
             <span>{{ previousPost | readingTime }} read</span>
           </div>
         </div>
