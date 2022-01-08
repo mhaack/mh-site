@@ -40,7 +40,6 @@ module.exports = {
                         '--tw-prose-invert-bullets': theme('colors.gray.500'),
                         '--tw-prose-invert-counters': theme('colors.white'),
                         '--tw-prose-th-borders': theme('colors.cool-green.300'),
-                        'max-width': '100%',
                         color: theme('colors.primary'),
                         a: {
                             'text-decoration-line': 'none',
