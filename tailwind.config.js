@@ -3,7 +3,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
     content: ['./src/**/*.njk', './src/**/*.md', './lib/shortcodes/*.js'],
-    darkMode: 'class',
     theme: {
         extend: {
             fontFamily: {
@@ -11,6 +10,18 @@ module.exports = {
             },
             colors: {
                 primary: 'rgb(41, 41, 41)',
+                'cool-green': {
+                    50: '#f5f8f7',
+                    100: '#dee9e5',
+                    200: '#bcd3cb',
+                    300: '#93b5aa',
+                    400: '#6d9489',
+                    500: '#52796f',
+                    600: '#406159',
+                    700: '#364f49',
+                    800: '#2e413d',
+                    900: '#293835',
+                },
             },
             listStyleType: {
                 none: 'none',
