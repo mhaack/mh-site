@@ -9,7 +9,7 @@
     }
 
     a:hover {
-        @apply underline hover:decoration-cool-green-500;
+        @apply underline decoration-cool-green-500 decoration-2;
     }
 
     h1 {
