@@ -17,7 +17,7 @@
     </svg>
   </a>
   {%- if site.headerLinks %}
-    <ul class="flex justify-around pt-2 pb-2">
+    <ul class="flex justify-around pb-4">
       {%- for item in site.headerLinks -%}
         {% set currentAttribute = '' %}
         {% set externalAttribute = '' %}
@@ -27,8 +27,8 @@
         {%- if page.url == item.url -%}
           {%- set currentAttribute = 'aria-current="page"' -%}
         {%- endif -%}
-        <li class="mr-8 last:mr-0">
-          <a href="{{ item.url | url }}" {{- currentAttribute | safe -}} {{- externalAttribute | safe -}} class="border-cool-green-100 border-b-2 dark:border-cool-green-800 dark:text-cool-green-100 font-light hover:border-cool-green-500 hover:no-underline hover:text-cool-green-500 my-4 p-4 text-cool-green-800">{{ item.text }}</a>
+        <li class="mr-4 md:mr-8 last:mr-0">
+          <a href="{{ item.url | url }}" {{- currentAttribute | safe -}} {{- externalAttribute | safe -}} class="border-cool-green-100 border-b-2 dark:border-cool-green-800 dark:text-cool-green-100 font-light hover:border-cool-green-500 hover:no-underline hover:text-cool-green-500 my-4 p-2 md:p-4 text-cool-green-800">{{ item.text }}</a>
         </li>
       {% endfor -%}
     </ul>
