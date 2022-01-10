@@ -31,16 +31,19 @@ module.exports = {
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
+                        '--tw-prose-body': theme('colors.primary'),
+                        '--tw-prose-headings': theme('colors.primary'),
                         '--tw-prose-links': theme('colors.cool-green.700'),
                         '--tw-prose-th-borders': theme('colors.gray.700'),
                         '--tw-prose-bullets': theme('colors.gray.300'),
                         '--tw-prose-counters': theme('colors.gray.500'),
                         '--tw-prose-quote-borders': theme('colors.cool-green.500'),
+                        '--tw-prose-invert-body': theme('colors.white'),
+                        '--tw-prose-invert-headings': theme('colors.white'),
                         '--tw-prose-invert-links': theme('colors.cool-green.400'),
                         '--tw-prose-invert-bullets': theme('colors.gray.500'),
                         '--tw-prose-invert-counters': theme('colors.white'),
                         '--tw-prose-th-borders': theme('colors.cool-green.300'),
-                        color: theme('colors.primary'),
                         a: {
                             'text-decoration-line': 'none',
                         },
