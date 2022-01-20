@@ -7,7 +7,7 @@ tags:
 image: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
 date: 2022-01-20
 ---
-I will briefly describe my personal website's history. It started in 1998. At this point, I have already gone through six iterations. I had already completely forgotten two of them. 
+In this post I will briefly describe my personal website's history. It started in 1998. At this point, I have already gone through six iterations. I had already completely forgotten two of them. 
 
 My personal blog is built around simple HTML and CSS. There’s no need for much javascript on the site - something I got sorted out over time. The site also become a bit of a playground.
 
