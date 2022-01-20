@@ -57,8 +57,6 @@ There is one big difference between the two tools: even a site without any JS, o
 
 Getting started with Eleventy was pretty easy. The [documentation](https://www.11ty.dev/docs/) is excellent and there are plenty of how-to guides like [this one](https://css-irl.info/from-gatsby-to-eleventy/).
 
-At the very beginning i started with the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. 
-
-While the template helped to kick start the site I added a bunch of custom extensions. The site evolved quickly, the entire CSS got changed to [Tailwind CSS](https://tailwindcss.com/), it has little in common with the original template any more.
+The initial template I used was the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. While it helped me get the site up and running, I added quite a few extensions and customizations. As the site got more and more complex, I re-wrote the entire CSS to [Tailwind CSS](https://tailwindcss.com/), and little remains of the original template.
 
 Source hero image: [unsplash.com](https://unsplash.com/photos/tZc3vjPCk-Q)
