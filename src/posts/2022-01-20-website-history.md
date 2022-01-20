@@ -13,7 +13,6 @@ My personal blog is build around simple HTML and CSS. There’s no need for much
 
 Described here is a brief explanation of the evolution steps and the tools and technologies behind each version.
 
-
 ## V1 - Geocities
 
 On May 1st, 1998 the first version of my personal website was put online on \[Geocities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities. Geocities does not exist any more nor does my own website, the old URL www.geocities.com/southbeach/strand/2811/ is not available any more. 
@@ -24,11 +23,13 @@ I don't even remember exactly what the site was about and what content I put the
 
 On December 12th, 1999 I registered my first domain markus-haack.de at [NetBeat](http://www.netbeat.de/). Initially, it was just a HTML [frameset](https://www.w3schools.com/tags/tag_frameset.asp) embedding the Geocities site. "frameset" is not used anymore these days, it was only available till HTML 4.
 
-A few weeks later I rebuild the site with [Dreamweaver](https://www.adobe.com/products/dreamweaver.html), all static HTML with some basic CSS and Javascript. A version of this site is still available in [Internet Archive](https://web.archive.org/web/20020125233512/http://haagi.de:80/).
+A few weeks later I rebuild the site with [Dreamweaver](https://www.adobe.com/products/dreamweaver.html), all static HTML with some basic CSS and Javascript. It was the first time I dipped my toe in the cold water of web development.
 
 ## V3 - blogger.com
 
 In October 2004, after the site was in deep sleep for a while, the first blog "Klasse Kaffee" was launched on blogger.com platform. And I started posting more frequently.
+
+![Screenshot of "Klasse Kaffee" from 2005](/images/bildschirmfoto-2022-01-20-um-10.52.13.png)
 
 ## V4 - Wordpress
 
@@ -43,7 +44,7 @@ How the time flies ... In 2019, 9 years later, I reactivated the domain and star
 The redesigned blog also got a new [markus-haack.com](markus-haack.com) domain. The old .de domain [markus-haack.de](markus-haack.de) still exists, it redirects to the .com domain.
 
 I started writing in English, which was something I had never done on my blog before. I mostly write about smart home and IoT (Internet of Things) projects I have built. I also post professional news occasionally.
-  
+
 Later in 2019 I switched the theme to [Novela](https://novela.narative.co/) which was, back then, actively maintained and updated.
 
 ## V6 - Eleventy
@@ -57,3 +58,5 @@ Getting started with Eleventy was pretty easy. The [documentation](https://www.1
 At the very beginning i started with the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. 
 
 While the template helped to kick start the site I added a bunch of custom extensions. The site evolved quickly, the entire CSS got changed to [Tailwind CSS](https://tailwindcss.com/), it has little in common with the original template any more.
+
+Source hero image: [unsplash.com](https://unsplash.com/photos/tZc3vjPCk-Q)
