@@ -9,13 +9,13 @@ date: 2022-01-20
 ---
 I will briefly describe my personal website's history. It started in 1998. At this point, I have already gone through six iterations. I had already completely forgotten two of them. 
 
-My personal blog is build around simple HTML and CSS. There’s no need for much javascript on the site - something I got sorted out over time. The site also become a bit of a playground.
+My personal blog is built around simple HTML and CSS. There’s no need for much javascript on the site - something I got sorted out over time. The site also become a bit of a playground.
 
 Described here is a brief explanation of the evolution steps and the tools and technologies behind each version.
 
 ## V1 - Geocities
 
-On May 1st, 1998 the first version of my personal website was put online on \[Geocities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities. Geocities does not exist any more nor does my own website, the old URL www.geocities.com/southbeach/strand/2811/ is not available any more. 
+On May 1st, 1998 the first version of my personal website was put online on \[Geocities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities. Geocities does not exist anymore nor does my own website, the old URL www.geocities.com/southbeach/strand/2811/ is not available anymore. 
 
 I don't even remember exactly what the site was about and what content I put there.
 
@@ -47,16 +47,16 @@ The redesigned blog also got a new [markus-haack.com](markus-haack.com) domain. 
 
 I started writing in English, which was something I had never done on my blog before. I mostly write about smart home and IoT (Internet of Things) projects I have built. I also post professional news occasionally.
 
-Later in 2019 I switched the theme to [Novela](https://novela.narative.co/) which was, back then, actively maintained and updated.
+Later in 2019, I switched the theme to [Novela](https://novela.narative.co/) which was, back then, actively maintained and updated.
 
 ## V6 - Eleventy
 
-The most recent framework I have adopted is [Eleventy](https://11ty.dev/). Eleventy fulfills a similar task as Gatsby and is also implemented in Javascript.
+The most recent framework I have adopted is [Eleventy](https://11ty.dev/). Eleventy fulfils a similar task as Gatsby and is also implemented in Javascript.
 
 There is one big difference between the two tools: even a site without any JS, or that is entirely server-side rendered, will still ship a bunch amount of client-side JS to make it feel "lightning fast". It seems logical to only send JS to the client when it's actually needed, so for a simple static site, like this blog it's unnecessary. That's why Eleventy seems like the better choice.
 
 Getting started with Eleventy was pretty easy. The [documentation](https://www.11ty.dev/docs/) is excellent and there are plenty of how-to guides like [this one](https://css-irl.info/from-gatsby-to-eleventy/).
 
-The initial template I used was the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. While it helped me get the site up and running, I added quite a few extensions and customizations. As the site got more and more complex, I re-wrote the entire CSS to [Tailwind CSS](https://tailwindcss.com/), and little remains of the original template.
+The initial template I used was the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. While it helped me get the site up and running, I added quite a few extensions and customizations. As the site got more and more complex, I re-wrote the entire CSS to [Tailwind CSS](https://tailwindcss.com/) and little remains of the original template.
 
 Source hero image: [unsplash.com](https://unsplash.com/photos/tZc3vjPCk-Q)
