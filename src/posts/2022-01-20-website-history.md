@@ -39,7 +39,9 @@ I blogged regularly until 2010, after which I lost interest a little.
 
 ## V5 - Gatsby
 
-How the time flies ... In 2019, 9 years later, I reactivated the domain and started blocking again. It was a fresh start. The entire site was rebuilt with [React](https://reactjs.org/) from scratch using [Gatsby](https://www.gatsbyjs.com/) using the [Stellar](https://github.com/codebushi/gatsby-starter-stellar) theme.
+How the time flies ... In 2019, 9 years later, I reactivated the domain and started blocking again. It was a fresh start. The entire site was rebuilt with [React](https://reactjs.org/) from scratch using [Gatsby](https://www.gatsbyjs.com/) using the [Stellar](https://github.com/codebushi/gatsby-starter-stellar) theme. A snapshot is still available in the [Internet Archive](https://web.archive.org/web/20190108060741/https://www.markus-haack.com/).
+
+![Screenshot of "Klasse Kaffee" from 2019](/images/bildschirmfoto-2022-01-20-um-10.57.52.png)
 
 The redesigned blog also got a new [markus-haack.com](markus-haack.com) domain. The old .de domain [markus-haack.de](markus-haack.de) still exists, it redirects to the .com domain.
 
