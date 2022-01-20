@@ -7,10 +7,14 @@ const markdownIterator = require('markdown-it-for-inline')
 const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
+const pluginDirectoryOutput = require("@11ty/eleventy-plugin-directory-output");
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = function (eleventyConfig) {
+    eleventyConfig.setQuietMode(true);
+    
+    eleventyConfig.addPlugin(pluginDirectoryOutput);
     eleventyConfig.addPlugin(pluginReadingTime)
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(pluginSyntaxHighlight)
