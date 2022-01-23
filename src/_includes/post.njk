@@ -34,7 +34,7 @@ layout: base
         <nav class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 border-t dark:border-gray-500">
         {% set item = collections.posts | getNextCollectionItem(page) %}
         {% if item %}
-        <div class="rounded-sm border dark:bg-cool-green-900 duration-300 hover:shadow-2xl hover:no-underline">
+        <div class="rounded-sm border duration-300 hover:shadow-2xl hover:no-underline hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
             <a data-a11y="false" href="{{ item.url }}" class="hover:no-underline">
                 {% if item.data.image %}
                     <figure>
@@ -66,7 +66,7 @@ layout: base
 
         {% set item = collections.posts | getPreviousCollectionItem(page) %}
         {% if item %}
-        <div class="rounded-sm border dark:bg-cool-green-900 duration-300 hover:shadow-2xl hover:no-underline">
+        <div class="rounded-sm border duration-300 hover:shadow-2xl hover:no-underline hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
             <a data-a11y="false" href="{{ item.url }}" class="hover:no-underline">
                 {% if item.data.image %}
                     <figure>
