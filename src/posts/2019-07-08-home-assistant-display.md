@@ -43,6 +43,6 @@ The second script is included in my automation's, once called it collects all th
 
 The button press events (`homematic.keypress`) can be captured by a simple automation. See [Homematic Home Assistant integration](https://www.home-assistant.io/components/homematic/) for more details.
 
-<github url="https://github.com/mhaack/home-assistant-config"/>
+{% githubBadge "https://github.com/mhaack/home-assistant-config" "Source code on GitHub" %}
 
 The full scripts are available in [my Home Assistant config repo](https://github.com/mhaack/home-assistant-config) in the _python_scripts_ folder on GitHub. These are my first python baby steps, feedback and improvements are always welcome.

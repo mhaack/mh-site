@@ -97,7 +97,7 @@ The PIR motion sensors and the servo must be connected to the Wemos / ESP8266 bo
 
 The software project for the ESP8288 board can be found in my [GitHub](https://github.com/mhaack/halloween-pumpkin-fire) repository.
 
-<github url="https://github.com/mhaack/halloween-pumpkin-fire"/>
+{% githubBadge "https://github.com/mhaack/halloween-pumpkin-fire" "Source code on GitHub" %}
 
 After uploading the software to the board it has to be configured to connect to WiFi and MQTT. Homie provides multiple ways to do this, I prefer to create and upload a config file. Alternatively, the configuration UI can be used.
 
