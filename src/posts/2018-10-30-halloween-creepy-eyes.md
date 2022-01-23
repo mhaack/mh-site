@@ -16,7 +16,7 @@ tags:
 
 Halloween is coming in a few days and here is the first of my Halloween projects this year. I wanted to rebuild an cool Arduino project I found on [YouTube](https://youtu.be/ryUNHPJ3leY) - the pumpkin with moving eyes.
 
-{% youtubeEmbed "8-jia1-PfCQ" %}
+https://www.youtube.com/watch?v=8-jia1-PfCQ
 
 The project is not complicated and easy to rebuild. Now we see how to do that.
 

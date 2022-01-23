@@ -4,6 +4,7 @@ const htmlmin = require('html-minifier')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownIterator = require('markdown-it-for-inline')
+const pluginEmbedYouTube = require("eleventy-plugin-youtube-embed");
 const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
@@ -14,6 +15,7 @@ const isProd = process.env.ELEVENTY_ENV === 'production'
 module.exports = function (eleventyConfig) {
     eleventyConfig.setQuietMode(true);
     
+    eleventyConfig.addPlugin(pluginEmbedYouTube);
     eleventyConfig.addPlugin(pluginDirectoryOutput);
     eleventyConfig.addPlugin(pluginReadingTime)
     eleventyConfig.addPlugin(pluginRss)
@@ -30,7 +32,6 @@ module.exports = function (eleventyConfig) {
 
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./lib/shortcodes/currentYear'))
-    eleventyConfig.addShortcode('youtubeEmbed', require('./lib/shortcodes/youtubeEmbed'))
     eleventyConfig.addShortcode('githubBadge', require('./lib/shortcodes/githubBadge'))
     eleventyConfig.addShortcode('version', require('./lib/shortcodes/version'))
     eleventyConfig.addShortcode('image', require('./lib/shortcodes/image'))

@@ -18,7 +18,7 @@ A flame-throwing jack-o'-lantern is a real Halloween highlight and definitely so
 
 This Jack-O-Lantern is internet connected and can be controlled via MQTT protocol. That way the project can be integrated into a home automation solution like [OpenHab](https://www.openhab.org) or [Home Assistant](https://www.home-assistant.io) to control the flamethrower from there or via Alexa or Google Home.
 
-{% youtubeEmbed "jMbAKtgw04k" %}
+https://www.youtube.com/watch?v=jMbAKtgw04k
 
 You are "not so much" interested in Halloween? This is for you as well, a little fire will make even the most bold of people think twice about approaching your door.
 

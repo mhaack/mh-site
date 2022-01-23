@@ -22,7 +22,7 @@ On July 28th I was a guest on Mark Szulc's [Building Experiences using Adobe Exp
 
 Check out the recording of the live stream:
 
-{% youtubeEmbed "6LUHYCEx4GU" %}
+https://www.youtube.com/watch?v=6LUHYCEx4GU
 
 All our projects are open-source, public on GitHub.
 
