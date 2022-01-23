@@ -18,7 +18,7 @@ In this talk I discuss AEM Commerce integration & extensibility patterns using A
 
 Interested? The recording for my talk is now available on YouTube.
 
-{% youtubeEmbed "25cTzVV2jfQ" %}
+https://www.youtube.com/watch?v=25cTzVV2jfQ
 
 Projects build by our team mentioned in the talk:
 
