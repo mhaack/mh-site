@@ -1,6 +1,6 @@
 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-8 border-t dark:border-gray-500">
     {% for item in postslist | reverse %}
-        <li class="rounded-sm border duration-300 hover:shadow-2xl hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
+        <li class="rounded-sm border duration-300 shadow-md hover:shadow-2xl hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
             <a data-a11y="false" href="{{ item.url }}" class="hover:no-underline">
                 {% if item.data.image %}
                     <figure>

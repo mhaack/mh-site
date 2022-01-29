@@ -50,7 +50,7 @@ The following software libraries are used. If using PlatformIO all dependencies 
 
 The senoor data is published via MQTT according to the Homie spec. It can be read with any MQTT client:
 
-```
+```bash
 homie/mqtt-sensor-livingroom/sensor/temperature 24.58
 homie/mqtt-sensor-livingroom/sensor/humidity 32.67
 homie/mqtt-sensor-livingroom/$stats/signal 94
