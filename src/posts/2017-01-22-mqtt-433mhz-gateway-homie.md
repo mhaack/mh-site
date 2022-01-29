@@ -74,14 +74,14 @@ For detailed documentation of the MQTT topics and commands used see [Homie docum
 
 Sample gateway messages:
 
-```
+```bash
 # sensor temperature reading
 homie/mqtt-gateway-livingroom/temperature/degrees 23.70
 ```
 
 Temperature value send from device.
 
-```
+```bash
 # send RF command via MQTT & response
 homie/mqtt-gateway-livingroom/MQTTto433/on/set 1394001
 homie/mqtt-gateway-livingroom/MQTTto433/on 1394001
