@@ -43,7 +43,7 @@ How the time flies ... In 2019, 9 years later, I reactivated the domain and star
 
 ![Screenshot of "Klasse Kaffee" from 2019](/images/bildschirmfoto-2022-01-20-um-10.57.52.png)
 
-The redesigned blog also got a new [markus-haack.com](markus-haack.com) domain. The .de domain [markus-haack.de](markus-haack.de) still exists, it redirects to the .com domain.
+The redesigned blog also got a new [markus-haack.com](https://markus-haack.com) domain. The .de domain [markus-haack.de](http://www.markus-haack.de) still exists, it redirects to the .com domain.
 
 I started writing in English, which was something I had never done on my blog before. I mostly write about smart home and IoT (Internet of Things) projects I have built. I also post professional news occasionally.
 
