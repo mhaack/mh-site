@@ -2,3 +2,11 @@
   command = "npm run build"
   publish = "dist"
   # functions = "./src/functions"
+
+[[redirects]]
+  from = "/tags/projects/"
+  to = "/projects/"
+
+[[redirects]]
+  from = "/tags/work/"
+  to = "/work/"
