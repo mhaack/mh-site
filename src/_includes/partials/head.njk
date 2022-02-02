@@ -54,15 +54,7 @@
     <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}"/>
     {% endif %}
 
-    {% if site.googleAnalyticsId and env.isProd %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalyticsId }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', '{{ site.googleAnalyticsId }}', {'anonymize_ip': true});
-    </script>
+    {% if env.isProd %}
+
     {% endif %}
   </head>
