@@ -1,6 +1,7 @@
 ---
 layout: page
 ignore: true
+eleventyExcludeFromCollections: true
 ---
 
 # Impressum
@@ -14,10 +15,11 @@ Immischweg 3
 ## Kontaktmöglichkeiten
 
 E-Mail-Adresse: info@markus-haack.de
+Telefon: auf Anfrage
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
 
-Inhaltlich verantwortlich: Markus Haack (Adresse wie oben)
+Inhaltlich verantwortlich: Markus Haack
 
 ## Haftungs- und Urheberrechtshinweise
 

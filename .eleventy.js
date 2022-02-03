@@ -118,6 +118,7 @@ module.exports = function (eleventyConfig) {
             }
         })
         .use(markdownItAnchor, {
+            level: [2, 3],
             permalink: markdownItAnchor.permalink.ariaHidden(),
         })
 
