@@ -14,7 +14,7 @@ She is super happy when she can share her dinosaur knowledge with someone. Then,
 
 This was the birth of [dino-fakten.de](https://dino-fakten.de/) - her very first website.
 
-<< Screenshot>>
+![map with the localities of the different dinosaurs around the world](/images/dino-fakten-map.png)
 
 ## One more dinosaur website
 
