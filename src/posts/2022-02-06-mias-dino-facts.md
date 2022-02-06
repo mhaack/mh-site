@@ -36,9 +36,11 @@ The site itself is now hosted on [Netlify](https://www.netlify.com/), with the d
 
 The source code of the site is available on GitHub:
 
-{% githubBadge "https://github.com/mhaack/mias-dino-facts" "mias-dino-facts" %}
+{% githubBadge "mhaack/mias-dino-facts" %}
 
 ## What is next?
 
 With the site online and the CMS setup, the main technical work is done. I leave the responsibility for the website more and more to Mia. She created fact sheets for 25 dinosaurs and is constantly adding more every week.
-She also already has some other content ideas: dinosaurs in Minecraft (her other hobby) or report about our trips to dino parks. Stay tuned.
+She also already has some other content ideas: dinosaurs in Minecraft (her other hobby) or report about our trips to dino parks.
+
+And my favourite dinosaur ... that is the [Triceratops](https://dino-fakten.de/dinos/triceratops/).
