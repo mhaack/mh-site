@@ -28,8 +28,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
-    //eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
-
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
     eleventyConfig.addShortcode('githubBadge', require('./utils/shortcodes/githubBadge'))
@@ -38,33 +36,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLiquidShortcode("image", require('./utils/shortcodes/image'));
     eleventyConfig.addJavaScriptFunction("image", require('./utils/shortcodes/image'));
 
-    eleventyConfig.addFilter('excerpt', (post) => {
-        const content = post.replace(/(<([^>]+)>)/gi, '')
-        return content.substr(0, content.lastIndexOf(' ', 200)) + '...'
-    })
+    // filters
+    eleventyConfig.addFilter('excerpt',require('./utils/filters/postExcerpt'));
+    eleventyConfig.addFilter('readableDate',require('./utils/filters/readableDate'));
+    eleventyConfig.addFilter('htmlDateString',require('./utils/filters/htmlDateString'));
+    eleventyConfig.addFilter('head',require('./utils/filters/collectionHead'));
+    eleventyConfig.addFilter('category',require('./utils/filters/collectionCategory'));
+    eleventyConfig.addFilter('pageTags', require('./utils/filters/pageTags'));
 
-    eleventyConfig.addFilter('readableDate', (dateObj) => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toLocaleString(DateTime.DATE_FULL)
-    })
-
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-        return DateTime.fromJSDate(dateObj, { zone: 'utc' }).toFormat('yyyy-LL-dd')
-    })
-
-    eleventyConfig.addFilter('dateToIso', (dateString) => {
-        return new Date(dateString).toISOString()
-    })
-
-    eleventyConfig.addFilter('head', (array, n) => {
-        if (n < 0) {
-            return array.slice(n)
-        }
-
-        return array.slice(0, n)
-    })
-
-    eleventyConfig.addFilter('category', (items, category) => items.filter((item) => item.data.category === category))
-
+    // collections
     eleventyConfig.addCollection('tagList', function (collection) {
         let tagSet = new Set()
         collection.getAll().forEach(function (item) {
@@ -90,17 +70,6 @@ module.exports = function (eleventyConfig) {
         })
 
         return [...tagSet]
-    })
-
-    eleventyConfig.addFilter('pageTags', (tags) => {
-        const generalTags = ['all', 'nav', 'post', 'posts']
-
-        return tags
-            .toString()
-            .split(',')
-            .filter((tag) => {
-                return !generalTags.includes(tag)
-            })
     })
 
     // Markdown overrides
