@@ -31,12 +31,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 
     // short codes
-    eleventyConfig.addShortcode('currentYear', require('./lib/shortcodes/currentYear'))
-    eleventyConfig.addShortcode('githubBadge', require('./lib/shortcodes/githubBadge'))
-    eleventyConfig.addShortcode('version', require('./lib/shortcodes/version'))
-    eleventyConfig.addNunjucksAsyncShortcode("image", require('./lib/shortcodes/image'));
-    eleventyConfig.addLiquidShortcode("image", require('./lib/shortcodes/image'));
-    eleventyConfig.addJavaScriptFunction("image", require('./lib/shortcodes/image'));
+    eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
+    eleventyConfig.addShortcode('githubBadge', require('./utils/shortcodes/githubBadge'))
+    eleventyConfig.addShortcode('version', require('./utils/shortcodes/version'))
+    eleventyConfig.addNunjucksAsyncShortcode("image", require('./utils/shortcodes/image'));
+    eleventyConfig.addLiquidShortcode("image", require('./utils/shortcodes/image'));
+    eleventyConfig.addJavaScriptFunction("image", require('./utils/shortcodes/image'));
 
     eleventyConfig.addFilter('excerpt', (post) => {
         const content = post.replace(/(<([^>]+)>)/gi, '')
