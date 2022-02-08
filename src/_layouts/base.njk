@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="{{ site.language }}">
-{% include "partials/head.njk" %}
+{% include "head.njk" %}
   <body class="debug-screens flex flex-col min-h-screen text-primary dark:text-white dark:bg-primary leading-normal scrolling-touch">
 
-    {% include "partials/header.njk" %}
+    {% include "header.njk" %}
 
     <main class="flex pb-8 flex-col px-4 min-w-0 max-w-4xl mx-auto">
       {{ content | safe }}
     </main>
 
-    {% include "partials/footer.njk" %}
-    {% include 'partials/scroll-top-button.njk' %}
+    {% include "footer.njk" %}
+    {% include "scroll-top-button.njk" %}
     <script
       src="/assets/js/main.js?{% version %}"
       type="module"

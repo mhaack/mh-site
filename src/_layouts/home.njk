@@ -14,7 +14,7 @@ layout: base
   <h2 class="mb-4">My latest projects & posts</h2>
 
   {% set postslist = collections.posts | head(-6) %}
-  {% include "partials/posts-list.njk" %}
+  {% include "posts-list.njk" %}
   <a class="w-full inline-block text-center pb-12 my-12 mx-auto border-b dark:border-gray-500" href="{{ '/projects/' | url }}">View All Projects</a>
 </section>
 

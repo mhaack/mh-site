@@ -28,7 +28,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
-    eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
+    //eleventyConfig.addLayoutAlias('base', 'layouts/base.njk')
 
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
@@ -154,10 +154,11 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: 'src',
             output: 'dist',
-            passthroughFileCopy: true,
-            templateFormats: ['html', 'njk', 'md'],
-            htmlTemplateEngine: 'njk',
-            markdownTemplateEngine: 'njk',
+            includes: "_includes",
+			layouts: "_layouts"
         },
+        passthroughFileCopy: true,
+        templateFormats: ['html', 'njk', 'md'],
+        htmlTemplateEngine: 'njk',
     }
 }
