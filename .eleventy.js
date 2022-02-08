@@ -1,22 +1,19 @@
-const { DateTime } = require('luxon')
-const { minify } = require('terser')
-const htmlmin = require('html-minifier')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
 const markdownIterator = require('markdown-it-for-inline')
-const pluginEmbedYouTube = require("eleventy-plugin-youtube-embed");
+const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed')
 const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
-const pluginDirectoryOutput = require("@11ty/eleventy-plugin-directory-output");
+const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output')
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = function (eleventyConfig) {
-    eleventyConfig.setQuietMode(true);
-    
-    eleventyConfig.addPlugin(pluginEmbedYouTube);
-    eleventyConfig.addPlugin(pluginDirectoryOutput);
+    eleventyConfig.setQuietMode(true)
+
+    eleventyConfig.addPlugin(pluginEmbedYouTube)
+    eleventyConfig.addPlugin(pluginDirectoryOutput)
     eleventyConfig.addPlugin(pluginReadingTime)
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(pluginSyntaxHighlight)
@@ -32,45 +29,23 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
     eleventyConfig.addShortcode('githubBadge', require('./utils/shortcodes/githubBadge'))
     eleventyConfig.addShortcode('version', require('./utils/shortcodes/version'))
-    eleventyConfig.addNunjucksAsyncShortcode("image", require('./utils/shortcodes/image'));
-    eleventyConfig.addLiquidShortcode("image", require('./utils/shortcodes/image'));
-    eleventyConfig.addJavaScriptFunction("image", require('./utils/shortcodes/image'));
+    eleventyConfig.addNunjucksAsyncShortcode('image', require('./utils/shortcodes/image'))
+    eleventyConfig.addLiquidShortcode('image', require('./utils/shortcodes/image'))
+    eleventyConfig.addJavaScriptFunction('image', require('./utils/shortcodes/image'))
 
     // filters
-    eleventyConfig.addFilter('excerpt',require('./utils/filters/postExcerpt'));
-    eleventyConfig.addFilter('readableDate',require('./utils/filters/readableDate'));
-    eleventyConfig.addFilter('htmlDateString',require('./utils/filters/htmlDateString'));
-    eleventyConfig.addFilter('head',require('./utils/filters/collectionHead'));
-    eleventyConfig.addFilter('category',require('./utils/filters/collectionCategory'));
-    eleventyConfig.addFilter('pageTags', require('./utils/filters/pageTags'));
+    eleventyConfig.addFilter('excerpt', require('./utils/filters/postExcerpt'))
+    eleventyConfig.addFilter('readableDate', require('./utils/filters/readableDate'))
+    eleventyConfig.addFilter('htmlDateString', require('./utils/filters/htmlDateString'))
+    eleventyConfig.addFilter('head', require('./utils/filters/collectionHead'))
+    eleventyConfig.addFilter('category', require('./utils/filters/collectionCategory'))
+    eleventyConfig.addFilter('pageTags', require('./utils/filters/pageTags'))
 
     // collections
-    eleventyConfig.addCollection('tagList', function (collection) {
-        let tagSet = new Set()
-        collection.getAll().forEach(function (item) {
-            if ('tags' in item.data) {
-                let tags = item.data.tags
+    eleventyConfig.addCollection('tagList', require('./utils/collections/tagList'))
 
-                tags = tags.filter(function (item) {
-                    switch (item) {
-                        case 'all':
-                        case 'nav':
-                        case 'post':
-                        case 'posts':
-                            return false
-                    }
-
-                    return true
-                })
-
-                for (const tag of tags) {
-                    tagSet.add(tag)
-                }
-            }
-        })
-
-        return [...tagSet]
-    })
+    // transforms
+    eleventyConfig.addTransform('compressHTML', require('./utils/transforms/compressHTML'))
 
     // Markdown overrides
     let markdownLibrary = markdownIt({
@@ -90,41 +65,14 @@ module.exports = function (eleventyConfig) {
             level: [2, 3],
             permalink: markdownItAnchor.permalink.ariaHidden(),
         })
-
     eleventyConfig.setLibrary('md', markdownLibrary)
-
-    // inline js filter
-    eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (code, callback) {
-        try {
-            const minified = await minify(code)
-            callback(null, minified.code)
-        } catch (err) {
-            console.error('Terser error: ', err)
-            // Fail gracefully.
-            callback(null, code)
-        }
-    })
-
-    // minify html filter
-    eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
-        if (outputPath && outputPath.endsWith('.html') && isProd) {
-            let minified = htmlmin.minify(content, {
-                useShortDoctype: true,
-                removeComments: true,
-                collapseWhitespace: true,
-                minifyJS: true,
-            })
-            return minified
-        }
-        return content
-    })
 
     return {
         dir: {
             input: 'src',
             output: 'dist',
-            includes: "_includes",
-			layouts: "_layouts"
+            includes: '_includes',
+            layouts: '_layouts',
         },
         passthroughFileCopy: true,
         templateFormats: ['html', 'njk', 'md'],

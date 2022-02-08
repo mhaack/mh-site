@@ -23,8 +23,7 @@
         "postcss-import": "^14.0.2",
         "prettier": "^2.4.1",
         "tailwindcss": "^3.0.7",
-        "tailwindcss-debug-screens": "^2.2.1",
-        "terser": "^5.10.0"
+        "tailwindcss-debug-screens": "^2.2.1"
     },
     "scripts": {
         "dev": "npm-run-all clean --parallel dev:* --print-label",
