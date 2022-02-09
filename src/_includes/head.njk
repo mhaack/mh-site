@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% if ignore %}
-    <meta name="robots" content="noindex"/>
+    <meta name="robots" content="noindex">
     {% endif %}
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
 
@@ -24,9 +24,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta property="og:title" content="{{  title or site.name | escape }}">
-    <meta property="og:site_name" content="{{ site.name }}"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="{{ site.url + page.url }}"/>
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url + page.url }}">
     <meta name="twitter:card" content="summary_large_image">
 
     {%- if site.author.twitterHandle -%}
@@ -48,8 +48,8 @@
     {%- endif -%}
   #}  
     {%- if image %}
-    <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}"/>
-    <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}"/>
+    <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
+    <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}">
     {% endif %}
 
     {% if env.isProd %}
@@ -65,7 +65,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" rel="stylesheet" type="text/css">
     </noscript>
 
     {% if env.isProd %}
