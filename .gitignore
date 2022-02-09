@@ -15,5 +15,4 @@ yarn-error.log*
 dist
 
 # Don't commit temp build files
-src/assets/css/theme.css
 src/_includes/theme.css
