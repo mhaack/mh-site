@@ -63,10 +63,9 @@
     {% endif %}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    {# <link rel="prefetch" href="/assets/iconfont.woff2" as="font" type="font/woff2" crossorigin> #}
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" rel="stylesheet" type="text/css"/>
     </noscript>
 
     {% if env.isProd %}
