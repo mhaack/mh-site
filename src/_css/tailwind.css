@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'components.css';
 @import 'tailwindcss/utilities';
+@import "prism-theme.css";
 
 @layer base {
     a {

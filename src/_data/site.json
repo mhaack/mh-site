@@ -30,31 +30,31 @@
         {
             "text": "Twitter",
             "url": "https://twitter.com/mhaack",
-            "icon": "icon icon-twitter",
+            "icon": "icons/twitter.svg",
             "external": true
         },
         {
             "text": "Instagram",
             "url": "https://instagram.com/mhaack",
-            "icon": "icon icon-instagram",
+            "icon": "icons/instagram.svg",
             "external": true
         },
         {
             "text": "GitHub",
             "url": "https://github.com/mhaack",
-            "icon": "icon icon-github",
+            "icon": "icons/github.svg",
             "external": true
         },
         {
             "text": "LinkedIn",
             "url": "https://de.linkedin.com/in/markushaack",
-            "icon": "icon icon-linkedin",
+            "icon": "icons/linkedin.svg",
             "external": true
         },
         {
             "text": "Medium",
             "url": "https://mhaack.medium.com/",
-            "icon": "icon icon-medium",
+            "icon": "icons/medium.svg",
             "external": true
         }
     ],
@@ -62,7 +62,7 @@
         {
             "text": "RSS",
             "url": "/feed.xml",
-            "icon": "icon icon-rss",
+            "icon": "icons/feed.svg",
             "external": true
         }
     ]

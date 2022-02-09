@@ -4,9 +4,6 @@ layout: base
 
 <header>
   <h1 class="mb-8 text-center sm:text-left">{{ heading }}</h1>
-  <div class="float-none sm:float-right mx-auto my-4 sm:-mt-8 sm:mb-0 sm:ml-4 sm:mr-1 w-40 h-40 sm:w-48 sm-h48">
-    {% image image, name , "rounded-full object-cover ring-1 ring-gray-200 ring-offset-8"%}
-  </div>
   {{ content | safe }}
 </header>
 
@@ -14,7 +11,7 @@ layout: base
   <h2 class="mb-4">My latest projects & posts</h2>
 
   {% set postslist = collections.posts | head(-6) %}
-  {% include "partials/posts-list.njk" %}
+  {% include "posts-list.njk" %}
   <a class="w-full inline-block text-center pb-12 my-12 mx-auto border-b dark:border-gray-500" href="{{ '/projects/' | url }}">View All Projects</a>
 </section>
 

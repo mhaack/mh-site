@@ -5,8 +5,8 @@ layout: base
 <h1 class="mb-4 text-center sm:text-left">Some of my professional projects</h1>
 
 <div class="my-4 text-sm opacity-80 text-center sm:text-left">
-  {% include "partials/tags-list.njk" %}
+  {% include "tags-list.njk" %}
 </div>
 
 {% set postslist = collections.posts | category("work") %}
-{% include "partials/posts-list.njk" %}
+{% include "posts-list.njk" %}

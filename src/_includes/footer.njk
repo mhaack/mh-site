@@ -1,4 +1,4 @@
-<footer class="pb-16 px-4 mx-auto max-w-4xl w-full flex flex-col items-center border-t dark:border-gray-500">
+<footer class="py-8 px-4 mx-auto max-w-4xl w-full flex flex-col items-center border-t dark:border-gray-500">
     <ul class="flex mt-8" >
       {%- if site.socialLinks %}
         {%- for item in site.socialLinks -%}
@@ -9,7 +9,7 @@
           <li class="mr-4 last:mr-0">
             <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-cool-green-700 dark:text-cool-green-300 hover:text-cool-green-400 dark:hover:text-cool-green-600 hover:no-underline">
               {% if item.icon -%}
-              <i class="{{ item.icon }}"></i>
+              {% include item.icon %}
               <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
               {%- else -%}
               Link to {{ item.text }}
@@ -27,7 +27,8 @@
           <li class="mr-4 last:mr-0">
             <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-3xl text-cool-green-700 dark:text-cool-green-300 hover:text-cool-green-400 dark:hover:text-cool-green-600 hover:no-underline">
               {% if item.icon -%}
-              <i class="{{ item.icon }}"></i>
+              {% include item.icon %}
+              {# <i class="{{ item.icon }}"></i> #}
               <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
               {%- else -%}
               Link to {{ item.text }}

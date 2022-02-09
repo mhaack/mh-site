@@ -1,0 +1,74 @@
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if ignore %}
+    <meta name="robots" content="noindex">
+    {% endif %}
+    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+
+    <title>
+      {%- if title -%} 
+        {{  title | escape }}
+      {%- else -%}
+        {{ site.name }}
+      {%- endif -%}
+    </title>
+
+    <link rel="icon" type= “image/x-icon” href="/assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/manifest.webmanifest">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="{{  title or site.name | escape }}">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url + page.url }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    {%- if site.author.twitterHandle -%}
+    <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
+    {%- endif -%}
+    {% set desc = description %}
+    {%- if not desc -%}
+      {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {%- if desc -%}
+    <meta name="description" content="{{ desc | escape  }}">
+    <meta property="og:description" content="{{ desc | escape }}">
+    {%- endif -%}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="generator" content="eleventy">
+  {# 
+    {%- if not socialImage -%}
+      {% set socialImage = site.defaultSocialImage %}
+    {%- endif -%}
+  #}  
+    {%- if image %}
+    <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
+    <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}">
+    {% endif %}
+
+    {% if env.isProd %}
+    <!-- capture the CSS content as a Liquid variable -->
+    {% set css %}{% include "theme.css" %}{% endset %}
+    <style>
+      {{css | safe}}
+    </style>
+    {% else %}
+    <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
+    {% endif %}
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=optional" rel="stylesheet" type="text/css">
+    </noscript>
+
+    {% if env.isProd %}
+    <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
+    {% endif %}
+  </head>

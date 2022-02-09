@@ -13,8 +13,14 @@
 This repository contains the code for my personal site at [www.markus-haack.com](https://www.markus-haack.com).
 
 ## Built with
-* [Eleventy](https://www.11ty.dev/)
-* [Eleventy Duo](https://github.com/yinkakun/eleventy-duo/) Thema
-* JavaScript
-* Markdown
-* [Netlify](https://www.netlify.com/)
+* [Eleventy](https://11ty.dev) as a static site generator
+* Default templating is [Nunjucks](https://mozilla.github.io/nunjucks/)
+* PostCSS set up to handle:
+	* TailwindCSS
+	* CSS Imports
+	* Autoprefixer 
+* PurgeCSS to remove unused CSS (set up for TailwindCSS by default) in production
+* HTML minified in production
+* CSS inlined and minified in production
+* Minimal JS, minified in production
+* HTML document `<head>` crafted using [htmlhead.dev](https://htmlhead.dev)
