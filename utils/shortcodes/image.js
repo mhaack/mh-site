@@ -6,8 +6,8 @@ module.exports = async (relativeSrc, alt = 'image', className, sizes = '(min-wid
     const fullSrc = path.join('src', relativeSrc)
 
     const imageMetadata = await Image(fullSrc, {
-        widths: [null, 600, 900, 1500],
-        formats: ['webp', 'jpeg'],
+        widths: [600, 1200, 1800],
+        formats: ['avif', 'webp', 'jpeg'],
         outputDir: path.join('dist', imgDir),
         urlPath: imgDir,
         filenameFormat: function (id, src, width, format, options) {
