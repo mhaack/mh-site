@@ -2,7 +2,7 @@ const isDev = process.env.ELEVENTY_ENV === 'development'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    content: ['./src/**/*.njk', './src/**/*.md', './lib/shortcodes/*.js'],
+    content: ['./src/**/*.njk', './src/**/*.md', './utils/shortcodes/*.js'],
     theme: {
         extend: {
             fontFamily: {
