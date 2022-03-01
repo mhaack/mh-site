@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 @import "prism-theme.css";
+@import "font.css";
 
 @layer base {
     a {
