@@ -33,7 +33,7 @@
         "dev": "npm-run-all clean --parallel dev:* --print-label",
         "build:twnd": "env ELEVENTY_ENV=production postcss src/_css/tailwind.css -o src/_includes/theme.css",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
-        "build": "npm-run-all clean build:* --print-label",
+        "build": "npm-run-all build:* --print-label",
         "format": "prettier --write \"src/**/*.{js,json,md}\"",
         "clean": "rm -rf ./dist"
     }
