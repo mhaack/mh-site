@@ -1,6 +1,5 @@
 ---
-title: "New Adobe Tech Blog post: AEM's Headless Extension for Adobe Commerce
-    PWA Studio"
+title: "AEM's Headless Extension for Adobe Commerce PWA Studio"
 author: Markus
 date: 2021-06-30
 permalink: medium-aem-headless/

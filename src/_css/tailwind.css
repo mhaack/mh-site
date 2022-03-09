@@ -24,7 +24,7 @@
     }
 
     h1 {
-        @apply text-4xl leading-tight font-semibold before:text-cool-green-700 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-5xl leading-tight font-semibold before:text-cool-green-700 before:font-semibold before:mr-2 before:content-['//'];
     }
 
     h2 {
