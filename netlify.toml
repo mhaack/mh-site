@@ -7,6 +7,14 @@
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
 
+[[plugins]]
+package = "netlify-plugin-cache"
+
+  [plugins.inputs]
+  paths = [
+    "dist/images"
+  ]
+
 [[redirects]]
   from = "/tags/projects/"
   to = "/projects/"
