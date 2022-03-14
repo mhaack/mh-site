@@ -47,6 +47,10 @@
         @apply sm:-mx-40 sm:w-[calc(100%+20rem)] sm:max-w-[calc(100%+20rem)];
     }
 
+    .prose img.small {
+        @apply sm:max-w-[calc(100%-10rem)] mx-auto;
+    }
+
     .prose pre[class*='language-'] {
         @apply max-w-sm sm:max-w-xl md:max-w-full;
     }
