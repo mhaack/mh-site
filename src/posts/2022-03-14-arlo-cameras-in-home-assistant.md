@@ -83,7 +83,7 @@ Additionally AArlo provides a comprehensive collection of sensors, binary sensor
 
 First and most important the camera.:
 
-```YAML
+```yaml
 camera:
   - platform: aarlo
 ```
@@ -94,7 +94,7 @@ AArlo is very verbose cameras and sensors have a lot of detailed information and
 
 The following Home Assistant [Sensors](https://github.com/twrecked/hass-aarlo#sensor-configuration) are available:
 
-```YAML
+```yaml
 sensor:
   - platform: aarlo
     monitored_conditions:
