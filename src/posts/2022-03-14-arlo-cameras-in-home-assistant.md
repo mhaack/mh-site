@@ -9,7 +9,7 @@ description: Home Assistant & Arlo cameras go better very well. I'm using it
   since our entire setup got migrated from OpenHab to Home Assistant and I'm
   happy with the setup.
 date: 2022-03-14
-permalink: arlo-home-assistant/
+permalink: ""
 ---
 Home Assistant & Arlo cameras go better together than I initially expected. I'm using it since our entire setup got migrated from OpenHab to Home Assistant and I'm happy with the setup.
 
