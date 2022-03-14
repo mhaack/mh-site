@@ -151,6 +151,8 @@ The library view looks like:
 
 ![Arlo library view](/images/arlo_ha_library.png)
 
+{% image "/images/arlo_ha_library.png", "Arlo library view" %}
+
 Notice the rectangles for the detected persons or animals.
 
 Additional details on motion and sound notifications sensors can be displayed as well. For doorbells the card provides extra functionality like door opening notifications.
