@@ -145,11 +145,9 @@ My usage of the cart is pretty standard:
 
 The result looks like:
 
-![Arlo camera view](/images/arlo_ha_camera.png)
+{% image "/images/arlo_ha_camera.png", "Arlo camera view" %}
 
 The library view looks like:
-
-![Arlo library view](/images/arlo_ha_library.png)
 
 {% image "/images/arlo_ha_library.png", "Arlo library view" %}
 
