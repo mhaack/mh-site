@@ -59,7 +59,7 @@ If you are not familiar with ESPHome getting started is not complicated, especia
 
 The ESPHome configuration for the water tank sensor is relativly simple. Only 80 lines of YAML config ... and these already include the setup boilerplate and some comments.
 
-```
+```shell
 esphome:
   name: watertank
   platform: ESP8266
