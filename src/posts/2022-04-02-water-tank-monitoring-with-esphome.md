@@ -1,5 +1,5 @@
 ---
-title: Water tank monitoring with ESPHome
+title: "Water tank monitoring with ESPHome "
 category: project
 tags:
   - esphome
