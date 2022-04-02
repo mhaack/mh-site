@@ -1,5 +1,5 @@
 ---
-title: "Water tank monitoring with ESPHome "
+title: Water tank monitoring with ESPHome
 category: project
 tags:
   - esphome
@@ -7,14 +7,17 @@ tags:
   - watering
   - garden
 image: /images/watertank-unsplash.jpg
+description: Watering your lawn and plants around the house wasn't one of my
+  favourite things to do. This had to be done better - fully automatically and
+  without intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
 ---
-Watering your lawn and plants around the house wasn't one of my favorite things to do. Especially when we bought a robot lawnmower, watering the lawn became quite a hassle since we had to always put away the sprinklers and hoses after each irrigation.
+Watering your lawn and plants around the house wasn't one of my favourite things to do. Especially when we bought a robot lawnmower, watering the lawn became quite a hassle since we had to always put away the sprinklers and hoses after each irrigation.
 
 An automatic irrigation system was needed. Inspired by [this thread](https://community.home-assistant.io/t/garden-irrigation/1950) on the HA Community I started looking into building a DIY solution. Which includes controlling the individual irrigation zones, monitoring the water level of the cistern and, if necessary, automatically filling the cistern. We end up with a mixed setup using a Hunter Hydrawise as the irrigation controller and a custom made solution to monitor and refill the water tank.
 
-I'm splitting this into two posts. Part 1 is about the ESPHome solution to monitor the water level of our garden cistern. Part 2 will cover the Home Assistant integration of Hydrawise, valves, the ESPHome water tank sensor and automations for the entire garden irrigation setup.
+I'm splitting this into two posts. Part 1 is about the [ESPHome](https://esphome.io/index.html) solution to monitor the water level of our garden cistern. Part 2 will cover the Home Assistant integration of Hydrawise, valves, the ESPHome water tank sensor and automations for the entire garden irrigation setup.
 
 The cistern plays a central role in our garden irrigation. Since the pump can deliver a higher pressure than the house water connection, the entire system is connected to it. For us, no water in the cistern means no watering of the plants or the lawn.
 
