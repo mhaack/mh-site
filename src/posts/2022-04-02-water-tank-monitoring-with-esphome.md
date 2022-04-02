@@ -24,7 +24,7 @@ I've been working for quite a while on a simple & reliable monitoring solution f
 
 The way the sensor works is very simple. The ultrasonic sensor is mounted inside the cistern above the water. It measures the distance to the water surface. The higher the water level, the smaller the distance between the water and the sensor. When we consume water, the water surface sinks and the distance increases. If it rains or we manually refill the cistern, the distance decreases again. I measured the full and empty levels of our cistern and can interpolate the intermediates. Using a volume formula, I can convert the distance (in cm) to litres.
 
-\~ diagram \~
+![schematic drawing cistern](/images/cistern.jpg)
 
 This concept is still used for the current version of the water level sensor.
 
@@ -36,7 +36,7 @@ The second iteration was also based on the particle.io Photon microcontroller ch
 
 Unfortunately, the HC-SR04 ultrasonic sensor still caused problems. It is simply not made to be placed in a cistern with permanent moisture around.
 
-## All good things come in threes
+## All good things come in three
 
 After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking for an alternative. For the third, and hopefully the final, version of the water tank sensor two changes have been implemented:
 
@@ -45,7 +45,7 @@ After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking 
 
 So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been running super stable for more than a year now.
 
-\~ foto von D1 mini box aus Carport \~
+![microcontroller watertank sensor](/images/microcontroller-watertank.jpg)
 
 The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.  
 
