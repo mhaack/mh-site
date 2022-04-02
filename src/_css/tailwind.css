@@ -51,6 +51,10 @@
         @apply sm:max-w-[calc(100%-10rem)] mx-auto;
     }
 
+    .prose img.x-small {
+        @apply sm:max-w-[calc(100%-25rem)] mx-auto;
+    }
+
     .prose pre[class*='language-'] {
         @apply max-w-sm sm:max-w-xl md:max-w-full;
     }

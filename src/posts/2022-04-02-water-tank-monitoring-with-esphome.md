@@ -27,7 +27,7 @@ I've been working for quite a while on a simple & reliable monitoring solution f
 
 The way the sensor works is very simple. The ultrasonic sensor is mounted inside the cistern above the water. It measures the distance to the water surface. The higher the water level, the smaller the distance between the water and the sensor. When we consume water, the water surface sinks and the distance increases. If it rains or we manually refill the cistern, the distance decreases again. I measured the full and empty levels of our cistern and can interpolate the intermediates. Using a volume formula, I can convert the distance (in cm) to litres.
 
-{% image "/images/cistern.jpg", "schematic drawing cistern" %}
+{% image "/images/cistern.jpg", "schematic drawing cistern", "x-small" %}
 
 This concept is still used for the current version of the water level sensor.
 
@@ -48,11 +48,11 @@ After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking 
 
 So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been running super stable for more than a year now.
 
-{% image "/images/microcontroller-watertank.jpg", "microcontroller watertank sensor" %}
+{% image "/images/microcontroller-watertank.jpg", "microcontroller watertank sensor", "x-small" %}
 
 The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.  
 
-{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup" %}
+{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small" %}
 
 No further electronic components are required. The setup is powered by a USB power adapter.
 
@@ -165,3 +165,6 @@ The percentage calculation is similar, based on the max volume of 5.500 litre of
 ## Into Home Assistant
 
 In the next post I will explain how the water tank data of the ESPHome sensor is used in Home Assistant. The automations I have set up to control the water tank pump & Hydrawise irrigation controller for the garden and lawn watering.
+
+Hero image photo by [Daniel van den Berg](https://unsplash.com/@danielvandenberg) on [Unsplash](https://unsplash.com/s/photos/watertank)
+  
