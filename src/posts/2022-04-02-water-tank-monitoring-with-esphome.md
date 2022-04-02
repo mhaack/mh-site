@@ -49,7 +49,7 @@ So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been ru
 
 The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.  
 
-\~fritzing diagram \~
+![fritzing diagram of water tank sensor setup](/images/watertank_steckplatine.png)
 
 No further electronic components are required. The setup is powered by a USB power adapter.
 
