@@ -6,7 +6,7 @@ tags:
   - home-automation
   - watering
   - garden
-image: /images/lawn-unsplash.jpg
+image: /images/watertank-unsplash.jpg
 date: 2022-04-02
 permalink: watertank-esphome/
 ---
