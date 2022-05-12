@@ -12,7 +12,7 @@
                     {%- set loadingLazy = false -%}
                   {%- endif -%}
                   <figure>
-                    {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) 100vw, 50vw", loadingLazy %}
+                    {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw", loadingLazy %}
                   </figure>
                 </div>
               {% endif %}
