@@ -1,4 +1,4 @@
 {% for tag in tags | pageTags %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-    <a alt="tagged {{ tag }}" aria-label="tagged {{ tag }}" href="{{ tagUrl | url }}" class="inline-flex items-center px-3 py-2 mt-2 mr-2 last:mr-0 text-sm font-normal text-gray-700 bg-gray-100 rounded-full hover:no-underline hover:text-gray-800 hover:bg-mountain-200">{{ tag }}</a>
+    <a alt="tagged {{ tag }}" aria-label="tagged {{ tag }}" href="{{ tagUrl | url }}" class="inline-flex items-center px-3 py-2 mt-2 mr-2 last:mr-0 text-sm font-normal text-slate-700 bg-slate-100 rounded-full hover:no-underline hover:text-slate-800 hover:bg-mountain-100">{{ tag }}</a>
 {% endfor %}

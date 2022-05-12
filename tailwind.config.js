@@ -49,7 +49,7 @@ module.exports = {
                     css: {
                         '--tw-prose-body': theme('colors.primary'),
                         '--tw-prose-headings': theme('colors.gray.700'),
-                        '--tw-prose-links': theme('colors.mountain.600'),
+                        '--tw-prose-links': theme('colors.mountain.700'),
                         '--tw-prose-th-borders': theme('colors.gray.700'),
                         '--tw-prose-bullets': theme('colors.gray.300'),
                         '--tw-prose-counters': theme('colors.gray.500'),

@@ -6,4 +6,4 @@ heading: Hi, my name is Markus
 image: '/images/markus.jpeg'
 ---
 
-I'm a developer, home automation enthusiast, married with my wonderful wife, proud dad and a software engineer at [Adobe](https://www.adobe.com) from Leipzig, Germany. [Find out more](/about).
+I'm a developer, home automation enthusiast, married with my wonderful wife, proud dad and a software engineer at Adobe from Leipzig, Germany. [Find out more](/about).

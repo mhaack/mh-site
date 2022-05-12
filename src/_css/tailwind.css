@@ -25,11 +25,11 @@
     }
 
     a {
-        @apply text-mountain-600 transition-colors;
+        @apply text-mountain-700 transition-colors;
     }
 
     a:hover {
-        @apply decoration-mountain-600 decoration-2;
+        @apply underline text-mountain-600 decoration-mountain-600 decoration-2 underline-offset-2;
     }
 
     h1 {

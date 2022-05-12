@@ -6,7 +6,7 @@ layout: base
     <header class="mb-4 text-center">
         <h1 class="mb-4">{{ title }}</h1>
         <div class="py-4 my-8 border-y md:justify-between md:items-start md:flex md:flex-row">
-            <div class="md:my-auto text-sm text-gray-700">
+            <div class="md:my-auto text-sm text-slate-700">
                 <time datetime="{{ date | htmlDateString }}">
                     {{ date | readableDate }}
                 </time>
@@ -26,12 +26,12 @@ layout: base
             {% set nextPost = collections.posts | getNextCollectionItem(page) %}
             <div class="py-2 text-center sm:py-0">
                 {% if previousPost %}
-                    <a class="text-gray-700 hover:text-gray-800" href="{{ previousPost.url }}">← {{ previousPost.data.title }}</a>
+                    <a class="text-slate-700 hover:text-mountain-600" href="{{ previousPost.url }}">← {{ previousPost.data.title }}</a>
                 {% endif %}
             </div>
             <div class="py-2 text-center sm:py-0">
                 {% if nextPost %}
-                    <a data-a11y="false" class="text-gray-700 hover:text-gray-800" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a>
+                    <a data-a11y="false" class="text-slate-700 hover:text-mountain-600" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a>
                 {% endif %}
             </div>
         </nav>

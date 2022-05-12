@@ -5,13 +5,13 @@
     <div class="flex justify-between h-20">
       <div class="flex justify-between w-full max-w-screen-xl">
         <div class="flex items-center">
-          <a href="/" class="block text-gray-900 hover:text-gray-600" data-a11y="false" title="Navigate back to the homepage" aria-label="Navigate back to the homepage" back="false">
+          <a href="/" class="block text-slate-900 hover:text-slate-600" data-a11y="false" title="Navigate back to the homepage" aria-label="Navigate back to the homepage" back="false">
             <svg
               height="66"
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="fill-gray-900 hover:fill-mountain-800">
+              class="fill-slate-900 hover:fill-mountain-800">
               <g>
                 <path d="M84,5H16C9.9,5,5,9.6,5,15.3V67c0,5.7,4.9,10.3,11,10.3h7.2v15.3c0,0.9,0.6,1.8,1.5,2.2c0.4,0.2,0.7,0.2,1.1,0.2
                   c0.6,0,1.2-0.2,1.7-0.5l22.7-17.2H84c6.1,0,11-4.6,11-10.3V15.3C95,9.6,90.1,5,84,5z M89.9,66.9c0,3-2.6,5.4-5.8,5.4H49.2
@@ -32,7 +32,7 @@
               {%- set currentAttribute = 'aria-current="page"' -%}
             {%- endif -%}
             <li class="mr-4 md:mr-8 last:mr-0">
-              <a href="{{ entry.url | url }}" {{- currentAttribute | safe -}} class="{% if page.url == entry.url %}border-mountain-800{% else %}border-gray-100{% endif %} text-gray-800 border-b-2 font-light hover:no-underline hover:bg-mountain-50 hover:border-gray-500 my-4 p-2 md:p-4 ">{{ entry.title }}</a>
+              <a href="{{ entry.url | url }}" {{- currentAttribute | safe -}} class="{% if page.url == entry.url %}border-mountain-800{% else %}border-slate-100{% endif %} text-slate-800 border-b-2 font-light hover:no-underline hover:bg-mountain-50 hover:border-slate-500 my-4 p-2 md:p-4 ">{{ entry.title }}</a>
             </li>
           {% endfor %}
         </ul>
@@ -41,8 +41,8 @@
       <div class="flex items-center -mr-2 sm:hidden">
         <button
           @click="open = !open"
-          class="inline-flex items-center justify-center p-2 text-gray-500 transition duration-150 ease-in-out rounded-md
-            hover:text-gray-600 hover:bg-mountain-100 focus:outline-none focus:text-gray-600 focus:bg-mountain-100 transform hover:scale-110"
+          class="inline-flex items-center justify-center p-2 text-slate-500 transition duration-150 ease-in-out rounded-md
+            hover:text-slate-600 hover:bg-mountain-100 focus:outline-none focus:text-slate-600 focus:bg-mountain-100 transform hover:scale-110"
           x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
           aria-label="Main menu"
           x-bind:aria-expanded="open">
@@ -78,7 +78,7 @@
     class="hidden sm:hidden">
     <div class="pt-2 pb-3">
       {% for entry in navPages %}
-        <a {% if page.url != entry.url %} href="{{ entry.url | url }}" {% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-gray-100 text-mountain-800{% else %}text-gray-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-gray-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
+        <a {% if page.url != entry.url %} href="{{ entry.url | url }}" {% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-slate-100 text-mountain-800{% else %}text-slate-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-slate-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
           {{ entry.title }}
         </a>
       {% endfor %}
