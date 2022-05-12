@@ -5,13 +5,13 @@ prose: false
 
 {{ content | safe }}
 <section class="mt-8">
-  <h2 class="mb-4 pb-4 border-b">My latest projects & posts</h2>
+  <h2 class="text-2xl sm:text-3xl mb-4 pb-4 border-b">My latest projects & posts</h2>
   {% set postslist = collections.posts | head(-6) %}
   {% include "partials/postslist.njk" %}
   <a class="w-full inline-block text-center pb-12 mb-12 mx-auto border-b" href="{{ '/projects/' | url }}">View All Projects</a>
 </section>
 <section id="contact">
-  <div class="relative flex flex-col p-8 mx-auto bg-slate-50 shadow-lg">
+  <div class="relative flex flex-col p-4 sm:p-8 mx-auto bg-slate-50 shadow-lg">
     <div class="w-full max-w-screen-sm mx-auto">
       <h3 class="mb-1">Get In Touch</h3>
       <p class="text-sm">Want to have a chat? Send me a message.</p>
