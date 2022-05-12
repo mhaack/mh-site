@@ -1,10 +1,9 @@
 ---
 layout: page
+title: Impressum
 ignore: true
 eleventyExcludeFromCollections: true
 ---
-
-# Impressum
 
 ## Angaben gemäß § 5 TMG
 

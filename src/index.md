@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Markus Haack // Software Engineer
+# title: Markus Haack // Software Engineer
+title: Hi, my name is Markus
 heading: Hi, my name is Markus
 image: '/images/markus.jpeg'
 ---

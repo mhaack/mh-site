@@ -4,7 +4,9 @@ category: project
 tags:
     - eleventy
     - website
-image: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
+    - development
+images:
+    feature: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
 date: 2022-01-20
 ---
 

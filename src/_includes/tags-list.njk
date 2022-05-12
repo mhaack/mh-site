@@ -1,7 +1,0 @@
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-
-  <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-cool-green-100 dark:bg-cool-green-700 px-3 h-6 inline-flex text-primary dark:text-cool-green-300 hover:text-cool-green-500
-   hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md mt-2 mr-2 last:mr-0">#{{ tag }}</a>
-
-{% endfor %}

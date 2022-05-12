@@ -3,7 +3,8 @@ title: 'New Talk: Extend AEM Content & Commerce'
 author: Markus
 date: 2021-10-18
 permalink: extend-aem-commerce/
-image: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
+images: 
+  feature: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
 category: work
 tags:
     - adobe

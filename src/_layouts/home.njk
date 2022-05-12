@@ -1,42 +1,63 @@
 ---
-layout: base
+layout: page
+prose: false
 ---
 
-<header>
-  <h1 class="mb-8 text-center sm:text-left">{{ heading }}</h1>
-  {{ content | safe }}
-</header>
-
+{{ content | safe }}
 <section class="mt-8">
-  <h2 class="mb-4">My latest projects & posts</h2>
-
+  <h2 class="mb-4 pb-4 border-b">My latest projects & posts</h2>
   {% set postslist = collections.posts | head(-6) %}
-  {% include "posts-list.njk" %}
-  <a class="w-full inline-block text-center pb-12 my-12 mx-auto border-b dark:border-gray-500" href="{{ '/projects/' | url }}">View All Projects</a>
+  {% include "partials/postslist.njk" %}
+  <a class="w-full inline-block text-center pb-12 mb-12 mx-auto border-b" href="{{ '/projects/' | url }}">View All Projects</a>
 </section>
-
 <section id="contact">
-  <div class="relative flex flex-col p-8 rounded-sm mx-auto bg-cool-green-50 dark:bg-cool-green-900 shadow-lg">
+  <div class="relative flex flex-col p-8 mx-auto bg-gray-50 shadow-lg">
     <div class="w-full max-w-screen-sm mx-auto">
       <h3 class="mb-1">Get In Touch</h3>
-      <p class="text-sm dark:text-cool-green-300">Want to have a chat? Send me a message.</p>
+      <p class="text-sm">Want to have a chat? Send me a message.</p>
       <form name="contact" method="post" action="/success">
         <input type="hidden" name="form-name" value="contact">
-        <div class="grid grid-cols-2 gap-4 mt-2">
-          <div class="mt-4">
-            <input type="text" name="name" id="name" placeholder="Name" aria-label="Name" class="w-full bg-cool-green-100 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true">
-          </div>
-          <div class="mt-4">
-            <input type="email" name="email" id="email" placeholder="Email" aria-label="Email" class="w-full bg-cool-green-100 px-4 py-2 rounded transition ease-in-out">
+          <div class="grid grid-cols-2 gap-4 mt-2">
+            <div class="mt-4">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Name"
+                aria-label="Name"
+                class="w-full bg-indigo-50 px-4 py-2 rounded transition ease-in-out"
+                spellcheck="false"
+                data-ms-editor="true"></div>
+              <div class="mt-4">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  aria-label="Email"
+                  class="w-full bg-indigo-50 px-4 py-2 rounded transition ease-in-out"></div>
+              </div>
+              <div class="mt-4">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Message"
+                  aria-label="Message"
+                  rows="4"
+                  class="w-full bg-indigo-50 px-4 py-2 rounded transition ease-in-out"
+                  spellcheck="false"
+                  data-ms-editor="true"></textarea>
+              </div>
+              <div class="mt-4">
+                <button
+                  type="submit"
+                  value="Send Message"
+                  class="h-8 px-4 text-xs bg-indigo-300 leading-tight rounded shadow-md hover:bg-indigo-400
+                    hover:shadow-lg focus:bg-indigo-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-indigo-400
+                    active:shadow-lg transform transition focus:scale-125 hover:scale-125 duration-500 ease-in-out">
+                  Send Message</button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="mt-4">
-          <textarea name="message" id="message" placeholder="Message" aria-label="Message" rows="4" class="w-full bg-cool-green-100 px-4 py-2 rounded transition ease-in-out" spellcheck="false" data-ms-editor="true"></textarea>
-        </div>        
-        <div class="mt-4">
-          <button type="submit" value="Send Message" class="h-8 px-4 bg-cool-green-500 text-white text-xs leading-tight rounded shadow-md hover:bg-cool-green-400 hover:shadow-lg focus:bg-cool-green-700/90 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-cool-green-700/80 active:shadow-lg transform transition focus:scale-125 hover:scale-125 duration-500 ease-in-out">Send Message</button>
-        </div>
-      </form>
-    </div>
-    </div>
-  </section>
+      </section>

@@ -4,7 +4,8 @@ date: 2018-10-30
 author: Markus
 description: Halloween is coming in a few days and here is the first of my Halloween projects for 2018 - a creepy pumpkin watching you. Every step you take, every move you make is seen by this little guy.
 github: 'https://github.com/mhaack/halloween-pumpkin-eyes'
-image: /images/2018-10-30-halloween-creepy-eyes/pumpkin-header.jpg
+images: 
+  feature: /images/2018-10-30-halloween-creepy-eyes/pumpkin-header.jpg
 category: project
 tags:
     - arduino

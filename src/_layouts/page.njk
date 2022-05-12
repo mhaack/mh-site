@@ -1,7 +1,12 @@
 ---
 layout: base
+tags: pages
+prose: true
 ---
 
-<div class="prose dark:prose-invert prose-lg max-w-none">
-    {{ content | safe }}
-</div>
+<article class="px-8 md:px-16 lg:px-32">
+    <h1 class="mb-4">{{ title }}</h1>
+    <section class="max-w-none break-words {%- if prose %} prose prose-lg prose-code:before:content-none prose-code:after:content-none{% endif %}">
+        {{ content | safe }}
+    </section>
+</article>

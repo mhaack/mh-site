@@ -10,13 +10,18 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: base
+layout: page
 permalink: /tags/{{ tag }}/
 eleventyComputed:
-  title: "#{{ tag }}"
+  title: Tagged “{{ tag }}”
   description: "All posts tagged “{{ tag }}”"
+prose: false
 ---
-<h1 class="mb-4 text-3xl">#{{ tag }}</h1>
 
 {% set postslist = collections[tag] %}
-{% include "posts-list.njk" %}
+{% include "partials/postslist.njk" %}
+<div class="text-center sm:text-left border-t">
+  <h3 class="mt-8 mb-4 text-2xl font-medium">All Tags...</h3>
+  {% set tags = collections.tagList %}
+  {% include "partials/taglist.njk" %}
+</div>
