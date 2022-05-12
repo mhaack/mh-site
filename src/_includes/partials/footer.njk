@@ -10,7 +10,7 @@
                 {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
               {%- endif -%}
               <li class="mr-4 last:mr-0">
-                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600 hover:no-underline">
+                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
                   {% if item.icon -%}
                     {% include item.icon %}
                     <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -28,7 +28,7 @@
                 {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
               {%- endif -%}
               <li class="mr-4 last:mr-0">
-                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600 hover:no-underline">
+                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
                   {% if item.icon -%}
                     {% include item.icon %}
                     <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
