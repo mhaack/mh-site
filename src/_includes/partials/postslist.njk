@@ -7,12 +7,8 @@
             <a href="{{ post.url | url }}" class="group-hover:no-underline">
               {% if post.data.images.feature %}
                 <div class="flex-shrink-0">
-                   {% set loadingLazy = true %}
-                  {%- if loop.index == 1 -%}
-                    {%- set loadingLazy = false -%}
-                  {%- endif -%}
                   <figure>
-                    {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw", loadingLazy %}
+                    {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw" %}
                   </figure>
                 </div>
               {% endif %}

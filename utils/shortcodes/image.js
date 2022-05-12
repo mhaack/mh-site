@@ -1,13 +1,7 @@
 const Image = require('@11ty/eleventy-img')
 const path = require('path')
 
-module.exports = async (
-    relativeSrc,
-    alt = 'image',
-    className,
-    sizes = '(min-width: 1024px) 100vw, 50vw',
-    loadingLazy = true
-) => {
+module.exports = async (relativeSrc, alt = 'image', className, sizes = '(min-width: 1024px) 100vw, 50vw') => {
     const { dir: imgDir } = path.parse(relativeSrc)
     const fullSrc = path.join('src', relativeSrc)
 
@@ -26,10 +20,8 @@ module.exports = async (
     const imageAttributes = {
         alt,
         sizes,
+        loading: 'lazy',
         decoding: 'async',
-    }
-    if (loadingLazy) {
-        imageAttributes.loading = 'lazy'
     }
     if (className) {
         imageAttributes.class = className
