@@ -6,7 +6,8 @@ permalink: jama-villa/
 description: Our Home Assistant setup is pretty simple - everything currently runs
     on a single board computer - smooth and stable for 12+ months. This is how our
     setup looks like.
-image: /images/2020-01-14-jama-villa/dashboard-teaser.jpg
+images: 
+  feature: /images/2020-01-14-jama-villa/dashboard-teaser.jpg
 category: project
 tags:
     - home-automation

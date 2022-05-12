@@ -3,7 +3,8 @@ title: Mini plant watering project
 author: Markus
 description: I would like to show you my new half 30 minutes no coding holiday
     Home Assistant project.
-image: /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
+images: 
+  feature: /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
 date: 2021-08-17
 permalink: mini-plant-watering/
 category: project

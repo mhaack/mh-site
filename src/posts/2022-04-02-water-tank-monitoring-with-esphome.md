@@ -6,7 +6,9 @@ tags:
   - home-automation
   - watering
   - garden
-image: /images/watertank-unsplash.jpg
+images: 
+  feature: /images/watertank-unsplash.jpg
+  height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
   favourite things to do. This had to be done better - fully automatically and
   without intervention.
@@ -31,11 +33,11 @@ The way the sensor works is very simple. The ultrasonic sensor is mounted inside
 
 This concept is still used for the current version of the water level sensor.
 
-The first version of my cistern water level sensor consisted of a [particle.io Photon](https://store.particle.io/collections/gen-2/products/photon) microcontroller chip, a HC-SR04 ultrasonic sensor, a rechargeable battery incl. charging controller, all together in a waterproof enclosure. I was already familiar with Arduino microcontrollers, so programming the particle.io Photon chip was not a problem. The initial version of the source code is available [GitHub](https://github.com/mhaack/Photon-WaterTank-Monitor/blob/master/src/Photon-WaterTank-Monitor.ino). Looks super complicated because of the extra logic for average measurement calculation, deep sleep mode and sending the values to MQTT and the particle.io cloud in parallel.
+The first version of my cistern water level sensor consisted of a [particle.io Photon](https://store.particle.io/collections/gen-2/products/photon) microcontroller chip, a HC-SR04 ultrasonic sensor, a rechargeable battery incl. charging controller, all together in a waterproof enclosure. I was already familiar with Arduino microcontrollers, so programming the Photon chip was not a problem. The initial version of the source code is available [GitHub](https://github.com/mhaack/Photon-WaterTank-Monitor/blob/master/src/Photon-WaterTank-Monitor.ino). Looks super complicated because of the extra logic for average measurement calculation, deep sleep mode and sending the values to MQTT and the particle.io cloud in parallel.
 
 The two main problems of this setup were the Wifi connectivity and the battery management. Since the cistern is completely underground and made of reinforced concrete there is no good wifi coverage inside. Getting a wifi connection required usually 3-5 retries. This drained the battery a lot. To get a long battery life I put the Photon chip into sleep mode most of the time. It took a distance reading every 15 minutes, compared it with the previous measurement and only connected to wifi to send and update if there are any changes. This could mean I did not get an updated measurement for some days and could not be sure that the battery was still charged.
 
-The second iteration was also based on the particle.io Photon microcontroller chip. But this time I split the hardware into two units. The sensor box was still inside the water tank. In fact, the microcontroller was now outside, connected to a sensor via cables, and powered by a USB adapter permanently. This setup had way better reliability and no wifi connection problems.
+The second iteration was also based on the Photon microcontroller chip. But this time I split the hardware into two units. The sensor box was still inside the water tank. In fact, the microcontroller was now outside, connected to a sensor via cables, and powered by a USB adapter permanently. This setup had way better reliability and no wifi connection problems.
 
 Unfortunately, the HC-SR04 ultrasonic sensor still caused problems. It is simply not made to be placed in a cistern with permanent moisture around.
 

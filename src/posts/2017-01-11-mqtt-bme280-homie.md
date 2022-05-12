@@ -6,7 +6,8 @@ date: 2017-01-11
 description: The mqtt-bme280-homie project is a small and easy to integrate temperature, air pressure and humidity monitoring solution with an extra SSD1306 OLED display. Sensor data is send via MQTT and displayed on the small screen.
 github: 'https://github.com/mhaack/mqtt-bme280-homie'
 hacksterio: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
-image: '/images/2017-01-11-mqtt-bme280-homie/sensor.jpg'
+images: 
+  feature: '/images/2017-01-11-mqtt-bme280-homie/sensor.jpg'
 category: project
 tags:
     - arduino

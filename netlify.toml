@@ -3,7 +3,6 @@
   publish = "dist"
   # functions = "./src/functions"
 
-# Configuration for a plugin published to npm
 [[plugins]]
 package = "@netlify/plugin-lighthouse"
 

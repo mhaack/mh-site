@@ -6,6 +6,7 @@ const pluginReadingTime = require('eleventy-plugin-reading-time')
 const pluginRss = require('@11ty/eleventy-plugin-rss')
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output')
+const pluginNavigation = require('@11ty/eleventy-navigation')
 
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
@@ -17,11 +18,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginReadingTime)
     eleventyConfig.addPlugin(pluginRss)
     eleventyConfig.addPlugin(pluginSyntaxHighlight)
+    eleventyConfig.addPlugin(pluginNavigation)
 
     eleventyConfig.setDataDeepMerge(true)
 
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
-    eleventyConfig.addPassthroughCopy({ 'src/assets': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'src/_assets': 'assets' })
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 

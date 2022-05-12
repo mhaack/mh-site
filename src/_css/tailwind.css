@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import 'prism-theme.css';
+@import 'prism-okaidia.css';
 
 @layer base {
     /* ibm-plex-sans-regular - latin */
@@ -9,22 +9,27 @@
         font-family: 'IBM Plex Sans';
         font-style: normal;
         font-weight: 400;
-        src: local(''),
-            url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-            url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        src: local(''), url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2') format('woff2'),
+            /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff')
+                format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
         font-display: optional;
     }
 
-    a {
-        @apply text-cool-green-600 dark:text-cool-green-400 transition-colors font-semibold;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-semibold text-gray-700;
     }
 
-    a:hover {
-        @apply underline decoration-cool-green-500 decoration-2;
+    a {
+        @apply text-mountain-700 transition-colors decoration-2 underline-offset-2 hover:underline hover:text-mountain-500;
     }
 
     h1 {
-        @apply text-5xl leading-tight font-semibold before:text-cool-green-700 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-4xl leading-tight font-semibold before:text-mountain-800 before:font-semibold before:mr-2 before:content-['//'];
     }
 
     h2 {
@@ -43,6 +48,10 @@
         @apply text-lg leading-tight font-normal;
     }
 
+    h5 {
+        @apply text-lg leading-tight font-normal;
+    }
+
     .prose img.large {
         @apply sm:-mx-40 sm:w-[calc(100%+20rem)] sm:max-w-[calc(100%+20rem)];
     }
@@ -55,7 +64,18 @@
         @apply sm:max-w-[calc(100%-25rem)] mx-auto;
     }
 
-    .prose pre[class*='language-'] {
-        @apply max-w-sm sm:max-w-xl md:max-w-full;
+    p.footer {
+        @apply text-center md:text-left leading-6 text-gray-100;
     }
+    p.footer a {
+        @apply text-mountain-400 no-underline hover:text-mountain-600 hover:underline;
+    }
+
+    input.contact, textarea.contact {
+        @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out
+    }
+
+    /* .prose pre[class*='language-'] {
+        @apply max-w-sm sm:max-w-xl md:max-w-full;
+    } */
 }

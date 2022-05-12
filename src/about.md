@@ -1,7 +1,11 @@
 ---
 layout: about.njk
-name: Markus
+title: About Markus
 image: '/images/markus.jpeg'
+eleventyNavigation:
+  key: main
+  title: About
+  order: 3
 ---
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.

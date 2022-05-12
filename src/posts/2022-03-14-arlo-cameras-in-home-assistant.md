@@ -5,7 +5,8 @@ tags:
   - home-assistant
   - home-automation
   - camera
-image: /images/home_assistant_arlo.jpg
+images:
+  feature: /images/home_assistant_arlo.jpg
 description: Home Assistant & Arlo cameras go better very well. I'm using it
   since our entire setup got migrated from OpenHab to Home Assistant and I'm
   happy with the setup.

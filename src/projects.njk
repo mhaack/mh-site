@@ -1,12 +1,18 @@
 --- 
-layout: base
+layout: page
+title: All Projects
+eleventyNavigation:
+  key: main
+  title: Projects
+  order: 1
+prose: false
 ---
 
-<h1 class="mb-4 text-center sm:text-left">All Projects</h1>
-
-<div class="my-4 text-sm opacity-80 text-center sm:text-left">
-  {% include "tags-list.njk" %}
-</div>
-
 {% set postslist = collections.posts | category("project") %}
-{% include "posts-list.njk" %}
+{% include "partials/postslist.njk" %}
+
+<div class="text-center sm:text-left border-t">
+  <h3 class="mt-8 mb-4 text-2xl font-medium">All Tags...</h3>
+  {% set tags = collections.tagList %}
+  {% include "partials/taglist.njk" %}
+</div>

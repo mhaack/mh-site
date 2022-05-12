@@ -2,99 +2,38 @@
 layout: base
 ---
 
-<article class="flex flex-col justify-center">
-    <header class="text-center">
-        <h1>{{ title }}</h1>
-        <div class="mt-4 text-sm text-gray-500">
-            <time datetime="{{ page.date | htmlDateString }}">
-                {{ page.date | readableDate }}
-            </time>
-            <span class="mx-2">·</span>
-            <span>{{ content | readingTime }} read</span>
+<article class="px-8 md:px-16 lg:px-32">
+    <header class="mb-4 text-center">
+        <h1 class="mb-4">{{ title }}</h1>
+        <div class="py-4 my-8 border-y md:justify-between md:items-start md:flex md:flex-row">
+            <div class="md:my-auto text-sm text-slate-700">
+                <time datetime="{{ date | htmlDateString }}">
+                    {{ date | readableDate }}
+                </time>
+                <span class="mx-2">·</span>
+                <span>{{ content | readingTime }} read</span>
+            </div>
+            <div class="mt-2 md:-mt-2 md:w-3/4 md:flex md:justify-end">{% include "partials/taglist.njk" %}</div>
         </div>
-        <div class="my-4 text-sm">
-        {% for tag in tags | pageTags %}
-            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-            <a href="{{ tagUrl | url }}" class="font-normal no-underline items-center bg-cool-green-100 dark:bg-cool-green-700 px-3 h-6 inline-flex text-primary dark:text-cool-green-300 hover:text-cool-green-500 hover:no-underline text-xs justify-center leading-normal whitespace-no-wrap rounded-md mb-2 ml-2 first:ml-0">#{{ tag }}</a>
-        {% endfor %}
-        </div>
-        {% if image %}
-        <figure class="sm:-mx-20">
-            {% image image, title, "mt-8 w-full" %}
-        </figure>
-        {% endif %}
+
     </header>
-    
-    <section class="break-words pt-12 prose dark:prose-invert prose-lg prose-code:before:content-none prose-code:after:content-none max-w-none">
-        {{ content | safe }}
+    <section class="max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none">
+        {{ layoutContent | safe }}
     </section>
-
-    <aside class="mt-16">
-        <h3 class="relative font-normal text-base text-gray-500">Read More</h3>    
-        <nav class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-8 border-t dark:border-gray-500">
-        {% set item = collections.posts | getNextCollectionItem(page) %}
-        {% if item %}
-        <div class="rounded-sm border duration-300 shadow-md hover:shadow-2xl hover:no-underline hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
-            <a data-a11y="false" href="{{ item.url }}" class="hover:no-underline">
-                {% if item.data.image %}
-                    <figure>
-                        {% image item.data.image, item.data.title, "max-h-40 w-full object-cover" %}
-                    </figure>
+    <aside>
+        <nav class="border-t mt-4 pt-4 md:flex-row md:flex md:justify-between">
+            {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+            {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+            <div class="py-2 text-center sm:py-0">
+                {% if previousPost %}
+                    <a class="text-slate-700 hover:text-mountain-600" href="{{ previousPost.url }}">← {{ previousPost.data.title }}</a>
                 {% endif %}
-                <div class="p-3 pt-1">
-                    <span class="text-xs text-gray-500">
-                        <time datetime="{{ item.date | htmlDateString }}">
-                            {{ item.date | readableDate }}
-                        </time>
-                        <span class="mx-2">·</span>
-                        <span>{{ item | readingTime }} read</span>
-                    </span>
-                    <h3 class="block mt-2 text-2xl font-semibold text-primary dark:text-white hover:underline hover:decoration-cool-green-500">
-                        {{ item.data.title }}
-                    </h3>
-                    <p class="mt-2 text-base text-primary dark:text-gray-100">
-                        {% if item.data.description %}
-                            {{ item.data.description }}
-                        {% else %}
-                            {{ item.templateContent | excerpt | safe }}
-                        {% endif %}
-                    </p>
-                </div>
-            </a>
-        </div>
-        {% endif %}
-
-        {% set item = collections.posts | getPreviousCollectionItem(page) %}
-        {% if item %}
-        <div class="rounded-sm border duration-300 shadow-md hover:shadow-2xl hover:no-underline hover:bg-cool-green-50 dark:hover:bg-cool-green-900">
-            <a data-a11y="false" href="{{ item.url }}" class="hover:no-underline">
-                {% if item.data.image %}
-                    <figure>
-                        {% image item.data.image, item.data.title, "max-h-40 w-full object-cover" %}
-                    </figure>
+            </div>
+            <div class="py-2 text-center sm:py-0">
+                {% if nextPost %}
+                    <a data-a11y="false" class="text-slate-700 hover:text-mountain-600" href="{{ nextPost.url }}">{{ nextPost.data.title }} →</a>
                 {% endif %}
-                <div class="p-3 pt-1">
-                    <span class="text-xs text-gray-500">
-                        <time datetime="{{ item.date | htmlDateString }}">
-                            {{ item.date | readableDate }}
-                        </time>
-                        <span class="mx-2">·</span>
-                        <span>{{ item | readingTime }} read</span>
-                    </span>
-                    <h3 class="block mt-2 text-2xl font-semibold text-primary dark:text-white hover:underline hover:decoration-cool-green-500">
-                        {{ item.data.title }}
-                    </h3>
-                    <p class="mt-2 font-normal text-primary dark:text-gray-100">
-                        {% if item.data.description %}
-                            {{ item.data.description }}
-                        {% else %}
-                            {{ item.templateContent | excerpt | safe }}
-                        {% endif %}
-                    </p>
-                </div>
-            </a>
-        </div>
-        {% endif %}
+            </div>
         </nav>
     </aside>
 </article>

@@ -7,7 +7,8 @@ description: On July 28th I was a guest on Mark Szulc's Building Experiences usi
     Adobe Experience Cloud show. We discussed how Adobe Experience Manager works
     together with Magento, using the latest release of the Commerce Integration
     Framework.
-image: /images/2020-07-31-building-experiences-aem-magento-commerce-integration/bems-08c.png
+images: 
+  feature: /images/2020-07-31-building-experiences-aem-magento-commerce-integration/bems-08c.png
 category: work
 tags:
     - adobe

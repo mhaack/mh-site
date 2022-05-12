@@ -9,7 +9,8 @@ tags:
     - aem
     - commerce
     - cif
-image: /images/cif-adobe-tech-blog.jpeg
+images: 
+  feature: /images/cif-adobe-tech-blog.jpeg
 ---
 
 In the last few weeks and months, my colleagues and I have written several articles for the [Adobe Tech Blog](https://medium.com/adobetech). Since I am also presenting some of my professional projects here, I wanted to take the opportunity and briefly introduce them.

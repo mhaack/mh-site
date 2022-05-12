@@ -5,7 +5,9 @@ tags:
     - website
     - eleventy
     - dinosaurs
-image: /images/dino-fakten-screenshot.png
+    - development
+images:
+  feature: /images/dino-fakten-screenshot.png
 date: 2022-02-06
 ---
 

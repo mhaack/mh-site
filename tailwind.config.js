@@ -9,18 +9,17 @@ module.exports = {
                 sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: 'rgb(41, 41, 41)',
-                'cool-green': {
-                    50: '#f5f8f7',
-                    100: '#dee9e5',
-                    200: '#bcd3cb',
-                    300: '#93b5aa',
-                    400: '#6d9489',
-                    500: '#52796f',
-                    600: '#406159',
-                    700: '#364f49',
-                    800: '#2e413d',
-                    900: '#293835',
+                mountain: {
+                    50: '#edfcf3',
+                    100: '#d4f7e1',
+                    200: '#aceec9',
+                    300: '#75e0aa',
+                    400: '#3ec987',
+                    500: '#1aaf6d',
+                    600: '#10a265',
+                    700: '#0b7149',
+                    800: '#0b5a3c',
+                    900: '#0a4a32',
                 },
             },
             listStyleType: {
@@ -28,53 +27,57 @@ module.exports = {
                 square: 'square',
                 alpha: 'lower-alpha',
             },
+            opacity: {
+                5: '.05',
+                10: '.1',
+                15: '.15',
+                20: '.2',
+            },
+            height: {
+                '1/2': '50vh',
+                '3/4': '75vh',
+                '9/10': '90vh',
+                '1/1': '100vh',
+                '1/3': 'calc(100vh / 3)',
+                '1/4': 'calc(100vh / 4)',
+                '1/5': 'calc(100vh / 5)',
+                96: '24rem',
+                128: '32rem',
+            },
             typography: ({ theme }) => ({
                 DEFAULT: {
                     css: {
                         '--tw-prose-body': theme('colors.primary'),
-                        '--tw-prose-headings': theme('colors.primary'),
-                        '--tw-prose-links': theme('colors.cool-green.700'),
+                        '--tw-prose-headings': theme('colors.gray.700'),
+                        '--tw-prose-links': theme('colors.mountain.700'),
                         '--tw-prose-th-borders': theme('colors.gray.700'),
                         '--tw-prose-bullets': theme('colors.gray.300'),
                         '--tw-prose-counters': theme('colors.gray.500'),
-                        '--tw-prose-quote-borders': theme('colors.cool-green.500'),
-                        '--tw-prose-invert-body': theme('colors.white'),
-                        '--tw-prose-invert-headings': theme('colors.white'),
-                        '--tw-prose-invert-links': theme('colors.cool-green.400'),
-                        '--tw-prose-invert-bullets': theme('colors.gray.500'),
-                        '--tw-prose-invert-counters': theme('colors.white'),
-                        '--tw-prose-th-borders': theme('colors.cool-green.300'),
+                        '--tw-prose-quote-borders': theme('colors.gray.500'),
+                        '--tw-prose-th-borders': theme('colors.gray.300'),
                         a: {
-                            'text-decoration-line': 'none',
+                            'text-decoration': 'none',
+                        },
+                        'a:hover': {
+                            'text-decoration': 'underline',
                         },
                         ul: {
                             'list-style-type': 'square',
                         },
                         code: {
-                            backgroundColor: theme('colors.cool-green.100'),
+                            backgroundColor: theme('colors.gray.200'),
                             'font-weight': 400,
+                            'border-radius': '0.5rem',
+                            'border-width': '1px',
                         },
                         'tbody tr': {
                             borderBottomWidth: '0',
                         },
                         'thead th': {
-                            backgroundColor: theme('colors.cool-green.50'),
+                            backgroundColor: theme('colors.gray.100'),
                         },
                         'tbody tr:nth-child(even)': {
-                            backgroundColor: theme('colors.cool-green.50'),
-                        },
-                    },
-                },
-                invert: {
-                    css: {
-                        code: {
-                            backgroundColor: theme('colors.cool-green.700'),
-                        },
-                        'thead th': {
-                            backgroundColor: theme('colors.cool-green.900'),
-                        },
-                        'tbody tr:nth-child(even)': {
-                            backgroundColor: theme('colors.cool-green.900'),
+                            backgroundColor: theme('colors.gray.100'),
                         },
                     },
                 },
