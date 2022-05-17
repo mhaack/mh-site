@@ -1,42 +1,40 @@
 <section class="mt-12">
   <div class="relative pb-20">
-    <div class="relative mx-auto max-w-7xl">
-      <ul class="grid group gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
-        {% for post in postslist | reverse %}
-          <li class="flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:shadow-2xl">
-            <a href="{{ post.url | url }}" class="group-hover:no-underline">
-              {% if post.data.images.feature %}
-                <div class="flex-shrink-0">
-                  <figure>
-                    {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw" %}
-                  </figure>
-                </div>
-              {% endif %}
-              <div class="flex flex-col justify-between flex-1 p-6">
-                <div class="flex-1">
-                  <span class="text-xs text-slate-500">
-                    <time datetime="{{ post.date | htmlDateString }}">
-                      {{ post.date | readableDate }}
-                    </time>
-                    <span class="mx-2">·</span>
-                    <span>{{ post | readingTime }} read</span>
-                  </span>
-                  <h3 class="mt-2 text-xl font-semibold leading-7">
-                    {{ post.data.title }}
-                  </h3>
-                  <div class="mt-2 text-slate-900">
-                    {% if post.data.description %}
-                      {{ post.data.description }}
-                    {% else %}
-                      {{ post.templateContent | excerpt | safe }}
-                    {% endif %}
-                  </div>
+    <ul class="grid group gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+      {% for post in postslist | reverse %}
+        <li class="flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:shadow-2xl">
+          <a href="{{ post.url | url }}" class="group-hover:no-underline">
+            {% if post.data.images.feature %}
+              <div class="flex-shrink-0">
+                <figure>
+                  {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw" %}
+                </figure>
+              </div>
+            {% endif %}
+            <div class="flex flex-col justify-between flex-1 p-6">
+              <div class="flex-1">
+                <span class="text-xs text-slate-500">
+                  <time datetime="{{ post.date | htmlDateString }}">
+                    {{ post.date | readableDate }}
+                  </time>
+                  <span class="mx-2">·</span>
+                  <span>{{ post | readingTime }} read</span>
+                </span>
+                <h3 class="mt-2 text-xl font-semibold leading-7">
+                  {{ post.data.title }}
+                </h3>
+                <div class="mt-2 text-slate-900">
+                  {% if post.data.description %}
+                    {{ post.data.description }}
+                  {% else %}
+                    {{ post.templateContent | excerpt | safe }}
+                  {% endif %}
                 </div>
               </div>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 </section>
