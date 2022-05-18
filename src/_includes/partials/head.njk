@@ -8,7 +8,7 @@
 
     <title>
       {%- if title -%} 
-        {{  title | escape }}
+        {{ title | escape }}
       {%- else -%}
         {{ site.name }}
       {%- endif -%}
@@ -52,15 +52,6 @@
     <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}">
     {% endif %}
 
-    {# {% if env.isProd %}
-    <!-- capture the CSS content as a Liquid variable -->
-    {% set css %}{% include "theme.css" %}{% endset %}
-    <style>
-      {{css | safe}}
-    </style>
-    {% else %}
-    <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
-    {% endif %} #}
     <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
 
     <script defer src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
