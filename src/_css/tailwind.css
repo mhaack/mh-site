@@ -76,6 +76,7 @@
     }
 
     .prose pre[class*='language-'] {
-        @apply max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl;
+        width: inherit;
+        max-width: calc(100vw - 3rem);
     }
-}
+} 
