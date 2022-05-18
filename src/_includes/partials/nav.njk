@@ -1,9 +1,8 @@
 {% set navPages = collections.pages | eleventyNavigation %}
-{# bg-white fixed w-full z-10 top-0 hidden animated #}
 <nav x-data="{ open: false }" class="py-2 bg-white shadow relative">
-  <div class="px-8 md:px-16 lg:px-32">
+  <div class="flex-grow max-w-screen-xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between h-20">
-      <div class="flex justify-between w-full max-w-screen-xl">
+      <div class="flex justify-between w-full">
         <div class="flex items-center">
           <a href="/" class="block text-slate-900 hover:text-slate-600" data-a11y="false" title="Navigate back to the homepage" aria-label="Navigate back to the homepage" back="false">
             <svg
