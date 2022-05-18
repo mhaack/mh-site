@@ -75,7 +75,7 @@
         @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out
     }
 
-    /* .prose pre[class*='language-'] {
-        @apply max-w-sm sm:max-w-xl md:max-w-full;
-    } */
+    .prose pre[class*='language-'] {
+        @apply max-w-sm sm:max-w-2xl;
+    }
 }
