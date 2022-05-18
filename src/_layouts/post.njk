@@ -2,7 +2,7 @@
 layout: base
 ---
 
-<article class="px-8 md:px-16 lg:px-32">
+<article>
     <header class="mb-4 text-center">
         <h1 class="mb-4">{{ title }}</h1>
         <div class="py-4 my-8 border-y md:justify-between md:items-start md:flex md:flex-row">
@@ -13,7 +13,7 @@ layout: base
                 <span class="mx-2">·</span>
                 <span>{{ content | readingTime }} read</span>
             </div>
-            <div class="mt-2 md:-mt-2 md:w-3/4 md:flex md:justify-end">{% include "partials/taglist.njk" %}</div>
+            <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end">{% include "partials/taglist.njk" %}</div>
         </div>
 
     </header>
