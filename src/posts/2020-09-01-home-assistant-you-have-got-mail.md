@@ -9,6 +9,7 @@ tags:
     - mailbox
 images: 
   feature: /images/2020-09-01-home-assistant-you-have-got-mail/you-ve_got_mail_-2685196800-.jpg
+  height: h-128
 description: 'Today I want to share a little holiday project I build this week:
     a mailbox sensor to make a dumb mailbox smart and notifying us if we got new
     mail. I’m talking about real physical mail here - letters, postcards,
