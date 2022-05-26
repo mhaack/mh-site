@@ -7,6 +7,7 @@ tags:
     - development
 images:
     feature: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
+    height: h-96
 date: 2022-01-20
 ---
 
