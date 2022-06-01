@@ -57,11 +57,11 @@
     }
 
     .prose img.small {
-        @apply sm:max-w-[calc(100%-10rem)] mx-auto;
+        @apply sm:max-w-[calc(100%-10rem)] md:max-w-[calc(100%-20rem)] mx-auto;
     }
 
     .prose img.x-small {
-        @apply sm:max-w-[calc(100%-25rem)] mx-auto;
+        @apply sm:max-w-[calc(100%-25rem)] md:max-w-[50%]  mx-auto;
     }
 
     p.footer {

@@ -29,7 +29,7 @@ I've been working for quite a while on a simple & reliable monitoring solution f
 
 The way the sensor works is very simple. The ultrasonic sensor is mounted inside the cistern above the water. It measures the distance to the water surface. The higher the water level, the smaller the distance between the water and the sensor. When we consume water, the water surface sinks and the distance increases. If it rains or we manually refill the cistern, the distance decreases again. I measured the full and empty levels of our cistern and can interpolate the intermediates. Using a volume formula, I can convert the distance (in cm) to litres.
 
-{% image "/images/cistern.jpg", "schematic drawing cistern", "x-small" %}
+{% image "/images/cistern.jpg", "schematic drawing cistern", "small" %}
 
 This concept is still used for the current version of the water level sensor.
 
