@@ -158,6 +158,8 @@ Automation appears to be more complicated than it actually is. If we run below 2
 
 My automation does not consider weather or rain forecasts. With the low flow rate of our outside faucet we get ~1.400 litre of water filled into the tank within that one hour. There is enough capacity left if it starts raining a little later.
 
+{% image "/images/sprinkler.jpg", "Some sprinkler", "small" %}
+
 ## Summary
 
 Overall I'm very happy with my setup. After tinkering around with the water tank sensor with ESPHome works finally stable, the watering controller does a solid job and Home Assistant controlled refill works smooth.
