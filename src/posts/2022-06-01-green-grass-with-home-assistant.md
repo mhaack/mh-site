@@ -10,6 +10,7 @@ tags:
   - plants
 images:
   feature: /images/my-garden-watering-project.png
+  height: h-64
 date: 2022-06-01
 ---
 Home Assistant controlled garden watering part 2 - are you ready?
@@ -38,9 +39,7 @@ After some market research we decided to proceed with a commercial product and i
 
 To distribute water to the sprinklers and for watering plants, 3/4-inch pipes are used. For the plants we already had a [Gardena drip system](https://www.gardena.com/int/products/watering/micro-drip/) installed. But we had to control this manually and always connect a garden hose. That is now a thing of the past. The hedge is easily hydrated via some drip hose.
 
-![Hunter Hydrawise](/images/hunterhydrawise.jpg)
-
-
+{% image "/images/hunterhydrawise.jpg", "Hunter Hydrawise" "small"%}
 
 The Hydrawise Pro-HC 6 can handle 6 independent zones, so there is some reserve capacity for later. The same controller is also available with 12 or 24 valve stations. We also connected a rain sensor to automatically suspend the irrigation as soon as the moisture limit is reached.
 
