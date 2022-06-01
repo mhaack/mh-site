@@ -34,8 +34,16 @@ collections:
         search_fields: ["name"]
         multiple: true
       - label: "Hero"
-        name: "image"
-        widget: "image"
+        name: "images"
+        widget: "object"
+        fields:
+           - label: "Feature"
+             name: "feature"
+             widget: "image"
+           - label: "Feature Height"
+             name: "height"
+             widget: "select"
+             options: ["h-64", "h-96", "h-128"]
       - label: "Excerpt"
         name: "description"
         widget: "text"
