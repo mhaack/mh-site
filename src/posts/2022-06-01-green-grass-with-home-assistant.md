@@ -36,7 +36,11 @@ After some market research we decided to proceed with a commercial product and i
 3. plants front yard
 4. cypress hedge
 
-To distribute water to the sprinklers and for watering plants, 3/4-inch pipes are used. For the plants we already had a Gardena drip system installed. But we had to control this manually and always connect a garden hose. That is now a thing of the past. The hedge is easily hydrated via some drip hose.
+To distribute water to the sprinklers and for watering plants, 3/4-inch pipes are used. For the plants we already had a [Gardena drip system](https://www.gardena.com/int/products/watering/micro-drip/) installed. But we had to control this manually and always connect a garden hose. That is now a thing of the past. The hedge is easily hydrated via some drip hose.
+
+![Hunter Hydrawise](/images/hunterhydrawise.jpg)
+
+
 
 The Hydrawise Pro-HC 6 can handle 6 independent zones, so there is some reserve capacity for later. The same controller is also available with 12 or 24 valve stations. We also connected a rain sensor to automatically suspend the irrigation as soon as the moisture limit is reached.
 
@@ -44,7 +48,7 @@ I know there are other commercial or open source based solutions and [DIY irriga
 
 The Hunter valves work without any problems. They survived two frosty winters without suffering any damage from the long days with minus degrees.
 
-To start the irrigation we need water from our water tank and this is where Home Assistant comes into the picture.
+To start the irrigation we need water from our water tank and this is where [Home Assistant](https://www.home-assistant.io/) comes into the picture.
 
 ## Hydrawise & Home Assistant
 
