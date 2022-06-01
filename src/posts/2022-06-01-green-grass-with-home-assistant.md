@@ -102,9 +102,7 @@ action:
 
 I also created a handy dashboard in Home Assistant which shows me the running irrigation program and the next scheduled watering times. Additionally, it shows how much water we have in our tank and how the pump is performing.
 
-![Watering Dashboard Home Assistant](/images/watering-dashboard.png)
-
-
+{% image "/images/watering-dashboard.png", "Watering Dashboard Home Assistant" "small"%}
 
 ## (free) re-fill
 
