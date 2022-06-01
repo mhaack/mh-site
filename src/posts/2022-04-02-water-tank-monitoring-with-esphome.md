@@ -6,7 +6,7 @@ tags:
   - home-automation
   - watering
   - garden
-images: 
+images:
   feature: /images/watertank-unsplash.jpg
   height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
@@ -166,7 +166,10 @@ The percentage calculation is similar, based on the max volume of 5.500 litre of
 
 ## Into Home Assistant
 
+To use the water tank sensor in Home Assistant I use the [ESPHome integration](https://www.home-assistant.io/integrations/esphome/). Setup is super easy via the UI and all exposed sensor data from the ESPHome sketch is automatically available in Home Assistant.
+
+{% image "/images/screenshot_esphome_integration.png", "Screenshot ESPHome integration", "small" %}
+
 In the next post I will explain how the water tank data of the ESPHome sensor is used in Home Assistant. The automations I have set up to control the water tank pump & Hydrawise irrigation controller for the garden and lawn watering.
 
 Hero image photo by [Daniel van den Berg](https://unsplash.com/@danielvandenberg) on [Unsplash](https://unsplash.com/s/photos/watertank)
-  
