@@ -170,6 +170,6 @@ To use the water tank sensor in Home Assistant I use the [ESPHome integration](h
 
 {% image "/images/screenshot_esphome_integration.png", "Screenshot ESPHome integration", "small" %}
 
-In the next post I will explain how the water tank data of the ESPHome sensor is used in Home Assistant. The automations I have set up to control the water tank pump & Hydrawise irrigation controller for the garden and lawn watering.
+In the [next post](/green-grass-with-home-assistant/) I will explain how the water tank data of the ESPHome sensor is used in Home Assistant. The automations I have set up to control the water tank pump & Hydrawise irrigation controller for the garden and lawn watering.
 
 Hero image photo by [Daniel van den Berg](https://unsplash.com/@danielvandenberg) on [Unsplash](https://unsplash.com/s/photos/watertank)
