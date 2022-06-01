@@ -78,5 +78,6 @@
     .prose pre[class*='language-'] {
         width: inherit;
         max-width: calc(100vw - 3rem);
+        @apply text-sm;
     }
 } 
