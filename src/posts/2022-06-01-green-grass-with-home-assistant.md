@@ -10,7 +10,7 @@ tags:
   - plants
 images:
   feature: /images/my-garden-watering-project.png
-  height: h-64
+  height: null
 date: 2022-06-01
 ---
 Home Assistant controlled garden watering part 2 - are you ready?
