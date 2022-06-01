@@ -10,12 +10,14 @@ public_folder: /images
 
 collections:
   - name: "posts"
-    label: "Posts"
-    folder: "src/posts"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    folder: "src/posts"
+    label_singular: "Post"
+    label: "Posts"
     media_folder: "/src/images/"
     public_folder: "/images"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sort: "date:desc"
     summary: "{{title}} ({{date}})"
     fields:
       - label: "Title"
@@ -152,6 +154,7 @@ collections:
 
   - name: "tags"
     label: "Tags"
+    label_singular: "Tag"
     folder: "src/tags"
     create: true
     identifier_field: "name"
