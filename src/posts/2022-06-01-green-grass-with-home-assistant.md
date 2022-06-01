@@ -8,9 +8,9 @@ tags:
   - garden
   - watering
   - plants
-image: /images/my-garden-watering-project.png
+images:
+  feature: /images/my-garden-watering-project.png
 date: 2022-06-01
-permalink: ""
 ---
 Home Assistant controlled garden watering part 2 - are you ready?
 
