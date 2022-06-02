@@ -30,7 +30,6 @@ module.exports = function (eleventyConfig) {
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
     eleventyConfig.addShortcode('githubBadge', require('./utils/shortcodes/githubBadge'))
-    eleventyConfig.addShortcode('version', require('./utils/shortcodes/version'))
     eleventyConfig.addNunjucksAsyncShortcode('image', require('./utils/shortcodes/image'))
     eleventyConfig.addLiquidShortcode('image', require('./utils/shortcodes/image'))
     eleventyConfig.addJavaScriptFunction('image', require('./utils/shortcodes/image'))
@@ -58,7 +57,7 @@ module.exports = function (eleventyConfig) {
         .use(markdownIterator, 'url_new_win', 'link_open', function (tokens, idx) {
             const [attrName, href] = tokens[idx].attrs.find((attr) => attr[0] === 'href')
 
-            if (href && !href.includes('markus-haack.') && !href.startsWith('/') && !href.startsWith('#')) {
+            if (href && !href.includes('markus-haack.') && !href.includes('dino-fakten.') && !href.startsWith('/') && !href.startsWith('#')) {
                 tokens[idx].attrPush(['target', '_blank'])
                 tokens[idx].attrPush(['rel', 'noopener noreferrer'])
             }
