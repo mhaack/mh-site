@@ -43,14 +43,10 @@
     {%- endif -%}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="generator" content="eleventy">
-  {# 
-    {%- if not socialImage -%}
-      {% set socialImage = site.defaultSocialImage %}
-    {%- endif -%}
-  #}  
-    {%- if image %}
-    <meta property="og:image" content="{{ image | url | absoluteUrl(site.url) }}">
-    <meta name="twitter:image" content="{{ image | url | absoluteUrl(site.url) }}">
+
+    {% if images.feature %}
+    <meta property="og:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
+    <meta name="twitter:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
     {% endif %}
 
     <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
