@@ -162,7 +162,15 @@ V = π * r² * h
 
 With `h = x` in the lambda function. The diameter of the cistern is exactly 2 meter, hence a radius of 1 meter. To formula for me is `π * 1² * x` which will return the volume in square meters. That multiplied by 1000 results in the returned value in litres.
 
-The percentage calculation is similar, based on the max volume of 5.500 litre of our cistern.
+The percentage calculation is similar, based on the max volume of 5.500 litres of our cistern.
+
+## Is it accurate?
+
+The way the sensor works it can not be super accurate and it is not really important for our use case but let's check. I'm comparing the measurements with an older flow meter I had lying around:
+
+{% image "/images/bildschirmfoto-2022-06-02-um-11.32.png", "Compare ESPHome sensor & flow meter", "small" %}
+
+The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters)  `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 liter. That is the minimum accuracy we can get.
 
 ## Into Home Assistant
 
