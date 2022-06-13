@@ -10,8 +10,7 @@
         font-style: normal;
         font-weight: 400;
         src: local(''), url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2') format('woff2'),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff')
-                format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+            url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff') format('woff');
         font-display: optional;
     }
 
@@ -71,8 +70,9 @@
         @apply text-mountain-400 no-underline hover:text-mountain-600 hover:underline;
     }
 
-    input.contact, textarea.contact {
-        @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out
+    input.contact,
+    textarea.contact {
+        @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out;
     }
 
     .prose pre[class*='language-'] {
@@ -80,4 +80,4 @@
         max-width: calc(100vw - 3rem);
         @apply text-sm;
     }
-} 
+}
