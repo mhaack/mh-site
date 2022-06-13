@@ -1,10 +1,16 @@
 {% set navPages = collections.pages | eleventyNavigation %}
-<nav x-data="{ open: false }" class="py-2 bg-white shadow relative">
+<nav x-data="{ open: false }" class="py-2 bg-white shadow-md relative">
   <div class="flex-grow max-w-screen-xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between h-20">
       <div class="flex justify-between w-full">
         <div class="flex items-center">
-          <a href="/" class="block text-slate-900 hover:text-slate-600" data-a11y="false" title="Navigate back to the homepage" aria-label="Navigate back to the homepage" back="false">
+          <a
+            href="/"
+            class="block text-slate-900 hover:text-slate-600"
+            data-a11y="false"
+            title="Navigate back to the homepage"
+            aria-label="Navigate back to the homepage"
+            back="false">
             <svg
               height="66"
               viewBox="0 0 100 100"
@@ -36,51 +42,33 @@
           {% endfor %}
         </ul>
       </div>
-
       <div class="flex items-center -mr-2 sm:hidden">
         <button
-          @click="open = !open"
+          id="btn-burger"
           class="inline-flex items-center justify-center p-2 text-slate-500 transition duration-150 ease-in-out rounded-md
-            hover:text-slate-600 hover:bg-mountain-100 focus:outline-none focus:text-slate-600 focus:bg-mountain-100 transform hover:scale-110"
-          x-bind:aria-label="open ? 'Close main menu' : 'Main menu'"
-          aria-label="Main menu"
-          x-bind:aria-expanded="open">
-          <svg
-            x-state:on="Menu open"
-            x-state:off="Menu closed"
-            :class="{ 'hidden': open, 'block': !open }"
+            hover:text-slate-600 hover:bg-mountain-100 focus:outline-none focus:text-slate-600 focus:bg-mountain-100 transform
+            hover:scale-110"
+          aria-label="Main menu">
+          <svg id="svg-content"
             class="block w-6 h-6"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-          <svg
-            x-state:on="Menu open"
-            x-state:off="Menu closed"
-            :class="{ 'hidden': !open, 'block': open }"
-            class="hidden w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
+        </button> 
       </div>
     </div>
   </div>
-  <div
-    x-description="Mobile menu, toggle classes based on menu state."
-    x-state:on="Menu open"
-    x-state:off="Menu closed"
-    :class="{ 'block': open, 'hidden': !open }"
-    class="hidden sm:hidden">
-    <div class="pt-2 pb-3">
+  <div id="menu-mobile" class="hidden sm:hidden">
+    <ul class="pt-2 pb-3">
       {% for entry in navPages %}
-        <a {% if page.url != entry.url %} href="{{ entry.url | url }}" {% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-slate-100 text-mountain-800{% else %}text-slate-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-slate-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
-          {{ entry.title }}
-        </a>
+        <li>
+          <a {% if page.url != entry.url %} href="{{ entry.url | url }}" {% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-slate-100 text-mountain-800{% else %}text-slate-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-slate-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
+            {{ entry.title }}
+          </a>
+        </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </nav>
