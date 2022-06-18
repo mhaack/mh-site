@@ -5,16 +5,19 @@ module.exports = async (relativeSrc, alt = 'image', className, sizes = '(min-wid
     const { dir: imgDir } = path.parse(relativeSrc)
     const fullSrc = path.join('src', relativeSrc)
 
+    let ext = fullSrc.substring(fullSrc.lastIndexOf(".") + 1);
+    let currentFormat = ext == "png" ? "png" : "jpeg";
+
     const imageMetadata = await Image(fullSrc, {
         widths: [null, 500, 900, 1500],
-        formats: ['avif', 'webp', 'jpeg'],
+        formats: ['avif', 'webp', currentFormat],
         outputDir: path.join('dist', imgDir),
         urlPath: imgDir,
-        filenameFormat: function (id, src, width, format, options) {
-            const extension = path.extname(src)
-            const name = path.basename(src, extension)
-            return `${name}-${width}w.${format}`
-        },
+        // filenameFormat: function (id, src, width, format, options) {
+        //     const extension = path.extname(src)
+        //     const name = path.basename(src, extension)
+        //     return `${name}-${width}w.${format}`
+        // },
     })
 
     const imageAttributes = {
