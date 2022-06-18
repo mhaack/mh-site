@@ -4,9 +4,8 @@ const path = require('path')
 module.exports = async (relativeSrc, alt = 'image', className, sizes = '(min-width: 1024px) 100vw, 50vw') => {
     const { dir: imgDir } = path.parse(relativeSrc)
     const fullSrc = path.join('src', relativeSrc)
-
-    let ext = fullSrc.substring(fullSrc.lastIndexOf(".") + 1);
-    let currentFormat = ext == "png" ? "png" : "jpeg";
+    const ext = fullSrc.substring(fullSrc.lastIndexOf(".") + 1);
+    const currentFormat = ext == "png" ? "png" : "jpeg";
 
     const imageMetadata = await Image(fullSrc, {
         widths: [null, 500, 900, 1500],
