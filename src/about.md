@@ -1,7 +1,7 @@
 ---
-layout: about.njk
 title: About Markus
-image: '/images/markus.jpeg'
+image: /images/markus.jpeg
+layout: about.njk
 eleventyNavigation:
   key: main
   title: About
@@ -41,6 +41,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 -   [Architecting a Better Ecommerce Experience with Commerce Integration Framework](https://medium.com/adobetech/architecting-a-better-ecommerce-experience-with-adobe-experience-managers-commerce-integration-712feef5de8)
 -   [How CIF Integrates with Adobe Commerce and Third-Party Commerce Solutions](https://medium.com/adobetech/how-cif-integrates-with-adobe-commerce-and-third-party-commerce-solutions-5a5efb8da2a0)
 -   [Building Rich Content and Commerce Experiences with CIF](https://medium.com/adobetech/building-rich-content-and-commerce-experiences-with-cif-754685dc2927)
+-   [Use AEM as a Cloud Service with Multiple Adobe Commerce Systems](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554) together with my colleague Dirk Rudolph
 
 ### Talks
 
