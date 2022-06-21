@@ -39,14 +39,14 @@ collections:
         name: "images"
         widget: "object"
         fields:
-           - label: "Feature"
-             name: "feature"
-             widget: "image"
-           - label: "Feature Height"
-             name: "height"
-             widget: "select"
-             options: ["h-64", "h-96", "h-128"]
-             required: false
+          - label: "Feature"
+            name: "feature"
+            widget: "image"
+          - label: "Feature Height"
+            name: "height"
+            widget: "select"
+            options: ["h-64", "h-96", "h-128"]
+            required: false
       - label: "Excerpt"
         name: "description"
         widget: "text"
@@ -64,6 +64,45 @@ collections:
         name: "permalink"
         widget: "string"
         required: false
+
+  - name: "pages"
+    label: "Seiten"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "src/index.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Image", name: "image", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+      - name: "about"
+        label: "About Me"
+        file: "src/about.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Image", name: "image", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "datasecurity"
+        label: "Datenschutz"
+        file: "src/datenschutz.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "No Index", name: "ignore", widget: "boolean", default: false }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - name: "imprint"
+        label: "Impressum"
+        file: "src/impressum.md"
+        fields:
+          - { label: "Titel", name: "title", widget: "string" }
+          - { label: "Layout", name: "layout", widget: "string" }
+          - { label: "No Index", name: "ignore", widget: "boolean", default: false }
+          - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "settings"
     label: "Settings"
