@@ -1,3 +1,5 @@
+import '/assets/js/speedlify-score.js'
+
 ;(function (document) {
     const scrollToTopButton = document.getElementById('scrollToTop')
     if (0 === scrollToTopButton.length) {
