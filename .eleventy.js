@@ -24,6 +24,8 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
     eleventyConfig.addPassthroughCopy({ 'src/_assets': 'assets' })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js' })
+    
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
