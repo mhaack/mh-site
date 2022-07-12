@@ -53,6 +53,10 @@
         @apply text-lg leading-tight font-normal;
     }
 
+    .prose h2, .prose h3 {
+        @apply inline;
+    }
+
     .prose img.large {
         @apply sm:-mx-40 sm:w-[calc(100%+20rem)] sm:max-w-[calc(100%+20rem)];
     }
