@@ -13,6 +13,7 @@ const isProd = process.env.ELEVENTY_ENV === 'production'
 module.exports = function (eleventyConfig) {
     eleventyConfig.setQuietMode(true)
 
+    // setup plugins
     eleventyConfig.addPlugin(pluginEmbedYouTube)
     eleventyConfig.addPlugin(pluginDirectoryOutput)
     eleventyConfig.addPlugin(pluginReadingTime)
@@ -22,10 +23,10 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setDataDeepMerge(true)
 
+    // copy static assets
     eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
     eleventyConfig.addPassthroughCopy({ 'src/_assets': 'assets' })
     eleventyConfig.addPassthroughCopy({ 'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js' })
-    
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
@@ -50,7 +51,7 @@ module.exports = function (eleventyConfig) {
     // transforms
     eleventyConfig.addTransform('compressHTML', require('./utils/transforms/compressHTML'))
 
-    // Markdown overrides
+    // markdown overrides
     let markdownLibrary = markdownIt({
         html: true,
         breaks: true,

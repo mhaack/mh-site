@@ -10,17 +10,17 @@ eleventyNavigation:
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.
 
-### Thanks for stopping by
+## Thanks for stopping by
 
 About me: I'm a Senior Technical Lead at [Adobe](https://www.adobe.com) working on [AEM Content & Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html). Our team builds and maintains e-commerce integration for [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html). If you are interested to find out more, see my [work](/work) section. You can view [my LinkedIn profile](https://de.linkedin.com/in/markushaack/) for all the gory details.
 
-### Home in the world
+## Home in the world
 
 Together with my wonderful wife, our daughter, and our 2 cats I live in the beautiful city of Leipzig, Germany.
 
 If time allows I play with Nintendo consoles, old and new ones. I'm interested in various electronic topics, Arduino microcontrollers & IOT stuff. I'm passionate about smart homes, [Home Assistant](https://www.home-assistant.io/) in particular and automating our house with all kinds of useful and useless smart devices. I wrote about my [Home Assistant journey](/home-assistant) and some of [my projects](/projects) here as well.
 
-### Home on the world wide web
+## Home on the world wide web
 
 Do you want to contact me? You can find me in the following places:
 
@@ -33,7 +33,7 @@ Do you want to contact me? You can find me in the following places:
 
 Or just drop me a note via the [contact from](/#contact).
 
-### Proffessional writing
+## Proffessional writing
 
 Most of my professional posts and articles are published on the [Adobe Tech Blog](https://medium.com/adobetech).
 
@@ -43,7 +43,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 -   [Building Rich Content and Commerce Experiences with CIF](https://medium.com/adobetech/building-rich-content-and-commerce-experiences-with-cif-754685dc2927)
 -   [Use AEM as a Cloud Service with Multiple Adobe Commerce Systems](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554) together with my colleague Dirk Rudolph
 
-### Talks
+## Talks
 
 -   [Extend AEM Content and Commerce with Adobe Developer App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/extend-aem-app-builder.html?lang=en), Adobe Developers Live, October 2021
 -   [AEM Commerce extensibility using Adobe I/O](https://adapt.to/2021/en/schedule/aem-commerce-extensibility-using-adobe-io.html), adaptTo(), September 2021

@@ -64,7 +64,7 @@
     <ul class="pt-2 pb-3">
       {% for entry in navPages %}
         <li>
-          <a {% if page.url != entry.url %} href="{{ entry.url | url }}" {% endif %} alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-slate-100 text-mountain-800{% else %}text-slate-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-slate-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
+          <a href="{{ entry.url | url }}" alt="Link to {{ entry.title }}" class="block pl-4 pr-4 py-2 {% if page.url == entry.url %}bg-slate-100 text-mountain-800{% else %}text-slate-500{% endif %} text-base font-medium hover:bg-mountain-50 focus:outline-none focus:text-slate-700 focus:bg-mountain-50 transition duration-150 ease-in-out">
             {{ entry.title }}
           </a>
         </li>
