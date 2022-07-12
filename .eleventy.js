@@ -68,7 +68,8 @@ module.exports = function (eleventyConfig) {
         .use(markdownItAnchor, {
             level: [2, 3],
             permalink: markdownItAnchor.permalink.linkAfterHeader({
-                style: 'aria-labelledby'
+                style: 'aria-labelledby',
+                class: 'ml-2'
               })
         })
     eleventyConfig.setLibrary('md', markdownLibrary)
