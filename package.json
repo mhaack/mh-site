@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "license": "MIT",
     "devDependencies": {
-        "@11ty/eleventy": "^1.0.2",
+        "@11ty/eleventy": "2.0.0-canary.15",
         "@11ty/eleventy-cache-assets": "^2.3.0",
         "@11ty/eleventy-img": "^2.0.1",
         "@11ty/eleventy-navigation": "^0.3.5",
@@ -31,7 +31,7 @@
     },
     "scripts": {
         "dev:twnd": "env ELEVENTY_ENV=development postcss src/_css/tailwind.css -o dist/assets/css/theme.css --watch --verbose",
-        "dev:11ty": "env ELEVENTY_ENV=development eleventy --serve --watch",
+        "dev:11ty": "env ELEVENTY_ENV=development eleventy --serve",
         "dev": "npm-run-all clean --parallel dev:* --print-label",
         "build:twnd": "env ELEVENTY_ENV=production postcss src/_css/tailwind.css -o dist/assets/css/theme.css",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
