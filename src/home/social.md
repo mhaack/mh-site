@@ -1,9 +1,9 @@
 ---
 icon: twitter
 theme:
-    background: bg-sky-800
-    text: text-white
-    icon: text-sky-500
+    background: bg-mountain-300
+    text: text-gray-900
+    icon: text-blue-dianne-900
 
 order: 4
 ---

@@ -1,9 +1,9 @@
 ---
 icon: newspaper
 theme:
-    background: bg-bay-of-many-700
-    text: text-sky-800
-    icon: text-marigold-800
+    background: bg-rob-roy-300
+    text: text-gray-900
+    icon: text-blue-dianne-900
 order: 3
 ---
 

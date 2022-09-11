@@ -1,17 +1,16 @@
 ---
 theme:
-    background: bg-mountain-200
-    text: text-slate-900
-    icon: text-sky-800
+    background: bg-jungle-green-500
+    text: text-slate-100
 order: 5
 ---
 
 Get In Touch
 
 <section id="contact">
-  <div class="relative flex flex-col bg-mountain-300 shadow-lg mt-4 p-4">
+  <div class="relative flex flex-col bg-white shadow-lg mt-4 p-8">
     <div class="w-full max-w-screen-md mx-auto text-xl">
-      <p>Want to have a chat? Send me a message.</p>
+      <p class="text-gray-900">Want to have a chat? Send me a message.</p>
       <form name="contact" method="post" action="/success">
         <input type="hidden" name="form-name" value="contact"/>
         <div class="grid grid-cols-1 md:grid-cols-2 md:gap-4 mt-2">
@@ -43,8 +42,8 @@ Get In Touch
           <button
             type="submit"
             value="Send Message"
-            class="h-8 px-4 bg-mountain-300 leading-tight rounded shadow-md hover:bg-mountain-400 hover:shadow-lg
-              focus:bg-mountain-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-mountain-400 active:shadow-lg transform
+            class="h-8 px-4 text-white bg-jungle-green-800 leading-tight rounded shadow-md hover:bg-jungle-green-600 hover:shadow-lg
+              focus:bg-jungle-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-jungle-green-600 active:shadow-lg transform
               transition focus:scale-125 hover:scale-125 duration-500 ease-in-out">
             Send Message</button>
         </div>

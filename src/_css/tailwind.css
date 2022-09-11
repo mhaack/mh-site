@@ -22,11 +22,11 @@
     h4,
     h5,
     h6 {
-        @apply font-semibold text-gray-700;
+        @apply font-semibold text-gray-800;
     }
 
     a {
-        @apply text-mountain-700 transition-colors decoration-2 underline-offset-2 hover:underline hover:text-mountain-500;
+        @apply text-mountain-800 transition-colors decoration-2 underline-offset-4 underline hover:text-mountain-600;
     }
 
     h1 {

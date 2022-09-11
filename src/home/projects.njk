@@ -1,9 +1,7 @@
 ---
-icon: newspaper
 theme:
-  background: bg-marigold-200
-  text: text-bay-of-many-700
-  icon: text-bay-of-many-200
+  background: bg-sandy-brown-300
+  text: text-gray-900
 order: 2
 
 ---
@@ -11,8 +9,8 @@ Since you are here - you can check out my projects.
 
 <ul class="grid group gap-8 mx-auto mt-8 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
   {% for post in collections.posts | head(-3) | reverse %}
-  <li class="bg-bay-of-many-200 flex flex-col overflow-hidden shadow-lg duration-300 hover:shadow-2xl">
-    <a href="{{ post.url | url }}" class="group-hover:no-underline">
+  <li class="bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
+    <a href="{{ post.url | url }}" class="no-underline">
       {% if post.data.images.feature %}
       <div class="flex-shrink-0">
         <figure>
@@ -26,7 +24,7 @@ Since you are here - you can check out my projects.
           <h2 class="mt-2 text-3xl font-semibold leading-7">
             {{ post.data.title }}
           </h2>
-          <span class="text-sm">
+          <span class="text-sm text-blue-dianne-700">
             <time datetime="{{ post.date | htmlDateString }}">
               {{ post.date | readableDate }}
             </time>
