@@ -26,7 +26,7 @@
     }
 
     a {
-        @apply text-mountain-800 transition-colors decoration-2 underline-offset-4 underline hover:text-mountain-600;
+        @apply text-mountain-900 transition-colors decoration-2 underline-offset-4 underline hover:text-mountain-700;
     }
 
     h1 {
@@ -78,7 +78,7 @@
 
     input.contact,
     textarea.contact {
-        @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out;
+        @apply w-full bg-jungle-green-100 focus:outline-jungle-green-700 placeholder:text-slate-800 border px-4 py-2 rounded transition ease-in-out;
     }
 
     .prose pre[class*='language-'] {

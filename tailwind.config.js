@@ -109,7 +109,7 @@ module.exports = {
                     css: {
                         '--tw-prose-body': theme('colors.primary'),
                         '--tw-prose-headings': theme('colors.gray.800'),
-                        '--tw-prose-links': theme('colors.mountain.800'),
+                        '--tw-prose-links': theme('colors.mountain.900'),
                         '--tw-prose-th-borders': theme('colors.gray.700'),
                         '--tw-prose-bullets': theme('colors.gray.300'),
                         '--tw-prose-counters': theme('colors.gray.500'),
