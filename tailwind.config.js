@@ -2,13 +2,49 @@ const isDev = process.env.ELEVENTY_ENV === 'development'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    content: ['./src/**/*.njk', './src/**/*.md', './utils/shortcodes/*.js'],
+    content: ['./src/**/*.{njk,md}', './utils/shortcodes/*.js'],
     theme: {
         extend: {
             fontFamily: {
                 sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
             },
             colors: {
+                marigold: {
+                    50: '#fcf9f4',
+                    100: '#f9f3e9',
+                    200: '#efe2c9',
+                    300: '#e5d0a8',
+                    400: '#d2ad67',
+                    500: '#bf8a26',
+                    600: '#ac7c22',
+                    700: '#8f681d',
+                    800: '#735317',
+                    900: '#5e4413',
+                },
+                'golden-dream': {
+                    50: '#fefdf6',
+                    100: '#fefbec',
+                    200: '#fcf5d0',
+                    300: '#faeeb3',
+                    400: '#f6e27a',
+                    500: '#f2d541',
+                    600: '#dac03b',
+                    700: '#b6a031',
+                    800: '#918027',
+                    900: '#776820',
+                },
+                'bay-of-many': {
+                    50: '#f4f5f8',
+                    100: '#eaeaf1',
+                    200: '#cacbdc',
+                    300: '#abacc7',
+                    400: '#6b6d9d',
+                    500: '#2c2f73',
+                    600: '#282a68',
+                    700: '#212356',
+                    800: '#1a1c45',
+                    900: '#161738',
+                },
                 mountain: {
                     50: '#edfcf3',
                     100: '#d4f7e1',

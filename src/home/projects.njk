@@ -1,0 +1,49 @@
+---
+icon: newspaper
+theme:
+  background: bg-marigold-200
+  text: text-bay-of-many-700
+  icon: text-bay-of-many-200
+order: 2
+
+---
+Since you are here - you can check out my projects.
+
+<ul class="grid group gap-8 mx-auto mt-8 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+  {% for post in collections.posts | head(-3) | reverse %}
+  <li class="bg-bay-of-many-200 flex flex-col overflow-hidden shadow-lg duration-300 hover:shadow-2xl">
+    <a href="{{ post.url | url }}" class="group-hover:no-underline">
+      {% if post.data.images.feature %}
+      <div class="flex-shrink-0">
+        <figure>
+          {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px)
+          calc(.333 * 100vw), 50vw" %}
+        </figure>
+      </div>
+      {% endif %}
+      <div class="flex flex-col justify-between flex-1 px-4 md:px-6 py-2">
+        <div class="flex-1">
+          <h2 class="mt-2 text-3xl font-semibold leading-7">
+            {{ post.data.title }}
+          </h2>
+          <span class="text-sm">
+            <time datetime="{{ post.date | htmlDateString }}">
+              {{ post.date | readableDate }}
+            </time>
+            <span class="mx-2">·</span>
+            <span>{{ post | readingTime }} read</span>
+          </span>
+
+          {# <div class="mt-2">
+            {% if post.data.description %}
+            {{ post.data.description }}
+            {% else %}
+            {{ post.templateContent | excerpt | safe }}
+            {% endif %}
+          </div> #}
+        </div>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

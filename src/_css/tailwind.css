@@ -30,7 +30,7 @@
     }
 
     h1 {
-        @apply text-4xl leading-tight font-semibold before:text-mountain-800 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-4xl md:text-6xl leading-tight font-semibold ;
     }
 
     h2 {
@@ -85,5 +85,5 @@
         width: inherit;
         max-width: calc(100vw - 3rem);
         @apply text-sm;
-    }
+    } 
 }

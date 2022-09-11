@@ -1,65 +1,63 @@
-<footer>
-  <div class="bg-gray-800">
-    <div class="max-w-screen-xl p-4 mx-auto sm:p-6 md:flex md:items-center md:justify-between lg:px-8">
-      <div class="flex justify-center md:order-3 text-slate-100">
-        <ul class="flex mt-8">
-          {%- if site.socialLinks %}
-            {%- for item in site.socialLinks -%}
-              {% set externalAttribute = '' %}
-              {% if item.external -%}
-                {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-              {%- endif -%}
-              <li class="mr-4 last:mr-0">
-                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
-                  {% if item.icon -%}
-                    {% include item.icon %}
-                    <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
-                  {%- else -%}
-                    Link to {{ item.text }}
-                  {%- endif %}
-                </a>
-              </li>
-            {%- endfor -%}
-          {%- endif %}
-          {%- if site.footerLinks %}
-            {%- for item in site.footerLinks -%}
-              {% set externalAttribute = '' %}
-              {% if item.external -%}
-                {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-              {%- endif -%}
-              <li class="mr-4 last:mr-0">
-                <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
-                  {% if item.icon -%}
-                    {% include item.icon %}
-                    <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
-                  {%- else -%}
-                    Link to {{ item.text }}
-                  {%- endif %}
-                </a>
-              </li>
-            {%- endfor %}
-          {%- endif %}
-        </ul>
-      </div>
-      <div class="hidden lg:inline mt-2 md:order-2">
-        <a href="https://speedlify.markus-haack.com/markus-haack.com/" target="_blank" class="!no-underline text-mountain-400  hover:text-mountain-600">
-          <speedlify-score speedlify-url="https://speedlify.markus-haack.com" hash="39ea9d4a" score weight></speedlify-score>
-        </a>
-      </div>
-      <div class="mt-2 md:mt-0 md:order-1">
-        <p class="footer">
-          <span>&copy; 2018 - {% currentYear %}</span>
-          <a href="https://twitter.com/mhaack" target="_blank" rel="noopener">{{ site.author.name }}</a>
-          |
-          <a href="/impressum/" aria-label="Impressum">Impressum</a>
-          |
-          <a href="/datenschutz/" aria-label="Datenschutz">Datenschutz</a>
-        </p>
-        <p class="footer">
-          Built with:
-          <a href="https://www.11ty.dev" target="_blank" rel="noopener">Eleventy</a>
-        </p>
-      </div>
+<footer class="px-16 md:px-32 bg-gray-800">
+  <div class="max-w-6xl mx-auto sm:py-6 md:flex md:items-center md:justify-between">
+    <div class="flex justify-center md:order-3 text-slate-100">
+      <ul class="flex mt-8">
+        {%- if site.socialLinks %}
+          {%- for item in site.socialLinks -%}
+            {% set externalAttribute = '' %}
+            {% if item.external -%}
+              {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+            {%- endif -%}
+            <li class="mr-4 last:mr-0">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
+                {% if item.icon -%}
+                  {% include item.icon %}
+                  <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
+                {%- else -%}
+                  Link to {{ item.text }}
+                {%- endif %}
+              </a>
+            </li>
+          {%- endfor -%}
+        {%- endif %}
+        {%- if site.footerLinks %}
+          {%- for item in site.footerLinks -%}
+            {% set externalAttribute = '' %}
+            {% if item.external -%}
+              {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+            {%- endif -%}
+            <li class="mr-4 last:mr-0">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
+                {% if item.icon -%}
+                  {% include item.icon %}
+                  <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
+                {%- else -%}
+                  Link to {{ item.text }}
+                {%- endif %}
+              </a>
+            </li>
+          {%- endfor %}
+        {%- endif %}
+      </ul>
+    </div>
+    <div class="hidden lg:inline mt-2 md:order-2">
+      <a href="https://speedlify.markus-haack.com/markus-haack.com/" target="_blank" class="!no-underline text-mountain-400  hover:text-mountain-600">
+        <speedlify-score speedlify-url="https://speedlify.markus-haack.com" hash="39ea9d4a" score weight></speedlify-score>
+      </a>
+    </div>
+    <div class="mt-2 md:mt-0 md:order-1 pb-4 md:pb-0">
+      <p class="footer">
+        <span>&copy; 2018 - {% currentYear %}</span>
+        <a href="https://twitter.com/mhaack" target="_blank" rel="noopener">{{ site.author.name }}</a>
+        |
+        <a href="/impressum/" aria-label="Impressum">Impressum</a>
+        |
+        <a href="/datenschutz/" aria-label="Datenschutz">Datenschutz</a>
+      </p>
+      <p class="footer">
+        Built with:
+        <a href="https://www.11ty.dev" target="_blank" rel="noopener">Eleventy</a>
+      </p>
     </div>
   </div>
 </footer>
