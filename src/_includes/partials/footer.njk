@@ -9,7 +9,7 @@
               {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
             {%- endif -%}
             <li class="mr-4 last:mr-0">
-              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
                 {% if item.icon -%}
                   {% include item.icon %}
                   <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -27,7 +27,7 @@
               {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
             {%- endif -%}
             <li class="mr-4 last:mr-0">
-              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
                 {% if item.icon -%}
                   {% include item.icon %}
                   <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -41,7 +41,7 @@
       </ul>
     </div>
     <div class="hidden lg:inline mt-2 md:order-2">
-      <a href="https://speedlify.markus-haack.com/markus-haack.com/" target="_blank" class="!no-underline text-mountain-400  hover:text-mountain-600">
+      <a href="https://speedlify.markus-haack.com/markus-haack.com/" target="_blank" class="!no-underline text-mountain-300 hover:text-mountain-600">
         <speedlify-score speedlify-url="https://speedlify.markus-haack.com" hash="39ea9d4a" score weight></speedlify-score>
       </a>
     </div>

@@ -1,8 +1,10 @@
 ---
 theme:
-    background: bg-jungle-green-500
-    text: text-slate-100
+  background: bg-jungle-green-500
+  text: text-slate-100
 order: 5
+sitemap:
+  ignore: true
 ---
 
 Get In Touch
@@ -42,9 +44,7 @@ Get In Touch
           <button
             type="submit"
             value="Send Message"
-            class="h-8 px-4 text-white bg-jungle-green-800 leading-tight rounded shadow-md hover:bg-jungle-green-600 hover:shadow-lg
-              focus:bg-jungle-green-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-jungle-green-600 active:shadow-lg transform
-              transition focus:scale-125 hover:scale-125 duration-500 ease-in-out">
+            class="h-8 px-4 text-white bg-jungle-green-800 leading-tight shadow-md transform hover:bg-jungle-green-600 hover:shadow-lg hover:scale-110 focus:bg-jungle-green-600 focus:shadow-lg focus:outline-none focus:ring-0 focus:scale-110 active:bg-jungle-green-600 active:shadow-lg transition  duration-500 ease-in-out">
             Send Message</button>
         </div>
       </form>

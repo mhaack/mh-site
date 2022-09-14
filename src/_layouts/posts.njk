@@ -1,0 +1,21 @@
+---
+layout: base
+tags: pages
+---
+
+<main class="grid tracking-tight text-3xl md:text-5xl">
+  <div class="px-14 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+    <div class="box-content max-w-6xl mx-auto [&>h1]:mb-4">
+      <h1>{{ title }}</h1>
+      {% if description %}
+      <p>{{ description }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <article id="posts" class="p-14 md:px-32 md:py-16 justify-start font-bold {{ theme.background }} {{ theme.text }}">
+    <div class="box-content max-w-6xl mx-auto">
+      {{ content | safe }}
+    </div>
+  </article>
+</main>

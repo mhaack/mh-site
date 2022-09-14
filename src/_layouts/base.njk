@@ -1,22 +1,13 @@
 <!doctype html>
 <html lang="{{ site.language }}">
-  {% include "partials/head.njk" %}
-  <body class="debug-screens flex flex-col min-h-screen text-primary leading-normal scrolling-touch">
-    <div class="flex flex-col min-h-screen">
-      {% include "partials/nav.njk" %}
-      <div class="flex-grow max-w-screen-xl mx-auto">
-        {% if images.feature %}
-          <figure class="{{ images.height or "h-48 md:h-2/3" }}">
-            {% image images.feature, title, "object-cover w-full h-full" %}
-          </figure>
-        {% endif %}
-        <main class="block py-12 px-4 sm:px-6" id="content">
-          {{ content | safe }}
-        </main>
-      </div>
-      {% include "partials/footer.njk" %}
-    </div>
-    {% include "partials/scroll-top-button.njk" %}
-    <script src="/assets/js/main.js" type="module" defer></script>
-  </body>
+{% include "partials/head.njk" %}
+<body class="debug-screens flex flex-col min-h-screen text-primary leading-normal scrolling-touch">
+  {% include "partials/nav.njk" %}
+
+  {{ content | safe }}
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/scroll-top-button.njk" %}
+  <script src="/assets/js/main.js" type="module" defer></script>
+</body>
 </html>
