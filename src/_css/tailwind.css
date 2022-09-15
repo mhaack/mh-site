@@ -78,7 +78,7 @@
 
     input.contact,
     textarea.contact {
-        @apply w-full bg-jungle-green-100 focus:outline-jungle-green-700 placeholder:text-slate-800 border px-4 py-2 transition ease-in-out;
+        @apply w-full text-slate-900 bg-jungle-green-50 focus:outline-jungle-green-700 placeholder:text-slate-600 border px-4 py-2 transition ease-in-out;
     }
 
     .prose pre[class*='language-'] {
