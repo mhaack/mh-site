@@ -19,7 +19,7 @@ Described here is a brief explanation of the evolution steps and the tools and t
 
 ## V1 - Geocities
 
-On May 1st, 1998 the first version of my personal website was put online on \[Geocities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities. Geocities does not exist anymore nor does my own website, the old URL www.geocities.com/southbeach/strand/2811/ is not available anymore.
+On May 1st, 1998 the first version of my personal website was put online on [Geocities](https://en.wikipedia.org/wiki/Yahoo!_GeoCities). Geocities does not exist anymore nor does my own website, the old URL is not available anymore.
 
 I don't even remember exactly what the site was about and what content I put there.
 
