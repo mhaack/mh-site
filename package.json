@@ -10,7 +10,7 @@
         "@11ty/eleventy-plugin-directory-output": "^1.0.1",
         "@11ty/eleventy-plugin-rss": "^1.2.0",
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
-        "@netlify/plugin-lighthouse": "^3.2.1",
+        "@netlify/plugin-lighthouse": "^3.3.0",
         "@tailwindcss/typography": "^0.5.7",
         "autoprefixer": "^10.4.8",
         "cssnano": "^5.1.13",
