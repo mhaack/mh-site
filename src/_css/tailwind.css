@@ -83,7 +83,7 @@
 
     .prose pre[class*='language-'] {
         width: inherit;
-        max-width: calc(100vw - 8rem);
+        max-width: calc(100vw - 4rem);
         @apply text-sm;
     } 
 }

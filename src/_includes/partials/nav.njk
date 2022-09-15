@@ -1,4 +1,4 @@
-<header class="px-14 md:px-32 pb-8 md:pb-16">
+<header class="px-8 md:px-32 pb-8 md:pb-16">
   <nav>
     <div class="container flex flex-wrap justify-between items-center mx-auto">
       <a
@@ -26,7 +26,7 @@
       <button
         id="btn-burger"
         class="inline-flex shadow-xl items-center justify-center p-2 text-white bg-gray-800 transition duration-500 ease-in-out
-          hover:text-burnt-sienna-500 hover:bg-jungle-green-600 focus:outline-none focus:text-burnt-sienna-500 focus:bg-jungle-green-600
+          hover:text-sandy-brown-300 focus:outline-none focus:text-jungle-green-600 focus:bg-sandy-brown-300
           transform focus:scale-110 hover:scale-110 md:hidden"
         aria-label="Main menu">
         <svg id="svg-content" class="block w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -35,14 +35,14 @@
       </button>
       {% set navPages = collections.pages | eleventyNavigation %}
       <div id="menu-mobile" class="hidden w-full md:block md:w-auto">
-        <ul class="flex flex-row mt-4 border border-gray-800 md:space-x-8 md:mt-0 md:p-4 md:text-sm md:font-medium md:border-0">
+        <ul class="flex flex-row space-x-8 p-4">
           {% for entry in navPages %}
             {% set currentAttribute = '' %}
             {%- if page.url == entry.url -%}
               {%- set currentAttribute = 'aria-current="page"' -%}
             {%- endif -%}
             <li class="flex my-1 basis-1/3 justify-center">
-              <a href="{{ entry.url | url }}" {{- currentAttribute | safe -}} class="{% if page.url == entry.url %}border-blue-dianne-900{% else %}border-slate-100{% endif %} no-underline hover:bg-sandy-brown-300 hover:text-blue-dianne-900 border-b-2 font-light hover:no-underline hover:border-blue-dianne-900 md:my-4 p-2 md:p-4 ">{{ entry.title }}</a>
+              <a href="{{ entry.url | url }}" {{- currentAttribute | safe -}} class="{% if page.url == entry.url %}border-blue-dianne-900{% else %}border-slate-100{% endif %} no-underline my-4 p-4 border-b-2 hover:bg-sandy-brown-300 hover:text-blue-dianne-900 hover:no-underline hover:border-blue-dianne-900">{{ entry.title }}</a>
             </li>
           {% endfor %}
         </ul>

@@ -4,7 +4,7 @@ tags: pages
 ---
 
 <main class="grid tracking-tight text-3xl md:text-5xl">
-  <div class="px-14 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+  <div class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
     <div class="box-content max-w-6xl mx-auto [&>h1]:mb-4">
       <h1>{{ title }}</h1>
       {% if description %}
@@ -13,7 +13,7 @@ tags: pages
     </div>
   </div>
 
-  <article id="posts" class="p-14 md:px-32 md:py-16 justify-start font-bold {{ theme.background }} {{ theme.text }}">
+  <article id="posts" class="px-8 py-10 md:px-32 md:py-16 justify-start font-bold {{ theme.background }} {{ theme.text }}">
     <div class="box-content max-w-6xl mx-auto">
       {{ content | safe }}
     </div>

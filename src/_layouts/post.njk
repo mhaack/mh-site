@@ -3,14 +3,14 @@ layout: base
 ---
 
 <main class="grid">
-  <article class="px-14 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+  <article class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
     <header class="mb-4 text-center">
-      <h1 class="mb-4 py-2 border-b">{{ title }}</h1>
       {% if images.feature %}
-        <figure class="{{ images.height or "h-48 md:h-2/3" }}">
+        <figure class="-mx-8 md:-mx-32 {{ images.height or "h-48 md:h-2/3" }}">
           {% image images.feature, title, "object-cover w-full h-full" %}
         </figure>
       {% endif %}
+      <h1 class="py-2 border-b md:py-8">{{ title }}</h1>
       <div class="py-4 border-b md:justify-between md:items-start md:flex md:flex-row">
         <div class="md:my-auto text-sm text-slate-700">
           <time datetime="{{ date | htmlDateString }}">
