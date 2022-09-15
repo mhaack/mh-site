@@ -4,9 +4,14 @@ tags: pages
 prose: true
 ---
 
-<article>
-    <h1 class="mb-4">{{ title }}</h1>
-    <section class="max-w-none break-words {%- if prose %} prose prose-lg prose-code:before:content-none prose-code:after:content-none{% endif %}">
+<main class="grid tracking-tight text-3xl md:text-5xl">
+  <article class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+    <div class="box-content max-w-6xl mx-auto [&>h1]:mb-4">
+      <h1>{{ title }}</h1>
+      <section class="max-w-none break-words {%- if prose %} prose prose-lg prose-code:before:content-none
+          prose-code:after:content-none{% endif %}">
         {{ content | safe }}
-    </section>
-</article>
+      </section>
+    </div>
+  </article>
+</main>

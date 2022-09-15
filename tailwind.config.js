@@ -2,13 +2,73 @@ const isDev = process.env.ELEVENTY_ENV === 'development'
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-    content: ['./src/**/*.njk', './src/**/*.md', './utils/shortcodes/*.js'],
+    content: ['./src/**/*.{njk,md}', './utils/shortcodes/*.js'],
     theme: {
         extend: {
             fontFamily: {
                 sans: ['IBM Plex Sans', ...defaultTheme.fontFamily.sans],
             },
             colors: {
+                'blue-dianne': {
+                    '50': '#f0fafb',
+                    '100': '#d9f2f4',
+                    '200': '#b7e4ea',
+                    '300': '#85d0db',
+                    '400': '#4cb2c4',
+                    '500': '#3196a9',
+                    '600': '#2b798f',
+                    '700': '#296475',
+                    '800': '#295361',
+                    '900': '#264653',
+                },
+                'jungle-green': {
+                    '50': '#f2fbf9',
+                    '100': '#d3f4ed',
+                    '200': '#a6e9db',
+                    '300': '#72d6c6',
+                    '400': '#44bdac',
+                    '500': '#2a9d8f',
+                    '600': '#208177',
+                    '700': '#1d6861',
+                    '800': '#1c534f',
+                    '900': '#1b4642',
+                },
+                'rob-roy': {
+                    '50': '#fdf9ed',
+                    '100': '#f8edcd',
+                    '200': '#f0d997',
+                    '300': '#e9c46a',
+                    '400': '#e2ab3d',
+                    '500': '#da8d26',
+                    '600': '#c16c1e',
+                    '700': '#a04f1d',
+                    '800': '#833e1d',
+                    '900': '#6c331b',
+                },
+                'sandy-brown': {
+                    '50': '#fef6ee',
+                    '100': '#fdead7',
+                    '200': '#fad2ae',
+                    '300': '#f4a261',
+                    '400': '#f18746',
+                    '500': '#ed6722',
+                    '600': '#de4e18',
+                    '700': '#b83a16',
+                    '800': '#933019',
+                    '900': '#762a18',
+                },
+                'burnt-sienna': {
+                    '50': '#fdf5f3',
+                    '100': '#fde8e3',
+                    '200': '#fbd6cd',
+                    '300': '#f8b9a9',
+                    '400': '#f19078',
+                    '500': '#e76f51',
+                    '600': '#d3502f',
+                    '700': '#b14024',
+                    '800': '#933821',
+                    '900': '#7a3422',
+                },
                 mountain: {
                     50: '#edfcf3',
                     100: '#d4f7e1',
@@ -48,19 +108,13 @@ module.exports = {
                 DEFAULT: {
                     css: {
                         '--tw-prose-body': theme('colors.primary'),
-                        '--tw-prose-headings': theme('colors.gray.700'),
-                        '--tw-prose-links': theme('colors.mountain.700'),
+                        '--tw-prose-headings': theme('colors.gray.800'),
+                        '--tw-prose-links': theme('colors.mountain.900'),
                         '--tw-prose-th-borders': theme('colors.gray.700'),
                         '--tw-prose-bullets': theme('colors.gray.300'),
                         '--tw-prose-counters': theme('colors.gray.500'),
                         '--tw-prose-quote-borders': theme('colors.gray.500'),
                         '--tw-prose-th-borders': theme('colors.gray.300'),
-                        a: {
-                            'text-decoration': 'none',
-                        },
-                        'a:hover': {
-                            'text-decoration': 'underline',
-                        },
                         ul: {
                             'list-style-type': 'square',
                         },

@@ -22,15 +22,15 @@
     h4,
     h5,
     h6 {
-        @apply font-semibold text-gray-700;
+        @apply font-semibold text-gray-800;
     }
 
     a {
-        @apply text-mountain-700 transition-colors decoration-2 underline-offset-2 hover:underline hover:text-mountain-500;
+        @apply text-mountain-900 transition-colors decoration-2 underline-offset-4 underline hover:text-mountain-600;
     }
 
     h1 {
-        @apply text-4xl leading-tight font-semibold before:text-mountain-800 before:font-semibold before:mr-2 before:content-['//'];
+        @apply text-4xl md:text-6xl leading-tight font-semibold ;
     }
 
     h2 {
@@ -73,17 +73,17 @@
         @apply text-center md:text-left leading-6 text-gray-100;
     }
     p.footer a {
-        @apply text-mountain-400 no-underline hover:text-mountain-600 hover:underline;
+        @apply text-mountain-300 no-underline hover:text-mountain-600 hover:underline;
     }
 
     input.contact,
     textarea.contact {
-        @apply w-full bg-mountain-50 focus:outline-mountain-700 placeholder:text-slate-500 border px-4 py-2 rounded transition ease-in-out;
+        @apply w-full bg-jungle-green-100 focus:outline-jungle-green-700 placeholder:text-slate-800 border px-4 py-2 transition ease-in-out;
     }
 
     .prose pre[class*='language-'] {
         width: inherit;
-        max-width: calc(100vw - 3rem);
+        max-width: calc(100vw - 4rem);
         @apply text-sm;
-    }
+    } 
 }

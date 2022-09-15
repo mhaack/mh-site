@@ -1,18 +1,19 @@
 --- 
-layout: page
-title: All Projects
+layout: posts
+title: All Projects Posts
+description: Check them out.
+theme:
+  background: bg-sandy-brown-300
+  text: text-gray-900
 eleventyNavigation:
   key: main
   title: Projects
   order: 1
-prose: false
 ---
 
 {% set postslist = collections.posts | category("project") %}
 {% include "partials/postslist.njk" %}
 
-<div class="text-center sm:text-left border-t">
-  <h3 class="mt-8 mb-4 text-2xl font-medium">All Tags...</h3>
-  {% set tags = collections.tagList %}
-  {% include "partials/taglist.njk" %}
-</div>
+<h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
+{% set tags = collections.tagList %}
+{% include "partials/taglist.njk" %}

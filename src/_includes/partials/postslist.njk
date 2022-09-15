@@ -1,40 +1,37 @@
-<section class="mt-12">
-  <div class="relative pb-20">
-    <ul class="grid group gap-8 mx-auto mt-12 md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
-      {% for post in postslist | reverse %}
-        <li class="flex flex-col overflow-hidden rounded-lg shadow-lg duration-300 hover:shadow-2xl">
-          <a href="{{ post.url | url }}" class="group-hover:no-underline">
-            {% if post.data.images.feature %}
-              <div class="flex-shrink-0">
-                <figure>
-                  {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px) calc(.333 * 100vw), 50vw" %}
-                </figure>
-              </div>
+<ul class="grid group gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:max-w-none">
+  {% for post in postslist | reverse %}
+  <li class="bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
+    <a href="{{ post.url | url }}" class="no-underline">
+      {% if post.data.images.feature %}
+      <div class="flex-shrink-0">
+        <figure>
+          {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "(min-width: 1024px)
+          calc(.333 * 100vw), 50vw" %}
+        </figure>
+      </div>
+      {% endif %}
+      <div class="flex flex-col justify-between flex-1 px-4 md:px-6 py-2">
+        <div class="flex-1">
+          <span class="text-sm text-blue-dianne-700">
+            <time datetime="{{ post.date | htmlDateString }}">
+              {{ post.date | readableDate }}
+            </time>
+            <span class="mx-2">·</span>
+            <span>{{ post | readingTime }} read</span>
+          </span>
+          <h2 class="mt-2 text-3xl font-semibold">
+            {{ post.data.title }}
+          </h2>
+          <div class="mt-2 text-base text-gray-800">
+            {% if post.data.description %}
+            {{ post.data.description }}
+            {% else %}
+            {{ post.templateContent | excerpt | safe }}
             {% endif %}
-            <div class="flex flex-col justify-between flex-1 p-6">
-              <div class="flex-1">
-                <span class="text-xs text-slate-500">
-                  <time datetime="{{ post.date | htmlDateString }}">
-                    {{ post.date | readableDate }}
-                  </time>
-                  <span class="mx-2">·</span>
-                  <span>{{ post | readingTime }} read</span>
-                </span>
-                <h2 class="mt-2 text-xl font-semibold leading-7">
-                  {{ post.data.title }}
-                </h2>
-                <div class="mt-2 text-slate-900">
-                  {% if post.data.description %}
-                    {{ post.data.description }}
-                  {% else %}
-                    {{ post.templateContent | excerpt | safe }}
-                  {% endif %}
-                </div>
-              </div>
-            </div>
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
+          </div>
+        </div>
+      </div>
+    </a>
+  </li>
+{% endfor %}
+</ul>
