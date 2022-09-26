@@ -10,6 +10,8 @@ images:
   feature: /images/wemosd1hero.jpg
 date: 2022-09-26
 ---
+![]()
+
 Some readers recently asked me about the Wemos D1 mini pin usage for ESPHome. 
 
 For most of my [Arduino](/tags/arduino/) & [ESPHome](/tags/esphome/) projects I use a [Wemos D1 mini (v3.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_3.1.0.html) or [Wemos D1 mini Pro (v1.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_pro.html). The third board of the family is the is the [D1 mini light](https://www.wemos.cc/en/latest/d1/d1_mini_lite.html). I never used of of the light versions, most of the time you can get the D1 mini & D1 mini pro for almost identical prices at alipexpress.com.
@@ -61,6 +63,9 @@ Another difference is the flash memory. In comparison, the D1 mini Pro has 16 MB
 ## D1 mini compatible shields
 
 Wemos provides a wide range of pre-build extension shields for the D1 minis. There is a wide range of LED, OLED, TFT and ePager [display boards](https://www.wemos.cc/en/latest/d1_mini_shield/index.html#display-interactive-shields) for interactive projects.
+
+![](/images/d1-mini-pro-pinout.jpeg)
+
 
 Also various types of [environmental sensors](https://www.wemos.cc/en/latest/d1_mini_shield/index.html#environment-shields) are available. You can choose from simple temperature & humidity sensors, air quality sensors or a standard PIR sensor. Next to the sensor shields Wemos also has a selection of motor driver shields for different areas of applications.
 
