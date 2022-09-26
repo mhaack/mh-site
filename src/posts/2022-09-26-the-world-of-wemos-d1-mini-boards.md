@@ -24,6 +24,8 @@ Wemos recently upgraded both boards, the Wemos D1 mini v4.0.0 and the Wemos D1 m
 
 The pinouts of the D1 mini vs. D1 mini Pro are identical.
 
+{% image "/images/wemosd1shields.jpg", "Main Lovelace Dashboard", "large" %}
+
 | **Pin** | **Function**                 | **ESP-8266 Pin** |
 | ------- | ---------------------------- | ---------------- |
 | TX      | TXD                          | TXD              |
@@ -56,8 +58,6 @@ The most obvious visible difference is the ceramic antenna and the external ante
 
 Another difference is the flash memory. In comparison, the D1 mini Pro has 16 MByte of flash memory whereas the D1 mini only has 4 MByte.
 
-<<< Photo >>>
-
 ## D1 mini compatible shields
 
 Wemos provides a wide range of pre-build extension shields for the D1 minis. There is a wide range of LED, OLED, TFT and ePager [display boards](https://www.wemos.cc/en/latest/d1_mini_shield/index.html#display-interactive-shields) for interactive projects.
@@ -66,7 +66,7 @@ Also various types of [environmental sensors](https://www.wemos.cc/en/latest/d1
 
 If you can't find a suitable shield for your project, Wemos offers so-called base shields. These are [empty prototyping boards](https://www.wemos.cc/en/latest/d1_mini_shield/index.html#others) for your DIY projects. They are available in different form factors (1x, 2x & 3x) and can also be used to stack other shields.
 
-<<< Photo >>>
+{% image "/images/wemosd1shields.jpg", "D1 mini", "large" %}
 
 All shield boards typically come with male and female pins are already included in the package. A full list of official shields can be find on the [Wemos Wiki](https://www.wemos.cc/en/latest/d1_mini_shield/index.html).
 
