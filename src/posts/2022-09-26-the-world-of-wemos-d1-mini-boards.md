@@ -20,13 +20,13 @@ The boards are equipped with a ESP-8266EX chip running at 80 or 160MHz, like man
 
 I also like the board because it is little smaller than a classic Node MCU board. The dimensions are 34.2 mm x 25.6mm. It is so small; it even fits into a small [dollhouse Mini TV](/mini-tv/).
 
-Wemos recently upgraded both boards, the Wemos D1 mini v4.0.0 and the Wemos D1 mini Pro v2.0.0. Both got USB type C connectors instead of micro USB. The pro version also got a lithium battery interface charging interface. The pinout of the boards did not change.
+Wemos recently upgraded both boards. The Wemos D1 mini is now on version 4.0.0 and the Wemos D1 mini Pro on v2.0.0. Both boards got USB type C connectors instead of micro USB. The pro version also got a lithium battery interface charging interface and a LOLIN I2C Port. To fit everything on the board D1 mini Pro has grown a bit. The pinout of both boards did not change.
 
 ## Pinout
 
-The pinouts of the D1 mini vs. D1 mini Pro are identical.
+The pinouts of the D1 mini vs. D1 mini Pro are identical, also the D1 mini shares the same pin layout. And with with the latest board versions of the D1 mini (v4.0.0) vs. D1 mini Pro (v2.0.0) Wemos keeps the pin layout compatible.
 
-{% image "/images/d1-mini-pro-pinout.jpeg", "D1 mini Pro Pinout" %}
+{% image "/images/d1-mini-pro-pinout.jpeg", "D1 mini Pro Pinout", "small" %}
 
 | **Pin** | **Function**                 | **ESP-8266 Pin** |
 | ------- | ---------------------------- | ---------------- |
