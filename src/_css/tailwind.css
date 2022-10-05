@@ -30,7 +30,7 @@
     }
 
     h1 {
-        @apply text-4xl md:text-6xl leading-tight font-semibold ;
+        @apply text-4xl md:text-6xl leading-tight font-semibold;
     }
 
     h2 {
@@ -53,7 +53,8 @@
         @apply text-lg leading-tight font-normal;
     }
 
-    .prose h2, .prose h3 {
+    .prose h2,
+    .prose h3 {
         @apply inline;
     }
 
@@ -82,8 +83,15 @@
     }
 
     .prose pre[class*='language-'] {
-        width: inherit;
         max-width: calc(100vw - 4rem);
         @apply text-sm;
-    } 
+    }
+
+    .prose :where(pre):not(:where([class~='not-prose'] *)) {
+        @apply inline-flex w-full;
+    }
+
+    .prose :where(pre):not(:where([class~='not-prose'] *)) button {
+        @apply text-white bg-jungle-green-800 hover:bg-jungle-green-600 absolute inline-flex items-center justify-center right-12 md:right-36 w-fit m-0 p-2 border-none rounded-none cursor-pointer transform hover:scale-110 focus:bg-jungle-green-600 focus:scale-110 active:bg-jungle-green-600 active:shadow-lg transition duration-500 ease-in-out;
+    }
 }
