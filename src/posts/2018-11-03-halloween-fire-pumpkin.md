@@ -4,8 +4,8 @@ permalink: halloween-fire-pumpkin/
 date: 2018-11-03
 author: Markus
 description: A flame-throwing Jack-O-Lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing Jack-O-Lantern is even better.
-images: 
-  feature: /images/2018-11-03-halloween-fire-pumpkin/header.jpg
+images:
+    feature: /images/2018-11-03-halloween-fire-pumpkin/header.jpg
 category: project
 tags:
     - arduino
@@ -98,7 +98,7 @@ The PIR motion sensors and the servo must be connected to the Wemos / ESP8266 bo
 
 The software project for the ESP8288 board can be found in my [GitHub](https://github.com/mhaack/halloween-pumpkin-fire) repository.
 
-{% githubBadge "https://github.com/mhaack/halloween-pumpkin-fire" "Source code on GitHub" %}
+<github-badge repo="mhaack/halloween-pumpkin-fire"></github-badge>
 
 After uploading the software to the board it has to be configured to connect to WiFi and MQTT. Homie provides multiple ways to do this, I prefer to create and upload a config file. Alternatively, the configuration UI can be used.
 

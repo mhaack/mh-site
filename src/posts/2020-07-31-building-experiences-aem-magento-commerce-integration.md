@@ -7,8 +7,8 @@ description: On July 28th I was a guest on Mark Szulc's Building Experiences usi
     Adobe Experience Cloud show. We discussed how Adobe Experience Manager works
     together with Magento, using the latest release of the Commerce Integration
     Framework.
-images: 
-  feature: /images/2020-07-31-building-experiences-aem-magento-commerce-integration/bems-08c.png
+images:
+    feature: /images/2020-07-31-building-experiences-aem-magento-commerce-integration/bems-08c.png
 category: work
 tags:
     - adobe
@@ -27,7 +27,6 @@ https://www.youtube.com/watch?v=6LUHYCEx4GU
 
 All our projects are open-source, public on GitHub.
 
-{% githubBadge "https://github.com/adobe/aem-core-cif-components" "AEM CIF Core Components" %}
-{% githubBadge "https://github.com/adobe/aem-cif-guides-venia" "AEM Venia Reference Store" %}
+<github-badge repo="adobe/aem-core-cif-components" label="AEM CIF Core Components"></github-badge><github-badge repo="adobe/aem-cif-guides-venia" label="AEM Venia Reference Store"></github-badge>
 
 Mark [does regular live streams](https://www.markszulc.com/) on different interesting topics around Adobe Experience Cloud and Adobe Experience Manager.

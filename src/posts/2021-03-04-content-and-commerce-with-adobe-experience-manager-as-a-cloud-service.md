@@ -3,8 +3,8 @@ title: Content and Commerce with Adobe Experience Manager as a Cloud Service
 author: Markus
 date: 2021-03-04
 permalink: content-and-commerce/
-images: 
-  feature: /images/2021-03-04-content-and-commerce-with-adobe-experience-manager-as-a-cloud-service/content-and-commerce.png
+images:
+    feature: /images/2021-03-04-content-and-commerce-with-adobe-experience-manager-as-a-cloud-service/content-and-commerce.png
 category: work
 tags:
     - adobe

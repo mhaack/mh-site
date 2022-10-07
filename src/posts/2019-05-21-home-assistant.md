@@ -4,8 +4,8 @@ permalink: home-assistant/
 author: Markus
 date: 2019-05-21
 description: This project is about the change I did from OpenHab to Home Assistant for our smart home automation system. Ok maybe the headline sounds a bit too sensational but change our entire home automation setup from one system we used for 2+ years now to a completely new one requires quite some heavy lifting.
-images: 
-  feature: /images/2019-05-21-home-assistant/header.jpg
+images:
+    feature: /images/2019-05-21-home-assistant/header.jpg
 category: project
 tags:
     - home-automation
@@ -61,7 +61,7 @@ Over time we collected a long list of devices from different vendors. These are 
 
 Home Assistant support has integrations for 1000+ systems and devices and also OpenHab’s add-on list is at the same length. Add details list of all hubs, devices, sensors etc. I used is available on my [Home Assistant config](https://github.com/mhaack/home-assistant-config) on GitHub.
 
-{% githubBadge "https://github.com/mhaack/home-assistant-config" "Home Assistant config" %}
+<github-badge repo="mhaack/home-assistant-config" label="Home Assistant config"></github-badge>
 
 ## Community support
 

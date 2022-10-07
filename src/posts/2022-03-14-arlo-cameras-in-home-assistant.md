@@ -2,16 +2,17 @@
 title: Arlo Cameras in Home Assistant
 category: project
 tags:
-  - home-assistant
-  - home-automation
-  - camera
+    - home-assistant
+    - home-automation
+    - camera
 images:
-  feature: /images/home_assistant_arlo.jpg
+    feature: /images/home_assistant_arlo.jpg
 description: Home Assistant & Arlo cameras go better very well. I'm using it
-  since our entire setup got migrated from OpenHab to Home Assistant and I'm
-  happy with the setup.
+    since our entire setup got migrated from OpenHab to Home Assistant and I'm
+    happy with the setup.
 date: 2022-03-14
 ---
+
 Home Assistant & Arlo cameras go better together than I initially expected. I'm using it since our entire setup got migrated from OpenHab to Home Assistant and I'm happy with the setup.
 
 But let's start from the beginning ...
@@ -20,13 +21,13 @@ But let's start from the beginning ...
 
 In 2016 I tough about the topic of home surveillance for the first time. I was looking for a camera system that could operate on batteries. I have identified two places at our house where I would like to mount a camera but where there is no electricity or wired network available.
 
-The first time I became aware of Arlo was mid 2016. Back then it was a brand of Netgear, later in 2018 it became its own company Arlo Technologies. 
+The first time I became aware of Arlo was mid 2016. Back then it was a brand of Netgear, later in 2018 it became its own company Arlo Technologies.
 
-After some quick market research it turned out I didn't have many options. At that time there was not a wide range of waterproof outdoor cameras available. Unlike today Ring, Reolink, Wyze or Nest cameras didn't even exist at the time, at least not in Europe. 
+After some quick market research it turned out I didn't have many options. At that time there was not a wide range of waterproof outdoor cameras available. Unlike today Ring, Reolink, Wyze or Nest cameras didn't even exist at the time, at least not in Europe.
 
 So Arlo cameras became my first choice and still are today. The initial setup for our home consists of the hub and 2 Arlo cameras - the original version. Later I added a third one.
 
-Arlo cameras, at least if operated solely on batteries, are mostly passive. They only record if someone or something moves. The built-in motion sensor recognises movement and triggers the recording. This helps to optimise for a longer battery life. The initial camera version used replaceable batteries only. These used to last for ~3 months, depending how often the camera got activated. 
+Arlo cameras, at least if operated solely on batteries, are mostly passive. They only record if someone or something moves. The built-in motion sensor recognises movement and triggers the recording. This helps to optimise for a longer battery life. The initial camera version used replaceable batteries only. These used to last for ~3 months, depending how often the camera got activated.
 
 Later versions of the camera came with a rechargeable battery and could be charged without having to remove the battery. They also can get permanent power from a USB power adapter or charged by a solar panel.
 
@@ -36,14 +37,14 @@ Today our setup consists of two Arlo Pro 2 and three Arlo Pro 3 cameras. When up
 
 In my view an Arlo system can only be operated properly with a subscription plan - a paid subscription plan. The recordings and video history are stored in the cloud, which will result in storage and streaming costs.
 
-At the very beginning the initial subscription plans still included 7 day recording history stored in the cloud in the free plan. As of 2021, subscription plans changed, so one can only gain access to all features and store recording history on a paid subscription plan. 
+At the very beginning the initial subscription plans still included 7 day recording history stored in the cloud in the free plan. As of 2021, subscription plans changed, so one can only gain access to all features and store recording history on a paid subscription plan.
 
 It is possible to operate an Arlo setup with a "no plan" option. With this you only get live video streaming directly from the camera and basic notifications. It is also possible to store the recordings on a USB stick connected to the Arlo Hub. Overall the free no plan option is very limited. Many of the new features recently added require a paid subscription. For example:
 
-* person, vehicle, package and animal detection
-* advanced push notifications
-* activity zones and blind zones
-* theft protection
+-   person, vehicle, package and animal detection
+-   advanced push notifications
+-   activity zones and blind zones
+-   theft protection
 
 For me, detecting people, animals, and cars works well. However, I can only really use it for the front door camera. We usually don't have cars or buses in our garden. With advanced or rich push notifications you get a preview image embedded in the notification and you can directly start the video stream.\
 Activity zones and blind zones are working ok but not perfectly for our setup. They definitely require some tuning. I have defined a few blind spots but still get alerts for motions in these zones from time to time.
@@ -64,8 +65,8 @@ Once downloaded the config is like:
 
 ```yaml
 Aarlo:
-  username: !secret arlo_username
-  password: !secret arlo_password
+    username: !secret arlo_username
+    password: !secret arlo_password
 ```
 
 If you want to play with the lasted, unreleased code a manual deployment, directly from GitHub is possible as well.
@@ -82,13 +83,13 @@ In my setup, I use the camera component as an obvious part of a camera surveilla
 
 Additionally Aarlo provides a comprehensive collection of sensors, binary sensors, switches and lights and media_player for your Arlo devices. For these check the documentation on Github:
 
-{% githubBadge "https://github.com/twrecked/hass-Aarlo" "hass-Aarlo project on GitHub" %}
+<github-badge repo="twrecked/hass-Aarlo" label="hass-Aarlo project on GitHub"></github-badge>
 
 First and most important the camera:
 
 ```yaml
 camera:
-  - platform: Aarlo
+    - platform: Aarlo
 ```
 
 That is all you need, Aarlo will create a `camera.Aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by Aarlo is `component-type.Aarlo lowercase name with underscores`. Sensors will use the same naming convention as well.
@@ -99,17 +100,17 @@ The following Home Assistant [sensors](https://github.com/twrecked/hass-Aarlo#se
 
 ```yaml
 sensor:
-  - platform: Aarlo
-    monitored_conditions:
-    - total_cameras
-    - last_capture
-    - recent_activity
-    - captured_today
-    - battery_level
-    - signal_strength
-    - temperature
-    - humidity
-    - air_quality
+    - platform: Aarlo
+      monitored_conditions:
+          - total_cameras
+          - last_capture
+          - recent_activity
+          - captured_today
+          - battery_level
+          - signal_strength
+          - temperature
+          - humidity
+          - air_quality
 ```
 
 While `total_cameras` is a global sensor showing the number of configured devices all other sensors are created for each device. Not all sensors will be available for all devices, for example my cameras (Pro 2 & 3) don't provide temperature, humidity or air quality information.
@@ -131,17 +132,17 @@ It has very powerful options for individual setups, can be configured for one or
 My usage of the cart is pretty standard:
 
 ```yaml
-- type: "custom:Aarlo-glance"
+- type: 'custom:Aarlo-glance'
   entity: camera.Aarlo_pool
   image_top:
-    - name
-    - date
+      - name
+      - date
   image_bottom:
-    - motion
-    - library
-    - stream
-    - snapshot
-    - battery
+      - motion
+      - library
+      - stream
+      - snapshot
+      - battery
 ```
 
 The result looks like:

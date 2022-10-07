@@ -4,8 +4,8 @@ permalink: home-assistant-display/
 date: 2019-07-08
 author: Markus
 description: My second Home Assistant project is about the integration of the Homematic HM-Dis-EP-WM55 e-paper display in my HA setup. I am sharing some reusable scripts for this or similar devices.
-images: 
-  feature: /images/2019-07-08-home-assistant-display/header.jpg
+images:
+    feature: /images/2019-07-08-home-assistant-display/header.jpg
 category: project
 tags:
     - home-automation
@@ -44,6 +44,6 @@ The second script is included in my automation's, once called it collects all th
 
 The button press events (`homematic.keypress`) can be captured by a simple automation. See [Homematic Home Assistant integration](https://www.home-assistant.io/components/homematic/) for more details.
 
-{% githubBadge "https://github.com/mhaack/home-assistant-config" "Source code on GitHub" %}
+<github-badge repo="mhaack/home-assistant-config" label="Home Assistant config"></github-badge>
 
 The full scripts are available in [my Home Assistant config repo](https://github.com/mhaack/home-assistant-config) in the _python_scripts_ folder on GitHub. These are my first python baby steps, feedback and improvements are always welcome.

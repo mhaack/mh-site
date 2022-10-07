@@ -2,17 +2,18 @@
 title: The world of Wemos D1 Mini Boards
 category: project
 tags:
-  - development
-  - arduino
-  - esphome
-  - wemos
+    - development
+    - arduino
+    - esphome
+    - wemos
 images:
-  feature: /images/wemosd1hero.jpg
-description: "Some readers recently asked me about the Wemos D1 mini usage in my
-  projects, the pinout sheet and names and ho to use it with ESPHome. "
+    feature: /images/wemosd1hero.jpg
+description: 'Some readers recently asked me about the Wemos D1 mini usage in my
+    projects, the pinout sheet and names and ho to use it with ESPHome. '
 date: 2022-09-26
 ---
-Some readers recently asked me about the Wemos D1 mini usage in my projects and how this board can be used with ESPHome.  
+
+Some readers recently asked me about the Wemos D1 mini usage in my projects and how this board can be used with ESPHome.
 
 For most of my [Arduino](/tags/arduino/) & [ESPHome](/tags/esphome/) projects I use a [Wemos D1 mini (v3.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_3.1.0.html) or [Wemos D1 mini Pro (v1.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_pro.html). The third board of the family is the is the [D1 mini light](https://www.wemos.cc/en/latest/d1/d1_mini_lite.html). I never used one of the light versions, most of the time you can get the D1 mini & D1 mini pro for almost identical prices at alipexpress.com.
 
@@ -55,7 +56,7 @@ There are only minor differences between the D1 mini and the D1 mini Pro (V1.1.0
 
 The most obvious visible difference is the ceramic antenna and the external antenna connector on the board. With the ceramic antenna the D1 mini Pro should have better WiFi reception than his little brother.
 
-Another difference is the size of the flash memory. In comparison, the D1 mini Pro has 16 MByte of flash memory whereas the D1 mini only has 4 MByte. 
+Another difference is the size of the flash memory. In comparison, the D1 mini Pro has 16 MByte of flash memory whereas the D1 mini only has 4 MByte.
 
 ## D1 mini compatible shields
 

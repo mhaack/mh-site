@@ -63,6 +63,6 @@ Getting started with Eleventy was pretty easy. The [documentation](https://www.1
 
 The initial template I used was the [Eleventy Duo](https://github.com/yinkakun/eleventy-duo) theme. While it helped me get the site up and running, I added quite a few extensions and customizations. As the site got more and more complex, I re-wrote the entire CSS to [Tailwind CSS](https://tailwindcss.com/) and little remains of the original template.
 
-{% githubBadge "https://github.com/mhaack/mh-site" "Source code on GitHub" %}
+<github-badge repo="mhaack/mh-site"></github-badge>
 
 Source hero image: [unsplash.com](https://unsplash.com/photos/tZc3vjPCk-Q)

@@ -3,8 +3,8 @@ title: 'New Talk: Extend AEM Content & Commerce'
 author: Markus
 date: 2021-10-18
 permalink: extend-aem-commerce/
-images: 
-  feature: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
+images:
+    feature: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
 category: work
 tags:
     - adobe
@@ -23,5 +23,4 @@ https://www.youtube.com/watch?v=25cTzVV2jfQ
 
 Projects build by our team mentioned in the talk:
 
-{% githubBadge "https://github.com/adobe/aem-core-cif-components" "AEM CIF Core Components" %}
-{% githubBadge "https://github.com/adobe/commerce-cif-graphql-integration-reference" "CIF GraphQL integration reference project" %}
+<github-badge repo="adobe/aem-core-cif-components" label="AEM CIF Core Components"></github-badge><github-badge repo="adobe/commerce-cif-graphql-integration-reference" label="CIF GraphQL integration reference project"></github-badge>

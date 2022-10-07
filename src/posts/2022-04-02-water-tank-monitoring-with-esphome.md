@@ -2,19 +2,20 @@
 title: Water tank monitoring with ESPHome
 category: project
 tags:
-  - esphome
-  - home-automation
-  - watering
-  - garden
+    - esphome
+    - home-automation
+    - watering
+    - garden
 images:
-  feature: /images/watertank-unsplash.jpg
-  height: h-96
+    feature: /images/watertank-unsplash.jpg
+    height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
-  favourite things to do. This had to be done better - fully automatically and
-  without intervention.
+    favourite things to do. This had to be done better - fully automatically and
+    without intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
 ---
+
 Watering your lawn and plants around the house wasn't one of my favourite things to do. Especially when we bought a robot lawnmower, watering the lawn became quite a hassle since we had to always put away the sprinklers and hoses after each irrigation.
 
 An automatic irrigation system was needed. Inspired by [this thread](https://community.home-assistant.io/t/garden-irrigation/1950) on the HA Community I started looking into building a DIY solution. Which includes controlling the individual irrigation zones, monitoring the water level of the cistern and, if necessary, automatically filling the cistern. We end up with a mixed setup using a Hunter Hydrawise as the irrigation controller and a custom made solution to monitor and refill the water tank.
@@ -52,7 +53,7 @@ So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been ru
 
 {% image "/images/microcontroller-watertank.jpg", "microcontroller watertank sensor", "x-small" %}
 
-The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.  
+The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.
 
 {% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small" %}
 
@@ -66,87 +67,87 @@ The ESPHome configuration for the water tank sensor is relativly simple. Only 80
 
 ```yaml
 esphome:
-  name: watertank
-  platform: ESP8266
-  board: d1_mini_pro
+    name: watertank
+    platform: ESP8266
+    board: d1_mini_pro
 
 wifi:
-  ssid: !secret esphome_wifi_ssid
-  password: !secret esphome_wifi_password
+    ssid: !secret esphome_wifi_ssid
+    password: !secret esphome_wifi_password
 
-  ap:
-    ssid: esp01
+    ap:
+        ssid: esp01
 
 captive_portal:
 
 logger:
 
 api:
-  password: !secret esphome_api_password
+    password: !secret esphome_api_password
 
 ota:
-  password: !secret esphome_ota_password
+    password: !secret esphome_ota_password
 
 sensor:
-  # Wifi signal sensor.
-  - platform: wifi_signal
-    name: garden_watertank_wifi
-    update_interval: 600s
-    unit_of_measurement: "%"
-    filters:
-      - lambda: |-
-          if (x <= -100) {
-            return 0;
-          } else {
-            if (x >= -50) {
-              return 100;
-            } else {
-              return 2 * (x + 100);
-            }
-          }
+    # Wifi signal sensor.
+    - platform: wifi_signal
+      name: garden_watertank_wifi
+      update_interval: 600s
+      unit_of_measurement: '%'
+      filters:
+          - lambda: |-
+                if (x <= -100) {
+                  return 0;
+                } else {
+                  if (x >= -50) {
+                    return 100;
+                  } else {
+                    return 2 * (x + 100);
+                  }
+                }
 
-  # Templates for calculated liter & percent
-  - platform: template
-    name: garden_watertank_liter
-    id: garden_watertank_liter
-    icon: "mdi:water"
-    unit_of_measurement: "l"
-    accuracy_decimals: 0
+    # Templates for calculated liter & percent
+    - platform: template
+      name: garden_watertank_liter
+      id: garden_watertank_liter
+      icon: 'mdi:water'
+      unit_of_measurement: 'l'
+      accuracy_decimals: 0
 
-  - platform: template
-    name: garden_watertank_percent
-    id: garden_watertank_percent
-    icon: "mdi:water-percent"
-    unit_of_measurement: "%"
+    - platform: template
+      name: garden_watertank_percent
+      id: garden_watertank_percent
+      icon: 'mdi:water-percent'
+      unit_of_measurement: '%'
 
-  # The actual distance sensor
-  - platform: ultrasonic
-    trigger_pin: D1
-    echo_pin: D2
-    name: garden_watertank_distance
-    update_interval: 600s
-    pulse_time: 50us
-    filters:
-      - filter_out: nan
-      - median:
-          window_size: 7
-          send_every: 4
-          send_first_at: 3
-      - calibrate_linear:
-          - 0.23 -> 1.86
-          - 2.41 -> 0.0
-    on_value:
-      then:
-        - sensor.template.publish:
-            id: garden_watertank_liter
-            state: !lambda 'return x * 3141.592653589793238;'
+    # The actual distance sensor
+    - platform: ultrasonic
+      trigger_pin: D1
+      echo_pin: D2
+      name: garden_watertank_distance
+      update_interval: 600s
+      pulse_time: 50us
+      filters:
+          - filter_out: nan
+          - median:
+                window_size: 7
+                send_every: 4
+                send_first_at: 3
+          - calibrate_linear:
+                - 0.23 -> 1.86
+                - 2.41 -> 0.0
+      on_value:
+          then:
+              - sensor.template.publish:
+                    id: garden_watertank_liter
+                    state: !lambda 'return x * 3141.592653589793238;'
 
-        - sensor.template.publish:
-            id: garden_watertank_percent
-            state: !lambda 'return x * 53.979255216319471;'
+              - sensor.template.publish:
+                    id: garden_watertank_percent
+                    state: !lambda 'return x * 53.979255216319471;'
 ```
 
-The most crucial parts of the code config start in line 56 with the setup of the [ultra sonic sensor](https://esphome.io/components/sensor/ultrasonic.html). 
+The most crucial parts of the code config start in line 56 with the setup of the [ultra sonic sensor](https://esphome.io/components/sensor/ultrasonic.html).
 
 I decided to send updated measurements every 10 minutes only. The water level does not vary that much during most of the year, so there are not many updates. But if we consume water quickly and there is heavy rain filling the cistern the 10 minutes interval still results in a smooth graph.
 
@@ -170,7 +171,7 @@ The way the sensor works it can not be super accurate and it is not really impor
 
 {% image "/images/bildschirmfoto-2022-06-02-um-11.32.png", "Compare ESPHome sensor & flow meter", "small" %}
 
-The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters)  `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 liter. That is the minimum accuracy we can get.
+The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters) `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 liter. That is the minimum accuracy we can get.
 
 ## Into Home Assistant
 
