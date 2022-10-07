@@ -6,23 +6,8 @@
     <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
   </svg>
 </button>
-
-<script webc:keep>
-  class ScrollToTop extends HTMLElement {
-    connectedCallback() {
-      const scrollToTopButton = this.querySelector(':scope button')
-      if (scrollToTopButton) {
-        scrollToTopButton.addEventListener('click', () => window.scroll({ behavior: 'smooth', top: 0 }))
-        window.addEventListener('scroll', () => {
-          500 <= window.scrollY
-            ? scrollToTopButton.classList.remove('opacity-0')
-            : scrollToTopButton.classList.add('opacity-0')
-        })
-      }
-    }
-  }
-
-  if ('customElements' in window) {
-    window.customElements.define('scroll-to-top', ScrollToTop)
-  }
-</script>
+<is-land on:idle>
+  <template data-island="once">
+    <script src="/assets/js/scroll-to-top.js"></script>
+  </template>
+</is-land>

@@ -41,6 +41,7 @@
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
+        "@11ty/is-land": "^2.0.3",
         "speedlify-score": "^2.0.2"
     }
 }

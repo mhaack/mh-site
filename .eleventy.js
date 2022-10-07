@@ -32,11 +32,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true)
 
     // copy static assets
-    eleventyConfig.addPassthroughCopy({ 'src/images': 'images' })
-    eleventyConfig.addPassthroughCopy({ 'src/_assets': 'assets' })
-    eleventyConfig.addPassthroughCopy({
-        'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
-    })
+    eleventyConfig.addPassthroughCopy({ './src/images': 'images' })
+    eleventyConfig.addPassthroughCopy({ './src/_assets': 'assets' })
+    eleventyConfig.addPassthroughCopy({ './src/_includes/components/*.js': 'assets/js/' })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js' })
+    eleventyConfig.addPassthroughCopy({ 'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js' })
+
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
