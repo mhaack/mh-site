@@ -4,14 +4,14 @@ author: Markus
 date: 2020-01-14T00:00:00.000Z
 permalink: jama-villa/
 description: Our Home Assistant setup is pretty simple - everything currently runs
-    on a single board computer - smooth and stable for 12+ months. This is how our
-    setup looks like.
+ on a single board computer - smooth and stable for 12+ months. This is how our
+ setup looks like.
 images:
-    feature: /images/2020-01-14-jama-villa/dashboard-teaser.jpg
+ feature: /images/2020-01-14-jama-villa/dashboard-teaser.jpg
 category: project
 tags:
-    - home-automation
-    - home-assistant
+ - home-automation
+ - home-assistant
 ---
 
 I try to gather and describe our Home Assistant setup here, along with the configuration in GitHub. Maybe there is something useful to copy and adapt :-) I already documented our [migration journey](/home-assistant/) from OpenHab to Home Assistant and some details about how to better integrate [Homematic devices](/home-assistant-display/) into HA.
@@ -98,13 +98,13 @@ A full list of all custom cards currently used is in [Git](https://github.com/mh
 
 The entire JaMa Villa Home Assistant setup is running and managed by hass.io. With the following add-ons currently used:
 
--   [AdGuard Home](https://github.com/hassio-addons/addon-adguard-home)
--   [Visual Studio Code](https://github.com/hassio-addons/addon-vscode)
--   [Grafana](https://github.com/hassio-addons/addon-grafana)
--   [InfluxDB](https://github.com/hassio-addons/addon-influxdb)
--   [Log Viewer](https://github.com/hassio-addons/addon-log-viewer)
--   [Mosquitto MQTT broker](https://home-assistant.io/addons/mosquitto/)
--   [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh)
--   [Samba share](https://home-assistant.io/addons/samba/)
+- [AdGuard Home](https://github.com/hassio-addons/addon-adguard-home)
+- [Visual Studio Code](https://github.com/hassio-addons/addon-vscode)
+- [Grafana](https://github.com/hassio-addons/addon-grafana)
+- [InfluxDB](https://github.com/hassio-addons/addon-influxdb)
+- [Log Viewer](https://github.com/hassio-addons/addon-log-viewer)
+- [Mosquitto MQTT broker](https://home-assistant.io/addons/mosquitto/)
+- [SSH & Web Terminal](https://github.com/hassio-addons/addon-ssh)
+- [Samba share](https://home-assistant.io/addons/samba/)
 
 That's it on our Home Assistant setup. Feel free to reach out if you have questions.

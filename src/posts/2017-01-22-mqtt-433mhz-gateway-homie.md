@@ -5,11 +5,11 @@ author: Markus
 date: 2017-01-22
 description: This project is a simple bidirectional gateway to transmit and receive 433Mhz RF signals connected to MQTT. It is built with a cost-effective ESP8266 WiFi chip, simple 433Mhz RF modules and an additional BMP085 sensor.
 images:
-    feature: '/images/2017-01-22-mqtt-433mhz-gateway-homie/header.jpg'
+ feature: '/images/2017-01-22-mqtt-433mhz-gateway-homie/header.jpg'
 category: project
 tags:
-    - arduino
-    - development
+ - arduino
+ - development
 ---
 
 ## Smart Home 433Mhz RF <-> MQTT Gateway with Some Extras
@@ -18,9 +18,9 @@ The MQTT-433mhz-gateway-homie project is a simple bidirectional gateway to trans
 
 It enables you to:
 
--   receive MQTT data from a topic and send the 433Mhz signal.
--   receive 433Mhz signal from a traditional remote, optional map it to a channel and publish the data to a MQTT topic.
--   additionally, a simple temperature sensor can record the room temperature of the room where the gateway is installed.
+- receive MQTT data from a topic and send the 433Mhz signal.
+- receive 433Mhz signal from a traditional remote, optional map it to a channel and publish the data to a MQTT topic.
+- additionally, a simple temperature sensor can record the room temperature of the room where the gateway is installed.
 
 The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
 
@@ -30,10 +30,10 @@ The final assembly looks like this:
 
 ### Hardware
 
--   ESP8266 (Wemos D1 mini, Nodemcu)
--   RF Receiver 433Mhz
--   RF Transmitter 433MHz
--   BMP085 or BMP180 sensor breakout
+- ESP8266 (Wemos D1 mini, Nodemcu)
+- RF Receiver 433Mhz
+- RF Transmitter 433MHz
+- BMP085 or BMP180 sensor breakout
 
 I got the RF modules from https://www.sparkfun.com, others will do as well. Additional I got some [Wemos Protoboards](https://www.wemos.cc/product/protoboard.html), a USB power supply with a very short cable
 and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to keep all together.
@@ -61,11 +61,11 @@ The wireing of the gateway project is very easy. The sensor, the transmitter and
 
 The following software libraries are used. When using PlatformIO all dependencies are resolved automatically.
 
--   [Homie V2](https://github.com/marvinroger/homie-esp8266) (dev) including dependencies
--   [RCSwitch](https://github.com/sui77/rc-switch)
--   [Adafruit BMP085 Unified](https://github.com/adafruit/Adafruit_BMP085_Unified)
--   [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
--   Optionally PlatformIO environment for building the code
+- [Homie V2](https://github.com/marvinroger/homie-esp8266) (dev) including dependencies
+- [RCSwitch](https://github.com/sui77/rc-switch)
+- [Adafruit BMP085 Unified](https://github.com/adafruit/Adafruit_BMP085_Unified)
+- [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
+- Optionally PlatformIO environment for building the code
 
 <github-badge repo="mhaack/mqtt-433mhz-gateway-homie"></github-badge>
 

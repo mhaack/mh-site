@@ -2,15 +2,15 @@
 title: Green grass with Home Assistant
 category: project
 tags:
-    - esphome
-    - home-automation
-    - home-assistant
-    - garden
-    - watering
-    - plants
+ - esphome
+ - home-automation
+ - home-assistant
+ - garden
+ - watering
+ - plants
 images:
-    feature: /images/my-garden-watering-project.png
-    height: null
+ feature: /images/my-garden-watering-project.png
+ height: null
 date: 2022-06-01
 ---
 
@@ -22,8 +22,8 @@ In my [previous post](/watertank-esphome/), I explained how I measured the level
 
 The only water supply for the entire irrigation system is our water tank. The pipes are not connected to our domestic water connection. There are two reasons for this:
 
--   the outside water tap does not have enough pressure and the flow rate is too low
--   it is cumbersome to connect two water sources - domestic water connection and rainwater tank into one cycle
+- the outside water tap does not have enough pressure and the flow rate is too low
+- it is cumbersome to connect two water sources - domestic water connection and rainwater tank into one cycle
 
 In our region, connecting domestic water and rainwater can be tricky and may require the installation of expensive extra equipment. A special pump and a backflow stop valve are needed to make sure rainwater for the water tank does not flow back into the public water pipes.
 
@@ -67,38 +67,38 @@ With a simple automation triggered by every valve change we can control our main
 id: 493a7766-2d4f-4f11-a80d-413d02f2498e
 alias: '[Watertank] Pump operation controller'
 trigger:
-    - platform: state
-      entity_id:
-          - binary_sensor.rasen_watering
-          - binary_sensor.vorgarten_watering
-          - binary_sensor.beete_watering
-          - binary_sensor.hecke_watering
+ - platform: state
+   entity_id:
+    - binary_sensor.rasen_watering
+    - binary_sensor.vorgarten_watering
+    - binary_sensor.beete_watering
+    - binary_sensor.hecke_watering
 mode: parallel
 action:
-    - choose:
-          - conditions:
-                - condition: template
-                  value_template: "{{ trigger.to_state.state == 'on' }}"
-            sequence:
-                - service: switch.turn_on
-                  data:
-                      entity_id: switch.garden_watertank_pump
-                - service: notify.mobile_app_iphone
-                  data:
-                      title: JaMa Villa - 🚰
-                      message: Bewässerung wurde eingeschaltet.
-                      data:
-                          group: notification-irrigation
-      default:
-          - service: switch.turn_off
-            data:
-                entity_id: switch.garden_watertank_pump
-          - service: notify.mobile_app_iphone
-            data:
-                title: JaMa Villa - 🚰
-                message: Bewässerung wurde ausgeschaltet.
-                data:
-                    group: notification-irrigation
+ - choose:
+    - conditions:
+       - condition: template
+         value_template: "{{ trigger.to_state.state == 'on' }}"
+      sequence:
+       - service: switch.turn_on
+         data:
+          entity_id: switch.garden_watertank_pump
+       - service: notify.mobile_app_iphone
+         data:
+          title: JaMa Villa - 🚰
+          message: Bewässerung wurde eingeschaltet.
+          data:
+           group: notification-irrigation
+   default:
+    - service: switch.turn_off
+      data:
+       entity_id: switch.garden_watertank_pump
+    - service: notify.mobile_app_iphone
+      data:
+       title: JaMa Villa - 🚰
+       message: Bewässerung wurde ausgeschaltet.
+       data:
+        group: notification-irrigation
 ```
 
 I also created a handy dashboard in Home Assistant which shows me the running irrigation program and the next scheduled watering times. Additionally, it shows how much water we have in our tank and how the pump is performing.
@@ -126,33 +126,33 @@ The solenoid valve is connected via some Sonoff socket which can be controlled v
 id: 86e7306b-00ae-4773-9af8-595a1a748858
 alias: '[Watertank] Automatic Refill'
 trigger:
-    - platform: numeric_state
-      entity_id: sensor.garden_watertank_liter
-      below: 2500
+ - platform: numeric_state
+   entity_id: sensor.garden_watertank_liter
+   below: 2500
 
 action:
-    # first run
-    - service: switch.turn_on
-      entity_id: switch.garden_watertank_refill
-    - delay: 20:00
-    - service: switch.turn_off
-      entity_id: switch.garden_watertank_refill
+ # first run
+ - service: switch.turn_on
+   entity_id: switch.garden_watertank_refill
+ - delay: 20:00
+ - service: switch.turn_off
+   entity_id: switch.garden_watertank_refill
 
-    # second run
-    - delay: 1:00
-    - service: switch.turn_on
-      entity_id: switch.garden_watertank_refill
-    - delay: 20:00
-    - service: switch.turn_off
-      entity_id: switch.garden_watertank_refill
+ # second run
+ - delay: 1:00
+ - service: switch.turn_on
+   entity_id: switch.garden_watertank_refill
+ - delay: 20:00
+ - service: switch.turn_off
+   entity_id: switch.garden_watertank_refill
 
-    # third run
-    - delay: 1:00
-    - service: switch.turn_on
-      entity_id: switch.garden_watertank_refill
-    - delay: 20:00
-    - service: switch.turn_off
-      entity_id: switch.garden_watertank_refill
+ # third run
+ - delay: 1:00
+ - service: switch.turn_on
+   entity_id: switch.garden_watertank_refill
+ - delay: 20:00
+ - service: switch.turn_off
+   entity_id: switch.garden_watertank_refill
 ```
 
 Automation appears to be more complicated than it actually is. If we run below 2.500 litres, it starts the refill. It runs for one hour but at 20-minute intervals. This is in our case needed because our domestic water connection has a leak detection system. If an excessive flow or too long water consumption is detected the main tap is blocked. This has to be unblocked manually. To avoid this we simply add some pauses to the automation.

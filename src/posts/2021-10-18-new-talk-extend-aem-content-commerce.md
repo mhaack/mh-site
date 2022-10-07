@@ -4,13 +4,13 @@ author: Markus
 date: 2021-10-18
 permalink: extend-aem-commerce/
 images:
-    feature: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
+ feature: /images/2021-10-18-new-talk-extend-aem-content-commerce/6caf0019-8218-4124-868f-f88d48adb995.jpeg
 category: work
 tags:
-    - adobe
-    - aem
-    - commerce
-    - cif
+ - adobe
+ - aem
+ - commerce
+ - cif
 ---
 
 At the last Adobe Developers Live conference I gave a talk about how to extend AEM Content & Commerce with new Adobe Developer App Builder.

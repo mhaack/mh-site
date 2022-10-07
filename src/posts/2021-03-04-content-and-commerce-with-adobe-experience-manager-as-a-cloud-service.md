@@ -4,13 +4,13 @@ author: Markus
 date: 2021-03-04
 permalink: content-and-commerce/
 images:
-    feature: /images/2021-03-04-content-and-commerce-with-adobe-experience-manager-as-a-cloud-service/content-and-commerce.png
+ feature: /images/2021-03-04-content-and-commerce-with-adobe-experience-manager-as-a-cloud-service/content-and-commerce.png
 category: work
 tags:
-    - adobe
-    - aem
-    - commerce
-    - cif
+ - adobe
+ - aem
+ - commerce
+ - cif
 ---
 
 I held a session on "Content and Commerce with Adobe Experience Manager" at the recent Adobe Developers Live | Content conference.

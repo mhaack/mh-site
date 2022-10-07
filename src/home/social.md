@@ -1,12 +1,12 @@
 ---
 icon: twitter
 theme:
-    background: bg-mountain-300
-    text: text-gray-900
-    icon: text-blue-500
+ background: bg-mountain-300
+ text: text-gray-900
+ icon: text-blue-500
 order: 4
 sitemap:
-    ignore: true
+ ignore: true
 ---
 
 You can also find me on [Twitter], [Instagram], [LinkedIn] and [GitHub].

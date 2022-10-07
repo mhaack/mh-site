@@ -1,10 +1,10 @@
 ---
 theme:
-    background: bg-sandy-brown-300
-    text: text-gray-900
+ background: bg-sandy-brown-300
+ text: text-gray-900
 order: 2
 sitemap:
-    ignore: true
+ ignore: true
 templateEngineOverride: njk
 ---
 

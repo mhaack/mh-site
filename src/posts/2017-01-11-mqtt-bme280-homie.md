@@ -7,11 +7,11 @@ description: The mqtt-bme280-homie project is a small and easy to integrate temp
 github: 'https://github.com/mhaack/mqtt-bme280-homie'
 hacksterio: 'https://www.hackster.io/markushaack/homie-bme280-the-sensor-bad08d'
 images:
-    feature: '/images/2017-01-11-mqtt-bme280-homie/sensor.jpg'
+ feature: '/images/2017-01-11-mqtt-bme280-homie/sensor.jpg'
 category: project
 tags:
-    - arduino
-    - development
+ - arduino
+ - development
 ---
 
 ## Homie BME280 - The Sensor
@@ -26,11 +26,11 @@ The display shows 4 screens (can be extended) in a carousel mode. temperature, h
 
 ### Hardware components
 
--   ESP8266 (Wemos D1 mini, Nodemcu)
--   BME280 sensor breakout
--   SSD1306 OLED display
--   USB power supply and cable
--   Enclosure
+- ESP8266 (Wemos D1 mini, Nodemcu)
+- BME280 sensor breakout
+- SSD1306 OLED display
+- USB power supply and cable
+- Enclosure
 
 I got the BME280 breakout form [Adafruit](https://www.adafruit.com/product/2652), others will do as well. The SSD1306 OLED displays I ordered at Aliexpress. This [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) keeps everything together. Wiring is pretty simple since both sensor and display connect via I2C bus with the ESP.
 
@@ -38,12 +38,12 @@ I got the BME280 breakout form [Adafruit](https://www.adafruit.com/product/2652)
 
 The following software libraries are used. If using PlatformIO all dependencies are resolved automatically.
 
--   [Homie V2](https://github.com/marvinroger/homie-esp8266) (dev) including dependencies
--   [Adafruit BME280 Driver](https://github.com/adafruit/Adafruit_BME280_Library)
--   [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
--   [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
--   [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
--   Optionally PlatformIO environment for building the code
+- [Homie V2](https://github.com/marvinroger/homie-esp8266) (dev) including dependencies
+- [Adafruit BME280 Driver](https://github.com/adafruit/Adafruit_BME280_Library)
+- [Adafruit Unified Sensor](https://github.com/adafruit/Adafruit_Sensor)
+- [SSD1306 driver for ESP8266 platform](https://github.com/squix78/esp8266-oled-ssd1306)
+- [NTPClient to connect to a time server](https://github.com/arduino-libraries/NTPClient)
+- Optionally PlatformIO environment for building the code
 
 <github-badge repo="mhaack/mqtt-bme280-homie"></github-badge>
 

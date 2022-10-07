@@ -2,12 +2,12 @@
 title: Mia's Dino Facts
 category: project
 tags:
-    - website
-    - eleventy
-    - dinosaurs
-    - development
+ - website
+ - eleventy
+ - dinosaurs
+ - development
 images:
-    feature: /images/dino-fakten-screenshot.png
+ feature: /images/dino-fakten-screenshot.png
 date: 2022-02-06
 ---
 

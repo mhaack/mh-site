@@ -2,14 +2,14 @@
 title: The world of Wemos D1 Mini Boards
 category: project
 tags:
-    - development
-    - arduino
-    - esphome
-    - wemos
+ - development
+ - arduino
+ - esphome
+ - wemos
 images:
-    feature: /images/wemosd1hero.jpg
+ feature: /images/wemosd1hero.jpg
 description: 'Some readers recently asked me about the Wemos D1 mini usage in my
-    projects, the pinout sheet and names and ho to use it with ESPHome. '
+ projects, the pinout sheet and names and ho to use it with ESPHome. '
 date: 2022-09-26
 ---
 

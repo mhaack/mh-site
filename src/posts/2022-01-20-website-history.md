@@ -2,12 +2,12 @@
 title: Website History
 category: project
 tags:
-    - eleventy
-    - website
-    - development
+ - eleventy
+ - website
+ - development
 images:
-    feature: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
-    height: h-96
+ feature: /images/hal-gatewood-tzc3vjpck-q-unsplash.jpg
+ height: h-96
 date: 2022-01-20
 ---
 

@@ -2,16 +2,16 @@
 title: Water tank monitoring with ESPHome
 category: project
 tags:
-    - esphome
-    - home-automation
-    - watering
-    - garden
+ - esphome
+ - home-automation
+ - watering
+ - garden
 images:
-    feature: /images/watertank-unsplash.jpg
-    height: h-96
+ feature: /images/watertank-unsplash.jpg
+ height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
-    favourite things to do. This had to be done better - fully automatically and
-    without intervention.
+ favourite things to do. This had to be done better - fully automatically and
+ without intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
 ---
@@ -67,84 +67,84 @@ The ESPHome configuration for the water tank sensor is relativly simple. Only 80
 
 ```yaml
 esphome:
-    name: watertank
-    platform: ESP8266
-    board: d1_mini_pro
+ name: watertank
+ platform: ESP8266
+ board: d1_mini_pro
 
 wifi:
-    ssid: !secret esphome_wifi_ssid
-    password: !secret esphome_wifi_password
+ ssid: !secret esphome_wifi_ssid
+ password: !secret esphome_wifi_password
 
-    ap:
-        ssid: esp01
+ ap:
+  ssid: esp01
 
 captive_portal:
 
 logger:
 
 api:
-    password: !secret esphome_api_password
+ password: !secret esphome_api_password
 
 ota:
-    password: !secret esphome_ota_password
+ password: !secret esphome_ota_password
 
 sensor:
-    # Wifi signal sensor.
-    - platform: wifi_signal
-      name: garden_watertank_wifi
-      update_interval: 600s
-      unit_of_measurement: '%'
-      filters:
-          - lambda: |-
-                if (x <= -100) {
-                  return 0;
-                } else {
-                  if (x >= -50) {
-                    return 100;
-                  } else {
-                    return 2 * (x + 100);
-                  }
-                }
+ # Wifi signal sensor.
+ - platform: wifi_signal
+   name: garden_watertank_wifi
+   update_interval: 600s
+   unit_of_measurement: '%'
+   filters:
+    - lambda: |-
+       if (x <= -100) {
+         return 0;
+       } else {
+         if (x >= -50) {
+           return 100;
+         } else {
+           return 2 * (x + 100);
+         }
+       }
 
-    # Templates for calculated liter & percent
-    - platform: template
-      name: garden_watertank_liter
-      id: garden_watertank_liter
-      icon: 'mdi:water'
-      unit_of_measurement: 'l'
-      accuracy_decimals: 0
+ # Templates for calculated liter & percent
+ - platform: template
+   name: garden_watertank_liter
+   id: garden_watertank_liter
+   icon: 'mdi:water'
+   unit_of_measurement: 'l'
+   accuracy_decimals: 0
 
-    - platform: template
-      name: garden_watertank_percent
-      id: garden_watertank_percent
-      icon: 'mdi:water-percent'
-      unit_of_measurement: '%'
+ - platform: template
+   name: garden_watertank_percent
+   id: garden_watertank_percent
+   icon: 'mdi:water-percent'
+   unit_of_measurement: '%'
 
-    # The actual distance sensor
-    - platform: ultrasonic
-      trigger_pin: D1
-      echo_pin: D2
-      name: garden_watertank_distance
-      update_interval: 600s
-      pulse_time: 50us
-      filters:
-          - filter_out: nan
-          - median:
-                window_size: 7
-                send_every: 4
-                send_first_at: 3
-          - calibrate_linear:
-                - 0.23 -> 1.86
-                - 2.41 -> 0.0
-      on_value:
-          then:
-              - sensor.template.publish:
-                    id: garden_watertank_liter
-                    state: !lambda 'return x * 3141.592653589793238;'
+ # The actual distance sensor
+ - platform: ultrasonic
+   trigger_pin: D1
+   echo_pin: D2
+   name: garden_watertank_distance
+   update_interval: 600s
+   pulse_time: 50us
+   filters:
+    - filter_out: nan
+    - median:
+       window_size: 7
+       send_every: 4
+       send_first_at: 3
+    - calibrate_linear:
+       - 0.23 -> 1.86
+       - 2.41 -> 0.0
+   on_value:
+    then:
+     - sensor.template.publish:
+        id: garden_watertank_liter
+        state: !lambda 'return x * 3141.592653589793238;'
 
-              - sensor.template.publish:
-                    id: garden_watertank_percent
-                    state: !lambda 'return x * 53.979255216319471;'
+     - sensor.template.publish:
+        id: garden_watertank_percent
+        state: !lambda 'return x * 53.979255216319471;'
 ```
 
 The most crucial parts of the code config start in line 56 with the setup of the [ultra sonic sensor](https://esphome.io/components/sensor/ultrasonic.html).

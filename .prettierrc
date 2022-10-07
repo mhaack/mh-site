@@ -4,5 +4,13 @@
     "tabWidth": 4,
     "printWidth": 120,
     "useTabs": false,
-    "bracketSpacing": true
+    "bracketSpacing": true,
+    "overrides": [
+        {
+            "files": "*.md",
+            "options": {
+                "tabWidth": 1
+            }
+        }
+    ]
 }

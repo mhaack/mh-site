@@ -2,14 +2,14 @@
 title: Arlo Cameras in Home Assistant
 category: project
 tags:
-    - home-assistant
-    - home-automation
-    - camera
+ - home-assistant
+ - home-automation
+ - camera
 images:
-    feature: /images/home_assistant_arlo.jpg
+ feature: /images/home_assistant_arlo.jpg
 description: Home Assistant & Arlo cameras go better very well. I'm using it
-    since our entire setup got migrated from OpenHab to Home Assistant and I'm
-    happy with the setup.
+ since our entire setup got migrated from OpenHab to Home Assistant and I'm
+ happy with the setup.
 date: 2022-03-14
 ---
 
@@ -41,10 +41,10 @@ At the very beginning the initial subscription plans still included 7 day record
 
 It is possible to operate an Arlo setup with a "no plan" option. With this you only get live video streaming directly from the camera and basic notifications. It is also possible to store the recordings on a USB stick connected to the Arlo Hub. Overall the free no plan option is very limited. Many of the new features recently added require a paid subscription. For example:
 
--   person, vehicle, package and animal detection
--   advanced push notifications
--   activity zones and blind zones
--   theft protection
+- person, vehicle, package and animal detection
+- advanced push notifications
+- activity zones and blind zones
+- theft protection
 
 For me, detecting people, animals, and cars works well. However, I can only really use it for the front door camera. We usually don't have cars or buses in our garden. With advanced or rich push notifications you get a preview image embedded in the notification and you can directly start the video stream.\
 Activity zones and blind zones are working ok but not perfectly for our setup. They definitely require some tuning. I have defined a few blind spots but still get alerts for motions in these zones from time to time.
@@ -65,8 +65,8 @@ Once downloaded the config is like:
 
 ```yaml
 Aarlo:
-    username: !secret arlo_username
-    password: !secret arlo_password
+ username: !secret arlo_username
+ password: !secret arlo_password
 ```
 
 If you want to play with the lasted, unreleased code a manual deployment, directly from GitHub is possible as well.
@@ -89,7 +89,7 @@ First and most important the camera:
 
 ```yaml
 camera:
-    - platform: Aarlo
+ - platform: Aarlo
 ```
 
 That is all you need, Aarlo will create a `camera.Aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by Aarlo is `component-type.Aarlo lowercase name with underscores`. Sensors will use the same naming convention as well.
@@ -100,17 +100,17 @@ The following Home Assistant [sensors](https://github.com/twrecked/hass-Aarlo#se
 
 ```yaml
 sensor:
-    - platform: Aarlo
-      monitored_conditions:
-          - total_cameras
-          - last_capture
-          - recent_activity
-          - captured_today
-          - battery_level
-          - signal_strength
-          - temperature
-          - humidity
-          - air_quality
+ - platform: Aarlo
+   monitored_conditions:
+    - total_cameras
+    - last_capture
+    - recent_activity
+    - captured_today
+    - battery_level
+    - signal_strength
+    - temperature
+    - humidity
+    - air_quality
 ```
 
 While `total_cameras` is a global sensor showing the number of configured devices all other sensors are created for each device. Not all sensors will be available for all devices, for example my cameras (Pro 2 & 3) don't provide temperature, humidity or air quality information.
@@ -135,14 +135,14 @@ My usage of the cart is pretty standard:
 - type: 'custom:Aarlo-glance'
   entity: camera.Aarlo_pool
   image_top:
-      - name
-      - date
+   - name
+   - date
   image_bottom:
-      - motion
-      - library
-      - stream
-      - snapshot
-      - battery
+   - motion
+   - library
+   - stream
+   - snapshot
+   - battery
 ```
 
 The result looks like:
