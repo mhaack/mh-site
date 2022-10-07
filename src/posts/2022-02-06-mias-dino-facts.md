@@ -2,12 +2,12 @@
 title: Mia's Dino Facts
 category: project
 tags:
-    - website
-    - eleventy
-    - dinosaurs
-    - development
+ - website
+ - eleventy
+ - dinosaurs
+ - development
 images:
-  feature: /images/dino-fakten-screenshot.png
+ feature: /images/dino-fakten-screenshot.png
 date: 2022-02-06
 ---
 
@@ -39,7 +39,7 @@ The site itself is now hosted on [Netlify](https://www.netlify.com/), with the d
 
 The source code of the site is available on GitHub:
 
-{% githubBadge "mhaack/mias-dino-facts" %}
+<github-badge repo="mhaack/mias-dino-facts" ></github-badge>
 
 ## What is next?
 

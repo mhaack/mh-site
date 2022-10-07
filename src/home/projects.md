@@ -1,12 +1,13 @@
 ---
 theme:
-  background: bg-sandy-brown-300
-  text: text-gray-900
+ background: bg-sandy-brown-300
+ text: text-gray-900
 order: 2
 sitemap:
-  ignore: true
+ ignore: true
 templateEngineOverride: njk
 ---
+
 <p class="mb-8">Since you are here - you can check out my projects.</p>
 
 {% set postslist = collections.posts | head(-3) %}

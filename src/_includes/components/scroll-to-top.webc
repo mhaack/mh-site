@@ -1,0 +1,13 @@
+<button class="opacity-0 right-8 bottom-8 md:bottom-20 fixed p-2 duration-500 ease-in-out shadow-xl
+    text-white bg-blue-dianne-800 hover:bg-jungle-green-600 transform transition focus:scale-110 hover:scale-110"
+  id="scrollToTop" title="Scroll to the top of the article">
+  <svg class="fill-current" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none" />
+    <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+  </svg>
+</button>
+<is-land on:idle>
+  <template data-island="once">
+    <script src="/assets/js/scroll-to-top.js"></script>
+  </template>
+</is-land>

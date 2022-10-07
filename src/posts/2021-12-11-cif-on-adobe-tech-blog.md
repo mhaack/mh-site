@@ -2,16 +2,16 @@
 title: CIF on Adobe Tech Blog
 date: 2021-12-11
 description: 'An intro and summary about some professional writing I did in the
-    last few weeks and months for the Adobe Tech Blog.'
+ last few weeks and months for the Adobe Tech Blog.'
 category: work
 tags:
-    - adobe
-    - aem
-    - commerce
-    - cif
-images: 
-  feature: /images/cif-adobe-tech-blog.jpeg
-  height: h-96
+ - adobe
+ - aem
+ - commerce
+ - cif
+images:
+ feature: /images/cif-adobe-tech-blog.jpeg
+ height: h-96
 ---
 
 In the last few weeks and months, my colleagues and I have written several articles for the [Adobe Tech Blog](https://medium.com/adobetech). Since I am also presenting some of my professional projects here, I wanted to take the opportunity and briefly introduce them.
@@ -25,9 +25,9 @@ CIF is a powerful Adobe Experience Manager extension for building integrated and
 
 The second post on CIF explains the high level architecture, cloud-native integration concepts and explains the core elements of the Commerce Integration Framework:
 
--   [Commerce Add-on](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
--   [Commerce Core Components](https://github.com/adobe/aem-core-cif-components)
--   [AEM Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)
+- [Commerce Add-on](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/home.html)
+- [Commerce Core Components](https://github.com/adobe/aem-core-cif-components)
+- [AEM Venia Reference store](https://github.com/adobe/aem-cif-guides-venia)
 
 [How CIF Integrates with Adobe Commerce and Third-Party Commerce Solutions](https://medium.com/adobetech/how-cif-integrates-with-adobe-commerce-and-third-party-commerce-solutions-5a5efb8da2a0)
 

@@ -4,13 +4,13 @@ date: 2018-10-30
 author: Markus
 description: Halloween is coming in a few days and here is the first of my Halloween projects for 2018 - a creepy pumpkin watching you. Every step you take, every move you make is seen by this little guy.
 github: 'https://github.com/mhaack/halloween-pumpkin-eyes'
-images: 
-  feature: /images/2018-10-30-halloween-creepy-eyes/pumpkin-header.jpg
+images:
+ feature: /images/2018-10-30-halloween-creepy-eyes/pumpkin-header.jpg
 category: project
 tags:
-    - arduino
-    - development
-    - halloween
+ - arduino
+ - development
+ - halloween
 ---
 
 ## Story
@@ -25,28 +25,28 @@ The project is not complicated and easy to rebuild. Now we see how to do that.
 
 The following components are used for this project:
 
--   A pumpkin
--   10 creepy plastic eyes
--   10 mini servos, for example SG90
--   Thin wire
--   Thin nails
--   Plastic tube (inner diameter a little bit bigger than the eyes)
--   Wooden or plastic stick with ~ 8mm diameter
--   Wemos / Lolin D1 (or equivalent NodeMCU board)
--   Wemos ProtoBoard (or any other protoboard will do as well)
--   PCB male and female pin header
--   AA Battery box holding 4 batteries
+- A pumpkin
+- 10 creepy plastic eyes
+- 10 mini servos, for example SG90
+- Thin wire
+- Thin nails
+- Plastic tube (inner diameter a little bit bigger than the eyes)
+- Wooden or plastic stick with ~ 8mm diameter
+- Wemos / Lolin D1 (or equivalent NodeMCU board)
+- Wemos ProtoBoard (or any other protoboard will do as well)
+- PCB male and female pin header
+- AA Battery box holding 4 batteries
 
 ### Tools
 
 These are the tools needed:
 
--   A cutting knife
--   A small drill
--   A marker
--   Some pliers
--   Hot glue
--   Soldering iron with solder
+- A cutting knife
+- A small drill
+- A marker
+- Some pliers
+- Hot glue
+- Soldering iron with solder
 
 ## Eyes
 

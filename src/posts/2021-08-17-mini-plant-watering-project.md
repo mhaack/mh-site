@@ -2,18 +2,18 @@
 title: Mini plant watering project
 author: Markus
 description: I would like to show you my new half 30 minutes no coding holiday
-    Home Assistant project.
-images: 
-  feature: /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
-  height: h-128
+ Home Assistant project.
+images:
+ feature: /images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
+ height: h-128
 date: 2021-08-17
 permalink: mini-plant-watering/
 category: project
 tags:
-    - home-automation
-    - home-assistant
-    - plants
-    - watering
+ - home-automation
+ - home-assistant
+ - plants
+ - watering
 ---
 
 I would like to show you my new half 30 minutes no coding holiday [Home Assistant](https://www.home-assistant.io) project. My daughter's [Mimosa](https://en.wikipedia.org/wiki/Mimosa_pudica) plants need some water while we were on vacation, so I built this super simple automated watering system. The project goal is to keep the plants alive for two weeks while we are away. Nothing permanently only a temporary project.
@@ -24,15 +24,15 @@ It was built very quick shortly before we went out to our summer vacation place.
 
 ## Parts
 
--   The plants 🪴
--   Water hose
--   Water bottle, a bucket, or some container
--   A [mini pump](https://www.aliexpress.com/item/33006096807.html)
--   A 5V power supply
--   A smart socket outlet which can be controlled by Home Assistant
--   Some wires
--   Cable ties
--   Tape
+- The plants 🪴
+- Water hose
+- Water bottle, a bucket, or some container
+- A [mini pump](https://www.aliexpress.com/item/33006096807.html)
+- A 5V power supply
+- A smart socket outlet which can be controlled by Home Assistant
+- Some wires
+- Cable ties
+- Tape
 
 ## Assembly
 
@@ -77,25 +77,25 @@ Here is the full YAML for reference (id and device_id's will be different) :
   alias: '[Childsroom] Mimosen gießen'
   mode: single
   trigger:
-      - platform: time
-        at: 07:00
+   - platform: time
+     at: 07:00
   condition:
-      - condition: time
-        weekday:
-            - mon
-            - wed
-            - sat
+   - condition: time
+     weekday:
+      - mon
+      - wed
+      - sat
   action:
-      - type: turn_on
-        device_id: 6788c5632346427ca0e4b7aa21e271dc
-        entity_id: switch.sonoff_nursery_watering
-        domain: switch
-      - delay:
-            seconds: 5
-      - type: turn_off
-        device_id: 6788c5632346427ca0e4b7aa21e271dc
-        entity_id: switch.sonoff_nursery_watering
-        domain: switch
+   - type: turn_on
+     device_id: 6788c5632346427ca0e4b7aa21e271dc
+     entity_id: switch.sonoff_nursery_watering
+     domain: switch
+   - delay:
+      seconds: 5
+   - type: turn_off
+     device_id: 6788c5632346427ca0e4b7aa21e271dc
+     entity_id: switch.sonoff_nursery_watering
+     domain: switch
 ```
 
 With that you are good to go on holiday a little longer without hesitation and the plants will survive.
