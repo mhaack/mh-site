@@ -1,10 +1,10 @@
 ---
 theme:
-  background: bg-jungle-green-500
-  text: text-slate-100
+    background: bg-jungle-green-500
+    text: text-slate-100
 order: 5
 sitemap:
-  ignore: true
+    ignore: true
 ---
 
 Get In Touch
