@@ -88,13 +88,13 @@
     linkedom "^0.13.2"
     prismjs "^1.26.0"
 
-"@11ty/eleventy-plugin-webc@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-webc/-/eleventy-plugin-webc-0.4.0.tgz#3d627de71d739d28e8eb5eaf10a2d43b2fe41d18"
-  integrity sha512-G/mHFBY0xx6lonmM9CLX9gtwTCwdR5h1E3YZ0vbeAlhKbP6A3yM5RUUSMEUYm/eg8F+wbUCoE85AtmcTllPivg==
+"@11ty/eleventy-plugin-webc@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy-plugin-webc/-/eleventy-plugin-webc-0.5.0.tgz#7cad3d400cf038feb8ef03bc7f321b0aab23c73f"
+  integrity sha512-nVsQ6Gg8tI3FrrqV1Yp79JX2PumvOODdqmzMg6I1rviTpI/Z+MqDy7CCXYgNZOKQRSdCAEjoRmrXW1ghvn1zGA==
   dependencies:
     "@11ty/eleventy" "^2.0.0-canary.16"
-    "@11ty/webc" "^0.4.0"
+    "@11ty/webc" "^0.5.2"
 
 "@11ty/eleventy-utils@^1.0.0", "@11ty/eleventy-utils@^1.0.1":
   version "1.0.1"
@@ -151,10 +151,10 @@
   resolved "https://registry.yarnpkg.com/@11ty/is-land/-/is-land-2.0.3.tgz#98f591247cb81c65474fe0bfba8f87cfb851d900"
   integrity sha512-XFZbODzs0kRbo4KEnSmCGmTMaqQhfKxFRMeA2wQiqqLq7P85RtHMbKhrLrR+nYmcwJUyMu/SUgl7b4B9+nnTJw==
 
-"@11ty/webc@^0.4.0":
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/@11ty/webc/-/webc-0.4.5.tgz#1e56e5457c850950a8f3a1d605af90eb199d1d11"
-  integrity sha512-jqlIYJEa7YVEInkNUYssFTFtjKNV8zQmAUbMNemhS6iR5uwxL89PKCb1ekWBAGJy1YDnpHVxcBLlGt9Ru6tu/w==
+"@11ty/webc@^0.5.2":
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/@11ty/webc/-/webc-0.5.3.tgz#ce309ee1d5060d76544710ff8fca419fc2d65a10"
+  integrity sha512-cJSpRGofYI+xiX6Mxh5Y1j5BBkZrwECYk5y3V6UiD5G0tb4krrTV11v/aGwf47sOdSHLuCf8e308/Nn0bivkPQ==
   dependencies:
     "@11ty/eleventy-utils" "^1.0.1"
     css-tree "^2.2.1"
@@ -193,10 +193,10 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
-"@netlify/plugin-lighthouse@^3.7.1":
-  version "3.7.1"
-  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-3.7.1.tgz#eba852eb48baeae6c4bff960ac6c84ee32e39462"
-  integrity sha512-4QHI3YUYawv8DlF3eiXogn50uzUNjbWdhZYcgWRPCbMlzv0FHhiMTZ/20IPTYm1IntIyKyZGyatjK3U6OslZBQ==
+"@netlify/plugin-lighthouse@^4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-lighthouse/-/plugin-lighthouse-4.0.1.tgz#6be93d3b50c1bfceb77250a96164496e779dbbf7"
+  integrity sha512-eI+Qf9GfoCHgYgR4wx47G55uHDzPCt+EewCEACJ8c6temoOHH8JNQrtDdkzF3NQP3i10QDSaIlc7ty9Mx5hixw==
   dependencies:
     chalk "^4.1.0"
     chrome-launcher "^0.15.0"
@@ -3151,10 +3151,10 @@ postcss@^8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-postcss@^8.4.17:
-  version "8.4.17"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.17.tgz#f87863ec7cd353f81f7ab2dec5d67d861bbb1be5"
-  integrity sha512-UNxNOLQydcOFi41yHNMcKRZ39NeXlr8AxGuZJsdub8vIb12fHzcq37DTU/QtbI6WLxNg2gF9Z+8qtRwTj1UI1Q==
+postcss@^8.4.18:
+  version "8.4.18"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.18.tgz#6d50046ea7d3d66a85e0e782074e7203bc7fbca2"
+  integrity sha512-Wi8mWhncLJm11GATDaQKobXSNEYGUHeQLiQqDFG1qQ5UTDPTEvKw0Xt5NsTpktGTwLps3ByrWsBrG0rB8YQ9oA==
   dependencies:
     nanoid "^3.3.4"
     picocolors "^1.0.0"
