@@ -2,16 +2,16 @@
 title: Water tank monitoring with ESPHome
 category: project
 tags:
- - esphome
- - home-automation
- - watering
- - garden
+  - esphome
+  - home-automation
+  - watering
+  - garden
 images:
- feature: /images/watertank-unsplash.jpg
- height: h-96
+  feature: /images/watertank-unsplash.jpg
+  height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
- favourite things to do. This had to be done better - fully automatically and
- without intervention.
+  favourite things to do. This had to be done better - fully automatically and
+  without intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
 ---
@@ -63,7 +63,7 @@ No further electronic components are required. The setup is powered by a USB pow
 
 If you are not familiar with ESPHome getting started is not complicated, especially if you already use Home Assistant and the [step-by-step install guide](https://esphome.io/guides/getting_started_hassio.html).
 
-The ESPHome configuration for the water tank sensor is relativly simple. Only 80 lines of YAML config ... and these already include the setup boilerplate and some comments.
+The ESPHome configuration for the water tank sensor is relatively simple. Only 80 lines of YAML config ... and these already include the setup boilerplate and some comments.
 
 ```yaml
 esphome:
@@ -151,7 +151,11 @@ The most crucial parts of the code config start in line 56 with the setup of the
 
 I decided to send updated measurements every 10 minutes only. The water level does not vary that much during most of the year, so there are not many updates. But if we consume water quickly and there is heavy rain filling the cistern the 10 minutes interval still results in a smooth graph.
 
-The measuring and calculation of litre and percent happens in two steps. In a first step some filters are applied to the measured distance values to filter out invalid readings and get a smooth median value. Via `calibrate_linear` the measured distance, from the sensor to water surface, is transformed into the actual height of the water within our cistern.
+The measuring and calculation of litre and percent happens in two steps. In a first step some filters are applied to the measured distance values to filter out invalid readings and get a smooth median value. All sensor values are in meters, conversion to inches require some extra conversion step.
+
+
+
+Since the sensor measures the distance between sensor and water surface it must be transformed into the the actual height of the water within our cistern. This happens via `calibrate_linear` filter. It is used to adjusted and map the sensor values. This filter must be adjusted for your water tank. You need the sensor readings for a full and empty water tank. In my case the sensor is placed 0,23 meter above the water level which translates to 1,86 meter high water level from the ground of the tank. For an empty tank I get 2,41 meter as reading from the sensor. Have in mind that the filter, as the name `calibrate_linear` says does a linear value mapping, see [docs for details](https://esphome.io/components/sensor/index.html?highlight=calibrate_linear#calibrate-linear).
 
 The values for litre and percent are calculated based on the water height using two lambda functions. The magic factors in the formulas are multiplied out factors for volume of our cistern.
 
