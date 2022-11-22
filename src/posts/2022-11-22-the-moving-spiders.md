@@ -6,7 +6,7 @@ tags:
   - esphome
 images:
   feature: /images/halloween-spiders1.jpg
-  height: null
+  height: h-96
 date: 2022-11-22
 ---
 ## Little spiders on your shoulder
@@ -56,7 +56,7 @@ This got directly mounted to the ceiling.
 This time I created the software using [ESPHome](https://esphome.io/). Controlling two motors is easy and can be done with a simple ESPHome sketch, no complex Arduino C development is needed.
 ESPHome has support for the L298 motor controller via the [fan integration](https://esphome.io/components/fan/hbridge.html). That's why you will see `fan` commands in the code.
 
-```
+```yaml
 esphome:
   name: halloween-spiders
 
@@ -201,7 +201,6 @@ interval:
                 direction: reverse
             - delay: !lambda "return id(motor_2_duration);"
             - fan.turn_off: motor_2
-
 ```
 
 The forward and reverse pins for each motor are defined in the `output` block. These are connected to a (fan) motor by the `fan` block, which we can use later to control the motor direction and speed.
@@ -222,7 +221,7 @@ With ESPHome I even get the Home Assistant integration automatically. This is no
 
 In Home Assistant I can turn on/off the automations using the virtual switches and control the motors directly. I can also set the motor speed and change the direction.
 
-// HA screenshot von device
+{% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot" "small"%}
 
 ## The final result
 
