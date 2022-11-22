@@ -37,7 +37,7 @@ Here is my prototype:
 // foto
 
 Wiring diagram:
-{% image "/images/halloween-spiders_steckplatine.png", "Hunter Hydrawise" "small"%}
+{% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "small"%}
 
 For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with a L298 dual motor board, no extra soldering is need here.
 
