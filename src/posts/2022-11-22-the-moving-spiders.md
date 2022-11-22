@@ -6,7 +6,7 @@ tags:
   - esphome
 images:
   feature: /images/halloween-spiders1.jpg
-  height: h-64
+  height: null
 date: 2022-11-22
 ---
 ## Little spiders on your shoulder
@@ -34,7 +34,7 @@ The wiring of the electronic parts is straightforward. For the small motors norm
 The motors are connected to the L298 dual motor board and powered that as well.
 
 Here is my prototype:
-// foto
+{% image "/images/halloween-spiders2.jpg", "the final prototype" "small"%}
 
 Wiring diagram:
 {% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "small"%}
