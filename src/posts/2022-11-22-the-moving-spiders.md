@@ -29,12 +29,12 @@ The following components are needed:
 
 ## Hardware assembly
 
-The wiring of the electronic parts is straightforward. For the small motors normally no extra power source is needed. The L298 dual motor board can be directly connect with 5V and GND of the ESP board. Additionally 4 wires are needed to control the motors. A forward and a reverse signal is needed for each motor. These must be connected to digital pins of the ESP board.
+The wiring of the electronic parts is straightforward. For the small motors normally no extra power source is needed. The L298 dual motor board can be directly connected with 5V and GND of the ESP board. Additionally, 4 wires are needed to control the motors. A forward and a reverse signal is needed for each motor. These must be connected to the digital pins of the ESP board.
 
 The motors are connected to the L298 dual motor board and powered that as well.
 
 Here is my prototype:
-{% image "/images/halloween-spiders2.jpg", "the final prototype" "small"%}
+{% image "/images/halloween-spiders1.jpg", "the final prototype" "small"%}
 
 Wiring diagram:
 {% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "small"%}
@@ -47,7 +47,7 @@ The most tricky part is the cylinder. It took me three tries to get the drilling
 
 My final construction looks like this:
 
-// foto
+{% image "/images/halloween-spiders1.jpg", "the final prototype" "small"%}
 
 This got directly mounted to the ceiling.
 
