@@ -17,15 +17,15 @@ For this year's halloween project I built something without pumpkins. The small 
 
 The following components are needed:
 
-- ESP8266 (Wemos D1 mini, Nodemcu) or ESP32 >>>> Link auf eigenen Post
-- [L298 dual motor bridge board](https://www.aliexpress.com/item/1005004428326464.html)
-- two slow motors with ~100-200rpm, I went with [micro gear motors](https://www.aliexpress.com/item/32910513701.html)
-- prototyping board
-- male & female pin headers
-- material for a small roller to wind up of the thread
-- two spiders or scary items
-- USB cable and power supply
-- soldering iron
+* ESP8266 (Wemos D1 mini, Nodemcu) or ESP32 >>>> Link auf eigenen Post
+* [L298 dual motor bridge board](https://www.aliexpress.com/item/1005004428326464.html)
+* two slow motors with ~100-200rpm, I went with [micro gear motors](https://www.aliexpress.com/item/32910513701.html)
+* prototyping board
+* male & female pin headers
+* material for a small roller to wind up of the thread
+* two spiders or scary items
+* USB cable and power supply
+* soldering iron
 
 ## Hardware assembly
 
@@ -37,7 +37,7 @@ Here is my prototype:
 // foto
 
 Wiring diagram:
-
+{% image "/images/halloween-spiders_steckplatine.png", "Hunter Hydrawise" "small"%}
 
 For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with a L298 dual motor board, no extra soldering is need here.
 
