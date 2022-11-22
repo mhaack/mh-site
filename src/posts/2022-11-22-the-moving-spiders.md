@@ -205,7 +205,83 @@ interval:
 
 The forward and reverse pins for each motor are defined in the `output` block. These are connected to a (fan) motor by the `fan` block, which we can use later to control the motor direction and speed.
 
-In the program I defined two virtual switches to enable/disable the motor automation remotely for example via Home Assistant. The automation itself is an `interval` based script with some random variable to add some variance in the up & down movement. Both motor automations follow the same pattern:
+```yaml
+output:
+  - platform: esp8266_pwm
+    id: motor1_forward_pin
+    pin: D2
+  - platform: esp8266_pwm
+    id: motor1_reverse_pin
+    pin: D1
+  - platform: esp8266_pwm
+    id: motor2_forward_pin
+    pin: D5
+  - platform: esp8266_pwm
+    id: motor2_reverse_pin
+    pin: D6
+
+fan:
+  - platform: hbridge
+    id: motor_1
+    name: "Motor 1"
+    icon: "mdi:spider-thread"
+    pin_a: motor1_forward_pin
+    pin_b: motor1_reverse_pin
+    decay_mode: slow
+    on_turn_on:
+      - logger.log:
+          format: "Motor 1: on - duration = %d ms, direction = %d"
+          args: ["id(motor_1_duration)", id(motor_1).direction]
+    on_turn_off:
+      - logger.log: "Motor 1: off"
+
+  - platform: hbridge
+    id: motor_2
+    name: "Motor 2"
+    icon: "mdi:spider-thread"
+    pin_a: motor2_forward_pin
+    pin_b: motor2_reverse_pin
+    decay_mode: slow
+    on_turn_on:
+      - logger.log:
+          format: "Motor 2: on - duration = %d ms, direction = %d"
+          args: ["id(motor_2_duration)", id(motor_2).direction]
+    on_turn_off:
+      - logger.log: "Motor 2: off"
+```
+
+In the program I defined two virtual switches to enable/disable the motor automation remotely for example via Home Assistant. The automation itself is an `interval` based script with some random variable to add some variance in the up & down movement.
+
+```yaml
+interval:
+  - interval: 1min
+    then:
+      - globals.set:
+          id: motor_1_duration
+          value: !lambda "return (rand() % 8) * 1000 + 3000;"
+      - if:
+          condition:
+            switch.is_on: program_1
+          then:
+            # forward
+            - fan.turn_on:
+                id: motor_1
+                direction: forward
+            - delay: !lambda "return id(motor_1_duration);"
+            - fan.turn_off: motor_1
+            # pause
+            - delay: !lambda "return id(motor_1_duration);"
+            # reverse
+            - lambda: |-
+                id(motor_1_duration) += 3000;
+            - fan.turn_on:
+                id: motor_1
+                direction: reverse
+            - delay: !lambda "return (id(motor_1_duration));"
+            - fan.turn_off: motor_1
+```
+
+Both motor automations follow the same pattern:
 
 1. Set the duration variable with a random number
 2. Turn motor on
