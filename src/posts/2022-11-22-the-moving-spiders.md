@@ -13,6 +13,8 @@ date: 2022-11-22
 
 For this year's Halloween project I built something without pumpkins. The small moving spiders are to scare our guests. During the party, we placed it over the buffet table. A second one was placed in such a way that it reached down to the kids' shoulders when they were standing at the buffet and didn't suspect anything. Using small motors the spiders automatically moved up and down.
 
+https://www.youtube.com/watch?v=wgdrPl0-C9E
+
 ## Parts & Tools
 
 The following components are needed:
