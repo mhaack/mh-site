@@ -7,6 +7,8 @@ tags:
 images:
   feature: /images/halloween-spiders.jpg
   height: h-96
+description: For this year's Halloween project I built something without
+  pumpkins. The small moving spiders are to scare our guests.
 date: 2022-11-15
 ---
 ## Little spiders on your shoulder
