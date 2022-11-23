@@ -5,7 +5,7 @@ tags:
   - halloween
   - esphome
 images:
-  feature: /images/halloween-spiders1.jpg
+  feature: /images/halloween-spiders.jpg
   height: h-96
 date: 2022-11-22
 ---
@@ -14,7 +14,6 @@ date: 2022-11-22
 For this year's Halloween project I built something without pumpkins. The small moving spiders are to scare our guests. During the party, we placed it over the buffet table. A second one was placed in such a way that it reached down to the kids' shoulders when they were standing at the buffet and didn't suspect anything. Using small motors the spiders automatically moved up and down.
 
 https://www.youtube.com/watch?v=wgdrPl0-C9E
-
 
 ## Parts & Tools
 
@@ -42,7 +41,7 @@ Here is my prototype:
 Wiring diagram:
 {% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "x-small"%}
 
-For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with a L298 dual motor board, no extra soldering is needed here.
+For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with an L298 dual motor board, no extra soldering is needed here.
 
 Assembling the motor part with the cylinder for winding the thread requires some tryout. I went with some wood construction. 3D printing a bracket would maybe be a better option, but I don't have a 3D printer :-) 
 
@@ -50,7 +49,7 @@ The most tricky part is the cylinder. It took me three tries to get the drilling
 
 My final construction looks like this:
 
-{% image "/images/halloween-spiders1.jpg", "the final prototype" "small"%}
+{% image "/images/halloween-spiders1.jpg", "the final prototype" "x-small"%}
 
 This got directly mounted to the ceiling.
 
@@ -159,4 +158,4 @@ In Home Assistant I can turn on/off the automations using the virtual switches a
 
 The kids at the party had a lot of fun with the spiders. At first, they hadn't seen them coming down from the ceiling and were absolutely scared. Next year, to level it up, I will try to get some spiders with blinking LED eyes.
 
-// Photo & Video
+{% image "/images/halloween-spiders.jpg", "the final prototype" "small"%}
