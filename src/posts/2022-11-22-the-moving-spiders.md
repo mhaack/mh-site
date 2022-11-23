@@ -7,17 +7,17 @@ tags:
 images:
   feature: /images/halloween-spiders.jpg
   height: h-96
-date: 2022-11-22
+date: 2022-11-15
 ---
 ## Little spiders on your shoulder
 
-For this year's Halloween project I built something without pumpkins. The small moving spiders are to scare our guests. During the party, we placed it over the buffet table. A second one was placed in such a way that it reached down to the kids' shoulders when they were standing at the buffet and didn't suspect anything. Using small motors the spiders automatically moved up and down.
+For this year's Halloween project I built something without pumpkins. The small moving spiders are to scare our guests. During the party, we placed it over the buffet table. A second one was placed in such a way that it reached down to the kids' shoulders when they were standing at the buffet and didn't suspect anything. Using small motors, the spiders moved up and down on their own.
 
 https://www.youtube.com/watch?v=wgdrPl0-C9E
 
 ## Parts & Tools
 
-The following components are needed:
+The following components & tools are needed to assemble the project:
 
 * ESP8266 ([Wemos D1 mini](/the-world-of-wemos-d1-mini-boards/), Nodemcu) or ESP32
 * [L298 dual motor bridge board](https://www.aliexpress.com/item/1005004428326464.html)
@@ -31,9 +31,9 @@ The following components are needed:
 
 ## Hardware assembly
 
-The wiring of the electronic parts is straightforward. For the small motors normally no extra power source is needed. The L298 dual motor board can be directly connected with 5V and GND of the ESP board. Additionally, 4 wires are needed to control the motors. A forward and a reverse signal is needed for each motor. These must be connected to the digital pins of the ESP board.
+The wiring of electronic parts is straightforward. For the small motors, usually no extra power source is required. The L298 dual motor board can be directly connected to the 5V and GND of the ESP board. Additionally, 4 wires are needed to control the motors. A forward and reverse signal is needed for each motor. These must be connected to the digital pins of the ESP board.
 
-The motors are connected to the L298 dual motor board and powered that as well.
+The motors are also powered by the L298 dual motor board directly.
 
 Here is my prototype:
 {% image "/images/halloween-spiders2.jpg", "the first prototype" "x-small"%}
@@ -41,11 +41,11 @@ Here is my prototype:
 Wiring diagram:
 {% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "x-small"%}
 
-For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with an L298 dual motor board, no extra soldering is needed here.
+For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is mounted on top. For the motor controller I chose with an L298 dual motor board. No extra soldering is needed here.
 
-Assembling the motor part with the cylinder for winding the thread requires some tryout. I went with some wood construction. 3D printing a bracket would maybe be a better option, but I don't have a 3D printer :-) 
+The assembly of the motor part and the cylinder for winding the thread requires some trial and error. As for the construction, I chose wood. 3D printing a bracket would maybe be a better option, but I don't have a 3D printer :-) 
 
-The most tricky part is the cylinder. It took me three tries to get the drilling to mount the motor into the cylinder correctly. The small micro gear motors do have not much power even the slightest tilt blocks the motor.
+The most tricky part is the cylinder. It took me three tries to get the drilling to mount the motor into the cylinder correctly. The small micro gear motors do not produce much torque. Even the slightest tilt blocks the motor.
 
 My final construction looks like this:
 
@@ -55,7 +55,7 @@ This got directly mounted to the ceiling.
 
 ## Software
 
-This time I created the software using [ESPHome](https://esphome.io/). Controlling two motors is easy and can be done with a simple ESPHome sketch, no complex Arduino C development is needed.
+This time I created the software using [ESPHome](https://esphome.io/). Controlling two motors is easy and can be done with a simple ESPHome sketch. No complex Arduino C development is needed.
 ESPHome has support for the L298 motor controller via the [fan integration](https://esphome.io/components/fan/hbridge.html). That's why you will see `fan` commands in the code.
 
 The forward and reverse pins for each motor are defined in the `output` block. These are connected to a (fan) motor by the `fan` block, which we can use later to control the motor direction and speed.
@@ -148,11 +148,11 @@ Both motor automations follow the same pattern:
 8. Turn motor off
 9. Start with 1.
 
-With ESPHome I even get the Home Assistant integration automatically. This is not really necessary as the motor control part runs automatically, but it is also fun to manually move the spiders up & down. It took some time to get the right values and range for `motor_1_duration` and `motor_2_duration`. They depend on the rotation speed of the motors, the weight of the spiders on the thread, and the height of the ceiling. Some try out and adjustment is needed
+It even integrates with Home Assistant automatically with ESPHome. This is not really necessary as the motor control part runs automatically, but it is also fun to manually move the spiders up & down. It took some time to get the right values and ranges for `motor_1_duration` and `motor_2_duration`. They depend on the rotation speed of the motors, the weight of the spiders on the thread, and the height of the ceiling. Some trial and adjustment is needed.
 
 In Home Assistant I can turn on/off the automations using the virtual switches and control the motors directly. I can also set the motor speed and change the direction.
 
-{% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot" "small"%}
+{% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot" "x-small"%}
 
 ## The final result
 
