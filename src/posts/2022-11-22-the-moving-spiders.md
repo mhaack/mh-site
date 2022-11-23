@@ -36,10 +36,10 @@ The wiring of the electronic parts is straightforward. For the small motors norm
 The motors are connected to the L298 dual motor board and powered that as well.
 
 Here is my prototype:
-{% image "/images/halloween-spiders2.jpg", "the first prototype" "small"%}
+{% image "/images/halloween-spiders2.jpg", "the first prototype" "x-small"%}
 
 Wiring diagram:
-{% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "small"%}
+{% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "x-small"%}
 
 For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is put on top of that. For the motor controller I went with a L298 dual motor board, no extra soldering is needed here.
 
