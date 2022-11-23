@@ -36,7 +36,7 @@ The wiring of the electronic parts is straightforward. For the small motors norm
 The motors are connected to the L298 dual motor board and powered that as well.
 
 Here is my prototype:
-{% image "/images/halloween-spiders1.jpg", "the final prototype" "small"%}
+{% image "/images/halloween-spiders2.jpg", "the first prototype" "small"%}
 
 Wiring diagram:
 {% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "small"%}
