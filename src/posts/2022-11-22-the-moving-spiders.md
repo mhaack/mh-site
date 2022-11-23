@@ -154,6 +154,10 @@ In Home Assistant I can turn on/off the automations using the virtual switches a
 
 {% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot" "x-small"%}
 
+A﻿s usual the [source](https://github.com/mhaack/home-assistant-config/blob/master/config/esphome/halloween-spiders.yaml) can be found in my GitHub repository:
+
+<github-badge repo="mhaack/home-assistant-config"></github-badge>
+
 ## The final result
 
 The kids at the party had a lot of fun with the spiders. At first, they hadn't seen them coming down from the ceiling and were absolutely scared. Next year, to level it up, I will try to get some spiders with blinking LED eyes.
