@@ -11,6 +11,7 @@ tags:
 images:
   feature: /images/content-and-commerce.png
 date: 2022-12-07
+permalink: content-and-commerce-experiences-using-app-builder-and-api-mesh/
 ---
 Last November, Adobe hosted the Adobe Developers Live Headless. The event focused on building modern experiences with AEM Sites headless.
 
