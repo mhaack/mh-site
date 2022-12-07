@@ -29,6 +29,6 @@ Enjoy the recording of our presentation.
 
 The source code of the project built during the presentation can be found on GitHub.
 
-<github-badge repo="https://github.com/herzog31/aem-nextjs-template" label="AEM NextJS Template App">
+<github-badge repo="https://github.com/herzog31/aem-nextjs-template" label="AEM NextJS Template App"></github-badge>
 
 F﻿ind all recordings of the Adobe Developers Live Headless at [Adobe Experience League](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2022/nov2022/api-mesh.html?lang=en).
