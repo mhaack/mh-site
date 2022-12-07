@@ -27,6 +27,8 @@ Enjoy the recording of our presentation.
 
 <div id="25cTzVV2jfQ" class="eleventy-plugin-youtube-embed" style="position:relative; width:100%; padding-top: 56.25%"><iframe allowfullscreen="" embedded-video="" src="https://video.tv.adobe.com/v/3411440/?quality=12&amp;learn=on" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"><source src="https://video.tv.adobe.com/v/3411440/?quality=12&learn=on" type="" /><p>Your browser does not support the iframe element.</p></iframe></div>
 
-The source code of the project build during the presentation can be found on GitHub.
+The source code of the project built during the presentation can be found on GitHub.
 
 <github-badge repo="https://github.com/herzog31/aem-nextjs-template" label="AEM NextJS Template App">
+
+F﻿ind all recordings of the Adobe Developers Live Headless at [Adobe Experience League](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2022/nov2022/api-mesh.html?lang=en).
