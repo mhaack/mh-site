@@ -3,22 +3,22 @@ title: About Markus
 image: /images/markus.jpeg
 layout: about.njk
 eleventyNavigation:
- key: main
- title: About
- order: 3
+  key: main
+  title: About
+  order: 3
 ---
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.
 
 ## Thanks for stopping by
 
-About me: I'm a Senior Technical Lead at [Adobe](https://www.adobe.com) working on [AEM Content & Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html). Our team builds and maintains e-commerce integration for [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html). If you are interested to find out more, see my [work](/work) section. You can view [my LinkedIn profile](https://de.linkedin.com/in/markushaack/) for all the gory details.
+About me: I'm a Senior Technical Lead at [Adobe](https://www.adobe.com) working on [AEM Content & Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html). Our team builds and maintains e-commerce integration for [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html). If you are interested to find out more, see my [work](/work/) section. You can view [my LinkedIn profile](https://de.linkedin.com/in/markushaack/) for all the gory details.
 
 ## Home in the world
 
 Together with my wonderful wife, our daughter, and our 2 cats I live in the beautiful city of Leipzig, Germany.
 
-If time allows I play with Nintendo consoles, old and new ones. I'm interested in various electronic topics, Arduino micro controllers & IOT stuff. I'm passionate about smart homes, [Home Assistant](https://www.home-assistant.io/) in particular and automating our house with all kinds of useful and useless smart devices. I wrote about my [Home Assistant journey](/home-assistant) and some of [my projects](/projects) here as well.
+If time allows I play with Nintendo consoles, old and new ones. I'm interested in various electronic topics, Arduino micro controllers & IOT stuff. I'm passionate about smart homes, [Home Assistant](https://www.home-assistant.io/) in particular and automating our house with all kinds of useful and useless smart devices. I wrote about my [Home Assistant journey](/home-assistant/) and some of [my projects](/projects/) here as well.
 
 ## Home on the world wide web
 
