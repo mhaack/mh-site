@@ -45,6 +45,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 
 ## Talks
 
+- [How to Build Content and Commerce Experiences Using App Builder and API Mesh](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2022/nov2022/api-mesh.html?lang=en), Adobe Developers Live, November 2022
 - [Extend AEM Content and Commerce with Adobe Developer App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/extend-aem-app-builder.html?lang=en), Adobe Developers Live, October 2021
 - [AEM Commerce extensibility using Adobe I/O](https://adapt.to/2021/en/schedule/aem-commerce-extensibility-using-adobe-io.html), adaptTo(), September 2021
 - [Content and Commerce with Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/feb2021/content-commerce.html?lang=en), Adobe Developers Live Content, February 2021
