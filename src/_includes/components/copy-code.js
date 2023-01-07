@@ -4,6 +4,7 @@ if (codeBlocks) {
         // add a copy-code-button to each pre element
         let button = document.createElement('button')
         button.innerText = 'Copy'
+        button.classList.add('copy-code');
 
         button.addEventListener('click', (event) => {
             const element = event.target
@@ -30,6 +31,6 @@ if (codeBlocks) {
                 element.innerText = 'Copy'
             }, 2000)
         })
-        block.appendChild(button)
+        block.after(button)
     })
 }
