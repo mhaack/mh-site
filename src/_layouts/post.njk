@@ -2,11 +2,11 @@
 layout: base
 ---
 
-<main class="grid">
-  <article class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+<main class="px-8 lg:px-32 md:px-16 pb-8 md:pb-16">
+  <article class="max-w-6xl mx-auto justify-start font-bold">
     <header class="mb-4 text-center">
       {% if images.feature %}
-        <figure class="-mx-8 md:-mx-32 {{ images.height or "h-48 md:h-2/3" }}">
+        <figure class="-mx-8 md:-mx-32 xl:-mx-40 {{ images.height or "h-48 md:h-2/3" }}">
           {% image images.feature, title, "object-cover w-full h-full" %}
         </figure>
       {% endif %}

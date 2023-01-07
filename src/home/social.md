@@ -9,9 +9,10 @@ sitemap:
  ignore: true
 ---
 
-You can also find me on [Twitter], [Instagram], [LinkedIn] and [GitHub].
+You can also find me on <a rel="me" href="https://home.social/@mhaack" title="@mhaack@home.social on Mastodon">Mastodon</a>, [Twitter], [Instagram], [LinkedIn] and [GitHub].
 
 [twitter]: https://twitter.com/mhaack
 [instagram]: https://instagram.com/mhaack
 [github]: https://github.com/mhaack
 [linkedin]: https://de.linkedin.com/in/markushaack
+
