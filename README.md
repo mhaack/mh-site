@@ -19,8 +19,7 @@ This repository contains the code for my personal site at [www.markus-haack.com]
 	* TailwindCSS
 	* CSS Imports
 	* Autoprefixer 
-* PurgeCSS to remove unused CSS (set up for TailwindCSS by default) in production
 * HTML minified in production
-* CSS inlined and minified in production
-* Minimal JS, minified in production
+* CSS minified in production
+* Minimal JS
 * HTML document `<head>` crafted using [htmlhead.dev](https://htmlhead.dev)
