@@ -6,6 +6,7 @@ tags:
   - home-automation
   - watering
   - garden
+  - smarthome
 images:
   feature: /images/watertank-unsplash.jpg
   height: h-96

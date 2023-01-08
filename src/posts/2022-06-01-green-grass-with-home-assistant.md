@@ -8,6 +8,7 @@ tags:
  - garden
  - watering
  - plants
+ - smarthome
 images:
  feature: /images/my-garden-watering-project.png
  height: null
