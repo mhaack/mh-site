@@ -19,7 +19,7 @@ This article will consist of 3 blog posts because there are too many topics I wo
 
 We had already thought about installing a photovoltaic system and put solar panels on our roof a few times before.
 
-Summer 2019 was the time to finally implement the project. Next to the obvious reasons to save money on our energy bills and having some protection agains rising electricity costs there was another driver for this project: the pool we built in spring 2017 in our backyard. Due to this we have increased power consumption in summer - exactly when the sun is shining. The pool pump, which runs for at least 12 hours a day, depending on the temperature, consumes a lot of electricity. The warmer it is, the longer the pool pump has to run and the higher the power consumption.
+Summer 2019 was the time to finally implement the project. Next to the obvious reasons to save money on our energy bills and having some protection against rising electricity costs there was another driver for this project: the pool we built in spring 2017 in our backyard. Due to this we have increased power consumption in summer - exactly when the sun is shining. The pool pump, which runs for at least 12 hours a day, depending on the temperature, consumes a lot of electricity. The warmer it is, the longer the pool pump has to run and the higher the power consumption.
 
 Based on our estimates from 2019 - with am electricity rate of 0,28 € per kWh and an investment of ~ 22k € - break even was projected for about 12-14 years. I will go into more detail in part 2 about our investment calculation.
 
@@ -28,7 +28,7 @@ Germany has the highest electricity prices in Europe:
 {% image "/images/pricelist-2021.png", "European electricity prices 2021", "small" %}
 Source: [Eurostat: electricity prices by type of user](https://ec.europa.eu/eurostat/databrowser/bookmark/f1f42d1e-4766-4f49-9612-b11bae203fe8?lang=en)
 
-We have already calculated that electricity prices will increase anyway. But we could not foresee that increase now with the energy crisis we have in Europe. Current rates for kilowatt-hour in German are ~ 0,43 € per kwh. With that break even should be already a few years earlier.
+We have already calculated that electricity prices will increase anyway. But we could not foresee that increase now with the energy crisis we have in Europe. Current rates for kilowatt-hour in German are ~ 0,43 € per kWh. With that break even should be already a few years earlier.
 
 We also bought a hybrid car in 2021 and try to drive as much as possible on electricity. Another big electricity consumer and confirmation that producing our own electricity was a smart idea.
 
