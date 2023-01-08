@@ -8,7 +8,7 @@ tags:
   - smarthome
 images:
   feature: /images/jama-villa.jpg
-  height: h-96
+  height: h-128
 date: 2023-01-08
 permalink: our-own-electricity-1/
 ---
