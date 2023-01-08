@@ -7,6 +7,7 @@ tags:
  - home-assistant
  - zigbee
  - mailbox
+ - smarthome
 images:
  feature: /images/2020-09-01-home-assistant-you-have-got-mail/you-ve_got_mail_-2685196800-.jpg
  height: h-128

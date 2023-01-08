@@ -5,6 +5,7 @@ tags:
   - home-assistant
   - home-automation
   - camera
+  - smarthome
 images:
   feature: /images/home_assistant_arlo.jpg
 description: Home Assistant & Arlo cameras go better very well. I'm using it
