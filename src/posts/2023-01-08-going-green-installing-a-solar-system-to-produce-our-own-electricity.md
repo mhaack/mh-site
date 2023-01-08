@@ -1,5 +1,5 @@
 ---
-title: "Going Green: Installing a Solar System to Produce Our Own Electricity"
+title: "Going Green: Installing a Solar System"
 category: project
 tags:
   - solar
