@@ -7,7 +7,8 @@ tags:
   - electricity
   - smarthome
 images:
-  feature: /images/screenshot-solar-system.png
+  feature: /images/jama-villa.jpg
+  height: h-96
 date: 2023-01-08
 permalink: our-own-electricity-1/
 ---
