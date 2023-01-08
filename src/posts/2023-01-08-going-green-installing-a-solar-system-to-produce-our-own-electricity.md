@@ -6,7 +6,7 @@ tags:
 images:
   feature: /images/screenshot-solar-system.png
 date: 2023-01-08
-permalink: /our-own-electricity-1/
+permalink: our-own-electricity-1/
 ---
 This one has been in my draft folder for a few weeks. Our photovoltaic system was installed in spring 2020 and I wanted to report on it earlier. I finally had some time to finish the article over the holidays. Small side effect of the fact that it took a bit longer: by the end of 2022 I will have two full years of electricity yield data to show and compare.
 
