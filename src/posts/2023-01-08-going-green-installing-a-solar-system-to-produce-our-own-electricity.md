@@ -2,7 +2,10 @@
 title: "Going Green: Installing a Solar System to Produce Our Own Electricity"
 category: project
 tags:
-  - home-automation
+  - solar
+  - photovoltaic
+  - electricity
+  - smarthome
 images:
   feature: /images/screenshot-solar-system.png
 date: 2023-01-08
