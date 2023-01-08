@@ -72,7 +72,6 @@ From then on it got complicated. Nothing happened in the next few weeks. Germany
 After the network operator's technician replaced the energy meter, the electrician could finish the installation. Still took 2 weeks as the electrician had kids at home. Remember we were still in lockdown, the schools were also closed. All the setup was done in mid-April. Apart from annoying calls to the electricity network operator's hotline to get an appointment, nothing happened for the next month and a half. Finally we could get an appointment with a service technician scheduled for May 28th for the final inspection. Everything was fine and connected properly. Finally, more than 3 months later than planned, at 2:30pm we could flip the circuit switch and start producing our own electricity.
 
 {% image "/images/screenshot-solaredge-day1.png", "Screenshot SolarEdge Portal from day 1", "x-small" %}
-{% image "/images/screenshot-solaredge-day1.png", "Screenshot SolarEdge Portal from day 1", "small" %}
 
 The entire setup was completed 2 months later with the battery storage installed in July 2020.
 
