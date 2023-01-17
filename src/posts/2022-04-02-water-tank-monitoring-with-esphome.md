@@ -19,7 +19,7 @@ permalink: watertank-esphome/
 
 Watering your lawn and plants around the house wasn't one of my favourite things to do. Especially when we bought a robot lawnmower, watering the lawn became quite a hassle since we had to always put away the sprinklers and hoses after each irrigation.
 
-An automatic irrigation system was needed. Inspired by [this thread](https://community.home-assistant.io/t/garden-irrigation/1950) on the HA Community I started looking into building a DIY solution. Which includes controlling the individual irrigation zones, monitoring the water level of the cistern and, if necessary, automatically filling the cistern. We end up with a mixed setup using a Hunter Hydrawise as the irrigation controller and a custom made solution to monitor and refill the water tank.
+An automatic irrigation system was needed. Inspired by [this thread](https://community.home-assistant.io/t/garden-irrigation/1950) on the HA Community I started looking into building a DIY solution. Which includes controlling the individual irrigation zones, monitoring the water level of the cistern and, if necessary, automatically filling the cistern. We end up with a mixed setup using a Hunter Hydrawise as the irrigation controller and a custom-made solution to monitor and refill the water tank.
 
 I'm splitting this into two posts. Part 1 is about the [ESPHome](https://esphome.io/index.html) solution to monitor the water level of our garden cistern. [Part 2](/green-grass-with-home-assistant/) will cover the Home Assistant integration of Hydrawise, valves, the ESPHome water tank sensor and automations for the entire garden irrigation setup.
 
@@ -45,10 +45,10 @@ Unfortunately, the HC-SR04 ultrasonic sensor still caused problems. It is simply
 
 ## All good things come in three
 
-After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking for an alternative. For the third, and hopefully the final, version of the water tank sensor two changes have been implemented:
+After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking for an alternative. For the third and hopefully the final version of the water tank sensor two changes has been implemented:
 
 1. the sensor device got a waterproof upgrade to a JSN SR04T ultrasonic sensor
-2. the microcontroller was changed to an ESP8266 based Wemos D1 mini pro running EPSHome
+2. the microcontroller was changed to an ESP8266 based Wemos D1 mini pro running ESPHome
 
 So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been running super stable for more than a year now.
 
@@ -148,35 +148,39 @@ sensor:
         state: !lambda 'return x * 53.979255216319471;'
 ```
 
-The most crucial parts of the code config start in line 56 with the setup of the [ultra sonic sensor](https://esphome.io/components/sensor/ultrasonic.html).
+The most crucial parts of the code config start in line 56 with the setup of the [ultrasonic sensor](https://esphome.io/components/sensor/ultrasonic.html).
 
-I decided to send updated measurements every 10 minutes only. The water level does not vary that much during most of the year, so there are not many updates. But if we consume water quickly and there is heavy rain filling the cistern the 10 minutes interval still results in a smooth graph.
+I decided to send updated measurements every 10 minutes only. The water level does not vary that much during most of the year, so there are few updates. But if we consume water quickly and there is heavy rain filling the cistern the 10 minutes interval still results in a smooth graph.
+
+All sensor readings returned by `platform: ultrasonic` are in meter. This is important for the formulas. Values you put in the formula must be in meters too.
 
 The measuring and calculation of litre and percent happens in two steps. In a first step some filters are applied to the measured distance values to filter out invalid readings and get a smooth median value. All sensor values are in meters, conversion to inches require some extra conversion step.
 
-
-
-Since the sensor measures the distance between sensor and water surface it must be transformed into the the actual height of the water within our cistern. This happens via `calibrate_linear` filter. It is used to adjusted and map the sensor values. This filter must be adjusted for your water tank. You need the sensor readings for a full and empty water tank. In my case the sensor is placed 0,23 meter above the water level which translates to 1,86 meter high water level from the ground of the tank. For an empty tank I get 2,41 meter as reading from the sensor. Have in mind that the filter, as the name `calibrate_linear` says does a linear value mapping, see [docs for details](https://esphome.io/components/sensor/index.html?highlight=calibrate_linear#calibrate-linear).
+Since the sensor measures the distance between sensor and water surface it must be transformed into the actual height of the water within our cistern. This happens via `calibrate_linear` filter. It is used to adjusted and map the sensor values. This filter must be adjusted for your water tank. You need the sensor readings for a full and empty water tank. In my case the sensor is placed 0,23 meter above the water level which translates to 1,86 meter high water level from the ground of the tank. For an empty tank I get 2,41 meter as reading from the sensor. Have in mind that the filter, as the name `calibrate_linear` says does a linear value mapping, see [docs for details](https://esphome.io/components/sensor/index.html?highlight=calibrate_linear#calibrate-linear).
 
 The values for litre and percent are calculated based on the water height using two lambda functions. The magic factors in the formulas are multiplied out factors for volume of our cistern.
 
 In our case the cistern is a round cylinder, the volume formula for that is:
 
 ```shell
-V = π * r² * h
+V = π * radius² * height
 ```
 
-With `h = x` in the lambda function. The diameter of the cistern is exactly 2 meter, hence a radius of 1 meter. To formula for me is `π * 1² * x` which will return the volume in square meters. That multiplied by 1000 results in the returned value in litres.
+With `height = x` in the lambda function. The diameter of the cistern is exactly 2 meters, hence a radius of 1 meter. To formula for me is `π * 1² * x` which will return the volume in square meters. That multiplied by 1000 results in the returned value in litres.
 
-The percentage calculation is similar, based on the max volume of 5.500 litres of our cistern.
+The percentage calculation is similar. It is based on the max volume of your cistern, 5.500 litre in our case.
+
+```shell
+p = π * radius² * height * 1000 / max litre * 100
+```
 
 ## Is it accurate?
 
-The way the sensor works it can not be super accurate and it is not really important for our use case but let's check. I'm comparing the measurements with an older flow meter I had lying around:
+The way the sensor works it cannot be super accurate and it is not really important for our use case but let's check. I'm comparing the measurements with an older flow meter I had lying around:
 
 {% image "/images/bildschirmfoto-2022-06-02-um-11.32.png", "Compare ESPHome sensor & flow meter", "small" %}
 
-The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters) `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 liter. That is the minimum accuracy we can get.
+The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters) `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 litre. That is the minimum accuracy we can get.
 
 ## Into Home Assistant
 
