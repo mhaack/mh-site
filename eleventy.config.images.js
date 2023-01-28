@@ -8,7 +8,8 @@ module.exports = eleventyConfig => {
 		const metadata = await eleventyImage(file, {
 			widths: [500, 900, 1500, 'auto'],
 			formats: [isProd ? 'avif' : 'auto', 'webp', 'auto'],
-			outputDir: path.join(eleventyConfig.dir.output, "img"),
+			urlPath: "/images/", 
+			outputDir: path.join(eleventyConfig.dir.output, "images"),
 			filenameFormat: function (id, src, width, format, options) {
 				const extension = path.extname(src);
 				const name = path.basename(src, extension);

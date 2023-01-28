@@ -10,7 +10,7 @@ templateEngineOverride: njk
 
 <p class="mb-8">Since you are here - you can check out my projects.</p>
 
-{% set postslist = collections.posts | head(-3) %}
+{% set postslist = collections.posts | category("project") | head(-3) %}
 {% include "partials/postslist.njk" %}
 
 <p class="mt-8">Want more? Check out all my <a href="/projects/">project posts</a>.</p>

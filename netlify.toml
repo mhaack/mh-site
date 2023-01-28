@@ -11,7 +11,7 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [
-    "dist/img"
+    "dist/images"
   ]
 
 [[redirects]]
