@@ -1,5 +1,5 @@
 {
     "permalink": "{{title|slugify}}/",
-    "layout": "post.njk",
+    "layout": "layouts/post.njk",
     "tags": ["posts"]
 }

@@ -1,5 +1,5 @@
 ---
-layout: home.njk
+layout: layouts/home.njk
 title: Hi, my name is Markus
 heading: Hi, my name is Markus
 ---

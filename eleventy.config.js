@@ -10,8 +10,6 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginWebc = require('@11ty/eleventy-plugin-webc')
 const { EleventyRenderPlugin } = require('@11ty/eleventy')
 
-const isProd = process.env.ELEVENTY_ENV === 'production'
-
 module.exports = function (eleventyConfig) {
     eleventyConfig.setQuietMode(true)
 
@@ -32,9 +30,12 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true)
 
     // copy static assets
-    eleventyConfig.addPassthroughCopy({ 'src/_assets': 'assets', 'src/_includes/components/*.js': 'assets/js/' })
-    eleventyConfig.addPassthroughCopy({ 'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js' })
-    eleventyConfig.addPassthroughCopy({ 'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js' })
+    eleventyConfig.addPassthroughCopy({
+        'src/_assets': 'assets',
+        'src/_includes/components/*.js': 'assets/js/',
+        'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
+        'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js'
+    })
 
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
@@ -89,7 +90,6 @@ module.exports = function (eleventyConfig) {
         dir: {
             input: 'content',
             output: 'dist',
-            layouts: '../src/_layouts',
             includes: '../src/_includes',
             data: '../src/_data',
         },
@@ -99,8 +99,6 @@ module.exports = function (eleventyConfig) {
             "md",
             "njk",
             "html",
-
         ],
-
     }
 }

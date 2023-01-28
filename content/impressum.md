@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: layouts/page.njk
 title: Impressum
 ignore: true
 eleventyExcludeFromCollections: true
