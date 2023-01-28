@@ -150,11 +150,11 @@ My usage of the cart is pretty standard:
 
 The result looks like:
 
-{% image "/images/arlo_ha_camera.png", "Arlo camera view" "small"%}
+{% image "/images/arlo_ha_camera.png", "Arlo camera view", "small"%}
 
 The library view looks like:
 
-{% image "/images/arlo_ha_library.png", "Arlo library view" "small" %}
+{% image "/images/arlo_ha_library.png", "Arlo library view", "small" %}
 
 Notice the rectangles for the detected persons or animals.
 

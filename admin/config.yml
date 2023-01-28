@@ -5,17 +5,17 @@ backend: # Set up your backend
 local_backend: true
 
 publish_mode: editorial_workflow
-media_folder: src/images
+media_folder: content/images
 public_folder: /images
 
 collections:
   - name: "posts"
     create: true
-    folder: "src/posts"
+    folder: "content/posts"
     label_singular: "Post"
     label: "Posts"
-    media_folder: "/src/images/"
-    public_folder: "/images"
+    media_folder: "/content/images/"
+    public_folder: "/img"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sort: "date:desc"
     summary: "{{title}} ({{date}})"
@@ -70,7 +70,7 @@ collections:
     files:
       - name: "home"
         label: "Homepage"
-        file: "src/index.md"
+        file: "content/index.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Heading", name: "heading", widget: "string" }
@@ -79,7 +79,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - name: "about"
         label: "About Me"
-        file: "src/about.md"
+        file: "content/about.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Image", name: "image", widget: "string" }
@@ -88,7 +88,7 @@ collections:
 
       - name: "datasecurity"
         label: "Datenschutz"
-        file: "src/datenschutz.md"
+        file: "content/datenschutz.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
@@ -97,7 +97,7 @@ collections:
 
       - name: "imprint"
         label: "Impressum"
-        file: "src/impressum.md"
+        file: "content/impressum.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
@@ -194,7 +194,7 @@ collections:
   - name: "tags"
     label: "Tags"
     label_singular: "Tag"
-    folder: "src/tags"
+    folder: "content/tags"
     create: true
     identifier_field: "name"
     slug: "{{slug}}"

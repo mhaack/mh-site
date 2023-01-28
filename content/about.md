@@ -1,7 +1,7 @@
 ---
 title: About Markus
 image: /images/markus.jpeg
-layout: about.njk
+layout: layouts/about.njk
 eleventyNavigation:
   key: main
   title: About

@@ -10,8 +10,6 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginWebc = require('@11ty/eleventy-plugin-webc')
 const { EleventyRenderPlugin } = require('@11ty/eleventy')
 
-const isProd = process.env.ELEVENTY_ENV === 'production'
-
 module.exports = function (eleventyConfig) {
     eleventyConfig.setQuietMode(true)
 
@@ -27,25 +25,23 @@ module.exports = function (eleventyConfig) {
         useTransform: true,
     })
     eleventyConfig.addPlugin(EleventyRenderPlugin)
+    eleventyConfig.addPlugin(require("./eleventy.config.images.js"))
 
-    // eleventyConfig.ignores.add('src/_webc/*.webc')
     eleventyConfig.setDataDeepMerge(true)
 
     // copy static assets
-    eleventyConfig.addPassthroughCopy({ './src/images': 'images' })
-    eleventyConfig.addPassthroughCopy({ './src/_assets': 'assets' })
-    eleventyConfig.addPassthroughCopy({ './src/_includes/components/*.js': 'assets/js/' })
-    eleventyConfig.addPassthroughCopy({ 'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js' })
-    eleventyConfig.addPassthroughCopy({ 'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js' })
+    eleventyConfig.addPassthroughCopy({
+        'src/_assets': 'assets',
+        'src/_includes/components/*.js': 'assets/js/',
+        'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
+        'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js'
+    })
 
     eleventyConfig.addPassthroughCopy('admin')
     eleventyConfig.addWatchTarget('./src/_css/')
 
     // short codes
     eleventyConfig.addShortcode('currentYear', require('./utils/shortcodes/currentYear'))
-    eleventyConfig.addNunjucksAsyncShortcode('image', require('./utils/shortcodes/image'))
-    eleventyConfig.addLiquidShortcode('image', require('./utils/shortcodes/image'))
-    eleventyConfig.addJavaScriptFunction('image', require('./utils/shortcodes/image'))
 
     // filters
     eleventyConfig.addFilter('excerpt', require('./utils/filters/postExcerpt'))
@@ -92,13 +88,17 @@ module.exports = function (eleventyConfig) {
 
     return {
         dir: {
-            input: 'src',
+            input: 'content',
             output: 'dist',
-            includes: '_includes',
-            layouts: '_layouts',
+            includes: '../src/_includes',
+            data: '../src/_data',
         },
-        passthroughFileCopy: true,
-        templateFormats: ['html', 'njk', 'md'],
+        markdownTemplateEngine: "njk",
         htmlTemplateEngine: 'njk',
+        templateFormats: [
+            "md",
+            "njk",
+            "html",
+        ],
     }
 }
