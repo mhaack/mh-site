@@ -38,10 +38,10 @@ The wiring of electronic parts is straightforward. For the small motors, usually
 The motors are also powered by the L298 dual motor board directly.
 
 Here is my prototype:
-{% image "/images/halloween-spiders2.jpg", "the first prototype" "x-small"%}
+{% image "/images/halloween-spiders2.jpg", "the first prototype", "x-small"%}
 
 Wiring diagram:
-{% image "/images/halloween-spiders_steckplatine.png", "wiring diagram" "x-small"%}
+{% image "/images/halloween-spiders_steckplatine.png", "wiring diagram", "x-small"%}
 
 For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is mounted on top. For the motor controller I chose with an L298 dual motor board. No extra soldering is needed here.
 
@@ -51,7 +51,7 @@ The most tricky part is the cylinder. It took me three tries to get the drilling
 
 My final construction looks like this:
 
-{% image "/images/halloween-spiders1.jpg", "the final prototype" "x-small"%}
+{% image "/images/halloween-spiders1.jpg", "the final prototype", "x-small"%}
 
 This got directly mounted to the ceiling.
 
@@ -154,7 +154,7 @@ It even integrates with Home Assistant automatically with ESPHome. This is not r
 
 In Home Assistant I can turn on/off the automations using the virtual switches and control the motors directly. I can also set the motor speed and change the direction.
 
-{% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot" "x-small"%}
+{% image "/images/screenshot-homeassistant.png", "Home Assistant Screenshot", "x-small"%}
 
 A﻿s usual the [source](https://github.com/mhaack/home-assistant-config/blob/master/config/esphome/halloween-spiders.yaml) can be found in my GitHub repository:
 
@@ -164,4 +164,4 @@ A﻿s usual the [source](https://github.com/mhaack/home-assistant-config/blob/ma
 
 The kids at the party had a lot of fun with the spiders. At first, they hadn't seen them coming down from the ceiling and were absolutely scared. Next year, to level it up, I will try to get some spiders with blinking LED eyes.
 
-{% image "/images/halloween-spiders.jpg", "the final prototype" "small"%}
+{% image "/images/halloween-spiders.jpg", "the final prototype", "small"%}
