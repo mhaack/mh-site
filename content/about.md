@@ -3,9 +3,9 @@ title: About Markus
 image: /images/markus.jpeg
 layout: layouts/about.njk
 eleventyNavigation:
-  key: main
-  title: About
-  order: 3
+ key: main
+ title: About
+ order: 3
 ---
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.
