@@ -2,17 +2,17 @@
 title: Water tank monitoring with ESPHome
 category: project
 tags:
-  - esphome
-  - home-automation
-  - watering
-  - garden
-  - smarthome
+ - esphome
+ - home-automation
+ - watering
+ - garden
+ - smarthome
 images:
-  feature: /images/watertank-unsplash.jpg
-  height: h-96
+ feature: /images/watertank-unsplash.jpg
+ height: h-96
 description: Watering your lawn and plants around the house wasn't one of my
-  favourite things to do. This had to be done better - fully automatically and
-  without intervention.
+ favourite things to do. This had to be done better - fully automatically and
+ without intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
 ---

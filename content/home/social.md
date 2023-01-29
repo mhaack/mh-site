@@ -15,4 +15,3 @@ You can also find me on <a rel="me" href="https://home.social/@mhaack" title="@m
 [instagram]: https://instagram.com/mhaack
 [github]: https://github.com/mhaack
 [linkedin]: https://de.linkedin.com/in/markushaack
-
