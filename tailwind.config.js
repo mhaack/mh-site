@@ -133,6 +133,9 @@ module.exports = {
                         'tbody tr:nth-child(even)': {
                             backgroundColor: theme('colors.gray.100'),
                         },
+                        figcaption: {
+                            'text-align': 'center',
+                        }
                     },
                 },
                 lg: {
@@ -143,6 +146,9 @@ module.exports = {
                         li: {
                             marginTop: '0',
                             marginBottom: '0.25rem',
+                        },
+                        img: {
+                            'margin-bottom': '1em',
                         },
                         'thead th': {
                             padding: '1rem',
