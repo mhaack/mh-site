@@ -31,7 +31,7 @@ I've been working for quite a while on a simple & reliable monitoring solution f
 
 The way the sensor works is very simple. The ultrasonic sensor is mounted inside the cistern above the water. It measures the distance to the water surface. The higher the water level, the smaller the distance between the water and the sensor. When we consume water, the water surface sinks and the distance increases. If it rains or we manually refill the cistern, the distance decreases again. I measured the full and empty levels of our cistern and can interpolate the intermediates. Using a volume formula, I can convert the distance (in cm) to litres.
 
-{% image "/images/cistern.jpg", "schematic drawing cistern", "small" %}
+{% image "/images/cistern.jpg", "schematic drawing cistern", "small", "Schematic drawing of our cistern with pump and sensor placement" %}
 
 This concept is still used for the current version of the water level sensor.
 
@@ -52,11 +52,11 @@ After two HC-SR04 ultrasonic sensors died because of corrosion, I began looking 
 
 So far the JSN SR04T ultrasonic sensor is pretty reliable. The setup has been running super stable for more than a year now.
 
-{% image "/images/microcontroller-watertank.jpg", "microcontroller watertank sensor", "x-small" %}
+{% image "/images/microcontroller-watertank.jpg", "microcontroller watertank sensor", "x-small", "Photo of Wemo D1 microcontroller" %}
 
 The hardware setup for the water tank sensor is simple. JSN SR04T is connected via the helper module to the Wemos D1 mini microcontroller. Only 4 pins are required: 5V, GND, Trigger pin and echo pin.
 
-{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small" %}
+{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small", "Wiring  diagram of water tank sensor setup" %}
 
 No further electronic components are required. The setup is powered by a USB power adapter.
 
@@ -178,7 +178,7 @@ p = π * radius² * height * 1000 / max litre * 100
 
 The way the sensor works it cannot be super accurate and it is not really important for our use case but let's check. I'm comparing the measurements with an older flow meter I had lying around:
 
-{% image "/images/bildschirmfoto-2022-06-02-um-11.32.png", "Compare ESPHome sensor & flow meter", "small" %}
+{% image "/images/bildschirmfoto-2022-06-02-um-11.32.png", "Compare ESPHome sensor & flow meter", "small", "Compare watering sensor data with flow meter" %}
 
 The readings from the distance sensor are in centimetres. The minimum change it recognizes is 1cm. If we put that into our formula (in meters) `π * 1² * 0,01` we get 0,03141m³ which is ~ 31 litre. That is the minimum accuracy we can get.
 
@@ -186,7 +186,7 @@ The readings from the distance sensor are in centimetres. The minimum change it 
 
 To use the water tank sensor in Home Assistant I use the [ESPHome integration](https://www.home-assistant.io/integrations/esphome/). Setup is super easy via the UI and all exposed sensor data from the ESPHome sketch is automatically available in Home Assistant.
 
-{% image "/images/screenshot_esphome_integration.png", "Screenshot ESPHome integration", "small" %}
+{% image "/images/screenshot_esphome_integration.png", "Screenshot ESPHome integration", "small", "Screenshot of ESPHome sensor in Home Assistant" %}
 
 In the [next post](/green-grass-with-home-assistant/) I will explain how the water tank data of the ESPHome sensor is used in Home Assistant. The automations I have set up to control the water tank pump & Hydrawise irrigation controller for the garden and lawn watering.
 
