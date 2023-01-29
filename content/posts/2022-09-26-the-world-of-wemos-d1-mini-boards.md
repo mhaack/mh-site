@@ -74,23 +74,23 @@ All shield boards typically come with male and female pins are already included 
 
 ESPHome works on top of PlatformIO which has support for a wide range of ESP8266, ESP32 and various other development boards. Wemos D1 boars are supported as well, to use them in your ESPHome projects use:
 
-```
+```yaml
 esphome:
-	platform: ESP8266
-	board: d1_mini
+  platform: ESP8266
+  board: d1_mini
 
 ---- or ----
 
 esphome:
-	platform: ESP8266
-	board: d1_mini_pro
+  platform: ESP8266
+  board: d1_mini_pro
 ```
 
 Or use the short form:
 
-```
+```yaml
 esp8266:
-  board: d1_mini_pro
+ board: d1_mini_pro
 ```
 
 I recommend to always use the Wemos specific board name instead of a generic esp board or `board: nodemcuv2`. While these might work as well the pin mapping might be mixed up and you will get unexpected behaviour.
