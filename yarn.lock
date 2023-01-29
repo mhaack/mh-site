@@ -18,7 +18,7 @@
     p-queue "^6.6.2"
     short-hash "^1.0.0"
 
-"@11ty/eleventy-dev-server@^1.0.1", "@11ty/eleventy-dev-server@^1.0.3":
+"@11ty/eleventy-dev-server@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-dev-server/-/eleventy-dev-server-1.0.3.tgz#9f3cf0721b785e748e74e7e40be692495efa0303"
   integrity sha512-SjYQewOO0Oo2jUI5h0Lk87pRJllDBzbdcHGZTYEf00gz966kidP1Hyd3ySaHqL4lFqW2I6jIxNVKPlhwYhp6yA==
@@ -103,13 +103,13 @@
   dependencies:
     normalize-path "^3.0.0"
 
-"@11ty/eleventy@2.0.0-beta.1":
-  version "2.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-beta.1.tgz#356c88e646057ca2b59faa83205afea073101b2b"
-  integrity sha512-j/V73NWO3i8VnVBWHytDbHxyexomKwrbHiDOLs3LyNaaB3MYZIvGYYf10NVLDO37Zq9CacIfP6a69Njjg9rJDg==
+"@11ty/eleventy@2.0.0-beta.2":
+  version "2.0.0-beta.2"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-2.0.0-beta.2.tgz#7f385842864c7f30b28e71559ab9cdceebf7c9e2"
+  integrity sha512-nH9uxixBqvgT7eCT2PcVvbWPlisv/fc2Me4jpAiiu96HsNF1IK/kSRpDhWUXV9HjXfCN5Hi+wcI/ZXm+5bYF6g==
   dependencies:
     "@11ty/dependency-tree" "^2.0.1"
-    "@11ty/eleventy-dev-server" "^1.0.1"
+    "@11ty/eleventy-dev-server" "^1.0.3"
     "@11ty/eleventy-utils" "^1.0.1"
     "@iarna/toml" "^2.2.5"
     "@sindresorhus/slugify" "^1.1.2"

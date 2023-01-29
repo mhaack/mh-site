@@ -9,7 +9,7 @@ sitemap:
 
 Get In Touch
 
-<section id="contact">
+<section id="contact-form">
   <div class="relative flex flex-col bg-white shadow-lg mt-4 p-8">
     <div class="w-full max-w-screen-md mx-auto text-xl">
       <p class="text-gray-900">Want to have a chat? Send me a message.</p>

@@ -74,7 +74,7 @@
         @apply text-center md:text-left leading-6 text-gray-100;
     }
     p.footer a {
-        @apply text-mountain-300 no-underline hover:text-mountain-600 hover:underline;
+        @apply text-mountain-300 hover:text-mountain-600;
     }
 
     input.contact,
