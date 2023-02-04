@@ -1,9 +1,7 @@
 ---
-icon: puzzle
 theme:
  background: bg-burnt-sienna-500
  text: text-gray-900
- icon: text-blue-dianne-900
 order: 1
 sitemap:
  ignore: true

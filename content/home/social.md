@@ -1,9 +1,7 @@
 ---
-icon: twitter
 theme:
  background: bg-mountain-300
  text: text-gray-900
- icon: text-blue-500
 order: 4
 sitemap:
  ignore: true
