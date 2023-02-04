@@ -73,7 +73,7 @@ collections:
         file: "content/index.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
-          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }
           - { label: "Image", name: "image", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
           - { label: "Body", name: "body", widget: "markdown" }

@@ -1,18 +1,17 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if ignore %}
+    {% if ignore -%}
     <meta name="robots" content="noindex">
-    {% endif %}
+    {% endif -%}
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
 
-    <title>
-      {%- if title -%} 
-        {{ title | escape }}
-      {%- else -%}
-        {{ site.name }}
-      {%- endif -%}
-    </title>
+    {%- if layout == 'post' -%}
+      {%- set currentPage = collections.all | currentPage(page) -%}
+      {%- set desc = currentPage.templateContent | safe | striptags | truncate(140) | escape -%}
+    {%- endif %}
+
+    <title>{%- if title -%}{{ title | escape }} | {{ site.name }}{%- else -%}{{ site.name }}{%- endif -%}</title>
 
     <link rel="preload" href="/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2" as="font" type="font/woff2" crossorigin> 
     <link rel="icon" type= “image/x-icon” href="/assets/icons/favicon.ico">
@@ -21,37 +20,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
     <link rel="manifest" href="/assets/manifest.webmanifest">
     <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
+
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="{{ description or desc or site.description }}">	
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
 
     <meta property="og:title" content="{{  title or site.name | escape }}">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url + page.url }}">
+    <meta property="og:description" content="{{ description or desc or site.description }}">
+
     <meta name="twitter:card" content="summary_large_image">
-
-    {%- if site.author.twitterHandle -%}
     <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
-    {%- endif -%}
-    {% set desc = description %}
-    {%- if not desc -%}
-      {% set desc = content | striptags | truncate(140) %}
-    {% endif %}
-    {%- if desc -%}
-    <meta name="description" content="{{ desc | escape  }}">
-    <meta property="og:description" content="{{ desc | escape }}">
-    {%- endif -%}
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="generator" content="{{ eleventy.generator }}">
-
-    {% if images.feature %}
-    <meta property="og:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
+  
+    {%- if images.feature %}
     <meta name="twitter:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
-    {% endif %}
+    <meta property="og:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
+    {% endif -%}
 
-    <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
-
-    {% if env.isProd %}
+    {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
-    {% endif %}
+    {%- endif %}
   </head>
