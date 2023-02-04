@@ -50,6 +50,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter('head', require('./utils/filters/collectionHead'))
     eleventyConfig.addFilter('category', require('./utils/filters/collectionCategory'))
     eleventyConfig.addFilter('pageTags', require('./utils/filters/pageTags'))
+    eleventyConfig.addFilter('currentPage', require('./utils/filters/currentPage'))
 
     // collections
     eleventyConfig.addCollection('tagList', require('./utils/collections/tagList'))
@@ -91,6 +92,7 @@ module.exports = function (eleventyConfig) {
             input: 'content',
             output: 'dist',
             includes: '../src/_includes',
+            layouts: '../src/_layouts',
             data: '../src/_data',
         },
         markdownTemplateEngine: "njk",

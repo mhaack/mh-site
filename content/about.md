@@ -1,7 +1,8 @@
 ---
 title: About Markus
+description: I'm a developer, home automation enthusiast, married with my wonderful wife, proud dad and a software engineer at Adobe from Leipzig, Germany. Welcome to my virtual home my little corner on the internet.
 image: /images/markus.jpeg
-layout: layouts/about.njk
+layout: about
 eleventyNavigation:
  key: main
  title: About

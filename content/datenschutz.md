@@ -1,5 +1,5 @@
 ---
-layout: layouts/page.njk
+layout: page
 title: Datenschutzerklärung
 ignore: true
 eleventyExcludeFromCollections: true
