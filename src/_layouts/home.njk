@@ -13,11 +13,6 @@ layout: base
   <article id="{{ section.template.fileSlugStr }}" class="p-10 md:px-32 md:py-16 justify-start font-bold {{ section.data.theme.background }} {{ section.data.theme.text }}">
     <div class="box-content max-w-6xl mx-auto">
       {{ section.templateContent | safe }}
-      {% if section.data.icon %}
-      <span class="[&>svg]:mt-8 [&>svg]:w-20 [&>svg]:h-20 {% if section.data.theme.icon %}{{ section.data.theme.icon }}{% endif %}">
-      {% include ("icons/" + section.data.icon + ".svg") %}
-      </span>
-      {% endif %}
     </div>
   </article>
   {% endfor %}  
