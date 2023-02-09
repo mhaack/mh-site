@@ -14,6 +14,8 @@ This repository contains the code for my personal site at [www.markus-haack.com]
 
 ## Built with
 * [Eleventy](https://11ty.dev) as a static site generator
+* [WebC](https://github.com/11ty/webc) Single File Web Components
+* [is-land](https://github.com/11ty/is-land)
 * Default templating is [Nunjucks](https://mozilla.github.io/nunjucks/)
 * PostCSS set up to handle:
 	* TailwindCSS
