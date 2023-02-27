@@ -7,7 +7,7 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /images/electricity-hero-unsplash.jpg
+  feature: /img/electricity-hero-unsplash.jpg
   height: h-128
 date: 2023-02-27
 permalink: our-own-electricity-2/
@@ -124,3 +124,5 @@ My original plan was to write an extra section about taxes as well. But I would 
 So far we are pretty happy with our installation. By installing a photovoltaic system, we have been able to save money on our electricity bills, as well as earn some money from the sale of our excess electricity. We earned a value of 2.024 € in 2022 (1.631€ in 2021). Installing the photovoltaic system was definitely the right choice if this continues in the coming years.
 
 We save money on and do something good for the environment at the same time.
+
+Hero image photo by [Daniel van den Berg](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
