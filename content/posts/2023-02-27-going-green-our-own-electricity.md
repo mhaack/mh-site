@@ -38,9 +38,9 @@ Overall we get 50% of the electricity yield in 1/3 of the time. During the summe
 
 ### Effect of the battery storage
 
-In retrospect it was a good decision to install a battery. I was initially skeptical as to whether it would be worth it, especially because of the extra acquisition and installation costs \[[calculation below]].
+In retrospect it was a good decision to install a battery. I was initially skeptical as to whether it would be worth it, especially because of the extra acquisition and installation costs [calculation below](/our-own-electricity-2/#making-the-maths).
 
-In 2022 we consumed 38% (2.145 kWh) of our self produced electricity from the battery.  Like any battery, a solar battery storage also has a low energy loss. The manufacturer claims it has over 90% efficiency. So we loaded ~ 2.383 kWh into the battery to get 2.145 kWh out. Without battery this would be send to the grid during the day and consumed from the grid during the evening our. This saved us over 400 Euro, see \[[calculation below]].
+In 2022 we consumed 38% (2.145 kWh) of our self produced electricity from the battery.  Like any battery, a solar battery storage also has a low energy loss. The manufacturer claims it has over 90% efficiency. So we loaded ~ 2.383 kWh into the battery to get 2.145 kWh out. Without battery this would be send to the grid during the day and consumed from the grid during the evening our. This saved us over 400 Euro, [see calculation below](/our-own-electricity-2/#making-the-maths).
 
 A typical battery charging and dis-charging curve on a summer day looks like this:
 
@@ -68,6 +68,8 @@ Our installation costs are made up as follows:
 | Battery storage funding   | \-3.200 €   |
 | Final installation cost   | 22.160,72 € |
 
+
+
 The first row of the table includes the 27 Qcells solar panels, the SolarEdge inverter, 27 SolarEdge optimizers, substructure, cables, and assembly on the roof. The electric assembly package contains the DC cable installation, connecting everything to the inverter, connecting the converter with the AC election installation in our house, installing overvoltage protection, all the cabels and configuring the SolarEdge inverter with the right parameters.
 
 As part of the Sächsische Aufbaubank funding program, we received 3.200 euros for the installation of a photovoltaic battery system. Most likely, we wouldn't have installed a battery storage system without the funding. By the end of 2019, electricity costs would not have made the purchase worthwhile. Luckily we did. However since electricity costs a lot in 2019, the calculation would be different now and today I would recommend to install a photovoltaic battery for most set ups.
@@ -78,15 +80,11 @@ As written above in 2022 we consumed 2.145 kWh out of the photovoltaic battery. 
 
 Would these 2.383 kWh have been sent back into the grid we would get some compensation for it.
 
-```yaml
-2.383 kWh * 0,0967 € = 230 € of theoretical compensation
-```
+*2.383 kWh * 0,0967 € = 230 € of theoretical compensation*
 
 The same time we would have drawn the 2.145 kWh from the grid instead from the battery. The price for that, with rates of 2022, would be:
 
-```yaml
-2.145 kWh * 0,2996 € = 643 € of theoretical electricity cost
-```
+*2.145 kWh * 0,2996 € = 643 € of theoretical electricity cost*
 
 The battery saved us approximately 413€ in one year. Giving the installation cost of the battery system (3200€) the investment is recovered after 8 years.
 
@@ -99,19 +97,13 @@ Our self-produced electricity saves us a few hundred euros on our electricity bi
 We reached 62% self-consumption on the production side in 2022. 3.460 kWh (= 38%) have been feed into the grid. For each kWh we don't use ourselves and feed into the grid we receive 0,0967 € feed-in tariff. This amount is guaranteed for 20 years by the\
 Erneuerbare-Energien-Gesetz (EEG = Renewable Energy Sources Act in Germany).
 
-For 2022 this means:
-
-```yaml
-3.460 kWh * 0,0967 € = 334,97 €
-```
+For 2022 this means: *3.460 kWh * 0,0967 € = 334,97 €*
 
 On the consumption side we ended up with 56% self-consumption out of 10.150 kWh consumed energy. This means 5.640 kWh we did not consume from the grid.
 
-```yaml
-5.640 kWh * 0,2996 € = 1689,74 €
+*5.640 kWh * 0,2996 € = 1689,74 €*
 
-with 0,2996 € = our price per kWh in 2022
-```
+*with 0,2996 € = our price per kWh in 2022*
 
 In the end, we gained the equivalent of 1.689,74 € of free electricity. A lot of money was saved on the electricity bill. Due to the difference between the consumption tariff and the feed-in tariff, optimizing for self-consumption makes the most sense. We save more money on every kWh of self-produced electricity than we receive for grid excess energy.
 
