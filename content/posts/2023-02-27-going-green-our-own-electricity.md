@@ -10,7 +10,7 @@ images:
   feature: /images/jama-villa.jpg
   height: h-128
 date: 2023-02-27
-permalink: our-own-electricity-1/
+permalink: our-own-electricity-2/
 ---
 In part 2 of my "Our Own Electricity" series I give an insight into our electricity production and consumption. After I explained our [setup](/our-own-electricity-1/) I will share details on the installation costs, our break even calculation.
 
