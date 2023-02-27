@@ -7,7 +7,7 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /img/screenshot-battery.png
+  feature: /images/screenshot-battery.png
   height: h-128
 date: 2023-02-27
 permalink: our-own-electricity-2/
