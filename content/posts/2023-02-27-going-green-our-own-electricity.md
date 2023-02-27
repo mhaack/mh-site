@@ -7,7 +7,7 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /img/electricity-hero-unsplash.jpg
+  feature: /images/electricity-hero-unsplash.jpg
   height: h-128
 description: Part 2 of my "Our Own Electricity" series gives an insight into our
   electricity production and consumption. After I explained our setup I will
