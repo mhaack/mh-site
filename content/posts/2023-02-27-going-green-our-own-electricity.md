@@ -7,8 +7,11 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /images/electricity-hero-unsplash.jpg
+  feature: /img/electricity-hero-unsplash.jpg
   height: h-128
+description: Part 2 of my "Our Own Electricity" series gives an insight into our
+  electricity production and consumption. After I explained our setup I will
+  share details on the installation costs, our break even calculation.
 date: 2023-02-27
 permalink: our-own-electricity-2/
 ---
@@ -125,4 +128,4 @@ So far we are pretty happy with our installation. By installing a photovoltaic s
 
 We save money on and do something good for the environment at the same time.
 
-Hero image photo by [Patrick](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
+Hero image photo by [Daniel van den Berg](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
