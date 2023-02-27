@@ -125,4 +125,4 @@ So far we are pretty happy with our installation. By installing a photovoltaic s
 
 We save money on and do something good for the environment at the same time.
 
-Hero image photo by [Daniel van den Berg](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
+Hero image photo by [Patrick](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
