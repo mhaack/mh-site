@@ -7,7 +7,7 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /images/screenshot-battery.png
+  feature: /img/electricity-hero.png
   height: h-128
 date: 2023-02-27
 permalink: our-own-electricity-2/
@@ -70,7 +70,7 @@ Our installation costs are made up as follows:
 
 The first row of the table includes the 27 Qcells solar panels, the SolarEdge inverter, 27 SolarEdge optimizers, substructure, cables, and assembly on the roof. The electric assembly package contains the DC cable installation, connecting everything to the inverter, connecting the converter with the AC election installation in our house, installing overvoltage protection, all the cabels and configuring the SolarEdge inverter with the right parameters.
 
-As part of the Sächsische Aufbaubank funding program, we received 3.200 euros for the installation of a photovoltaic battery system. Most likely, we wouldn't have installed a battery storage system without the funding. By the end of 2019, electricity costs would not have made the purchase worthwhile. Luckily we did. However since electricity costs a lot in 2019, the calculation would be different now and today I would recommend to install a photovoltaic battery for most set ups.
+As part of the Sächsische Aufbaubank funding program, we received 3.200 € for the installation of a photovoltaic battery system. Most likely, we wouldn't have installed a battery storage system without the funding. By the end of 2019, electricity costs would not have made the purchase worthwhile. Luckily we did. However since electricity costs a lot in 2019, the calculation would be different now and today I would recommend to install a photovoltaic battery for most set ups.
 
 ### Impact of the battery storage
 
@@ -78,30 +78,40 @@ As written above in 2022 we consumed 2.145 kWh out of the photovoltaic battery. 
 
 Would these 2.383 kWh have been sent back into the grid we would get some compensation for it.
 
-*2.383 kWh*  0,0967 € = 230 € of theoretical compensation*
+```yaml
+2.383 kWh * 0,0967 € = 230 € of theoretical compensation
+```
 
 The same time we would have drawn the 2.145 kWh from the grid instead from the battery. The price for that, with rates of 2022, would be:
 
-*2.145 kWh*  0,2996 € = 643 € of theoretical electricity cost*
+```yaml
+2.145 kWh *  0,2996 € = 643 € of theoretical electricity cost
+```
 
 The battery saved us approximately 413€ in one year. Giving the installation cost of the battery system (3200€) the investment is recovered after 8 years.
 
 ### Savings & break even
 
-Our self-produced electricity saves us a few hundred euros on our electricity bill. Based on the final [installation costs](/our-own-electricity-2/#acquisition-costs) of 22160,72 € for the entire system, we calculated that the break even point would be after 18 years. How is it today?
+Our self-produced electricity saves us a few hundred euros on our electricity bill. Based on the final [installation costs](/our-own-electricity-2/#acquisition-costs) of 22.160,72 € for the entire system, we calculated that the break even point would be after 18 years. How is it today?
 
 {% image "/images/screenshot-energy-2022.png", "Production and Consumption overview for 2022", "x-small", "Production and Consumption overview for 2022" %}
 
 We reached 62% self-consumption on the production side in 2022. 3.460 kWh (= 38%) have been feed into the grid. For each kWh we don't use ourselves and feed into the grid we receive 0,0967 € feed-in tariff. This amount is guaranteed for 20 years by the\
 Erneuerbare-Energien-Gesetz (EEG = Renewable Energy Sources Act in Germany).
 
-For 2022 this means: *3.460 kWh*  0,0967 € = 334,97 €*
+For 2022 this means:
+
+```yaml
+3.460 kWh*  0,0967 € = 334,97 €
+```
 
 On the consumption side we ended up with 56% self-consumption out of 10.150 kWh consumed energy. This means 5.640 kWh we did not consume from the grid.
 
-*5.640 kWh*  0,2996 € = 1689,74 €*
+```yaml
+5.640 kWh *  0,2996 € = 1689,74 €
 
-*with 0,2996 € = our price per kWh in 2022*
+with 0,2996 € = our price per kWh in 2022
+```
 
 In the end, we gained the equivalent of 1.689,74 € of free electricity. A lot of money was saved on the electricity bill. Due to the difference between the consumption tariff and the feed-in tariff, optimizing for self-consumption makes the most sense. We save more money on every kWh of self-produced electricity than we receive for grid excess energy.
 
