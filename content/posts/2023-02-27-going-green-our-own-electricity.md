@@ -7,7 +7,7 @@ tags:
   - electricity
   - adobe
 images:
-  feature: /images/electricity-hero.png
+  feature: /img/electricity-hero-unsplash.jpg
   height: h-128
 date: 2023-02-27
 permalink: our-own-electricity-2/
