@@ -88,7 +88,7 @@ The battery saved us approximately 413€ in one year. Giving the installation c
 
 ### Savings & break even
 
-Our self-produced electricity saves us a few hundred euros on our electricity bill. Based on the final \[installation costs] of 22160,72 € for the entire system, we calculated that the break even point would be after 18 years. How is it today?
+Our self-produced electricity saves us a few hundred euros on our electricity bill. Based on the final [installation costs](/our-own-electricity-2/#acquisition-costs) of 22160,72 € for the entire system, we calculated that the break even point would be after 18 years. How is it today?
 
 {% image "/images/screenshot-energy-2022.png", "Production and Consumption overview for 2022", "x-small", "Production and Consumption overview for 2022" %}
 
