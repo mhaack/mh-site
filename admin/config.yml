@@ -1,6 +1,7 @@
 backend: # Set up your backend
   name: github
   repo: mhaack/mh-site
+  branch: main
 
 local_backend: true
 
