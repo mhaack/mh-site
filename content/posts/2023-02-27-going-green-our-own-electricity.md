@@ -71,7 +71,9 @@ Our installation costs are made up as follows:
 | Battery storage funding   | \-3.200 €   |
 | Final installation cost   | 22.160,72 € |
 
-The first row of the table includes the 27 Qcells solar panels, the SolarEdge inverter, 27 SolarEdge optimizers, substructure, cables, and assembly on the roof. The electric assembly package contains the DC cable installation, connecting everything to the inverter, connecting the converter with the AC election installation in our house, installing overvoltage protection, all the cabels and configuring the SolarEdge inverter with the right parameters.
+
+
+The first row of the table includes the 27 Qcells solar panels, the [SolarEdge inverter](https://www.solaredge.com/en/products/residential/pv-inverters), 27 [SolarEdge optimizers](https://www.solaredge.com/en/products/residential/power-optimizers), substructure, cables, and assembly on the roof. The electric assembly package contains the DC cable installation, connecting everything to the inverter, connecting the converter with the AC election installation in our house, installing overvoltage protection, all the cabels and configuring the SolarEdge inverter with the right parameters.
 
 As part of the Sächsische Aufbaubank funding program, we received 3.200 € for the installation of a photovoltaic battery system. Most likely, we wouldn't have installed a battery storage system without the funding. By the end of 2019, electricity costs would not have made the purchase worthwhile. Luckily we did. However since electricity costs a lot in 2019, the calculation would be different now and today I would recommend to install a photovoltaic battery for most set ups.
 
