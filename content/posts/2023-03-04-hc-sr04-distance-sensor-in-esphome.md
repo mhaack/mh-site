@@ -19,7 +19,7 @@ Depending on the characteristics of your project you have two options of ultraso
 
 {% image "/images/ultrasonic-sensors.jpg", "JSN-SR04T and HC-SR04", "x-small", "JSN-SR04T and HC-SR04" %}
 
-Both sensors are capable of accurately measuring distances between 2cm and ~ 4m using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
+Both sensors are capable of accurately measuring distances between 2cm and ~400cm using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
 
 Here are a few key differences between the two sensors:
 
