@@ -51,9 +51,9 @@ sensor:
     name: "My Ultrasonic Sensor"
 ```
 
-5. Replace `D1` and `D2` with the GPIO pins you connected to the TRIG and ECHO pins of your sensor.
-6. Save and upload the ESPHome firmware to your microcontroller using the ESPHome web interface or the command-line tool.
-7. Once the firmware is uploaded and the device is connected to your Wi-Fi network, you should be able to see the distance measurement from the ultrasonic sensor in the microcontroller logs within the ESPHome dashboard or using
+4. Replace `D1` and `D2` with the GPIO pins you connected to the TRIG and ECHO pins of your sensor.
+5. Save and upload the ESPHome firmware to your microcontroller using the ESPHome web interface or the command-line tool.
+6. Once the firmware is uploaded and the device is connected to your Wi-Fi network, you should be able to see the distance measurement from the ultrasonic sensor in the microcontroller logs within the ESPHome dashboard or using.
 
 {% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small", "Wiring diagram of JSN-SR04T on the breadboard" %}
 
