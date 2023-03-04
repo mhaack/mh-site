@@ -5,7 +5,7 @@ tags:
   - esphome
   - arduino
 images:
-  feature: /images/watertank_steckplatine.png
+  feature: /images/ultrasonic-sensor-hero.jpg
 date: 2023-03-04
 ---
 In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot of inquiries about how to use an ultrasonic distance sensor with ESPHome. That's why I created this short guide.
