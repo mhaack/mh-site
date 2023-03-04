@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
 
     // copy static assets
     eleventyConfig.addPassthroughCopy({
+        'content/images': 'images',
         'src/_assets': 'assets',
         'src/_includes/components/*.js': 'assets/js/',
         'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
