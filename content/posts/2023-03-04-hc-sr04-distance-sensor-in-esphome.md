@@ -17,7 +17,7 @@ In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot 
 
 Depending on the characteristics of your project you have two options of ultrasonic distance sensors to choose from: the HC-SR04 or the JSN-SR04T.
 
-{% image "/images/ultrasonic-sensors.jpg", "JSN-SR04T and HC-SR04", "x-small", "JSN-SR04T and HC-SR04" %}
+{% image "/images/ultrasonic-sensors.jpg", "JSN-SR04T and HC-SR04", "x-small" %}
 
 Both sensors are capable of accurately measuring distances between 2cm and ~400cm using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
 
@@ -56,7 +56,7 @@ Replace `D1` and `D2` with the GPIO pins you connected to the TRIG and ECHO pins
 4. Save and upload the ESPHome firmware to your microcontroller using the ESPHome web interface or the command-line tool.
 5. Once the firmware is uploaded and the device is connected to your Wi-Fi network, you should be able to see the distance measurement from the ultrasonic sensor in the microcontroller logs within the ESPHome dashboard or using
 
-{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small", "Wiring diagram of water tank sensor setup" %}
+{% image "/images/watertank_steckplatine.png", "fritzing diagram of water tank sensor setup", "x-small", "Wiring diagram of JSN-SR04T on the breadboard" %}
 
 That's it! You now have a working HC-SR04 or JSN-SR04T ultrasonic distance sensor connected to your microcontroller and integrated with ESPHome.
 
