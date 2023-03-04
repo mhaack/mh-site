@@ -17,9 +17,7 @@ In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot 
 
 Depending on the characteristics of your project you have two options of ultrasonic distance sensors to choose from: the HC-SR04 or the JSN-SR04T.
 
-x xxxxxx
-
-
+{% image "/images/ultrasonic-sensors.jpg", "JSN-SR04T and HC-SR04", "x-small", "JSN-SR04T and HC-SR04" %}
 
 Both sensors are capable of accurately measuring distances between 2cm and ~ 4m using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
 
