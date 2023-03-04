@@ -1,5 +1,5 @@
 ---
-title: HC-SR04 Distance Sensor in ESPHome
+title: HC-SR04 & JSN-SR04T ultrasonic distance sensors in ESPHome
 category: project
 tags:
   - esphome
@@ -7,6 +7,7 @@ tags:
 images:
   feature: /images/ultrasonic-sensor-hero.jpg
 date: 2023-03-04
+permalink: ultrasonic-distance-sensors-esphome/
 ---
 In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot of inquiries about how to use an ultrasonic distance sensor with ESPHome. That's why I created this short guide.
 
@@ -16,9 +17,11 @@ In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot 
 
 Depending on the characteristics of your project you have two options of ultrasonic distance sensors to choose from: the HC-SR04 or the JSN-SR04T.
 
-<<< foto beider sensoren >>>
+x xxxxxx
 
-Both sensors are capable of accurately measuring distances between 2 cm and ~ 4 m using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
+
+
+Both sensors are capable of accurately measuring distances between 2cm and ~ 4m using ultrasonic pulses and are suitable for a wide range of projects. They both use the same principle of measuring the time it takes for an ultrasonic pulse to travel from the sensor to an object and back.
 
 Here are a few key differences between the two sensors:
 
@@ -33,6 +36,8 @@ The choice between them will depend on your specific requirements, such as size,
 ## ESPHome Ultrasonic Distance Sensor
 
 For the following instructions, I assume that you already know ESPHome. If not, see here for [an introduction to the ESPHome](https://esphome.io/guides/getting_started_hassio.html). It is recommended that you integrate Home Assistant with ESPHome and use the Dashboard for ESPHome. As an alternative, for non Home Assistant users, there is also the option to use the [ESPHome Command Line tool](https://esphome.io/guides/getting_started_command_line.html).
+
+{% image "/images/hc-sr04-sensor-project.jpg", "HC-SR04 & Wemos D1 mini", "x-small", "HC-SR04 & Wemos D1 mini on the breadboard" %}
 
 Here are the steps to use the HC-SR04 or JSN-SR04T sensor with ESPHome:
 
