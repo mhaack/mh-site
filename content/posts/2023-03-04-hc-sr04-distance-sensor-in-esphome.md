@@ -40,7 +40,7 @@ Here are the steps to use the HC-SR04 or JSN-SR04T sensor with ESPHome:
 2. Create a new ESPHome configuration file for your device. Using the Home Assistant integration you can use the ESPHome wizard. Otherwise create a new YAML file manually.
 3. Add the following code to the configuration file to define the HC-SR04 sensor:
 
-```YAML
+```yaml
 sensor:
   - platform: ultrasonic
     trigger_pin: D1
@@ -59,7 +59,7 @@ That's it! You now have a working HC-SR04 or JSN-SR04T ultrasonic distance senso
 
 The basic project code looks like this:
 
-```YAML
+```yaml
 esphome:
   name: ultrasonic-sensor
   platform: ESP8266
@@ -92,7 +92,7 @@ In this code, replace `YOUR_SSID` and `YOUR_PASSWORD` with your Wi-Fi network's 
 
 Fortunately, HC-SR04 and JSN-SR04T use the same data interface. The code works for both ultrasonic distance sensors in the same way. Once running the log from ESPHome will look like this:
 
-```YAML
+```yaml
 [14:49:45][I][app:102]: ESPHome version 2023.2.4 compiled on Mar 4 2023, 14:48:45
 [14:49:45][C][wifi:504]: WiFi:
 [14:49:45][C][wifi:362]: Local MAC: 2C:3A:E8:1F:60:26
@@ -154,7 +154,7 @@ Some handy filters that can be used in combination with ultrasonic distance sens
 
 **filter_out**
 
-```YAML
+```yaml
 filters:
   - filter_out: nan
 ```
@@ -163,7 +163,7 @@ filters:
 
 **median**
 
-```YAML
+```yaml
 filters:
   - median:
       window_size: 7
@@ -175,7 +175,7 @@ This filter is useful to filter outliers from the received sensor data. Using th
 
 Similar to the `median` filter these help to calculate a min or max value based on a defined number of sensor value readings.
 
-```YAML
+```yaml
 filters:
   - min
 
@@ -187,7 +187,7 @@ filters:
 
 **offset & multiply**
 
-```YAML
+```yaml
 filters:
   - offset: 2.0
   - multiply: 1.2
@@ -197,7 +197,7 @@ Using `offset` you can add a constant factor to the sensor value. With the help 
 
 **calibrate_linear**
 
-```YAML
+```yaml
 filters:
   - calibrate_linear:
       - 0.0 -> 0.0
@@ -214,7 +214,7 @@ Sensor events provide the possibility of running automations directly on the mic
 
 Using the `on_value` sensor event an automation can be triggered to run a lambda function. The function can access the sensor trigger value by using the `x` variable. Sensor automations are triggered after sensor filters have been applied. If filters are configured for a sensor `x` has already the pre-processed value.
 
-```YAML
+```yaml
 on_value:
   then:
     - sensor.template.publish:
