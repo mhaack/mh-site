@@ -66,7 +66,7 @@ The key element of this project is burning penetrating fluid which if sprayed di
 
 There are multiple ways to build the flamethrower. I used old wood pieces covered with aluminum foil to mount the spray can and candle. Maybe not the optimal solution but working, using metal parts would be a slightly better way.
 
-![flamethrower mechanism](/images/2018-11-03-halloween-fire-pumpkin/fire-1.jpg)
+![flamethrower mechanism](/assets/images/2018-11-03-halloween-fire-pumpkin/fire-1.jpg)
 
 Bend the thick wire like on the picture above. It should be a big lever as possible to make the most of the power of the servo motor. Hot glue or screw down the servo at the side of the construction and mount it with the wire. The lever will press down the spray nozzle when the servo is activated.
 
@@ -80,19 +80,19 @@ Use the marker to mark jack-o'-lanterns face. The mouth should be at the positio
 
 Place the flamethrower construction inside the pumpkin. Fix it with hot glue to stabilize it. Connect the electronics with the servo motor wires. If enough space the electronics can be placed inside the pumpkin and the PIR sensors can be inside jack-o'-lanterns eyes. Make sure you have a sufficient distance between the electronic parts and the flame.
 
-![pumpkin](/images/2018-11-03-halloween-fire-pumpkin/fire-2.jpg)
+![pumpkin](/assets/images/2018-11-03-halloween-fire-pumpkin/fire-2.jpg)
 
 If you have a smaller pumpkin, with not enough space inside the electronics can also be placed outside. I prefer this setup because it makes you more flexible when placing the PIR motion sensors.
 
 The PIR motions sensors got some protection cover and habe been places to recognize the movement of approaching trick-or-treaters.
 
-![pumpkin](/images/2018-11-03-halloween-fire-pumpkin/fire-4.jpg)
+![pumpkin](/assets/images/2018-11-03-halloween-fire-pumpkin/fire-4.jpg)
 
 ## The electronics
 
 The PIR motion sensors and the servo must be connected to the Wemos / ESP8266 board, you can use any of the Dx pins, expect D0 & D1. These two will be used by the OLED display. Connect power via USB adapter or battery pack.
 
-![Fritzing Diagram](/images/2018-11-03-halloween-fire-pumpkin/fritzing.png)
+![Fritzing Diagram](/assets/images/2018-11-03-halloween-fire-pumpkin/fritzing.png)
 
 ## The software
 
@@ -104,7 +104,7 @@ After uploading the software to the board it has to be configured to connect to 
 
 My test setup looked like this:
 
-![pumpkin](/images/2018-11-03-halloween-fire-pumpkin/fire-3.jpg)
+![pumpkin](/assets/images/2018-11-03-halloween-fire-pumpkin/fire-3.jpg)
 
 The code is written in C++, `halloween.cpp` is the main class.
 
@@ -131,7 +131,7 @@ mosquitto_pub -h <mqtt broker host> -t homie/<device id>/fire/on/set -m true
 
 Where &lt;devie id&gt; is the name of the device assigned during configuration and &lt;mqtt broker host&gt; the hostname or ip address of your MQTT broker. This should make it easy to integrate it into home automation solution. I run OpenHab and integrated it there, just for the fun of controlling the fire via my mobile.
 
-![Openhab](/images/2018-11-03-halloween-fire-pumpkin/openhab.jpg)
+![Openhab](/assets/images/2018-11-03-halloween-fire-pumpkin/openhab.jpg)
 
 The following config parameters are available via config file or MQTT message (see Homie documentation how to use):
 
@@ -145,4 +145,4 @@ The following config parameters are available via config file or MQTT message (s
 
 This is the Jack-O-Lantern on fire.
 
-![Jack-O-Lantern](/images/2018-11-03-halloween-fire-pumpkin/pumpkin-fire.jpg)
+![Jack-O-Lantern](/assets/images/2018-11-03-halloween-fire-pumpkin/pumpkin-fire.jpg)

@@ -38,8 +38,8 @@
     <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
   
     {%- if images.feature %}
-    <meta name="twitter:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
-    <meta property="og:image" content="{{ images.feature | url | absoluteUrl(site.url) }}">
+    <meta name="twitter:image" content="{{ ('assets/' + images.feature) | url | absoluteUrl(site.url)  }}">
+    <meta property="og:image" content="{{ ('assets/' + images.feature) | url | absoluteUrl(site.url) }}">
     {% endif -%}
 
     {% if env.isProd -%}

@@ -11,7 +11,7 @@ const { EleventyRenderPlugin } = require('@11ty/eleventy');
 const markdownLib = require('./config/plugins/markdown.js');
 
 // module import shortcodes
-const { currentYear } = require('./config/shortcodes/index.js');
+const { currentYear, image } = require('./config/shortcodes/index.js');
 
 // module import collections
 const { getAllTags } = require('./config/collections/index.js');
@@ -43,11 +43,10 @@ module.exports = function (eleventyConfig) {
     useTransform: true,
   });
   eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(require('./eleventy.config.images.js'));
 
   // copy static assets
   eleventyConfig.addPassthroughCopy({
-    'content/images': 'images',
+    'content/images': 'assets/images',
     'src/_assets': 'assets',
     'src/_includes/components/*.js': 'assets/js/',
     'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
@@ -58,6 +57,7 @@ module.exports = function (eleventyConfig) {
 
   // short codes
   eleventyConfig.addShortcode('currentYear', currentYear);
+  eleventyConfig.addAsyncShortcode('image', image);
 
   // filters
   eleventyConfig.addFilter('excerpt', postExcerpt);

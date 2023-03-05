@@ -26,7 +26,7 @@ The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) t
 
 The final assembly looks like this:
 
-![final assembly](/images/2017-01-22-mqtt-433mhz-gateway-homie/electronics-1.jpg)
+![final assembly](/assets/images/2017-01-22-mqtt-433mhz-gateway-homie/electronics-1.jpg)
 
 ### Hardware
 
@@ -40,13 +40,13 @@ and an [enclosure](https://www.amazon.de/gp/product/B00PZYMLJ4) to keep all toge
 
 The circuit inside the enclosure box:
 
-![final assembly in box](/images/2017-01-22-mqtt-433mhz-gateway-homie/electronics-2.jpg)
+![final assembly in box](/assets/images/2017-01-22-mqtt-433mhz-gateway-homie/electronics-2.jpg)
 
 ### Building the circuit
 
 The wireing of the gateway project is very easy. The sensor, the transmitter and the receiver must be connected to VIN & GND and the GPIO pins of the ESP8266 board as shown in the table below.
 
-![Fritzing Diagram](/images/2017-01-22-mqtt-433mhz-gateway-homie/fritzing.jpg)
+![Fritzing Diagram](/assets/images/2017-01-22-mqtt-433mhz-gateway-homie/fritzing.jpg)
 
 | Wemos D1 mini | BMP085 | RF Receiver | RF Transmitter |
 | ------------- | ------ | ----------- | -------------- |
