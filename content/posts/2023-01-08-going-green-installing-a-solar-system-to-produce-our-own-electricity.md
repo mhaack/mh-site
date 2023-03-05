@@ -1,17 +1,18 @@
 ---
-title: "Going Green: Installing a Solar System"
+title: 'Going Green: Installing a Solar System'
 category: project
 tags:
-  - solar
-  - photovoltaic
-  - electricity
-  - smarthome
+ - solar
+ - photovoltaic
+ - electricity
+ - smarthome
 images:
-  feature: /images/jama-villa.jpg
-  height: h-128
+ feature: /images/jama-villa.jpg
+ height: h-128
 date: 2023-01-08
 permalink: our-own-electricity-1/
 ---
+
 This one has been in my draft folder for a few weeks. Our photovoltaic system was installed in spring 2020 and I wanted to report on it earlier. I finally had some time to finish the article over the holidays. Small side effect of the fact that it took a bit longer: by the end of 2022 I will have two full years of electricity yield data to show and compare.
 
 This article will consist of 3 blog posts because there are too many topics I would like to cover. This first article describes our journey, the motivation behind why we installed it in the first place and the technical setup. In part two, I will cover the numbers, the hard facts, about the electricity yield, our savings on the energy bill. I will also share our financial summary of when we expect to break even. In a third post I will explain how the solar system is integrated into our Home Assistant setup.
@@ -36,10 +37,10 @@ We also bought a hybrid car in 2021 and try to drive as much as possible on elec
 
 Tech specs ...
 
-* 27 Hanwha / [Q.Cells DUO-G8 panels](https://qcells.com/ane/get-started/complete-energy-solution/solar-panel-detail?slrPnlId=SRPL211201065907002&look=002) with 350 Watts peak power each
-* [Solaredge optimizers](https://www.solaredge.com/en/products/residential/power-optimizers) P370
-* [Solaredge inverter SE7K-RWS](https://www.solaredge.com/en/products/residential/pv-inverters)
-* [BYD L10.5 battery storage](https://www.bydbatterybox.com/)
+- 27 Hanwha / [Q.Cells DUO-G8 panels](https://qcells.com/ane/get-started/complete-energy-solution/solar-panel-detail?slrPnlId=SRPL211201065907002&look=002) with 350 Watts peak power each
+- [Solaredge optimizers](https://www.solaredge.com/en/products/residential/power-optimizers) P370
+- [Solaredge inverter SE7K-RWS](https://www.solaredge.com/en/products/residential/pv-inverters)
+- [BYD L10.5 battery storage](https://www.bydbatterybox.com/)
 
 We installed 27 solar panels on the roof. Each can produce a peak of 350 Watts. Our house has a hip roof. We installed solar panels on the east, south and west side of the roof with a total of 9,45 kilowatts peak output.
 
@@ -81,10 +82,10 @@ Commissioning a solar system in Germany requires a lot of paperwork, phone calls
 
 The photovoltaic system has to be registered at with many organisations:
 
-* the local electricity network operator
-* the electricity provider company (because our electricity meter go replaced)
-* the German "Bundesnetzagentur" (Federal Network Agency for Electricity, Gas, Telecommunications, Post and Railway)
-* and finally the tax office
+- the local electricity network operator
+- the electricity provider company (because our electricity meter go replaced)
+- the German "Bundesnetzagentur" (Federal Network Agency for Electricity, Gas, Telecommunications, Post and Railway)
+- and finally the tax office
 
 The solar installation company took care of most of those, at least the complex and time-consuming communication with the electricity company. They had countless forms, some with identical information, about our installation, electrical parameters, etc. that had to be filled out. Only after approval by the local electricity network operator we are allowed to operate the solar system and connect it to the grid.
 

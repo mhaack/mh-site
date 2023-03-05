@@ -1,69 +1,69 @@
 {
-    "name": "Markus Haack // Software Engineer",
-    "description": "Software Engineer working at Adobe and proud dad of a wonderful daughter.",
-    "url": "https://markus-haack.com",
-    "language": "en",
-    "author": {
-        "name": "Markus Haack",
-        "email": "markus.haack@gmail.com",
-        "twitterHandle": "mhaack"
+  "name": "Markus Haack // Software Engineer",
+  "description": "Software Engineer working at Adobe and proud dad of a wonderful daughter.",
+  "url": "https://markus-haack.com",
+  "language": "en",
+  "author": {
+    "name": "Markus Haack",
+    "email": "markus.haack@gmail.com",
+    "twitterHandle": "mhaack"
+  },
+  "defaultSocialImage": "/images/default-social-image.png",
+  "headerLinks": [
+    {
+      "text": "Projects",
+      "url": "/projects",
+      "external": false
     },
-    "defaultSocialImage": "/images/default-social-image.png",
-    "headerLinks": [
-        {
-            "text": "Projects",
-            "url": "/projects",
-            "external": false
-        },
-        {
-            "text": "Work",
-            "url": "/work",
-            "external": false
-        },
-        {
-            "text": "About",
-            "url": "/about",
-            "external": false
-        }
-    ],
-    "socialLinks": [
-        {
-            "text": "Twitter",
-            "url": "https://twitter.com/mhaack",
-            "icon": "icons/twitter.svg",
-            "external": true
-        },
-        {
-            "text": "Instagram",
-            "url": "https://instagram.com/mhaack",
-            "icon": "icons/instagram.svg",
-            "external": true
-        },
-        {
-            "text": "GitHub",
-            "url": "https://github.com/mhaack",
-            "icon": "icons/github.svg",
-            "external": true
-        },
-        {
-            "text": "LinkedIn",
-            "url": "https://de.linkedin.com/in/markushaack",
-            "icon": "icons/linkedin.svg",
-            "external": true
-        },
-        {
-            "text": "Medium",
-            "url": "https://mhaack.medium.com/",
-            "icon": "icons/medium.svg",
-            "external": true
-        }
-    ],
-    "footerLinks": [
-        {
-            "text": "RSS",
-            "url": "/feed.xml",
-            "icon": "icons/feed.svg",
-            "external": true
-        }
-    ]
+    {
+      "text": "Work",
+      "url": "/work",
+      "external": false
+    },
+    {
+      "text": "About",
+      "url": "/about",
+      "external": false
+    }
+  ],
+  "socialLinks": [
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/mhaack",
+      "icon": "icons/twitter.svg",
+      "external": true
+    },
+    {
+      "text": "Instagram",
+      "url": "https://instagram.com/mhaack",
+      "icon": "icons/instagram.svg",
+      "external": true
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/mhaack",
+      "icon": "icons/github.svg",
+      "external": true
+    },
+    {
+      "text": "LinkedIn",
+      "url": "https://de.linkedin.com/in/markushaack",
+      "icon": "icons/linkedin.svg",
+      "external": true
+    },
+    {
+      "text": "Medium",
+      "url": "https://mhaack.medium.com/",
+      "icon": "icons/medium.svg",
+      "external": true
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "RSS",
+      "url": "/feed.xml",
+      "icon": "icons/feed.svg",
+      "external": true
+    }
+  ]
 }

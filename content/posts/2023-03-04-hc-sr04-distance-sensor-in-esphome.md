@@ -2,13 +2,14 @@
 title: HC-SR04 & JSN-SR04T ultrasonic distance sensors in ESPHome
 category: project
 tags:
-  - esphome
-  - arduino
+ - esphome
+ - arduino
 images:
-  feature: /images/ultrasonic-sensor-hero.jpg
+ feature: /images/ultrasonic-sensor-hero.jpg
 date: 2023-03-04
 permalink: ultrasonic-distance-sensors-esphome/
 ---
+
 In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot of inquiries about how to use an ultrasonic distance sensor with ESPHome. That's why I created this short guide.
 
 [ESPHome](https://esphome.io/index.html) is an open-source framework for building Internet of Things (IoT) devices using the ESP8266 and ESP32 microcontrollers. ESPHome provides an YAML-based configuration language for creating custom firmware that runs on these devices. There is no need to learn and code C++ to program the microcontrollers.
@@ -23,11 +24,11 @@ Both sensors are capable of accurately measuring distances between 2cm and ~400c
 
 Here are a few key differences between the two sensors:
 
-* Physical size: The JSN-SR04T sensor is larger than the HC-SR04 sensor, which may make it more difficult to fit into small projects.
-* Waterproofing: The JSN-SR04T sensor is designed to be waterproof, which makes it a better choice for outdoor projects or projects that may be exposed to moisture like a [water tank sensor](/watertank-esphome/) installation.
-* Cables: The JSN-SR04T typically consists of two parts: the sensor itself and a logic board. Only the sensor itself is waterproof, the logic board is not. The HC-SR04 sensor consists of only one module. 
-* Power consumption: The JSN-SR04T sensor has a higher power consumption than the HC-SR04 sensor. This can be a concern if you are building battery powered projects.
-* Cost: A HC-SR04 sensor (\~1€) is definitely the cheaper option and the JSN-SR04T (\~4€) sensor is generally more expensive.
+- Physical size: The JSN-SR04T sensor is larger than the HC-SR04 sensor, which may make it more difficult to fit into small projects.
+- Waterproofing: The JSN-SR04T sensor is designed to be waterproof, which makes it a better choice for outdoor projects or projects that may be exposed to moisture like a [water tank sensor](/watertank-esphome/) installation.
+- Cables: The JSN-SR04T typically consists of two parts: the sensor itself and a logic board. Only the sensor itself is waterproof, the logic board is not. The HC-SR04 sensor consists of only one module.
+- Power consumption: The JSN-SR04T sensor has a higher power consumption than the HC-SR04 sensor. This can be a concern if you are building battery powered projects.
+- Cost: A HC-SR04 sensor (\~1€) is definitely the cheaper option and the JSN-SR04T (\~4€) sensor is generally more expensive.
 
 The choice between them will depend on your specific requirements, such as size, waterproofing, power consumption, and cost. While the HC-SR04 sensor can be used universally, the JSN-SR04T sensor is often the better choice for outdoor projects.
 
@@ -45,10 +46,10 @@ Here are the steps to use the HC-SR04 or JSN-SR04T sensor with ESPHome:
 
 ```yaml
 sensor:
-  - platform: ultrasonic
-    trigger_pin: D1
-    echo_pin: D2
-    name: "My Ultrasonic Sensor"
+ - platform: ultrasonic
+   trigger_pin: D1
+   echo_pin: D2
+   name: 'My Ultrasonic Sensor'
 ```
 
 4. Replace `D1` and `D2` with the GPIO pins you connected to the TRIG and ECHO pins of your sensor.
@@ -63,13 +64,13 @@ The basic project code looks like this:
 
 ```yaml
 esphome:
-  name: ultrasonic-sensor
-  platform: ESP8266
-  board: d1_mini_pro
+ name: ultrasonic-sensor
+ platform: ESP8266
+ board: d1_mini_pro
 
 wifi:
-  ssid: "YOUR_SSID"
-  password: "YOUR_PASSWORD"
+ ssid: 'YOUR_SSID'
+ password: 'YOUR_PASSWORD'
 
 # Enable logging
 logger:
@@ -81,13 +82,13 @@ api:
 ota:
 
 sensor:
-  - platform: ultrasonic
-    trigger_pin: D1
-    echo_pin: D2
-    name: "My Ultrasonic Sensor"
-    update_interval: 1s
-    accuracy_decimals: 2
-    unit_of_measurement: cm
+ - platform: ultrasonic
+   trigger_pin: D1
+   echo_pin: D2
+   name: 'My Ultrasonic Sensor'
+   update_interval: 1s
+   accuracy_decimals: 2
+   unit_of_measurement: cm
 ```
 
 In this code, replace `YOUR_SSID` and `YOUR_PASSWORD` with your Wi-Fi network's name and password, respectively. The `platform` and `board` options will depend on the type of microcontroller you are using. For a generic ESP8266 board use `board: nodemcuv2`.
@@ -147,8 +148,8 @@ Fortunately, HC-SR04 and JSN-SR04T use the same data interface. The code works f
 
 ESPHome has some powerful features that allow you to manipulate sensor values as well as automate the process of sending data before sending it to Home Assistant.
 
-* [filters](https://esphome.io/components/sensor/index.html#sensor-filters) allow you to pre-process sensor values like adding offset or multipliers, calibrate the output or calculate median, moving average, min, max and more
-* [state change events](https://esphome.io/components/sensor/index.html#sensor-automation) help building automations and run a lambda function on sensor state changes
+- [filters](https://esphome.io/components/sensor/index.html#sensor-filters) allow you to pre-process sensor values like adding offset or multipliers, calibrate the output or calculate median, moving average, min, max and more
+- [state change events](https://esphome.io/components/sensor/index.html#sensor-automation) help building automations and run a lambda function on sensor state changes
 
 ### Using filters
 
@@ -158,7 +159,7 @@ Some handy filters that can be used in combination with ultrasonic distance sens
 
 ```yaml
 filters:
-  - filter_out: nan
+ - filter_out: nan
 ```
 
 `filter_out` can be used to filter out specific sensor readings. For some projects the ultrasonic distance sensors can sometimes give undefined data which I would like to ignore, for example if the distance gets too large for the sensor.
@@ -167,11 +168,11 @@ filters:
 
 ```yaml
 filters:
-  - median:
-      window_size: 7
+ - median:
+    window_size: 7
 ```
 
-This filter is useful to filter outliers from the received sensor data. Using the `window_size` option you can control the number of values over which to calculate a [moving median](https://esphome.io/components/sensor/index.html#median). 
+This filter is useful to filter outliers from the received sensor data. Using the `window_size` option you can control the number of values over which to calculate a [moving median](https://esphome.io/components/sensor/index.html#median).
 
 **min & max**
 
@@ -191,8 +192,8 @@ filters:
 
 ```yaml
 filters:
-  - offset: 2.0
-  - multiply: 1.2
+ - offset: 2.0
+ - multiply: 1.2
 ```
 
 Using `offset` you can add a constant factor to the sensor value. With the help of `multiply` you can multiply each sensor value by a constant value. For the distance sensor this can be helpful for converting the units of the measurements. In order to adjust the value of ultrasonic distance sensors to centimeters and inches, they need to be filtered with a multiply filter.
@@ -218,10 +219,10 @@ Using the `on_value` sensor event an automation can be triggered to run a lambda
 
 ```yaml
 on_value:
-  then:
-    - sensor.template.publish:
-        id: garden_watertank_liter
-        state: !lambda 'return x * 3.1415926;'
+ then:
+  - sensor.template.publish:
+     id: garden_watertank_liter
+     state: !lambda 'return x * 3.1415926;'
 ```
 
 As shown in the example, a second template sensor is updated with a new value. You can also use it to toggle a light or switch.
