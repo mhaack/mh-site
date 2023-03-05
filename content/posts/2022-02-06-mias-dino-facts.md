@@ -11,7 +11,7 @@ images:
 date: 2022-02-06
 ---
 
-My daughter Mia is a huge dinosaur fan, almost a little dinosaur nerd. We are overwhelmed with information about dinosaurs every day. It starts during breakfast and doesn't stop before she falls asleep 😉
+My daughter Mia is a huge dinosaur fan, almost a little dinosaur nerd. We are overwhelmed with information about dinosaurs every day. It starts during breakfast and doesn't stop before she falls asleep ;-).
 
 She is super happy when she can share her dinosaur knowledge with someone. Then, between the Christmas holidays last year, we had the idea: how about sharing the Dino knowledge not only with family and friends but with the whole world.
 
