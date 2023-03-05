@@ -7,7 +7,7 @@ local_backend: true
 
 publish_mode: editorial_workflow
 media_folder: content/images
-public_folder: /images
+public_folder: /assets/images
 
 collections:
   - name: "posts"
@@ -16,7 +16,7 @@ collections:
     label_singular: "Post"
     label: "Posts"
     media_folder: "/content/images/"
-    public_folder: "/images"
+    public_folder: "/assets/images"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sort: "date:desc"
     summary: "{{title}} ({{date}})"

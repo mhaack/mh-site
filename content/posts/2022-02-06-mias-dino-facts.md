@@ -11,13 +11,13 @@ images:
 date: 2022-02-06
 ---
 
-My daughter Mia is a huge dinosaur fan, almost a little dinosaur nerd. We are overwhelmed with information about dinosaurs every day. It starts during breakfast and doesn't stop before she falls asleep 😉
+My daughter Mia is a huge dinosaur fan, almost a little dinosaur nerd. We are overwhelmed with information about dinosaurs every day. It starts during breakfast and doesn't stop before she falls asleep ;-).
 
 She is super happy when she can share her dinosaur knowledge with someone. Then, between the Christmas holidays last year, we had the idea: how about sharing the Dino knowledge not only with family and friends but with the whole world.
 
 This was the birth of [dino-fakten.de](https://dino-fakten.de/) - her very first website.
 
-[![map with the localities of the different dinosaurs around the world](/images/dino-fakten-map.png)](https://dino-fakten.de/karte/)
+[![map with the localities of the different dinosaurs around the world](/assets/images/dino-fakten-map.png)](https://dino-fakten.de/karte/)
 
 ## One more dinosaur website
 

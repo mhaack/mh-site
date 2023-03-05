@@ -1,20 +1,21 @@
 ---
-title: "Going Green: Our Own Electricity"
+title: 'Going Green: Our Own Electricity'
 category: project
 tags:
-  - solar
-  - photovoltaic
-  - electricity
-  - adobe
+ - solar
+ - photovoltaic
+ - electricity
+ - adobe
 images:
-  feature: /images/electricity-hero-unsplash.jpg
-  height: h-128
+ feature: /images/electricity-hero-unsplash.jpg
+ height: h-128
 description: Part 2 of my "Our Own Electricity" series gives an insight into our
-  electricity production and consumption. After I explained our setup I will
-  share details on the installation costs, our break even calculation.
+ electricity production and consumption. After I explained our setup I will
+ share details on the installation costs, our break even calculation.
 date: 2023-02-27
 permalink: our-own-electricity-2/
 ---
+
 In part 2 of my "Our Own Electricity" series I give an insight into our electricity production and consumption. After I explained our [setup](/our-own-electricity-1/) I will share details on the installation costs, our break even calculation.
 
 Disclaimer: the numbers below are actual numbers from our installation. There will be differences in numbers based on the place where you live, the local regulations and the hours of sun you get.
@@ -35,7 +36,7 @@ In 2021, the first full year, our photovoltaic system produced 7,78 MWh. I'm ver
 
 In 2022 the electricity yield was higher than in 2021 in all months except December. See light blue bars in the diagram above. Only 60 kWh were produced throughout December 2022. We can produce almost the same on a summer day in July or August. We produce approximately 90% of the electricity between March and October. Darker winter months - November till February are usually very low in electricity yield. Living in central Europe 51° N there is not much sun during these month. And when the sun shines, it only shines for a few hours and at a flat angle.
 
-Last years we didn't had much snow at the place we live. But if we had some it usually stayed for a while. During that time no electricity is produced even on sunny days if the panels are covered with snow. In December 2022 we had exactly such a case. It snowed for two days and then one week of super sunny winter days but the snow didn't melt. 
+Last years we didn't had much snow at the place we live. But if we had some it usually stayed for a while. During that time no electricity is produced even on sunny days if the panels are covered with snow. In December 2022 we had exactly such a case. It snowed for two days and then one week of super sunny winter days but the snow didn't melt.
 
 Overall we get 50% of the electricity yield in 1/3 of the time. During the summer months May till August we produce > 1MWh each month. April 2022 was also close to 1MWh. The rest of the year the electricity yield is lower, especially during the winter months.
 
@@ -43,7 +44,7 @@ Overall we get 50% of the electricity yield in 1/3 of the time. During the summe
 
 In retrospect it was a good decision to install a battery. I was initially skeptical as to whether it would be worth it, especially because of the extra acquisition and installation costs [calculation below](/our-own-electricity-2/#making-the-maths).
 
-In 2022 we consumed 38% (2.145 kWh) of our self produced electricity from the battery.  Like any battery, a solar battery storage also has a low energy loss. The manufacturer claims it has over 90% efficiency. So we loaded ~ 2.383 kWh into the battery to get 2.145 kWh out. Without battery this would be send to the grid during the day and consumed from the grid during the evening our. This saved us over 400 Euro, [see calculation below](/our-own-electricity-2/#making-the-maths).
+In 2022 we consumed 38% (2.145 kWh) of our self produced electricity from the battery. Like any battery, a solar battery storage also has a low energy loss. The manufacturer claims it has over 90% efficiency. So we loaded ~ 2.383 kWh into the battery to get 2.145 kWh out. Without battery this would be send to the grid during the day and consumed from the grid during the evening our. This saved us over 400 Euro, [see calculation below](/our-own-electricity-2/#making-the-maths).
 
 A typical battery charging and dis-charging curve on a summer day looks like this:
 
@@ -70,8 +71,6 @@ Our installation costs are made up as follows:
 | Total (incl. tax)         | 25.360,72 € |
 | Battery storage funding   | \-3.200 €   |
 | Final installation cost   | 22.160,72 € |
-
-
 
 The first row of the table includes the 27 Qcells solar panels, the [SolarEdge inverter](https://www.solaredge.com/en/products/residential/pv-inverters), 27 [SolarEdge optimizers](https://www.solaredge.com/en/products/residential/power-optimizers), substructure, cables, and assembly on the roof. The electric assembly package contains the DC cable installation, connecting everything to the inverter, connecting the converter with the AC election installation in our house, installing overvoltage protection, all the cabels and configuring the SolarEdge inverter with the right parameters.
 

@@ -27,7 +27,7 @@ The project is build using two Xiaomi ZigBee contact sensors I had leftover. You
 
 This is how the setup looks like:
 
-![Overview](/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-sensor-diagram.png)
+![Overview](/assets/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-sensor-diagram.png)
 
 ## The hard(ware) part
 
