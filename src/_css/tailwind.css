@@ -13,7 +13,7 @@
     font-weight: 400;
     src: local(''), url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2') format('woff2'),
       url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff') format('woff');
-    font-display: swap;
+    font-display: optional;
   }
 
   h1,
