@@ -37,7 +37,7 @@
         "build:twnd": "env ELEVENTY_ENV=production postcss src/_css/tailwind.css -o dist/assets/css/theme.css",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
         "build": "npm-run-all build:* --print-label",
-        "format": "prettier --write \"{src,content}/**/*.{js,json,md}\"",
+        "format": "prettier --write \"{src,content}/**/*.{js,json,css,md}\"",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
