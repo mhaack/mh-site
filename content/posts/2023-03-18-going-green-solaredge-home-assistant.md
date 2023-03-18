@@ -90,7 +90,7 @@ The SolarEdge Modbus integration can provide very detailed data from the inverte
 
 ## Home Assistent Energy Dashboard
 
-While SolarEdge offers a very comprehensive [energy monitoring portal](https://monitoring.solaredge.com) it is still a smart idea to set up the \[Home Assistant Energy Dashboard](https://www.home-assistant.io/home-energy-management/. The Home Assistant Energy Dashboard provides a more detailed overview of the energy usage of individual consumers. It also provides access to historical data, allowing users to track trends and make informed decisions about their energy usage. Furthermore, it helps you identify your home's energy-hogging appliances and devices. Once you know which devices are using the most energy, you can take steps to reduce their usage or replace them with more energy-efficient alternatives.
+While SolarEdge offers a very comprehensive [energy monitoring portal](https://monitoring.solaredge.com) it is still a smart idea to set up the [Home Assistant Energy Dashboard](https://www.home-assistant.io/home-energy-management). The Home Assistant Energy Dashboard provides a more detailed overview of the energy usage of individual consumers. It also provides access to historical data, allowing users to track trends and make informed decisions about their energy usage. Furthermore, it helps you identify your home's energy-hogging appliances and devices. Once you know which devices are using the most energy, you can take steps to reduce their usage or replace them with more energy-efficient alternatives.
 
 To get the most out of it I highly recommend configuring the [SolarEdge Modbus integration](#xxxxxxxx) as this provides more data points, especially if your inverter has battery storage connected as well.
 
