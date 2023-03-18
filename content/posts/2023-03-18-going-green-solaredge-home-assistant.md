@@ -22,8 +22,8 @@ In this blog post, we will take a look at how to integrate a SolarEdge inverter 
 
 We have two options to get the data from our SolarEdge system into Home Assistant.
 
-1) Using the built-in, out of the box SolarEdge integration
-2) Via the SolarEdge Modbus custom integration
+1. Using the built-in, out of the box SolarEdge integration
+2. Via the SolarEdge Modbus custom integration
 
 Installation of 1) is way simpler and pretty straightforward. The inverter data is loaded from the SolarEdge monitoring portal, not via the inverter directly. This will only provide you with the data SolarEdge provides via its cloud APIs and it will also be delayed.
 
@@ -45,11 +45,11 @@ The first thing you need to do is obtain your SolarEdge API key. To do this, go 
 
 The next step is to install the SolarEdge integration in Home Assistant. This can be done via the "Settings" page in Home Assistant. From there select "Devices & Services" and then click on the "+ Add Integration" button in the bottom right corner. In the dialog search for "SolarEdge". You will see two options. Select "SolarEdge" with the cloud symbol.
 
-<<< screenshot solaredge config 1 >>>
+![](/images/screenshot-solaredge-config-1.png)
 
 ### Step 3: Configure the Integration
 
-<<< screenshot solaredge config 2 >>>
+![](/images/screenshot-solaredge-config-2.png)
 
 On the SolarEdge integration configuration screen, enter your SolarEdge Site ID and API key from Step 1. Once done click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter via the SolarEdge monitoring portal, add it to your Home Assistant dashboard and configure the sensors.
 
@@ -89,7 +89,7 @@ The SolarEdge Modbus integration can provide very detailed data from the inverte
 
 ## Home Assistent Energy Dashboard
 
-While SolarEdge offers a very comprehensive [energy monitoring portal](https://monitoring.solaredge.com) it is still a smart idea to set up the [Home Assistant Energy Dashboard](https://www.home-assistant.io/home-energy-management/. The Home Assistant Energy Dashboard provides a more detailed overview of the energy usage of individual consumers. It also provides access to historical data, allowing users to track trends and make informed decisions about their energy usage. Furthermore, it helps you identify your home's energy-hogging appliances and devices. Once you know which devices are using the most energy, you can take steps to reduce their usage or replace them with more energy-efficient alternatives.
+While SolarEdge offers a very comprehensive [energy monitoring portal](https://monitoring.solaredge.com) it is still a smart idea to set up the \[Home Assistant Energy Dashboard](https://www.home-assistant.io/home-energy-management/. The Home Assistant Energy Dashboard provides a more detailed overview of the energy usage of individual consumers. It also provides access to historical data, allowing users to track trends and make informed decisions about their energy usage. Furthermore, it helps you identify your home's energy-hogging appliances and devices. Once you know which devices are using the most energy, you can take steps to reduce their usage or replace them with more energy-efficient alternatives.
 
 To get the most out of it I highly recommend configuring the [SolarEdge Modbus integration](#xxxxxxxx) as this provides more data points, especially if your inverter has battery storage connected as well.
 
