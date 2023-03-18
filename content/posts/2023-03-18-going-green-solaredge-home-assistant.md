@@ -45,11 +45,11 @@ The first thing you need to do is obtain your SolarEdge API key. To do this, go 
 
 The next step is to install the SolarEdge integration in Home Assistant. This can be done via the "Settings" page in Home Assistant. From there select "Devices & Services" and then click on the "+ Add Integration" button in the bottom right corner. In the dialog search for "SolarEdge". You will see two options. Select "SolarEdge" with the cloud symbol.
 
-![](/images/screenshot-solaredge-config-1.png)
+{% image "/images/screenshot-solaredge-config-1.png", "SolarEdge Config Step 2", "x-small" %}
 
 ### Step 3: Configure the Integration
 
-![](/images/screenshot-solaredge-config-2.png)
+{% image "/images/screenshot-solaredge-config-2.png", "SolarEdge Config Step 3", "x-small" %}
 
 On the SolarEdge integration configuration screen, enter your SolarEdge Site ID and API key from Step 1. Once done click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter via the SolarEdge monitoring portal, add it to your Home Assistant dashboard and configure the sensors.
 
@@ -77,11 +77,12 @@ After installation make sure you reboot your Home-Assistant system.
 On the SolarEdge Modbus integration configuration screen, enter the IP address and port number of your SolarEdge inverter, and click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter and add it to your Home Assistant dashboard.
 
 Like many other integrations the SolarEdge Modbus integration is installed via the Home Assistant UI. Then navigate to the "Settings" page in Home Assistant. From there select "Devices & Services" and then click on the "+ Add Integration" button in the bottom right corner. In the dialog search for "SolarEdge" and choose "SolarEdge Modbus". The open box icon indicates that the SolarEdge Modbus integration is a custom integration.
-<<< screenshot 3 >>>
+
+{% image "/images/screenshot-solaredge-config-3.png", "SolarEdge Config Step 3", "x-small" %}
 
 ### Step 4: Configure the Integration
 
-<<< screenshot 4 >>>
+{% image "/images/screenshot-solaredge-config-4.png", "SolarEdge Config Step 3", "x-small" %}
 
 In the configuration dialog enter the local IP address of your inverter. The TCP port should stay at 1502 and in most cases the Modbus address must stay at 1 as well. This depends a little bit on your setup, if multiple inverters are used etc. Select the "Read ..." checkboxes for the meters (up to 3) and batteries (up to 2) you would like to get data for. The integration automatically creates all sensor entities for the meters and batteries.
 
