@@ -101,7 +101,7 @@ In the "Individual devices" section you can add all devices which provide energy
 
 Make sure the energy sensors are not excluded if you have a customized recorder configuration in Home Assistant. Only sensors with history recording can be used in the energy dashboard.
 
-If you live in Europe I recommend setting up the [Forecast.Solar](https://www.home-assistant.io/integrations/forecast_solar/) integration as well, in addition to the inverter and device energy sensors. Based on historical averages and weather forecasts, it can forecast solar power production for your solar panel system.
+If you live in Europe I recommend setting up the [Forecast.Solar](https://www.home-assistant.io/integrations/forecast_solar/) integration as well, in addition to the inverter and device energy sensors. Based on historical averages and weather forecasts, it can forecast solar power production for your solar panel system. Currently Forecast.Solar only works in Europe. I'm not sure if there is an equivalent service for other regions.
 
 Once configured Home Assistant requires some time to collect enough data until the Home Assistant Energy Dashboard is fully working.
 
