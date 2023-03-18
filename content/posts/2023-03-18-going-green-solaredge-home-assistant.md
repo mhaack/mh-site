@@ -53,7 +53,7 @@ The next step is to install the SolarEdge integration in Home Assistant. This ca
 
 On the SolarEdge integration configuration screen, enter your SolarEdge Site ID and API key from Step 1. Once done click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter via the SolarEdge monitoring portal, add it to your Home Assistant dashboard and configure the sensors.
 
-You are now ready to display the data in your custom dashboards or use them for the [energy dashboard](...).
+You are now ready to display the data in your custom dashboards or use them for the [energy dashboard](#home-assistent-energy-dashboard).
 
 ## Integrating SolarEdge Inverter using Modbus
 
