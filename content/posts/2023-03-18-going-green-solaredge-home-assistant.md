@@ -61,18 +61,18 @@ The [SolarEdge Modbus](https://github.com/binsentsu/home-assistant-solaredge-mod
 
 Here's what you need to do:
 
-### Step 1: Enable Modbus TCP on Your SolarEdge Inverter
+#### Step 1: Enable Modbus TCP on Your SolarEdge Inverter
 
 Your inverter must have Modbus TCP enabled. For some inverters you can do it yourself, for others you need an electrician. This depends on the inverter model.
 
 In my case (using SE7K-RWS inverter) is was necessary to set the inverter into installation mode and connect directly to the inverter WiFi. Modbus TCP can be enabled in the "Site Communication" menu. This can be done via the SolarEdge SetApp or via a browser. These steps should be similar for most SolarEdge inverters of the current generation. If you are unsure ask your local solar installer or electrician.
 
-### Step 2: Configure the SolarEdge Modbus Integration
+#### Step 2: Configure the SolarEdge Modbus Integration
 
 The SolarEdge Modbus integration is available as a customer integration. You can installed it via [HACS](https://hacs.xyz) - search for "SolarEdge" - or manually. See instructions on the [projects Git repository](https://github.com/binsentsu/home-assistant-solaredge-modbus).
 After installation make sure you reboot your Home-Assistant system.
 
-### Step 3: Connect the Modbus Integration with the Inverter
+#### Step 3: Connect the Modbus Integration with the Inverter
 
 On the SolarEdge Modbus integration configuration screen, enter the IP address and port number of your SolarEdge inverter, and click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter and add it to your Home Assistant dashboard.
 
@@ -80,7 +80,7 @@ Like many other integrations the SolarEdge Modbus integration is installed via t
 
 {% image "/images/screenshot-solaredge-config-3.png", "SolarEdge Config Step 3", "x-small" %}
 
-### Step 4: Configure the Integration
+#### Step 4: Configure the Integration
 
 {% image "/images/screenshot-solaredge-config-4.png", "SolarEdge Config Step 3", "x-small" %}
 
@@ -92,7 +92,7 @@ The SolarEdge Modbus integration can provide very detailed data from the inverte
 
 While SolarEdge offers a very comprehensive [energy monitoring portal](https://monitoring.solaredge.com) it is still a smart idea to set up the [Home Assistant Energy Dashboard](https://www.home-assistant.io/home-energy-management). The Home Assistant Energy Dashboard provides a more detailed overview of the energy usage of individual consumers. It also provides access to historical data, allowing users to track trends and make informed decisions about their energy usage. Furthermore, it helps you identify your home's energy-hogging appliances and devices. Once you know which devices are using the most energy, you can take steps to reduce their usage or replace them with more energy-efficient alternatives.
 
-To get the most out of it I highly recommend configuring the [SolarEdge Modbus integration](#xxxxxxxx) as this provides more data points, especially if your inverter has battery storage connected as well.
+To get the most out of it I highly recommend configuring the [SolarEdge Modbus integration](#integrating-solaredge-inverter-using-modbus) as this provides more data points, especially if your inverter has battery storage connected as well.
 
 To setup the Home Assistant Energy Dashboard three sensors are needed - the energy values for solar production, grid consumption and exported energy. If you have battery storage installed you have the option to configure battery in and out aka. charge and discharge energy sensors.
 
