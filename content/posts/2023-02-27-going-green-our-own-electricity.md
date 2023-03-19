@@ -129,4 +129,6 @@ So far we are pretty happy with our installation. By installing a photovoltaic s
 
 We save money on and do something good for the environment at the same time.
 
+In the next [post](/our-own-electricity-3/) I will explain how I integrated our photovoltaic system with Home Assistant to get more detailed data and electricity monitoring for our entire house.
+
 Hero image photo by [Daniel van den Berg](https://unsplash.com/@pf91_photography) on [Unsplash](https://unsplash.com/de/fotos/v-S6fyZOWKg)
