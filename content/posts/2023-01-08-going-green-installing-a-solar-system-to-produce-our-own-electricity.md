@@ -99,4 +99,4 @@ With the installation done we are now finally producing our own clean, carbon fr
 
 {% image "/images/screenshot-saved-trees.png", "Screenshot SolarEdge Portal saved trees", "x-small", "CO2 emission saved by us" %}
 
-In [part](/our-own-electricity-2/) 2 I will show the details of the energy we produce and the financial calculation of our installation.
+In [part 2](/our-own-electricity-2/) I will show the details of the energy we produce and the financial calculation of our installation.
