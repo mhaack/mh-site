@@ -5,7 +5,7 @@ tags:
  - solar
  - photovoltaic
  - electricity
- - adobe
+ - smarthome
 images:
  feature: /images/electricity-hero-unsplash.jpg
  height: h-128
