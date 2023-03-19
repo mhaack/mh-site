@@ -8,7 +8,7 @@ tags:
   - home-assistant
   - smarthome
 images:
-  feature: /images/jama-villa.jpg
+  feature: /images/jama-villa-logos.jpg
 description: The third part of my Our Own Electricity series describes how I
   integrated our photovoltaic system into Home Assistant.
 date: 2023-03-18
