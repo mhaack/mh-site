@@ -96,7 +96,7 @@ To get the most out of it I highly recommend configuring the [SolarEdge Modbus i
 
 To setup the Home Assistant Energy Dashboard three sensors are needed - the energy values for solar production, grid consumption and exported energy. If you have battery storage installed you have the option to configure battery in and out aka. charge and discharge energy sensors.
 
-<<< screenshot 5 - energy dashboard config >>>
+![](/images/screenshot-ha-daschboard-1.png)
 
 In the "Individual devices" section you can add all devices which provide energy consumption data like washing machines, fridges, wallboxes, lamps etc. If your devices don't provide energy consumption sensors a smart plug can be used.
 
@@ -106,7 +106,7 @@ If you live in Europe I recommend setting up the [Forecast.Solar](https://www.
 
 Once configured Home Assistant requires some time to collect enough data until the Home Assistant Energy Dashboard is fully working.
 
-<<< screenshot 6 - energy dashboard >>>
+![](/images/screenshot-ha-daschboard-2.png)
 
 Let it run for 2-3 days and then come back. Over time, with enough data collected, you will get a very clean and informative dashboard. With the help of the "Monitor individual devices" view it is now easier to find energy hungry devices using individual monitored devices.
 
