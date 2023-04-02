@@ -15,9 +15,9 @@ date: 2022-09-26
 
 Some readers recently asked me about the Wemos D1 mini usage in my projects and how this board can be used with ESPHome.
 
-For most of my [Arduino](/tags/arduino/) & [ESPHome](/tags/esphome/) projects I use a [Wemos D1 mini (v3.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_3.1.0.html) or [Wemos D1 mini Pro (v1.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_pro.html). The third board of the family is the is the [D1 mini light](https://www.wemos.cc/en/latest/d1/d1_mini_lite.html). I never used one of the light versions, most of the time you can get the D1 mini & D1 mini pro for almost identical prices at alipexpress.com.
+For most of my [Arduino](/tags/arduino/) & [ESPHome](/tags/esphome/) projects I use a [Wemos D1 mini (v3.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_3.1.0.html) or [Wemos D1 mini Pro (v1.1.0)](https://www.wemos.cc/en/latest/d1/d1_mini_pro.html) and recently the [Wemos D1 mini v4.0](https://www.wemos.cc/en/latest/d1/d1_mini.html). The fourth board of the family is the is the [D1 mini light](https://www.wemos.cc/en/latest/d1/d1_mini_lite.html). I never used one of the light versions, most of the time you can get the D1 mini & D1 mini pro for almost identical prices at alipexpress.com.
 
-The boards are equipped with a ESP-8266EX chip running at 80 or 160MHz, like many other Node MCU boards. They provide [12 I/O pins - [11 digital and 1 analog input pin](#pinout) - enough for the most projects.
+The boards are equipped with a ESP-8266EX chip running at 80 or 160MHz, like many other Node MCU boards. They provide 12 I/O pins - [11 digital and 1 analog input pin](#pinout) - enough for the most projects.
 
 I also like the board because it is little smaller than a classic Node MCU board. The dimensions are 34.2 mm x 25.6mm. It is so small; it even fits into a small [dollhouse Mini TV](/mini-tv/).
 
@@ -25,7 +25,7 @@ Wemos recently upgraded both boards. The Wemos D1 mini is now on version 4.0.0 a
 
 ## Pinout
 
-The pinouts of the D1 mini vs. D1 mini Pro are identical, also the D1 mini shares the same pin layout. And with with the latest board versions of the D1 mini (v4.0.0) vs. D1 mini Pro (v2.0.0) Wemos keeps the pin layout compatible.
+The pinouts of the D1 mini and the D1 mini Pro are identical, also the D1 mini shares the same pin layout. And with the latest board versions of the D1 mini (v4.0.0) vs. D1 mini Pro (v2.0.0) Wemos keeps the pin layout compatible.
 
 {% image "/images/d1-mini-pro-pinout.jpeg", "D1 mini Pro Pinout", "small" %}
 
@@ -48,15 +48,17 @@ The pinouts of the D1 mini vs. D1 mini Pro are identical, also the D1 mini share
 | 3V3     | 3.3V                         | 3.3V             |
 | RST     | Reset                        | RST              |
 
-Source pinout: [https://www.wemos.cc](https://www.wemos.cc/en/latest/d1/d1_mini.html)
+Important: all of the IO pins run at 3.3V.
+
+Source: [https://www.wemos.cc](https://www.wemos.cc/en/latest/d1/d1_mini.html)
 
 ## D1 mini vs. D1 mini Pro
 
-There are only minor differences between the D1 mini and the D1 mini Pro (V1.1.0) I have. For most projects it should not really matter which board you use. The pin out layout is the same.
+The most obvious visible difference between the two boards is the color. In previous versions all boards used a blue PCB, but with the latest release the Pro version got a green PCB.
 
-The most obvious visible difference is the ceramic antenna and the external antenna connector on the board. With the ceramic antenna the D1 mini Pro should have better WiFi reception than his little brother.
+While the board shares the same pinout, USB-C connector and the LOLIN I2C Port they have a few technical differences. One is the ceramic antenna and the external antenna connector on the board. With the ceramic antenna the D1 mini Pro should have better WiFi reception than its little brother. The Pro board also comes with an external antenna connector to connect a U.FL connector compatible with 2.4GHz Wi-Fi antennas. Projects using the Pro board can also be powered with lithium batteries. The board includes a charging interface with 500mA Max charging current. Another difference is the flash memory size. In comparison, the D1 mini Pro has 16 MBytes of flash memory whereas the D1 mini only has 4 MBytes.
 
-Another difference is the size of the flash memory. In comparison, the D1 mini Pro has 16 MByte of flash memory whereas the D1 mini only has 4 MByte.
+Depending on the projects you build these differences matter for now. It was perfectly fine to use the D1 mini for most of the projects I built.
 
 ## D1 mini compatible shields
 
