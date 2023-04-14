@@ -2,12 +2,6 @@
 <html lang="{{ site.language }}">
 {% include "partials/head.njk" %}
 <body class="debug-screens flex flex-col min-h-screen text-primary leading-normal scrolling-touch">
-  {% include "partials/nav.njk" %}
-
   {{ content | safe }}
-
-  {% include "partials/footer.njk" %}
-  <scroll-to-top></scroll-to-top>
-  <script src="/assets/js/is-land.js" type="module" defer></script>
 </body>
 </html>
