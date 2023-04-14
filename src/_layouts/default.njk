@@ -1,0 +1,10 @@
+---
+layout: base
+---
+{% include "partials/nav.njk" %}
+<main class="grid tracking-tight text-3xl md:text-5xl">
+{{ content | safe }}
+</main>
+{% include "partials/footer.njk" %}
+<scroll-to-top></scroll-to-top>
+<script src="/assets/js/is-land.js" type="module" defer></script>

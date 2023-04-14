@@ -11,7 +11,7 @@ const { EleventyRenderPlugin } = require('@11ty/eleventy');
 const markdownLib = require('./config/plugins/markdown.js');
 
 // module import shortcodes
-const { currentYear, image } = require('./config/shortcodes/index.js');
+const { currentYear, image, opengraphSource } = require('./config/shortcodes/index.js');
 
 // module import collections
 const { getAllTags } = require('./config/collections/index.js');
@@ -57,6 +57,7 @@ module.exports = function (eleventyConfig) {
 
   // short codes
   eleventyConfig.addShortcode('currentYear', currentYear);
+  eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
   eleventyConfig.addAsyncShortcode('image', image);
 
   // filters

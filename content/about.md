@@ -2,12 +2,16 @@
 title: About Markus
 description: I'm a developer, home automation enthusiast, married with my wonderful wife, proud dad and a software engineer at Adobe from Leipzig, Germany. Welcome to my virtual home my little corner on the internet.
 image: /images/markus.jpeg
-layout: about
+layout: page
 eleventyNavigation:
  key: main
  title: About
  order: 3
 ---
+
+<div class="float-none sm:float-right mx-auto mb-8 sm:-mt-8 sm:ml-4 sm:mb-16 w-40 h-40 sm:w-48 sm-h48">
+  {% image image, "This is Markus", "rounded-full object-cover ring-1 ring-slate-200 ring-offset-8" %}
+</div>
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.
 

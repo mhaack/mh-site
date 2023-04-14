@@ -1,19 +1,18 @@
 ---
-layout: base
+layout: default
 ---
 
-<main class="grid tracking-tight text-3xl md:text-5xl">
-  <div class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
-    <div class="box-content max-w-6xl mx-auto [&>h1]:mb-4">
-      {{ content | safe }}
-    </div>
+<div class="px-8 md:px-32 pb-8 md:pb-16 justify-start font-bold">
+  <div class="box-content max-w-6xl mx-auto [&>h1]:mb-4">
+    {{ content | safe }}
   </div>
+</div>
 
-  {% for section in collections.home | sort( false, false, "data.order" ) %}
-  <article id="{{ section.template.fileSlugStr }}" class="p-10 md:px-32 md:py-16 justify-start font-bold {{ section.data.theme.background }} {{ section.data.theme.text }}">
-    <div class="box-content max-w-6xl mx-auto">
-      {{ section.templateContent | safe }}
-    </div>
-  </article>
-  {% endfor %}  
-</main>
+{% for section in collections.home | sort( false, false, "data.order" ) %}
+<article id="{{ section.template.fileSlugStr }}"
+  class="p-10 md:px-32 md:py-16 justify-start font-bold {{ section.data.theme.background }} {{ section.data.theme.text }}">
+  <div class="box-content max-w-6xl mx-auto">
+    {{ section.templateContent | safe }}
+  </div>
+</article>
+{% endfor %}

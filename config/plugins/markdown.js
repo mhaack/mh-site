@@ -25,7 +25,6 @@ let markdownLib = markdownIt({
     level: [2, 3],
     permalink: markdownItAnchor.permalink.linkAfterHeader({
       style: 'aria-labelledby',
-      class: 'ml-2',
     }),
   })
   .use(markdownItEmoji);
