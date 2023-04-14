@@ -1,6 +1,8 @@
+const isProd = process.env.ELEVENTY_ENV === 'production';
+
 const opengraphSource = (url) => {
   let cachebuster = '_local';
-  if (process.env.ELEVENTY_PRODUCTION) {
+  if (isProd) {
     let d = new Date();
     cachebuster = `_z${d.getFullYear()}${pad(d.getMonth() + 1)}_${d.getDate() % 7}`;
   }
