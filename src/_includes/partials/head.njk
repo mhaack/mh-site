@@ -6,9 +6,11 @@
     {% endif -%}
     <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
 
+    {%- set ogImgSrv = site.url + '/opengraph/default/' -%}
     {%- if layout == 'post' -%}
       {%- set currentPage = collections.all | currentPage(page) -%}
       {%- set desc = currentPage.templateContent | safe | striptags | truncate(140) | escape -%}
+      {%- set ogImgSrv = site.url + '/opengraph' + page.url -%}
     {%- endif %}
 
     <title>{%- if title -%}{{ title | escape }} | {{ site.name }}{%- else -%}{{ site.name }}{%- endif -%}</title>
@@ -28,19 +30,16 @@
     <meta name="author" content="{{ site.author.name }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
-    <meta property="og:title" content="{{  title or site.name | escape }}">
+    <meta property="og:title" content="{{ title or site.name | escape }}">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url + page.url }}">
     <meta property="og:description" content="{{ description or desc or site.description }}">
+    <meta property="og:image" content="{% opengraphImageSrc ogImgSrv %}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
-  
-    {%- if images.feature %}
-    <meta name="twitter:image" content="{{ ('assets/' + images.feature) | url | absoluteUrl(site.url)  }}">
-    <meta property="og:image" content="{{ ('assets/' + images.feature) | url | absoluteUrl(site.url) }}">
-    {% endif -%}
+    <meta name="twitter:image" content="{% opengraphImageSrc ogImgSrv %}">
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
