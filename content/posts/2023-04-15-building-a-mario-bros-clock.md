@@ -7,6 +7,9 @@ tags:
 images:
   feature: /images/mario-bros-1.jpg
   height: h-128
+description: I recently found a DIY project that makes a custom LED Mario Bros.
+  clock that is very cool. Since I'm huge fan of Super Mario I absolutely had to
+  rebuild it.
 date: 2023-04-15
 permalink: mario-bros-clock/
 ---
