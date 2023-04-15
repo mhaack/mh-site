@@ -3,17 +3,17 @@
     "version": "1.0.0",
     "license": "MIT",
     "devDependencies": {
-        "@11ty/eleventy": "^2.0.0",
-        "@11ty/eleventy-img": "^3.0.0",
+        "@11ty/eleventy": "^2.0.1",
+        "@11ty/eleventy-img": "^3.1.0",
         "@11ty/eleventy-navigation": "^0.3.5",
         "@11ty/eleventy-plugin-directory-output": "^1.0.1",
         "@11ty/eleventy-plugin-rss": "^1.2.0",
-        "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-        "@11ty/eleventy-plugin-webc": "^0.8.1",
-        "@netlify/plugin-lighthouse": "^4.0.7",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+        "@11ty/eleventy-plugin-webc": "^0.11.0",
+        "@netlify/plugin-lighthouse": "^4.1.0",
         "@tailwindcss/typography": "^0.5.9",
-        "autoprefixer": "^10.4.13",
-        "cssnano": "^5.1.15",
+        "autoprefixer": "^10.4.14",
+        "cssnano": "^6.0.0",
         "eleventy-plugin-reading-time": "^0.0.1",
         "eleventy-plugin-youtube-embed": "^1.8.1",
         "html-minifier": "^4.0.0",
@@ -26,8 +26,8 @@
         "postcss": "^8.4.21",
         "postcss-cli": "^10.1.0",
         "postcss-import": "^15.1.0",
-        "prettier": "^2.8.4",
-        "tailwindcss": "^3.2.7",
+        "prettier": "^2.8.7",
+        "tailwindcss": "^3.3.1",
         "tailwindcss-debug-screens": "^2.2.1"
     },
     "scripts": {
@@ -41,7 +41,7 @@
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@11ty/is-land": "^3.0.1",
-        "speedlify-score": "^2.0.2"
+        "@11ty/is-land": "^4.0.0",
+        "speedlify-score": "^3.0.0"
     }
 }
