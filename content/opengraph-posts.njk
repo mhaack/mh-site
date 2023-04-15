@@ -7,14 +7,14 @@ pagination:
 permalink: /opengraph/{{ post.url }}/
 ---
 
-<main class="w-[1200px] h-[630px] flex flex-row">
+<main class="w-[1200px] h-[630px] flex flex-row bg-repeat-x bg-bottom bg-[url('/assets/icons/rainbow-bg.png')]">
   <div class="basis-1/4 px-8">
-    <div class="bg-gray-800 w-64 pt-56 px-6 pb-6 text-white">
+    <div class="bg-gray-800 w-64 pt-40 px-6 pb-6 text-white">
       {% include 'icons/mh.svg' %}
     </div>
   </div>
-  <div class="basis-3/4 mx-4 my-auto">
-    <span class="mt-4 text-xl text-blue-dianne-600">
+  <div class="basis-3/4 mx-4 mt-36">
+    <span class="ml-2 text-xl text-blue-dianne-600">
       <time datetime="{{ post.date | htmlDateString }}">
         {{ post.date | readableDate }}
       </time>
