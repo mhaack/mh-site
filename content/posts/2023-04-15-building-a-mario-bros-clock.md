@@ -6,7 +6,7 @@ tags:
   - development
 images:
   feature: /images/mario-bros-1.jpg
-  height: null
+  height: h-128
 date: 2023-04-15
 permalink: mario-bros-clock/
 ---
