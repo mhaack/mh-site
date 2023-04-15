@@ -49,6 +49,6 @@ To flash the firmware follow these steps:
 
 With the current firmware version 1.1.0 the following settings can be adjusted the device settings page: timezone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
 
-This is the final built on my bookshelf:
+## The final result
 
 ![Mario Animation](/assets/images/mario-bros-3.gif)
