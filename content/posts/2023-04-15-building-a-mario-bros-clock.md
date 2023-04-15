@@ -52,7 +52,9 @@ To flash the firmware follow these steps:
 9. Once connected successfully, a message with the button "VISIT DEVICE" will pop up and you can visit the clock settings page.
 10. On the clock settings page make sure you set the right time zone to display the correct time. The default time zone is UTC.
 
-With the current firmware version 1.1.0 the following settings can be adjusted the device settings page: timezone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
+That it, your Mario Bros. clock is ready. If not already done, the next step could be to put the display in a stylish case or frame.
+
+With the current firmware version 1.1.0 some additional settings can be adjusted the device settings page: timezone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
 
 ## The final result
 
