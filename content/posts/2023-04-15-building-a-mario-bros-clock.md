@@ -5,16 +5,14 @@ tags:
   - arduino
   - development
 images:
-  feature: /images/img_6920.jpg
-  height: h-96
+  feature: /images/mario-bros-1.jpg
+  height: null
 date: 2023-04-15
-permalink: mari-bros-clock/
+permalink: mario-bros-clock/
 ---
 I'm a big fan of Nintendo and Super Mario since I was a teenager. One of my most played games in my life was probably Super Mario Land on the Gameboy. I still own it and an original Gameboy as well. I recently found a [cool DIY project](https://www.hackster.io/jnthas/mario-bros-clock-4a0436) - [Clockwise](https://clockwise.page/) Mario Bros. Clock by Jonathas Barbosa. I absolutely had to rebuild it. With this project you can create your own animated Mario clock. With an nice frame it can be a retro decorative object for any environment.
 
-<< photo >>
-
-## Hardware 
+## Hardware
 
 After some research it turned out the project is relative easy to build. All you need is an HUB75 LED matrix display, an ESP32 based micro controller, some jumper wires and a 5V power supply. In addition, you need the Clockwise firmware.
 
@@ -38,19 +36,19 @@ On the Clockwise website select the clock face you like and directly flash the f
 
 To flash the firmware follow these steps:
 
-1. Go to [https://clockwise.page/](https://clockwise.page/) and select the clockface you like
+1. Go to <https://clockwise.page/> and select the clockface you like
 2. Connect the ESP32 device to your computer's USB port (make sure it is not powered separately yet).
 3. Click on the Flash button.
 4. Select the correct USB port the device is connected to and click on "Connect" - this depends on the operating system and browser you use.
 5. The installer will ask to install Clockwise firmware - click "INSTALL" and "INSTALL" on the next screen.
-7. Flashing the board will take ~ 2 minutes, then you should see the installation complete message. Click "NEXT".
-8. The installer will look for WiFi networks to connect to.
-9. Select your local network and enter your password and click "CONNECT".
-10. Once connected successfully, a message with the button "VISIT DEVICE" will pop up and you can visit the clock settings page.
-11. On the clock settings page make sure you set the right time zone to display the correct time. The default time zone is UTC.
+6. Flashing the board will take ~ 2 minutes, then you should see the installation complete message. Click "NEXT".
+7. The installer will look for WiFi networks to connect to.
+8. Select your local network and enter your password and click "CONNECT".
+9. Once connected successfully, a message with the button "VISIT DEVICE" will pop up and you can visit the clock settings page.
+10. On the clock settings page make sure you set the right time zone to display the correct time. The default time zone is UTC.
 
 With the current firmware version 1.1.0 the following settings can be adjusted the device settings page: timezone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
 
 This is the final built on my bookshelf:
 
-<<< photo >>>
+![](/images/mario-bros-3.gif)
