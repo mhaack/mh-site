@@ -57,3 +57,5 @@ With the current firmware version 1.1.0 the following settings can be adjusted t
 ## The final result
 
 ![Mario Animation](/assets/images/mario-bros-3.gif)
+
+The project is great, thanks to [@jnthas](https://github.com/jnthas).
