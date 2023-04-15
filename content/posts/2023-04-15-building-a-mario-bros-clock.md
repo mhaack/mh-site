@@ -12,6 +12,8 @@ permalink: mario-bros-clock/
 ---
 I'm a big fan of Nintendo and Super Mario since I was a teenager. One of my most played games in my life was probably Super Mario Land on the Gameboy. I still own it and an original Gameboy as well. I recently found a [cool DIY project](https://www.hackster.io/jnthas/mario-bros-clock-4a0436) - [Clockwise](https://clockwise.page/) Mario Bros. Clock by Jonathas Barbosa. I absolutely had to rebuild it. With this project you can create your own animated Mario clock. With an nice frame it can be a retro decorative object for any environment.
 
+{% image "/images/mario-bros-1.jpg", "Display backside with Trinity board", "x-small" %}
+
 ## Hardware
 
 After some research it turned out the project is relative easy to build. All you need is an HUB75 LED matrix display, an ESP32 based micro controller, some jumper wires and a 5V power supply. In addition, you need the Clockwise firmware.
