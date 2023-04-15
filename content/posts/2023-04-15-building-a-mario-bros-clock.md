@@ -20,7 +20,7 @@ If you already have an ESP32 micro controller board at hand you can use that. Fo
 
 As a starting point, I experimented with a breadboard and an ESP32-based microcontroller. Wiring instructions for the display can be found on [GitHub](https://github.com/jnthas/clockwise#driving-the-led-matrix). However, I did not like all the wires and wanted them hidden behind the display. In the end I switched to the Trinity board. It can be directly plugged into the LED matrix display HUB75 connector - no wires, no soldering needed. The Trinity comes with touch sensitive buttons, an LDR to control the display brightness, display power control, 5V input and USB-C. It also makes some of the ESP32 pins available for other custom projects.
 
-<< photo >>
+{% image "/images/mario-bros-2.jpg", "Display backside with Trinity board", "x-small" %}
 
 The typical [64x64 LED matrix displays you get on Aliexpress](https://www.aliexpress.com/item/1005001958513042.html) are available in different sizes. I opted for a 192mm x 192mm version. For the frame I bought a simple [gray picture frame on Amazon](https://www.amazon.de/dp/B09W47J295?). If you own a 3D printer you can [build a custom frame or case](https://www.thingiverse.com/search?q=64x64+LED+matrix+case&page=1&type=things&sort=relevant).
 
@@ -51,4 +51,4 @@ With the current firmware version 1.1.0 the following settings can be adjusted t
 
 This is the final built on my bookshelf:
 
-![](/images/mario-bros-3.gif)
+![Mario Animation](/assets/images/mario-bros-3.gif)
