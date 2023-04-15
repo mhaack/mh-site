@@ -6,7 +6,7 @@ tags:
  - adobe
  - aem
  - commerce
- - app builder
+ - app-builder
  - graphql
 images:
  feature: /images/content-and-commerce.png

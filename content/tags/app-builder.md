@@ -1,3 +1,3 @@
 ---
-name: app builder
+name: app-builder
 ---
