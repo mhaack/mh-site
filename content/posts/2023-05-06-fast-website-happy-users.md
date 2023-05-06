@@ -10,7 +10,7 @@ images:
   height: h-96
 date: 2023-05-06
 ---
-As I run this website for a few years now and have been doing [some re-designs and new stack changes](/website-history/), I have always thought about how the website performs. Over time, I became more and more interested in topics related to performance optimization. I know that website performance is important for my site users, especially people come here via mobile. Incidentally, this is also a topic I deal with intensively at work :-)
+As I run this website for a few years now and have been doing [some re-designs and new stack changes](/website-history/), I have always thought about how the website performs. Over time, I became more and more interested in topics related to performance optimization. I know that website performance is important for my site users, especially people come here via mobile. Incidentally, this is also a topic I deal with intensively at [work](https://www.hlx.live/home).
 
 This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=DE&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
 
