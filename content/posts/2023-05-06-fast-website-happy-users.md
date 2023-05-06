@@ -14,7 +14,7 @@ As I run this website for a few years now and have been doing [some re-designs a
 
 This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=DE&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
 
-<is-land on:visible><a href="https://www.11ty.dev/speedlify/markus-haack-com/" target="_blank" aria-label="Speedlify lighthous score" class="no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
+<is-land on:visible><a href="https://www.11ty.dev/speedlify/markus-haack-com/" target="_blank" aria-label="Speedlify lighthous score" class="text-center no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
 
 So how can websites be optimized for speed? Here are some things you can do to improve website performance:
 
