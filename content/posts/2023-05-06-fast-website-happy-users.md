@@ -1,5 +1,5 @@
 ---
-title: Fast website = happy users
+title: "Need for Speed: Why Fast Websites Matter"
 category: project
 tags:
   - website
