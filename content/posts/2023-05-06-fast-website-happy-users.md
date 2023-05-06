@@ -14,7 +14,7 @@ As I run this website for a few years now and have been doing [some re-designs a
 
 This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=DE&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
 
-<is-land on:visible><a href="https://www.11ty.dev/speedlify/markus-haack-com/" target="_blank" aria-label="Speedlify lighthous score" class="no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script</template></is-land>
+<is-land on:visible><a href="https://www.11ty.dev/speedlify/markus-haack-com/" target="_blank" aria-label="Speedlify lighthous score" class="no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
 
 So how can websites be optimized for speed? Here are some things you can do to improve website performance:
 
@@ -32,8 +32,9 @@ I have optimized this site to be as small as possible and haven't sent unnecessa
 
 According to the [Website Carbon Calculator](https://www.websitecarbon.com/website/markus-haack-com/) only 0.03g of CO2 is produced every time someone visits my site. This is cleaner than 96% of web pages tested. (Tested on May 6th 2023).
 
+<is-land on:visible>
 <div id="wcb" class="carbonbadge"></div>
-<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+<template data-island="once"><script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script></template></is-land>
 
 Why is that: when a website takes longer to load, it requires more data to be transferred, which in turn requires more energy from data centers and servers. This increased energy consumption contributes to carbon emissions and harms the environment.
 
