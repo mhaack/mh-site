@@ -24,9 +24,9 @@ Google Lighthouse is a tool that helps website owners and developers to improve 
 
 [Core Web Vitals](https://web.dev/vitals/) are a set of metrics also introduced by Google to measure and quantify the user experience of web pages based on real-world performance data. The data is collected by users of Google Chrome browser. There are three key metrics that make up the Core Web Vitals:
 
-1. Largest Contentful Paint (LCP): This measures the time it takes for the largest content element of a web page to become visible in the viewport. A good LCP score means that users can see the main content of the page quickly.
+1. Largest Contentful Paint (LCP): This metric measures the time it takes for the largest content element of a web page to become visible in the viewport. A good LCP score means that users can see the main content of the page quickly.
 2. First Input Delay (FID): This measures the time it takes for a user to interact with a web page, such as clicking a link or button. A good FID score means that users can interact with the page without delay.
-3. Cumulative Layout Shift (CLS): This measures the amount of unexpected layout shifts that occur during the loading process. A good CLS score means that the page layout remains stable while the page loads.
+3. Cumulative Layout Shift (CLS): Means the amount of unexpected layout shifts that occur during the loading process. A low CLS score means that the page layout remains stable while the page loads. Layout shifts are considered as distracting for the users.
 
 Google considers these Core Web Vitals to be critical indicators of a web page's user experience and uses them as a ranking factor in search results. 
 
