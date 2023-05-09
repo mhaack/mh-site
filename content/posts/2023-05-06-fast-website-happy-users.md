@@ -8,7 +8,7 @@ tags:
 images:
   feature: /images/fast-website-unsplash.jpg
   height: h-96
-date: 2023-05-06
+date: 2023-05-09
 ---
 As I have run this website for a few years now and have been doing [some re-designs and new stack changes](/website-history/), I have always thought about how the website performs. Over time, I became more and more interested in topics related to performance optimization. Core Web Vitals and that website performance are important for site users, especially people who come here via mobile. Incidentally, this is also a topic I deal with intensively at [work](https://www.hlx.live/home) :-)
 
