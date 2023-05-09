@@ -30,6 +30,8 @@ Google Lighthouse is a tool that helps website owners and developers to improve 
 
 Google considers these Core Web Vitals to be critical indicators of a web page's user experience and uses them as a ranking factor in search results. 
 
+{% image "/images/screenshot-goolge-pagespeed.png", "Google PageSpeed Insights Report", "small" %}
+
 So how can websites be optimized for speed and a good Lighthouse? Here are some things you can do to improve website performance:
 
 1. Optimize images: Images are often the largest files on a website and can slow down the page load time. Using modern image formats like WEBP or AVIF compress images significantly better than JPEG, reduce their file size and improve page speed.
