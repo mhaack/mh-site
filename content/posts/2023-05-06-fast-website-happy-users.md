@@ -1,5 +1,5 @@
 ---
-title: "Need for Speed: Why Fast Websites Matter"
+title: "Need for Speed: Why Website Performance Matters"
 category: project
 tags:
   - website
