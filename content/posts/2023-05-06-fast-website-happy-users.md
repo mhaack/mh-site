@@ -12,7 +12,7 @@ date: 2023-05-06
 ---
 As I have run this website for a few years now and have been doing [some re-designs and new stack changes](/website-history/), I have always thought about how the website performs. Over time, I became more and more interested in topics related to performance optimization. Core Web Vitals and that website performance are important for site users, especially people who come here via mobile. Incidentally, this is also a topic I deal with intensively at [work](https://www.hlx.live/home) :-)
 
-This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=DE&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
+This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=EN&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
 
 <div class="flex">
 <is-land on:visible class="mx-auto"><a href="https://www.11ty.dev/speedlify/markus-haack-com/" aria-label="Speedlify lighthous score" class="mx-auto no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
@@ -30,7 +30,7 @@ Google Lighthouse is a tool that helps website owners and developers to improve 
 
 Google considers these Core Web Vitals to be critical indicators of a web page's user experience and uses them as a ranking factor in search results. 
 
-{% image "/images/screenshot-goolge-pagespeed.png", "Google PageSpeed Insights Report", "small" %}
+{% image "/images/screenshot-goolge-pagespeed.png", "Google PageSpeed Insights Report", "small", "Google PageSpeed Insights Report for markus-haack.com tested on May 9th 2023" %}
 
 So how can websites be optimized for speed and a good Lighthouse? Here are some things you can do to improve website performance:
 
@@ -44,7 +44,7 @@ So how can websites be optimized for speed and a good Lighthouse? Here are some 
 
 As a result, websites that load quickly, provide a seamless user experience, and achieve high Lighthouse scores are not only beneficial for the user but also for the environment. Fast and size optimized websites are good for the environment because they consume less energy, which reduces their carbon footprint.
 
-According to the [Website Carbon Calculator](https://www.websitecarbon.com/website/markus-haack-com/) only 0.03g of CO2 is produced every time someone visits my site. This is cleaner than 96% of web pages tested. (Tested on May 6th 2023).
+According to the [Website Carbon Calculator](https://www.websitecarbon.com/website/markus-haack-com/) only 0.03g of CO2 is produced every time someone visits my site. This is cleaner than 96% of web pages tested. (Tested on May 9th 2023).
 
 <is-land on:visible>
 <div id="wcb" class="carbonbadge"></div>
