@@ -19,6 +19,8 @@ I gave a presentation about the new AEM document based authoring and how to buil
   <source src="https://images-tv.adobe.com/mpcv3/7469/8ee3fb7a-4086-4f06-9898-0799c7aeea69_1685140943.854x480at800_h264.mp4" type="video/mp4">\
 </video>
 
-A crucial aspect of every project is the structure of the content documents. An author should be able to navigate through the documents intuitively without any problems. We will provide guidelines and tips and tricks on how to structure your content documents. When structuring a document for Experience Manager, it is essential for authors who will contribute content to make it simple and intuitive. This session will explain how to structure content documents in a content first approach letting authors drive the content structure. We will explain best practices, how and when to use sections and blocks and show common project pitfalls to avoid.
+Abstract:
+
+> A crucial aspect of every project is the structure of the content documents. An author should be able to navigate through the documents intuitively without any problems. We will provide guidelines and tips and tricks on how to structure your content documents. When structuring a document for Experience Manager, it is essential for authors who will contribute content to make it simple and intuitive. This session will explain how to structure content documents in a content first approach letting authors drive the content structure. We will explain best practices, how and when to use sections and blocks and show common project pitfalls to avoid.
 
 Continue the conversation at the [Adobe Experience League Forum](https://adobe.ly/40YBTnO).
