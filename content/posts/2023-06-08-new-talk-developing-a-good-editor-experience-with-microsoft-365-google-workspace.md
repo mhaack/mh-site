@@ -15,7 +15,7 @@ In May Adobe hosted the Adobe Developers Live virtual conference for Adobe Exper
 
 I gave a presentation about the new AEM document-based authoring and how to build an effective editor experience with Microsoft 365/Google Workspace.
 
-<video controls width="100%">
+<video controls width="100%" poster="/images/dev-live-aem-doc-based-authoring.jpg">
   <source src="https://images-tv.adobe.com/mpcv3/7469/8ee3fb7a-4086-4f06-9898-0799c7aeea69_1685140943.854x480at800_h264.mp4" type="video/mp4">\
 </video>
 
