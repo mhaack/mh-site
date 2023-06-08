@@ -11,9 +11,9 @@ images:
 date: 2023-06-08
 permalink: aem-document-based-authoring/
 ---
-In May Adobe hosted the Adobe Developers Live virtual conference for Adobe Experience Manager with focus on building next generation composable services, universal editor, edge delivery and generative AI.
+In May Adobe hosted the Adobe Developers Live virtual conference for Adobe Experience Manager. The conference focused on building next generation composable services, universal editor, edge delivery and generative AI.
 
-I gave a presentation about the new AEM document based authoring and how to build a good editor experience with Microsoft 365/Google Workspace.
+I gave a presentation about the new AEM document-based authoring and how to build an effective editor experience with Microsoft 365/Google Workspace.
 
 <video controls width="100%">
   <source src="https://images-tv.adobe.com/mpcv3/7469/8ee3fb7a-4086-4f06-9898-0799c7aeea69_1685140943.854x480at800_h264.mp4" type="video/mp4">\
@@ -23,4 +23,4 @@ Abstract:
 
 > A crucial aspect of every project is the structure of the content documents. An author should be able to navigate through the documents intuitively without any problems. We will provide guidelines and tips and tricks on how to structure your content documents. When structuring a document for Experience Manager, it is essential for authors who will contribute content to make it simple and intuitive. This session will explain how to structure content documents in a content first approach letting authors drive the content structure. We will explain best practices, how and when to use sections and blocks and show common project pitfalls to avoid.
 
-Continue the conversation at the [Adobe Experience League Forum](https://adobe.ly/40YBTnO).
+If you want to follow up, feel free to reach out or continue the conversation at the [Adobe Experience League Forum](https://adobe.ly/40YBTnO).
