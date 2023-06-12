@@ -1,6 +1,5 @@
 ---
-permalink: '/feed.xml'
-eleventyExcludeFromCollections: true
+permalink: '/feed/feed.xml'
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -8,26 +7,20 @@ eleventyExcludeFromCollections: true
   <subtitle></subtitle>
   <link href="{{ permalink | htmlBaseUrl(site.url) }}" rel="self"/>
   <link href="{{ site.url }}/"/>
-  {% if collections.posts | length %}
-    <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
-  {% endif %}
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {% for post in collections.posts %}
-    {% set absolutePostUrl %}{{ post.url | htmlBaseUrl(site.url) }}{% endset %}
+  {%- for post in collections.posts | reverse %}
+    {% set absolutePostUrl = post.url | htmlBaseUrl(site.url) %}
     <entry>
       <title>{{ post.data.title }}</title>
       <link href="{{ absolutePostUrl }}"/>
-      <updated>{{ post.date | rssDate }}</updated>
+      <updated>{{ post.date | dateToRfc3339 }}</updated>
       <id>{{ absolutePostUrl }}</id>
-      <content type="html">
-        <![CDATA[
-      {{ post.templateContent | safe }}
-    ]]>
-      </content>
+      <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
     </entry>
-  {% endfor %}
+  {%- endfor %}
 </feed>
