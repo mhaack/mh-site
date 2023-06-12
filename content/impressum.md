@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Impressum
-ignore: true
 eleventyExcludeFromCollections: true
 ---
 

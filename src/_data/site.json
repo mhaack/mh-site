@@ -5,7 +5,7 @@
   "language": "en",
   "author": {
     "name": "Markus Haack",
-    "email": "markus.haack@gmail.com",
+    "email": "info@markus-haack.de",
     "twitterHandle": "mhaack"
   },
   "defaultSocialImage": "/images/default-social-image.png",
@@ -61,7 +61,7 @@
   "footerLinks": [
     {
       "text": "RSS",
-      "url": "/feed.xml",
+      "url": "/feed/feed.xml",
       "icon": "icons/feed.svg",
       "external": true
     }

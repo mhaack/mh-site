@@ -6,18 +6,13 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for item in collections.all %}
     {% if not item.data.sitemap.ignore == true %}
+    {% set absoluteUrl %}{{ item.url | htmlBaseUrl(site.url) }}{% endset %}
       <url>
-        <loc>{{ site.url }}{{ item.url | url }}</loc>
+        <loc>{{ absoluteUrl }}</loc>
         {% if item.data.updated %}
           <lastmod>{{ item.data.updated | htmlDateString }}</lastmod>
         {% else %}
           <lastmod>{{ item.date | htmlDateString }}</lastmod>
-        {% endif %}
-        {% if item.data.sitemap.changefreq %}
-          <changefreq>{{ item.data.sitemap.changefreq }}</changefreq>
-        {% endif %}
-        {% if item.data.sitemap.priority %}
-          <priority>{{ item.data.sitemap.priority }}</priority>
         {% endif %}
       </url>
     {% endif %}

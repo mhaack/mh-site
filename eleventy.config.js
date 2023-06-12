@@ -5,7 +5,7 @@ const pluginReadingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginWebc = require('@11ty/eleventy-plugin-webc');
-const { EleventyRenderPlugin } = require('@11ty/eleventy');
+const { EleventyRenderPlugin, EleventyHtmlBasePlugin } = require('@11ty/eleventy');
 
 // markdown config
 const markdownLib = require('./config/plugins/markdown.js');
@@ -43,6 +43,7 @@ module.exports = function (eleventyConfig) {
     useTransform: true,
   });
   eleventyConfig.addPlugin(EleventyRenderPlugin);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   // copy static assets
   eleventyConfig.addPassthroughCopy({
