@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Datenschutzerklärung
-ignore: true
 eleventyExcludeFromCollections: true
 ---
 
