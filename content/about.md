@@ -30,6 +30,7 @@ If time allows I play with Nintendo consoles, old and new ones. I'm interested i
 Do you want to contact me? You can find me in the following places:
 
 - Twitter - [twitter.com/mhaack](https://twitter.com/mhaack)
+- Mastodon - [mhaack@mastodon.social](https://mastodon.social/@mhaack)
 - GitHub - [github.com/mhaack](https://github.com/mhaack)
 - Instagram - [instagram.com/mhaack](https://instagram.com/mhaack)
 - Medium - [mhaack.medium.com](https://mhaack.medium.com/)
