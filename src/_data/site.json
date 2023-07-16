@@ -34,6 +34,12 @@
       "external": true
     },
     {
+      "text": "Mastodon",
+      "url": "https://mastodon.social/@mhaack",
+      "icon": "icons/mastodon.svg",
+      "external": true
+    },
+    {
       "text": "Instagram",
       "url": "https://instagram.com/mhaack",
       "icon": "icons/instagram.svg",
