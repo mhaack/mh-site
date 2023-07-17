@@ -6,6 +6,7 @@ tags:
   - home-automation
 images:
   feature: /images/disc-backup-hero.jpg
+  height: h-96
 date: 2023-07-17
 ---
 Okay, I don't think I need to go into detail about why having a solid backup strategy for your [Home Assistant](https://www.home-assistant.io/) solution is important. So I'll write about how to set it up. I've wanted to set up the backup of my Home Assistant installation properly for months. Now that I've finally tackled this task, I thought I'd summarize the steps I took.
