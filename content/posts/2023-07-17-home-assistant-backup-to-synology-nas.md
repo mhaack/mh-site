@@ -8,9 +8,9 @@ images:
   feature: /images/disc-backup-hero.jpg
 date: 2023-07-17
 ---
-Okay, I don't think I need to go into detail about why having a solid backup strategy for your Home Assistant solution is important. So I'll write about how to set it up. I've wanted to set up the backup of my Home Assistant installation properly for months. Now that I've finally tackled this task, I thought I'd summarize the steps I took.
+Okay, I don't think I need to go into detail about why having a solid backup strategy for your [Home Assistant](https://www.home-assistant.io/) solution is important. So I'll write about how to set it up. I've wanted to set up the backup of my Home Assistant installation properly for months. Now that I've finally tackled this task, I thought I'd summarize the steps I took.
 
-I'm running Home Assistant on an Odroid N2, and I'm well aware that frequent writes can shorten the lifespan of memory cards. In general a higher quality SD card typically will last longer and can hold multiple years. We also have to consider the entire system, not only Home Assistant itself, but also all add-on like MQTT broker etc. Although this concern primarily applies to SD cards, I wanted to be cautious with the Odroid N2 and its MMC memory.
+I'm [running Home Assistant on an Odroid N2](/jama-villa/), and I'm well aware that frequent writes can shorten the lifespan of memory cards. In general a higher quality SD card typically will last longer and can hold multiple years. We also have to consider the entire system, not only Home Assistant itself, but also all add-on like MQTT broker etc. Although this concern primarily applies to SD cards, I wanted to be cautious with the Odroid N2 and its MMC memory.
 
 Until now, I've been creating weekly backups directly on the local disk of my Home Assistant server. Later, I manually transferred these backups to our NAS system at more or less regular intervals. Unfortunately, the memory card has filled up multiple times, forcing me to delete older backups.
 
@@ -22,7 +22,7 @@ Now, it's time for me to give it a try and establish a robust backup strategy.
 
 ## Home Assistant backup to network storage
 
-In my case I connected Home Assistant to our Synology NAS. The setup steps are pretty well [documented](https://www.home-assistant.io/common-tasks/os/#network-storage) for the Home Assistant part, however the NAS or file server part is always a little more tricky and different. I'll explain how to configure a network share hosted on the Synology NAS as the main backup location for Home Assistant. This will work with other NAS systems (like QNAP) or file servers as well, but might require some different configuration steps to enable the file share.
+In my case I connected Home Assistant to our [Synology NAS](https://www.synology.com/en-us/dsm/solution/what-is-nas/for-home). The setup steps are pretty well [documented](https://www.home-assistant.io/common-tasks/os/#network-storage) for the Home Assistant part, however the NAS or file server part is always a little more tricky and different. I'll explain how to configure a network share hosted on the Synology NAS as the main backup location for Home Assistant. This will work with other NAS systems (like QNAP) or file servers as well, but might require some different configuration steps to enable the file share.
 
 ## Setup step by step
 
