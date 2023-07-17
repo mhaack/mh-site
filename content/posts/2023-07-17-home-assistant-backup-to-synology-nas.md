@@ -5,7 +5,7 @@ tags:
   - home-assistant
   - home-automation
 images:
-  feature: /images/ha-backup-screenshot-1.png
+  feature: /images/disc-backup-hero.jpg
 date: 2023-07-17
 ---
 Okay, I don't think I need to go into detail about why having a solid backup strategy for your Home Assistant solution is important. So I'll write about how to set it up. I've wanted to set up the backup of my Home Assistant installation properly for months. Now that I've finally tackled this task, I thought I'd summarize the steps I took.
@@ -170,3 +170,6 @@ days_until_stale: 30
 Regularly backing up your Home Assistant configuration is crucial to protect your smart home deployment. While Home Assistant has offered that capability for years to backup to a local disk/memory card then transfer it to external storage afterwards - it is not very reliable. By utilizing a network share as backup storage you add an extra layer of security to your backup strategy. With these steps in place, you can rest assured that your Home Assistant configuration is safe and easily recoverable in case of unforeseen events.
 
 Happy automating!
+
+Hero image from <a href="https://unsplash.com/@filmlav?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Fernando Lavin</a> on <a href="https://unsplash.com/de/fotos/RxHCRDO0psE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
