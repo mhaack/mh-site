@@ -26,6 +26,8 @@ In my case I connected Home Assistant to our Synology NAS. The setup steps are p
 
 ## Setup step by step
 
+With the following step by step you should have no problem to set up your own Home Assistant backup to a network share.
+
 ### 1. Create a Shared Folder
 
 In order to get started, you must create a shared network folder on your NAS. Go to *Control Panel* > *Shared Folder* and click *Create*. Enter a name for the shared folder (such as "Home Assistant Backup") and select a location. The location options depend on the NAS setup. I only have *Volume 1*.
