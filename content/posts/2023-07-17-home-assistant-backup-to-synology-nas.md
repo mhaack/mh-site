@@ -30,7 +30,7 @@ In my case I connected Home Assistant to our Synology NAS. The setup steps are p
 
 In order to get started, you must create a shared network folder on your NAS. Go to *Control Panel* > *Shared Folder* and click *Create*. Enter a name for the shared folder (such as "Home Assistant Backup") and select a location. The location options depend on the NAS setup. I only have *Volume 1*.
 
-![](/images/ha-backup-screenshot-1.png)
+{% image "/images/ha-backup-screenshot-1.png", "screenshot 1", "x-small", "Screenshot 1: configuration of Synology Shared Folder" %}
 
 Do not enable the recycle bin feature. Click *Next*.
 
@@ -40,7 +40,7 @@ Click *Next*. Don't change anything on the advanced setups and click *Next* agai
 
 Review the settings and click *Next* to create the shared folder.
 
-![](/images/ha-backup-screenshot-2.png)
+{% image "/images/ha-backup-screenshot-2.png", "screenshot 2", "x-small", "Screenshot 2: configuration of Synology Shared Folder" %}
 
 Review the access permissions and click *Apply*.
 
@@ -50,7 +50,7 @@ In this step we will enable NFS file services on the Synology NAS. This step is 
 
 In your Synology UI go to *Control Panel* > *File Services* and select the *NFS* tab. If not already checked select the *Enable NFS Service* checkbox. The screen should look like this:
 
-![](/images/ha-backup-screenshot-5.png)
+{% image "/images/ha-backup-screenshot-5.png", "screenshot 3", "x-small", "Screenshot 3: enable NFS services on Synology NAS" %}
 
 ### 3. Make the shared folder accessible via NFS
 
@@ -60,13 +60,13 @@ Select the newly created shared folder from the *Shared Folder* list in the Cont
 
 In the dialog navigate to the *NFS Permissions* tab and click *Create*. In the dialog enter the hostname or IP address of your Home Assistant machine.
 
-![](/images/ha-backup-screenshot-3.png)
+{% image "/images/ha-backup-screenshot-3.png", "screenshot 4", "x-small", "Screenshot 4: set up NFS Permissions for shared folder" %}
 
 Click *Save*.
 
 Copy and note down the mount path at the bottom of the *NFS Permissions* tab.
 
-![](/images/ha-backup-screenshot-4.png)
+{% image "/images/ha-backup-screenshot-4.png", "screenshot 5", "x-small", "Screenshot 5: set up NFS Permissions for shared folder" %}
 
 Click *Save*.
 
@@ -86,7 +86,7 @@ In the dialog:
 * select *Network File Share (NFS)* as the protocol
 * in the remote share field enter the NFS share mount path you copied in step 3
 
-![](/images/ha-backup-screenshot-6.png)
+{% image "/images/ha-backup-screenshot-6.png", "screenshot 6", "x-small", "Screenshot 6: Home Assistant Network Storage configuration" %}
 
 Click *Connect*.
 
@@ -100,7 +100,7 @@ Once the network share is set up, we only need to change the backup location whe
 
 Go to *Settings* > *System* > *Backups* in the Home Assistant UI. In the right top corner menu select *Change default backup location*. In the pop-up dialog select the new backup location and click *Save*.
 
-![](/images/ha-backup-screenshot-7.png)
+{% image "/images/ha-backup-screenshot-7.png", "screenshot 7", "x-small", "Screenshot 7: Home Assistant Network change default backup location" %}
 
 That's it, the next time a backup is created it will be stored on the NAS network share.
 
