@@ -4,14 +4,9 @@
   {%- set currentyear = post.date | year %}
 
   {%- if currentyear != year and ignoreYear != "true" %}
-  <li class="flex justify-between border-b-4 mb-4" id="{{ currentyear }}">
-    <span class="flex items-baseline">
-        <span>{{ currentyear }}</span>
-        <span><img src="https://v1.sparkline.11ty.dev/80x16/{{ postslist | postCountForMonth(currentyear) }}/{{ '#0a4a32' | encodeUriComponent }}/" width="80" height="16" alt="Post frequency by month in {{ currentyear }}" loading="lazy" decoding="async"></span>
-    </span>
-  {%- if postslist %}
-    <span>×{{ postslist | postCountForYear(currentyear) }}</span>
-  {%- endif %}
+  <li class="flex justify-between border-dotted border-b-2 border-gray-500 mb-4 pb-2 items-baseline" id="{{ currentyear }}">
+    <span>{{ currentyear }}</span>
+    <span class="text-xl">×{{ postslist | postCountForYear(currentyear) }}</span>
   </li>
   {%- set year =currentyear %}
   {%- endif %}
