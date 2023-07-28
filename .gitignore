@@ -2,6 +2,11 @@
 node_modules
 .yarn
 
+# Yarn
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+
 # Logs
 logs
 *.log
