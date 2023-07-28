@@ -11,8 +11,8 @@ eleventyNavigation:
   order: 1
 ---
 
-{% set postslist = collections.posts | category("project") %}
-{% include "partials/postslist.njk" %}
+{% set postslist = collections.posts | category("project") | reverse %}
+{% include "partials/postscards.njk" %}
 
 <h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
 {% set tags = collections.tagList %}

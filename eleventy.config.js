@@ -25,6 +25,9 @@ const {
   pageTags,
   postExcerpt,
   readableDate,
+  year,
+  postCountForYear,
+  postCountForMonth,
 } = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
@@ -69,6 +72,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('category', collectionCategory);
   eleventyConfig.addFilter('pageTags', pageTags);
   eleventyConfig.addFilter('currentPage', currentPage);
+  eleventyConfig.addFilter('year', year);
+  eleventyConfig.addFilter('postCountForYear', postCountForYear);
+  eleventyConfig.addFilter('postCountForMonth', postCountForMonth);
+  eleventyConfig.addFilter("encodeUriComponent", str => {
+		return encodeURIComponent(str);
+	});
 
   // collections
   eleventyConfig.addCollection('tagList', getAllTags);

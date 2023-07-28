@@ -19,8 +19,8 @@ theme:
   text: text-gray-900
 ---
 
-{% set postslist = collections[tag] %}
-{% include "partials/postslist.njk" %}
+{% set postslist = collections[tag] | reverse %}
+{% include "partials/postscards.njk" %}
 <h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
 {% set tags = collections.tagList %}
 {% include "partials/taglist.njk" %}

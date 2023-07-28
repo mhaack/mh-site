@@ -1,0 +1,12 @@
+--- 
+layout: posts
+title: Archive
+description: Archive ...
+eleventyNavigation:
+  key: main
+  title: Archive
+  order: 3
+---
+
+{% set postslist = collections.posts | reverse %}
+{% include "partials/postslist.njk" %}

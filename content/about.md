@@ -6,7 +6,7 @@ layout: page
 eleventyNavigation:
  key: main
  title: About
- order: 3
+ order: 9
 ---
 
 <div class="float-none sm:float-right mx-auto mb-8 sm:-mt-8 sm:ml-4 sm:mb-16 w-40 h-40 sm:w-48 sm-h48">
