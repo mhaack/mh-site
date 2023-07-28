@@ -22,6 +22,7 @@
         "markdown-it-emoji": "^2.0.2",
         "markdown-it-link-attributes": "^4.0.1",
         "netlify-plugin-cache": "^1.0.3",
+        "npm-run-all": "^4.1.5",
         "postcss": "^8.4.27",
         "postcss-cli": "^10.1.0",
         "postcss-import": "^15.1.0",
@@ -32,10 +33,10 @@
     "scripts": {
         "dev:twnd": "env ELEVENTY_ENV=development postcss src/_css/tailwind.css -o dist/assets/css/theme.css --watch --verbose",
         "dev:11ty": "env ELEVENTY_ENV=development eleventy --serve",
-        "dev": "yarn clean & yarn dev:twnd & yarn dev:11ty",
+        "dev": "npm-run-all clean --parallel 'dev:*' --print-label",
         "build:twnd": "env ELEVENTY_ENV=production postcss src/_css/tailwind.css -o dist/assets/css/theme.css",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
-        "build": "yarn build:twnd & yarn build:11ty",
+        "build": "npm-run-all 'build:*' --print-label",
         "format": "prettier --write \"{src,content}/**/*.{js,json,css,md}\"",
         "clean": "rm -rf ./dist"
     },
