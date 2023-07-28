@@ -33,15 +33,16 @@
     "scripts": {
         "dev:twnd": "env ELEVENTY_ENV=development postcss src/_css/tailwind.css -o dist/assets/css/theme.css --watch --verbose",
         "dev:11ty": "env ELEVENTY_ENV=development eleventy --serve",
-        "dev": "npm-run-all clean --parallel dev:* --print-label",
+        "dev": "npm-run-all clean --parallel 'dev:*' --print-label",
         "build:twnd": "env ELEVENTY_ENV=production postcss src/_css/tailwind.css -o dist/assets/css/theme.css",
         "build:11ty": "env ELEVENTY_ENV=production eleventy",
-        "build": "npm-run-all build:* --print-label",
+        "build": "npm-run-all 'build:*' --print-label",
         "format": "prettier --write \"{src,content}/**/*.{js,json,css,md}\"",
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
         "@11ty/is-land": "^4.0.0",
         "speedlify-score": "^3.0.0"
-    }
+    },
+    "packageManager": "yarn@3.6.1"
 }
