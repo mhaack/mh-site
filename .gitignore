@@ -1,6 +1,11 @@
 # Dependency directories
 node_modules
 
+# Yarn
+.yarn/*
+!.yarn/plugins
+!.yarn/releases
+
 # Logs
 logs
 *.log
