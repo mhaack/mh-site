@@ -20,7 +20,7 @@ yarn-error.log*
 # Build 
 dist
 .cache
-.env
 
 # Don't commit temp build files
 src/_includes/theme.css
+.env
