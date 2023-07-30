@@ -2,7 +2,7 @@
 theme:
  background: bg-mountain-300
  text: text-gray-900
-order: 4
+order: 5
 sitemap:
  ignore: true
 ---

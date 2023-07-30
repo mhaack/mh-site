@@ -1,0 +1,12 @@
+--- 
+layout: posts
+title: Popular Posts
+description: The most popular articles of the last 12 month. Or want to ready the <a href="/archive/">latest</a>?
+theme:
+  background: bg-rob-roy-200
+  text: text-gray-900
+---
+
+{% set postslist = collections.posts | popularPosts(analytics) %}
+{% set showstats = true %}
+{% include "partials/postslist.njk" %}

@@ -8,6 +8,8 @@ const readableDate = require('./readableDate');
 const year = require('./year');
 const postCountForYear = require('./postCountForYear');
 const postCountForMonth = require('./postCountForMonth');
+const popularPosts = require('./popularPosts');
+const pageStats = require('./pageStats');
 
 module.exports = {
   collectionCategory,
@@ -20,4 +22,6 @@ module.exports = {
   year,
   postCountForYear,
   postCountForMonth,
+  popularPosts,
+  pageStats,
 };

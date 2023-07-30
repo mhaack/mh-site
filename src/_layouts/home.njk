@@ -10,8 +10,8 @@ layout: default
 
 {% for section in collections.home | sort( false, false, "data.order" ) %}
 <article id="{{ section.template.fileSlugStr }}"
-  class="p-10 md:px-32 md:py-16 justify-start font-bold {{ section.data.theme.background }} {{ section.data.theme.text }}">
-  <div class="box-content max-w-6xl mx-auto">
+  class="p-10 md:px-32 md:py-16 justify-start {{ section.data.theme.background }} {{ section.data.theme.text }}">
+  <div class="box-content max-w-6xl mx-auto [&>h2]:md:text-5xl">
     {{ section.templateContent | safe }}
   </div>
 </article>
