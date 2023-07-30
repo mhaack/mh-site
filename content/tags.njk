@@ -20,7 +20,9 @@ theme:
 ---
 
 {% set postslist = collections[tag] | reverse %}
+{% set showstats = true %}
 {% include "partials/postslist.njk" %}
+
 <h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
 {% set tags = collections.tagList %}
 {% include "partials/taglist.njk" %}
