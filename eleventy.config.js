@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginNavigation = require('@11ty/eleventy-navigation');
@@ -25,6 +27,11 @@ const {
   pageTags,
   postExcerpt,
   readableDate,
+  year,
+  postCountForYear,
+  postCountForMonth,
+  popularPosts,
+  pageStats,
 } = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
@@ -55,11 +62,12 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addPassthroughCopy('admin');
   eleventyConfig.addWatchTarget('./src/_css/');
+  eleventyConfig.addWatchTarget('config');
 
   // short codes
   eleventyConfig.addShortcode('currentYear', currentYear);
   eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
-  eleventyConfig.addAsyncShortcode('image', image);
+  eleventyConfig.addShortcode('image', image);
 
   // filters
   eleventyConfig.addFilter('excerpt', postExcerpt);
@@ -69,6 +77,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('category', collectionCategory);
   eleventyConfig.addFilter('pageTags', pageTags);
   eleventyConfig.addFilter('currentPage', currentPage);
+  eleventyConfig.addFilter('year', year);
+  eleventyConfig.addFilter('postCountForYear', postCountForYear);
+  eleventyConfig.addFilter('postCountForMonth', postCountForMonth);
+  eleventyConfig.addFilter('popularPosts', popularPosts);
+  eleventyConfig.addFilter('pageStats', pageStats);
 
   // collections
   eleventyConfig.addCollection('tagList', getAllTags);

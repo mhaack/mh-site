@@ -5,6 +5,11 @@ const htmlDate = require('./htmlDate');
 const pageTags = require('./pageTags');
 const postExcerpt = require('./postExcerpt');
 const readableDate = require('./readableDate');
+const year = require('./year');
+const postCountForYear = require('./postCountForYear');
+const postCountForMonth = require('./postCountForMonth');
+const popularPosts = require('./popularPosts');
+const pageStats = require('./pageStats');
 
 module.exports = {
   collectionCategory,
@@ -14,4 +19,9 @@ module.exports = {
   pageTags,
   postExcerpt,
   readableDate,
+  year,
+  postCountForYear,
+  postCountForMonth,
+  popularPosts,
+  pageStats,
 };

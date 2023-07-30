@@ -1,7 +1,7 @@
 --- 
 layout: posts
-title: All Projects Posts
-description: Projects I worked on recently. Check them out.
+title: My recent projects
+description: Projects I worked on recently - check them out. Also see the <a href="/archive/">archive</a> with all of my posts.
 theme:
   background: bg-sandy-brown-300
   text: text-gray-900
@@ -11,7 +11,9 @@ eleventyNavigation:
   order: 1
 ---
 
-{% set postslist = collections.posts | category("project") %}
+{% set postslist = collections.posts | category("project") | reverse %}
+{% set postteaser = true %}
+{% set showstats = true %}
 {% include "partials/postslist.njk" %}
 
 <h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>

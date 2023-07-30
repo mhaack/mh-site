@@ -4,11 +4,11 @@ layout: default
 
 <article class="max-w-6xl mx-auto justify-start font-bold">
   <header class="mb-4 text-center">
-    {% if images.feature %}
+    {%- if images.feature %}
     <figure class="-mx-8 md:-mx-32 xl:-mx-40 {{ images.height or " h-48 md:h-2/3" }}">
       {% image images.feature, title, "object-cover w-full h-full" %}
     </figure>
-    {% endif %}
+    {%- endif %}
     <h1 class="mx-8 py-2 border-b md:py-8">{{ title }}</h1>
     <div class="mx-8 py-4 border-b md:justify-between md:items-start md:flex md:flex-row">
       <div class="md:my-auto text-sm text-slate-700">
@@ -17,6 +17,13 @@ layout: default
         </time>
         <span class="mx-2">·</span>
         <span>{{ content | readingTime }} read</span>
+        <span class="mx-2">·</span>
+        {%- set stats = page | pageStats(analytics) | first -%}
+        {%- if stats.pageviews > 100 %}
+        <span>{{ stats.pageviews }} views</span>
+        {%- else %}
+        <span><100 views</span>
+        {%- endif %}
       </div>
       <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end">{% include "partials/taglist.njk" %}</div>
     </div>

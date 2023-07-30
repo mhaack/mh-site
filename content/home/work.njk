@@ -1,0 +1,13 @@
+---
+theme:
+ background: bg-rob-roy-400
+ text: text-gray-900
+order: 4
+sitemap:
+ ignore: true
+---
+
+<h2 class="mb-8">From time to time I also share some details on <a href="/work/">work-related</a> projects, talks or publications I did.</h2>
+
+{% set postslist = collections.posts | category("work") | head(-3) | reverse %}
+{% include "partials/postslist.njk" %}

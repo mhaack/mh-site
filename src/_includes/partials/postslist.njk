@@ -1,32 +1,58 @@
-<ul class="grid group gap-8 mx-auto md:grid-cols-2 lg:grid-cols-3 lg:max-w-none">
-  {% for post in postslist | reverse %}
-  <li class="bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
+<ul class="grid group gap-8 mx-auto md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+  {% for post in postslist %}
+
+  {%- if displayyears %}
+  {%- set previousyear = currentyear %}
+  {%- set currentyear = post.date | year %}
+  {%- if currentyear != year and ignoreYear != "true" %}
+  <li class="md:col-span-2 xl:col-span-3 flex justify-between border-dotted border-b-2 border-mountain-900 mt-6 mb-2 pb-2 items-baseline text-mountain-900" id="{{ currentyear }}">
+    <h2 class="text-5xl font-semibold">{{ currentyear }}</h2>
+    <span class="text-xl">×{{ postslist | postCountForYear(currentyear) }}</span>
+  </li>
+  {%- set year =currentyear %}
+  {%- endif -%}
+  {%- endif %}
+
+  <li class="{% if loop.index == 1 and postteaser %}md:col-span-2 xl:col-span-3{% endif %} bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
     <a href="{{ post.url | url }}" class="no-underline">
-      {% if post.data.images.feature %}
+      {% if post.data.images.feature -%}
       <div class="flex-shrink-0">
+        {%- if loop.index == 1 and postteaser -%}
+        {% set imageclasses = 'object-cover w-full h-64 md:h-96 not-prose' %}
+        {%- else -%}
+        {% set imageclasses = 'object-cover w-full h-48 not-prose' %}
+        {%- endif %}
         <figure>
-          {% image post.data.images.feature, post.data.title, "object-cover w-full h-48 not-prose", "", "(min-width: 768px) 40vw, (min-width: 1024px) 30vw, 90vw" %}
+          {% image post.data.images.feature, post.data.title, imageclasses, "", "(min-width: 768px) 40vw, (min-width: 1024px) 30vw, 90vw" %}
         </figure>
       </div>
-      {% endif %}
+      {% endif -%}
       <div class="flex flex-col justify-between flex-1 px-4 md:px-6 pb-2">
         <div class="flex-1">
-          <span class="text-sm text-blue-dianne-700">
-            <time datetime="{{ post.date | htmlDateString }}">
-              {{ post.date | readableDate }}
-            </time>
-            <span class="mx-2">·</span>
-            <span>{{ post | readingTime }} read</span>
-          </span>
-          <h2 class="mt-2 text-3xl font-semibold">
-            {{ post.data.title }}
-          </h2>
-          <div class="mt-2 text-base text-gray-800">
-            {% if post.data.description %}
+          <div class="flex text-sm justify-between text-blue-dianne-700 my-4 whitespace-nowrap overflow-hidden">
+            <span>
+              <time datetime="{{ post.date | htmlDateString }}">
+                {{ post.date | readableDate }}
+              </time>
+              <span class="mx-1">·</span>
+              <span>{{ post | readingTime }} read</span>
+            </span>
+            {%- if showstats %}
+              {%- set stats = post | pageStats(analytics) | first -%}
+              {%- if stats.pageviews > 100 %}
+              <span class="mr-1">{{ stats.pageviews }} views</span>
+              {%- else %}
+              <span class="mr-1"><100 views</span>
+              {%- endif %}
+            {%- endif %}
+          </div>
+          <h3 class="text-3xl font-semibold">{{ post.data.title }}</h3>
+          <div class="my-2 text-base text-gray-800">
+            {% if post.data.description -%}
             {{ post.data.description }}
-            {% else %}
+            {%- else -%}
             {{ post.templateContent | excerpt | safe }}
-            {% endif %}
+            {%- endif %}
           </div>
         </div>
       </div>

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const isProd = process.env.ELEVENTY_ENV === 'production'
 
 module.exports = {

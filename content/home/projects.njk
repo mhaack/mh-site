@@ -5,12 +5,11 @@ theme:
 order: 2
 sitemap:
  ignore: true
-templateEngineOverride: njk
 ---
 
-<p class="mb-8">Since you are here - you can check out my projects.</p>
+<h2 class="mb-8">Since you are here - check out my latest projects.</h2>
 
-{% set postslist = collections.posts | category("project") | head(-3) %}
+{% set postslist = collections.posts | category("project") | head(-3) | reverse %}
 {% include "partials/postslist.njk" %}
 
 <p class="mt-8">Want more? Check out all my <a href="/projects/">project posts</a>.</p>

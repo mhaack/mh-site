@@ -1,9 +1,9 @@
 --- 
 layout: posts
 title: Work projects
-description: Some of my professional projects, talks and publications.
+description: Some of my professional projects, talks and publications. Also see the <a href="/archive/">archive</a> with all of my posts.
 theme:
-  background: bg-rob-roy-300
+  background: bg-rob-roy-400
   text: text-gray-900
 eleventyNavigation:
   key: main
@@ -11,8 +11,11 @@ eleventyNavigation:
   order: 2
 ---
 
-{% set postslist = collections.posts | category("work") %}
+{% set postslist = collections.posts | category("work") | reverse %}
+{% set postteaser = true %}
+{% set showstats = true %}
 {% include "partials/postslist.njk" %}
+
 <h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
 {% set tags = collections.tagList %}
 {% include "partials/taglist.njk" %}

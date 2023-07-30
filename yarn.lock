@@ -1825,6 +1825,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.3.1":
+  version: 16.3.1
+  resolution: "dotenv@npm:16.3.1"
+  checksum: 15d75e7279018f4bafd0ee9706593dd14455ddb71b3bcba9c52574460b7ccaf67d5cf8b2c08a5af1a9da6db36c956a04a1192b101ee102a3e0cf8817bbcf3dfd
+  languageName: node
+  linkType: hard
+
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -3743,6 +3750,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.9
     autoprefixer: ^10.4.14
     cssnano: ^6.0.1
+    dotenv: ^16.3.1
     eleventy-plugin-reading-time: ^0.0.1
     eleventy-plugin-youtube-embed: ^1.9.0
     html-minifier: ^4.0.0
