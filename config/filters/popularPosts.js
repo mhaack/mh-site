@@ -5,7 +5,7 @@ module.exports = (posts, analytics) => {
       if (topUrls.find((p) => p.page === post.url)) return true;
     })
     .sort((a, b) => {
-      const visitors = (page) => analytics.filter((p) => p.page === page.url).pop().visitors;
-      return visitors(b) - visitors(a);
+      const pageviews = (page) => analytics.filter((p) => p.page === page.url).pop().pageviews;
+      return pageviews(b) - pageviews(a);
     });
 };
