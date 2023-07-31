@@ -1,0 +1,14 @@
+name: Daily Netlify Build
+
+on:
+  schedule:
+    - cron: "30 15 * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Daily Netlify Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Netlify build hook
+        run: curl -X POST -d {} $
