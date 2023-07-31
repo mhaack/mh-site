@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call Netlify build hook
-        run: curl -X POST -d {} $
+        run: curl -X POST -d {} ${{ env.NETLIFY_BUILD_HOOK }}
