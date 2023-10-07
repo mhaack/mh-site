@@ -92,7 +92,7 @@ First and most important the camera:
 
 ```yaml
 camera:
- - platform: Aarlo
+ - platform: aarlo
 ```
 
 That is all you need, AArlo will create a `camera.Aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by AArlo is `component-type. AArlo lowercase name with underscores`. Sensors will use the same naming convention as well.
