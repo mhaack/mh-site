@@ -28,9 +28,9 @@
   ],
   "socialLinks": [
     {
-      "text": "Twitter",
-      "url": "https://twitter.com/mhaack",
-      "icon": "icons/twitter.svg",
+      "text": "GitHub",
+      "url": "https://github.com/mhaack",
+      "icon": "icons/github.svg",
       "external": true
     },
     {
@@ -46,12 +46,6 @@
       "external": true
     },
     {
-      "text": "GitHub",
-      "url": "https://github.com/mhaack",
-      "icon": "icons/github.svg",
-      "external": true
-    },
-    {
       "text": "LinkedIn",
       "url": "https://de.linkedin.com/in/markushaack",
       "icon": "icons/linkedin.svg",
@@ -61,6 +55,12 @@
       "text": "Medium",
       "url": "https://mhaack.medium.com/",
       "icon": "icons/medium.svg",
+      "external": true
+    },
+    {
+      "text": "X",
+      "url": "https://twitter.com/mhaack",
+      "icon": "icons/x.svg",
       "external": true
     }
   ],
