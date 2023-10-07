@@ -7,7 +7,7 @@ sitemap:
  ignore: true
 ---
 
-<h2 class="mb-8">Since you are here - check out my latest <a href="/projects/">project</a></h2>
+<h2 class="mb-8">Since you are here - check out my latest <a href="/projects/">projects</a></h2>
 
 {% set postslist = collections.posts | category("project") | head(-3) | reverse %}
 {% include "partials/postslist.njk" %}
