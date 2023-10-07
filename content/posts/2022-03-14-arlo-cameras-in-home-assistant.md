@@ -95,7 +95,7 @@ camera:
  - platform: aarlo
 ```
 
-That is all you need, AArlo will create a `camera.aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by AArlo is `component-type. AArlo lowercase name with underscores`. Sensors will use the same naming convention as well.
+That is all you need, AArlo will create a `camera.aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by AArlo is `component-type.aarlo lowercase name with underscores`. Sensors will use the same naming convention as well.
 
 AArlo is very verbose cameras and sensors have a lot of detailed information and attributes. All camera & device details, configuration information, battery & charging details, environment sensors and last recordings and image snapshots are available.
 
