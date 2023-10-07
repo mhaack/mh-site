@@ -56,7 +56,7 @@ Arlo cameras have a decent price tag. A $249 camera plus pay for a subscription 
 
 One reason, among others, to switch from [OpenHab to Home Assistant](/home-assistant/) for me was the missing integration with the Arlo system. And looking back on it, the Arlo & Home Assistant integration was a little challenge at the beginning. Home Assistant comes with an [Arlo integration](https://www.home-assistant.io/integrations/arlo/) out of the box. Unfortunately, it looks like it does not get much attention and love. It has had only a few updates lately, mostly catching up with changes in Home Assistant.
 
-Luckily for us, there is an alternative: [Aarlo](https://github.com/twrecked/hass-Aarlo) - Asynchronous Arlo. It can be used as a replacement original Arlo component and is actively maintained. I work with all Arlo devices, including cameras, base stations, sirens, doorbells, and lights.
+Luckily for us, there is an alternative: [aarlo](https://github.com/twrecked/hass-aarlo) - Asynchronous Arlo. It can be used as a replacement original Arlo component and is actively maintained. I work with all Arlo devices, including cameras, base stations, sirens, doorbells, and lights.
 
 ### Installation
 
@@ -76,7 +76,7 @@ If you want to play with the lasted, unreleased code a manual deployment, direct
 
 The setup in Home Assistant is pretty simple. For the default setup you provided an Arlo username and password. It is highly recommended to create a dedicated Arlo user account for Home Assistant. Don't use your main login you use on your phone. Otherwise, you will constantly get logged out, looks like Arlo does only accept one login for a user at a time.
 
-If you have [Arlo 2FA enabled](https://github.com/twrecked/hass-Aarlo#2fa) enabled - which should be standard nowadays, some extra config steps are needed. Make sure you configure with the correct 2FA method - IMAP or PUSH - for your Arlo account.
+If you have [Arlo 2FA enabled](https://github.com/twrecked/hass-aarlo#2fa) enabled - which should be standard nowadays, some extra config steps are needed. Make sure you configure with the correct 2FA method - IMAP or PUSH - for your Arlo account.
 
 ### Component Configuration
 
@@ -86,7 +86,7 @@ In my setup, I use the camera component as an obvious part of a camera surveilla
 
 Additionally, AArlo provides a comprehensive collection of sensors, binary sensors, switches and lights and media_player for your Arlo devices. For these check the documentation on Github:
 
-<github-badge repo="twrecked/hass-Aarlo" label="hass-Aarlo project on GitHub"></github-badge>
+<github-badge repo="twrecked/hass-aarlo" label="hass-aarlo project on GitHub"></github-badge>
 
 First and most important the camera:
 
@@ -95,11 +95,11 @@ camera:
  - platform: aarlo
 ```
 
-That is all you need, AArlo will create a `camera.Aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by AArlo is `component-type. AArlo lowercase name with underscores`. Sensors will use the same naming convention as well.
+That is all you need, AArlo will create a `camera.aarlo_xyz` entity for each Arlo camera in your account. The naming pattern for all entities created by AArlo is `component-type. AArlo lowercase name with underscores`. Sensors will use the same naming convention as well.
 
 AArlo is very verbose cameras and sensors have a lot of detailed information and attributes. All camera & device details, configuration information, battery & charging details, environment sensors and last recordings and image snapshots are available.
 
-The following Home Assistant [sensors](https://github.com/twrecked/hass-Aarlo#sensor-configuration) are available:
+The following Home Assistant [sensors](https://github.com/twrecked/hass-aarlo#sensor-configuration) are available:
 
 ```yaml
 sensor:
@@ -122,7 +122,7 @@ Especially `last_capture` is interesting here, it provides many details on the l
 
 ### Camera Services
 
-The AArlo component provides a set of Home Assistant [services](https://github.com/twrecked/hass-Aarlo#services) to control the cameras, set the alarm modes or trigger alarms.
+The AArlo component provides a set of Home Assistant [services](https://github.com/twrecked/hass-aarlo#services) to control the cameras, set the alarm modes or trigger alarms.
 
 I mainly use them to start a recording (`aarlo.camera_start_recording`) or request an image snapshot (`aarlo.camera_request_snapshot`) within automations.
 
@@ -136,7 +136,7 @@ My usage of the cart is pretty standard:
 
 ```yaml
 - type: 'custom:aarlo-glance'
-  entity: camera.Aarlo_pool
+  entity: camera.aarlo_pool
   image_top:
    - name
    - date
