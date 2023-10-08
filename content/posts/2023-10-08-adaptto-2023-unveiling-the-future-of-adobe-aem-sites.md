@@ -7,7 +7,8 @@ tags:
   - conference
 images:
   feature: /images/adaptto-2023.jpeg
-description: The future of AEM Sites at AdaptTo 2023 conference.
+description: The future of AEM Sites at AdaptTo 2023 conference - an intro into
+  Edge Delivery Services and Document-based Authoring.
 date: 2023-10-08
 permalink: adaptto-2023-franklin/
 ---
