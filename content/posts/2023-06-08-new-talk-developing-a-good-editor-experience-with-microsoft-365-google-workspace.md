@@ -6,6 +6,7 @@ tags:
   - adobe
   - aem
   - development
+  - conference
 images:
   feature: /images/dev-live-aem-doc-based-authoring.jpg
 date: 2023-06-08

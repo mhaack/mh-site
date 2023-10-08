@@ -11,6 +11,7 @@ tags:
  - aem
  - commerce
  - cif
+ - conference
 ---
 
 At the last Adobe Developers Live conference I gave a talk about how to extend AEM Content & Commerce with new Adobe Developer App Builder.
