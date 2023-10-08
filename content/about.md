@@ -51,6 +51,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 
 ## Talks
 
+- [Edge Delivery Services: Getting started with document-based authoring](https://adapt.to/2023/schedule/edge-delivery-services-getting-started-with-document-based-authoring), adaptTo(), September 2023
 - [Developing a good editor experience with Microsoft 365/Google Workspace](https://adobe.ly/40YBTnO), Adobe Developers Live, May 2023
 - [How to Build Content and Commerce Experiences Using App Builder and API Mesh](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2022/nov2022/api-mesh.html?lang=en), Adobe Developers Live, November 2022
 - [Extend AEM Content and Commerce with Adobe Developer App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/extend-aem-app-builder.html?lang=en), Adobe Developers Live, October 2021
