@@ -18,4 +18,6 @@ During this [keynote](https://adapt.to/2023/schedule/edge-delivery-services-gett
 
 The presentation covered the architecture of the Edge Delivery Services stack and the core concepts of document-based authoring. It's packed with practical details to help developers kickstart their projects and quickly launch their own websites.
 
-If you missed the event or want to revisit the presentation, you can [download it now](https://adapt.to/2023/presentations/adaptto-2023-edge-delivery-services-getting-started-with-document-based-authoring-markus-haack.pdf). A recording will follow soon.
+https://www.youtube.com/watch?v=Hlqowj7WrmM
+
+If you missed the event or want to revisit the presentation, you can [download it now](https://adapt.to/2023/presentations/adaptto-2023-edge-delivery-services-getting-started-with-document-based-authoring-markus-haack.pdf).
