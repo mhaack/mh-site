@@ -4,7 +4,7 @@
     {% if ignore -%}
     <meta name="robots" content="noindex">
     {% endif -%}
-    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+    <link rel="canonical" href="{{ page.url | url | absoluteUrl(site.url) }}">
 
     {%- set ogImgSrv = site.url + '/opengraph/default/' -%}
     {%- if layout == 'post' -%}
@@ -24,7 +24,7 @@
     <link rel="manifest" href="/assets/manifest.webmanifest">
     <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ site.name }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ site.name }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ site.name }}">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -45,5 +45,9 @@
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
+    {%- endif %}
+
+    {%- if layout == 'post' -%}
+    <script type="application/ld+json" data-name="article">{"@context":"http://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% opengraphImageSrc ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","author":{"@type":"Person","name":"{{ site.author.name }}"}}</script>
     {%- endif %}
   </head>
