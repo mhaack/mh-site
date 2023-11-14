@@ -1,12 +1,14 @@
 ---
 title: About Markus
-description: I'm a developer, home automation enthusiast, married with my wonderful wife, proud dad and a software engineer at Adobe from Leipzig, Germany. Welcome to my virtual home my little corner on the internet.
+description: I'm a developer, home automation enthusiast, married with my
+  wonderful wife, proud dad and a software engineer at Adobe from Leipzig,
+  Germany. Welcome to my virtual home my little corner on the internet.
 image: /images/markus.jpeg
 layout: page
 eleventyNavigation:
- key: main
- title: About
- order: 9
+  key: main
+  title: About
+  order: 9
 ---
 
 <div class="float-none sm:float-right mx-auto mb-8 sm:-mt-8 sm:ml-4 sm:mb-16 w-40 h-40 sm:w-48 sm-h48">
@@ -51,8 +53,9 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 
 ## Talks
 
+- [Build your first website with Edge Delivery and document based authoring](/build-your-first-website-with-edge-delivery-and-document-based-authoring/), Adobe Developers Live, November 2023
 - [Edge Delivery Services: Getting started with document-based authoring](https://adapt.to/2023/schedule/edge-delivery-services-getting-started-with-document-based-authoring), adaptTo(), September 2023
-- [Developing a good editor experience with Microsoft 365/Google Workspace](https://adobe.ly/40YBTnO), Adobe Developers Live, May 2023
+- [Developing a good editor experience with Microsoft 365/Google Workspace](/aem-document-based-authoring/), Adobe Developers Live, May 2023
 - [How to Build Content and Commerce Experiences Using App Builder and API Mesh](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2022/nov2022/api-mesh.html?lang=en), Adobe Developers Live, November 2022
 - [Extend AEM Content and Commerce with Adobe Developer App Builder](https://experienceleague.adobe.com/docs/adobe-developers-live-events/events/2021/oct2021/extend-aem-app-builder.html?lang=en), Adobe Developers Live, October 2021
 - [AEM Commerce extensibility using Adobe I/O](https://adapt.to/2021/en/schedule/aem-commerce-extensibility-using-adobe-io.html), adaptTo(), September 2021
