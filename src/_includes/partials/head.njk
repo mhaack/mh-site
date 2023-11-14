@@ -46,8 +46,10 @@
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
     {%- endif %}
-
+    {%- if layout == 'home' -%}
+    <script type="application/ld+json" data-name="website">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
+    {%- endif %}
     {%- if layout == 'post' -%}
-    <script type="application/ld+json" data-name="article">{"@context":"http://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% opengraphImageSrc ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","author":{"@type":"Person","name":"{{ site.author.name }}"}}</script>
+    <script type="application/ld+json" data-name="article">{"@context":"https://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% opengraphImageSrc ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","author":{"@type":"Person","name":"{{ site.author.name }}", "url":"https://markus-haack.com/about/"}}</script>
     {%- endif %}
   </head>
