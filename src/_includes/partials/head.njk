@@ -4,13 +4,14 @@
     {% if ignore -%}
     <meta name="robots" content="noindex">
     {% endif -%}
-    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+    <link rel="canonical" href="{{ page.url | url | absoluteUrl(site.url) }}">
 
     {%- set ogImgSrv = site.url + '/opengraph/default/' -%}
     {%- if layout == 'post' -%}
       {%- set currentPage = collections.all | currentPage(page) -%}
       {%- set desc = currentPage.templateContent | safe | striptags | truncate(140) | escape -%}
       {%- set ogImgSrv = site.url + '/opengraph' + page.url -%}
+      {%- set keywords = tags -%}
     {%- endif %}
 
     <title>{%- if title -%}{{ title | escape }} | {{ site.name }}{%- else -%}{{ site.name }}{%- endif -%}</title>
@@ -24,11 +25,12 @@
     <link rel="manifest" href="/assets/manifest.webmanifest">
     <link href="{{ '/assets/css/theme.css' | url }}" rel="stylesheet">
     <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ site.name }}">
-		<link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ site.name }}">
+    <link rel="alternate" href="/feed/feed.json" type="application/json" title="{{ site.name }}">
 
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <meta name="description" content="{{ description or desc or site.description }}">	
+    <meta name="description" content="{{ description or desc or site.description }}">
+    <meta name="keywords" content="{{ keywords or site.keywords }}">
     <meta name="author" content="{{ site.author.name }}">
     <meta name="generator" content="{{ eleventy.generator }}">
 
@@ -45,5 +47,11 @@
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
+    {%- endif %}
+    {%- if layout == 'home' -%}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
+    {%- endif %}
+    {%- if layout == 'post' -%}
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% opengraphImageSrc ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","keywords":"{{ keywords }}","author":{"@type":"Person","name":"{{ site.author.name }}", "url":"https://markus-haack.com/about/"}}</script>
     {%- endif %}
   </head>
