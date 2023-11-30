@@ -2,15 +2,15 @@
 title: Arlo Cameras in Home Assistant
 category: project
 tags:
- - home-assistant
- - home-automation
- - camera
- - smarthome
+  - home-assistant
+  - home-automation
+  - camera
+  - smarthome
 images:
- feature: /images/home_assistant_arlo.jpg
-description: Home Assistant & Arlo cameras go better very well. I'm using it
- since our entire setup got migrated from OpenHab to Home Assistant and I'm
- happy with the setup.
+  feature: /images/home_assistant_arlo.jpg
+description: Home Assistant & Arlo cameras go together very well. I'm using them
+  since our entire setup got migrated from OpenHab to Home Assistant and I'm
+  happy with the integration.
 date: 2022-03-14
 ---
 
