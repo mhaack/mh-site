@@ -4,6 +4,7 @@ category: project
 tags:
   - arduino
   - development
+  - esphome
 images:
   feature: /images/mario-bros-1.jpg
 description: I recently found a DIY project that makes a custom LED Mario Bros.
@@ -51,9 +52,16 @@ To flash the firmware follow these steps:
 9. Once connected successfully, a message with the button "VISIT DEVICE" will pop up and you can visit the clock settings page.
 10. On the clock settings page make sure you set the right time zone to display the correct time. The default time zone is UTC.
 
+**Attention**: the time zone lookup is based on ezTime which uses timezoned.rop.nl on port 2342. If you have a looked down network, you need to unblock UDP connections on port 2342 next to the NTP protocol.
+
 That's it, your Mario Bros. clock is ready. If not already done, the next step could be to put the display in a stylish case or frame.
 
-With the current firmware version 1.1.0 some additional settings can be adjusted from the device settings page: timezone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
+With the current firmware version 1.1.0 some additional settings can be adjusted from the device settings page: time zone, swap Blue/Green pins (depending on the display type you use), 24h time format and display brightness.
+
+**Update Dec. 01 2023**
+The Clockwise firmware has got a bunch of new releases since the first post. You are now able configure automatic brightness, connect a photoresistor (LDR sensor), customize the NTP server.
+You can now also configure the time zone using [Posix Timezone string](https://github.com/ropg/ezTime#timezones-1) in case the automatic time zone selection (which requires extra network ports) does not work.
+
 
 ## The final result
 
