@@ -3,8 +3,6 @@
 @import 'tailwindcss/utilities';
 @import 'prism-okaidia.css';
 
-@import '../../node_modules/speedlify-score/speedlify-score.css';
-
 @layer base {
   /* ibm-plex-sans-regular - latin */
   @font-face {
