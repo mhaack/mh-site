@@ -1,6 +1,6 @@
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
-const markdownItEmoji = require('markdown-it-emoji');
+const markdownItEmoji = require('markdown-it-emoji/dist/markdown-it-emoji.js');
 const markdownItLinkAttributes = require('markdown-it-link-attributes');
 
 let markdownLib = markdownIt({
