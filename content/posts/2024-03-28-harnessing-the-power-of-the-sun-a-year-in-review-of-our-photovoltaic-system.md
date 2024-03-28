@@ -9,7 +9,7 @@ images:
   feature: /images/energy-2023-hero.jpeg
 description: In this annual update I give an update on the 2023 performance of
   our photovoltaic system and comparing it with previous years' data.
-date: 2024-03-28
+date: 2024-03-26
 permalink: solar-update-2023/
 ---
 In this annual update I give an update on the 2023 performance of our photovoltaic system and comparing it with previous years' data. This is a follow up to last years post series about the installation and first energy yield numbers ([1](/our-own-electricity-1/), [2](/our-own-electricity-2/), [3](/our-own-electricity-3/)).
