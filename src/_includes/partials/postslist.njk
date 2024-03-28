@@ -1,11 +1,11 @@
-<ul class="grid group gap-8 mx-auto md:grid-cols-2 xl:grid-cols-3 lg:max-w-none">
+<ul class="grid group gap-8 mx-auto md:grid-cols-3 lg:max-w-none">
   {% for post in postslist %}
 
   {%- if displayyears %}
   {%- set previousyear = currentyear %}
   {%- set currentyear = post.date | year %}
   {%- if currentyear != year and ignoreYear != "true" %}
-  <li class="md:col-span-2 xl:col-span-3 flex justify-between border-dotted border-b-2 border-mountain-900 mt-6 mb-2 pb-2 items-baseline text-mountain-900" id="{{ currentyear }}">
+  <li class="md:col-span-3 flex justify-between border-dotted border-b-2 border-mountain-900 mt-6 mb-2 pb-2 items-baseline text-mountain-900" id="{{ currentyear }}">
     <h2 class="text-5xl font-semibold">{{ currentyear }}</h2>
     <span class="text-xl">×{{ postslist | postCountForYear(currentyear) }}</span>
   </li>
@@ -13,7 +13,7 @@
   {%- endif -%}
   {%- endif %}
 
-  <li class="{% if loop.index == 1 and postteaser %}md:col-span-2 xl:col-span-3{% endif %} bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
+  <li class="{% if loop.index == 1 and postteaser %}md:col-span-3{% endif %} bg-white flex flex-col overflow-hidden shadow-lg shadow-gray-600 duration-300 hover:shadow-2xl hover:shadow-gray-700">
     <a href="{{ post.url | url }}" class="no-underline">
       {% if post.data.images.feature -%}
       <div class="flex-shrink-0">
