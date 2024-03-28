@@ -34,7 +34,7 @@ While the summer months (May, June, July and August) were about the same, we pro
 
 November 2023 we got already some snow very early, for the area we live. As a result, next to nothing was produced for two weeks.
 
-{% image "/images/creenshot-energy-2020-2024-year.png", "year to year comparison of energy production", "x-small", "Diagram 2: year to year comparison of energy production" %}
+{% image "/images/screenshot-energy-2020-2024-year.png", "year to year comparison of energy production", "x-small", "Diagram 2: year to year comparison of energy production" %}
 
 Overall, 2023 was still the 2nd best year for our solar system.
 
