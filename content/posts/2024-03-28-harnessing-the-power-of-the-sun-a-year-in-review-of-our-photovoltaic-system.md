@@ -6,7 +6,7 @@ tags:
   - electricity
   - solar
 images:
-  feature: /images/screenshot-energy-2023.png
+  feature: /images/energy-2023-hero.jpeg
 description: In this annual update I give an update on the 2023 performance of
   our photovoltaic system and comparing it with previous years' data.
 date: 2024-03-28
