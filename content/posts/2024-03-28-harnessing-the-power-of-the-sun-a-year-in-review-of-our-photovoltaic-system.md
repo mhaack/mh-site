@@ -1,5 +1,5 @@
 ---
-title: "Harnessing the Power of the Sun: A Year in Review of Our Photovoltaic System"
+title: "Harnessing the Power of the Sun: A Year in Review"
 category: project
 tags:
   - photovoltaic
