@@ -6,7 +6,7 @@ tags:
   - electricity
   - solar
 images:
-  feature: /images/energy-2023-hero.jpeg
+  feature: /images/taner-ardali-vc7e5m6hxza-unsplash.jpg
 description: In this annual update I give an update on the 2023 performance of
   our photovoltaic system and comparing it with previous years' data.
 date: 2024-03-26
@@ -42,3 +42,5 @@ Overall, 2023 was still the 2nd best year for our solar system.
 By harnessing the power of the sun we have reduced our carbon footprint and already saved more then 12 tones of CO2 emissions. Especially in the summer month were are mostly energy independent and don't consume many kWh from the power grid.
 
 I'm curious to see what the numbers will look like at the end of the year for 2024. So far the first 3 months are looking very good. January was actually the best January so far.
+
+Hero image [taner ardalı](https://unsplash.com/de/@tanerardali) from [Unsplash](https://unsplash.com/de/fotos/blaues-kabelgebundenes-elektronisches-gerat-auf-weiss-gestrichener-wand-montiert-vc7e5M6HXzA)
