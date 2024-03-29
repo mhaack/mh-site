@@ -7,6 +7,7 @@ tags:
   - solar
 images:
   feature: /images/taner-ardali-vc7e5m6hxza-unsplash.jpg
+  height: h-64
 description: In this annual update I give an update on the 2023 performance of
   our photovoltaic system and comparing it with previous years' data.
 date: 2024-03-26
