@@ -5,7 +5,7 @@ tags:
   - esphome
   - home-assistant
 images:
-  feature: /images/notepad-box-1.jpeg
+  feature: /images/notepad-box-2.jpeg
 description: Inspired by the Home Assistant community, I built a desk-friendly
   e-paper display with ESPHome. This blog post details my journey from gathering
   components to creating a custom home automation dashboard, offering real-time
@@ -55,7 +55,7 @@ But for a nice display you also need a case. Depending on the size of the displa
 
 For my notepad box display I built a wooden case. The display should always be visible. Due to its size it could not be too far away. It took me 2 tries to find the right design. The final version is made of plywood with the display at the bottom. The ESP32 microcontroller is located behind the display. The USB port is on the back.
 
-< photo >
+{% image "/images/notepad-box-1.jpeg", "Photo of my digital notpad box", "small" %}
 
 If you get the Waveshare Universal e-Paper Driver Board, no soldering is required. The controller board can be connected directly to the e-paper display. Waveshare and others also sell pre-assembled plug and play solutions. Connect the controller board with power via USB and you are ready to go.
 ## Software
