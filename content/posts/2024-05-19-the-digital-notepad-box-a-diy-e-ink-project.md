@@ -246,7 +246,7 @@ I wanted my display to always show the current time and the outside temperature.
 
 To render on the display you essentially need three variables. The x & y coordinates of the display's coordinate system and the information - text, images, graphics - to be displayed. The top left corner of the display is always the origin of the pixel coordinate system. It has the coordinates x=0, y=0.
 
-In the example above, I am rendering 3 lines of text and icons. They show the combined data of our solar system and the electricity produced & consumed. The other display pages work in a similar way.
+In the example above, I am rendering 3 lines of text and icons. They show the combined data of [our solar system](/our-own-electricity-3/) and the electricity produced & consumed. The other display pages work in a similar way.
 
 ## Adapting to your needs
 
