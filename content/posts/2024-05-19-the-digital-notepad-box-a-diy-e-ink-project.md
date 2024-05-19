@@ -53,7 +53,7 @@ But for a nice display you also need a case. Depending on the size of the displa
 
 For my notepad box display I built a wooden case. The display should always be visible. Due to its size it could not be too far away. It took me 2 tries to find the right design. The final version is made of plywood with the display at the bottom. The ESP32 microcontroller is located behind the display. The USB port is on the back.
 
-{% image "/images/notepad-box-1.jpeg", "Photo of my digital notepad box", "small" %}
+{% image "/images/notepad-box-1.jpeg", "Photo of my digital notepad box", "x-small" %}
 
 If you get the Waveshare Universal e-Paper Driver Board, no soldering is required. The controller board can be connected directly to the e-paper display. Waveshare and others also sell pre-assembled plug and play solutions. Connect the controller board with power via USB and you are ready to go.
 
@@ -69,7 +69,7 @@ The ESPHome configuration for my e-ink display project consists of 4 sections. L
 
 First you have to tell ESPHome which board you are using, how the Wifi connection is and to which pins the display is connected.
 
-```
+```yaml
 substitutions:
   gpio_spi_clk_pin: GPIO25
   gpio_spi_mosi_pin: GPIO26
@@ -111,7 +111,7 @@ If you connect additional sensors such as a temperature sensor or an ambient lig
 
 In my case I get all the data shown on the display from Home Assistant. Hence this is pretty much the only sensor I configured. I also use the `time` integration to get the current time and to update the display.
 
-```
+```yaml
 sensor:
   - platform: homeassistant
     entity_id: sensor.garden_temperature
@@ -138,7 +138,7 @@ To display icons and diagrams as well as text, we need a few helpers. Each icon 
 
 I also use the [graph component](https://esphome.io/components/display/#graph-component) to display sensor values as a line graph for example for the indoor and outdoor temperature.
 
-```
+```yaml
 image:
   - file: mdi:thermometer
     id: icon_thermometer
@@ -191,7 +191,7 @@ The main rendering and data display logic is also configured via the `display` c
 
 It is possible to draw directly on the display or to use so-called [Display Pages](https://esphome.io/components/display/#display-pages). These allow you to configure multiple virtual screens that you can switch between. I'm using display pages to group and separate the different values I want to show on the e-pager display. I currently use 4 display pages. Every minute I switch to a new display page and update the display. Lets have a look at one of them:
 
-```
+```yaml
     pages:
       - id: page1
         lambda: |-
