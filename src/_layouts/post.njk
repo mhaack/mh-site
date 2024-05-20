@@ -2,17 +2,17 @@
 layout: default
 ---
 
-<article class="max-w-6xl mx-auto justify-start font-bold">
+<article class="max-w-6xl mx-auto justify-start font-bold h-entry">
   <header class="mb-4 text-center">
     {%- if images.feature %}
     <figure class="-mx-8 md:-mx-32 xl:-mx-40 {{ images.height or " h-48 md:h-2/3" }}">
       {% image images.feature, title, "object-cover w-full h-full" %}
     </figure>
     {%- endif %}
-    <h1 class="mx-8 py-2 border-b md:py-8">{{ title }}</h1>
+    <h1 class="mx-8 py-2 border-b md:py-8 p-name">{{ title }}</h1>
     <div class="mx-8 py-4 border-b md:justify-between md:items-start md:flex md:flex-row">
       <div class="md:my-auto text-sm text-slate-700">
-        <time datetime="{{ date | htmlDateString }}">
+        <time class="dt-published" datetime="{{ date | htmlDateString }}">
           {{ date | readableDate }}
         </time>
         <span class="mx-2">·</span>
@@ -25,10 +25,10 @@ layout: default
         <span><100 views</span>
         {%- endif %}
       </div>
-      <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end">{% include "partials/taglist.njk" %}</div>
+      <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end p-category">{% include "partials/taglist.njk" %}</div>
     </div>
   </header>
-  <section class="mx-4 max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none">
+  <section class="mx-4 max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none e-content">
     {{ layoutContent | safe }}
   </section>
   <copy-code></copy-code>
