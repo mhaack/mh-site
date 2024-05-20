@@ -10,6 +10,12 @@ layout: default
     </figure>
     {%- endif %}
     <h1 class="mx-8 py-2 border-b md:py-8 p-name">{{ title }}</h1>
+    <div class="hidden">
+        <a class="u-url" href="{{ site.url + page.url }}">{{ title }}</a>
+        <p class="h-card p-author">
+          <a class="p-name u-url" rel="author" href="{{ site.url }}">{{ site.author.name }}</a> <img class="u-photo" src="{{ site.url}}/assets/images/markus.jpeg">
+        </p>
+    </div>
     <div class="mx-8 py-4 border-b md:justify-between md:items-start md:flex md:flex-row">
       <div class="md:my-auto text-sm text-slate-700">
         <time class="dt-published" datetime="{{ date | htmlDateString }}">
