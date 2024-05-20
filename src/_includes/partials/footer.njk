@@ -6,10 +6,14 @@
           {%- for item in site.socialLinks -%}
             {% set externalAttribute = '' %}
             {% if item.external -%}
-              {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+              {% set externalAttribute = 'target="_blank"' %}
+            {%- endif -%}
+            {% set relAttribute = 'rel="noopener noreferrer"' %}
+            {% if item.rel -%}
+              {% set relAttribute = 'rel="' + item.rel + ' noopener noreferrer"' %}
             {%- endif -%}
             <li class="mr-4 last:mr-0">
-              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} {{ relAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
                 {% if item.icon -%}
                   {% include item.icon %}
                   <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -24,10 +28,14 @@
           {%- for item in site.footerLinks -%}
             {% set externalAttribute = '' %}
             {% if item.external -%}
-              {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+              {% set externalAttribute = 'target="_blank" %}
+            {%- endif -%}
+            {% set relAttribute = 'rel="noopener noreferrer"' %}
+            {% if item.rel -%}
+              {% set relAttribute = 'rel="' + item.rel + ' noopener noreferrer"' %}
             {%- endif -%}
             <li class="mr-4 last:mr-0">
-              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
+              <a href="{{ item.url | url }}" {{ externalAttribute | safe }} {{ relAttribute | safe }} data-a11y="false" aria-label="Links to {{ item.url | url }}" class="text-slate-100 hover:text-mountain-600">
                 {% if item.icon -%}
                   {% include item.icon %}
                   <span class="w-0 h-0 invisible opacity-0 overflow-hidden inline-block">Link to {{ item.text }}</span>
@@ -53,7 +61,7 @@
     <div class="mt-2 md:mt-0 md:order-1 pb-4 md:pb-0">
       <p class="footer">
         <span>&copy; 2018 - {% currentYear %}</span>
-        <a href="https://twitter.com/mhaack" target="_blank" rel="noopener">{{ site.author.name }}</a>
+        <a href="https://mastodon.social/@mhaack" rel="me noopener" title="mhaack@mastodon.social on Mastodon">{{ site.author.name }}</a>
         |
         <a href="/impressum/" aria-label="Impressum">Impressum</a>
         |

@@ -32,12 +32,14 @@
       "text": "GitHub",
       "url": "https://github.com/mhaack",
       "icon": "icons/github.svg",
+      "rel" : "me",
       "external": true
     },
     {
       "text": "Mastodon",
       "url": "https://mastodon.social/@mhaack",
       "icon": "icons/mastodon.svg",
+      "rel" : "me",
       "external": true
     },
     {
@@ -62,6 +64,7 @@
       "text": "X",
       "url": "https://twitter.com/mhaack",
       "icon": "icons/x.svg",
+      "rel" : "me",
       "external": true
     }
   ],
