@@ -28,7 +28,7 @@
           {%- for item in site.footerLinks -%}
             {% set externalAttribute = '' %}
             {% if item.external -%}
-              {% set externalAttribute = 'target="_blank" %}
+              {% set externalAttribute = 'target="_blank"' %}
             {%- endif -%}
             {% set relAttribute = 'rel="noopener noreferrer"' %}
             {% if item.rel -%}
