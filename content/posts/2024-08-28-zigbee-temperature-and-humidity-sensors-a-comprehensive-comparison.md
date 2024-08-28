@@ -8,6 +8,7 @@ tags:
 images:
   feature: /images/bildschirmfoto-2022-06-02-um-11.32.png
 date: 2024-08-28
+permalink: zigbee-temperature-sensors/
 ---
 Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second for to measure the pool water temp.
 
