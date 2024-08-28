@@ -6,7 +6,7 @@ tags:
   - home-automation
   - smarthome
 images:
-  feature: /images/bildschirmfoto-2022-06-02-um-11.32.png
+  feature: /images/zigbee-smarthome-hero.jpeg
 date: 2024-08-28
 permalink: zigbee-temperature-sensors/
 ---
