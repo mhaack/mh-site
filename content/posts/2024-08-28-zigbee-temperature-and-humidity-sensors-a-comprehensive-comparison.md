@@ -104,3 +104,6 @@ No matter your choice, integrating these sensors with Home Assistant will allow 
 
 Happy automating!
 
+
+
+Hero image: AI generated with Microsoft Copilot.
