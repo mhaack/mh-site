@@ -14,8 +14,6 @@ Smart homes are becoming increasingly popular, and temperature and humidity sens
 
 {% image "images/temperature-sensors.jpeg", "ZigBee temperature and humidity sensors", "small" %}
 
-![](/images/temperature-sensors.jpeg)
-
 ZigBee sensors are great for this use case. They are known for their low power consumption and reliable communication. They can run on battery power for several months, even years.
 
 Most of the sensors we have installed are Aqara Temperature and Humidity sensors of the first generation. So far, these have been very reliable and most of them still are. But there are also a few, 3 so far, that have had failures recently and have repeatedly lost the connection. Only a re-paring helped, which is quite annoying. Different batteries, different position, nothing really brings any improvement. That's why I've been looking around for alternatives.
