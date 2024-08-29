@@ -53,11 +53,9 @@ I have selected sensors that are relatively easy to buy in Europe. They should a
 
 To understand how each sensor performs in real-world scenarios, I tested the sensors under similar conditions and recorded their readings. All the sensors were on my desk right next to each other for a week.
 
-![](/images/humidity-compare-diagram.png)
+{% image "/images/temp-compare-diagram.png", "Compare temperature measurements", "small", "Compare temperature measurements of the 5 sensors" %}
 
-![](/images/temp-compare-diagram.png)
-
-
+{% image "/images/humidity-compare-diagram.png", "Compare humidity measurements", "small", "Compare humidity sensors readings"  %}
 
 From the data recorded in the last 24 hours:
 
