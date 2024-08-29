@@ -7,6 +7,11 @@ tags:
   - smarthome
 images:
   feature: /images/zigbee-smarthome-hero.jpeg
+description: Smart homes increasingly use temperature and humidity sensors for
+  automation, and I've installed over 10 throughout my house, including the
+  garden, attic, fridge, and pool. ZigBee sensors are ideal for this due to
+  their low power consumption and reliable communication, allowing them to
+  operate on batteries for months or even years.
 date: 2024-08-28
 permalink: zigbee-temperature-sensors/
 ---
