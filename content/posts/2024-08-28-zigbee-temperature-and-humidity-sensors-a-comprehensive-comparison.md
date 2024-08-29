@@ -27,8 +27,8 @@ In this blog post, we'll compare five popular ZigBee temperature and humidity se
 Before diving into the comparison, let's briefly introduce the five ZigBee sensors that we will be reviewing:
 
 1. **[SONOFF Zigbee Temperature and Humidity Sensor](https://sonoff.tech/product/gateway-and-sensors/snzb-02p/)**: A budget-friendly option known for its compact design and easy installation.
-2. [\*\*Aqara Temperature and Humidity Sensor](https://www.aqara.com/en/product/temperature-humidity-sensor/) (Old Version)\*\*: An established sensor that has been a favorite in the smart home community for its reliability and ease of use.
-3. [\*\*Aqara Temperature and Humidity Sensor T1](https://www.aqara.com/en/temperature-and-humidity-sensor-t1) (New Version)\*\*: The upgraded version of the Aqara sensor, offering improved features and compatibility.
+2. **[Aqara Temperature and Humidity Sensor](https://www.aqara.com/en/product/temperature-humidity-sensor/) (Old Version)**: An established sensor that has been a favorite in the smart home community for its reliability and ease of use.
+3. **[Aqara Temperature and Humidity Sensor T1](https://www.aqara.com/en/temperature-and-humidity-sensor-t1) (New Version)**: The upgraded version of the Aqara sensor, offering improved features and compatibility.
 4. **[NOUS E5 ZigBee Smart Temperature and Humidity Sensor](https://nous.technology/product/smart-humidity-temperature-sensor-nous-e5-zigbee.html)**: A lesser-known brand that promises high accuracy and seamless integration.
 5. **[OWON Zigbee Remote Temperature Probe on Cable](https://www.domadoo.fr/en/devices/5998-owon-zigbee-connected-outdoor-temperature-sensor-with-probe.html?domid=14)**: A unique sensor with a remote probe, designed for more specialized applications where precise placement is necessary.
 
@@ -36,7 +36,7 @@ I have selected sensors that are relatively easy to buy in Europe. They should a
 
 ## Comparison of ZigBee Temperature and Humidity Sensors
 
-| Feature                           | SONOFF Zigbee                     | Aqara<br>(Old Version)           | Aqara T1<br>(New Version)       | NOUS E5              | OWON Remote Probe                              |
+| Feature                           | SONOFF Zigbee                     | Aqara<br>(Old Version)           | Aqara T1<br>(New Version)       | NOUS E5              | OWON with Remote Probe                              |
 | --------------------------------- | --------------------------------- | -------------------------------- | ------------------------------- | -------------------- | ---------------------------------------------- |
 | **Model**                         | SNZB-02P                          | WSDCGQ11LM                       | TH-S02D                         | TS0201               | THS-317-ET                                     |
 | **Temperature Range**             | \-10℃ ~ +60°C                     | \-20℃ ~ +50°C                    | \-20℃ ~ +50°C                   | \-20℃ ~ +60℃         | \-40°C ~ +200°C                                |
