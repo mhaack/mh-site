@@ -12,6 +12,8 @@ permalink: zigbee-temperature-sensors/
 ---
 Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second for to measure the pool water temp.
 
+{% image "images/temperature-sensors.jpeg", "ZigBee temperature and humidity sensors", "small" %}
+
 ![](/images/temperature-sensors.jpeg)
 
 ZigBee sensors are great for this use case. They are known for their low power consumption and reliable communication. They can run on battery power for several months, even years.
