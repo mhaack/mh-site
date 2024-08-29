@@ -1,5 +1,5 @@
 ---
-title: "ZigBee Temperature and Humidity Sensors: A Comprehensive Comparison"
+title: "ZigBee Temperature and Humidity Sensors: A Comparison"
 category: project
 tags:
   - home-assistant
