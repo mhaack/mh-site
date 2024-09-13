@@ -93,7 +93,7 @@ If the camera is not auto-discovered it can be manually added by clicking on **A
 * **IP Address**: The local IP address of the Reolink camera on your network.
 * Once entered, click **Submit**.
 
-{% image "/images/reolink-setup-1.png", "Set up a Reolink camera in Home Assistant", "small", "Set up a Reolink camera in Home Assistant" %}
+{% image "/images/reolink-setup-1.png", "Set up a Reolink camera in Home Assistant", "x-small", "Set up a Reolink camera in Home Assistant" %}
 
 Once configured you can change the camera protocol used by Home Assistant to communicated with the camera. You can choose between RTSP, RTMP, or FLV streaming protocol. If there are no streaming issues, lagging video etc. I recommend to leave this setting at RTSP as this should give you the best video results and is the only protocol which can stream 4K camera streams.
 
