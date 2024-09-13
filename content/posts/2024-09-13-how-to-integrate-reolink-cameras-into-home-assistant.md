@@ -88,7 +88,7 @@ If the camera is not auto-discovered it can be manually added by clicking on **A
 * **IP Address**: The local IP address of the Reolink camera on your network.
 * Once entered, click **Submit**.
 
-![](/images/reolink-setup-1.png)
+{% image "/images/reolink-setup-1.png", "Set up a Reolink camera in Home Assistant", "small" %}
 
 Once configured you can change the camera protocol used by Home Assistant to communicated with the camera. You can choose between RTSP, RTMP, or FLV streaming protocol. If there are no streaming issues, lagging video etc. I recommend to leave this setting at RTSP as this should give you the best video results and is the only protocol which can stream 4K camera streams.
 
@@ -96,7 +96,7 @@ Once configured you can change the camera protocol used by Home Assistant to com
 
 After submitting your credentials, Home Assistant will automatically communicate with the Reolink camera and set up the connection. If the integration is successful, you will see a confirmation message, and the camera will appear in your list of devices.
 
-![](/images/reolink-setup-2.png)
+{% image "/images/reolink-setup-2.png", "Set up a Reolink camera in Home Assistant", "small" %}
 
 ### Step 5: View the Camera in Devices
 
@@ -107,7 +107,7 @@ If the Reolink device view is not already open:
 
 Depending on the features and capabilities of the camera the Reolink integration creates 40 or more entities for each camera device. It is very verbose and detailed. All the configuration setting you have in the Reolink app are exposed as well in Home Assistant. I personally disable most of the entires in the *Configuration* group as I do not plan to change these from within Home Assistant. Like for other devices in Home Assistant associated automations and events are shown on the detail view as well.
 
-![](/images/reolink-setup-3.jpeg)
+{% image "/images/reolink-setup-3.jpeg", "Set up a Reolink camera in Home Assistant", "small" %}
 
 I usually only keep the important switches, the camera stream(s), the motion detection sensors and a small number of configuration settings enabled.
 
@@ -124,7 +124,7 @@ Once the Reolink camera is added to Home Assistant and you have checked the sens
   * **Entity**: Select the newly added Reolink camera (e.g., `camera.reolink_front_door`).
   * **Show Stream**: Toggle this option to display the live stream from the camera.
 
-![](/images/reolink-setup-4.png)
+{% image "/images/reolink-setup-4.png", "Add camera entity to your Lovelace dashboard", "small" %}
 
 If you manage your dashboards in YAML files the picture entity card can be added via:
 
