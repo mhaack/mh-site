@@ -48,6 +48,7 @@
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
     {%- endif %}
     {%- if layout == 'home' -%}
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
