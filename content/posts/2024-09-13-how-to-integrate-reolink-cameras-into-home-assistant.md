@@ -145,7 +145,7 @@ Once added, you should now see the live feed from your Reolink camera directly o
 
 ### **Conclusion**
 
-Integrating Reolink cameras with Home Assistant using the official Reolink integration is powerful and quite simple. With live streaming, motion detection automation and the ability to record clips, you can easily enhance the security of your smart home.
+Integrating Reolink cameras with Home Assistant using the official Reolink integration is powerful and quite simple. With live streaming, motion detection automation and the ability to record clips, you can easily enhance the security of your smart home. Overall I'm super happy with the new setup and I don't regret switching from Arlo to Reolink.
 
 This step-by-step guide covers everything from setting up the camera to viewing the camera stream in the Home Assistant. In the next post, I'll share some of my automations and show you how to add the missing geo-fence functionality.
 
