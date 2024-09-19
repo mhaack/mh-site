@@ -44,7 +44,7 @@ In our case the notifications will follow this patten:
 
 To enable / disable the notifications as needed I use two automations in Home Assistant. The first on is triggered at sunset to enable the push notification settings of all the cameras:
 
-![](/images/ha-activate-reolink-notifications-sunset.png)
+{% image "/images/ha-activate-reolink-notifications-sunset.png", "Screenshot Home Assistant Automation", "small" %}
 
 In YAML this looks like (simplified version):
 
@@ -69,7 +69,7 @@ mode: single
 
 The second time-based automation is triggered at sunrise in the morning to switch the notifications back on. This only runs when we are at home, as we do not want the push notifications to be turned off when we are away. The carport camera notifications are only disabled at weekends.
 
-![](/images/ha-de-activate-reolink-notifications-sunrise.png)
+{% image "/images/ha-de-activate-reolink-notifications-sunrise.png", "Screenshot Home Assistant Automation", "small" %}
 
 In YAML this looks like: 
 
@@ -112,7 +112,7 @@ As it is not possible to control these automatically via the Reolink app, and ma
 
 Activating the camera notifications when nobody is at home:
 
-![](/images/ha-activate-reolink-notifications-geofence.png)
+{% image "/images/ha-activate-reolink-notifications-geofence.png", "Screenshot Home Assistant Automation", "small" %}
 
 The YAML version:
 
@@ -139,7 +139,7 @@ mode: single
 
 Disabling push notifications follows a similar pattern. There's an extra check because when we come home late at night, we want the cameras to stay on and we don't want the notification to be disabled. So this automation only runs before sunset and after sunrise to be in sync with the time-based rules described above.
 
-![](/images/ha-de-activate-reolink-notifications-geofence.png)
+{% image "/images/ha-de-activate-reolink-notifications-geofence.png", "Screenshot Home Assistant Automation", "small" %}
 
 ```YAML
 alias: "[Camera] De-activate notifications on coming home"
