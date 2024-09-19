@@ -26,6 +26,7 @@ At least in the iOS app, this feature is somewhat hidden and not immediately obv
 You can create different scenes. What you cannot do is control these scenes automatically. You always have to open the app to activate them, and they cannot be triggered at a certain time or by another event.
 
 So how do we solve this problem? To fill the gaps and add the missing functionality, Home Assistant comes in as a powerful smart home platform. 
+
 ## Automate the push notifications
 
 Just like us, almost all camera users only want to receive push notifications at certain times. We have different notification profiles depending on the time of day or day of the week.
@@ -39,9 +40,10 @@ In our case the notifications will follow this patten:
 | Frontdoor | on         | on            | on     |
 | Carport   | on         | off           | on     |
 | Garden    | off        | off           | on     |
+
 To enable / disable the notifications as needed I use two automations in Home Assistant. The first on is triggered at sunset to enable the push notification settings of all the cameras:
 
-<<< screenshot >>>
+![](/images/ha-activate-reolink-notifications-sunset.png)
 
 In YAML this looks like (simplified version):
 
@@ -66,7 +68,7 @@ mode: single
 
 The second time-based automation is triggered at sunrise in the morning to switch the notifications back on. This only runs when we are at home, as we do not want the push notifications to be turned off when we are away. The carport camera notifications are only disabled at weekends.
 
-<<< screenshot >>>
+![](/images/ha-de-activate-reolink-notifications-sunrise.png)
 
 In YAML this looks like: 
 
@@ -109,7 +111,7 @@ As it is not possible to control these automatically via the Reolink app, and ma
 
 Activating the camera notifications when nobody is at home:
 
-<<< screenshot >>>
+![](/images/ha-activate-reolink-notifications-geofence.png)
 
 The YAML version:
 
@@ -136,7 +138,7 @@ mode: single
 
 Disabling push notifications follows a similar pattern. There's an extra check because when we come home late at night, we want the cameras to stay on and we don't want the notification to be disabled. So this automation only runs before sunset and after sunrise to be in sync with the time-based rules described above.
 
-<<< screenshot >>>
+![](/images/ha-de-activate-reolink-notifications-geofence.png)
 
 ```YAML
 alias: "[Camera] De-activate notifications on coming home"
