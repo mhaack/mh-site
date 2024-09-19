@@ -54,7 +54,7 @@ To enable / disable the notifications as needed I use two automations in Home As
 
 In YAML this looks like (simplified version):
 
-```YAML
+```yaml
 alias: "[Camera] Activate notifications on sunset"
 trigger:
   - platform: sun
@@ -79,7 +79,7 @@ The second time-based automation is triggered at sunrise in the morning to switc
 
 In YAML this looks like: 
 
-```YAML
+```yaml
 alias: "[Camera] De-activate notifications on sunrise"
 trigger:
   - platform: sun
@@ -122,7 +122,7 @@ Activating the camera notifications when nobody is at home:
 
 The YAML version:
 
-```YAML
+```yaml
 alias: "[Camera] Activate notifications on leaving"
 trigger:
   - platform: state
@@ -149,7 +149,7 @@ Disabling push notifications follows a similar pattern. There's an extra check b
 
 The script version of this automation looks like this:
 
-```YAML
+```yaml
 alias: "[Camera] De-activate notifications on coming home"
 description: ""
 trigger:
