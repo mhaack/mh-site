@@ -20,9 +20,9 @@ This is where Home Assistant comes into play, as it can close these gaps.
 
 The only out-of-the-box way to quickly change the recording or push notification settings of multiple cameras at once is to use shortcuts within the Reolink app:
 
-![](/images/reolink-app.png)
+{% image "/images/reolink-app.png", "Screenshot Reolink iOS App", "x-small", "Scenes in the Reolink iOS App" %}
 
-At least in the iOS app, this feature is somewhat hidden and not immediately obvious. In the camera view, you normally only see the cameras. However, if you drag the whole view down a bit, you can see 3 badges. These are assigned shortcuts that can also be customised. You can toggle recording on and off, and enable or disable push or email alerts for each camera. You can also turn on the alarm sound.
+At least in the Reolink iOS app, this feature is somewhat hidden and not immediately obvious. In the camera view, you normally only see the cameras. However, if you drag the whole view down a bit, you can see 3 badges. These are assigned shortcuts that can also be customised. You can toggle recording on and off, and enable or disable push or email alerts for each camera. You can also turn on the alarm sound.
 
 You can create different scenes. What you cannot do is control these scenes automatically. You always have to open the app to activate them, and they cannot be triggered at a certain time or by another event.
 
