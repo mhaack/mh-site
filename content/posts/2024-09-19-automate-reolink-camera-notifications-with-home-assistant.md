@@ -141,6 +141,8 @@ Disabling push notifications follows a similar pattern. There's an extra check b
 
 {% image "/images/ha-de-activate-reolink-notifications-geofence.png", "Screenshot Home Assistant Automation", "small" %}
 
+The script version of this automation looks like this:
+
 ```YAML
 alias: "[Camera] De-activate notifications on coming home"
 description: ""
