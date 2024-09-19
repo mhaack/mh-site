@@ -6,7 +6,7 @@ tags:
   - home-assistant
   - home-automation
 images:
-  feature: /images/arlo_ha_camera.png
+  feature: /images/reolink-automation-hero.jpg
 date: 2024-09-19
 permalink: automate-reolink-camera-notifications/
 ---
