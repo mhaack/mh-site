@@ -180,3 +180,5 @@ This lets you fill a gap in the Reolink app and add the missing functions yourse
 You can also use Home Assistant to create other useful workflows around the cameras. I'll explain more in a later article.
 
 I am certain you will find this guide helpful. Please do not hesitate to ask if you have any questions.
+
+Hero image: AI generated with ChatGPT.
