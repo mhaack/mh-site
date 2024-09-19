@@ -8,6 +8,7 @@ tags:
 images:
   feature: /images/arlo_ha_camera.png
 date: 2024-09-19
+permalink: automate-reolink-camera-notifications/
 ---
 As I wrote in my previous post, I recently switched from Arlo cameras to Reolink cameras. The Reolink cameras have excellent hardware quality, an aluminium housing and no cloud subscription obligation.
 
