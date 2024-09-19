@@ -43,7 +43,7 @@ When we're at home in the garden, we don't need notifications from the cameras i
 In our case the notifications will follow this patten:
 
 | Camera    | Week - Day | Weekend - Day | Nights |
-| --------- | ---------- | ------------- | ------ |
+| --------- | :--------: | :-----------: | :----: |
 | Frontdoor | on         | on            | on     |
 | Carport   | on         | off           | on     |
 | Garden    | off        | off           | on     |
