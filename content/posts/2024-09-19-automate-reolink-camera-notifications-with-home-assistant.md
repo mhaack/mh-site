@@ -16,7 +16,7 @@ description: Automate Reolink camera notifications with Home Assistant to
 date: 2024-09-19
 permalink: automate-reolink-camera-notifications/
 ---
-As I wrote in my previous post, I recently switched from Arlo cameras to Reolink cameras. The Reolink cameras have excellent hardware quality, an aluminium housing and no cloud subscription obligation.
+As I wrote in [my previous post](/reolink-cameras-in-home-assistant/), I recently switched from Arlo cameras to Reolink cameras. The Reolink cameras have excellent hardware quality, an aluminium housing and no cloud subscription obligation.
 
 However, there are some gaps in the software and functions that have been standard with Arlo and other providers for years are missing here. The camera alarms cannot be automated and there is also no geo-fencing in the app so that the cameras can be activated automatically when everyone has left the house.
 
