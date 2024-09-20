@@ -114,7 +114,9 @@ mode: single
 
 When we are out and about and nobody is at home, we naturally also want to be notified by the cameras if something happens. Why else would we have surveillance cameras?
 
-As it is not possible to control these automatically via the Reolink app, and manually activating the scenes in the app is not a solution, we have also automated this using Home Assistant. We also set up two automations to make this work. One is triggered when we have all left the house and the other the other way round, when at least one member of the family is back home.
+As it is not possible to control these automatically via the Reolink app, and manually activating the scenes in the app is not a solution, we have also automated this using Home Assistant. We also set up two automations to make this work. 
+
+One is triggered when we have all left the house and the other is triggered when at least one member of the family has returned home. The trigger can be either a mobile phone location change, a person location change or, as in our case, a group of people. [Groups of people](https://www.home-assistant.io/integrations/group/#old-style-groups) are still supported in Home Assistant, but can only be defined in YAML.
 
 Activating the camera notifications when nobody is at home:
 
