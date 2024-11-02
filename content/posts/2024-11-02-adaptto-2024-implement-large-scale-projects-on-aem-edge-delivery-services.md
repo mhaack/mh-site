@@ -14,7 +14,7 @@ We recently had the opportunity to present at [adaptTo()](https://adapt.to/2024)
 
 Our presentation explored strategic approaches to designing and managing global, multilanguage projects within the AEM Edge Delivery framework. Based on real-world projects and challenges we’ve encountered, we walked attendees through essential steps in setting up large-scale projects, from effective developer configurations and content organization strategies to optimized translation workflows.
 
-![](/images/adaptto-2024-2.jpeg)
+{% image "/images/adaptto-2024-2.jpeg", "Presenting on adaptto() stage", "x-small" %}
 
 For those interested in diving deeper into these topics, our [slide deck is available on the adaptTo() conference website](https://adapt.to/2024/schedule/scaling-up-implement-large-scale-projects-on-aem-edge-delivery-services). And stay tuned—the full recording of our talk will be available soon!
 
