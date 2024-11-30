@@ -24,4 +24,3 @@ This repository contains the code for my personal site at [www.markus-haack.com]
 * HTML minified in production
 * CSS minified in production
 * Minimal JS
-* HTML document `<head>` crafted using [htmlhead.dev](https://htmlhead.dev)
