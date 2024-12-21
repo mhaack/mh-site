@@ -1,8 +1,8 @@
-name: Daily Netlify Build
+name: Weekly Netlify Build
 
 on:
   schedule:
-    - cron: "30 15 * * 5"
+    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 jobs:
