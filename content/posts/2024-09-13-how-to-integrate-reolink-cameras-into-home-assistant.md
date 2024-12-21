@@ -7,7 +7,7 @@ tags:
   - home-automation
 images:
   feature: /images/home_assistant_reolink.png
-description: In this post, we will walk through the process of integrating
+description: In this post, I will walk through the process of integrating
   Reolink Network Cameras into Home Assistant. With this integration, you can
   stream live footage, set up motion detection automations, and even record
   clips based on events.
