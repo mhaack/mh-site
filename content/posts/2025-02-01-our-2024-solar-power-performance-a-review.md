@@ -6,7 +6,7 @@ tags:
   - electricity
   - photovoltaic
 images:
-  feature: /images/solar-2025-2.png
+  feature: /images/solar-2025-1.png
 date: 2025-02-01
 ---
 Our home's solar energy system continued its upward trajectory in 2024. In fact, compared to previous years, it provided a slight increase in energy production. This post looks at our solar performance in 2024, highlighting key trends and comparing them with the results from 2021, 2022 and 2023.
