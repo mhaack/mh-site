@@ -20,7 +20,7 @@ In 2024, our solar panels generated a total of 8571 kWh, an improvement on 2023 
 * **Peak Production (June & July):** June and July were our most productive months with 1246 kWh and 1279 kWh respectively. This highlights the effectiveness of our system during peak sunlight hours. July & August 2024 had the highest energy yield compared to July & August of previous years. May was still good with a production of 1,140 kWh, but it looks like we had much less sun in May in 2024 compared to previous years.
 * **Lowest Production (December & January):** As expected, December (132 kWh) and January (181 kWh) had the lowest production due to shorter daylight hours and less intense solar radiation. However, both of these months were the best since our records began. In previous years, we did not even reach > 100 kWh in these winter months.
 
-## A Multi-Year Comparison: Progress Towards Energy Independence
+## Last 4 Years of our Energy Production
 
 The table below provides a comparison of our energy production and consumption across the years 2021-2024:
 
