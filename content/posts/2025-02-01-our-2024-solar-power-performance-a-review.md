@@ -28,8 +28,7 @@ The table below provides a comparison of our energy production and consumption a
 | 2022 | 9104 kWh                | 10192 kWh               | 4552 kWh              | 5640 kWh         | 55 %                   |
 | 2023 | 8292 kWh                | 10361 kWh               | 5181 kWh              | 5180 kWh         | 50 %                   |
 | 2024 | 8571 kWh                | 10297 kWh               | 4994 kWh              | 5303 kWh         | 52 %                   |
-
-![](/images/solar-2025-2.png)
+{% image "/images/solar-2025-2.png", "2024 Monthly overview", "x-small" %}
 
 ## Energy Consumption: A Relatively Stable Baseline
 
