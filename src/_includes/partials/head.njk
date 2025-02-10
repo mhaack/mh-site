@@ -48,7 +48,11 @@
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
-    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>    
+    <script defer src="https://data.markus-haack.org/pa.js" id="pianjs" data-code="BOFprLmOdwpMsgEv6xgodGT1y1rWBipD"
+      data-hit-endpoint="https://data.markus-haack.org/hit"
+      data-event-endpoint="https://data.markus-haack.org/event"
+      data-session-endpoint="https://data.markus-haack.org/session"></script>
     {%- endif %}
     {%- if layout == 'home' -%}
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
