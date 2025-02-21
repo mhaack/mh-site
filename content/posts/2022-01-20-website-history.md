@@ -33,7 +33,7 @@ A few weeks later I rebuild the site with [Dreamweaver](https://www.adobe.com/pr
 
 In October 2004, after the site was in deep sleep for a while, the first blog "Klasse Kaffee" was launched on blogger.com platform. And I started posting more frequently.
 
-![Screenshot of "Klasse Kaffee" from 2005](/assets/images/bildschirmfoto-2022-01-20-um-10.52.13.png)
+{% image "/images/website-1.jpeg", "Screenshot of "Klasse Kaffee" from 2005" %}
 
 ## V4 - Wordpress
 
@@ -45,7 +45,7 @@ I blogged regularly until 2010, after which I lost interest a little.
 
 How the time flies ... In 2019, 9 years later, I reactivated the domain and started blocking again. It was a fresh start. The entire site was rebuilt with [React](https://reactjs.org/) from scratch using [Gatsby](https://www.gatsbyjs.com/) using the [Stellar](https://github.com/codebushi/gatsby-starter-stellar) theme. A snapshot is still available in the [Internet Archive](https://web.archive.org/web/20190108060741/https://www.markus-haack.com/).
 
-![Screenshot of "Klasse Kaffee" from 2019](/assets/images/bildschirmfoto-2022-01-20-um-10.57.52.png)
+{% image "/images/website-2.jpeg", "Screenshot of my website from 2019" %}
 
 The redesigned blog also got a new [markus-haack.com](https://markus-haack.com) domain. The .de domain [markus-haack.de](http://www.markus-haack.de) still exists, it redirects to the .com domain.
 
