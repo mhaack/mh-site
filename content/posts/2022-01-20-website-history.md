@@ -33,7 +33,7 @@ A few weeks later I rebuild the site with [Dreamweaver](https://www.adobe.com/pr
 
 In October 2004, after the site was in deep sleep for a while, the first blog "Klasse Kaffee" was launched on blogger.com platform. And I started posting more frequently.
 
-{% image "/images/website-1.jpeg", "Screenshot of "Klasse Kaffee" from 2005" %}
+{% image "/images/website-1.jpeg", "Screenshot of Klasse Kaffee from 2005" %}
 
 ## V4 - Wordpress
 
