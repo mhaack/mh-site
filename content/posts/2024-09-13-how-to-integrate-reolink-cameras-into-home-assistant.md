@@ -7,10 +7,9 @@ tags:
   - home-automation
 images:
   feature: /images/home_assistant_reolink.png
-description: In this post, I will walk through the process of integrating
-  Reolink Network Cameras into Home Assistant. With this integration, you can
-  stream live footage, set up motion detection automations, and even record
-  clips based on events.
+description: Smart homes are increasingly using temperature and humidity sensors for automation, and I've installed over 10 throughout my house, including the garden, loft, fridge and pool. ZigBee sensors are ideal for this because of their low power consumption and reliable communication, allowing them to run on batteries for months or even years.
+seo:
+  description: I've installed over 10 all over my house, including the garden, attic, fridge and pool. ZigBee sensors are ideal for this because of their low power consumption and reliable communication.
 date: 2024-09-13
 permalink: reolink-cameras-in-home-assistant/
 ---
