@@ -11,9 +11,9 @@ tags:
 images:
  feature: /images/2020-09-01-home-assistant-you-have-got-mail/you-ve_got_mail_-2685196800-.jpg
  height: h-128
-description: Today I want to share a little holiday project I am building this week: a mailbox sensor to make a dumb mailbox smart and notify us when we get new mail. I'm talking about real physical mail - letters, postcards, newspapers, etc. that get dropped into our mailbox.
+description: "Today I want to share a little holiday project I am building this week: a mailbox sensor to make a dumb mailbox smart and notify us when we get new mail. I'm talking about real physical mail - letters, postcards, newspapers, etc. that get dropped into our mailbox."
 seo:
-  description: A little holiday project I am building this week: a mailbox sensor to make a dumb mailbox smart and notify us when we get new mail.
+ description: "A little holiday project I am building this week: a mailbox sensor to make a dumb mailbox smart and notify us when we get new mail."
 date: 2020-09-05
 permalink: you-have-got-mail/
 ---
