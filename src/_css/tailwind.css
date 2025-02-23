@@ -4,22 +4,23 @@
 @import 'prism-okaidia.css';
 
 @layer base {
-  /* ibm-plex-sans-regular - latin */
   @font-face {
     font-family: 'IBM Plex Sans';
     font-style: normal;
     font-weight: 400;
-    src: local(''), url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff2') format('woff2'),
-      url('/assets/fonts/ibm-plex-sans-v13-latin-regular.woff') format('woff');
-    font-display: optional;
+    src: local('IBM Plex Sans'), local('IBMPlexSans'), url('/assets/fonts/IBMPlexSans-Regular-Latin1.woff2') format('woff2'), url('/assets/fonts/IBMPlexSans-Regular-Latin1.woff') format('woff');
+    unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  
+  @font-face {
+    font-family: 'IBM Plex Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: local('IBM Plex Sans SmBld'), local('IBMPlexSans-SmBld'), url('/assets/fonts/IBMPlexSans-SemiBold-Latin1.woff2') format('woff2'), url('/assets/fonts/IBMPlexSans-SemiBold-Latin1.woff') format('woff');
+    unicode-range: U+0000, U+000D, U+0020-007E, U+00A0-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2013-2014, U+2018-201A, U+201C-201E, U+2020-2022, U+2026, U+2030, U+2039-203A, U+2044, U+20AC, U+2122, U+2212, U+FB01-FB02;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
     @apply font-semibold text-gray-800;
   }
 

@@ -99,7 +99,7 @@ This makes sense, for example, if a fixed schedule cannot be used because, for e
 
 With the help of a simple automation, you can start the creation of a backup for a specific backup destination. The following sample automation trigger backups when your NAS is awake:  
 
-```
+```yaml
 automation:
   - alias: "Backup Home Assistant 5 min after NAS is online"
     triggers:
