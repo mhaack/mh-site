@@ -4,6 +4,7 @@ category: project
 tags:
   - home-assistant
   - home-automation
+  - backup
 images:
   feature: /images/disc-backup-hero.jpg
   height: null
