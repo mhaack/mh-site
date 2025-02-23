@@ -3,8 +3,10 @@ title: Home Assistant Backup in 2025
 category: project
 tags:
   - home-assistant
+  - home-automation
+  - backup
 images:
-  feature: /images/disc-backup-hero.jpg
+  feature: /images/disc-backup-2025-hero.jpg
 date: 2025-02-23
 permalink: home-assistant-backup-2025/
 ---
