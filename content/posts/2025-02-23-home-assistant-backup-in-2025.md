@@ -6,6 +6,7 @@ tags:
 images:
   feature: /images/disc-backup-hero.jpg
 date: 2025-02-23
+permalink: home-assistant-backup-2025/
 ---
 Two years ago, I wrote about [backing up Home Assistant to a Synology NAS](/home-assistant-backup-to-synology-nas/) using NFS shares. While that method still works, the Home Assistant team has gone all-in on backups and massively improved Home Assistant's native backup capabilities with the [2025.1](https://www.home-assistant.io/blog/2025/01/03/release-20251/) and [2025.2](https://www.home-assistant.io/blog/2025/02/05/release-20252/) releases. I have already adjusted my backup configuration. Let's explore what's new and why you should update your approach. 
 
