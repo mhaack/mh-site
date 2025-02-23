@@ -11,6 +11,11 @@ images:
 description: Regularly backing up your Home Assistant configuration is critical to protecting your smart home deployment. This article explains how to back up your Home Assistant to a NAS.
 date: 2023-07-17
 ---
+
+**Update**: With the first two 2025 releases, there were some new features for Home Assistant backups. I have summarised these in [a new article](/home-assistant-backup-2025/). However, the NAS backup steps in this article are of course still valid.
+
+---
+
 Okay, I don't think I need to go into detail about why having a solid backup strategy for your [Home Assistant](https://www.home-assistant.io/) solution is important. So I'll write about how to set it up. I've wanted to set up the backup of my Home Assistant installation properly for months. Now that I've finally tackled this task, I thought I'd summarize the steps I took.
 
 I'm [running Home Assistant on an Odroid N2](/jama-villa/), and I'm well aware that frequent writes can shorten the lifespan of memory cards. In general a higher quality SD card typically will last longer and can hold multiple years. We also have to consider the entire system, not only Home Assistant itself, but also all add-on like MQTT broker etc. Although this concern primarily applies to SD cards, I wanted to be cautious with the Odroid N2 and its MMC memory.
