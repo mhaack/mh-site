@@ -158,7 +158,6 @@ Let me summarise what has changed and improved compared to [my first Home Assist
 | **Backup Locations** | Local or NAS<br>Additional only via Add-ons | Local, NAS & Cloud Backup built-in                 |
 | **Encryption**       | n/a                                         | Per-Location Toggle, Mandatory for Cloud locations |
 | **Trigger**          | Via Automation                              | Auto-Triggered, Via UI, Via Automation             |
-| **Action**           | `hassio.backup_full`                        | `backup.create_automatic`                          |
 
 Home Assistant's 2025 backup tools have matured. With all the new features and configuration options, there is no excuse for not backing up your system. It's easier than ever before.
 
