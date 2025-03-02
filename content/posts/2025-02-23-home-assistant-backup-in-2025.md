@@ -123,7 +123,7 @@ In addition to all the automatic backup settings, you also have the option of cr
 
 This makes sense, for example, if a fixed schedule cannot be used because, for example, the NAS server is switched off at night. Home Assistant provides the `backup.create_automatic` action for automations.
 
-With the help of a simple automation, you can start the creation of a backup for a specific backup destination. The following sample automation trigger backups when your NAS is awake:  
+The following sample automation trigger backups when your NAS is awake:  
 
 ```yaml
 automation:
@@ -140,6 +140,8 @@ automation:
       - alias: "Create backup now"
         action: backup.create_automatic
 ```
+
+With the help of a simple automation above, you can start the creation of a backup for a specific backup destination.
 
 ## Disaster Recovery Protocol
 
