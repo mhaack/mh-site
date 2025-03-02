@@ -106,6 +106,9 @@ module.exports = {
                         ul: {
                             'list-style-type': 'square',
                         },
+                        pre: {
+                            position: 'relative',
+                        },
                         code: {
                             backgroundColor: theme('colors.gray.200'),
                             'font-weight': 400,
