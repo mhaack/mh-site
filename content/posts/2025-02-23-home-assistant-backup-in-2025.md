@@ -38,7 +38,7 @@ Let's have a quick look at them together, and then I'll give you step-by-step in
 
 ## Native backups to the place of your choice
 
-Home Assistant 2025.2 eliminates the need for plugins such as Samba Backup or Google Drive add-ons. The update introduced native integrations for 
+Home Assistant 2025.2 eliminates the need for plugins such as Samba Backup or Google Drive add-ons. The update introduced native integrations for
 
 - Synology NAS via DSM
 - Google Drive
@@ -62,7 +62,7 @@ Done - Home Assistant will create your first backup for you.
 
 {% image "/images/ha-backup-screenshot-2025-1.png", "screenshot 1", "x-small", "Screenshot 1: Home Assistant Backup" %}
 
-To save a backup of our system in the cloud, just a few clicks are necessary. In the **Backup settings** area, click on the last menu item for the backup locations. 
+To save a backup of our system in the cloud, just a few clicks are necessary. In the **Backup settings** area, click on the last menu item for the backup locations.
 
 {% image "/images/ha-backup-screenshot-2025-2.png", "screenshot 2", "x-small", "Screenshot 2: Home Assistant Backup Locations" %}
 
@@ -72,12 +72,38 @@ Depending on your configuration, several backups will accumulate over time. Clic
 
 {% image "/images/ha-backup-screenshot-2025-3.png", "screenshot 3", "x-small", "Screenshot 3: Home Assistant - My Backups" %}
 
-Which locations are displayed here depends on the installed integration [Google Drive](https://www.home-assistant.io/integrations/google_drive/),  [Microsoft OneDrive](https://www.home-assistant.io/integrations/onedrive/) and [Synology DSM](https://www.home-assistant.io/integrations/synology_dsm/#backup-location). And whether you have a Nabu Casa subscription or not.
+Which locations are displayed here depends on the installed integration [Google Drive](https://www.home-assistant.io/integrations/google_drive/),  [Microsoft OneDrive](https://www.home-assistant.io/integrations/onedrive/) and [Synology DSM](https://www.home-assistant.io/integrations/synology_dsm/#backup-location). And whether you have a Nabu Casa subscription or not. Only with Nabu Casa subscription you will have the "Home Assistant Cloud" option.
 
-Some of the integrations - for example Synology - are not automatically configured as a backup target and must be set up separately. See the integration documentation for more information. If you want to store your backup on a Synology NAS, please have a look at [my first article](https://markus-haack.com/home-assistant-backup-to-synology-nas/). The configuration steps on the NAS are exactly the same and still apply.
+## Backup to Synology in 2025
+
+If you want to store your backup on a Synology NAS, please have a look at [my first article](https://markus-haack.com/home-assistant-backup-to-synology-nas/). The configuration steps on the NAS are exactly the same and still apply.
+
+In order to select Synology as a backup target for Home Assistant, an extra configuration step is required:
+
+* Go to Settings > Devices
+* Select the "Synology DSM" integration
+* Click on "Configure"
+* In the dialog select one of the shared folders and enter an folder name.
+
+The shared folders are configured on the Synology NAS. If this list is empty or the desired folder for the backups does not appear here, this must be set on Synology. See [my first article](https://markus-haack.com/home-assistant-backup-to-synology-nas/) on how to achive this.
+
+The dialog should look similar to:
+
+{% image "/images/ha-backup-screenshot-2025-4.png", "screenshot 4", "x-small", "Screenshot 4: Synology Backup Config" %}
+
+After the Synology backup directories have been configured, Synology DSM is made available as a backup location.
+
+Go back to the backup settings and click configure again. Synology DSM is now available as backup location and can be enabled. You can select whether the backups on the NAS should be encrypted, see next chapter. I have switched this off in my case.
+
+{% image "/images/ha-backup-screenshot-2025-5.png", "screenshot 5", "x-small", "Screenshot 5: Synology Backup Location" %}
+
+The generic NAS backup localtion can still be used, but is not requiered any more.
+
+Other integrations are not automatically configured as a backup target and must be set up separately. See the integration documentation for more information.
+
 ## Flexible Encryption
 
-Home Assistant 2025.1 introduced automatic encryption of all backups. While encryption is still the default, you can now disable it on a per location basis. 
+Home Assistant 2025.1 introduced automatic encryption of all backups. While encryption is still the default, you can now disable it on a per location basis.
 
 Why disable? Unencrypted local or NAS backups allow direct file recovery without Home Assistant. This can be useful in some cases. However, cloud backups will always remain encrypted for security.
 
@@ -89,7 +115,7 @@ In my case, I have a backup created at the weekend, every Saturday at 4.45am. Th
 
 If the recommended settings to not fit go to: **Settings → System → Backups**  and select the first option in the **Backup settings** area. This will bring you to the automatic backups options which can be flexibly adjusted here.
 
-{% image "/images/ha-backup-screenshot-2025-4.png", "screenshot 4", "x-small", "Screenshot 4: Home Assistant Automatic Backup Options" %}
+{% image "/images/ha-backup-screenshot-2025-6.png", "screenshot 6", "x-small", "Screenshot 6: Home Assistant Automatic Backup Options" %}
 
 ## Conditional Backups via Automation  
 
@@ -115,8 +141,7 @@ automation:
         action: backup.create_automatic
 ```
 
-
-## Disaster Recovery Protocol 
+## Disaster Recovery Protocol
 
 Just as important as the regular creation of backups is the restoration. This should also be tested regularly.
 
@@ -133,11 +158,6 @@ Let me summarise what has changed and improved compared to [my first Home Assist
 | **Trigger**          | Via Automation                              | Auto-Triggered, Via UI, Via Automation             |
 | **Action**           | `hassio.backup_full`                        | `backup.create_automatic`                          |
 
-Home Assistant's 2025 backup tools have matured. With all the new features and configuration options, there is no excuse for not backing up your system. It's easier than ever before. 
+Home Assistant's 2025 backup tools have matured. With all the new features and configuration options, there is no excuse for not backing up your system. It's easier than ever before.
 
 Define your backup strategy today – your future self will thank you when the SD card fails at 2 AM.  
-
-
-
-
-
