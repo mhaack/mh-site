@@ -24,7 +24,7 @@ package = "netlify-plugin-cache"
 
 [[redirects]]
   from = "/assets/js/script.js"
-  to = "https://plausible.io/js/script.outbound-links.js"
+  to = "https://plausible.io/js/script.js"
   status = 200
   force = true
 
