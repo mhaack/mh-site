@@ -10,11 +10,16 @@ tags:
 images:
  feature: /images/watertank-unsplash.jpg
  height: h-96
-description: Watering your lawn and plants around the house wasn't one of my
+description: Watering our lawn and plants around the house wasn't one of my
  favourite things to do. This had to be done better - fully automatically and
  without intervention.
+seo:
+  description: Watering our lawn and plants around the house wasn't one of my favourite things to do. It had to be done better, automatically and without human intervention.
 date: 2022-04-02
 permalink: watertank-esphome/
+
+
+
 ---
 
 Watering your lawn and plants around the house wasn't one of my favourite things to do. Especially when we bought a robot lawnmower, watering the lawn became quite a hassle since we had to always put away the sprinklers and hoses after each irrigation.

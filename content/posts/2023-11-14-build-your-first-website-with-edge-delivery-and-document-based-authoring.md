@@ -1,5 +1,7 @@
 ---
 title: Build your first website with Edge Delivery and document based authoring
+seo:
+  title: Build your first website with AEM Edge Delivery Services
 category: work
 tags:
   - adobe
@@ -7,7 +9,6 @@ tags:
   - conference
 images:
   feature: /images/dev-live-aem-build-your-first-site.jpg
-description: ""
 date: 2023-11-14
 ---
 For zero to go-live of your first website in 30 min. Is that possible? In this developer step-by-step walkthrough I show you how to build and launch your first size using Adobe’s new Edge Delivery Service.

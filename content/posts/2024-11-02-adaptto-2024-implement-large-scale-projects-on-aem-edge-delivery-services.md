@@ -1,5 +1,5 @@
 ---
-title: "adaptTo() 2024: Implement large-scale projects on AEM Edge Delivery Services"
+title: "Implement large-scale projects on AEM Edge Delivery Services"
 category: work
 tags:
   - adobe

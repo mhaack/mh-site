@@ -1,6 +1,7 @@
 ---
-title: "New Talk: Developing a good editor experience with Microsoft 365/Google
-  Workspace"
+title: "New Talk: Developing a good editor experience with Microsoft 365/Google Workspace"
+seo:
+  title: "Build a good editor experience for AEM Edge Delivery"
 category: work
 tags:
   - adobe
@@ -17,7 +18,7 @@ In May Adobe hosted the Adobe Developers Live virtual conference for Adobe Exper
 I gave a presentation about the new AEM document-based authoring and how to build an effective editor experience with Microsoft 365/Google Workspace.
 
 <video controls width="100%" poster="//images-tv.adobe.com/mpcv3/71a43592-0569-4d31-b735-0bf279223ba3/86fa4476-3518-40fb-8323-c06bff92652d/664e969baf6e435a8ea7755e00ad6047_1685156700-1920x1080.jpg">
-  <source src="//images-tv.adobe.com/mpcv3/7469/8ee3fb7a-4086-4f06-9898-0799c7aeea69_1685140943.854x480at800_h264.mp4" type="video/mp4">\
+  <source src="//images-tv.adobe.com/mpcv3/7469/8ee3fb7a-4086-4f06-9898-0799c7aeea69_1685140943.854x480at800_h264.mp4" type="video/mp4">
 </video>
 
 Abstract:

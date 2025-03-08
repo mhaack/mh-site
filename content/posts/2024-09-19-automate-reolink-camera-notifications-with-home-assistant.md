@@ -8,11 +8,9 @@ tags:
 images:
   feature: /images/reolink-automation-hero.jpg
   height: null
-description: Automate Reolink camera notifications with Home Assistant to
-  overcome app limitations like geo-fencing and scheduling. Create custom
-  notifications based on location, time, or other conditions by configuring
-  simple YAML scripts, improving the flexibility and intelligence of your home
-  security system.
+description: Automate Reolink camera notifications with Home Assistant to overcome app limitations such as geo-fencing and scheduling. Create custom notifications based on location, time or other conditions by configuring simple YAML scripts, increasing the flexibility and intelligence of your home security system.
+seo:
+  description: Automate Reolink camera notifications with Home Assistant to overcome app limitations such as geo-fencing and scheduling.
 date: 2024-09-19
 permalink: automate-reolink-camera-notifications/
 ---
