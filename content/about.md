@@ -55,6 +55,8 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 
 ## Talks
 
+- [Content Authoring With Universal Editor and Edge Delivery Services in AEM](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/adobe-summit-2025-aem-session-lab-l335-content-authoring-with/td-p/736572), Adobe Summit, March 2025
+- [Implement large-scale projects on AEM Edge Delivery Services](/implement-large-scale-projects-on-aem-edge-delivery-services/), adaptTo(), October 2024
 - [Build your first website with Edge Delivery and document based authoring](/build-your-first-website-with-edge-delivery-and-document-based-authoring/), Adobe Developers Live, November 2023
 - [Edge Delivery Services: Getting started with document-based authoring](https://adapt.to/2023/schedule/edge-delivery-services-getting-started-with-document-based-authoring), adaptTo(), September 2023
 - [Developing a good editor experience with Microsoft 365/Google Workspace](/aem-document-based-authoring/), Adobe Developers Live, May 2023
