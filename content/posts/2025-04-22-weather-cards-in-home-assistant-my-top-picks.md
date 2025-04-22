@@ -24,6 +24,8 @@ You don't need much to get started with a simple weather card. In fact, all you 
 
 For more advanced uses, additional integrations such as UV data or a local temperature and pressure sensors will be helpful.
 
+Almost all of the custom weather charts listed below offer powerful configuration options. In this article I can only summarise the highlights. A detailed list of all available options can be found in the linked GitHub repositories.
+
 ## 1. Official Home Assistant Weather Forecast Card
 
 Home Assistant includes a simple built-in weather forecast card. Adding it to your dashboard is quick and works with most integrations out-of-the-box. 
