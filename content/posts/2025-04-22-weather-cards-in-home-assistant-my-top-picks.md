@@ -128,9 +128,38 @@ Platinum Weather Card is the most powerful option, letting you mix and match dat
 
 At the moment I use the Clock Weather card in my main dashboard in combination with the forecast from the then standard built-in weather card. Using the custom `vertical-stack-in-card' card, these can be nicely stitched together to give them a "one card" look and feel. Here is the YAML of the combination:
 
-<YAML>
+```yaml
+type: custom:vertical-stack-in-card
+cards:
+  - type: custom:clock-weather-card
+    entity: weather.jama_villa
+    temperature_sensor: sensor.garden_temperature
+    locale: de
+    weather_icon_type: fill
+    hide_clock: true
+    hide_date: true
+    forecast_rows: 3
+    show_decimal: true
+    hide_forecast_section: true
+  - show_current: false
+    show_forecast: true
+    type: weather-forecast
+    entity: weather.jama_villa
+    forecast_type: hourly
+    forecast_slots: 6
+  - type: custom:clock-weather-card
+    entity: weather.jama_villa
+    temperature_sensor: sensor.garden_temperature
+    locale: de
+    weather_icon_type: fill
+    hide_clock: true
+    hide_date: true
+    forecast_rows: 3
+    show_decimal: true
+    hide_today_section: true
+```
 
-![](/images/weather_card_my_combo.png)
+{% image "/images/weather_card_my_combo.png", "Screenshot My Weather Card Combo", "x-small", "Screenshot 4: My Weather Card Combo" %}
 
 ## Conclusion
 
