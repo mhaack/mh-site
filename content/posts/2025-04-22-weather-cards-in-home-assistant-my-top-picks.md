@@ -30,7 +30,7 @@ Home Assistant includes a simple built-in weather forecast card. Adding it to yo
 
 This is the default option under *Add Card* > *Weather Forecast* in the dashboard editor. Setup is as simple as picking your `weather` entity.
 
-![](/images/weather_card_ha.png)
+{% image "/images/weather_card_ha.png", "Screenshot Home Assistant Weather Card", "x-small", "Screenshot 1: Home Assistant Weather Card" %}
 
 It shows current conditions and a five-day forecast in a compact design that fits anywhere. You can switch between hourly and daily forecasts. You can select the number of forecast entries. You can choose an extra value to display below the main temperature - humidity, rainfall or wind. For many users, this may be enough.
 
@@ -44,7 +44,7 @@ If you want something reliable and straightforward without any extra dependencie
 
 While testing different weather cards, I also came across the Clock Weather Card. This option combines a digital or analogue clock with weather information, making it particularly useful for dashboards on wall tablets or displays where you want to see both the time and current conditions at a glance. Ideal for your home screen dashboard.
 
-![](/images/weather_card_clock.png)
+{% image "/images/weather_card_clock.png", "Screenshot Clock Weather Card", "x-small", "Screenshot 2: Clock Weather Card" %}
 
 **Installation:**\
 Like most custom cards, the Clock Weather Card can be installed via HACS. Just search for “Clock Weather Card” in the HACS Frontend section and install it. After that, use the Lovelace UI to add it as a custom card.
@@ -89,7 +89,7 @@ This Weather Card is perfect for anyone who wants to get and display all the dat
 
 This is the opposite of the previous weather card. If you prefer a clean look and just the essentials, the Simple Weather card is worth a try. This card is designed to minimise clutter while still providing the most important weather data. It's great for smaller dashboards, side panels or mobile views where space is at a premium.
 
-![](/images/weather_card_simple.png)
+{% image "/images/weather_card_simple.png", "Screenshot Simple Weather Card", "x-small", "Screenshot 3: Simple Weather Card" %}
 
 **Installation:**\
 Same like before, you’ll find the Simple Weather Card in HACS under Frontend. After installing, just add it as a custom card through the Lovelace dashboard editor.
