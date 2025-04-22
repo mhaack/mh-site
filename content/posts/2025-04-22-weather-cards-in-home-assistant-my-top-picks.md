@@ -130,7 +130,7 @@ At the moment I use the Clock Weather card in my main dashboard in combination w
 
 <YAML>
 
-<sceenshot>
+![](/images/weather_card_my_combo.png)
 
 ## Conclusion
 
