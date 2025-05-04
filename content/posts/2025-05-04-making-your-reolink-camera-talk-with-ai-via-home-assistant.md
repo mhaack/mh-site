@@ -5,6 +5,7 @@ tags:
   - home-assistant
   - home-automation
   - camera
+  - ai
 images:
   feature: /images/cif-adobe-tech-blog.jpeg
 date: 2025-05-04
