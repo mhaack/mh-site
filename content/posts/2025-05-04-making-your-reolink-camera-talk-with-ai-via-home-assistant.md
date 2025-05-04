@@ -40,7 +40,7 @@ First things first, Home Assistant needs a way to talk to Google's AI. There's a
 4. It will ask for your API key. You'll need to get one from Google AI Studio (it's free for basic use). Just follow the link provided in the integration setup or search for "Google AI Studio API key". It's pretty quick to generate.
 5. Paste your API key into the configuration and submit.
 
-{% image "/images/screenshot_camera_ai_1.png", "Google Generative AI Conversation", "x-small", "Screenshot 1: Google Generative AI Conversation integration" %}
+{% image "/images/screenshot_camera_ai_1.png", "Google Generative AI Conversation", "small", "Screenshot 1: Google Generative AI Conversation integration" %}
 
 Once added, you'll have a new service available in Home Assistant: \`google_generative_ai_conversation.generate_content\`. This is what we'll use in the automation.
 
@@ -48,7 +48,7 @@ Once added, you'll have a new service available in Home Assistant: \`google_gen
 
 You can test the AI conversation agent via the Developer Tool > Actions page.
 
-{% image "/images/screenshot_camera_ai_2.png", "Testing the Google Generative AI conversation agent", "x-small", "Screenshot 2: Testing the Google Generative AI conversation agent" %}
+{% image "/images/screenshot_camera_ai_2.png", "Testing the Google Generative AI conversation agent", "small", "Screenshot 2: Testing the Google Generative AI conversation agent" %}
 
 Search the *Google Generative AI: Generate content* integration as shown in the screenshot and fill in the form with some test questions. Then click *Perform Action*.
 
@@ -60,7 +60,7 @@ Make sure you have a TTS integration set up and a media_player entity ready to
 
 Similar like above, you can test it via the Developer Tool > Actions page.
 
-{% image "/images/screenshot_camera_ai_3.png", "Testing the Text-to-speech", "x-small", "Screenshot 3: Testing the Text-to-speech" %}
+{% image "/images/screenshot_camera_ai_3.png", "Testing the Text-to-speech", "small", "Screenshot 3: Testing the Text-to-speech" %}
 
 Locate *Text-to-speech (TTS): Speak* like in the screenshot and fill out the form. You can also select your preferred language and voice.
 
@@ -83,7 +83,7 @@ Now for the fun part: putting it all together in an automation. We'll mostly use
 * The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like binary_sensor.YOUR_CAMERA_NAME_motion).
 * The Type should be motion (see YAML below). This should be set automatically when using the visual editor.
 
-{% image "/images/screenshot_camera_ai_4.png", "Camera triggering the action", "x-small", "Screenshot 4: Camera triggering the action" %}
+{% image "/images/screenshot_camera_ai_4.png", "Camera triggering the action", "small", "Screenshot 4: Camera triggering the action" %}
 
 ### Conditions
 
@@ -134,7 +134,7 @@ Tip: You can take one or more snapshots. Gemini AI can also process more images 
 
 If set up correctly the automation steps should look like this:
 
-{% image "/images/screenshot_camera_ai_5.png", "Automation action flow", "x-small", "Screenshot 5: Action flow of the automation" %}
+{% image "/images/screenshot_camera_ai_5.png", "Automation action flow", "small", "Screenshot 5: Action flow of the automation" %}
 
 ## The Complete YAML
 
