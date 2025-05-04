@@ -8,6 +8,7 @@ tags:
 images:
   feature: /images/cif-adobe-tech-blog.jpeg
 date: 2025-05-04
+permalink: making-your-reolink-camera-talk/
 ---
 Let's talk about camera alerts and how we can make them even smarter. You've got your smart home cameras connected to the Home Assistant, and you get notifications whenever there's motion. In my article ["# Automate Reolink camera notifications"](https://markus-haack.com/automate-reolink-camera-notifications/), I explained how you can automate the camera notifications. That's useful, sure. But a generic "person/car/animal detected" alert often leaves you pulling out your phone, opening the app, and waiting for the live feed to figure out what's actually going on. More often than not, it's just the cat next door or the postman doing his job.
 
