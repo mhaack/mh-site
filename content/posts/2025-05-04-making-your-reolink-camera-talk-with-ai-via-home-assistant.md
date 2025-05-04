@@ -8,6 +8,9 @@ tags:
   - ai
 images:
   feature: /images/camera_ai_banner.png
+description: Use Home Assistant to turn camera motion into AI-powered spoken
+  descriptions. Snapshot, analyze with AI, and hear the result on your speaker.
+  Your smart home can now tell you what's happening outside!
 date: 2025-05-04
 permalink: making-your-reolink-camera-talk/
 ---
