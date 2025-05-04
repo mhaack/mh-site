@@ -8,6 +8,7 @@ tags:
   - ai
 images:
   feature: /images/camera_ai_banner.png
+  height: h-96
 description: Use Home Assistant to turn camera motion into AI-powered spoken
   descriptions. Snapshot, analyze with AI, and hear the result on your speaker.
   Your smart home can now tell you what's happening outside!
