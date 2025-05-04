@@ -24,7 +24,9 @@ Here's what you'll need:
 1. **A Camera:** Integrated into Home Assistant and capable of taking snapshots. I'm using Reolink, but the steps for the automation part are generic.
 2. **A Speaker/Media Player:** Also integrated into Home Assistant (like a Sonos, Google Home/Nest speaker, etc.) to play the audio message.
 3. **A Text-to-speech integration**: I use Home Assistant Cloud TTS for this.
-4. **Google Generative AI Access:** You'll need an Google AI Studio account and an API key for Gemini. We'll cover how to get the integration set up.
+4. **Google Generative AI Access:** You'll need an [Google AI Studio](https://aistudio.google.com) account and an API key for Gemini. We'll cover how to get the integration set up.
+
+You can also build this automation flow with other AI conversation integrations like [Anthropic Conversation](https://www.home-assistant.io/integrations/anthropic/) or [OpenAI Conversation](https://www.home-assistant.io/integrations/openai_conversation/). I used [Google AI Studio](https://www.home-assistant.io/integrations/google_generative_ai_conversation/) because it has a decent free tier with enough tokens for testing.
 
 Ready? Let's dive in.
 
@@ -133,7 +135,6 @@ Tip: You can take one or more snapshots. Gemini AI can also process more images 
 If set up correctly the automation steps should look like this:
 
 {% image "/images/screenshot_camera_ai_5.png", "Automation action flow", "x-small", "Screenshot 5: Action flow of the automation" %}
-  
 
 ## The Complete YAML
 
