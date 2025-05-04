@@ -46,7 +46,8 @@ First things first, Home Assistant needs a way to talk to Google's AI. There's a
 
 {% image "/images/screenshot_camera_ai_1.png", "Google Generative AI Conversation", "small", "Screenshot 1: Google Generative AI Conversation integration" %}
 
-Once added, you'll have a new service available in Home Assistant: \`google_generative_ai_conversation.generate_content\`. This is what we'll use in the automation.
+Once added, you'll have a new service available in Home Assistant:
+`google_generative_ai_conversation. generate_content`. This is what we'll use in the automation.
 
 ## Step 2: Ensure Your AI Conversation Integration  is Ready
 
@@ -83,8 +84,9 @@ Now for the fun part: putting it all together in an automation. We'll mostly use
 
 * Click *+ Add Trigger*.
 * Select Device.
-* Choose your camera from the list of devices. **Note:** This part is specific to how your camera integrates. If your camera doesn't expose a motion binary sensor directly as a device trigger, you might need to use an Entity trigger monitoring the motion sensor's state change. For my Reolink camera in this example, a Device trigger works.
-* The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like binary_sensor.YOUR_CAMERA_NAME_motion).
+* Choose your camera from the list of devices.
+**Note:** This part is specific to how your camera integrates. If your camera doesn't expose a motion binary sensor directly as a device trigger, you might need to use an Entity trigger monitoring the motion sensor's state change. For my Reolink camera in this example, a Device trigger works.
+* The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like `binary_sensor.YOUR_CAMERA_NAME_motion`).
 * The Type should be motion (see YAML below). This should be set automatically when using the visual editor.
 
 {% image "/images/screenshot_camera_ai_4.png", "Camera triggering the action", "small", "Screenshot 4: Camera triggering the action" %}
@@ -99,29 +101,30 @@ In my example, I use a condition to run the automation only when we are at home 
 
 Here's where the magic sequence happens. Click *+ Add Action* multiple times to add these steps:
 
-* **Action 1: Take a Snapshot**
+**Action 1: Take a Snapshot**
 
-  * Browse to and select the *Camera: Take Snapshot* service (aka `camera.snapshot`).
-  * For Target, select the camera entity (`camera.YOUR_CAMERA_NAME`) that you want to take a snapshot of.
-  * For Filename, you need to specify where you want to save the image. A good place is the `/media` folder, which Home Assistant uses by default for recordings and snapshots. Set the filename to something like `/media/camera/frontdoor_snapshot.jpg`. You can change frontdoor_snapshot.jpg to whatever makes sense, but remember that the `/media/` path is important. Home Assistant needs permission to write here, which it usually has for this path.
+* Browse to and select the *Camera: Take Snapshot* service (aka `camera.snapshot`).
+* For Target, select the camera entity (`camera.YOUR_CAMERA_NAME`) that you want to take a snapshot of.
+* For Filename, you need to specify where you want to save the image. A good place is the `/media` folder, which Home Assistant uses by default for recordings and snapshots. Set the filename to something like `/media/camera/frontdoor_snapshot.jpg`. You can change `frontdoor_snapshot.jpg` to whatever makes sense, but remember that the `/media/` path is important. Home Assistant needs permission to write here, which it usually has for this path.
 
 Tip: You can take one or more snapshots. Gemini AI can also process more images and give you a more accurate answer. However, this will require more tokens and cost more money, depending on your conversation integration and AI subscription.
 
-* **Action 2: Add a Delay**
+**Action 2: Add a Delay**
 
-  * Click *+ Add Action* again.
-  * Select Delay.
-  * Set a short delay, maybe 5 seconds. This gives Home Assistant time to actually write the snapshot file to disk before the next step tries to read it. It might not always be necessary, but it helps prevent errors.
-* **Action 3: Send to Gemini AI**
+* Click *+ Add Action* again.
+* Select Delay.
+* Set a short delay, maybe 5 seconds. This gives Home Assistant time to actually write the snapshot file to disk before the next step tries to read it. It might not always be necessary, but it helps prevent errors.
 
-  * Click *+ Add Action* again.
-  * Locate and select the *Google Generative AI 'Generate content'* service (aka `google_generative_ai_conversation.generate_content`).
-  * This service takes a prompt and can analyze camera snapshots.
-  * Enter the prompt: This is where you tell the AI what to do. The example YAML below has a specific, funny prompt that asks it to act like a "grumpy security officer" and answer in German. If you use this prompt, the AI's response will be in English.
-    You can copy this, or write your own prompt in English (or any other language Gemini supports) if you prefer a different output. Make it specific about what you expect, ask it to briefly describe what it sees, ignore stationary objects/cars/buildings, etc.
-    	 *Add a camera snapshot filename. Check* Attachment filenames *and enter the filename of the camera snapshot image.  Make sure the filename matches the one in your snapshot action, like `/media/camera/frontdoor_snapshot.jpg`.*
-    	 If you are taking multiple snapshots from your camera, make sure you add all the filenames.
-    	- It is important to add a field for the response variable. This is the name of a variable that will store the AI's response for use in later actions. The example uses `response`.
+**Action 3: Send to Gemini AI**
+
+* Click *+ Add Action* again.
+* Locate and select the *Google Generative AI 'Generate content'* service.
+* This service takes a prompt and can analyze camera snapshots.
+* Enter the prompt: This is where you tell the AI what to do. The example YAML below has a specific, funny prompt that asks it to act like a "grumpy security officer" and answer in German. If you use this prompt, the AI's response will be in English.
+  You can copy this, or write your own prompt in English (or any other language Gemini supports) if you prefer a different output. Make it specific about what you expect, ask it to briefly describe what it sees, ignore stationary objects/cars/buildings, etc.
+* Add a camera snapshot filename. Check *Attachment filenames* and enter the filename of the camera snapshot image.  Make sure the filename matches the one in your snapshot action, like `/media/camera/frontdoor_snapshot.jpg`.
+If you are taking multiple snapshots from your camera, make sure you add all the filenames.
+* It is important to add a field for the response variable. This is the name of a variable that will store the AI's response for use in later actions. The example uses `response`.
 
 **Action 4: Speak the Result**
 
