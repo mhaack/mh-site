@@ -10,7 +10,7 @@ images:
 date: 2025-05-04
 permalink: making-your-reolink-camera-talk/
 ---
-Let's talk about camera alerts and how we can make them even smarter. You've got your smart home cameras connected to the Home Assistant, and you get notifications whenever there's motion. In my article ["# Automate Reolink camera notifications"](https://markus-haack.com/automate-reolink-camera-notifications/), I explained how you can automate the camera notifications. That's useful, sure. But a generic "person/car/animal detected" alert often leaves you pulling out your phone, opening the app, and waiting for the live feed to figure out what's actually going on. More often than not, it's just the cat next door or the postman doing his job.
+Let's talk about camera alerts and how we can make them even smarter. You've got your smart home cameras connected to the Home Assistant, and you get notifications whenever there's motion. In my article [Automate Reolink camera notifications](https://markus-haack.com/automate-reolink-camera-notifications/), I explained how you can automate the camera notifications. That's useful, sure. But a generic "person/car/animal detected" alert often leaves you pulling out your phone, opening the app, and waiting for the live feed to figure out what's actually going on. More often than not, it's just the cat next door or the postman doing his job.
 
 I wanted something smarter. I wanted Home Assistant to not just tell me that something happened, but what happened. Turns out with a little help from AI my smart home actually understand the camera feed.
 
@@ -23,7 +23,7 @@ Here's what you'll need:
 1. **A Camera:** Integrated into Home Assistant and capable of taking snapshots. I'm using Reolink, but the steps for the automation part are generic.
 2. **A Speaker/Media Player:** Also integrated into Home Assistant (like a Sonos, Google Home/Nest speaker, etc.) to play the audio message.
 3. **A Text-to-speech integration**: I use Home Assistant Cloud TTS for this.
-4. **Google Generative AI Access:** You'll need an API key for Gemini. We'll cover how to get the integration set up.
+4. **Google Generative AI Access:** You'll need an Google AI Studio account and an API key for Gemini. We'll cover how to get the integration set up.
 
 Ready? Let's dive in.
 
@@ -37,12 +37,15 @@ First things first, Home Assistant needs a way to talk to Google's AI. There's a
 4. It will ask for your API key. You'll need to get one from Google AI Studio (it's free for basic use). Just follow the link provided in the integration setup or search for "Google AI Studio API key". It's pretty quick to generate.
 5. Paste your API key into the configuration and submit.
 
-\[Screenshot: Adding Google Generative AI Integration]\
-\[Screenshot: Entering API Key]
+{% image "/images/screenshot_camera_ai_1.png", "Google Generative AI Conversation", "x-small", "Screenshot 1: Google Generative AI Conversation integration" %}
 
-Once added, you'll have a new service available in Home Assistant: google_generative_ai_conversation.generate_content. This is what we'll use in the automation.
+Once added, you'll have a new service available in Home Assistant: \`google_generative_ai_conversation.generate_content\`. This is what we'll use in the automation.
 
 ## Step 2: Ensure Your AI Conversation Integration  is Ready
+
+....
+
+{% image "/images/screenshot_camera_ai_2.png", "Testing the Google Generative AI conversation agent", "x-small", "Screenshot 2: Testing the Google Generative AI conversation agent" %}
 
 ## Step 3: Set up Text-to-Speech (TTS)
 
