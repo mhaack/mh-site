@@ -7,7 +7,7 @@ tags:
   - camera
   - ai
 images:
-  feature: /images/cif-adobe-tech-blog.jpeg
+  feature: /images/camera_ai_banner.png
 date: 2025-05-04
 permalink: making-your-reolink-camera-talk/
 ---
