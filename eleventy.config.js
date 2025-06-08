@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
@@ -38,7 +37,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setDataDeepMerge(true);
 
   // setup plugins
-  eleventyConfig.addPlugin(pluginDirectoryOutput);
   eleventyConfig.addPlugin(pluginEmbedYouTube);
   eleventyConfig.addPlugin(pluginNavigation);
   // Simple reading time replacement filter
