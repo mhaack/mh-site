@@ -30,25 +30,15 @@ const {
   postCountForMonth,
   popularPosts,
   pageStats,
+  readingTime
 } = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setQuietMode(true);
   eleventyConfig.setDataDeepMerge(true);
 
   // setup plugins
   eleventyConfig.addPlugin(pluginEmbedYouTube);
   eleventyConfig.addPlugin(pluginNavigation);
-  // Simple reading time replacement filter
-  eleventyConfig.addFilter('readingTime', (content) => {
-    if (!content || typeof content !== 'string') {
-      return '1 min read';
-    }
-    const wordsPerMinute = 200;
-    const words = content.replace(/<[^>]*>/g, '').split(/\s+/).filter(word => word.length > 0).length;
-    const readingTime = Math.max(1, Math.ceil(words / wordsPerMinute));
-    return `${readingTime} min read`;
-  });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc, {
@@ -89,6 +79,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('postCountForMonth', postCountForMonth);
   eleventyConfig.addFilter('popularPosts', popularPosts);
   eleventyConfig.addFilter('pageStats', pageStats);
+  eleventyConfig.addFilter('readingTime', readingTime)
 
   // collections
   eleventyConfig.addCollection('tagList', getAllTags);

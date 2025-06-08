@@ -2161,13 +2161,6 @@ cssnano@latest:
   languageName: node
   linkType: hard
 
-eleventy-plugin-reading-time@latest:
-  version: 0.0.1
-  resolution: "eleventy-plugin-reading-time@npm:0.0.1"
-  checksum: 0b6e67eba234799bb043c8dba9eed265012c223cce5aaa0a72e704eb94864c5b533fa535ff231623da470e215864bf2cb10bb7913a3bc6cfc97f11f4c6df41e3
-  languageName: node
-  linkType: hard
-
 eleventy-plugin-youtube-embed@latest:
   version: 1.13.0
   resolution: "eleventy-plugin-youtube-embed@npm:1.13.0"
@@ -4170,7 +4163,6 @@ markdown-it-anchor@latest:
     "@tailwindcss/typography": latest
     cssnano: latest
     dotenv: latest
-    eleventy-plugin-reading-time: latest
     eleventy-plugin-youtube-embed: latest
     html-minifier-terser: ^7.2.0
     markdown-it: ^14.1.0
