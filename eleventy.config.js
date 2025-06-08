@@ -1,9 +1,7 @@
 require("dotenv").config();
 
-const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginNavigation = require('@11ty/eleventy-navigation');
-const pluginReadingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginWebc = require('@11ty/eleventy-plugin-webc');
@@ -32,17 +30,15 @@ const {
   postCountForMonth,
   popularPosts,
   pageStats,
+  readingTime
 } = require('./config/filters/index.js');
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setQuietMode(true);
   eleventyConfig.setDataDeepMerge(true);
 
   // setup plugins
-  eleventyConfig.addPlugin(pluginDirectoryOutput);
   eleventyConfig.addPlugin(pluginEmbedYouTube);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginReadingTime);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc, {
@@ -83,6 +79,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('postCountForMonth', postCountForMonth);
   eleventyConfig.addFilter('popularPosts', popularPosts);
   eleventyConfig.addFilter('pageStats', pageStats);
+  eleventyConfig.addFilter('readingTime', readingTime)
 
   // collections
   eleventyConfig.addCollection('tagList', getAllTags);

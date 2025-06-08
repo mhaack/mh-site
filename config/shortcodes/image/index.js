@@ -10,7 +10,7 @@ const image = async (src, alt, className, caption, sizes = '(min-width: 1024px) 
   const file = path.join('content', src);
   const metadata = await eleventyImage(file, {
     widths: [500, 900, 1500, 'auto'],
-    formats: [isProd ? 'avif' : 'auto', 'webp', 'jpeg'],
+    formats: [isProd ? 'webp' : 'auto', 'jpeg'],
     urlPath: '/assets/images/',
     outputDir: './dist/assets/images/',
     filenameFormat: function (id, src, width, format, options) {

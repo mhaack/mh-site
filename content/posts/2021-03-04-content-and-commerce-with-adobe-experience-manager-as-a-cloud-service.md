@@ -1,5 +1,6 @@
 ---
 title: Content and Commerce with Adobe Experience Manager as a Cloud Service
+description: I held a session on “Content and Commerce with Adobe Experience Manager” at the recent Adobe Developers Live. The recording for my talk is now up. If you couldn’t join the session, please watch and learn about how to get started with Commerce on Adobe Experience Manager as a Cloud Service.
 author: Markus
 date: 2021-03-04
 permalink: content-and-commerce/

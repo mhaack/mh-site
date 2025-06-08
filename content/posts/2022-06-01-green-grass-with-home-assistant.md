@@ -1,5 +1,6 @@
 ---
 title: Green grass with Home Assistant
+description: Automate your lawn sprinklers for effortless, intelligent watering using Home Assistant. This guide details how to connect your system to create smart schedules based on weather and soil conditions. Get a healthier, greener lawn while optimizing water usage.
 category: project
 tags:
  - esphome
@@ -9,9 +10,11 @@ tags:
  - watering
  - plants
  - smarthome
+seo:
+  description: Automate your lawn irrigation with Home Assistant for smart, efficient watering and a lush, green lawn.
 images:
- feature: /images/my-garden-watering-project.png
- height: null
+  feature: /images/my-garden-watering-project.png
+  height: null
 date: 2022-06-01
 ---
 

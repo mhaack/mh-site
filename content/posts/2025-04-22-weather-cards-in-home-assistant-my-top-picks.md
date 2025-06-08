@@ -1,5 +1,6 @@
 ---
 title: "Weather Cards in Home Assistant: My Top Picks"
+description: This Home Assistant guide compares popular weather cards including the built-in Weather Forecast Card and community alternatives like Clock Weather Card, Platinum Weather Card, and Simple Weather Card. The author provides setup instructions and recommendations for choosing between minimalist or feature-rich weather displays for your dashboard.
 category: project
 tags:
   - home-assistant

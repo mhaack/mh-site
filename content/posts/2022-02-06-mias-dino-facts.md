@@ -1,5 +1,6 @@
 ---
 title: Mia's Dino Facts
+description: Meet Mia, a 7-year-old dinosaur expert who got her own website to share fascinating dino facts with the world. Discover how a father built the perfect platform for his daughter's paleontology passion using modern web technologies.
 category: project
 tags:
  - website

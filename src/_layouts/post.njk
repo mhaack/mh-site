@@ -9,14 +9,14 @@ layout: default
       {% image images.feature, title, "object-cover w-full h-full" %}
     </figure>
     {%- endif %}
-    <h1 class="mx-8 py-2 border-b md:py-8 p-name">{{ title }}</h1>
+    <h1 class="mx-8 py-2 border-b border-gray-200 md:py-8 p-name">{{ title }}</h1>
     <div class="hidden">
         <a class="u-url" href="{{ site.url + page.url }}">{{ title }}</a>
         <p class="h-card p-author">
           <a class="p-name u-url" rel="author" href="{{ site.url }}">{{ site.author.name }}</a> <img class="u-photo" src="{{ site.url}}/assets/images/markus.jpeg" alt="Photo of Markus">
         </p>
     </div>
-    <div class="mx-8 py-4 border-b md:justify-between md:items-start md:flex md:flex-row">
+    <div class="mx-8 py-4 border-b border-gray-200 md:justify-between md:items-start md:flex md:flex-row">
       <div class="md:my-auto text-sm text-slate-700">
         <time class="dt-published" datetime="{{ date | htmlDateString }}">
           {{ date | readableDate }}
@@ -34,12 +34,12 @@ layout: default
       <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end p-category">{% include "partials/taglist.njk" %}</div>
     </div>
   </header>
-  <section class="mx-4 max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none e-content">
-    {{ layoutContent | safe }}
+  <section class="mx-4 max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none e-content">    
+    {{ content | safe }}
   </section>
   <copy-code></copy-code>
   <aside>
-    <nav class="border-t mx-8 my-8 pt-4 md:flex-row md:flex md:justify-between text-base">
+    <nav class="border-t border-gray-200 mx-8 my-8 pt-4 md:flex-row md:flex md:justify-between text-base">
       {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
       {% set nextPost = collections.posts | getNextCollectionItem(page) %}
       <div class="py-2 text-center sm:py-0">
