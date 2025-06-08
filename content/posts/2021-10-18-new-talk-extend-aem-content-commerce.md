@@ -1,5 +1,6 @@
 ---
 title: 'New Talk: Extend AEM Content & Commerce'
+description: Learn how to seamlessly integrate custom eCommerce solutions with Adobe Experience Manager using the Commerce Integration Framework and App Builder. This Adobe Developers Live talk reveals practical extensibility patterns and GraphQL integration techniques for building powerful commerce experiences.
 author: Markus
 date: 2021-10-18
 permalink: extend-aem-commerce/

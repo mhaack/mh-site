@@ -1,6 +1,7 @@
 ---
 title: 'New Talk: How to Build Content and Commerce Experiences Using App
  Builder and API Mesh'
+description: Watch how Adobe's App Builder and API Mesh can transform headless commerce development by seamlessly blending content management with e-commerce functionality. Discover the end-to-end process of building modern storefronts that combine AEM content with Commerce data in this recorded presentation.
 category: work
 tags:
  - adobe

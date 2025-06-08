@@ -3,7 +3,6 @@ require("dotenv").config();
 const pluginDirectoryOutput = require('@11ty/eleventy-plugin-directory-output');
 const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed');
 const pluginNavigation = require('@11ty/eleventy-navigation');
-const pluginReadingTime = require('eleventy-plugin-reading-time');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const pluginWebc = require('@11ty/eleventy-plugin-webc');
@@ -42,7 +41,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginDirectoryOutput);
   eleventyConfig.addPlugin(pluginEmbedYouTube);
   eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginReadingTime);
+  // Simple reading time replacement filter
+  eleventyConfig.addFilter('readingTime', (content) => {
+    if (!content || typeof content !== 'string') {
+      return '1 min read';
+    }
+    const wordsPerMinute = 200;
+    const words = content.replace(/<[^>]*>/g, '').split(/\s+/).filter(word => word.length > 0).length;
+    const readingTime = Math.max(1, Math.ceil(words / wordsPerMinute));
+    return `${readingTime} min read`;
+  });
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(pluginSyntaxHighlight);
   eleventyConfig.addPlugin(pluginWebc, {

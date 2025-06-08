@@ -1,5 +1,6 @@
 ---
 title: Website History
+description: In this post I will briefly describe my personal website’s history. It started in 1998. At this point, I have already gone through six iterations. I had already completely forgotten two of them.
 category: project
 tags:
  - eleventy

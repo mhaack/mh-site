@@ -1,5 +1,6 @@
 ---
 title: "AEM's Headless Extension for Adobe Commerce PWA Studio"
+description: Together with my colleague Mark J. Becker I wrote an introduction and instructions on how to use AEM Content Fragments together with the Adobe Commerce (aka. Magento) PWA.
 author: Markus
 date: 2021-06-30
 permalink: medium-aem-headless/
