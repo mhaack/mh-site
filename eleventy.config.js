@@ -3,22 +3,10 @@ dotenv.config();
 
 import path from "node:path";
 
-import {getAllPosts, tagList} from './src/_config/collections.js';
+import { getAllPosts, tagList } from './src/_config/collections.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
-
-
-
-
-
-
-
-
-
-// // module import shortcodes
-// const { currentYear, image, opengraphSource } = require('./src/_config/shortcodes/index.js');
-
 
 export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
@@ -65,12 +53,8 @@ export default async function (eleventyConfig) {
     },
   });
 
-  // setup css bundle
-  //eleventyConfig.addBundle('css', {hoist: true});
-
   // setup markdown library
   eleventyConfig.setLibrary('md', plugins.markdownLib);
-  
 
   // setup filters
   eleventyConfig.addFilter('toIsoString', filters.toISOString);
@@ -87,14 +71,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('pageStats', filters.pageStats);
   eleventyConfig.addFilter('currentPage', filters.currentPage);
 
-
-  // eleventyConfig.addFilter('markdownFormat', filters.markdownFormat);
-  // eleventyConfig.addFilter('splitlines', filters.splitlines);
- // eleventyConfig.addFilter('alphabetic', filters.sortAlphabetically);
-  // eleventyConfig.addFilter('slugify', filters.slugifyString);
-
   // setup shortcodes
-  // eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);
   eleventyConfig.addShortcode('image', shortcodes.imageShortcode);
   eleventyConfig.addShortcode('ogImageUrl', shortcodes.ogImageUrl);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
@@ -110,20 +87,6 @@ export default async function (eleventyConfig) {
     'src/_includes/components/*.js': 'assets/js/',
     '_config/_redirects': '_redirects'
   });
-
-
-
-  // // copy static assets
-  // eleventyConfig.addPassthroughCopy({
-  //   'content/images': 'assets/images',
-  // });
-  
-
-  // // short codes
-  // eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
-  
-
-  
 
   // general config
   return {
