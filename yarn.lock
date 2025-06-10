@@ -903,6 +903,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@toycode/markdown-it-class@npm:^1.2.4":
+  version: 1.2.4
+  resolution: "@toycode/markdown-it-class@npm:1.2.4"
+  checksum: 5866874971982c97f8b4f7668dcc9b593c8813eb001fef64f5bbbb372cb5355a1a3257c895de10d8bfe6a12db7f95c49e1af8d0d8576197fc36a13a632a4f821
+  languageName: node
+  linkType: hard
+
 "@trysound/sax@npm:0.2.0":
   version: 0.2.0
   resolution: "@trysound/sax@npm:0.2.0"
@@ -4018,6 +4025,13 @@ eleventy-plugin-youtube-embed@latest:
   languageName: node
   linkType: hard
 
+"markdown-it-abbr@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "markdown-it-abbr@npm:2.0.0"
+  checksum: 13405f1485f0c2bf1c31bf719e9ee6d4f4dd45804d4bb958d147c02f024a89a03e822abd8f27acddea89d458b6a96ff076fd51b8ff169e5eabba3668e11ddd33
+  languageName: node
+  linkType: hard
+
 markdown-it-anchor@latest:
   version: 9.2.0
   resolution: "markdown-it-anchor@npm:9.2.0"
@@ -4025,6 +4039,15 @@ markdown-it-anchor@latest:
     "@types/markdown-it": "*"
     markdown-it: "*"
   checksum: 63f9ab99332d90fc09f8cede359f4c7f1c8d9765a0cd4d006538a072a9b5c9069e4e962c246ad7bc7a87a3ebb7e655e9f22f60e696ad855bdb51b7bfbae65c33
+  languageName: node
+  linkType: hard
+
+"markdown-it-attrs@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "markdown-it-attrs@npm:4.3.1"
+  peerDependencies:
+    markdown-it: ">= 9.0.0"
+  checksum: 907458ef50372c3a557f883e961ba05a126c6d08878d7e6551a80e4ea19eb2589f486d7d702a771ad4746599ff00ec3cab5416b99ebc93a07e4e4c64237420ec
   languageName: node
   linkType: hard
 
@@ -4039,6 +4062,15 @@ markdown-it-anchor@latest:
   version: 4.0.1
   resolution: "markdown-it-link-attributes@npm:4.0.1"
   checksum: e859b0a3653998b7acddaf5e37052a00e940150d76b0275322e133a14179979c3516692610df75553f3b2e5d4010e1e5138f10bc85efab4768b9293a5b39f0a6
+  languageName: node
+  linkType: hard
+
+"markdown-it-prism@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "markdown-it-prism@npm:3.0.0"
+  dependencies:
+    prismjs: 1.30.0
+  checksum: 80889fffc2e8af2797bedd2407f74b0771bd7d6f4f436ff3554a0f22b3422025e9730275de7f49713d7aa3895fb5d3c1871d6bc273a99f0a9994bd93bf722e5e
   languageName: node
   linkType: hard
 
@@ -4161,14 +4193,18 @@ markdown-it-anchor@latest:
     "@netlify/plugin-lighthouse": ^6.0.0
     "@tailwindcss/postcss": latest
     "@tailwindcss/typography": latest
+    "@toycode/markdown-it-class": ^1.2.4
     cssnano: latest
     dotenv: latest
     eleventy-plugin-youtube-embed: latest
     html-minifier-terser: ^7.2.0
     markdown-it: ^14.1.0
+    markdown-it-abbr: ^2.0.0
     markdown-it-anchor: latest
+    markdown-it-attrs: ^4.3.1
     markdown-it-emoji: ^3.0.0
     markdown-it-link-attributes: ^4.0.1
+    markdown-it-prism: ^3.0.0
     netlify-plugin-cache: ^1.0.3
     npm-run-all: ^4.1.5
     postcss: latest
@@ -5404,7 +5440,7 @@ prettier@latest:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.30.0":
+"prismjs@npm:1.30.0, prismjs@npm:^1.30.0":
   version: 1.30.0
   resolution: "prismjs@npm:1.30.0"
   checksum: a68eddd4c5f1c506badb5434b0b28a7cc2479ed1df91bc4218e6833c7971ef40c50ec481ea49749ac964256acb78d8b66a6bd11554938e8998e46c18b5f9a580

@@ -16,7 +16,7 @@ eleventyExcludeFromCollections: true
   </div>
   <div class="basis-3/4 mx-4 mt-32">
     <span class="ml-2 text-xl text-blue-dianne-600">
-      <time datetime="{{ post.date | htmlDateString }}">
+      <time datetime="{{ post.date | toIsoString }}">
         {{ post.date | readableDate }}
       </time>
     </span>

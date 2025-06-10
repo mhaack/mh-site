@@ -1,105 +1,168 @@
-require("dotenv").config();
+import dotenv from 'dotenv';
+dotenv.config();
 
-const pluginEmbedYouTube = require('eleventy-plugin-youtube-embed');
-const pluginNavigation = require('@11ty/eleventy-navigation');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const pluginWebc = require('@11ty/eleventy-plugin-webc');
-const { EleventyRenderPlugin, EleventyHtmlBasePlugin } = require('@11ty/eleventy');
+import {getAllPosts, tagList} from './src/_config/collections.js';
+import filters from './src/_config/filters.js';
+import plugins from './src/_config/plugins.js';
+import shortcodes from './src/_config/shortcodes.js';
 
-// markdown config
-const markdownLib = require('./config/plugins/markdown.js');
 
-// module import shortcodes
-const { currentYear, image, opengraphSource } = require('./config/shortcodes/index.js');
 
-// module import collections
-const { getAllTags } = require('./config/collections/index.js');
 
-// module import filters
-const {
-  collectionCategory,
-  collectionHead,
-  currentPage,
-  htmlDate,
-  pageTags,
-  postExcerpt,
-  readableDate,
-  year,
-  postCountForYear,
-  postCountForMonth,
-  popularPosts,
-  pageStats,
-  readingTime
-} = require('./config/filters/index.js');
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.setDataDeepMerge(true);
+
+
+
+
+// // module import shortcodes
+// const { currentYear, image, opengraphSource } = require('./src/_config/shortcodes/index.js');
+
+
+export default async function (eleventyConfig) {
+  eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
+  eleventyConfig.addWatchTarget('./src/_includes/**/*.{webc}');
+
+  // layout aliases
+  eleventyConfig.addLayoutAlias('base', 'base.njk');
+  eleventyConfig.addLayoutAlias('page', 'page.njk');
+  eleventyConfig.addLayoutAlias('post', 'post.njk');
+  eleventyConfig.addLayoutAlias('tags', 'tags.njk');
+
+  // setup collections
+  eleventyConfig.addCollection('allPosts', getAllPosts);
+  eleventyConfig.addCollection('tagList', tagList);
 
   // setup plugins
-  eleventyConfig.addPlugin(pluginEmbedYouTube);
-  eleventyConfig.addPlugin(pluginNavigation);
-  eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(pluginSyntaxHighlight);
-  eleventyConfig.addPlugin(pluginWebc, {
-    components: 'src/_includes/components/*.webc',
-    useTransform: true,
-  });
-  eleventyConfig.addPlugin(EleventyRenderPlugin);
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  // eleventyConfig.addPlugin(plugins.htmlConfig);
+  // eleventyConfig.addPlugin(plugins.cssConfig);
+  // eleventyConfig.addPlugin(plugins.jsConfig);
+  // eleventyConfig.addPlugin(plugins.drafts);
+  eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
+  eleventyConfig.addPlugin(plugins.rss);
+  eleventyConfig.addPlugin(plugins.syntaxHighlight);
+  eleventyConfig.addPlugin(plugins.pluginNavigation);
+  eleventyConfig.addPlugin(plugins.pluginYouTube);
 
-  // copy static assets
+  eleventyConfig.addPlugin(plugins.webc, {
+    components: ['./src/_includes/components/*.webc'],
+    useTransform: true
+  });
+
+  eleventyConfig.addPlugin(plugins.eleventyImageTransformPlugin, {
+    formats: ['webp', 'jpeg'],
+    widths: ['auto'],
+    htmlOptions: {
+      imgAttributes: {
+        loading: 'lazy',
+        decoding: 'async',
+        sizes: 'auto'
+      },
+      pictureAttributes: {}
+    },
+  });
+
+  // setup css bundle
+  //eleventyConfig.addBundle('css', {hoist: true});
+
+  // setup markdown library
+  eleventyConfig.setLibrary('md', plugins.markdownLib);
+  
+
+  // setup filters
+  eleventyConfig.addFilter('toIsoString', filters.toISOString);
+  eleventyConfig.addFilter('formatDate', filters.formatDate);
+  eleventyConfig.addFilter('readableDate', filters.readableDate);
+  eleventyConfig.addFilter('year', filters.year);
+  eleventyConfig.addFilter('head', filters.head);
+  eleventyConfig.addFilter('category', filters.category);
+  eleventyConfig.addFilter('pageTags', filters.pageTags);
+  eleventyConfig.addFilter('postCountForYear', filters.postCountForYear);
+  eleventyConfig.addFilter('postCountForMonth', filters.postCountForMonth);
+  eleventyConfig.addFilter('readingTime', filters.readingTime);
+  eleventyConfig.addFilter('popularPosts', filters.popularPosts);
+  eleventyConfig.addFilter('pageStats', filters.pageStats);
+  eleventyConfig.addFilter('currentPage', filters.currentPage);
+
+
+  // eleventyConfig.addFilter('markdownFormat', filters.markdownFormat);
+  // eleventyConfig.addFilter('splitlines', filters.splitlines);
+ // eleventyConfig.addFilter('alphabetic', filters.sortAlphabetically);
+  // eleventyConfig.addFilter('slugify', filters.slugifyString);
+
+  // setup shortcodes
+  // eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);
+  eleventyConfig.addShortcode('image', shortcodes.imageShortcode);
+  eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+
+
+ // --------------------- Passthrough File Copy
+
+  // -- same path
+  ['src/assets/fonts/', 'src/assets/icons/', 'admin'].forEach(path =>
+    eleventyConfig.addPassthroughCopy(path)
+  );
+
   eleventyConfig.addPassthroughCopy({
-    'content/images': 'assets/images',
-    'src/_assets': 'assets',
-    'src/_includes/components/*.js': 'assets/js/',
     'node_modules/speedlify-score/speedlify-score.js': 'assets/js/speedlify-score.js',
     'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js',
-    'config/_redirects': '_redirects',
+    'src/_includes/components/*.js': 'assets/js/',
+    '_config/_redirects': '_redirects'
   });
-  eleventyConfig.addPassthroughCopy('admin');
-  eleventyConfig.addWatchTarget('./src/_css/');
-  eleventyConfig.addWatchTarget('config');
 
-  // short codes
-  eleventyConfig.addShortcode('currentYear', currentYear);
-  eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
-  eleventyConfig.addShortcode('image', image);
 
-  // filters
-  eleventyConfig.addFilter('excerpt', postExcerpt);
-  eleventyConfig.addFilter('readableDate', readableDate);
-  eleventyConfig.addFilter('htmlDateString', htmlDate);
-  eleventyConfig.addFilter('head', collectionHead);
-  eleventyConfig.addFilter('category', collectionCategory);
-  eleventyConfig.addFilter('pageTags', pageTags);
-  eleventyConfig.addFilter('currentPage', currentPage);
-  eleventyConfig.addFilter('year', year);
-  eleventyConfig.addFilter('postCountForYear', postCountForYear);
-  eleventyConfig.addFilter('postCountForMonth', postCountForMonth);
-  eleventyConfig.addFilter('popularPosts', popularPosts);
-  eleventyConfig.addFilter('pageStats', pageStats);
-  eleventyConfig.addFilter('readingTime', readingTime)
 
-  // collections
-  eleventyConfig.addCollection('tagList', getAllTags);
+  // // copy static assets
+  // eleventyConfig.addPassthroughCopy({
+  //   'content/images': 'assets/images',
+  // });
   
-  // transforms
-  eleventyConfig.addPlugin(require('./config/transforms/compress-html.js'));
 
-  // markdown config
-  eleventyConfig.setLibrary('md', markdownLib);
+  // // short codes
+  // eleventyConfig.addShortcode('currentYear', currentYear);
+  // eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
+  
 
+  // // filters
+  // eleventyConfig.addFilter('excerpt', postExcerpt);
+  
+  
+  
+  
+  
+  
+  
+
+
+
+  
+  // // transforms
+  // eleventyConfig.addPlugin(require('./config/transforms/compress-html.js'));
+
+  // // markdown config
+  // eleventyConfig.setLibrary('md', markdownLib);
+
+  // return {
+  //   dir: {
+  //     input: 'content',
+  //     output: 'dist',
+  //     includes: '../src/_includes',
+  //     layouts: '../src/_layouts',
+  //     data: '../src/_data',
+  //   },
+  //   markdownTemplateEngine: 'njk',
+  //   htmlTemplateEngine: 'njk',
+  //   templateFormats: ['md', 'njk', 'html'],
+  // };
+
+  // general config
   return {
-    dir: {
-      input: 'content',
-      output: 'dist',
-      includes: '../src/_includes',
-      layouts: '../src/_layouts',
-      data: '../src/_data',
-    },
     markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
-    templateFormats: ['md', 'njk', 'html'],
+
+    dir: {
+      output: 'dist',
+      input: 'src',
+      includes: '_includes',
+      layouts: '_layouts'
+    }
   };
 };
