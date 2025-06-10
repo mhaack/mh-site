@@ -45,7 +45,7 @@ The aquarium pump can be mounted anywhere. It fixes it directly to the water bot
 
 The pump, in my case, requires 6 volts. I had this old power supply that can deliver 5 volts, enough to run the pump for a few seconds. The wires from the pump are connected to the plug at the end of the power supply cable and fixed with some tape. Pay attention to the correct polarity. Ok not very professional but it works, and it is low voltage only so it will not burn down our house.
 
-{% image "/assets/images/2021-08-17-mini-plant-watering-project/8bce2361-f2e5-4962-b38e-b13568460be3.jpeg", "Sonoff S20", "x-small" %}
+![Sonoff S20](/assets/images/2021-08-17-mini-plant-watering-project/8bce2361-f2e5-4962-b38e-b13568460be3.jpeg){class="x-small"}
 
 The last step is to connect the power supply with some smart socket which can be controlled by Home Assistant. I use a [Sonoff S20](https://sonoff.tech/) which I have left from another project. It is already flashed with [Tasmota](https://tasmota.github.io/docs/) firmware which works perfectly with Home Assistant. I just had to rename the device. Other controllable socket outlets like a Shelly Plug S will work as well. The socket should be connected to you Wifi network, if not already done before.
 
@@ -61,13 +61,13 @@ Doing this with Home Assistant is simple and fun, plus you get the user interfac
 
 The first step in HA is to add the controllable socket via the Home Assistant integration page. Depending on the device it might be already automatically discovered by Home Assistant. Since I reuse a Sonoff S20 I had used before I just did some double check.
 
-{% image "/assets/images/2021-08-17-mini-plant-watering-project/screenshot_2021-08-17_at_16.27.05.png", "Sonoff Tasmota integration", "small" %}
+![Sonoff Tasmota integration](/assets/images/2021-08-17-mini-plant-watering-project/screenshot_2021-08-17_at_16.27.05.png){class="small"}
 
 This is the Sonoff device for other integrations this should look similar.
 
 In a second step I created a simple automatic rule to switch on and off the pump. The automation was created entirely in Home Assistant UI.
 
-{% image "/assets/images/2021-08-17-mini-plant-watering-project/screenshot_2021-08-17_at_17.02.45.png", "Pump automation", "small" %}
+![Pump automation](/assets/images/2021-08-17-mini-plant-watering-project/screenshot_2021-08-17_at_17.02.45.png){class="small"}
 
 It is super simple: it runs a a fixed time, not every day, switch on the Sonoff socket to enable the pump, wait 5 seconds and switch off the pump again. The wait time must be adjusted to the amount of water needed by your plants.
 

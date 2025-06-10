@@ -30,7 +30,7 @@ Other main gear we use:
 
 The entire system looks like this:
 
-{% image "/assets/images/2020-01-14-jama-villa/setup.png", "The setup" %}
+![The setup](/assets/images/2020-01-14-jama-villa/setup.png)
 
 ## Dashboards
 
@@ -38,19 +38,19 @@ A small selection of Lovelace views. We use Lovelace in Yaml mode, the main Love
 
 #### Main info view
 
-{% image "/assets/images/2020-01-14-jama-villa/dashboard-main.png", "Main Lovelace Dashboard", "large" %}
+![Main Lovelace Dashboard](/assets/images/2020-01-14-jama-villa/dashboard-main.png){class="large"}
 
 #### House view
 
-{% image "/assets/images/2020-01-14-jama-villa/dashboard-house.png", "House Dashboard", "large" %}
+![House Dashboard](/assets/images/2020-01-14-jama-villa/dashboard-house.png){class="large"}
 
 #### Garden view
 
-{% image "/assets/images/2020-01-14-jama-villa/dashboard-garden.png", "Garden Dashboard", "large" %}
+![Garden Dashboard](/assets/images/2020-01-14-jama-villa/dashboard-garden.png){class="large"}
 
 #### System view
 
-{% image "/assets/images/2020-01-14-jama-villa/dashboard-system.png", "System Dashboard", "large" %}
+![System Dashboard](/assets/images/2020-01-14-jama-villa/dashboard-system.png){class="large"}
 
 ## Integrations
 

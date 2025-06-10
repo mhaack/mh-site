@@ -44,7 +44,7 @@ First things first, Home Assistant needs a way to talk to Google's AI. There's a
 4. It will ask for your API key. You'll need to get one from Google AI Studio (it's free for basic use). Just follow the link provided in the integration setup or search for "Google AI Studio API key". It's pretty quick to generate.
 5. Paste your API key into the configuration and submit.
 
-{% image "/assets/images/screenshot_camera_ai_1.png", "Google Generative AI Conversation", "small", "Screenshot 1: Google Generative AI Conversation integration" %}
+![Google Generative AI Conversation](/assets/images/screenshot_camera_ai_1.png 'Screenshot 1: Google Generative AI Conversation integration'){class="small"}
 
 Once added, you'll have a new service available in Home Assistant:
 `google_generative_ai_conversation. generate_content`. This is what we'll use in the automation.
@@ -53,7 +53,7 @@ Once added, you'll have a new service available in Home Assistant:
 
 You can test the AI conversation agent via the Developer Tool > Actions page.
 
-{% image "/assets/images/screenshot_camera_ai_2.png", "Testing the Google Generative AI conversation agent", "small", "Screenshot 2: Testing the Google Generative AI conversation agent" %}
+![Testing the Google Generative AI conversation agent](/assets/images/screenshot_camera_ai_2.png 'Screenshot 2: Testing the Google Generative AI conversation agent'){class="small"}
 
 Search the *Google Generative AI: Generate content* integration as shown in the screenshot and fill in the form with some test questions. Then click *Perform Action*.
 
@@ -65,7 +65,7 @@ Make sure you have a TTS integration set up and a media_player entity ready to
 
 Similar like above, you can test it via the Developer Tool > Actions page.
 
-{% image "/assets/images/screenshot_camera_ai_3.png", "Testing the Text-to-speech", "small", "Screenshot 3: Testing the Text-to-speech" %}
+![Testing the Text-to-speech](/assets/images/screenshot_camera_ai_3.png 'Screenshot 3: Testing the Text-to-speech'){class="small"}
 
 Locate *Text-to-speech (TTS): Speak* like in the screenshot and fill out the form. You can also select your preferred language and voice.
 
@@ -89,7 +89,7 @@ Now for the fun part: putting it all together in an automation. We'll mostly use
 * The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like `binary_sensor.YOUR_CAMERA_NAME_motion`).
 * The Type should be motion (see YAML below). This should be set automatically when using the visual editor.
 
-{% image "/assets/images/screenshot_camera_ai_4.png", "Camera triggering the action", "small", "Screenshot 4: Camera triggering the action" %}
+![Camera triggering the action](/assets/images/screenshot_camera_ai_4.png 'Screenshot 4: Camera triggering the action'){class="small"}
 
 ### Conditions
 
@@ -129,9 +129,11 @@ If you are taking multiple snapshots from your camera, make sure you add all the
 **Action 4: Speak the Result**
 
 * Click *+ Add Action* again.
-* Browse to your TTS service and select it. If you're using Home Assistant Cloud, it's `tts.home_assistant_cloud'.
+* Browse to your TTS service and select it. If you're using Home Assistant Cloud, it's `tts.home_assistant_cloud`.
 * For Target, select the media_player entity (your speaker) where you want to play the message.
+{% raw %}
 * In the message file, enter or copy the following template `{{ response.text }}`.
+{% endraw %}
   This will cause Home Assistant to switch to the YAML-based editor, as templates are not supported in the visual editor.
   Your YAML should have at least three configurations: the speaker entity, the text-to-speech action and the message with the template.
 
@@ -141,7 +143,7 @@ If you are taking multiple snapshots from your camera, make sure you add all the
 
 If set up correctly the automation steps should look like this:
 
-{% image "/assets/images/screenshot_camera_ai_5.png", "Automation action flow", "small", "Screenshot 5: Action flow of the automation" %}
+![Automation action flow](/assets/images/screenshot_camera_ai_5.png 'Screenshot 5: Action flow of the automation'){class="small"}
 
 ## The Complete YAML
 

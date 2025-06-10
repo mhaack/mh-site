@@ -44,7 +44,7 @@ After some market research, we decided to proceed with a commercial product and 
 
 To distribute water to the sprinklers and for watering plants, 3/4-inch pipes are used. For the plants we already had a [Gardena drip system](https://www.gardena.com/int/products/watering/micro-drip/) installed. But we had to control this manually and always connect a garden hose. That is now a thing of the past. The drip system could be connected without any problems to the solenoid valves. The hedge is easily hydrated via some drip hose, which is connected to its own solenoid valve as well.
 
-{% image "/assets/images/hunterhydrawise.jpg", "Hunter Hydrawise", "small", "Hunter Hydrawise controller in our garden house"%}
+![Hunter Hydrawise](/assets/images/hunterhydrawise.jpg 'Hunter Hydrawise controller in our garden house'){class="small"}
 
 The Hydrawise Pro-HC 6 can handle 6 independent zones, so there is some reserve capacity for later. The same controller is also available with 12 or 24 valve stations. We also connected a rain sensor to automatically suspend the irrigation as soon as the moisture limit is reached.
 
@@ -107,7 +107,7 @@ action:
 
 I also created a handy dashboard in Home Assistant which shows me the running irrigation program and the next scheduled watering times. Additionally, it shows how much water we have in our tank and how the pump is performing.
 
-{% image "/assets/images/watering-dashboard.png", "Watering Dashboard Home Assistant", "x-small", "Garden watering dashboard in Home Assistant"%}
+![Watering Dashboard Home Assistant](/assets/images/watering-dashboard.png 'Garden watering dashboard in Home Assistant'){class="x-small"}
 
 ## (free) re-fill
 
@@ -163,7 +163,7 @@ Automation appears to be more complicated than it actually is. If we run below 2
 
 My automation does not consider weather or rain forecasts. With the low flow rate of our outside faucet we get ~1.400 litre of water filled into the tank within one hour. There is enough capacity left if it starts raining a little later.
 
-{% image "/assets/images/sprinkler.jpg", "Some sprinkler", "small" %}
+![Some sprinkler](/assets/images/sprinkler.jpg){class="small"}
 
 ## Summary
 

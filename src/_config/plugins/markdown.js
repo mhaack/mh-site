@@ -1,46 +1,10 @@
-// const markdownIt = require('markdown-it');
-// const markdownItAnchor = require('markdown-it-anchor');
-// const markdownItEmoji = require('markdown-it-emoji/dist/markdown-it-emoji.js');
-// const markdownItLinkAttributes = require('markdown-it-link-attributes');
-
-// let markdownLib = markdownIt({
-//   html: true,
-//   breaks: true,
-//   linkify: true,
-//   typographer: true,
-// })
-//   .use(markdownItLinkAttributes, [
-//     {
-//       // match external links
-//       matcher(href) {
-//         return href.match(/^https?:\/\//) && !href.includes('markus-haack.') && !href.includes('dino-fakten.');
-//       },
-//       attrs: {
-//         target: '_blank',
-//         rel: 'noopener noreferrer',
-//       },
-//     },
-//   ])
-//   .use(markdownItAnchor, {
-//     level: [2, 3],
-//     permalink: markdownItAnchor.permalink.linkAfterHeader({
-//       style: 'aria-labelledby',
-//       class: 'heading-anchor',
-//     }),
-//   })
-//   .use(markdownItEmoji);
-
-// module.exports = markdownLib;
-
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
 import markdownItPrism from 'markdown-it-prism';
 import markdownItAnchor from 'markdown-it-anchor';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
-import {full as markdownItEmoji} from 'markdown-it-emoji';
-// import markdownItFootnote from 'markdown-it-footnote';
-// import markdownitMark from 'markdown-it-mark';
+import { full as markdownItEmoji } from 'markdown-it-emoji';
 import markdownitAbbr from 'markdown-it-abbr';
 
 export const markdownLib = markdownIt({
@@ -56,25 +20,25 @@ export const markdownLib = markdownIt({
   })
   .use(markdownItAnchor, {
     tabIndex: false,
-    permalink: markdownItAnchor.permalink.headerLink({
-      class: 'heading-anchor'
-    })
+    level: [2, 3],
+    permalink: markdownItAnchor.permalink.linkAfterHeader({
+      style: 'aria-labelledby',
+      class: 'heading-anchor',
+    }),
   })
   .use(markdownItClass, {})
   .use(markdownItLinkAttributes, [
     {
-      // match external links
       matcher(href) {
-        return href.match(/^https?:\/\//);
+        return href.match(/^https?:\/\//) && !href.includes('markus-haack.');
       },
       attrs: {
-        rel: 'noopener'
-      }
+        target: '_blank',
+        rel: 'noopener noreferrer',
+      },
     }
   ])
   .use(markdownItEmoji)
-  //.use(markdownItFootnote)
-  //.use(markdownitMark)
   .use(markdownitAbbr)
   .use(md => {
     md.renderer.rules.image = (tokens, idx) => {
@@ -83,7 +47,6 @@ export const markdownLib = markdownIt({
       const alt = token.content || '';
       const caption = token.attrGet('title');
 
-      // Collect attributes
       const attributes = token.attrs || [];
       const hasEleventyWidths = attributes.some(([key]) => key === 'eleventy:widths');
       if (!hasEleventyWidths) {

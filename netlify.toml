@@ -17,10 +17,11 @@ package = "netlify-plugin-cache"
 [[headers]]
   for = "/*"  
   [headers.values]
+    Content-Security-Policy = "upgrade-insecure-requests;"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Referrer-Policy= "no-referrer-when-downgrade"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
   from = "/assets/js/script.js"

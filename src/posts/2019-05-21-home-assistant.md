@@ -32,7 +32,7 @@ Many of Home Assistant users run the system and bigger machines like Intel NUC m
 
 My current setup looks like the following:
 
-{% image "/assets/images/2019-05-21-home-assistant/setup.png", "This is our setup" %}
+![This is our setup](/assets/images/2019-05-21-home-assistant/setup.png)
 
 Moving over my environment from OpenHab to Home Assistant did not take that long, maybe 7 or 8 evenings and most of the integrations, devices and automations/rules were working. I decided to configure everything file based, also did that in the past. That allows me to keep the entire config in Git, track changes easily and restore the entire system in case something breaks. Following the Home Assistant community best practices I also share my config on GitHub.
 

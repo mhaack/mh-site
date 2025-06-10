@@ -24,7 +24,7 @@ This is where Home Assistant comes into play, as it can close these gaps.
 
 The only out-of-the-box way to quickly change the recording or push notification settings of multiple cameras at once is to use shortcuts within the Reolink app:
 
-{% image "/assets/images/reolink-app.png", "Screenshot Reolink iOS App", "x-small", "Scenes in the Reolink iOS App" %}
+![Screenshot Reolink iOS App](/assets/images/reolink-app.png 'Scenes in the Reolink iOS App'){class="x-small"}
 
 At least in the Reolink iOS app, this feature is somewhat hidden and not immediately obvious. In the camera view, you normally only see the cameras. However, if you drag the whole view down a bit, you can see 3 badges. These are assigned shortcuts that can also be customised. You can toggle recording on and off, and enable or disable push or email alerts for each camera. You can also turn on the alarm sound.
 
@@ -48,7 +48,7 @@ In our case the notifications will follow this patten:
 
 To enable / disable the notifications as needed I use two automations in Home Assistant. The first on is triggered at sunset to enable the push notification settings of all the cameras:
 
-{% image "/assets/images/ha-activate-reolink-notifications-sunset.png", "Screenshot Home Assistant Automation", "small" %}
+![Screenshot Home Assistant Automation](/assets/images/ha-activate-reolink-notifications-sunset.png){class="small"}
 
 In YAML this looks like (simplified version):
 
@@ -73,7 +73,7 @@ mode: single
 
 The second time-based automation is triggered at sunrise in the morning to switch the notifications back on. This only runs when we are at home, as we do not want the push notifications to be turned off when we are away. The carport camera notifications are only disabled at weekends.
 
-{% image "/assets/images/ha-de-activate-reolink-notifications-sunrise.png", "Screenshot Home Assistant Automation", "small" %}
+![Screenshot Home Assistant Automation](/assets/images/ha-de-activate-reolink-notifications-sunrise.png){class="small"}
 
 In YAML this looks like: 
 
@@ -118,7 +118,7 @@ One is triggered when we have all left the house and the other is triggered when
 
 Activating the camera notifications when nobody is at home:
 
-{% image "/assets/images/ha-activate-reolink-notifications-geofence.png", "Screenshot Home Assistant Automation", "small" %}
+![Screenshot Home Assistant Automation](/assets/images/ha-activate-reolink-notifications-geofence.png){class="small"}
 
 The YAML version:
 
@@ -145,7 +145,7 @@ mode: single
 
 Disabling push notifications follows a similar pattern. There's an extra check because when we come home late at night, we want the cameras to stay on and we don't want the notification to be disabled. So this automation only runs before sunset and after sunrise to be in sync with the time-based rules described above.
 
-{% image "/assets/images/ha-de-activate-reolink-notifications-geofence.png", "Screenshot Home Assistant Automation", "small" %}
+![Screenshot Home Assistant Automation](/assets/images/ha-de-activate-reolink-notifications-geofence.png){class="small"}
 
 The script version of this automation looks like this:
 

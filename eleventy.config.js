@@ -1,6 +1,8 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+import path from "node:path";
+
 import {getAllPosts, tagList} from './src/_config/collections.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
@@ -33,13 +35,10 @@ export default async function (eleventyConfig) {
   eleventyConfig.addCollection('tagList', tagList);
 
   // setup plugins
-  // eleventyConfig.addPlugin(plugins.htmlConfig);
-  // eleventyConfig.addPlugin(plugins.cssConfig);
-  // eleventyConfig.addPlugin(plugins.jsConfig);
-  // eleventyConfig.addPlugin(plugins.drafts);
+  eleventyConfig.addPlugin(plugins.htmlConfig);
   eleventyConfig.addPlugin(plugins.EleventyRenderPlugin);
-  eleventyConfig.addPlugin(plugins.rss);
-  eleventyConfig.addPlugin(plugins.syntaxHighlight);
+  eleventyConfig.addPlugin(plugins.pluginRSS);
+  eleventyConfig.addPlugin(plugins.pluginSyntaxHighlight);
   eleventyConfig.addPlugin(plugins.pluginNavigation);
   eleventyConfig.addPlugin(plugins.pluginYouTube);
 
@@ -58,6 +57,11 @@ export default async function (eleventyConfig) {
         sizes: 'auto'
       },
       pictureAttributes: {}
+    },
+    filenameFormat: function (id, src, width, format, options) {
+      const extension = path.extname(src);
+      const name = path.basename(src, extension);
+      return `${name}-${width}w.${format}`;
     },
   });
 
@@ -92,12 +96,10 @@ export default async function (eleventyConfig) {
   // setup shortcodes
   // eleventyConfig.addShortcode('svg', shortcodes.svgShortcode);
   eleventyConfig.addShortcode('image', shortcodes.imageShortcode);
+  eleventyConfig.addShortcode('ogImageUrl', shortcodes.ogImageUrl);
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
 
- // --------------------- Passthrough File Copy
-
-  // -- same path
   ['src/assets/fonts/', 'src/assets/icons/', 'admin'].forEach(path =>
     eleventyConfig.addPassthroughCopy(path)
   );
@@ -118,41 +120,10 @@ export default async function (eleventyConfig) {
   
 
   // // short codes
-  // eleventyConfig.addShortcode('currentYear', currentYear);
   // eleventyConfig.addShortcode('opengraphImageSrc', opengraphSource);
   
 
-  // // filters
-  // eleventyConfig.addFilter('excerpt', postExcerpt);
   
-  
-  
-  
-  
-  
-  
-
-
-
-  
-  // // transforms
-  // eleventyConfig.addPlugin(require('./config/transforms/compress-html.js'));
-
-  // // markdown config
-  // eleventyConfig.setLibrary('md', markdownLib);
-
-  // return {
-  //   dir: {
-  //     input: 'content',
-  //     output: 'dist',
-  //     includes: '../src/_includes',
-  //     layouts: '../src/_layouts',
-  //     data: '../src/_data',
-  //   },
-  //   markdownTemplateEngine: 'njk',
-  //   htmlTemplateEngine: 'njk',
-  //   templateFormats: ['md', 'njk', 'html'],
-  // };
 
   // general config
   return {

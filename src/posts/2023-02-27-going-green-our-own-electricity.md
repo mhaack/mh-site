@@ -24,15 +24,15 @@ Disclaimer: the numbers below are actual numbers from our installation. There wi
 
 The initial estimates of electricity yield from the sales offers were all around 9 MWh per year. Of course, I knew that they were all overestimated, people wanted to sell us a photovoltaic system.
 
-{% image "/assets/images/screenshot-angebot.png", "Screenshot offer", "x-small" %}
+![Screenshot offer](/assets/images/screenshot-angebot.png){class="x-small"}
 
 I now have real data from 2.5 years. First overall I am very satisfied with the energy production of our installation.
 
-{% image "/assets/images/screenshot-energy-2020-2023-year.png", "Screenshot SolarEdge panel monitoring", "x-small", "Energy production 2020 - 2023 - yearly summery" %}
+![Screenshot SolarEdge panel monitoring](/assets/images/screenshot-energy-2020-2023-year.png 'Energy production 2020 - 2023 - yearly summery'){class="x-small"}
 
 In 2021, the first full year, our photovoltaic system produced 7,78 MWh. I'm very happy especially with the electricity production in 2022. Last year we had very sunny spring and summer and could produce 9,1 MWh. This is even a tiny bit higher than the initial estimates.
 
-{% image "/assets/images/screenshot-energy-2020-2023-month.png", "Screenshot SolarEdge panel monitoring", "x-small", "Energy production 2020 - 2023 - per month" %}
+![Screenshot SolarEdge panel monitoring](/assets/images/screenshot-energy-2020-2023-month.png 'Energy production 2020 - 2023 - per month'){class="x-small"}
 
 In 2022 the electricity yield was higher than in 2021 in all months except December. See light blue bars in the diagram above. Only 60 kWh were produced throughout December 2022. We can produce almost the same on a summer day in July or August. We produce approximately 90% of the electricity between March and October. Darker winter months - November till February are usually very low in electricity yield. Living in central Europe 51° N there is not much sun during these month. And when the sun shines, it only shines for a few hours and at a flat angle.
 
@@ -48,7 +48,7 @@ In 2022 we consumed 38% (2.145 kWh) of our self produced electricity from the ba
 
 A typical battery charging and dis-charging curve on a summer day looks like this:
 
-{% image "/assets/images/screenshot-energy-2020-2023-month.png", "battery charging and dis-charging curve", "x-small", "Sample battery charging and dis-charging curve" %}
+![battery charging and dis-charging curve](/assets/images/screenshot-energy-2020-2023-month.png 'Sample battery charging and dis-charging curve'){class="x-small"}
 
 ## Making the maths
 
@@ -98,7 +98,7 @@ The battery saved us approximately 413€ in one year. Giving the installation c
 
 Our self-produced electricity saves us a few hundred euros on our electricity bill. Based on the final [installation costs](/our-own-electricity-2/#acquisition-costs) of 22.160,72 € for the entire system, we calculated that the break even point would be after 18 years. How is it today?
 
-{% image "/assets/images/screenshot-energy-2022.png", "Production and Consumption overview for 2022", "x-small", "Production and Consumption overview for 2022" %}
+![Production and Consumption overview for 2022](/assets/images/screenshot-energy-2022.png 'Production and Consumption overview for 2022'){class="x-small"}
 
 We reached 62% self-consumption on the production side in 2022. 3.460 kWh (= 38%) have been feed into the grid. For each kWh we don't use ourselves and feed into the grid we receive 0,0967 € feed-in tariff. This amount is guaranteed for 20 years by the\
 Erneuerbare-Energien-Gesetz (EEG = Renewable Energy Sources Act in Germany).

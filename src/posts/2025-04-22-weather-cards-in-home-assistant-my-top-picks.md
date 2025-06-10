@@ -33,7 +33,7 @@ Home Assistant includes a simple built-in weather forecast card. Adding it to yo
 
 This is the default option under *Add Card* > *Weather Forecast* in the dashboard editor. Setup is as simple as picking your `weather` entity.
 
-{% image "/assets/images/weather_card_ha.png", "Screenshot Home Assistant Weather Card", "x-small", "Screenshot 1: Home Assistant Weather Card" %}
+![Screenshot Home Assistant Weather Card](/assets/images/weather_card_ha.png 'Screenshot 1: Home Assistant Weather Card'){class="x-small"}
 
 It shows current conditions and a five-day forecast in a compact design that fits anywhere. You can switch between hourly and daily forecasts. You can select the number of forecast entries. You can choose an extra value to display below the main temperature - humidity, rainfall or wind. For many users, this may be enough.
 
@@ -47,7 +47,7 @@ If you want something reliable and straightforward without any extra dependencie
 
 While testing different weather cards, I also came across the [Clock Weather Card](https://github.com/pkissling/clock-weather-card). This option combines a digital or analogue clock with weather information, making it particularly useful for dashboards on wall tablets or displays where you want to see both the time and current conditions at a glance. Ideal for your home screen dashboard.
 
-{% image "/assets/images/weather_card_clock.png", "Screenshot Clock Weather Card", "x-small", "Screenshot 2: Clock Weather Card" %}
+![Screenshot Clock Weather Card](/assets/images/weather_card_clock.png 'Screenshot 2: Clock Weather Card'){class="x-small"}
 
 **Installation:**\
 Like most custom cards, the Clock Weather Card can be installed via HACS. Just search for “Clock Weather Card” in the HACS Frontend section and install it. After that, use the Lovelace UI to add it as a custom card.
@@ -92,7 +92,7 @@ This Weather Card is perfect for anyone who wants to get and display all the dat
 
 This is the opposite of the previous weather card. If you prefer a clean look and just the essentials, the [Simple Weather Card](https://github.com/kalkih/simple-weather-card) is worth a try. This card is designed to minimise clutter while still providing the most important weather data. It's great for smaller dashboards, side panels or mobile views where space is at a premium.
 
-{% image "/assets/images/weather_card_simple.png", "Screenshot Simple Weather Card", "x-small", "Screenshot 3: Simple Weather Card" %}
+![Screenshot Simple Weather Card](/assets/images/weather_card_simple.png 'Screenshot 3: Simple Weather Card'){class="x-small"}
 
 **Installation:**\
 Same like before, you’ll find the Simple Weather Card in HACS under Frontend. After installing, just add it as a custom card through the Lovelace dashboard editor.
@@ -162,7 +162,7 @@ cards:
     hide_today_section: true
 ```
 
-{% image "/assets/images/weather_card_my_combo.png", "Screenshot My Weather Card Combo", "x-small", "Screenshot 4: My Weather Card Combo" %}
+![Screenshot My Weather Card Combo](/assets/images/weather_card_my_combo.png 'Screenshot 4: My Weather Card Combo'){class="x-small"}
 
 ## Conclusion
 

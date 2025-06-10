@@ -61,17 +61,17 @@ Setting up the new automatic backup does not take much time.
 
 Done - Home Assistant will create your first backup for you.
 
-{% image "/assets/images/ha-backup-screenshot-2025-1.png", "screenshot 1", "x-small", "Screenshot 1: Home Assistant Backup" %}
+![screenshot 1](/assets/images/ha-backup-screenshot-2025-1.png 'Screenshot 1: Home Assistant Backup'){class="x-small"}
 
 To save a backup of our system in the cloud, just a few clicks are necessary. In the **Backup settings** area, click on the last menu item for the backup locations.
 
-{% image "/assets/images/ha-backup-screenshot-2025-2.png", "screenshot 2", "x-small", "Screenshot 2: Home Assistant Backup Locations" %}
+![screenshot 2](/assets/images/ha-backup-screenshot-2025-2.png 'Screenshot 2: Home Assistant Backup Locations'){class="x-small"}
 
 The local backup should already be displayed here. In my case, I have already moved this to the NAS as storage space. Cloud storage locations can now also be selected here for the backup.
 
 Depending on your configuration, several backups will accumulate over time. Click 'Show all backups' to view all backups.
 
-{% image "/assets/images/ha-backup-screenshot-2025-3.png", "screenshot 3", "x-small", "Screenshot 3: Home Assistant - My Backups" %}
+![screenshot 3](/assets/images/ha-backup-screenshot-2025-3.png 'Screenshot 3: Home Assistant - My Backups'){class="x-small"}
 
 Which locations are displayed here depends on the installed integration [Google Drive](https://www.home-assistant.io/integrations/google_drive/),  [Microsoft OneDrive](https://www.home-assistant.io/integrations/onedrive/) and [Synology DSM](https://www.home-assistant.io/integrations/synology_dsm/#backup-location). And whether you have a Nabu Casa subscription or not. Only with Nabu Casa subscription you will have the "Home Assistant Cloud" option.
 
@@ -90,13 +90,13 @@ The shared folders are configured on the Synology NAS. If this list is empty or 
 
 The dialog should look similar to:
 
-{% image "/assets/images/ha-backup-screenshot-2025-4.png", "screenshot 4", "x-small", "Screenshot 4: Synology Backup Config" %}
+![screenshot 4](/assets/images/ha-backup-screenshot-2025-4.png 'Screenshot 4: Synology Backup Config'){class="x-small"}
 
 After the Synology backup directories have been configured, Synology DSM is made available as a backup location.
 
 Go back to the backup settings and click configure again. Synology DSM is now available as backup location and can be enabled. You can select whether the backups on the NAS should be encrypted, see next chapter. I have switched this off in my case.
 
-{% image "/assets/images/ha-backup-screenshot-2025-5.png", "screenshot 5", "x-small", "Screenshot 5: Synology Backup Location" %}
+![screenshot 5](/assets/images/ha-backup-screenshot-2025-5.png 'Screenshot 5: Synology Backup Location'){class="x-small"}
 
 The generic NAS backup localtion can still be used, but is not requiered any more.
 
@@ -116,7 +116,7 @@ In my case, I have a backup created at the weekend, every Saturday at 4.45am. Th
 
 If the recommended settings to not fit go to: **Settings → System → Backups**  and select the first option in the **Backup settings** area. This will bring you to the automatic backups options which can be flexibly adjusted here.
 
-{% image "/assets/images/ha-backup-screenshot-2025-6.png", "screenshot 6", "x-small", "Screenshot 6: Home Assistant Automatic Backup Options" %}
+![screenshot 6](/assets/images/ha-backup-screenshot-2025-6.png 'Screenshot 6: Home Assistant Automatic Backup Options'){class="x-small"}
 
 ## Conditional Backups via Automation  
 

@@ -41,9 +41,9 @@ The setup depends a little on the construction of the actual mailbox. Ours has a
 
 For a first prototype, I just duck taped the sensor inside the mailbox. On the door sensor the original magnet was too small so I replaced it with a bigger one.
 
-{% image "/assets/images/2020-09-01-home-assistant-you-have-got-mail/img_0758.jpg", "Mailbox flap with magnet", "x-small" %}
+![Mailbox flap with magnet](/assets/images/2020-09-01-home-assistant-you-have-got-mail/img_0758.jpg){class="x-small"}
 
-{% image "/assets/images/2020-09-01-home-assistant-you-have-got-mail/img_0755.jpg", "First prototype", "x-small" %}
+![First prototype](/assets/images/2020-09-01-home-assistant-you-have-got-mail/img_0755.jpg){class="x-small"}
 
 This is it for the hardware assembly, actually not really hard.
 
@@ -51,15 +51,15 @@ This is it for the hardware assembly, actually not really hard.
 
 With the hardware part done we can now have a look at the software part. Since our ZigBee network was already running it was easy to connect the two new sensors via the Deconz UI.
 
-{% image "/assets/images/2020-09-01-home-assistant-you-have-got-mail/deconz-sensor.jpg", "Mailbox sensor in deCONZ", "small" %}
+![Mailbox sensor in deCONZ](/assets/images/2020-09-01-home-assistant-you-have-got-mail/deconz-sensor.jpg){class="small"}
 
 With Deconz integrated into Home Assistant the new sensors are immediately available in Home Assistant as well.
 
-{% image "/assets/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-deconz.jpg", "Mailbox sensors in Home Assistant", "small" %}
+![Mailbox sensors in Home Assistant](/assets/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-deconz.jpg){class="small"}
 
 No extra configuration is needed here. Just name the sensors are you prefer. Adding some ZigBee sensors to Home Assistant - pretty easy. Additionally to the two deCONZ sensors I use one boolean input helper plus a corresponding template sensor to keep the state of there is mail or not. deCONZ also creates battery level sensors for each battery-powered device. These are not really used here, but there are other automations that notify us of batteries running low. For convenience one more boolean input helper is used to enable/disable the mailbox notifications. In total there are 5 sensors and 2 inputs used for this project.
 
-{% image "/assets/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-sensors.jpg", "Mailbox sensors in Home Assistant", "small" %}
+![Mailbox sensors in Home Assistant](/assets/images/2020-09-01-home-assistant-you-have-got-mail/mailbox-sensors.jpg){class="small"}
 
 The last step is to build out the automations. I’m still having all automations in YAML, so the mailbox automations are added here as well. For the mailbox sensor three automations are needed:
 

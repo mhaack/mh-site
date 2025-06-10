@@ -1,7 +1,7 @@
 // Eleventy
 import {EleventyRenderPlugin} from '@11ty/eleventy';
-import rss from '@11ty/eleventy-plugin-rss';
-import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import pluginRSS from '@11ty/eleventy-plugin-rss';
+import pluginSyntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 import webc from '@11ty/eleventy-plugin-webc';
 import {eleventyImageTransformPlugin} from '@11ty/eleventy-img';
 import pluginNavigation from '@11ty/eleventy-navigation';
@@ -9,26 +9,16 @@ import pluginYouTube from 'eleventy-plugin-youtube-embed';
 
 // custom
 import {markdownLib} from './plugins/markdown.js';
-//import {drafts} from './plugins/drafts.js';
-
-// Custom transforms
-//import {htmlConfig} from './plugins/html-config.js';
-
-// Custom template language
-  // import {cssConfig} from './plugins/css-config.js';
-  // import {jsConfig} from './plugins/js-config.js';
+import {htmlConfig} from './plugins/compress-html.js'
 
 export default {
   EleventyRenderPlugin,
-  rss,
-  syntaxHighlight,
+  pluginRSS,
+  pluginSyntaxHighlight,
   webc,
   eleventyImageTransformPlugin,
   markdownLib,
-  //drafts,
-  //htmlConfig,
-  //cssConfig,
-  //jsConfig,
+  htmlConfig,
   pluginNavigation,
   pluginYouTube,
 };

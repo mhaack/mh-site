@@ -27,7 +27,7 @@ Wemos recently upgraded both boards. The Wemos D1 mini is now on version 4.0.0 a
 
 The pinouts of the D1 mini and the D1 mini Pro are identical, also the D1 mini shares the same pin layout. And with the latest board versions of the D1 mini (v4.0.0) vs. D1 mini Pro (v2.0.0) Wemos keeps the pin layout compatible.
 
-{% image "/assets/images/d1-mini-pro-pinout.jpeg", "D1 mini Pro Pinout", "small" %}
+![D1 mini Pro Pinout](/assets/images/d1-mini-pro-pinout.jpeg){class="small"}
 
 | **Pin** | **Function**                 | **ESP-8266 Pin** |
 | ------- | ---------------------------- | ---------------- |
@@ -68,7 +68,7 @@ Various types of [environmental sensors](https://www.wemos.cc/en/latest/d1_mini
 
 If you can't find a suitable shield for your project, Wemos offers so-called base shields. These are [empty prototyping boards](https://www.wemos.cc/en/latest/d1_mini_shield/index.html#others) for your DIY projects. They are available in different form factors (1x, 2x & 3x) and can also be used to stack other shields.
 
-{% image "/assets/images/wemosd1shields.jpg", "D1 mini compatible shields", "large" %}
+![D1 mini compatible shields](/assets/images/wemosd1shields.jpg){class="large"}
 
 All shield boards typically come with male and female pins are already included in the package. A full list of official shields can be found on the [Wemos Wiki](https://www.wemos.cc/en/latest/d1_mini_shield/index.html).
 

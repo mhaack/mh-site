@@ -33,7 +33,7 @@ Google Lighthouse is a tool that helps website owners and developers to improve 
 
 Google considers these Core Web Vitals to be critical indicators of a web page's user experience and uses them as a ranking factor in search results. Good Core Web Vitals therefore also lead to more users on your site from Google.
 
-{% image "/assets/images/screenshot-goolge-pagespeed.png", "Google PageSpeed Insights Report", "small", "Google PageSpeed Insights Report for markus-haack.com tested on May 9th 2023" %}
+![Google PageSpeed Insights Report](/assets/images/screenshot-goolge-pagespeed.png 'Google PageSpeed Insights Report for markus-haack.com tested on May 9th 2023'){class="small"}
 
 So how can websites be optimized for speed and a good Lighthouse? Here are some things you can do to improve website performance:
 

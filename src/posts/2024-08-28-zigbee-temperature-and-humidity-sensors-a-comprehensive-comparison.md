@@ -17,7 +17,7 @@ permalink: zigbee-temperature-sensors/
 ---
 Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second for to measure the pool water temp.
 
-{% image "/assets/images/temperature-sensors.jpeg", "ZigBee temperature and humidity sensors", "small" %}
+![ZigBee temperature and humidity sensors](/assets/images/temperature-sensors.jpeg){class="small"}
 
 ZigBee sensors are great for this use case. They are known for their low power consumption and reliable communication. They can run on battery power for several months, even years.
 
@@ -58,9 +58,9 @@ I have selected sensors that are relatively easy to buy in Europe. They should a
 
 To understand how each sensor performs in real-world scenarios, I tested the sensors under similar conditions and recorded their readings. All the sensors were on my desk right next to each other for a week.
 
-{% image "/assets/images/temp-compare-diagram.png", "Compare temperature measurements", "small", "Compare temperature measurements of the 5 sensors" %}
+![Compare temperature measurements](/assets/images/temp-compare-diagram.png 'Compare temperature measurements of the 5 sensors'){class="small"}
 
-{% image "/assets/images/humidity-compare-diagram.png", "Compare humidity measurements", "small", "Compare humidity sensors readings"  %}
+![Compare humidity measurements](/assets/images/humidity-compare-diagram.png 'Compare humidity sensors readings'){class="small"}
 
 From the data recorded in the last 24 hours:
 

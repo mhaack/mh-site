@@ -39,9 +39,9 @@ The wiring of electronic parts is straightforward. For the small motors, usually
 The motors are also powered by the L298 dual motor board directly.
 
 Here is my prototype and wiring diagram:
-{% image "/assets/images/halloween-spiders2.jpg", "the first prototype", "x-small", "First prototype on a breadboard" %}
+![the first prototype](/assets/images/halloween-spiders2.jpg 'First prototype on a breadboard'){class="x-small"}
 
-{% image "/assets/images/halloween-spiders_steckplatine.png", "wiring diagram", "x-small", "Wiring diagram"%}
+![wiring diagram](/assets/images/halloween-spiders_steckplatine.png 'Wiring diagram'){class="x-small"}
 
 For the final assembly soldered the cables and some headers to a [Wemos protoboard](https://www.wemos.cc/en/latest/d1_mini_shield/protoboard.html). The Wemos D1 Mini is mounted on top. For the motor controller I chose with an L298 dual motor board. No extra soldering is needed here.
 
@@ -51,7 +51,7 @@ The most tricky part is the cylinder. It took me three tries to get the drilling
 
 My final construction looks like this:
 
-{% image "/assets/images/halloween-spiders1.jpg", "the final prototype", "x-small"%}
+![the final prototype](/assets/images/halloween-spiders1.jpg){class="x-small"}
 
 This got directly mounted to the ceiling.
 
@@ -154,7 +154,7 @@ It even integrates with Home Assistant automatically with ESPHome. This is not r
 
 In Home Assistant I can turn on/off the automations using the virtual switches and control the motors directly. I can also set the motor speed and change the direction.
 
-{% image "/assets/images/screenshot-homeassistant.png", "Home Assistant Screenshot", "x-small", "Screenshot Home Assistant"%}
+![Home Assistant Screenshot](/assets/images/screenshot-homeassistant.png 'Screenshot Home Assistant'){class="x-small"}
 
 As usual the [source](https://github.com/mhaack/home-assistant-config/blob/master/config/esphome/halloween-spiders.yaml) can be found in my GitHub repository:
 
@@ -164,4 +164,4 @@ As usual the [source](https://github.com/mhaack/home-assistant-config/blob/maste
 
 The kids at the party had a lot of fun with the spiders. At first, they hadn't seen them coming down from the ceiling and were absolutely scared. Next year, to level it up, I will try to get some spiders with blinking LED eyes.
 
-{% image "/assets/images/halloween-spiders.jpg", "the final spider in action", "small", "The spider in action" %}
+![the final spider in action](/assets/images/halloween-spiders.jpg 'The spider in action'){class="small"}

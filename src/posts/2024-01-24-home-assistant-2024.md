@@ -17,7 +17,7 @@ Since sharing our initial insights into the Home Assistant setup at [my first po
 
 Since I'm an IT guy I have to draw an architecture diagram :-) Ok I hope this is not only for me and also helps you to understand the entire setup better.
 
-{% image "/assets/images/jama-villa-2024.jpg", "JaMa Villa 2024", "x-small", "JaMa Villa 2024 setup" %}
+![JaMa Villa 2024](/assets/images/jama-villa-2024.jpg 'JaMa Villa 2024 setup'){class="x-small"}
 
 ## The foundation
 

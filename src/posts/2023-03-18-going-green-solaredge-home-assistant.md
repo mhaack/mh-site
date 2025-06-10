@@ -45,11 +45,11 @@ The first thing you need to do is obtain your SolarEdge API key. To do this, go 
 
 The next step is to install the SolarEdge integration in Home Assistant. This can be done via the "Settings" page in Home Assistant. From there select "Devices & Services" and then click on the "+ Add Integration" button in the bottom right corner. In the dialog search for "SolarEdge". You will see two options. Select "SolarEdge" with the cloud symbol.
 
-{% image "/assets/images/screenshot-solaredge-config-1.png", "SolarEdge Config Step 2", "x-small" %}
+![SolarEdge Config Step 2](/assets/images/screenshot-solaredge-config-1.png){class="x-small"}
 
 ### Step 3: Configure the Integration
 
-{% image "/assets/images/screenshot-solaredge-config-2.png", "SolarEdge Config Step 3", "x-small" %}
+![SolarEdge Config Step 3](/assets/images/screenshot-solaredge-config-2.png){class="x-small"}
 
 On the SolarEdge integration configuration screen, enter your SolarEdge Site ID and API key from Step 1. Once done click on "Submit." Home Assistant will then automatically discover your SolarEdge inverter via the SolarEdge monitoring portal, add it to your Home Assistant dashboard and configure the sensors.
 
@@ -78,11 +78,11 @@ On the SolarEdge Modbus integration configuration screen, enter the IP address 
 
 Like many other integrations the SolarEdge Modbus integration is installed via the Home Assistant UI. Then navigate to the "Settings" page in Home Assistant. From there select "Devices & Services" and then click on the "+ Add Integration" button in the bottom right corner. In the dialog search for "SolarEdge" and choose "SolarEdge Modbus". The open box icon indicates that the SolarEdge Modbus integration is a custom integration.
 
-{% image "/assets/images/screenshot-solaredge-config-3.png", "SolarEdge Config Step 3", "x-small" %}
+![SolarEdge Config Step 3](/assets/images/screenshot-solaredge-config-3.png){class="x-small"}
 
 ### Step 4: Configure the Integration
 
-{% image "/assets/images/screenshot-solaredge-config-4.png", "SolarEdge Config Step 3", "x-small" %}
+![SolarEdge Config Step 3](/assets/images/screenshot-solaredge-config-4.png){class="x-small"}
 
 In the configuration dialog enter the local IP address of your inverter. The TCP port should stay at 1502 and in most cases the Modbus address must stay at 1 as well. This depends a little bit on your setup, if multiple inverters are used etc. Select the "Read ..." checkboxes for the meters (up to 3) and batteries (up to 2) you would like to get data for. The integration automatically creates all sensor entities for the meters and batteries.
 
@@ -96,7 +96,7 @@ To get the most out of it I highly recommend configuring the [SolarEdge Modbus i
 
 To setup the Home Assistant Energy Dashboard three sensors are needed - the energy values for solar production, grid consumption and exported energy. If you have battery storage installed you have the option to configure battery in and out aka. charge and discharge energy sensors.
 
-{% image "/assets/images/screenshot-ha-daschboard-1.png", "Home Assistant Screenshot", "small", "Screenshot Home Assistant Energy Dashboard Configuration"%}
+![Home Assistant Screenshot](/assets/images/screenshot-ha-daschboard-1.png 'Screenshot Home Assistant Energy Dashboard Configuration'){class="small"}
 
 In the "Individual devices" section you can add all devices which provide energy consumption data like washing machines, fridges, wallboxes, lamps etc. If your devices don't provide energy consumption sensors a smart plug can be used.
 
@@ -106,7 +106,7 @@ If you live in Europe I recommend setting up the [Forecast.Solar](https://www.
 
 Once configured Home Assistant requires some time to collect enough data until the Home Assistant Energy Dashboard is fully working.
 
-{% image "/assets/images/screenshot-ha-daschboard-2.png", "Home Assistant Screenshot", "small", "Screenshot Home Assistant Energy Dashboard - 18th March 2023"%}
+![Home Assistant Screenshot](/assets/images/screenshot-ha-daschboard-2.png 'Screenshot Home Assistant Energy Dashboard - 18th March 2023'){class="small"}
 
 Let it run for 2-3 days and then come back. Over time, with enough data collected, you will get a very clean and informative dashboard. With the help of the "Monitor individual devices" view it is now easier to find energy hungry devices using individual monitored devices.
 

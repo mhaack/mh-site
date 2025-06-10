@@ -15,7 +15,7 @@ eleventyNavigation:
 ---
 
 <div class="float-none sm:float-right mx-auto mb-8 sm:-mt-8 sm:ml-4 sm:mb-16 w-40 h-40 sm:w-48 sm-h48">
-  {% image image, "This is Markus", "rounded-full object-cover ring-1 ring-slate-200 ring-offset-8" %}
+  <img src="/assets/images/markus.jpeg" alt="This is Markus" class="rounded-full object-cover ring-1 ring-slate-200 ring-offset-8">
 </div>
 
 Hi, I'm Markus Haack and this site is my virtual online home, my little corner of the internet.
@@ -37,7 +37,6 @@ Do you want to contact me? You can find me in the following places:
 - GitHub - [github.com/mhaack](https://github.com/mhaack)
 - Instagram - [instagram.com/mhaack](https://instagram.com/mhaack)
 - Mastodon - [mhaack@mastodon.social](https://mastodon.social/@mhaack)
-- X - [twitter.com/mhaack](https://twitter.com/mhaack)
 - Medium - [mhaack.medium.com](https://mhaack.medium.com/)
 - LinkedIn - [linkedin.com/in/markushaack](https://de.linkedin.com/in/markushaack)
 - Xing - [xing.com/profile/Markus_Haack](https://www.xing.com/profile/Markus_Haack/)

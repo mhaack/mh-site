@@ -22,7 +22,7 @@ In this annual update I give an update on the 2023 performance of our photovolta
 * Month with highest production: May with 1.330 kWh
 * Lowest monthly production: 93 kWh in December
 
-{% image "/assets/images/screenshot-energy-2023.png", "screenshot monthly energy production 2023", "x-small", "Diagram 1: monthly energy production 2023" %}
+![screenshot monthly energy production 2023](/assets/images/screenshot-energy-2023.png 'Diagram 1: monthly energy production 2023'){class="x-small"}
 
 5.180 kWh of the produced energy was consumed by ourselves which is a ration of 62%. The surplus of 3.112 kWh was fed back into the grid.
 
@@ -36,7 +36,7 @@ While the summer months (May, June, July and August) were about the same, we pro
 
 November 2023 we got already some snow very early, for the area we live. As a result, next to nothing was produced for two weeks.
 
-{% image "/assets/images/screenshot-energy-2020-2024-year.png", "year to year comparison of energy production", "x-small", "Diagram 2: year to year comparison of energy production" %}
+![year to year comparison of energy production](/assets/images/screenshot-energy-2020-2024-year.png 'Diagram 2: year to year comparison of energy production'){class="x-small"}
 
 Overall, 2023 was still the 2nd best year for our solar system.
 

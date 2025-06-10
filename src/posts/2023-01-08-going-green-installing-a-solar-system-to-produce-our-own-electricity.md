@@ -28,7 +28,7 @@ Based on our estimates from 2019 - with am electricity rate of 0,28 € per kWh 
 
 Germany has the highest electricity prices in Europe:
 
-{% image "/assets/images/pricelist-2021.png", "European electricity prices 2021", "small", "European electricity prices 2021, Source: <a href='https://ec.europa.eu/eurostat/databrowser/bookmark/f1f42d1e-4766-4f49-9612-b11bae203fe8?lang=en' target='_blank' rel='noopener noreferrer'>Eurostat: electricity prices by type of user</a>" %}
+![European electricity prices 2021](/assets/images/pricelist-2021.png 'European electricity prices 2021, Source: <a href='https://ec.europa.eu/eurostat/databrowser/bookmark/f1f42d1e-4766-4f49-9612-b11bae203fe8?lang=en' target='_blank' rel='noopener noreferrer'>Eurostat: electricity prices by type of user</a>'){class="small"}
 
 We have already calculated that electricity prices will increase anyway. But we could not foresee that increase now with the energy crisis we have in Europe. Current rates for kilowatt-hour in German are ~ 0,43 € per kWh. With that break even should be already a few years earlier.
 
@@ -45,7 +45,7 @@ Tech specs ...
 
 We installed 27 solar panels on the roof. Each can produce a peak of 350 Watts. Our house has a hip roof. We installed solar panels on the east, south and west side of the roof with a total of 9,45 kilowatts peak output.
 
-{% image "/assets/images/screenshot-solar-system.png", "Simulated panel installation", "x-small", "Simulated solar panel placement on our roof" %}
+![Simulated panel installation](/assets/images/screenshot-solar-system.png 'Simulated solar panel placement on our roof'){class="x-small"}
 
 We didn't install solar panels on the north side because there was a 10 kilowatt peak output limit in Germany in 2019. If you exceed this, you have to install an extra switch-off device from the electricity network operator. With this, the grid operator can disconnect the system from the grid or turn down the power at any time. For example, too much electricity is available on the grid. Extra installation costs - that were not worth it at the time. This limit was raised to 25 kilowatts peak output in 2021. So today we would probably also install panels on the north side.
 
@@ -53,7 +53,7 @@ We decided to go with a StorEdge 3 phase inverter system (SE7K-RWS) from Solar
 
 With the installed optimizer, we will be able to produce more energy, especially if not all of the panels receive the same amount of sunlight. The optimizer can help to maximize the energy output of each solar panel, leading to increased overall energy production from the entire photovoltaic system. Additionally the Solaredge optimizers come with built-in monitoring capabilities. Each solar panel can be monitored individually. This is mostly a tech nerd argument, but it can help diagnose and troubleshoot problems with the photovoltaic system.
 
-{% image "/assets/images/screenshot-panel-monitoring.png", "Screenshot SolarEdge panel monitoring", "x-small", "SolarEdge individual panel monitoring"%}
+![Screenshot SolarEdge panel monitoring](/assets/images/screenshot-panel-monitoring.png 'SolarEdge individual panel monitoring'){class="x-small"}
 
 The two biggest disadvantages of this setup are cost and compatibility. Each optimizer adds 80€, ~2k € to our installation. Also they are only compatible with Solaredge inverters, so we have to stay with one vendor and cannot install another inverter.
 
@@ -73,7 +73,7 @@ From then on it got complicated. Nothing happened in the next few weeks. Germany
 
 After the network operator's technician replaced the energy meter, the electrician could finish the installation. Still took 2 weeks as the electrician had kids at home. Remember we were still in lockdown, the schools were also closed. All the setup was done in mid-April. Apart from annoying calls to the electricity network operator's hotline to get an appointment, nothing happened for the next month and a half. Finally we could get an appointment with a service technician scheduled for May 28th for the final inspection. Everything was fine and connected properly. Finally, more than 3 months later than planned, at 2:30pm we could flip the circuit switch and start producing our own electricity.
 
-{% image "/assets/images/screenshot-solaredge-day1.png", "Screenshot SolarEdge Portal from day 1", "x-small", "Electricity production of our photovoltaic system on day 1" %}
+![Screenshot SolarEdge Portal from day 1](/assets/images/screenshot-solaredge-day1.png 'Electricity production of our photovoltaic system on day 1'){class="x-small"}
 
 The entire setup was completed 2 months later with the battery storage installed in July 2020.
 
@@ -98,6 +98,6 @@ Last but not least, in Germany you have to notify the tax office that a solar sy
 
 With the installation done we are now finally producing our own clean, carbon free electricity. This feels good.
 
-{% image "/assets/images/screenshot-saved-trees.png", "Screenshot SolarEdge Portal saved trees", "x-small", "CO2 emission saved by us" %}
+![Screenshot SolarEdge Portal saved trees](/assets/images/screenshot-saved-trees.png 'CO2 emission saved by us'){class="x-small"}
 
 In [part 2](/our-own-electricity-2/) I will show the details of the energy we produce and the financial calculation of our installation.

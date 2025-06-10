@@ -30,7 +30,7 @@ export const imageShortcode = async (
     widths: [...widths],
     formats: [...formats],
     //urlPath: '/assets/images/',
-    outputDir: './img/',
+    outputDir: './dist/img/',
     filenameFormat: (id, src, width, format, options) => {
       const extension = path.extname(src);
       const name = path.basename(src, extension);
