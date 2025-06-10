@@ -83,7 +83,7 @@ module.exports = function (eleventyConfig) {
 
   // collections
   eleventyConfig.addCollection('tagList', getAllTags);
-
+  
   // transforms
   eleventyConfig.addPlugin(require('./config/transforms/compress-html.js'));
 

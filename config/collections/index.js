@@ -11,6 +11,8 @@ const getAllTags = (collection) => {
           case 'nav':
           case 'post':
           case 'posts':
+          case 'pages':
+          case 'home':
             return false;
         }
 
