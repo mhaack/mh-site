@@ -22,7 +22,7 @@
         {%- else -%}
         {% set imageclasses = 'object-cover w-full h-48 not-prose' %}
         {%- endif %}
-        <img src="{{post.data.images.feature}}" alt="{{post.data.title}}" loading="eager" decoding="sync" class="{{imageclasses}}">
+        <img src="{{post.data.images.feature}}" alt="{{post.data.title}}" loading="lazy" decoding="async" class="{{imageclasses}}">
       </div>
       {% endif -%}
       <div class="flex flex-col justify-between flex-1 px-4 md:px-6 pb-2">
