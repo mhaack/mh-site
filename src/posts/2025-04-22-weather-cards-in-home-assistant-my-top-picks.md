@@ -1,15 +1,16 @@
 ---
-title: "Weather Cards in Home Assistant: My Top Picks"
+title: 'Weather Cards in Home Assistant: My Top Picks'
 description: This Home Assistant guide compares popular weather cards including the built-in Weather Forecast Card and community alternatives like Clock Weather Card, Platinum Weather Card, and Simple Weather Card. The author provides setup instructions and recommendations for choosing between minimalist or feature-rich weather displays for your dashboard.
 category: project
 tags:
-  - home-assistant
-  - home-automation
+ - home-assistant
+ - home-automation
 images:
-  feature: /assets/images/weather_hero.png
+ feature: /assets/images/weather_hero.png
 date: 2025-04-22
 ---
-Whether you want to see if you need an umbrella, trigger garden automation, or just want a nice weather forecast, it's easy to integrate weather data into your [Home Assistant](https://www.home-assistant.io/). I don't think I need to explain why having weather information on your Home Assistant dashboard is helpful. Almost every Home Assistant user has a weather card on the dashboard. 
+
+Whether you want to see if you need an umbrella, trigger garden automation, or just want a nice weather forecast, it's easy to integrate weather data into your [Home Assistant](https://www.home-assistant.io/). I don't think I need to explain why having weather information on your Home Assistant dashboard is helpful. Almost every Home Assistant user has a weather card on the dashboard.
 
 But there's a bit more to it than just connecting a weather integration - you also need a suitable weather card. Many people have one on their home dashboard. It is one of the first cards you see when you open Home Assistant in your app or browser. So you want a nice, clean weather card that shows you all the information you need.
 
@@ -29,9 +30,9 @@ Almost all of the custom weather charts listed below offer powerful configuratio
 
 ## 1. Official Home Assistant Weather Forecast Card
 
-Home Assistant includes a simple built-in weather forecast card. Adding it to your dashboard is quick and works with most integrations out-of-the-box. 
+Home Assistant includes a simple built-in weather forecast card. Adding it to your dashboard is quick and works with most integrations out-of-the-box.
 
-This is the default option under *Add Card* > *Weather Forecast* in the dashboard editor. Setup is as simple as picking your `weather` entity.
+This is the default option under _Add Card_ > _Weather Forecast_ in the dashboard editor. Setup is as simple as picking your `weather` entity.
 
 ![Screenshot Home Assistant Weather Card](/assets/images/weather_card_ha.png 'Screenshot 1: Home Assistant Weather Card'){class="x-small"}
 
@@ -56,7 +57,7 @@ Like most custom cards, the Clock Weather Card can be installed via HACS. Just s
 You get a clear display of the current time alongside the weather icon, temperature and optional short forecast. The card is very powerful and already adds some complexity. There are several style options, including analogue and digital clocks, time zone and format, different animated icons, and you can customise which weather unit it uses. Various elements (current conditions, time & date, forecast) can be hidden for a very personal style. The number of forecast days is also configurable. The card also supports additional sensors for local temperature, humidity, apparent temperature and air quality. It also supports full localisation for a large list of languages.
 With a wide range of compatibility with different Lovelace themes, making it easy to fit into your overall dashboard look.
 
-**Configuration:** 
+**Configuration:**
 The Clock Weater Card currently only supports YAML configuration. A UI configuration mode is not yet available.
 
 **My impression:**\
@@ -66,20 +67,20 @@ The card is perfect if you want a simple, nice to look at info panel that shows 
 
 If you like to tweak every pixel or combine weather data from multiple integrations, [Platinum Weather Card](https://github.com/Makin-Things/platinum-weather-card) is the tool for you. This is your power horse for weather data. It's designed as a flexible, fully GUI configurable weather card - no YAML needed if you don't want to. Like the other cards before it shows the current weather conditions and the forecast. But it does not stop there, it can display various details such as
 
-* sunrise and sunset
-* wind conditions, speed and direction 
-* recorded rainfall 
-* visibility 
-* rain or snowfall forecast
-* UV forecast 
-* fire danger
+- sunrise and sunset
+- wind conditions, speed and direction
+- recorded rainfall
+- visibility
+- rain or snowfall forecast
+- UV forecast
+- fire danger
 
 In the details section you can freely configure up to 16 attributes (2 columns of 8 each).
 
 The forecast section of the cards supports two different layouts: horizontal and vertical. While the horizontal view displays icons and values in a row similar to the other cards, the vertical view is very verbose and gives you a detailed view of the coming days. This includes weather conditions, forecast temperature and rain, and a written weather forecast.
 
 **Installation:**\
-Install via HACS under *Frontend*. Search for “Platinum Weather Card” and install. Then, add a new card of type *Custom: Platinum Weather Card* to your dashboard.
+Install via HACS under _Frontend_. Search for “Platinum Weather Card” and install. Then, add a new card of type _Custom: Platinum Weather Card_ to your dashboard.
 
 **Configuration:**\
 The card is fully configurable via the UI. It opens a full GUI editor with tons of settings. You can choose which data sources to use for each field, change the icon set, customise the forecast layout and much more.
@@ -104,7 +105,7 @@ The card has a nice day and night view and you can customise the background colo
 
 It works with standard `weather` entities, so it's compatible with the usual Home Assistant weather integrations. A local temperature sensor is also supported.
 
-**Configuration:** 
+**Configuration:**
 The Simple Weater Card currently only supports YAML configuration.
 
 **My impression:**\
@@ -134,32 +135,32 @@ At the moment I use the Clock Weather card in my main dashboard in combination w
 ```yaml
 type: custom:vertical-stack-in-card
 cards:
-  - type: custom:clock-weather-card
-    entity: weather.jama_villa
-    temperature_sensor: sensor.garden_temperature
-    locale: de
-    weather_icon_type: fill
-    hide_clock: true
-    hide_date: true
-    forecast_rows: 3
-    show_decimal: true
-    hide_forecast_section: true
-  - show_current: false
-    show_forecast: true
-    type: weather-forecast
-    entity: weather.jama_villa
-    forecast_type: hourly
-    forecast_slots: 6
-  - type: custom:clock-weather-card
-    entity: weather.jama_villa
-    temperature_sensor: sensor.garden_temperature
-    locale: de
-    weather_icon_type: fill
-    hide_clock: true
-    hide_date: true
-    forecast_rows: 3
-    show_decimal: true
-    hide_today_section: true
+ - type: custom:clock-weather-card
+   entity: weather.jama_villa
+   temperature_sensor: sensor.garden_temperature
+   locale: de
+   weather_icon_type: fill
+   hide_clock: true
+   hide_date: true
+   forecast_rows: 3
+   show_decimal: true
+   hide_forecast_section: true
+ - show_current: false
+   show_forecast: true
+   type: weather-forecast
+   entity: weather.jama_villa
+   forecast_type: hourly
+   forecast_slots: 6
+ - type: custom:clock-weather-card
+   entity: weather.jama_villa
+   temperature_sensor: sensor.garden_temperature
+   locale: de
+   weather_icon_type: fill
+   hide_clock: true
+   hide_date: true
+   forecast_rows: 3
+   show_decimal: true
+   hide_today_section: true
 ```
 
 ![Screenshot My Weather Card Combo](/assets/images/weather_card_my_combo.png 'Screenshot 4: My Weather Card Combo'){class="x-small"}

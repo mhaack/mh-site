@@ -3,7 +3,7 @@ title: Mini plant watering project
 author: Markus
 description: I would like to show you my new 30 min, no coding holiday plant watering project.
 seo:
- description: With this short article I would like to show you my new 30 minutes, no coding, plant watering project for  Home Assistant. 
+ description: With this short article I would like to show you my new 30 minutes, no coding, plant watering project for  Home Assistant.
 images:
  feature: /assets/images/2021-08-17-mini-plant-watering-project/5d89314d-29ba-4f3f-baf8-f2614ba7f494.jpeg
  height: h-128

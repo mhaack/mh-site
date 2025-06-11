@@ -1,18 +1,19 @@
 ---
-title: "Need for Speed: Why Website Performance Matters"
+title: 'Need for Speed: Why Website Performance Matters'
 category: project
 tags:
-  - website
-  - development
-  - eleventy
+ - website
+ - development
+ - eleventy
 images:
-  feature: /assets/images/fast-website-unsplash.jpg
-  height: h-96
+ feature: /assets/images/fast-website-unsplash.jpg
+ height: h-96
 description: As I have run this website for a few years now I have always
-  thought about how the website performs for my users. Core Web Vitals and that
-  website performance are important.
+ thought about how the website performs for my users. Core Web Vitals and that
+ website performance are important.
 date: 2023-05-09
 ---
+
 As I have run this website for a few years now and have been doing [some re-designs and new stack changes](/website-history/), I have always thought about how the website performs. Over time, I became more and more interested in topics related to performance optimization. Core Web Vitals and that website performance are important for site users, especially people who come here via mobile. Incidentally, this is also a topic I deal with intensively at [work](https://www.hlx.live/home) :-)
 
 This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=EN&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
@@ -21,7 +22,7 @@ This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.w
 <is-land on:visible class="mx-auto"><a href="https://www.11ty.dev/speedlify/markus-haack-com/" aria-label="Speedlify lighthous score" class="mx-auto no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
 </div>
 
-So, what is [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and why are Core Web Vitals important? 
+So, what is [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and why are Core Web Vitals important?
 
 Google Lighthouse is a tool that helps website owners and developers to improve the performance, accessibility, best practices, and search engine optimization (SEO) of their web pages. It measures several aspects of a website's performance, such as page load speed, interactivity, accessibility, and more. Lighthouse generates a report based on these measurements and highlights areas of improvement and suggesting optimizations. The report provides a score out of 100 for each of the categories mentioned above - 4x 100 is the top score.
 

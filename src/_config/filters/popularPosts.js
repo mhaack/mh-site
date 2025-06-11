@@ -1,5 +1,5 @@
 export const popularPosts = (posts, analytics) => {
-  const topUrls = analytics.filter((p => p.page !== '/'));
+  const topUrls = analytics.filter((p) => p.page !== '/');
   return posts
     .filter((post) => {
       if (topUrls.find((p) => p.page === post.url)) return true;

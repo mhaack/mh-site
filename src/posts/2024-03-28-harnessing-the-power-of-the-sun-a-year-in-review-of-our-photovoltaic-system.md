@@ -1,26 +1,27 @@
 ---
-title: "Harnessing the Power of the Sun: A Year in Review"
+title: 'Harnessing the Power of the Sun: A Year in Review'
 category: project
 tags:
-  - photovoltaic
-  - electricity
-  - solar
+ - photovoltaic
+ - electricity
+ - solar
 images:
-  feature: /assets/images/taner-ardali-vc7e5m6hxza-unsplash.jpg
-  height: null
+ feature: /assets/images/taner-ardali-vc7e5m6hxza-unsplash.jpg
+ height: null
 description: In this annual update I give an update on the 2023 performance of
-  our photovoltaic system and comparing it with previous years' data.
+ our photovoltaic system and comparing it with previous years' data.
 date: 2024-03-26
 permalink: solar-update-2023/
 ---
+
 In this annual update I give an update on the 2023 performance of our photovoltaic system and comparing it with previous years' data. This is a follow up to last years post series about the installation and first energy yield numbers ([1](/our-own-electricity-1/), [2](/our-own-electricity-2/), [3](/our-own-electricity-3/)).
 
 ## 2023 Solar Energy Production Overview
 
-* Total solar energy produced in 2023: 8.292 kWh
-* Average monthly solar energy production: 691 kWh
-* Month with highest production: May with 1.330 kWh
-* Lowest monthly production: 93 kWh in December
+- Total solar energy produced in 2023: 8.292 kWh
+- Average monthly solar energy production: 691 kWh
+- Month with highest production: May with 1.330 kWh
+- Lowest monthly production: 93 kWh in December
 
 ![screenshot monthly energy production 2023](/assets/images/screenshot-energy-2023.png 'Diagram 1: monthly energy production 2023'){class="x-small"}
 
@@ -30,9 +31,9 @@ On the consumption side we used a total of 10.312 kWh of electricity. Most of th
 
 ## Comparing with Previous Years
 
-* **2023 vs. 2022:** Total energy production in 2023 was significantly lower than the year before. Overall solar energy production decreased 9% from 9.098 kWh to 8.292 kWh
+- **2023 vs. 2022:** Total energy production in 2023 was significantly lower than the year before. Overall solar energy production decreased 9% from 9.098 kWh to 8.292 kWh
 
-While the summer months (May, June, July and August) were about the same, we produced significantly more electricity in spring 2022, than in the same period in 2023. March and April were very rainy months in our region and the sky was often very cloudy. 
+While the summer months (May, June, July and August) were about the same, we produced significantly more electricity in spring 2022, than in the same period in 2023. March and April were very rainy months in our region and the sky was often very cloudy.
 
 November 2023 we got already some snow very early, for the area we live. As a result, next to nothing was produced for two weeks.
 

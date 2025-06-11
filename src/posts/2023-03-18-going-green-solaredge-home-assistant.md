@@ -1,19 +1,20 @@
 ---
-title: "Going Green: SolarEdge & Home Assistant"
+title: 'Going Green: SolarEdge & Home Assistant'
 category: project
 tags:
-  - solar
-  - photovoltaic
-  - electricity
-  - home-assistant
-  - smarthome
+ - solar
+ - photovoltaic
+ - electricity
+ - home-assistant
+ - smarthome
 images:
-  feature: /assets/images/jama-villa-logos.jpg
+ feature: /assets/images/jama-villa-logos.jpg
 description: The third part of my Our Own Electricity series describes how I
-  integrated our photovoltaic system into Home Assistant.
+ integrated our photovoltaic system into Home Assistant.
 date: 2023-03-18
 permalink: our-own-electricity-3/
 ---
+
 Home Assistant is an open-source home automation platform that allows you to connect and control all the devices in your home. It supports a [wide range of solar inverters](https://www.home-assistant.io/integrations/#energy) like Fronius, SMA Solar, Solar-Log, GoodWe or SolarEdge. And while SolarEdge already provides an extensive monitoring portal for end users, there are still some reasons to integrate with Home Assistant. Home Assistant lets you design cross-system dashboards or automations that leave the proprietary islands of manufacturers. For example, we can start charging our electric car when we have enough solar power left. This is [more cost effective than sending it back to the grid](/our-own-electricity-2/#making-the-maths).
 
 In this blog post, we will take a look at how to integrate a SolarEdge inverter with Home Assistant. We will use the out of the box SolarEdge integration and the SolarEdge Modbus integration. It ties directly to the first two posts about our [solar installation](/our-own-electricity-1/) and our [own green energy production](/our-own-electricity-2/).

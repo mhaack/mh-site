@@ -2,13 +2,13 @@
 title: Home Assistant 2024
 description: Since sharing our initial insights into the Home Assistant setup at my first post about our Home Assistant setup, a lot has transformed. It's time for an update. This article will walk you through the changes, replacements of devices and integrations, additions of new elements, and the tried-and-true components that have proven to be reliable.
 images:
-  feature: /assets/images/firefly-smarthome.jpg
+ feature: /assets/images/firefly-smarthome.jpg
 date: 2024-01-24
 permalink: jama-villa-2024/
 category: project
 tags:
-  - home-automation
-  - home-assistant
+ - home-automation
+ - home-assistant
 ---
 
 Since sharing our initial insights into the Home Assistant setup at [my first post about our Home Assistant setup](/jama-villa/), a lot has transformed. It's time for an update. This article will walk you through the changes, replacements of devices and integrations, additions of new elements, and the tried-and-true components that have proven to be reliable.
@@ -53,7 +53,7 @@ The migration included moving the Rademacher DuoFern stick and custom integratio
 
 Over time, the smart home ecosystem expanded with the addition of various sensors, sockets, and devices. Notable additions include the [SilverCrest Power Strip](https://zigbee.blakadder.com/Lidl_HG06338.html) with 3 AC sockets and 4 USB outlets, strategically placed on my home office desk.
 
-One noticeable shift was the decline in reliability of Homematic devices, particularly the contact sensors on windows and doors.  known for their .
+One noticeable shift was the decline in reliability of Homematic devices, particularly the contact sensors on windows and doors. known for their .
 
 The biggest loser on the wireless device side is Homematic. For some reason out of sudden we had many issues with the contact sensors on the windows and doors. These all got replaced with [Aqara Door and Window Sensors](https://www.aqara.com/eu/product/door-and-window-sensor/). These little beasts are great have a discreet design. They can be hidden in almost any (German) window or door. In 2 years I only had to replace a battery from time to time.
 

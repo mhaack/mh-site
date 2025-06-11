@@ -11,12 +11,12 @@ export const markdownLib = markdownIt({
   html: true,
   breaks: true,
   linkify: true,
-  typographer: true
+  typographer: true,
 })
   .disable('code')
   .use(markdownItAttrs)
   .use(markdownItPrism, {
-    defaultLanguage: 'plaintext'
+    defaultLanguage: 'plaintext',
   })
   .use(markdownItAnchor, {
     tabIndex: false,
@@ -36,11 +36,11 @@ export const markdownLib = markdownIt({
         target: '_blank',
         rel: 'noopener noreferrer',
       },
-    }
+    },
   ])
   .use(markdownItEmoji)
   .use(markdownitAbbr)
-  .use(md => {
+  .use((md) => {
     md.renderer.rules.image = (tokens, idx) => {
       const token = tokens[idx];
       const src = token.attrGet('src');

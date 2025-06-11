@@ -11,10 +11,10 @@ tags:
  - plants
  - smarthome
 seo:
-  description: Automate your lawn irrigation with Home Assistant for smart, efficient watering and a lush, green lawn.
+ description: Automate your lawn irrigation with Home Assistant for smart, efficient watering and a lush, green lawn.
 images:
-  feature: /assets/images/my-garden-watering-project.png
-  height: null
+ feature: /assets/images/my-garden-watering-project.png
+ height: null
 date: 2022-06-01
 ---
 

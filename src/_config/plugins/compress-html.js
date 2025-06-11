@@ -2,7 +2,7 @@ import htmlmin from 'html-minifier-terser';
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 
-export const htmlConfig = eleventyConfig => {
+export const htmlConfig = (eleventyConfig) => {
   eleventyConfig.addTransform('html-minify', (content, outputPath) => {
     if (outputPath && outputPath.endsWith('.html') && isProd) {
       return htmlmin.minify(content, {

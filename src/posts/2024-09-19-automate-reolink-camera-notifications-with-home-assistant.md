@@ -2,18 +2,19 @@
 title: Automate Reolink camera notifications with Home Assistant
 category: project
 tags:
-  - camera
-  - home-assistant
-  - home-automation
+ - camera
+ - home-assistant
+ - home-automation
 images:
-  feature: /assets/images/reolink-automation-hero.jpg
-  height: null
+ feature: /assets/images/reolink-automation-hero.jpg
+ height: null
 description: Automate Reolink camera notifications with Home Assistant to overcome app limitations such as geo-fencing and scheduling. Create custom notifications based on location, time or other conditions by configuring simple YAML scripts, increasing the flexibility and intelligence of your home security system.
 seo:
-  description: Automate Reolink camera notifications with Home Assistant to overcome app limitations such as geo-fencing and scheduling.
+ description: Automate Reolink camera notifications with Home Assistant to overcome app limitations such as geo-fencing and scheduling.
 date: 2024-09-19
 permalink: automate-reolink-camera-notifications/
 ---
+
 As I wrote in [my previous post](/reolink-cameras-in-home-assistant/), I recently switched from Arlo cameras to Reolink cameras. The Reolink cameras have excellent hardware quality, an aluminium housing and no cloud subscription obligation.
 
 However, there are some gaps in the software and functions that have been standard with Arlo and other providers for years are missing here. The camera alarms cannot be automated and there is also no geo-fencing in the app so that the cameras can be activated automatically when everyone has left the house.
@@ -30,7 +31,7 @@ At least in the Reolink iOS app, this feature is somewhat hidden and not immedia
 
 You can create different scenes. What you cannot do is control these scenes automatically. You always have to open the app to activate them, and they cannot be triggered at a certain time or by another event.
 
-So how do we solve this problem? To fill the gaps and add the missing functionality, Home Assistant comes in as a powerful smart home platform. 
+So how do we solve this problem? To fill the gaps and add the missing functionality, Home Assistant comes in as a powerful smart home platform.
 
 ## Automate the push notifications
 
@@ -40,11 +41,11 @@ When we're at home in the garden, we don't need notifications from the cameras i
 
 In our case the notifications will follow this patten:
 
-| Camera    | Week - Day | Weekend - Day | Nights |
+|  Camera   | Week - Day | Weekend - Day | Nights |
 | :-------: | :--------: | :-----------: | :----: |
-| Frontdoor | on         | on            | on     |
-| Carport   | on         | off           | on     |
-| Garden    | off        | off           | on     |
+| Frontdoor |     on     |      on       |   on   |
+|  Carport  |     on     |      off      |   on   |
+|  Garden   |    off     |      off      |   on   |
 
 To enable / disable the notifications as needed I use two automations in Home Assistant. The first on is triggered at sunset to enable the push notification settings of all the cameras:
 
@@ -53,21 +54,21 @@ To enable / disable the notifications as needed I use two automations in Home As
 In YAML this looks like (simplified version):
 
 ```yaml
-alias: "[Camera] Activate notifications on sunset"
+alias: '[Camera] Activate notifications on sunset'
 trigger:
-  - platform: sun
-    event: sunset
-    offset: 0
+ - platform: sun
+   event: sunset
+   offset: 0
 condition: []
 action:
-  - type: turn_on
-    device_id: <<< camera 1 >>>
-    entity_id: switch.<<< camera 1 >>>_push_notifications 
-    domain: switch
-  - type: turn_on
-    device_id: <<< camera 2 >>>
-    entity_id: switch.<<< camera 2 >>>_push_notifications 
-    domain: switch
+ - type: turn_on
+   device_id: <<< camera 1 >>>
+   entity_id: switch.<<< camera 1 >>>_push_notifications
+   domain: switch
+ - type: turn_on
+   device_id: <<< camera 2 >>>
+   entity_id: switch.<<< camera 2 >>>_push_notifications
+   domain: switch
 mode: single
 ```
 
@@ -75,7 +76,7 @@ The second time-based automation is triggered at sunrise in the morning to switc
 
 ![Screenshot Home Assistant Automation](/assets/images/ha-de-activate-reolink-notifications-sunrise.png){class="small"}
 
-In YAML this looks like: 
+In YAML this looks like:
 
 ```yaml
 alias: "[Camera] De-activate notifications on sunrise"
@@ -90,11 +91,11 @@ condition:
 action:
   - type: turn_off
     device_id: <<< camera 1 >>>
-    entity_id: switch.<<< camera 1 >>>_push_notifications 
+    entity_id: switch.<<< camera 1 >>>_push_notifications
     domain: switch
   - type: turn_off
     device_id: <<< camera 2 >>>
-    entity_id: switch.<<< camera 2 >>>_push_notifications 
+    entity_id: switch.<<< camera 2 >>>_push_notifications
     domain: switch
   - if:
       - condition: state
@@ -103,7 +104,7 @@ action:
     then:
       - type: turn_off
 	    device_id: <<< camera 3 >>>
-	    entity_id: switch.<<< camera 3 >>>_push_notifications 
+	    entity_id: switch.<<< camera 3 >>>_push_notifications
         domain: switch
 mode: single
 ```
@@ -112,7 +113,7 @@ mode: single
 
 When we are out and about and nobody is at home, we naturally also want to be notified by the cameras if something happens. Why else would we have surveillance cameras?
 
-As it is not possible to control these automatically via the Reolink app, and manually activating the scenes in the app is not a solution, we have also automated this using Home Assistant. We also set up two automations to make this work. 
+As it is not possible to control these automatically via the Reolink app, and manually activating the scenes in the app is not a solution, we have also automated this using Home Assistant. We also set up two automations to make this work.
 
 One is triggered when we have all left the house and the other is triggered when at least one member of the family has returned home. The trigger can be either a mobile phone location change, a person location change or, as in our case, a group of people. [Groups of people](https://www.home-assistant.io/integrations/group/#old-style-groups) are still supported in Home Assistant, but can only be defined in YAML.
 
@@ -123,23 +124,23 @@ Activating the camera notifications when nobody is at home:
 The YAML version:
 
 ```yaml
-alias: "[Camera] Activate notifications on leaving"
+alias: '[Camera] Activate notifications on leaving'
 trigger:
-  - platform: state
-    entity_id:
-      - group.jama
-    from: home
-    to: not_home
+ - platform: state
+   entity_id:
+    - group.jama
+   from: home
+   to: not_home
 condition: []
 action:
-  - type: turn_on
-    device_id: <<< camera 1 >>>
-    entity_id: switch.<<< camera 1 >>>_push_notifications 
-    domain: switch
-  - type: turn_on
-    device_id: <<< camera 2 >>>
-    entity_id: switch.<<< camera 2 >>>_push_notifications 
-    domain: switch
+ - type: turn_on
+   device_id: <<< camera 1 >>>
+   entity_id: switch.<<< camera 1 >>>_push_notifications
+   domain: switch
+ - type: turn_on
+   device_id: <<< camera 2 >>>
+   entity_id: switch.<<< camera 2 >>>_push_notifications
+   domain: switch
 mode: single
 ```
 
@@ -150,27 +151,27 @@ Disabling push notifications follows a similar pattern. There's an extra check b
 The script version of this automation looks like this:
 
 ```yaml
-alias: "[Camera] De-activate notifications on coming home"
-description: ""
+alias: '[Camera] De-activate notifications on coming home'
+description: ''
 trigger:
-  - platform: state
-    entity_id:
-      - group.jama
-    from: not_home
-    to: home
+ - platform: state
+   entity_id:
+    - group.jama
+   from: not_home
+   to: home
 condition:
-  - condition: sun
-    before: sunset
-    after: sunrise
+ - condition: sun
+   before: sunset
+   after: sunrise
 action:
-  - type: turn_off
-    device_id: <<< camera 1 >>>
-    entity_id: switch.<<< camera 1 >>>_push_notifications 
-    domain: switch
-  - type: turn_off
-    device_id: <<< camera 2 >>>
-    entity_id: switch.<<< camera 2 >>>_push_notifications 
-    domain: switch
+ - type: turn_off
+   device_id: <<< camera 1 >>>
+   entity_id: switch.<<< camera 1 >>>_push_notifications
+   domain: switch
+ - type: turn_off
+   device_id: <<< camera 2 >>>
+   entity_id: switch.<<< camera 2 >>>_push_notifications
+   domain: switch
 mode: single
 ```
 
