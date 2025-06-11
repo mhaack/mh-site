@@ -1,0 +1,27 @@
+---
+layout: base
+pagination:
+  data: collections.posts
+  size: 1
+  alias: post
+permalink: /opengraph/{{ post.url }}/
+eleventyExcludeFromCollections: true
+---
+
+<main class="w-[1200px] h-[630px] flex flex-row bg-repeat-x bg-bottom bg-[url('/assets/icons/rainbow-bg.png')]">
+  <div class="basis-1/4 px-8">
+    <div class="bg-gray-800 w-64 pt-40 px-6 pb-6 text-white">
+      {% include 'icons/mh.svg' %}
+    </div>
+  </div>
+  <div class="basis-3/4 mx-4 mt-32">
+    <span class="ml-2 text-xl text-blue-dianne-600">
+      <time datetime="{{ post.date | toIsoString }}">
+        {{ post.date | readableDate }}
+      </time>
+    </span>
+    <h2 class="mt-2 text-7xl font-semibold text-blue-dianne-900">
+      {{ post.data.title }}
+    </h2>
+  </div>
+</main>

@@ -59,13 +59,6 @@
       "url": "https://mhaack.medium.com/",
       "icon": "icons/medium.svg",
       "external": true
-    },
-    {
-      "text": "X",
-      "url": "https://twitter.com/mhaack",
-      "icon": "icons/x.svg",
-      "rel" : "me",
-      "external": true
     }
   ],
   "footerLinks": [

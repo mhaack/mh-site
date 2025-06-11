@@ -6,19 +6,19 @@ layout: default
   <header class="mb-4 text-center">
     {%- if images.feature %}
     <figure class="lg:-mx-40 {{ images.height or " h-72 md:h-2/3" }}">
-      {% image images.feature, title, "object-cover w-full h-full" %}
+      <img src="{{images.feature}}" alt="{{title}}" loading="eager" decoding="sync" class="object-cover w-full h-full">
     </figure>
     {%- endif %}
     <h1 class="mx-8 py-2 border-b border-gray-200 md:py-8 p-name">{{ title }}</h1>
     <div class="hidden">
         <a class="u-url" href="{{ site.url + page.url }}">{{ title }}</a>
         <p class="h-card p-author">
-          <a class="p-name u-url" rel="author" href="{{ site.url }}">{{ site.author.name }}</a> <img class="u-photo" src="{{ site.url}}/assets/images/markus.jpeg" alt="Photo of Markus">
+          <a class="p-name u-url" rel="author" href="{{ site.url }}">{{ site.author.name }}</a> <img class="u-photo" src="/assets/images/markus.jpeg" alt="Photo of Markus">
         </p>
     </div>
     <div class="mx-8 py-4 border-b border-gray-200 md:justify-between md:items-start md:flex md:flex-row">
       <div class="md:my-auto text-sm text-slate-700">
-        <time class="dt-published" datetime="{{ date | htmlDateString }}">
+        <time class="dt-published" datetime="{{ date | toIsoString }}">
           {{ date | readableDate }}
         </time>
         <span class="mx-2">·</span>
@@ -28,7 +28,7 @@ layout: default
         {%- if stats.pageviews > 100 %}
         <span>{{ stats.pageviews }} views</span>
         {%- else %}
-        <span><100 views</span>
+        <span>&lt; 100 views</span>
         {%- endif %}
       </div>
       <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end p-category">{% include "partials/taglist.njk" %}</div>

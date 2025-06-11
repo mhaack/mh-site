@@ -41,11 +41,11 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.url + page.url }}">
     <meta property="og:description" content="{{ seo.description or description or desc or site.description }}">
-    <meta property="og:image" content="{% opengraphImageSrc ogImgSrv %}">
+    <meta property="og:image" content="{% ogImageUrl ogImgSrv %}">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
-    <meta name="twitter:image" content="{% opengraphImageSrc ogImgSrv %}">
+    <meta name="twitter:image" content="{% ogImageUrl ogImgSrv %}">
 
     {% if env.isProd -%}
     <script defer data-domain="markus-haack.com" src="/assets/js/script.js"></script>
@@ -55,6 +55,6 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
     {%- endif %}
     {%- if layout == 'post' -%}
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% opengraphImageSrc ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","keywords":"{{ keywords }}","author":{"@type":"Person","name":"{{ site.author.name }}", "url":"https://markus-haack.com/about/"}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","@id":"{{ page.url | url | absoluteUrl(site.url) }}","headline":"{{ title | escape }}","image":"{% ogImageUrl ogImgSrv %}","datePublished":"{{ date | dateToRfc3339 }}","description":"{{ description or desc or site.description }}","keywords":"{{ keywords }}","author":{"@type":"Person","name":"{{ site.author.name }}", "url":"https://markus-haack.com/about/"}}</script>
     {%- endif %}
   </head>

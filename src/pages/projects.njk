@@ -1,0 +1,24 @@
+--- 
+permalink: /projects/
+layout: posts
+title: My recent projects
+description: Projects I worked on recently - check them out. Also see the <a href="/archive/">archive</a> with all of my posts.
+seo:
+  description: This page contains the latest projects and articles of markus-haack.com of the last 12 months.
+theme:
+  background: bg-sandy-brown-300
+  text: text-gray-900
+eleventyNavigation:
+  key: main
+  title: Projects
+  order: 1
+---
+
+{% set postslist = collections.posts | category("project") | reverse %}
+{% set postteaser = true %}
+{% set showstats = true %}
+{% include "partials/postslist.njk" %}
+
+<h3 class="mt-16 mb-4 text-2xl font-medium">All Tags...</h3>
+{% set tags = collections.tagList %}
+{% include "partials/taglist.njk" %}

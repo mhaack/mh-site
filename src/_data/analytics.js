@@ -1,6 +1,6 @@
-const EleventyFetch = require('@11ty/eleventy-fetch');
-
-module.exports = async function () {
+import EleventyFetch from '@11ty/eleventy-fetch';
+  
+export default async function () {
   const API_KEY_PLAUSIBLE = process.env.API_KEY_PLAUSIBLE
 
   const now = new Date()
