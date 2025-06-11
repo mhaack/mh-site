@@ -9,7 +9,7 @@ images:
 date: 2023-03-04
 permalink: ultrasonic-distance-sensors-esphome/
 description: I received many questions about using an ultrasonic distance sensor with
-  ESPHome for their water tank project, leading them to create a short guide.
+ ESPHome for their water tank project, leading them to create a short guide.
 ---
 
 In relation to my [ESPHome water tank project](/watertank-esphome/) I got a lot of inquiries about how to use an ultrasonic distance sensor with ESPHome. That's why I created this short guide.

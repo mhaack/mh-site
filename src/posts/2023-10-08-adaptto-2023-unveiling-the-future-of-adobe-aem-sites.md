@@ -1,17 +1,18 @@
 ---
-title: "AdaptTo 2023: Unveiling the Future of Adobe AEM Sites"
+title: 'AdaptTo 2023: Unveiling the Future of Adobe AEM Sites'
 category: work
 tags:
-  - adobe
-  - aem
-  - conference
+ - adobe
+ - aem
+ - conference
 images:
-  feature: /assets/images/adaptto-2023.jpeg
+ feature: /assets/images/adaptto-2023.jpeg
 description: The future of AEM Sites at AdaptTo 2023 conference - an intro into
-  Edge Delivery Services and Document-based Authoring.
+ Edge Delivery Services and Document-based Authoring.
 date: 2023-10-05
 permalink: adaptto-2023-franklin/
 ---
+
 This year's AdaptTo 2023 conference in Berlin brought an exciting twist to my speaking journey. Unlike previous years, where AdaptTo conference was only virtually, I had the incredible opportunity to hold a keynote presentation in person.
 
 During this [keynote](https://adapt.to/2023/schedule/edge-delivery-services-getting-started-with-document-based-authoring), I gave an introduction into the innovation of Adobe AEM Sites – Document-based Authoring combined with Edge Delivery Services, also known as Project Franklin. This next evolution of AEM Sites introduces a fresh authoring and developer experience, promising to create blazingly fast websites.

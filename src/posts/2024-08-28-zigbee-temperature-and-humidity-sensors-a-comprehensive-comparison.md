@@ -1,20 +1,21 @@
 ---
-title: "ZigBee Temperature and Humidity Sensors: A Comparison"
+title: 'ZigBee Temperature and Humidity Sensors: A Comparison'
 category: project
 tags:
-  - home-assistant
-  - home-automation
-  - smarthome
+ - home-assistant
+ - home-automation
+ - smarthome
 images:
-  feature: /assets/images/zigbee-smarthome-hero.jpeg
+ feature: /assets/images/zigbee-smarthome-hero.jpeg
 description: Smart homes increasingly use temperature and humidity sensors for
-  automation, and I've installed over 10 throughout my house, including the
-  garden, attic, fridge, and pool. ZigBee sensors are ideal for this due to
-  their low power consumption and reliable communication, allowing them to
-  operate on batteries for months or even years.
+ automation, and I've installed over 10 throughout my house, including the
+ garden, attic, fridge, and pool. ZigBee sensors are ideal for this due to
+ their low power consumption and reliable communication, allowing them to
+ operate on batteries for months or even years.
 date: 2024-08-28
 permalink: zigbee-temperature-sensors/
 ---
+
 Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second for to measure the pool water temp.
 
 ![ZigBee temperature and humidity sensors](/assets/images/temperature-sensors.jpeg){class="small"}
@@ -39,7 +40,7 @@ I have selected sensors that are relatively easy to buy in Europe. They should a
 
 ## Comparison of ZigBee Temperature and Humidity Sensors
 
-| Feature                           | SONOFF Zigbee                     | Aqara<br>(Old Version)           | Aqara T1<br>(New Version)       | NOUS E5              | OWON with Remote Probe                              |
+| Feature                           | SONOFF Zigbee                     | Aqara<br>(Old Version)           | Aqara T1<br>(New Version)       | NOUS E5              | OWON with Remote Probe                         |
 | --------------------------------- | --------------------------------- | -------------------------------- | ------------------------------- | -------------------- | ---------------------------------------------- |
 | **Model**                         | SNZB-02P                          | WSDCGQ11LM                       | TH-S02D                         | TS0201               | THS-317-ET                                     |
 | **Temperature Range**             | \-10℃ ~ +60°C                     | \-20℃ ~ +50°C                    | \-20℃ ~ +50°C                   | \-20℃ ~ +60℃         | \-40°C ~ +200°C                                |
@@ -48,7 +49,7 @@ I have selected sensors that are relatively easy to buy in Europe. They should a
 | **Humidity Accuracy**             | ±2% RH                            | ±3% RH                           | ±3% RH                          | ±5% RH               | n/a                                            |
 | **Atmospheric Pressure Range**    | n/a                               | 30 kPa – 110 kPa                 | 30 kPa – 110 kPa                | n/a                  | n/a                                            |
 | **Atmospheric Pressure Accuracy** | n/a                               | ±0.12 kPa                        | ±0.12 kPa                       | n/a                  | n/a                                            |
-| **Battery**                       | CR2477                            | CR2032                           | CR2032                          | CR2*1                | 2x AAA                                         |
+| **Battery**                       | CR2477                            | CR2032                           | CR2032                          | CR2\*1               | 2x AAA                                         |
 | **Battery Life**                  | Up to 2 years                     | Up to 2 years                    | Up to 2 years                   | Up to 5 years        | Up to 1.5 years                                |
 | **Size**                          | 45 x 45 x 17.7 mm                 | 36 x 36 x 9 mm                   | 36 x 36 x 9 mm                  | 40 x 40 x 23 mm      | 62 x 52 x 15 mm (sensor case)                  |
 | **Special Features**              | Compact design, magnetic mounting | Compact design, high reliability | Improved range and battery life | High accuracy claims | Remote probe capability, wide temperature rand |
@@ -64,10 +65,10 @@ To understand how each sensor performs in real-world scenarios, I tested the sen
 
 From the data recorded in the last 24 hours:
 
-* The **SONOFF Zigbee** sensor shows slight deviations but remains close to the average readings, indicating good accuracy. It reacts more quickly to temperature changes then the Aqara sensors.
-* The **Aqara (Old Version)** and new **Aqara T1** getting almost identical measurements for temperature, while the humidity values of the old version are minimal higher than the T1 and average.
-* The **NOUS E5** seams to be calibrated very good, the temperature and humidity readings are always in the middle.
-* The **OWON Remote Probe** sensor provides readings slightly higher then the other sensors and it reacts more quickly to temperature changes.
+- The **SONOFF Zigbee** sensor shows slight deviations but remains close to the average readings, indicating good accuracy. It reacts more quickly to temperature changes then the Aqara sensors.
+- The **Aqara (Old Version)** and new **Aqara T1** getting almost identical measurements for temperature, while the humidity values of the old version are minimal higher than the T1 and average.
+- The **NOUS E5** seams to be calibrated very good, the temperature and humidity readings are always in the middle.
+- The **OWON Remote Probe** sensor provides readings slightly higher then the other sensors and it reacts more quickly to temperature changes.
 
 ## Integrating with Home Assistant
 
@@ -84,9 +85,10 @@ Here’s a quick guide to get started:
 1. **Hardware Requirements**: You’ll need a ZigBee coordinator, such as the [Home Assistant Connect ZBT-1](https://www.home-assistant.io/connectzbt1/), [ITead SONOFF Zigbee 3.0 USB Dongle)](https://itead.cc/product/zigbee-3-0-usb-dongle/) or [ConBee II USB adapter](https://phoscon.de/conbee2), to act as a bridge between your ZigBee devices and Home Assistant.
 2. **Setting Up ZHA**:
 
-   * Go to the **Integrations** section in Home Assistant.
-   * Click on **Add Integration** and search for **Zigbee Home Automation (ZHA)**.
-   * Follow the prompts to select your ZigBee coordinator and configure the integration.
+   - Go to the **Integrations** section in Home Assistant.
+   - Click on **Add Integration** and search for **Zigbee Home Automation (ZHA)**.
+   - Follow the prompts to select your ZigBee coordinator and configure the integration.
+
 3. **Pairing Sensors**: Once ZHA is set up, you can pair your sensors by putting them into pairing mode (usually by pressing a button on the sensor). The sensors should automatically appear in Home Assistant under ZHA devices.
 4. **Configuring Entities**: After pairing, each sensor will be listed as an entity in Home Assistant. You can rename, group, and set automations for these sensors to fit your specific needs.
 
@@ -102,9 +104,9 @@ Another alternative to ZHA is **deCONZ**, powerful integration for ZigBee device
 
 When choosing a ZigBee temperature and humidity sensor, consider what features are most important for your specific needs. For indoor usage all for sensors are good choices.
 
-* **For General Home Use**: The SONOFF Zigbee Temperature and Humidity Sensor offers a good balance between price, accuracy, making it an excellent choice for most users.
-* **For "I want an established Brand"**: Both Aqara sensors are reliable choices, go with the newer T1 version.
-* **For Specialized Applications**: The OWON Zigbee Remote Temperature Probe is ideal for applications needing precise placement and monitoring of specific areas, such as greenhouses or attics.
+- **For General Home Use**: The SONOFF Zigbee Temperature and Humidity Sensor offers a good balance between price, accuracy, making it an excellent choice for most users.
+- **For "I want an established Brand"**: Both Aqara sensors are reliable choices, go with the newer T1 version.
+- **For Specialized Applications**: The OWON Zigbee Remote Temperature Probe is ideal for applications needing precise placement and monitoring of specific areas, such as greenhouses or attics.
 
 No matter your choice, integrating these sensors with Home Assistant will allow you to automate and monitor your home environment efficiently, making your smart home smarter and more comfortable.
 

@@ -2,17 +2,18 @@
 title: Building a Mario Bros. Clock
 category: project
 tags:
-  - arduino
-  - development
-  - esphome
+ - arduino
+ - development
+ - esphome
 images:
-  feature: /assets/images/mario-bros-1.jpg
+ feature: /assets/images/mario-bros-1.jpg
 description: I recently found a DIY project that makes a custom LED Mario Bros.
-  clock that is very cool. Since I'm huge fan of Super Mario I absolutely had to
-  rebuild it.
+ clock that is very cool. Since I'm huge fan of Super Mario I absolutely had to
+ rebuild it.
 date: 2023-04-15
 permalink: mario-bros-clock/
 ---
+
 I'm a big fan of Nintendo and Super Mario since I was a teenager. One of my most played games in my life was probably Super Mario Land on the Gameboy. I still own it and an original Gameboy as well. I recently found a [cool DIY project](https://www.hackster.io/jnthas/mario-bros-clock-4a0436) - [Clockwise](https://clockwise.page/) Mario Bros. Clock by Jonathas Barbosa. I absolutely had to rebuild it. With this project you can create your own animated Mario clock. With a nice frame it can be a retro decorative object for any environment.
 
 ![Display backside with Trinity board](/assets/images/mario-bros-1.jpg){class="x-small"}
@@ -61,7 +62,6 @@ With the current firmware version 1.1.0 some additional settings can be adjusted
 **Update Dec. 01 2023**
 The Clockwise firmware has got a bunch of new releases since the first post. You are now able configure automatic brightness, connect a photoresistor (LDR sensor), customize the NTP server.
 You can now also configure the time zone using [Posix Timezone string](https://github.com/ropg/ezTime#timezones-1) in case the automatic time zone selection (which requires extra network ports) does not work.
-
 
 ## The final result
 

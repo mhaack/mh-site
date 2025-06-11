@@ -2,19 +2,20 @@
 title: Make Your Reolink Camera Speak with Home Assistant TTS & AI
 category: project
 tags:
-  - home-assistant
-  - home-automation
-  - camera
-  - ai
+ - home-assistant
+ - home-automation
+ - camera
+ - ai
 images:
-  feature: /assets/images/camera_ai_banner.png
-  height: null
+ feature: /assets/images/camera_ai_banner.png
+ height: null
 description: Use Home Assistant to turn camera motion into AI-powered spoken
-  descriptions. Snapshot, analyze with AI, and push to your speaker with text-to-speech.
-  Your smart home can now tell you what's happening outside!
+ descriptions. Snapshot, analyze with AI, and push to your speaker with text-to-speech.
+ Your smart home can now tell you what's happening outside!
 date: 2025-05-04
 permalink: making-your-reolink-camera-talk/
 ---
+
 Ever wish your security camera could actually speak? Let's talk about camera alerts and how we can make them even smarter. You've got your smart home cameras connected to the Home Assistant, and you get notifications whenever there's motion. In my article [Automate Reolink camera notifications](https://markus-haack.com/automate-reolink-camera-notifications/), I explained how you can automate the camera notifications. That's useful, sure. But a generic "person/car/animal detected" alert often leaves you pulling out your phone, opening the app, and waiting for the live feed to figure out what's actually going on. More often than not, it's just the cat from next door or the postman doing his rounds.
 
 I wanted something smarter. I wanted Home Assistant to not just tell me that something happened, but what happened. Turns out with a little help from AI my smart home actually understand the camera feed.
@@ -49,13 +50,13 @@ First things first, Home Assistant needs a way to talk to Google's AI. There's a
 Once added, you'll have a new service available in Home Assistant:
 `google_generative_ai_conversation. generate_content`. This is what we'll use in the automation.
 
-## Step 2: Ensure Your AI Conversation Integration  is Ready
+## Step 2: Ensure Your AI Conversation Integration is Ready
 
 You can test the AI conversation agent via the Developer Tool > Actions page.
 
 ![Testing the Google Generative AI conversation agent](/assets/images/screenshot_camera_ai_2.png 'Screenshot 2: Testing the Google Generative AI conversation agent'){class="small"}
 
-Search the *Google Generative AI: Generate content* integration as shown in the screenshot and fill in the form with some test questions. Then click *Perform Action*.
+Search the _Google Generative AI: Generate content_ integration as shown in the screenshot and fill in the form with some test questions. Then click _Perform Action_.
 
 ## Step 3: Set up Text-to-Speech (TTS)
 
@@ -67,27 +68,27 @@ Similar like above, you can test it via the Developer Tool > Actions page.
 
 ![Testing the Text-to-speech](/assets/images/screenshot_camera_ai_3.png 'Screenshot 3: Testing the Text-to-speech'){class="small"}
 
-Locate *Text-to-speech (TTS): Speak* like in the screenshot and fill out the form. You can also select your preferred language and voice.
+Locate _Text-to-speech (TTS): Speak_ like in the screenshot and fill out the form. You can also select your preferred language and voice.
 
 ## Step 4: Build the Automation
 
 Now for the fun part: putting it all together in an automation. We'll mostly use the UI editor, which is generally the easiest way to get started. For one step, we also need to switch to YAML.
 
-1. Go to Settings -> Automations & Scenes -> Automations.    
+1. Go to Settings -> Automations & Scenes -> Automations.
 2. Click + Create Automation and then Start with an empty automation.
 
 ### Configuration:
 
-* Give it a clear name, like "Camera Motion - AI Analysis".
+- Give it a clear name, like "Camera Motion - AI Analysis".
 
 ### Trigger
 
-* Click *+ Add Trigger*.
-* Select Device.
-* Choose your camera from the list of devices.
-**Note:** This part is specific to how your camera integrates. If your camera doesn't expose a motion binary sensor directly as a device trigger, you might need to use an Entity trigger monitoring the motion sensor's state change. For my Reolink camera in this example, a Device trigger works.
-* The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like `binary_sensor.YOUR_CAMERA_NAME_motion`).
-* The Type should be motion (see YAML below). This should be set automatically when using the visual editor.
+- Click *+ Add Trigger*.
+- Select Device.
+- Choose your camera from the list of devices.
+  **Note:** This part is specific to how your camera integrates. If your camera doesn't expose a motion binary sensor directly as a device trigger, you might need to use an Entity trigger monitoring the motion sensor's state change. For my Reolink camera in this example, a Device trigger works.
+- The Entity field should automatically show related entities. Select the motion binary sensor for your camera (it might be named something like `binary_sensor.YOUR_CAMERA_NAME_motion`).
+- The Type should be motion (see YAML below). This should be set automatically when using the visual editor.
 
 ![Camera triggering the action](/assets/images/screenshot_camera_ai_4.png 'Screenshot 4: Camera triggering the action'){class="small"}
 
@@ -103,43 +104,43 @@ Here's where the magic sequence happens. Click *+ Add Action* multiple times t
 
 **Action 1: Take a Snapshot**
 
-* Browse to and select the *Camera: Take Snapshot* service (aka `camera.snapshot`).
-* For Target, select the camera entity (`camera.YOUR_CAMERA_NAME`) that you want to take a snapshot of.
-* For Filename, you need to specify where you want to save the image. A good place is the `/media` folder, which Home Assistant uses by default for recordings and snapshots. Set the filename to something like `/media/camera/frontdoor_snapshot.jpg`. You can change `frontdoor_snapshot.jpg` to whatever makes sense, but remember that the `/media/` path is important. Home Assistant needs permission to write here, which it usually has for this path.
+- Browse to and select the _Camera: Take Snapshot_ service (aka `camera.snapshot`).
+- For Target, select the camera entity (`camera.YOUR_CAMERA_NAME`) that you want to take a snapshot of.
+- For Filename, you need to specify where you want to save the image. A good place is the `/media` folder, which Home Assistant uses by default for recordings and snapshots. Set the filename to something like `/media/camera/frontdoor_snapshot.jpg`. You can change `frontdoor_snapshot.jpg` to whatever makes sense, but remember that the `/media/` path is important. Home Assistant needs permission to write here, which it usually has for this path.
 
 Tip: You can take one or more snapshots. Gemini AI can also process more images and give you a more accurate answer. However, this will require more tokens and cost more money, depending on your conversation integration and AI subscription.
 
 **Action 2: Add a Delay**
 
-* Click *+ Add Action* again.
-* Select Delay.
-* Set a short delay, maybe 5 seconds. This gives Home Assistant time to actually write the snapshot file to disk before the next step tries to read it. It might not always be necessary, but it helps prevent errors.
+- Click *+ Add Action* again.
+- Select Delay.
+- Set a short delay, maybe 5 seconds. This gives Home Assistant time to actually write the snapshot file to disk before the next step tries to read it. It might not always be necessary, but it helps prevent errors.
 
 **Action 3: Send to Gemini AI**
 
-* Click *+ Add Action* again.
-* Locate and select the *Google Generative AI 'Generate content'* service.
-* This service takes a prompt and can analyze camera snapshots.
-* Enter the prompt: This is where you tell the AI what to do. The example YAML below has a specific, funny prompt that asks it to act like a "grumpy security officer" and answer in German. If you use this prompt, the AI's response will be in English.
+- Click *+ Add Action* again.
+- Locate and select the _Google Generative AI 'Generate content'_ service.
+- This service takes a prompt and can analyze camera snapshots.
+- Enter the prompt: This is where you tell the AI what to do. The example YAML below has a specific, funny prompt that asks it to act like a "grumpy security officer" and answer in German. If you use this prompt, the AI's response will be in English.
   You can copy this, or write your own prompt in English (or any other language Gemini supports) if you prefer a different output. Make it specific about what you expect, ask it to briefly describe what it sees, ignore stationary objects/cars/buildings, etc.
-* Add a camera snapshot filename. Check *Attachment filenames* and enter the filename of the camera snapshot image.  Make sure the filename matches the one in your snapshot action, like `/media/camera/frontdoor_snapshot.jpg`.
-If you are taking multiple snapshots from your camera, make sure you add all the filenames.
-* It is important to add a field for the response variable. This is the name of a variable that will store the AI's response for use in later actions. The example uses `response`.
+- Add a camera snapshot filename. Check _Attachment filenames_ and enter the filename of the camera snapshot image. Make sure the filename matches the one in your snapshot action, like `/media/camera/frontdoor_snapshot.jpg`.
+  If you are taking multiple snapshots from your camera, make sure you add all the filenames.
+- It is important to add a field for the response variable. This is the name of a variable that will store the AI's response for use in later actions. The example uses `response`.
 
 **Action 4: Speak the Result**
 
-* Click *+ Add Action* again.
-* Browse to your TTS service and select it. If you're using Home Assistant Cloud, it's `tts.home_assistant_cloud`.
-* For Target, select the media_player entity (your speaker) where you want to play the message.
-{% raw %}
-* In the message file, enter or copy the following template `{{ response.text }}`.
-{% endraw %}
+- Click _+ Add Action_ again.
+- Browse to your TTS service and select it. If you're using Home Assistant Cloud, it's `tts.home_assistant_cloud`.
+- For Target, select the media_player entity (your speaker) where you want to play the message.
+  {% raw %}
+- In the message file, enter or copy the following template `{{ response.text }}`.
+  {% endraw %}
   This will cause Home Assistant to switch to the YAML-based editor, as templates are not supported in the visual editor.
   Your YAML should have at least three configurations: the speaker entity, the text-to-speech action and the message with the template.
 
 **Save:**
 
-* Once all actions are added, click Save in the bottom right.
+- Once all actions are added, click Save in the bottom right.
 
 If set up correctly the automation steps should look like this:
 
@@ -147,53 +148,53 @@ If set up correctly the automation steps should look like this:
 
 ## The Complete YAML
 
-If you prefer to work with YAML, or just want to see how the whole thing is structured, here's my automation code. If you build yours following the steps above, it should look similar. Feel free to copy it: 
+If you prefer to work with YAML, or just want to see how the whole thing is structured, here's my automation code. If you build yours following the steps above, it should look similar. Feel free to copy it:
 
 ```yaml
 alias: Front door motion detection with AI description
-description: ""
+description: ''
 triggers:
-  - type: motion
-    device_id: <camera devide id>
-    entity_id: <camera motion sensor entity id>
-    domain: binary_sensor
-    trigger: device
+ - type: motion
+   device_id: <camera devide id>
+   entity_id: <camera motion sensor entity id>
+   domain: binary_sensor
+   trigger: device
 conditions:
-  - condition: state
-    entity_id: group.family
-    state: Home
+ - condition: state
+   entity_id: group.family
+   state: Home
 actions:
-  - action: camera.snapshot
-    metadata: {}
-    data:
-      filename: /media/camera/frontdoor_snapshot.jpg
-    target:
-      entity_id:
-        - <camera entity id>
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
-  - action: google_generative_ai_conversation.generate_content
-    metadata: {}
-    data:
-      prompt: >-
-        You are a grumpy security officed whatching surveillance cameras all day
-        long. Briefly describe what you see in this image from my frontdoor
-        camera. Don't describe stationary objects, cars or buildings. Answer
-        always in German.
-      filenames:
-        - /media/camera/frontdoor_snapshot.jpg
-    response_variable: response
-  - action: tts.speak
-    metadata: {}
-    data:
-      cache: true
-      media_player_entity_id: media_player.move
-      message: "{{ response.text }}"
-    target:
-      entity_id: tts.home_assistant_cloud
+ - action: camera.snapshot
+   metadata: {}
+   data:
+    filename: /media/camera/frontdoor_snapshot.jpg
+   target:
+    entity_id:
+     - <camera entity id>
+ - delay:
+    hours: 0
+    minutes: 0
+    seconds: 5
+    milliseconds: 0
+ - action: google_generative_ai_conversation.generate_content
+   metadata: {}
+   data:
+    prompt: >-
+     You are a grumpy security officed whatching surveillance cameras all day
+     long. Briefly describe what you see in this image from my frontdoor
+     camera. Don't describe stationary objects, cars or buildings. Answer
+     always in German.
+    filenames:
+     - /media/camera/frontdoor_snapshot.jpg
+   response_variable: response
+ - action: tts.speak
+   metadata: {}
+   data:
+    cache: true
+    media_player_entity_id: media_player.move
+    message: '{{ response.text }}'
+   target:
+    entity_id: tts.home_assistant_cloud
 mode: single
 ```
 

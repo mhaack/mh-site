@@ -3,7 +3,7 @@ title: Our home sweet smart home
 author: Markus
 date: 2020-01-14T00:00:00.000Z
 permalink: jama-villa/
-description:  Our Home Assistant setup is pretty simple - everything currently runs on a single board computer - smooth and stable for over 12 months. This is our setup.
+description: Our Home Assistant setup is pretty simple - everything currently runs on a single board computer - smooth and stable for over 12 months. This is our setup.
 images:
  feature: /assets/images/2020-01-14-jama-villa/dashboard-teaser.jpg
 category: project

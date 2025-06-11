@@ -1,10 +1,10 @@
 import EleventyFetch from '@11ty/eleventy-fetch';
-  
-export default async function () {
-  const API_KEY_PLAUSIBLE = process.env.API_KEY_PLAUSIBLE
 
-  const now = new Date()
-  const [nowDate] = now.toISOString().split("T")
+export default async function () {
+  const API_KEY_PLAUSIBLE = process.env.API_KEY_PLAUSIBLE;
+
+  const now = new Date();
+  const [nowDate] = now.toISOString().split('T');
 
   const plausibleUrl = new URL('https://plausible.io/api/v1/stats/breakdown');
   plausibleUrl.searchParams.append('site_id', 'markus-haack.com');
@@ -24,4 +24,4 @@ export default async function () {
   }).catch();
   const pages = await res;
   return pages.results;
-};
+}

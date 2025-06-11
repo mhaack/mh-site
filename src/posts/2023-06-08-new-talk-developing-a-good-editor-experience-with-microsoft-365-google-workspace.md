@@ -1,19 +1,20 @@
 ---
-title: "New Talk: Developing a good editor experience with Microsoft 365/Google Workspace"
+title: 'New Talk: Developing a good editor experience with Microsoft 365/Google Workspace'
 description: Learn how to create intuitive content structures that empower authors in AEM Edge Delivery projects using familiar tools like Microsoft 365 and Google Workspace. Discover best practices and avoid common pitfalls when implementing document-based authoring workflows.
 seo:
-  title: "Build a good editor experience for AEM Edge Delivery"
+ title: 'Build a good editor experience for AEM Edge Delivery'
 category: work
 tags:
-  - adobe
-  - aem
-  - development
-  - conference
+ - adobe
+ - aem
+ - development
+ - conference
 images:
-  feature: /assets/images/dev-live-aem-doc-based-authoring.jpg
+ feature: /assets/images/dev-live-aem-doc-based-authoring.jpg
 date: 2023-06-08
 permalink: aem-document-based-authoring/
 ---
+
 In May Adobe hosted the Adobe Developers Live virtual conference for Adobe Experience Manager. The conference focused on building next generation composable services, universal editor, edge delivery and generative AI.
 
 I gave a presentation about the new AEM document-based authoring and how to build an effective editor experience with Microsoft 365/Google Workspace.

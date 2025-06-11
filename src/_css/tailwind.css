@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "./prism-okaidia.css";
+@import 'tailwindcss';
+@import './prism-okaidia.css';
 @plugin "@tailwindcss/typography";
 
 @theme {
@@ -73,7 +73,6 @@
 }
 
 @layer base {
-
   /* ibm-plex-sans-regular - latin */
   @font-face {
     font-display: swap;
@@ -158,7 +157,6 @@
 }
 
 @utility prose {
-
   h2,
   h3 {
     @apply inline;

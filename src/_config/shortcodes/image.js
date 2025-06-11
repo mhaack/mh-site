@@ -1,7 +1,7 @@
 import Image from '@11ty/eleventy-img';
 import path from 'node:path';
 
-const stringifyAttributes = attributeMap => {
+const stringifyAttributes = (attributeMap) => {
   return Object.entries(attributeMap)
     .map(([attribute, value]) => {
       if (typeof value === 'undefined') return '';
@@ -19,7 +19,7 @@ export const imageShortcode = async (
   imageClass,
   widths = [650, 960, 1400],
   sizes = 'auto',
-  formats = ['avif', 'webp', 'jpeg']
+  formats = ['avif', 'webp', 'jpeg'],
 ) => {
   // Prepend "./src" if not present
   if (!src.startsWith('./src')) {
@@ -35,28 +35,28 @@ export const imageShortcode = async (
       const extension = path.extname(src);
       const name = path.basename(src, extension);
       return `${name}-${width}w.${format}`;
-    }
+    },
   });
 
   const lowsrc = metadata.jpeg[metadata.jpeg.length - 1];
 
   const imageSources = Object.values(metadata)
-    .map(imageFormat => {
+    .map((imageFormat) => {
       return `  <source type="${imageFormat[0].sourceType}" srcset="${imageFormat
-        .map(entry => entry.srcset)
+        .map((entry) => entry.srcset)
         .join(', ')}" sizes="${sizes}">`;
     })
     .join('\n');
 
   const imageAttributes = stringifyAttributes({
-    'src': lowsrc.url,
-    'width': lowsrc.width,
-    'height': lowsrc.height,
+    src: lowsrc.url,
+    width: lowsrc.width,
+    height: lowsrc.height,
     alt,
     loading,
-    'decoding': loading === 'eager' ? 'sync' : 'async',
-    ...(imageClass && {class: imageClass}),
-    'eleventy:ignore': ''
+    decoding: loading === 'eager' ? 'sync' : 'async',
+    ...(imageClass && { class: imageClass }),
+    'eleventy:ignore': '',
   });
 
   const pictureElement = `<picture> ${imageSources}<img ${imageAttributes}></picture>`;
