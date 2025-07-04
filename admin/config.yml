@@ -6,16 +6,16 @@ backend: # Set up your backend
 local_backend: true
 
 publish_mode: editorial_workflow
-media_folder: content/images
+media_folder: src/assets/images
 public_folder: /images
 
 collections:
   - name: "posts"
     create: true
-    folder: "content/posts"
+    folder: "src/posts"
     label_singular: "Post"
     label: "Posts"
-    media_folder: "/src/assets/images/"
+    media_folder: "src/assets/images/"
     public_folder: "/img"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sort: "date:desc"
@@ -71,7 +71,7 @@ collections:
     files:
       - name: "home"
         label: "Homepage"
-        file: "content/index.md"
+        file: "src/pages/index.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "string" }
@@ -80,7 +80,7 @@ collections:
           - { label: "Body", name: "body", widget: "markdown" }
       - name: "about"
         label: "About Me"
-        file: "content/about.md"
+        file: "src/page/about.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Image", name: "image", widget: "string" }
@@ -89,7 +89,7 @@ collections:
 
       - name: "datasecurity"
         label: "Datenschutz"
-        file: "content/datenschutz.md"
+        file: "src/page/datenschutz.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
@@ -98,7 +98,7 @@ collections:
 
       - name: "imprint"
         label: "Impressum"
-        file: "content/impressum.md"
+        file: "src/pages/impressum.md"
         fields:
           - { label: "Titel", name: "title", widget: "string" }
           - { label: "Layout", name: "layout", widget: "string" }
