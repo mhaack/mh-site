@@ -15,16 +15,17 @@ permalink: /smart-ev-charging/
 ---
 Are you familiar with the following situation? 
 
-You're coming back from shopping or work ... and the battery of your EV car is running low, so you need to charge it. Just plug in the wallbox and switch on charging? But at the same time, you've still got groceries and other stuff in the trunk, and your hands are full.  Ever found yourself fumbling for the RFID chip or card or opening the wallbox app just to start charging your electric vehicle?
+You've just returned from shopping or work and the battery in your electric car is running low, so you need to charge it. You just need to plug the charging cable into the EV charger and switch charging on. But at the same time, you've still got groceries and other stuff in the trunk, and your hands are full.  Ever found yourself fumbling for the RFID chip or card or opening the charger app just to start charging your electric vehicle?
 
-We are actually regularly in exactly this situation. Our wallbox is openly accessible from the street. That's why we have a model that can be locked so that nobody can charge their car without authorisation. Unlocking them isn't usually a big deal, but sometimes it is when you have your hands full, have to carry something, etc.
+We are actually regularly in exactly this situation. Our EV charger is openly accessible from the street. That's why we have a model that can be locked so that nobody can charge their car without authorisation. Unlocking them isn't usually a big deal, but sometimes it is when you have your hands full, have to carry something, etc.
 
 What if your smart home could automatically recognize your car and start charging without any manual intervention? Today I'll show you how I built an intelligent EV charging automation that uses camera motion detection and AI-powered license plate recognition to automatically unlock and start charging when our Polestar arrives home.
 
 This leads us to two challenges:
+
 ### Securing an EV Charger in an Open Carport
 
-As our carport faces the street, our EV charger is visible and accessible to anyone walking by. Without proper access control, neighbours or strangers could easily plug in their vehicles and charge at our expense. Of course, we have cameras, but they won't stop everyone. Especially if we're away from home for a while.
+As our carport faces the street, our EV charger is visible and accessible to anyone walking by. Without proper access control, neighbours or strangers could easily plug in their vehicles and charge at our expense. Of course, we have cameras, but they won't stop everyone. This is particularly problematic if we're away from home for a while.
 
 Fortunately, most modern smart home chargers address this issue by offering built-in authorisation options, often via RFID or an app. However, having to unlock them manually every time becomes tedious. This is where automation comes in, intelligently recognising authorised vehicles and automatically managing access control.
 
@@ -42,29 +43,32 @@ I used the cameras to recognise our car. The vehicle and the number plate are re
 
 ## Compatible Charger Requirements
 
-This automation works with any smart EV home chargeer that supports authentication control and Home Assistant integration. Whether you have a KEBA - like our Keba P30, Wallbox, Ohme, Easee, Myenergi, go-e Charger, OpenWB, or other compatible charging station, the core principles remain the same. 
+This automation works with any smart EV home chargeer that supports authentication control and Home Assistant integration. Whether you have a KEBA - like our [Keba P30](https://www.keba.com/en/emobility/products/c-series/c-series?changelanguage=en), Wallbox, Ohme, Easee, Myenergi, go-e Charger, OpenWB, or other compatible charging station, the core principles remain the same. 
 
 If the charging station is installed in a garage or locked area, this is of course the easiest way. Since our carport is open and accessible to anyone passing by, we need a charger which can be locked and is only useable after authorization.
 
 For this automation to work with your setup, your EV charger must integrated with Home Assistant and needs to meet these essential requirements:
 
-- **Lock entity**: For controlling authentication/access (`lock.wallbox_authentication`)
-- **Binary sensors**: For plug state and charging state monitoring
-- **Reliable connectivity**: Either local network or cloud-based control
+* Lock entity: For controlling authentication/access (`lock.wallbox_authentication`)
+* Binary sensors: For plug state and charging state monitoring
+* Reliable connectivity: Either local network or cloud-based control
     
+
 ## Our Hardware Setup
 
 ### The EV charger
 
 The heart of our setup is the **KEBA P30 wallbox**, which has [excellent integration](https://www.home-assistant.io/integrations/keba/) into Home Assistant. The KEBA integration provides binary sensors for charging state, plug state, energy counters, and crucially, a lock entity for authentication control and start/stop of the actually charging session.
+
 ### Camera System
 
-I'm using [**Reolink cameras**](https://markus-haack.com/reolink-cameras-in-home-assistant/) and one of them is positioned in our carport to detect when a vehicle arrives. Our front door camera can also see the driveway. The cameras support generic motion detection, as well as person and vehicle detection, and snapshot functionality, all of which are accessible through Home Assistant. The vehicle detection binary sensors serve as our automation triggers.
+I'm using **[Reolink cameras](https://markus-haack.com/reolink-cameras-in-home-assistant/)** and one of them is positioned in our carport to detect when a vehicle arrives. Our front door camera can also see the driveway. The cameras support generic motion detection, as well as person and vehicle detection, and snapshot functionality, all of which are accessible through Home Assistant. The vehicle detection binary sensors serve as our automation triggers.
+
 ### AI Integration
 
 As the camera itself can recognise vehicles as well as people or animals, we use it to take a snapshot photo. We now need image recognition to analyse the photo and recognise the number plate. For this we use an AI integration from Home Assistant.
 
-I use the [**Google Generative AI**](https://www.home-assistant.io/integrations/google_generative_ai_conversation/) for license plate recognition from camera snapshots. This eliminates the need for complex local computer vision setups while providing reliable plate detection and vehicle identification. Other AI integration such as [OpenAI](https://www.home-assistant.io/integrations/openai_conversation/) or [Anthropic Conversation](https://www.home-assistant.io/integrations/anthropic/) should also work here. If you don't want to send your photos to the cloud, you can also use a local LLM (Large Language Model) via [Ollama](https://www.home-assistant.io/integrations/ollama/) with a little more effort and computing power.
+I use the **[Google Generative AI](https://www.home-assistant.io/integrations/google_generative_ai_conversation/)** for license plate recognition from camera snapshots. This eliminates the need for complex local computer vision setups while providing reliable plate detection and vehicle identification. Other AI integration such as [OpenAI](https://www.home-assistant.io/integrations/openai_conversation/) or [Anthropic Conversation](https://www.home-assistant.io/integrations/anthropic/) should also work here. If you don't want to send your photos to the cloud, you can also use a local LLM (Large Language Model) via [Ollama](https://www.home-assistant.io/integrations/ollama/) with a little more effort and computing power.
 
 For more information about Home Assistant and AI integration topics see this [blog post](https://www.home-assistant.io/blog/2024/06/07/ai-agents-for-the-smart-home/).
 
@@ -79,6 +83,7 @@ The configuration varies depending on the brand of EV charger:
 For a KEBA charger, such as the one we have, the configuration is pretty simple. You only need to provide the charger's hostname or IP address in your network and the RFID tag key used for authorisation.
 
 For other common brands, this will be slightly different. Commonly used chargers (according to Google) are:
+
 * Wallbox brand chargers: use the built-in Home Assistant integration
 * go-e Charger: install the [community integration](https://github.com/marq24/ha-goecharger-api2) via HACS
 * Tesla Wall Connector: use the built-in Home Assistant integration
@@ -119,17 +124,129 @@ This is how my automation looks like with the KEBA P30 charger and the Reolink c
 
 Here is the YAML version so that you can better adopt and customise it:
 
-```YAML
-ddlödlk
-   kjkld
-```
+````yaml
+alias: Automatic Car Charging
+description: ""
+triggers:
+  - type: turned_on
+    device_id: a8715.....................6f44e2
+    entity_id: 41585.....................7f54bc
+    domain: binary_sensor
+    trigger: device
+  - type: turned_on
+    device_id: 3d634.....................76e7e4
+    entity_id: e2dc6.....................5ede79
+    domain: binary_sensor
+    trigger: device
+conditions:
+  - condition: state
+    entity_id: binary_sensor.keba_p30_charging_state
+    state: "off"
+actions:
+  - delay:
+      hours: 0
+      minutes: 5
+      seconds: 0
+      milliseconds: 0
+  - action: camera.snapshot
+    metadata: {}
+    data:
+      filename: /media/camera/carport_snapshot.jpg
+    target:
+      device_id: a8715.....................6f44e2
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 2
+      milliseconds: 0
+    enabled: true
+  - if:
+      - condition: state
+        entity_id: binary_sensor.keba_p30_charging_state
+        state: "off"
+      - condition: state
+        entity_id: binary_sensor.keba_p30_plug
+        state: "on"
+      - condition: state
+        entity_id: lock.keba_p30_authentication
+        state: locked
+    then:
+      - action: google_generative_ai_conversation.generate_content
+        metadata: {}
+        data:
+          prompt: >-
+            Detect if a car enters the carport. The camara taking the picture is
+            place inside the carport below the roof. Only focus on cars directly
+            in front, max 5 meters, of the carport building or inside the carport
+            itself. The car must clearly entering the drive-in or be already
+            inside the carport.
+
+
+            Ignore:
+
+            * Ignore cars just driving by.
+
+            * Ignore cars on the other side of the street
+
+            * Ignore cars in the neighbours garage or carport which is located
+            on the opposite side of the street
+
+            * Ignore the car directly next to the yellow house on the other side
+            of the street.
+
+            * Ignore cars in the background
+
+
+            If a car enters the carport tell the details about the cars color
+            and the license plate number of the car.
+
+
+            Always return a valid JSON object, use the following return JSON
+            format: 
+
+            {
+               "license": "...",
+               "color": "..."
+            }
+          filenames:
+            - /media/camera/carport_snapshot.jpg
+        response_variable: response
+      - variables:
+          ai_result: "{{ response.text | replace('json', '') | replace('```', '') }}"
+      - if:
+          - condition: template
+            value_template: "{{ ai_result.license in ['X 1234E', 'X:1234E', 'X1234E'] }}"
+        then:
+          - action: notify.mobile_app_iphone
+            metadata: {}
+            data:
+              title: JaMa Villa - Auto
+              message: >-
+                Polestar ist in Carport gefahren, starte Ladevorgang
+                automatisch.
+          - action: lock.unlock
+            metadata: {}
+            data: {}
+            target:
+              entity_id: lock.keba_p30_authentication
+        else:
+          - action: notify.mobile_app_iphone
+            metadata: {}
+            data:
+              message: >-
+                Ein Auto ist im Carport und an der Wallbox, kann aber nicht
+                erkennen welches. Vielleicht mal nachschauen?
+              title: JaMa Villa - Auto
+mode: single
+
+````
 
 ### Make it your own
 
 Even if it is not a blueprint, the automation can be adapted relatively easily. The following changes are necessary for this:
 
 * Device and Entity IDs
-  Replace all device IDs and entity IDs with those from your specific setup. Use _Developer Tools → States_ to find the correct entities for your cameras and charger.
+  Replace all device IDs and entity IDs with those from your specific setup. Use *Developer Tools → States* to find the correct entities for your cameras and charger.
 * Licence plate check:
   Assuming your licence plate is different to ours :-), you need to change the check in line XX as well.
 * Unlock the charger:
@@ -145,9 +262,9 @@ The current automation works very well for us. I'm very happy with it as it make
 
 However, as a Home Assistant Pro, you're always thinking about how you can optimise things even further. I also have the following ideas:
 
-- Multiple Vehicle Support: this is not an issue for us as we only have one car, but it certainly is for others.
-- Smart surplus charging via the PV system, which will definitely be an option for us.
-- Integrate with Home Assistant presence detection to disable the automation when residents are away, adding an extra security layer.
+* Multiple Vehicle Support: this is not an issue for us as we only have one car, but it certainly is for others.
+* Smart surplus charging via the PV system, which will definitely be an option for us.
+* Integrate with Home Assistant presence detection to disable the automation when residents are away, adding an extra security layer.
 
 This smart EV charging automation is a really versatile solution. It's got camera motion detection, AI image analysis and a connected EV charger, all controlled by Home Assistant. This means it's really convenient and secure, as it automatically starts charging the cars you know about while blocking others. The logic works with various EV charger brands and camera setups, just needing a few minor tweaks for your specific hardware.
 
