@@ -107,7 +107,7 @@ Set up the AI integration for image analysis capabilities. In case of Google Gen
 
 The automation follows a sophisticated workflow that balances security with convenience:
 
-<< flow chart >>
+![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow")
 
 1. **Motion Detection**: Camera sensors detect movement in the carport area via two different cameras
 2. **1. Condition Checks**: Verify if the is already charging?
