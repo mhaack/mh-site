@@ -1,5 +1,5 @@
 ---
-title: Smart EV Charging: Automatic Home Charger Control with AI License Plate Recognition
+title: "Smart EV Charging: Automatic Home Charger Control with AI License Plate Recognition"
 description: Learn how to automate secure access to your EV charger using Home Assistant! This tutorial shows you how to automatically unlock and authorize charging only when your specific car is detected. Ditch the RFID cards and ensure only authorized vehicles can charge effortlessly.
 category: project
 tags:
