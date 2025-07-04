@@ -7,13 +7,13 @@ sitemap:
  ignore: true
 ---
 
-<h2 class="mb-8">Since you are here - check out my latest <a href="/projects/">projects</a></h2>
+<h2 class="mb-8">Since you are here - check out my latest smart home and electronic projects</h2>
 
 {% set postslist = collections.posts | category("project") | head(-3) | reverse %}
 {% include "partials/postslist.njk" %}
 
 
-<h2 class="mt-16 mb-8">The most popular projects & posts - <a href="/popular/">view all</a></h2>
+<p class="mt-16 mb-8">The most popular projects & posts - <a href="/popular/">view all</a></p>
 
 {%- set postslist = collections.posts | popularPosts(analytics) | head(5) -%}
 <ol class="list-decimal list-inside mx-auto lg:max-w-none text-2xl bg-white shadow-lg p-4">
