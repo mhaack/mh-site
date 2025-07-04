@@ -33,7 +33,7 @@
                 {{ post.date | readableDate }}
               </time>
               <span class="mx-1">·</span>
-              <span>{{ post | readingTime }} read</span>
+              <span>{{ post.rawInput | readingTime }} read</span>
             </span>
             {%- if showstats %}
               {%- set stats = post | pageStats(analytics) | first -%}

@@ -1,6 +1,6 @@
 export const readingTime = (content) => {
   if (!content || typeof content !== 'string') {
-    return '1 min read';
+    return '1 min';
   }
   const wordsPerMinute = 200;
   const words = content
@@ -8,5 +8,5 @@ export const readingTime = (content) => {
     .split(/\s+/)
     .filter((word) => word.length > 0).length;
   const readingTime = Math.max(1, Math.ceil(words / wordsPerMinute));
-  return `${readingTime} min read`;
+  return `${readingTime} min`;
 };

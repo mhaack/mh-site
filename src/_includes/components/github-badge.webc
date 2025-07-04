@@ -1,7 +1,7 @@
 <div class="not-prose my-4">
   <div class="relative inline-block align-top h-12 pr-4 border border-gray-300 bg-gray-100 hover:shadow-md">
     <a :href="`https://github.com/${this.repo}`" :alt="`${this.label ? this.label : 'Source code on GitHub'}`" target="_blank"
-      class="no-underline hover:text-mountain-600 hover:underline">
+      class="no-underline no-external hover:text-mountain-600 hover:underline">
       <div class="absolute mt-2 ml-2 text-gray-500 text-2xl"><svg xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512" class="w-8 h-8 fill-current">
           <path

@@ -20,7 +20,7 @@ The mqtt-bme280-homie sensor project is a small and easy to integrate temperatur
 
 The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable an easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
 
-![fully assembled](/assets/images/2017-01-11-mqtt-bme280-homie/box.jpg)
+![fully assembled](/assets/images/2017-01-11-mqtt-bme280-homie/box.jpg){class="x-small"}
 
 The display shows 4 screens (can be extended) in a carousel mode. temperature, humidity, air pressure and some status like IP address.
 
