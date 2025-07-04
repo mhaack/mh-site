@@ -130,9 +130,8 @@ This is how my automation looks like with the KEBA P30 charger and the Reolink c
 
 Here is the YAML version so that you can better adopt and customise it:
 
-````yaml
+```yaml
 alias: Automatic Car Charging
-description: ""
 triggers:
   - type: turned_on
     device_id: a8715.....................6f44e2
@@ -187,25 +186,17 @@ actions:
             itself. The car must clearly entering the drive-in or be already
             inside the carport.
 
-
             Ignore:
-
             * Ignore cars just driving by.
-
             * Ignore cars on the other side of the street
-
             * Ignore cars in the neighbours garage or carport which is located
             on the opposite side of the street
-
             * Ignore the car directly next to the yellow house on the other side
             of the street.
-
             * Ignore cars in the background
-
 
             If a car enters the carport tell the details about the cars color
             and the license plate number of the car.
-
 
             Always return a valid JSON object, use the following return JSON
             format: 
@@ -244,7 +235,7 @@ actions:
                 erkennen welches. Vielleicht mal nachschauen?
               title: JaMa Villa - Auto
 mode: single
-````
+```
 
 ### Make it your own
 
