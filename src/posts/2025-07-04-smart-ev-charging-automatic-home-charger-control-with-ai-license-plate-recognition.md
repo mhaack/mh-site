@@ -9,7 +9,7 @@ tags:
   - ai
   - electricity
 images:
-  feature: /assets/images/ec-charging-hero.jpg
+  feature: /assets/images/ev-charging-hero.jpg
 date: 2025-07-04
 permalink: /smart-ev-charging/
 ---
@@ -95,7 +95,7 @@ For other common brands, this will be slightly different. Commonly used chargers
 
 Make sure your cameras are properly integrated into Home Assistant, that they expose motion detection binary sensors, and that they can take snapshot photos. While [I recommend Reolink cameras](https://markus-haack.com/reolink-cameras-in-home-assistant/), a wide range of other brands can be integrated with Home Assistant.
 
-![Reolink Camera with vehicle detection](/assets/images/ec-charging-camera.png "Reolink Camera with vehicle detection"){class="small"}
+![Reolink Camera with vehicle detection](/assets/images/ev-charging-camera.png "Reolink Camera with vehicle detection"){class="small"}
 
 Ideally, the camera will already have built-in object and person detection, which is also exposed to Home Assistant. This can be used instead of generic motion detection. This means that the automation will only be triggered when a vehicle is detected, rather than with every movement. If only a cat crosses the path and no vehicle is detected, the automation does not need to be started. If this is not available as a binary sensor, a generic motion sensor will suffice. However, this often leads to images being sent to the AI for analysis even when there are no cars.
 
