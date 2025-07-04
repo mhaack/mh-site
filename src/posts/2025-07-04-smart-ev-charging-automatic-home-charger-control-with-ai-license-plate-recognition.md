@@ -120,7 +120,7 @@ The automation follows a sophisticated workflow that balances security with conv
 
 This is how my automation looks like with the KEBA P30 charger and the Reolink cameras:
 
-<< screenshot automation >>
+![Complete EV Charging Automation](/assets/images/ev-charging-automation.png "The complete EV Charging Automation")
 
 Here is the YAML version so that you can better adopt and customise it:
 
