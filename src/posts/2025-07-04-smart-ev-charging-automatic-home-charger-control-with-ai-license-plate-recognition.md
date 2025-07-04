@@ -9,7 +9,7 @@ tags:
   - ai
   - electricity
 images:
-  feature: /img/ec-charging-hero.jpg
+  feature: /assets/images/ec-charging-hero.jpg
 date: 2025-07-04
 permalink: /smart-ev-charging/
 ---
