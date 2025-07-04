@@ -27,6 +27,8 @@ This leads us to two challenges:
 
 As our carport faces the street, our EV charger is visible and accessible to anyone walking by. Without proper access control, neighbours or strangers could easily plug in their vehicles and charge at our expense. Of course, we have cameras, but they won't stop everyone. This is particularly problematic if we're away from home for a while.
 
+![EV Charger](/assets/images/ev-charging-carport.jpg "Freely accessible EV Charger"){class="small"}
+
 Fortunately, most modern smart home chargers address this issue by offering built-in authorisation options, often via RFID or an app. However, having to unlock them manually every time becomes tedious. This is where automation comes in, intelligently recognising authorised vehicles and automatically managing access control.
 
 ### Detecting the car
@@ -120,7 +122,7 @@ The automation follows a sophisticated workflow that balances security with conv
 
 This is how my automation looks like with the KEBA P30 charger and the Reolink cameras:
 
-![Complete EV Charging Automation](/assets/images/ev-charging-automation.png "The complete EV Charging Automation"){class="large"}
+![Complete EV Charging Automation](/assets/images/ev-charging-automation.png "The complete EV Charging Automation"){class="small"}
 
 Here is the YAML version so that you can better adopt and customise it:
 
