@@ -61,17 +61,17 @@ To mount the servo hot glue it in a 90-degree angle to the wooden stick on the b
 
 To move 10 servos with a small Wemos board we need some extra power. These small ESP8266 boards can only handle a current of ~500 mA in total max, enough to control two or three servo motors. To solve this, I use AA batteries as an additional power source to run all 10 servos. 2 boxes of 4 AA batteries in parallel provide 6 volts and enough juice to run the servos.
 
-![Fritzing Diagram](/assets/images/2018-10-30-halloween-creepy-eyes/fritzing.png)
+![Fritzing Diagram](/assets/images/2018-10-30-halloween-creepy-eyes/fritzing.png){class="small"}
 
 _Instructions:_
 
 Solder the pin header to the Wemos D1 and solder female pin header to the prototype board to hold the D1. On the opposite side, in the middle of the prototype board solder 3 rows of male pin header with 10 pins each. These are used to connect the 10 servos. 2 rows can be connected with solder for the ground and positive lines. The pins of the third row are connected to the digital pins of the Wemos D1. I used D0 to D8 and TX pin. The ground row is connected with the ground pin of the Wemos board as well.
 
-![Electronics](/assets/images/2018-10-30-halloween-creepy-eyes/electronics-3.jpg)
+![Electronics](/assets/images/2018-10-30-halloween-creepy-eyes/electronics-3.jpg){class="small"}
 
 The battery box(es) are connected with ground row (black wire) and positive row (red wire). If more than one battery box is used to provide more power they must be connected in parallel.
 
-![Electronics](/assets/images/2018-10-30-halloween-creepy-eyes/electronics-1.jpg)
+![Electronics](/assets/images/2018-10-30-halloween-creepy-eyes/electronics-1.jpg){class="small"}
 
 ## Software
 
@@ -84,7 +84,7 @@ The pumpkin is, of course, the most important part of this project 😉
 _Instructions:_
 Use the marker to mark 10 circles with the size of the plastic tube used for the eyes. These should not be too close to each other to still have enough space inside.
 
-![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-1.jpg)
+![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-1.jpg){class="small"}
 
 Cut around the stem of the pumpkin at an angle. Make it big enough, this will make connecting the eyes later much easier. After done cutting, all the way around, remove the stem and the guts from the pumpkin.
 
@@ -92,7 +92,7 @@ Next cut the 10 circle holes for the eyes. Make sure to cut with an angle to get
 
 Place the eyes in the holes and fix them from the inside with hot glue. The challenge is hot glue does not stick so well on pumpkin pulp. I turned screws into the pulp to help to fix it.
 
-![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-2.jpg)
+![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-2.jpg){class="small"}
 
 When placing the eyes make sure the servo will not be blocked.
 
@@ -100,6 +100,6 @@ Connect all servos to the headers on the board. Pay attention to the right conne
 
 ## The final result
 
-![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-3.jpg)
+![Pumkpin](/assets/images/2018-10-30-halloween-creepy-eyes/pumpkin-3.jpg){class="small"}
 
 I placed some Bluetooth speaker next to the pumpkin playing some Halloween tunes from YouTube to have nice spooky sound effects.
