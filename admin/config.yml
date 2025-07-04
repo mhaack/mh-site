@@ -15,7 +15,7 @@ collections:
     folder: "src/posts"
     label_singular: "Post"
     label: "Posts"
-    media_folder: "src/assets/images/"
+    media_folder: "/src/assets/images/"
     public_folder: "/assets/images"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     sort: "date:desc"
