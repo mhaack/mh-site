@@ -5,7 +5,7 @@ date: 2019-07-08
 author: Markus
 description: My second Home Assistant project is about the integration of the Homematic HM-Dis-EP-WM55 e-paper display in my HA setup. I am sharing some reusable scripts for this or similar devices.
 images:
- feature: /assets/images/2019-07-08-home-assistant-display/header.jpg
+ feature: /assets/images/home-assistant-display-hero.jpg
 category: project
 tags:
  - home-automation

@@ -5,7 +5,7 @@ author: Markus
 date: 2019-05-21
 description: This project is about the change I did from OpenHab to Home Assistant for our smart home automation system. Ok maybe the headline sounds a bit too sensational but change our entire home automation setup from one system we used for 2+ years now to a completely new one requires quite some heavy lifting.
 images:
- feature: /assets/images/2019-05-21-home-assistant/header.jpg
+ feature: /assets/images/2019-05-21-home-assistant/hero.jpg
 category: project
 tags:
  - home-automation
