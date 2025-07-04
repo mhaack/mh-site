@@ -107,7 +107,7 @@ Set up the AI integration for image analysis capabilities. In case of Google Gen
 
 The automation follows a sophisticated workflow that balances security with convenience:
 
-![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow")
+![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow"){class="small"}
 
 1. **Motion Detection**: Camera sensors detect movement in the carport area via two different cameras
 2. **1. Condition Checks**: Verify if the is already charging?
@@ -120,7 +120,7 @@ The automation follows a sophisticated workflow that balances security with conv
 
 This is how my automation looks like with the KEBA P30 charger and the Reolink cameras:
 
-![Complete EV Charging Automation](/assets/images/ev-charging-automation.png "The complete EV Charging Automation")
+![Complete EV Charging Automation](/assets/images/ev-charging-automation.png "The complete EV Charging Automation"){class="large"}
 
 Here is the YAML version so that you can better adopt and customise it:
 
