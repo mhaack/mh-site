@@ -263,7 +263,7 @@ Licence plate recognition may require 2-3 attempts and some trial and error. AI 
 
 The current automation works very well for us. I'm very happy with it as it makes starting the charging process really easy!
 
-However, as a Home Assistant Pro, you're always thinking about how you can optimise things even further. I also have the following ideas:
+However, as a Home Assistant Pro, you're always thinking about how you can optimise things even further ;-). I also have the following ideas:
 
 * Multiple Vehicle Support: this is not an issue for us as we only have one car, but it certainly is for others.
 * Smart surplus charging via the PV system, which will definitely be an option for us.
