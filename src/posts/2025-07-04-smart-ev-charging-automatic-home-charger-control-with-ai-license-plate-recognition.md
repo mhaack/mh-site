@@ -111,12 +111,14 @@ The automation follows a sophisticated workflow that balances security with conv
 
 ![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow"){class="small"}
 
-1. **Motion Detection**: Camera sensors detect movement in the carport area via two different cameras
-2. **1. Condition Checks**: Verify if the is already charging?
-3. **Patience Delay**: 5-minute wait to allow parking and cable connection
-4. **Condition Checks**: Verify the car is plugged in, the EV charger is locked, and not already charging
-5. **AI Analysis**: Capture and analyze a snapshot to identify the license plate
-6. **Smart Decision**: Unlock and start charging for authorized vehicles, or send alerts for unknown cars
+1. Motion Detection: Camera sensors detect movement in the carport area via two different cameras
+
+   1. Condition Checks: Verify if the is already charging?
+2. Patience Delay: 5-minute wait to allow parking and cable connection
+
+   2. Condition Checks: Verify the car is plugged in, the EV charger is locked, and not already charging
+3. AI Analysis: Capture and analyze a snapshot to identify the license plate
+4. Smart Decision: Unlock and start charging for authorized vehicles, or send alerts for unknown cars
 
 ### The Complete Automation
 
@@ -272,3 +274,8 @@ This smart EV charging automation is a really versatile solution. It's got camer
 We've successfully used this automation with our KEBA P30 and Polestar over the last two weeks. Its key strength lies in Home Assistant's ability to integrate diverse technologies – from simple sensors to advanced AI – into a practical automation that genuinely enhances daily life, regardless of your chosen EV charger. 
 
 Happy automating, and enjoy the convenience of never having to fumble for charging authentication again – no matter which EV charger or car you choose!
+
+Image sources:
+
+* Hero: [Michael Marais](https://unsplash.com/de/@michael_marais?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+* Charger with car: [Zaptec](https://unsplash.com/de/@zaptec?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
