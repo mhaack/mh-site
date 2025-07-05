@@ -8,6 +8,10 @@ tags:
   - smarthome
 images:
   feature: /assets/images/evcc-hero.png
+description: Discover how to set up and configure the powerful evcc software to
+  intelligently control your EV charging, maximizing the use of your home's
+  solar surplus energy. This guide walks you through the process, turning daily
+  charging into a seamless, optimized experience.
 date: 2025-07-05
 permalink: /intro-into-evcc-charging/
 ---
@@ -42,7 +46,7 @@ Where can you combine a Keba P30 EV charger, a SolarEdge solar inverter and a BY
 
 The basic functions of evcc are pretty simple. The software handles your electricity sources, like our photovoltaic system and the grid, the state of the home battery, and the charging status of your electric vehicle.
 
-<<< diagram wie bei evcc >>>
+![Energy flow and control diagram](/assets/images/evcc-diagram.png "evcc controlling the energy flow")
 
 It uses all the data points to work out the best charge rate and time for your electric vehicle, based on how much solar power is being produced at the moment and the electricity tariff. The idea is to make sure you've got as much surplus energy as possible, while also keeping grid electricity costs as low as possible.
 
