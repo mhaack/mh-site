@@ -56,7 +56,7 @@ As they don't receive any external funding from vendors, the developers have cho
 
 evcc offers three distinct charging modes, each serving different scenarios. In fact, there are four modes if we include "off".
 
-![evcc charging modes](/assets/images/evcc-1.png "evcc charging modes")
+![evcc charging modes](/assets/images/evcc-1.png "evcc charging modes"){class="x-small"}
 
 ### PV Mode (Solar Only)
 
@@ -312,7 +312,7 @@ And that's it. The complete configuration took about 30 minutes. I already had a
 
 Now it's time to connect the vehicle to the EV Charger and start the first charging process. Ideally on a sunny day. If everything is configured correctly, evcc should now start correctly and in the user interface we should be able to see the power generation data, the consumption, the status of the house battery and, most importantly, the charging process of the vehicle.
 
-![evcc - car charging user interface](/assets/images/evcc-2.png "evcc - car charging user interface")
+![evcc - car charging user interface](/assets/images/evcc-2.png "evcc - car charging user interface"){class="small"}
 
 ## Conclusion: A Game-Changer for Smart Solar Charging
 
