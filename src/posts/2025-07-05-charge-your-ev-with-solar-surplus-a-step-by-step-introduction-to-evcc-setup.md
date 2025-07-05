@@ -7,7 +7,7 @@ tags:
   - photovoltaic
   - smarthome
 images:
-  feature: /assets/images/ev-charging-hero.jpg
+  feature: /assets/images/evcc-hero.png
 date: 2025-07-05
 permalink: /intro-into-evcc-charging/
 ---
@@ -20,7 +20,7 @@ I’m becoming a big fan of evcc, and I’m happy to share my experiences with i
 
 ## What is evcc and Why Should You Care?
 
-[**evcc.io**](https://evcc.io/en/) is an open-source energy management system specifically designed for electric vehicle charging optimization. Think of it as the brain that decides when, how fast, and with what energy source your EV should charge.
+**[evcc.io](https://evcc.io/en/)** is an open-source energy management system specifically designed for electric vehicle charging optimization. Think of it as the brain that decides when, how fast, and with what energy source your EV should charge.
 
 The core functionality of evcc revolves around surplus solar charging - using your excess photovoltaic energy to charge your electric car instead of feeding it back to the grid. 
 
@@ -31,6 +31,7 @@ But it goes beyond simple solar charging, it also handles:
 * Charging planning to ensure your car is ready when you need it
 * Home Assistant integration for seamless automation
     
+
 What sets evcc apart is its manufacturer-agnostic approach. evcc isn't proprietary and works with all sorts of brands and devices. At the time of writing this post 106 EV charger brands, 28 car brands, 21 heat pumps & electric heaters, 71 solar inverter & storage systems and 82 energy meters are supported. 
 
 Yes, there are also other (commercial) solutions for smart electric car charging, for example from energy providers or EV charger manufacturers, but which solution covers such a broad set of devices and vehicles?
@@ -55,7 +56,7 @@ As they don't receive any external funding from vendors, the developers have cho
 
 evcc offers three distinct charging modes, each serving different scenarios. In fact, there are four modes if we include "off".
 
-<< screenshot - wie bei https://docs.evcc.io/en/docs/features/solar-charging>>
+![evcc charging modes](/assets/images/evcc-1.png "evcc charging modes")
 
 ### PV Mode (Solar Only)
 
@@ -311,7 +312,7 @@ And that's it. The complete configuration took about 30 minutes. I already had a
 
 Now it's time to connect the vehicle to the EV Charger and start the first charging process. Ideally on a sunny day. If everything is configured correctly, evcc should now start correctly and in the user interface we should be able to see the power generation data, the consumption, the status of the house battery and, most importantly, the charging process of the vehicle.
 
-<<< screenshot >>>
+![evcc - car charging user interface](/assets/images/evcc-2.png "evcc - car charging user interface")
 
 ## Conclusion: A Game-Changer for Smart Solar Charging
 
