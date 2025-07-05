@@ -99,7 +99,7 @@ evcc offers [several installation methods](https://docs.evcc.io/en/docs/installa
 * Windows
   It is possible to run evcc on Windows, but the creators do not really recommend it as it is Linux software.
 * **Home Assistant Add-On**
-  This is the route I chose, and for good reason. Since our entire smart home [runs on Home Assistant](https://markus-haack.com/jama-villa-2024/), having evcc as a native add-on was the obvious choice for me. It provides me with:
+  This is the route I chose, and for good reason. Since our entire smart home [runs on Home Assistant](/jama-villa-2024/), having evcc as a native add-on was the obvious choice for me. It provides me with:
 
   * Seamless integration with existing Home Assistant entities
   * A single interface for managing all smart home devices
