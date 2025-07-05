@@ -4,10 +4,11 @@ description: Learn how to automate secure access to your EV charger using Home A
 category: project
 tags:
   - home-assistant
-  - home-automation
-  - camera
+  - smarthome
   - ai
   - electricity
+  - ev-charging
+  - camera
 images:
   feature: /assets/images/ev-charging-hero.jpg
 date: 2025-07-04
