@@ -26,7 +26,7 @@ What if your smart home could automatically recognize your car and start chargin
 
 This leads us to two challenges:
 
-### Securing an EV Charger in an Open Carport
+## Securing an EV Charger in an Open Carport
 
 As our carport faces the street, our EV charger is visible and accessible to anyone walking by. Without proper access control, neighbours or strangers could easily plug in their vehicles and charge at our expense. Of course, we have cameras, but they won't stop everyone. This is particularly problematic if we're away from home for a while.
 
@@ -34,7 +34,7 @@ As our carport faces the street, our EV charger is visible and accessible to any
 
 Fortunately, most modern smart home chargers address this issue by offering built-in authorisation options, often via RFID or an app. However, having to unlock them manually every time becomes tedious. This is where automation comes in, intelligently recognising authorised vehicles and automatically managing access control.
 
-### Detecting the car
+## Detecting the car
 
 The second challenge is recognising the vehicle and, above all, the right vehicle. We only want to activate the charger when our own vehicle is parked and not a other random vehicle.
 
@@ -46,7 +46,7 @@ As the [Polestar integration](https://github.com/pypolestar/polestar_api) can on
 
 I used the cameras to recognise our car. The vehicle and the number plate are recognised via a snapshot which is analysed by AI. The automatic charging process is only started if the correct licence plate number is recognised.
 
-## Compatible Charger Requirements
+## Compatible EV Charger Requirements
 
 This automation works with any smart EV home chargeer that supports authentication control and Home Assistant integration. Whether you have a KEBA - like our [Keba P30](https://www.keba.com/en/emobility/products/c-series/c-series?changelanguage=en), Wallbox, Ohme, Easee, Myenergi, go-e Charger, OpenWB, or other compatible charging station, the core principles remain the same. 
 
@@ -61,6 +61,8 @@ For this automation to work with your setup, your EV charger must integrated wit
 
 ## Our Hardware Setup
 
+The core setup consists of three components.
+
 ### The EV charger
 
 The heart of our setup is the **KEBA P30 wallbox**, which has [excellent integration](https://www.home-assistant.io/integrations/keba/) into Home Assistant. The KEBA integration provides binary sensors for charging state, plug state, energy counters, and crucially, a lock entity for authentication control and start/stop of the actually charging session.
@@ -69,7 +71,7 @@ The heart of our setup is the **KEBA P30 wallbox**, which has [excellent integra
 
 I'm using **[Reolink cameras](https://markus-haack.com/reolink-cameras-in-home-assistant/)** and one of them is positioned in our carport to detect when a vehicle arrives. Our front door camera can also see the driveway. The cameras support generic motion detection, as well as person and vehicle detection, and snapshot functionality, all of which are accessible through Home Assistant. The vehicle detection binary sensors serve as our automation triggers.
 
-### AI Integration
+### AI Integration for License Plate Detection
 
 As the camera itself can recognise vehicles as well as people or animals, we use it to take a snapshot photo. We now need image recognition to analyse the photo and recognise the number plate. For this we use an AI integration from Home Assistant.
 
@@ -108,20 +110,18 @@ Ideally, the camera will already have built-in object and person detection, whic
 
 Set up the AI integration for image analysis capabilities. In case of Google Generative AI you'll need an API key from Google AI Studio. For others the setup process is mostly similar. 
 
-## Lets automate it
+## Lets make it Smart
 
 The automation follows a sophisticated workflow that balances security with convenience:
 
 ![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow"){class="small"}
 
 1. Motion Detection: Camera sensors detect movement in the carport area via two different cameras
-
-   1. Condition Checks: Verify if the is already charging?
-2. Patience Delay: 5-minute wait to allow parking and cable connection
-
-   2. Condition Checks: Verify the car is plugged in, the EV charger is locked, and not already charging
-3. AI Analysis: Capture and analyze a snapshot to identify the license plate
-4. Smart Decision: Unlock and start charging for authorized vehicles, or send alerts for unknown cars
+2. Condition Checks: Verify if the is already charging?
+3. Patience Delay: 5-minute wait to allow parking and cable connection
+4. Condition Checks: Verify the car is plugged in, the EV charger is locked, and not already charging
+5. AI Analysis: Capture and analyze a snapshot to identify the license plate
+6. Smart Decision: Unlock and start charging for authorized vehicles, or send alerts for unknown cars
 
 ### The Complete Automation
 
