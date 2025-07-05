@@ -14,6 +14,9 @@ description: Discover how to set up and configure the powerful evcc software to
   charging into a seamless, optimized experience.
 date: 2025-07-05
 permalink: /intro-into-evcc-charging/
+seo:
+  title: Guide to Optimal Solar EV Charging with evcc
+  description: "Ready to charge your EV with solar surplus? Follow this tutorial on configuring evcc to intelligently manage and optimize your home charging."
 ---
 Two weeks ago, I took the next step in optimizing our smart home energy setup by implementing [evcc](https://evcc.io/en/) (Electric Vehicle Charging Controller). This post describes my journey to a fully automated solar surplus EV charging for our car.
 
