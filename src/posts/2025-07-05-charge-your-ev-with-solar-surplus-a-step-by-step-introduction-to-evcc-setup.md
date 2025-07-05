@@ -321,3 +321,5 @@ evcc is exactly what smart home technology should be: intelligent, automated, an
 It transforms our EV charging into a seamless process that optimizes for cost, environment, and convenience. For anyone with solar panels and an electric vehicle, evcc is not just recommended – if you as me – it's essential.
 
 What are your thoughts or experiences with smart charging?
+
+Source Hero Image: Google AI Studio
