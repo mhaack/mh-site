@@ -230,39 +230,6 @@ Now it's time to connect the vehicle to the EV Charger and start the first charg
 
 ![evcc - car charging user interface](/assets/images/evcc-2.png "evcc - car charging user interface"){class="small"}
 
-## Troubleshooting Common Issues
-
-A few common issues that you might stumble upon:
-
-### ModBus Connection Problems
-
-If you're getting connection errors with your solar inverter, double-check:
-- The correct IP address and port
-- Whether you need a ModBus proxy, if the device does not support multiple ModBus connections (as I did with SolarEdge)
-
-### Vehicle API Issues
-
-Sometimes the vehicle integration fails to connect:
-- Verify your credentials are correct
-- Check if your car manufacturer requires API access to be enabled
-- Some car integration requiere a "developer" account being set up
-- Some vehicles need to be "woken up" before the API responds
-
-### Charging Not Starting
-
-If evcc shows everything is configured but charging doesn't start:
-- Check if your charger requires authorization (RFID card, app unlock)
-- Verify the `welcomecharge` setting for chargers that need it
-- Ensure your minimum solar surplus threshold is realistic
-- Check if the car's charging limit is set correctly
-
-### Home Assistant Integration
-
-For the Home Assistant add-on specifically:
-- Check the add-on logs for specific error messages
-- Verify that your `evcc.yaml` file is in the correct location
-- Restart the add-on after configuration changes
-
 ## Cost Analysis and Savings
 
 While it's still early days, I'm already seeing the benefits:
