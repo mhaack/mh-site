@@ -18,7 +18,7 @@ Are you the proud owner of an electric car? Do you charge it at home? Have you i
 
 Look no further if you want to find the best and most cost-effective ways to charge your car with as much solar power as possible.
 
-I'm becoming a big fan of evcc, and I'm happy to share my experiences with it so far. To avoid making this post too long, I will give an introduction to evcc and explain what it does and why you should care. In a later post, I'll walk you through the complete setup and configuration process with real-world examples.
+I'm becoming a big fan of evcc, and I'm happy to share my experiences with it so far. To avoid making this post too long, I will give an introduction to evcc and explain what it does and why you should care. In a [second post](/evcc-setup-guide/), I'll walk you through the complete setup and configuration process with real-world examples.
 
 ## What is evcc and Why Should You Care?
 
