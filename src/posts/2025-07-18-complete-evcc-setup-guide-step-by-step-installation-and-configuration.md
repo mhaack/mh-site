@@ -4,6 +4,9 @@ category: project
 tags:
   - electricity
   - ev-charging
+  - photovoltaic
+  - smarthome
+  - home-assistant
 images:
   feature: /assets/images/evcc-hero-2.png
 description: Follow this detailed technical guide to set up and configure evcc
