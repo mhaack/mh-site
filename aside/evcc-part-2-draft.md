@@ -3,14 +3,17 @@ title: "Complete evcc Setup Guide: Step-by-Step Installation and Configuration"
 category: project
 tags:
   - electricity
+  - photovoltaic
   - ev-charging
+  - smarthome
 images:
-  feature: /assets/images/evcc-hero.png
-description: Follow this detailed technical guide to set up and configure evcc
-  with real-world examples. Learn how to integrate your solar inverter, EV
-  charger, and vehicle for optimal solar surplus charging.
-date: 2025-07-18
+  feature: /assets/images/evcc-setup-hero.png
+description: Follow this detailed technical guide to set up and configure evcc with real-world examples. Learn how to integrate your solar inverter, EV charger, and vehicle for optimal solar surplus charging.
+date: 2025-07-XX
 permalink: /evcc-setup-guide/
+seo:
+  title: Step-by-Step evcc Installation and Configuration Guide
+  description: Complete technical guide for setting up evcc with SolarEdge, Keba P30, and Polestar. Includes real configuration files and troubleshooting tips.
 ---
 
 In [my previous post about evcc](/intro-into-evcc-charging/), I introduced you to this powerful open-source energy management system and explained why it's essential for anyone with solar panels and an electric vehicle. Now it's time to get our hands dirty with the actual setup and configuration process.
@@ -232,21 +235,23 @@ Now it's time to connect the vehicle to the EV Charger and start the first charg
 
 ## Troubleshooting Common Issues
 
-A few common issues that you might stumble upon:
+During my setup, I encountered a few common issues that you might face as well:
 
 ### ModBus Connection Problems
 
 If you're getting connection errors with your solar inverter, double-check:
 - The correct IP address and port
-- Whether you need a ModBus proxy, if the device does not support multiple ModBus connections (as I did with SolarEdge)
+- Whether you need a ModBus proxy (as I did with SolarEdge)
+- Firewall settings on your network
+- Whether the device supports multiple ModBus connections
 
 ### Vehicle API Issues
 
 Sometimes the vehicle integration fails to connect:
 - Verify your credentials are correct
 - Check if your car manufacturer requires API access to be enabled
-- Some car integration requiere a "developer" account being set up
 - Some vehicles need to be "woken up" before the API responds
+- Trial tokens might have limited functionality
 
 ### Charging Not Starting
 
@@ -259,22 +264,111 @@ If evcc shows everything is configured but charging doesn't start:
 ### Home Assistant Integration
 
 For the Home Assistant add-on specifically:
+- Make sure the add-on has access to your network
 - Check the add-on logs for specific error messages
 - Verify that your `evcc.yaml` file is in the correct location
 - Restart the add-on after configuration changes
+
+## Optimizing Your Setup
+
+Once everything is working, there are several ways to optimize your system:
+
+### Fine-Tuning Solar Surplus
+
+You can adjust the minimum surplus required to start charging. I found that setting it too low causes frequent start/stop cycles, while too high means missing charging opportunities.
+
+### Battery Priority Settings
+
+If you have a home battery, you can configure priority levels:
+- High priority: Charge house battery first, then EV
+- Balanced: Charge both simultaneously when surplus allows
+- EV priority: Favor EV charging over battery charging
+
+### Charging Plans
+
+For days when you know you'll need a full charge, you can set up charging plans that ensure your car is ready by a specific time, even if it means using grid power.
+
+### Load Management
+
+If you have other high-power devices (heat pump, electric heater), evcc can manage the total load to prevent overloading your electrical connection.
+
+## Home Assistant Integration
+
+One of the biggest advantages of the Home Assistant add-on is the seamless integration. evcc automatically creates entities in Home Assistant for:
+
+- Current charging power
+- Vehicle state of charge
+- Solar surplus available
+- Charging mode status
+- Energy costs and savings
+
+You can use these entities to:
+- Create dashboards showing your energy flow
+- Set up automations based on charging status
+- Send notifications when charging is complete
+- Track energy usage and cost savings over time
+
+## Performance and Monitoring
+
+After two weeks of operation, I'm impressed with evcc's performance:
+
+- **Response Time**: Power adjustments happen within seconds of solar production changes
+- **Accuracy**: The surplus calculations are spot-on compared to my inverter readings
+- **Reliability**: No crashes or connection issues so far
+- **User Interface**: Clean, informative, and responsive
+
+The web interface provides real-time insights into your energy flow, making it easy to understand what's happening and why.
 
 ## Cost Analysis and Savings
 
 While it's still early days, I'm already seeing the benefits:
 
-- **Reduced Grid Consumption**: In June & July we charged our car 13 times - 268,4 kWh so far with 71% solar power
+- **Reduced Grid Consumption**: Instead of buying expensive grid electricity for charging, we're using our own solar power
 - **Better Feed-in Utilization**: Rather than selling excess solar power for 9 cents/kWh, we're using it to avoid buying grid power at 30 cents/kWh
 - **Optimized Battery Usage**: The home battery provides backup during cloud cover, reducing charging interruptions
 
+I'll provide a detailed cost analysis in a future post once I have more data to work with.
+
 ## Summary: Your Smart Charging System Awaits
 
-Setting up evcc turned out to be much easier than I expected. Excellent documentation and well-documented templates for devices and vehicles made the configuration process straightforward.
+Setting up evcc turned out to be much easier than I expected. The combination of excellent documentation, helpful community, and well-designed templates made the configuration process straightforward.
 
 If you have the basic components - solar panels, an EV charger, and an electric vehicle - evcc can transform your charging experience from a simple plug-and-go to an intelligent, cost-optimized system that maximizes your renewable energy usage.
 
+The key benefits I've experienced so far:
+
+**Cost Savings**: Using our own solar power instead of expensive grid electricity for charging
+
+**Environmental Impact**: Maximizing the use of our renewable energy production
+
+**Convenience**: Fully automated charging that adapts to solar conditions and our needs
+
+**Flexibility**: Multiple charging modes for different scenarios
+
+**Privacy**: All processing happens locally, no cloud dependencies
+
+**Future-Proof**: Open-source development ensures continued updates and improvements
+
+## What's Next?
+
+In my next update, I'll share real-world results after several weeks of operation:
+- Actual energy savings and cost reductions
+- User experience insights from daily use
+- Lessons learned and configuration optimizations
+- Integration with other smart home systems
+- Seasonal performance variations
+
+The journey from standard EV charging to intelligent solar surplus charging has been rewarding, and I'm excited to see how the system performs over the coming months.
+
 **Ready to optimize your own EV charging?** The evcc community is incredibly helpful, and the documentation is comprehensive. Whether you choose the Home Assistant add-on route like me or prefer a different installation method, you'll have your smart charging system up and running in no time.
+
+---
+
+*What are your thoughts or experiences with smart charging? Have questions about evcc or need help with your specific setup? I respond to every message and love helping fellow EV owners optimize their systems.*
+
+### Related Articles:
+- [Charge Your EV with Solar Surplus: Introduction to evcc](/intro-into-evcc-charging/)
+- [Going Green: Our Complete Solar Installation Journey](/our-own-electricity-1/)
+- [Smart EV Charging: Home Assistant Integration](/smart-ev-charging/)
+
+Source Hero Image: Google AI Studio
