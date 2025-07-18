@@ -18,7 +18,7 @@ Are you the proud owner of an electric car? Do you charge it at home? Have you i
 
 Look no further if you want to find the best and most cost-effective ways to charge your car with as much solar power as possible.
 
-I'm becoming a big fan of evcc, and I'm happy to share my experiences with it so far. To avoid making this post too long, I will give an introduction to evcc and explain what it does and why you should care. In a later post, I'll walk you through the complete setup and configuration process with real-world examples.
+I'm becoming a big fan of evcc, and I'm happy to share my experiences with it so far. To avoid making this post too long, I will give an introduction to evcc and explain what it does and why you should care. In a [second post](/evcc-setup-guide/), I'll walk you through the complete setup and configuration process with real-world examples.
 
 ## What is evcc and Why Should You Care?
 
@@ -133,12 +133,10 @@ Here's why I'm such a fan:
 
 If you're interested in implementing evcc for your setup, the next step is the actual installation and configuration. This involves configuring your specific solar inverter, EV charger, and vehicle - which can seem daunting but is actually quite straightforward with the right guidance.
 
-In my next post, I'll share the complete step-by-step setup process, including:
+In my next post "[Complete evcc Setup Guide: Step-by-Step Installation and Configuration](/evcc-setup-guide/)", I'll share the complete step-by-step setup process, including:
 - Detailed installation walkthrough for different methods
 - Real-world configuration examples with specific hardware
 - How to set up and test each component
-- Troubleshooting common issues
-- Tips for optimizing your system
 
 The complete configuration took me about 30 minutes, and I already had all the information for the respective devices available from my Home Assistant setup.
 
