@@ -133,12 +133,10 @@ Here's why I'm such a fan:
 
 If you're interested in implementing evcc for your setup, the next step is the actual installation and configuration. This involves configuring your specific solar inverter, EV charger, and vehicle - which can seem daunting but is actually quite straightforward with the right guidance.
 
-In my next post, I'll share the complete step-by-step setup process, including:
+In my next post "[Complete evcc Setup Guide: Step-by-Step Installation and Configuration](/evcc-setup-guide/)", I'll share the complete step-by-step setup process, including:
 - Detailed installation walkthrough for different methods
 - Real-world configuration examples with specific hardware
 - How to set up and test each component
-- Troubleshooting common issues
-- Tips for optimizing your system
 
 The complete configuration took me about 30 minutes, and I already had all the information for the respective devices available from my Home Assistant setup.
 
