@@ -1,17 +1,5 @@
----
-title: "Introduction to evcc: Smart Solar EV Charging Made Simple"
-category: project
-tags:
-  - electricity
-  - photovoltaic
-  - ev-charging
-  - smarthome
-images:
-  feature: /assets/images/evcc-hero.png
-description: Two weeks into using evcc for solar EV charging - here's my complete introduction to this open-source charging controller and why it's a game-changer for electric vehicle owners.
-date: 2025-07-05
-permalink: /intro-into-evcc-charging/
----
+
+
 Two weeks ago, I took the next step in optimizing our smart home energy setup by implementing [evcc](https://evcc.io/en/) (Electric Vehicle Charging Controller). This post describes my journey and gives you a complete introduction to what evcc can do for your EV charging setup.
 
 Are you the proud owner of an electric car? Do you charge it at home? Have you installed a photovoltaic system on your roof? If so, then this article is exactly what you're looking for!
@@ -22,17 +10,15 @@ I'm becoming a big fan of evcc, and I'm happy to share my experiences with it so
 
 ## What is evcc and Why Should You Care?
 
-**[evcc.io](https://evcc.io/en/)** is an open-source energy management system specifically designed for electric vehicle charging optimization. Think of it as the brain that decides when, how fast, and with what energy source your EV should charge.
+[evcc.io](https://evcc.io/en/) is an open-source energy management system specifically designed for electric vehicle charging optimization. Think of it as the brain that decides when, how fast, and with what energy source your EV should charge.
 
 The core functionality of evcc revolves around surplus solar charging - using your excess photovoltaic energy to charge your electric car instead of feeding it back to the grid.
 
 But it goes beyond simple solar charging, it also handles:
-
-* Intelligent load management based on current household consumption
-* Dynamic pricing integration to charge when electricity is cheapest
-* Charging planning to ensure your car is ready when you need it
-* Home Assistant integration for seamless automation
-    
+- Intelligent load management based on current household consumption
+- Dynamic pricing integration to charge when electricity is cheapest
+- Charging planning to ensure your car is ready when you need it
+- Home Assistant integration for seamless automation
 
 What sets evcc apart is its manufacturer-agnostic approach. evcc isn't proprietary and works with all sorts of brands and devices. At the time of writing this post 106 EV charger brands, 28 car brands, 21 heat pumps & electric heaters, 71 solar inverter & storage systems and 82 energy meters are supported.
 
@@ -44,13 +30,11 @@ Where can you combine a Keba P30 EV charger, a SolarEdge solar inverter and a BY
 
 The basic functions of evcc are pretty simple. The software handles your electricity sources, like our photovoltaic system and the grid, the state of the home battery, and the charging status of your electric vehicle.
 
-![Energy flow and control diagram](/assets/images/evcc-diagram.png "evcc controlling the energy flow")
+![evcc controlling the energy flow Energy flow and control diagram](/img/evcc-diagram-650w.jpeg)
 
 It uses all the data points to work out the best charge rate and time for your electric vehicle, based on how much solar power is being produced at the moment and the electricity tariff. The idea is to make sure you've got as much surplus energy as possible, while also keeping grid electricity costs as low as possible.
 
 The software runs always on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicles brands. It is an open-source development, and the entire codebase can be found on GitHub.
-
-<github-badge repo="evcc-io/evcc" ></github-badge>
 
 As they don't receive any external funding from vendors, the developers have chosen a community-funding-based approach to maintain the software. To use some of the commercial EV charger devices, you will need a sponsoring token. See the [sponsorship documentation](https://docs.evcc.io/en/docs/sponsorship) for more details. If you are not yet sure whether evcc is right for you, don't worry — you can also get a trial token and test whether all your hardware works together properly.
 
@@ -58,7 +42,7 @@ As they don't receive any external funding from vendors, the developers have cho
 
 evcc offers three distinct charging modes, each serving different scenarios. In fact, there are four modes if we include "off".
 
-![evcc charging modes](/assets/images/evcc-1.png "evcc charging modes"){class="x-small"}
+![evcc charging modes evcc charging modes](/img/evcc-1-650w.jpeg)
 
 ### PV Mode (Solar Only)
 
@@ -123,11 +107,28 @@ It transforms our EV charging into a seamless process that optimizes for cost, e
 
 Here's why I'm such a fan:
 
-**Universal Compatibility:** Unlike proprietary solutions, evcc works with virtually any combination of equipment. You're not locked into specific brands and can combine devices from different vendors.
+**Universal Compatibility:** Unlike proprietary solutions, evcc works with virtually any combination of equipment. You're not locked into specific brands.
 
-**Real Cost Savings:** Instead of selling your excess solar power back to the grid for a few cents and then buying expensive grid electricity to charge your car, evcc helps you use your own renewable energy directly.
+**Real Cost Savings:** Instead of selling your excess solar power back to the grid for pennies and then buying expensive grid electricity to charge your car, evcc helps you use your own renewable energy directly.
 
 **Privacy-Focused:** The software runs always on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicle brands.
+
+**Community-Driven:** As an open-source project, evcc benefits from continuous community contributions and improvements.
+
+## Is evcc Right for Your Setup?
+
+Based on my experience, evcc works particularly well if you:
+- Own an electric vehicle and have solar panels installed
+- Generate regular solar surplus that currently gets fed back to the grid
+- Want to maximize your renewable energy usage
+- Prefer local, privacy-friendly solutions
+- Are comfortable with some technical setup (or know someone who is)
+
+You might want to look elsewhere if:
+- You rarely generate solar surplus
+- You need guaranteed fast charging at specific times regardless of solar production
+- You're not comfortable with any technical configuration
+- Your driving patterns are completely unpredictable
 
 ## What's Next: Ready to Set It Up?
 
@@ -142,4 +143,21 @@ In my next post, I'll share the complete step-by-step setup process, including:
 
 The complete configuration took me about 30 minutes, and I already had all the information for the respective devices available from my Home Assistant setup.
 
-Source Hero Image: Google AI Studio
+---
+
+**Ready to dive into the technical setup?**
+
+**👉 [Complete evcc Setup Guide: Step-by-Step Installation and Configuration](link-to-article-2)**
+
+In this detailed guide, I'll walk you through exactly how I set up evcc with our SolarEdge inverter, BYD battery, Keba P30 charger, and Polestar vehicle. You'll see the actual configuration files, troubleshooting steps, and optimization tips that made the difference.
+
+Once we have charged our car a few more times, I'll also share what I've learned about the user experience and whether the promised energy savings can really be achieved.
+
+---
+
+*What are your thoughts or experiences with smart charging? Have questions about evcc? I respond to every message and love helping fellow EV owners optimize their setups.*
+
+### Related Articles:
+- [Complete evcc Installation Guide: Step-by-Step Setup](link-to-article-2)
+- [Going Green: Our Complete Solar Installation Journey](link-to-solar-series)
+- [Smart EV Charging: Home Assistant Integration](link-to-ha-integration)
