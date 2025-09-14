@@ -1,6 +1,8 @@
 ---
 title: 'Going Green: Installing a Solar System'
 description: Discover how we cut our electricity bills and achieved energy independence by installing a 9.45kW solar system with battery storage. Learn about our motivation, technical setup, and real-world journey to producing your own clean electricity.
+seo:
+ description: "Going green with solar: our 9.45kW system installation story. Energy independence journey with technical setup, motivation, and real-world results."
 category: project
 tags:
  - solar

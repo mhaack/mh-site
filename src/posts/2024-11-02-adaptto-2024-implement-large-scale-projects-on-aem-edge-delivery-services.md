@@ -1,6 +1,8 @@
 ---
 title: 'Implement large-scale projects on AEM Edge Delivery Services'
 description: Discover how AEM Edge Delivery Services has evolved beyond basic websites to power complex, multilingual enterprise projects. Learn the strategic approaches and real-world insights from this adaptTo() conference presentation on scaling global AEM implementations.
+seo:
+  description: "Scale AEM Edge Delivery beyond basic websites to complex, multilingual enterprise projects. Strategic approaches and real-world insights from adaptTo()."
 category: work
 tags:
  - adobe

@@ -2,7 +2,8 @@
 title: 'New Talk: Developing a good editor experience with Microsoft 365/Google Workspace'
 description: Learn how to create intuitive content structures that empower authors in AEM Edge Delivery projects using familiar tools like Microsoft 365 and Google Workspace. Discover best practices and avoid common pitfalls when implementing document-based authoring workflows.
 seo:
- title: 'Build a good editor experience for AEM Edge Delivery'
+ title: "Build a good editor experience for AEM Edge Delivery"
+ description: "Create intuitive AEM Edge Delivery content structures using Microsoft 365 and Google Workspace. Best practices for document-based authoring workflows."
 category: work
 tags:
  - adobe

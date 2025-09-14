@@ -4,6 +4,8 @@ permalink: mqtt-433mhz-gateway-homie/
 author: Markus
 date: 2017-01-22
 description: This project is a simple bidirectional gateway to transmit and receive 433Mhz RF signals connected to MQTT. It is built with a cost-effective ESP8266 WiFi chip, simple 433Mhz RF modules and an additional BMP085 sensor.
+seo:
+ description: "Build a 433MHz MQTT gateway using ESP8266 and RF modules. Bidirectional communication plus BMP085 sensor for comprehensive IoT integration."
 images:
  feature: /assets/images/2017-01-22-mqtt-433mhz-gateway-homie/gateway-hero.jpg
 category: project

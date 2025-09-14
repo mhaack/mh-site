@@ -12,6 +12,8 @@ images:
 description: Part 2 of my "Our Own Electricity" series gives an insight into our
  electricity production and consumption. After I explained our setup I will
  share details on the installation costs, our break even calculation.
+seo:
+ description: "Part 2: Solar electricity production and consumption insights. Installation costs, break-even calculation, and real-world performance data analysis."
 date: 2023-02-27
 permalink: our-own-electricity-2/
 ---

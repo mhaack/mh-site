@@ -12,6 +12,8 @@ images:
 description: Use Home Assistant to turn camera motion into AI-powered spoken
  descriptions. Snapshot, analyze with AI, and push to your speaker with text-to-speech.
  Your smart home can now tell you what's happening outside!
+seo:
+ description: "Make your security camera talk: Reolink + Home Assistant + AI integration. Motion detection triggers AI analysis and text-to-speech announcements."
 date: 2025-05-04
 permalink: making-your-reolink-camera-talk/
 ---

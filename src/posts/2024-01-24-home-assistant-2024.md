@@ -1,6 +1,8 @@
 ---
 title: Home Assistant 2024
 description: Since sharing our initial insights into the Home Assistant setup at my first post about our Home Assistant setup, a lot has transformed. It's time for an update. This article will walk you through the changes, replacements of devices and integrations, additions of new elements, and the tried-and-true components that have proven to be reliable.
+seo:
+  description: "Complete 2024 Home Assistant setup update: new devices, integrations, and reliable components. See what changed in our smart home automation system."
 images:
  feature: /assets/images/firefly-smarthome.jpg
 date: 2024-01-24
