@@ -9,6 +9,8 @@ images:
  feature: /assets/images/disc-backup-hero.jpg
  height: null
 description: Regularly backing up your Home Assistant configuration is critical to protecting your smart home deployment. This article explains how to back up your Home Assistant to a NAS.
+seo:
+  description: "Complete guide to backup Home Assistant on Synology NAS. Configure NFS network storage for automatic backups and protect your smart home setup."
 date: 2023-07-17
 ---
 

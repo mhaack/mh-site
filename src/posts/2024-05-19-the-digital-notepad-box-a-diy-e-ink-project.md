@@ -8,7 +8,7 @@ images:
  feature: /assets/images/digital-notepad-box-2.jpeg
 description: Inspired by the Home Assistant community, I built a desk-friendly e-paper display using ESPHome. This blog post details my journey from gathering components to creating a custom home automation dashboard that delivers real-time data in a sleek wooden case. Discover how rewarding and accessible e-paper displays can be for your smart home.
 seo:
- description: Inspired by the Home Assistant community, I built an e-paper display for my desk using ESPHome. This post details how I created a home automation dashboard in a wooden case.
+ description: Build your own DIY e-ink display dashboard with ESPHome and Home Assistant. Step-by-step guide for creating a digital notepad with weather and energy data.
 date: 2024-05-19
 ---
 

@@ -1,6 +1,8 @@
 ---
 title: Home Assistant Backup in 2025
 description: Home Assistant's 2025 backup system introduces native cloud storage, flexible encryption, and automated scheduling following the 3-2-1 backup rule. The article covers setting up automatic backups to Synology NAS, Google Drive, OneDrive, and Home Assistant Cloud with configuration steps and recovery best practices.
+seo:
+  description: "Home Assistant 2025 backup guide: new cloud storage, encryption, scheduling features. Set up 3-2-1 backup strategy with Synology, Google Drive, OneDrive."
 category: project
 tags:
  - home-assistant
