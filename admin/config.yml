@@ -21,14 +21,22 @@ collections:
     sort: "date:desc"
     summary: "{{title}} ({{date}})"
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Category"
-        name: "category"
-        widget: "select"
+      - label: Title
+        name: title
+        widget: "string
+        pattern: ['^.{50,60}$', "Must be between 50 and 60 characters"]
+        required: true
+      - label: Description
+        name: description
+        widget: text
+        pattern: ['^.{50,160}$', "Must be between 50 and 160 characters"]
+        required: true
+      - label: Category
+        name: category
+        widget: select
         default: ["project"]
         options: ["project", "work"]
+        required: true
       - label: "Tags"
         name: "tags"
         widget: "relation"
@@ -47,22 +55,19 @@ collections:
             name: "height"
             widget: "select"
             options: ["h-64", "h-96", "h-128"]
-            required: false
-      - label: "Description"
-        name: "description"
-        widget: "text"
-        required: false
-      - label: SEO
+      - label: "SEO (optional)"
         name: seo
         widget: object
         fields:
           - label: Title
             name: title
             widget: string
+            pattern: ['^.{50,60}$', "Must be between 50 and 60 characters"]
           - label: Description
             name: description
+            pattern: ['^.{50,160}$', "Must be between 50 and 160 characters"]
             widget: text
-      - label: "Body"
+      - label: Body
         name: "body"
         widget: "markdown"
       - label: "Publish Date"
