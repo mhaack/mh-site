@@ -48,10 +48,20 @@ collections:
             widget: "select"
             options: ["h-64", "h-96", "h-128"]
             required: false
-      - label: "Excerpt"
+      - label: "Description"
         name: "description"
         widget: "text"
         required: false
+      - label: SEO
+        name: seo
+        widget: object
+        fields:
+          - label: Title
+            name: title
+            widget: string
+          - label: Description
+            name: description
+            widget: text
       - label: "Body"
         name: "body"
         widget: "markdown"
