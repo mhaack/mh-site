@@ -6,6 +6,7 @@ description: I'm a developer, home automation enthusiast, married with my
  Germany. Welcome to my virtual home my little corner on the internet.
 seo:
  title: "Markus Haack: Technology, Smart Home Automation, and Personal Blog"
+ description: "Hi, I'm Markus Haack. By day, a Senior Technical Lead at Adobe. By night, a Smart Home enthusiast and tech blogger. Welcome to my personal corner of the internet."
 image: /assets/images/markus.jpeg
 layout: page
 eleventyNavigation:

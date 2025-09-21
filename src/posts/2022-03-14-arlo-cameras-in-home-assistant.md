@@ -11,6 +11,8 @@ images:
 description: Home Assistant & Arlo cameras go together very well. I'm using them
  since our entire setup got migrated from OpenHab to Home Assistant and I'm
  happy with the integration.
+seo:
+ description: Learn how to integrate your Arlo cameras with Home Assistant. This step-by-step guide covers the setup, configuration, and automation of your Arlo security system.
 date: 2022-03-14
 ---
 

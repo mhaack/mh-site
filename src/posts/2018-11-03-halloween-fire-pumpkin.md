@@ -4,6 +4,8 @@ permalink: halloween-fire-pumpkin/
 date: 2018-11-03
 author: Markus
 description: A flame-throwing Jack-O-Lantern is a real Halloween highlight and definitely something to impress the trick-or-treaters and your neighbors. An internet controlled IoT flame throwing Jack-O-Lantern is even better.
+seo:
+ description: "Build the ultimate Halloween decoration: a DIY IoT-enabled, flame-throwing Jack-O'-Lantern. This guide has everything you need to wow your neighbors."
 images:
  feature: /assets/images/2018-11-03-halloween-fire-pumpkin/pumpkin-hero.jpg
 category: project
