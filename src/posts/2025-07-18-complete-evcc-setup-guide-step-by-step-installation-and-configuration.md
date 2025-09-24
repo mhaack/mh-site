@@ -241,6 +241,28 @@ While it's still early days, I'm already seeing the benefits:
 - **Better Feed-in Utilization**: Rather than selling excess solar power for 9 cents/kWh, we're using it to avoid buying grid power at 30 cents/kWh
 - **Optimized Battery Usage**: The home battery provides backup during cloud cover, reducing charging interruptions
 
+## Top 5 Questions on evcc setup
+
+### 1. **Do I need the exact same hardware setup to follow this guide?**
+
+No of course not, evcc supports a wide range of equipment from different manufacturers. The configuration principles remain the same - you'll just need to use the appropriate templates for your specific solar inverter, charger, and car. Check the [evcc documentation](https://docs.evcc.io/) for your hardware's compatibility and templates.
+
+### 2. **What if my inverter only allows one ModBus connection?**
+
+There are a few solar inverters, like ours from Solaredge, which only support one ModBus connection. Use a ModBus proxy to allow multiple connections. You can either install a separate [Home Assistant ModBus Proxy AddOn](https://github.com/Akulatraxas/ha-modbusproxy) or use evcc's built-in ModBus proxy functionality.
+
+### 3. **Is vehicle integration mandatory for evcc to work?**
+
+No, vehicle integration is optional. evcc works fine without connecting to your car's cloud service. However, integrating your vehicle provides State of Charge monitoring, charging plans, cost allocation for multiple vehicles, and better optimization. Guest vehicles can still be charged without integration.
+
+### 4. **How long does the initial setup and configuration take?**
+
+About 30 minutes total once you have all device information ready. Installation via Home Assistant Add-on Store takes just a few minutes, configuration takes 20-30 minutes, and testing another 10-15 minutes. Preparation time varies depending on whether you need to research device specifications.
+
+### 5. **What are the real-world savings I can expect with evcc?**
+
+Based on early results: 71% of EV charging powered by solar energy, avoiding 30 cents/kWh grid power by using 9 cents/kWh solar instead. evcc users report 50-80% solar-powered charging in good conditions. Actual savings depend on your solar system size, local electricity rates, car driving patterns, and weather.
+
 ## Summary: Your Smart Charging System Awaits
 
 Setting up evcc turned out to be much easier than I expected. Excellent documentation and well-documented templates for devices and vehicles made the configuration process straightforward.
