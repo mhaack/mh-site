@@ -31,7 +31,7 @@ collections:
         name: description
         widget: text
         pattern:
-          - ^.{50,160}$
+          - ^.{50,200}$
           - Must be between 50 and 200 characters
         required: true
       - label: Category
