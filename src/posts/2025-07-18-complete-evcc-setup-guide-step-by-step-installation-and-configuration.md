@@ -241,7 +241,9 @@ While it's still early days, I'm already seeing the benefits:
 - **Better Feed-in Utilization**: Rather than selling excess solar power for 9 cents/kWh, we're using it to avoid buying grid power at 30 cents/kWh
 - **Optimized Battery Usage**: The home battery provides backup during cloud cover, reducing charging interruptions
 
-## Top 5 Questions on evcc setup
+## Questions about evcc setup
+
+These are the top 5 questions I collected related to your own evcc setup:
 
 ### 1. **Do I need the exact same hardware setup to follow this guide?**
 
