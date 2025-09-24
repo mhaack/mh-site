@@ -24,15 +24,15 @@ collections:
         name: title
         widget: string
         pattern:
-          - ^.{50,60}$
-          - Must be between 50 and 60 characters
+          - ^.{50,80}$
+          - Must be between 50 and 80 characters
         required: true
       - label: Description
         name: description
         widget: text
         pattern:
           - ^.{50,160}$
-          - Must be between 50 and 160 characters
+          - Must be between 50 and 200 characters
         required: true
       - label: Category
         name: category
@@ -61,6 +61,7 @@ collections:
           - label: Feature Height
             name: height
             widget: select
+            required: false
             options:
               - h-64
               - h-96
@@ -68,15 +69,18 @@ collections:
       - label: SEO (optional)
         name: seo
         widget: object
+        required: false
         fields:
           - label: Title
             name: title
             widget: string
+            required: false
             pattern:
               - ^.{50,60}$
               - Must be between 50 and 60 characters
           - label: Description
             name: description
+            required: false
             pattern:
               - ^.{50,160}$
               - Must be between 50 and 160 characters
