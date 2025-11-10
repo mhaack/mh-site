@@ -122,7 +122,7 @@ collections:
             widget: markdown
       - name: about
         label: About Me
-        file: src/page/about.md
+        file: src/pages/about.md
         fields:
           - label: Titel
             name: title
@@ -138,7 +138,7 @@ collections:
             widget: markdown
       - name: datasecurity
         label: Datenschutz
-        file: src/page/datenschutz.md
+        file: src/pages/datenschutz.md
         fields:
           - label: Titel
             name: title
