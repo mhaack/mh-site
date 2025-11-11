@@ -11,6 +11,6 @@ theme:
   text: text-gray-900
 ---
 
-{% set postslist = collections.posts | popularPosts(analytics) %}
+{% set postslist = collections.posts | popularPosts(analytics, 'last12Months') %}
 {% set showstats = true %}
 {% include "partials/postslist.njk" %}

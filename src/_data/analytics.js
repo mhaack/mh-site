@@ -3,25 +3,72 @@ import EleventyFetch from '@11ty/eleventy-fetch';
 export default async function () {
   const API_KEY_PLAUSIBLE = process.env.API_KEY_PLAUSIBLE;
 
-  const now = new Date();
-  const [nowDate] = now.toISOString().split('T');
+  // Fetch all-time analytics
+  const plausibleAPI = new URL('https://plausible.io/api/v2/query');
+  const body = {
+    "site_id": "markus-haack.com",
+    "metrics": ["pageviews"],
+    "date_range": "all",
+    "dimensions": ["event:page"]
+  };
 
-  const plausibleUrl = new URL('https://plausible.io/api/v1/stats/breakdown');
-  plausibleUrl.searchParams.append('site_id', 'markus-haack.com');
-  plausibleUrl.searchParams.append('period', 'custom');
-  plausibleUrl.searchParams.append('date', `2022-02-02,${nowDate}`);
-  plausibleUrl.searchParams.append('property', 'event:page');
-  plausibleUrl.searchParams.append('metrics', 'pageviews,visitors');
-
-  const res = EleventyFetch(plausibleUrl.toString(), {
+  const allTimeRes = EleventyFetch(plausibleAPI.toString(), {
     duration: '1h',
     type: 'json',
     fetchOptions: {
+      method: 'POST',
+      body: JSON.stringify(body),
       headers: {
         Authorization: `Bearer ${API_KEY_PLAUSIBLE}`,
+        'Content-Type': 'application/json',
       },
     },
-  }).catch();
-  const pages = await res;
-  return pages.results;
+  }).catch(e => {
+    console.error(e);
+    return [];
+  });
+
+  // Fetch last 12 months analytics
+  body.date_range = "12mo";
+  const last12MonthsRes = EleventyFetch(plausibleAPI.toString(), {
+    duration: '1h',
+    type: 'json',
+    fetchOptions: {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: {
+        Authorization: `Bearer ${API_KEY_PLAUSIBLE}`,
+        'Content-Type': 'application/json',
+      },
+    },
+  }).catch(e => {
+    console.error(e);
+    return [];
+  });
+
+  const [allTimePages, last12MonthsPages] = await Promise.all([allTimeRes, last12MonthsRes]);
+
+  console.log("allTimePages");
+  console.log(allTimePages);
+
+  // Map allTimePages.results to desired format: { page: ..., pageviews: ... }
+  const allTimeMapped = Array.isArray(allTimePages.results)
+    ? allTimePages.results.map(entry => ({
+        page: entry.dimensions[0],
+        pageviews: entry.metrics[0]
+      }))
+    : [];
+
+  const last12MonthsMapped = Array.isArray(last12MonthsPages.results)
+    ? last12MonthsPages.results.map(entry => ({
+        page: entry.dimensions[0],
+        pageviews: entry.metrics[0]
+      }))
+    : [];
+
+
+  return {
+    allTime: allTimeMapped,
+    last12Months: last12MonthsMapped,
+  };
 }
