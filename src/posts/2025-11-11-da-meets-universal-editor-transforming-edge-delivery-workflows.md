@@ -13,7 +13,7 @@ images:
 date: 2025-11-11
 permalink: adaptto-2025-da-ue/
 ---
-This year, I once again had the honour of speaking at the adaptTo() 2025 conference in Berlin.
+This year, I once again had the honour of speaking at the [adaptTo() 2025](https://adapt.to/2025/schedule/unlocking-edge-delivery-authoring-with-authorbus) conference in Berlin.
 
 Together with my colleague Max Voos, I introduced a new authoring paradigm for AuthorBus (formerly Dark Alley aka. DA) in a session.
 
