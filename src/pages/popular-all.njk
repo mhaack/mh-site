@@ -12,5 +12,5 @@ theme:
 ---
 
 {% set postslist = collections.posts | popularPosts(analytics, 'allTime') %}
-{% set showstats = true %}
+{% set showstats = 'allTime' %}
 {% include "partials/postslist.njk" %}

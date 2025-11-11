@@ -12,5 +12,5 @@ theme:
 ---
 
 {% set postslist = collections.posts | popularPosts(analytics, 'last12Months') %}
-{% set showstats = true %}
+{% set showstats = 'last12Months' %}
 {% include "partials/postslist.njk" %}

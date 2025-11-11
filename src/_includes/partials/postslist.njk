@@ -36,7 +36,7 @@
               <span>{{ post.rawInput | readingTime }} read</span>
             </span>
             {%- if showstats %}
-              {%- set stats = post | pageStats(analytics) | first -%}
+              {%- set stats = post | pageStats(analytics, showstats) | first -%}
               {%- if stats.pageviews > 100 %}
               <span class="mr-1">{{ stats.pageviews }} views</span>
               {%- else %}

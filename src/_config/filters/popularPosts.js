@@ -1,13 +1,5 @@
 export const popularPosts = (posts, analytics, dataset = 'allTime') => {
-
-  // console.log("analytics");
-  // console.log(analytics);
-
-  const analyticsData = analytics[dataset];
-
-  console.log("analyticsData");
-  console.log(analyticsData);
-
+  const analyticsData = analytics[dataset] || [];
   const topUrls = analyticsData.filter((p) => p.page !== '/');
   return posts
     .filter((post) => {

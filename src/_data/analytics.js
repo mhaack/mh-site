@@ -1,74 +1,54 @@
 import EleventyFetch from '@11ty/eleventy-fetch';
 
+const API_URL = 'https://plausible.io/api/v2/query';
+
+async function fetchAnalytics(dateRange, apiKey) {
+  const body = {
+    site_id: "markus-haack.com",
+    metrics: ["pageviews"],
+    date_range: dateRange,
+    dimensions: ["event:page"]
+  };
+
+  try {
+    const response = await EleventyFetch(API_URL, {
+      duration: '1h',
+      type: 'json',
+      fetchOptions: {
+        method: 'POST',
+        body: JSON.stringify(body),
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+      },
+    });
+    return response?.results || [];
+  } catch (e) {
+    console.error(`Error fetching analytics for ${dateRange}:`, e);
+    return [];
+  }
+}
+
+function mapResults(results) {
+  return Array.isArray(results)
+    ? results.map(entry => ({
+        page: entry.dimensions[0],
+        pageviews: entry.metrics[0]
+      }))
+    : [];
+}
+
 export default async function () {
   const API_KEY_PLAUSIBLE = process.env.API_KEY_PLAUSIBLE;
 
-  // Fetch all-time analytics
-  const plausibleAPI = new URL('https://plausible.io/api/v2/query');
-  const body = {
-    "site_id": "markus-haack.com",
-    "metrics": ["pageviews"],
-    "date_range": "all",
-    "dimensions": ["event:page"]
-  };
-
-  const allTimeRes = EleventyFetch(plausibleAPI.toString(), {
-    duration: '1h',
-    type: 'json',
-    fetchOptions: {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        Authorization: `Bearer ${API_KEY_PLAUSIBLE}`,
-        'Content-Type': 'application/json',
-      },
-    },
-  }).catch(e => {
-    console.error(e);
-    return [];
-  });
-
-  // Fetch last 12 months analytics
-  body.date_range = "12mo";
-  const last12MonthsRes = EleventyFetch(plausibleAPI.toString(), {
-    duration: '1h',
-    type: 'json',
-    fetchOptions: {
-      method: 'POST',
-      body: JSON.stringify(body),
-      headers: {
-        Authorization: `Bearer ${API_KEY_PLAUSIBLE}`,
-        'Content-Type': 'application/json',
-      },
-    },
-  }).catch(e => {
-    console.error(e);
-    return [];
-  });
-
-  const [allTimePages, last12MonthsPages] = await Promise.all([allTimeRes, last12MonthsRes]);
-
-  console.log("allTimePages");
-  console.log(allTimePages);
-
-  // Map allTimePages.results to desired format: { page: ..., pageviews: ... }
-  const allTimeMapped = Array.isArray(allTimePages.results)
-    ? allTimePages.results.map(entry => ({
-        page: entry.dimensions[0],
-        pageviews: entry.metrics[0]
-      }))
-    : [];
-
-  const last12MonthsMapped = Array.isArray(last12MonthsPages.results)
-    ? last12MonthsPages.results.map(entry => ({
-        page: entry.dimensions[0],
-        pageviews: entry.metrics[0]
-      }))
-    : [];
-
+  const [allTimePages, last12MonthsPages] = await Promise.all([
+    fetchAnalytics('all', API_KEY_PLAUSIBLE),
+    fetchAnalytics('12mo', API_KEY_PLAUSIBLE)
+  ]);
 
   return {
-    allTime: allTimeMapped,
-    last12Months: last12MonthsMapped,
+    allTime: mapResults(allTimePages),
+    last12Months: mapResults(last12MonthsPages),
   };
 }
