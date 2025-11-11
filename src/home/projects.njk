@@ -12,7 +12,7 @@ sitemap:
 {% set postslist = collections.posts | category("project") | head(-3) | reverse %}
 {% include "partials/postslist.njk" %}
 
-<p class="mt-16 mb-8">The most popular projects & posts - <a href="/popular/">view all</a></p>
+<p class="mt-16 mb-8">The most popular projects & posts - <a href="/popular/all/">view all</a></p>
 
 {%- set postslist = collections.posts | popularPosts(analytics) | head(5) -%}
 <ol class="list-decimal list-inside mx-auto lg:max-w-none text-2xl bg-white shadow-lg p-4">
