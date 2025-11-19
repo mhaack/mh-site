@@ -100,8 +100,6 @@ Integrating EVCC with our Keba charging station opens up new possibilities for e
 
 ### Looking Ahead to 2026
 
-For 2026, I'm planning to explore the Matter protocol and compatible devices. I already have a few dual-stack light bulbs (ZigBee and Matter) that I'm eager to experiment with. So far, there hasn't been a compelling reason to introduce Matter into our smart home—ZigBee has proven to be exceptionally stable and reliable.
+For 2026, I'm planning to explore the [Matter protocol](https://www.home-assistant.io/integrations/matter/) and compatible devices in Home Assistant. I already have a few dual-stack light bulbs (ZigBee and Matter) that I'm eager to experiment with. So far, there hasn't been a compelling reason to introduce Matter into our smart home - ZigBee has proven to be exceptionally stable and reliable.
 
 I also plan to further optimize our energy management automations, particularly around EV charging. The goal is to better align charging schedules with solar production and dynamic electricity pricing. We recently had a smart meter installed by our electricity grid provider, so now I just need to find a suitable variable-rate electricity tariff to take full advantage of it.
-
-I'm excited to see how these improvements will make our smart home even more efficient and sustainable in the year ahead.
