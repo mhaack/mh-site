@@ -8,7 +8,7 @@ tags:
   - home-assistant
   - smarthome
 images:
-  feature: /assets/images/firefly-smarthome.jpg
+  feature: /assets/images/ha-jama-villa-2025-hero.png
 date: 2025-11-19
 permalink: jama-villa-2025/
 ---
