@@ -86,18 +86,22 @@ I have made progress towards my goal of migrating from YAML to UI-based dashboar
 
 I also change the main theme; our dashboards now have a shiny ~~liquid~~ [frosted glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) look. 
 
-The main dashboard has also been significantly overhauled. The dashboard is now cleaner. It got a nice weather card, and many details are displayed based on conditions. Information only shows up when it is really important and needed. I'm also a big fan of the [new dashboard headers introduced](https://www.home-assistant.io/blog/2025/03/05/release-20253/) in HA 2025.3 and with the new theme almost all custom CSS & card-mod styles go removed.
+The main dashboard has also been significantly overhauled. The dashboard is now cleaner. It got a [nice weather card](https://markus-haack.com/weather-cards-in-home-assistant-my-top-picks/), and many details are displayed based on conditions. Information only shows up when it is really important and needed. I'm also a big fan of the [new dashboard headers introduced](https://www.home-assistant.io/blog/2025/03/05/release-20253/) in HA 2025.3 and with the new theme almost all custom CSS & card-mod styles go removed.
 
 ### Backup
 
-The native Home Assistant backup to our Synology NAS continues to work perfectly. Weekly automated backups provide peace of mind, and the integration is so seamless I rarely think about it anymore, which is exactly how it should be.
+Backing up to our Synology NAS using the native Home Assistant continues to work perfectly. However, the [new backup capabilities and cloud-based backup options ](/home-assistant-backup-2025/)introduced in early 2025 mean that we now have many more backup options and better control over backups when performing Home Assistant or add-on updates. Automated weekly backups provide peace of mind, and the integration is so seamless that I rarely think about it anymore — exactly as it should be!
 
 ## Summary & Outlook
 
-This year's updates were more evolutionary than revolutionary. The focus has been on incremental expansion, replacing aging devices with more reliable alternatives, and optimizing existing automations. The camera migration to Reolink was probably the most significant change, finally settling on a surveillance solution that checks all the boxes: local control, excellent quality, and no subscription fees. The addition of the Polestar and Keba charging station integration opens up new possibilities for energy management and smart charging automation.
+This year's updates were more evolutionary than revolutionary. The focus has been on incremental expansion, replacing aging devices with more reliable alternatives, and optimizing existing automations. The camera migration to Reolink was probably the most significant change, finally settling on a surveillance solution that checks all the boxes: local control, excellent quality, and no subscription fees.
 
-The ZigBee network expansion demonstrates that the wireless infrastructure is mature enough to handle significant growth without stability issues. The combination of Aqara sensors, Shelly switches, and Tasmota devices provides a robust foundation that just works.
+Integrating EVCC with our Keba charging station opens up new possibilities for energy management and smart charging automation.
 
-For 2026, I'm planning to explore more advanced energy management automations, particularly around optimizing EV charging with solar production and dynamic electricity pricing. I also want to revisit my dashboards and possibly migrate to a fully UI-based configuration, assuming Home Assistant's dashboard capabilities continue to improve.
+### Looking Ahead to 2026
 
-The Odroid N2 marches on into year six. At this point, I'm half expecting it to outlast everything else in the house.
+For 2026, I'm planning to explore the Matter protocol and compatible devices. I already have a few dual-stack light bulbs (ZigBee and Matter) that I'm eager to experiment with. So far, there hasn't been a compelling reason to introduce Matter into our smart home—ZigBee has proven to be exceptionally stable and reliable.
+
+I also plan to further optimize our energy management automations, particularly around EV charging. The goal is to better align charging schedules with solar production and dynamic electricity pricing. We recently had a smart meter installed by our electricity grid provider, so now I just need to find a suitable variable-rate electricity tariff to take full advantage of it.
+
+I'm excited to see how these improvements will make our smart home even more efficient and sustainable in the year ahead.
