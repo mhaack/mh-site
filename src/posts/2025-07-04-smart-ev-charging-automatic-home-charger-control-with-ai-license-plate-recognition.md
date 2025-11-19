@@ -155,18 +155,6 @@ actions:
       minutes: 5
       seconds: 0
       milliseconds: 0
-  - action: camera.snapshot
-    metadata: {}
-    data:
-      filename: /media/camera/carport_snapshot.jpg
-    target:
-      device_id: a8715.....................6f44e2
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 2
-      milliseconds: 0
-    enabled: true
   - if:
       - condition: state
         entity_id: binary_sensor.keba_p30_charging_state
@@ -178,64 +166,80 @@ actions:
         entity_id: lock.keba_p30_authentication
         state: locked
     then:
-      - action: google_generative_ai_conversation.generate_content
+      - action: ai_task.generate_data
         metadata: {}
         data:
-          prompt: >-
-            Detect if a car enters the carport. The camara taking the picture is
-            place inside the carport below the roof. Only focus on cars directly
-            in front, max 5 meters, of the carport building or inside the carport
-            itself. The car must clearly entering the drive-in or be already
-            inside the carport.
+          task_name: Analyse Parked Car
+          instructions: >-
+            Detect if a car enters the carport. Capture the license plate of the
+            car and the car color.
+
+
+            The camara taking the picture is place inside the carport below the
+            roof. Only focus on cars directly inside the carport itself. The car
+            must clearly entering the drive-in or be already inside the carport.
+
 
             Ignore:
+
             * Ignore cars just driving by.
+
             * Ignore cars on the other side of the street
+
             * Ignore cars in the neighbours garage or carport which is located
             on the opposite side of the street
+
             * Ignore the car directly next to the yellow house on the other side
             of the street.
+
             * Ignore cars in the background
-
-            If a car enters the carport tell the details about the cars color
-            and the license plate number of the car.
-
-            Always return a valid JSON object, use the following return JSON
-            format: 
-
-            {
-               "license": "...",
-               "color": "..."
-            }
-          filenames:
-            - /media/camera/carport_snapshot.jpg
-        response_variable: response
-      - variables:
-          ai_result: "{{ response.text | replace('json', '') | replace('```', '') }}"
+          attachments:
+            media_content_id: media-source://camera/camera.carport_fluent
+            media_content_type: application/vnd.apple.mpegurl
+            metadata:
+              title: Carport
+              thumbnail: /api/camera_proxy/camera.carport_fluent
+              media_class: video
+              children_media_class: null
+              navigateIds:
+                - {}
+                - media_content_type: app
+                  media_content_id: media-source://camera
+          entity_id: ai_task.google_ai_task
+          structure:
+            license_plate:
+              description: The license plate of the car
+              required: true
+              selector:
+                text: null
+            color:
+              description: The color of the car
+              selector:
+                text: null
+        response_variable: ai
       - if:
           - condition: template
-            value_template: "{{ ai_result.license in ['X 1234E', 'X:1234E', 'X1234E'] }}"
+            value_template: >-
+              {{ ai.data.license_plate in ['ABCDEF', 'GHIJKL'] }}
         then:
-          - action: notify.mobile_app_iphone
+          - action: notify.mobile_app_iphone_von_markus
             metadata: {}
             data:
-              title: JaMa Villa - Auto
+              title: JaMa Villa - 🚗
               message: >-
-                Polestar ist in Carport gefahren, starte Ladevorgang
-                automatisch.
+                Car is in garage, start charging automatically.
           - action: lock.unlock
             metadata: {}
             data: {}
             target:
               entity_id: lock.keba_p30_authentication
         else:
-          - action: notify.mobile_app_iphone
+          - action: notify.mobile_app_iphone_von_markus
             metadata: {}
             data:
               message: >-
-                Ein Auto ist im Carport und an der Wallbox, kann aber nicht
-                erkennen welches. Vielleicht mal nachschauen?
-              title: JaMa Villa - Auto
+                A car was detected, but not sure this is ours. Better check.
+              title: JaMa Villa - 🚗
 mode: single
 ```
 
