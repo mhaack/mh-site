@@ -18,7 +18,7 @@ Another year has passed and 2025 is coming to an end. Since my [2024 update](/ja
 
 As always, here's the updated architecture diagram to help visualize the entire setup:
 
-![JaMa Villa 2025 setup](/img/jama-villa-2025-650w.jpeg)
+![JaMa Villa 2025 setup](/assets/images/firefly-smarthome.jpg)
 
 ## The Foundation
 
