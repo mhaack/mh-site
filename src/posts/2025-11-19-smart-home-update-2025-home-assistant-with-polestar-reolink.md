@@ -18,7 +18,7 @@ Another year has passed and 2025 is coming to an end. Since my [2024 update](/ja
 
 As always, here's the updated architecture diagram to help visualize the entire setup:
 
-![Home Assistant Architecture Diagram 2025](/assets/images/jama-villa-2025.png){class="small"}
+![Home Assistant Architecture Diagram 2025](/assets/images/jama-villa-2025.png)
 
 ## The Foundation
 
