@@ -28,20 +28,24 @@ The same applies to our Ubiquiti network infrastructure, which remains unchanged
 
 The core technologies powering our smart home:
 
-| Device / Solution | Usage |
-|---|---|
-| [Homematic CCU3](https://www.eq-3.com/start.html) | Climate control, remaining sensors |
-| [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme) | Window blinds & shutters |
-| [Ubiquiti UniFi](https://unifi-network.ui.com/) | Network infrastructure |
-| [Reolink](https://reolink.com/) | Camera surveillance |
-| [Tasmota](https://tasmota.github.io/docs/) & [Shelly](https://www.shelly.com/) | Smart switches & sockets |
-| [Keba P30](https://www.keba.com/en/emobility/products/product-overview/keba-wallbox) | EV charging station |
+| Device / Solution                                                                                                              | Usage                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| [ZHA using SonOff ZigBee 3.0 USB dongle](https://sonoff.tech/product/gateway-and-sensors/sonoff-zigbee-3-0-usb-dongle-plus-p/) | This is the main ZigBee Hub with over 40 devices connected via ZHA.                                                                          |
+| [Homematic CCU3](https://www.eq-3.com/start.html)                                                                              | Still in place for some remaing r remaining sensors                                                                                          |
+| [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme)                                               | Continue to operate all the window blinds and shutters.                                                                                      |
+| [Ubiquiti UniFi](https://unifi-network.ui.com/)                                                                                | Our home network is operated by UniFi wired and wireless devices.                                                                            |
+| [Reolink](https://reolink.com/)                                                                                                | New to the house: a Reolink camera surveillance system.                                                                                      |
+| [Tasmota](https://tasmota.github.io/docs/) & [Shelly](https://www.shelly.com/)                                                 | A variety of Wi-Fi switches and sockets. The Shelly devices are permanently installed, whereas the Sonoff devices — primarily Wi-Fi sockets. |
+| [Keba P30](https://www.keba.com/en/emobility/products/product-overview/keba-wallbox)                                           | Our EV charging station.                                                                                                                     |
+| [Solaregde Inverter](/our-own-electricity-3/)                                                                                  | We can harvest our own energy, free of charge, from the sun.                                                                                 |
 
 ## Electric Vehicle Charging
 
-One significant change this year was replacing our Mercedes with a [Polestar 4](https://www.polestar.com/polestar-4/). The switch meant updating our Home Assistant integration from MercedesME to the Polestar integration. 
+One significant change this year was replacing our Mercedes with a [Polestar 4](https://www.polestar.com/polestar-4/). The switch meant updating our Home Assistant integration from MercedesME to the [Polestar integration](https://github.com/pypolestar/polestar_api). Both car integrations in Home Assistant are custom components. Unfortunately, however, the one for Mercedes was significantly better and more comprehensive in terms of the data provided. This is simply because Mercedes provides a public API for developers, while Polestar unfortunately does not. This means that developers have to try to reverse engineer it. Polestar definitely has some catching up to do here; other car manufacturers are much more advanced in this respect.
 
-I should also mention our [Keba P30 charging station](https://www.keba.com/en/emobility/products/product-overview/keba-wallbox), which I somehow forgot to document in previous posts despite having it for a while now. The Keba integrates seamlessly with Home Assistant, allowing us to monitor charging sessions, control charging schedules, and optimize charging based on our solar production. Combined with the Polestar integration, we now have complete visibility into our EV's status and can automate charging based on electricity rates and solar availability.
+I should also mention our [Keba P30 charging station](https://www.keba.com/en/emobility/products/product-overview/keba-wallbox), which I somehow forgot to document in previous posts despite having it for a while now. Combined with the Polestar integration, we now have complete visibility into our EV's status and can automate charging based on electricity rates and solar availability.
+
+For optimized charging with solar power, we use EVCC. I have already written [an introduction and setup guide for EVCC](/evcc-setup-guide/) and a [guide to smart charging with AI](/smart-ev-charging/) control.
 
 ## Cameras
 
@@ -77,12 +81,12 @@ The add-on landscape remains stable. The [Visual Studio Code add-on](https://git
 
 The integration list has grown with a few notable changes:
 
-- Replaced [MercedesME 2020](https://github.com/ReneNulschDE/mbapi2020) with the [Polestar integration](https://www.home-assistant.io/integrations/polestar/)
-- Added [Keba](https://www.home-assistant.io/integrations/keba/) for the P30 charging station
-- Switched to [Reolink](https://www.home-assistant.io/integrations/reolink/) for all camera integrations
-- Added [Brother Printer](https://www.home-assistant.io/integrations/brother/) for printer monitoring
-- Added [Apple TV](https://www.home-assistant.io/integrations/apple_tv/) for media control and HomeKit hub functionality
-- Continued use of [ZHA](https://www.home-assistant.io/integrations/zha/), [Shelly](https://www.home-assistant.io/integrations/shelly/), [Tasmota](https://www.home-assistant.io/integrations/tasmota/), and all the other core integrations from 2024
+* Replaced [MercedesME 2020](https://github.com/ReneNulschDE/mbapi2020) with the [Polestar integration](https://www.home-assistant.io/integrations/polestar/)
+* Added [Keba](https://www.home-assistant.io/integrations/keba/) for the P30 charging station
+* Switched to [Reolink](https://www.home-assistant.io/integrations/reolink/) for all camera integrations
+* Added [Brother Printer](https://www.home-assistant.io/integrations/brother/) for printer monitoring
+* Added [Apple TV](https://www.home-assistant.io/integrations/apple_tv/) for media control and HomeKit hub functionality
+* Continued use of [ZHA](https://www.home-assistant.io/integrations/zha/), [Shelly](https://www.home-assistant.io/integrations/shelly/), [Tasmota](https://www.home-assistant.io/integrations/tasmota/), and all the other core integrations from 2024
 
 The full list remains extensive, covering everything from [AdGuard Home](https://www.home-assistant.io/integrations/adguard/) to [WLED](https://www.home-assistant.io/integrations/wled/), with [HACS](https://hacs.xyz/docs/configuration/basic/) providing access to custom components.
 
