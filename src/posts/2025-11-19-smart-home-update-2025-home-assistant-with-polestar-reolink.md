@@ -18,7 +18,7 @@ Another year has passed and 2025 is coming to an end. Since my [2024 update](/ja
 
 As always, here's the updated architecture diagram to help visualize the entire setup:
 
-![JaMa Villa 2025 setup](/assets/images/jama-villa-2025.png)
+![JaMa Villa 2025 setup](/assets/images/jama-villa-2025.png){class="small"}
 
 ## The Foundation
 
