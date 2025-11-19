@@ -1,8 +1,8 @@
 ---
 title: "Smart Home Update 2025: Home Assistant with Polestar & Reolink"
-description: Complete Home Assistant 2025 setup overview featuring Reolink
-  cameras, Polestar 4 EV integration, 15+ new ZigBee devices, Shelly switches,
-  and Keba P30 charging station automation.
+description: Another year, another update. See how our Home Assistant powered
+  smart home has evolved in 2025 with new automation insights, new camera
+  system, and energy management tools.
 category: project
 tags:
   - home-assistant
