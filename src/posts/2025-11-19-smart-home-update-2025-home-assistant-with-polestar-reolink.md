@@ -51,52 +51,42 @@ For optimized charging with solar power, we use EVCC. I have already written [an
 
 Late 2024 brought another complete camera overhaul. After experimenting with Scrypted and HomeKit Secure Video throughout the year, I decided to replace all cameras with [Reolink](https://reolink.com/) devices. The Hikvision and Tapo cameras were sold off, and the entire surveillance system was rebuilt from scratch.
 
-The Reolink cameras offer several advantages: excellent native Home Assistant integration, local recording without any cloud dependency, and superior image quality across different lighting conditions. The setup now includes a mix of Reolink PoE cameras at critical locations and WiFi models for easier installation in hard-to-wire areas.
-
-What really sold me on Reolink was the combination of competitive pricing, reliable hardware, and the ability to access all features without subscription fees. The Home Assistant integration works flawlessly, providing live streams, motion detection, and recording control directly through our dashboards. No more experimenting with different NVR solutions—the cameras handle recording locally to SD cards and our NAS simultaneously.
+The Reolink cameras offer several advantages: [excellent native Home Assistant integration](/reolink-cameras-in-home-assistant/), local recording without any cloud dependency, and superior image quality also with poor lighting conditions. The setup now includes a mix of Reolink PoE cameras at critical locations and WiFi models for easier installation in hard-to-wire areas.
 
 ## Wireless Devices
 
-The ZigBee network has seen the most growth this year. We added approximately 15 new ZigBee devices, primarily sensors for monitoring temperature, humidity, and motion in areas we previously overlooked. A few additional smart sockets joined the fleet as well, particularly useful for seasonal lighting and managing standby power consumption.
+The ZigBee network grew significantly with approximately 15 new devices, primarily new sensors and a few additional smart sockets joined the fleet as well.
 
-The ZHA integration with the SonOff ZigBee 3.0 dongle continues to perform flawlessly. The [Aqara Door and Window Sensors](https://www.aqara.com/eu/product/door-and-window-sensor/) remain the most reliable devices in our setup, with minimal battery replacements needed over the past three years.
+On the WiFi side, we expanded our Tasmota fleet with four additional sockets ([Nous A1](https://nous.technology/product/nous-smart-wi-fi-socket-a1.html) & [Eightree](https://templates.blakadder.com/eightree_16A.html)). Their compact design and pre-flashed Tasmota firmware continue to make them an easy choice for quick smart home additions.
 
-On the WiFi side, we expanded our Tasmota fleet with four additional [Nous A1](https://nous.technology/product/nous-smart-wi-fi-socket-a1.html) sockets. Their compact design and pre-flashed Tasmota firmware continue to make them an easy choice for quick smart home additions.
+We added more [Shelly switches](https://www.shelly.com/) (mostly Gen 2 & 3) for power monitoring and control. These replaced old Homematic components and provide more detailed energy data.
 
-Shelly devices have become an increasingly important part of our infrastructure. We added several more Shelly switches throughout the house, particularly the [Shelly Plus 1PM](https://www.shelly.com/en-de/products/product-overview/shelly-plus-1-pm) and [Shelly Plus 2PM](https://www.shelly.com/en-de/products/product-overview/shelly-plus-2-pm) for power monitoring and control. These have replaced additional aging Homematic components and provide more detailed energy consumption data.
+## Other hardware changes
 
-## Other Hardware Additions
-
-Late 2024 also saw a couple of quality-of-life additions to our smart home ecosystem. We integrated a [Brother printer](https://www.brother.com/) into Home Assistant, which now allows us to monitor ink levels, paper status, and printer availability directly from our dashboards. It's one of those small conveniences that you don't realize you need until you have it—no more surprised "out of ink" messages mid-print job.
-
-We also added an [Apple TV](https://www.apple.com/apple-tv-4k/) to the living room, which serves double duty as both a media center and a HomeKit hub. The integration with Home Assistant works well, allowing us to control playback, switch inputs, and incorporate the Apple TV state into our automation routines. It's particularly useful for "movie mode" automations that dim lights and close blinds when we start watching something.
+In late 2024, a Brother printer was integrated into our Home Assistant smart home system. It replaced an HP Inkjet, which was great but died suddenly. The [Home Assistant integration for the printer](https://www.home-assistant.io/integrations/brother/) allows us to monitor ink levels, paper status, and printer availability directly from our dashboards.
 
 ## Home Assistant
-
-### Add-ons
-
-The add-on landscape remains stable. The [Visual Studio Code add-on](https://github.com/hassio-addons/addon-vscode) continues to be my primary configuration tool, though I'm using it less frequently as I migrate more to UI-based configuration.
 
 ### Integrations & Custom Components
 
 The integration list has grown with a few notable changes:
 
-* Replaced [MercedesME 2020](https://github.com/ReneNulschDE/mbapi2020) with the [Polestar integration](https://www.home-assistant.io/integrations/polestar/)
+* Replaced [MercedesME 2020](https://github.com/ReneNulschDE/mbapi2020) with the [Polestar integration](https://github.com/pypolestar/polestar_api)
 * Added [Keba](https://www.home-assistant.io/integrations/keba/) for the P30 charging station
+* Added [EVCC add-on](https://docs.evcc.io/en/docs/installation/home-assistant) and the [ha-evcc custom component](https://github.com/marq24/ha-evcc)
 * Switched to [Reolink](https://www.home-assistant.io/integrations/reolink/) for all camera integrations
 * Added [Brother Printer](https://www.home-assistant.io/integrations/brother/) for printer monitoring
 * Added [Apple TV](https://www.home-assistant.io/integrations/apple_tv/) for media control and HomeKit hub functionality
-* Continued use of [ZHA](https://www.home-assistant.io/integrations/zha/), [Shelly](https://www.home-assistant.io/integrations/shelly/), [Tasmota](https://www.home-assistant.io/integrations/tasmota/), and all the other core integrations from 2024
 
-The full list remains extensive, covering everything from [AdGuard Home](https://www.home-assistant.io/integrations/adguard/) to [WLED](https://www.home-assistant.io/integrations/wled/), with [HACS](https://hacs.xyz/docs/configuration/basic/) providing access to custom components.
+The full list remains extensive, covering everything from [ZHA](https://www.home-assistant.io/integrations/zha/), [Shelly](https://www.home-assistant.io/integrations/shelly/), [Tasmota](https://www.home-assistant.io/integrations/tasmota/), [AdGuard Home](https://www.home-assistant.io/integrations/adguard/) to [WLED](https://www.home-assistant.io/integrations/wled/), with [HACS](https://hacs.xyz/docs/configuration/basic/) providing access to custom components.
 
 ### Dashboards
 
-I made some progress on my goal to migrate from YAML to UI-based dashboards, but I'm not there yet. The muscle memory of editing YAML files is hard to break, and honestly, version control through Git remains a significant advantage for tracking changes over time.
+I have made progress towards my goal of migrating from YAML to UI-based dashboards. All dashboards and automations are now managed via the UI. When working on the automations however I Still switch to YAML mode from time to time.
 
-That said, I've been experimenting more with the dashboard editor, especially for quick prototypes and testing new card layouts. The new sections feature in recent Home Assistant releases has made UI-based dashboards more appealing, and I expect 2026 might be the year I finally make the full transition.
+I also change the main theme; our dashboards now have a shiny ~~liquid~~ [frosted glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) look. 
 
-You can still find our main Lovelace config file [here](https://github.com/mhaack/home-assistant-config/blob/master/config/ui-lovelace.yaml), with the view definitions [here](https://github.com/mhaack/home-assistant-config/tree/master/config/lovelace).
+The main dashboard has also been significantly overhauled. The dashboard is now cleaner. It got a nice weather card, and many details are displayed based on conditions. Information only shows up when it is really important and needed. I'm also a big fan of the [new dashboard headers introduced](https://www.home-assistant.io/blog/2025/03/05/release-20253/) in HA 2025.3 and with the new theme almost all custom CSS & card-mod styles go removed.
 
 ### Backup
 
