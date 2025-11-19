@@ -1,5 +1,5 @@
 ---
-title: "Smart Home Update 2025: Home Assistant with Polestar & Reolink"
+title: "My Home Assistant Setup 2025: Reolink, EVCC, and New Dashboards"
 description: Another year, another update. See how our Home Assistant powered
   smart home has evolved in 2025 with new automation insights, new camera
   system, and energy management tools.
