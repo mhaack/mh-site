@@ -100,6 +100,12 @@ async function getScript(request, script) {
 }
 
 async function handlePageView(request) {
+    console.log("handlePageView", request);
+    console.log("pirschPageViewEndpoint", pirschPageViewEndpoint);
+    console.log("getAccessKey(request)", getAccessKey(request));
+    console.log("getBody(request)", getBody(request));
+    console.log("getOptions(request)", getOptions(request));
+    console.log("getRollupViews(request)", getRollupViews(request));
     const response = await fetch(pirschPageViewEndpoint, {
         method: "POST",
         headers: {
