@@ -24,8 +24,8 @@ package = "netlify-plugin-cache"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
-  from = "/assets/js/script.js"
-  to = "https://plausible.io/js/script.js"
+  from = "/static/files/pa.js"
+  to = "https://p.markus-haack.org/static/files/pa.js"
   status = 200
   force = true
 
