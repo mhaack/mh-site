@@ -14,7 +14,7 @@ const dashboards = {
  * 
  * https://your-site.netlify.app/static/files/pa.js
  */
-const scriptPath = "/static/files/pa.js";
+const scriptPath = "/assets/js/pa.js";
 
 /*
  * Adjust the endpoints to your likings.
