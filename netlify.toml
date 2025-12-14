@@ -30,7 +30,19 @@ package = "netlify-plugin-cache"
   force = true
 
 [[redirects]]
-  from = "/api/event"
-  to = "https://plausible.io/api/event"
+  from = "/p/pv"
+  to = "https://p.markus-haack.org/p/pv"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/p/e"
+  to = "https://p.markus-haack.org/p/e"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/p/s"
+  to = "https://p.markus-haack.org/p/s"
   status = 200
   force = true
