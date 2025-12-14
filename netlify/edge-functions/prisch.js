@@ -100,12 +100,8 @@ async function getScript(request, script) {
 }
 
 async function handlePageView(request) {
-    console.log("handlePageView", request);
-    console.log("pirschPageViewEndpoint", pirschPageViewEndpoint);
     console.log("getAccessKey(request)", getAccessKey(request));
     console.log("getBody(request)", getBody(request));
-    console.log("getOptions(request)", getOptions(request));
-    console.log("getRollupViews(request)", getRollupViews(request));
     const response = await fetch(pirschPageViewEndpoint, {
         method: "POST",
         headers: {
@@ -205,36 +201,28 @@ function getRollupViews(request, fromBody = false) {
 }
 
 function getDashboardConfig(hostname) {
-    console.log("getDashboardConfig - hostname:", hostname, "dashboards keys:", Object.keys(dashboards));
     for (const d in dashboards) {
         const normalizedKey = d.replace(/^www\./, "");
-        console.log("getDashboardConfig - comparing:", normalizedKey, "===", hostname, "?", normalizedKey === hostname);
         if (normalizedKey === hostname) {
-            console.log("getDashboardConfig - match found:", dashboards[d]);
             return dashboards[d];
         }
     }
-
-    console.log("getDashboardConfig - no match found, returning null");
     return null;
 }
 
 function getHostname(request, fromBody = false) {
     if (fromBody) {
         const hostname = new URL(request.url).hostname.toLowerCase().trim().replace(/^www\./, "");
-        console.log("getHostname (fromBody=true):", hostname);
         return hostname;
     }
 
     const url = new URL(request.url);
     const urlParam = url.searchParams.get("url");
-    console.log("getHostname - request.url:", request.url, "urlParam:", urlParam);
     
     // If url query parameter exists, extract hostname from it
     if (urlParam) {
         try {
             const hostname = new URL(urlParam).hostname.toLowerCase().trim().replace(/^www\./, "");
-            console.log("getHostname (from urlParam):", hostname);
             return hostname;
         } catch (e) {
             console.log("getHostname - error parsing urlParam:", e);
