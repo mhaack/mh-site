@@ -10,4 +10,10 @@ eleventyExcludeFromCollections: true
   <h1 class="text-8xl mt-6 before:content-[''] before:mr-0">404</h1>
   <p class="text-4xl mt-6">Oops. Page not Found,  <a href="{{ '/' | url }}">Go home</a>.</p>
 </div>
-<script>document.addEventListener('DOMContentLoaded', function () { plausible('404', { props: { path: document.location.pathname } }); });</script>
+<script>
+    document.addEventListener("readystatechange", () => {
+        if (document.readyState === "complete") {
+            pirschNotFound();
+        }
+    });
+</script>
