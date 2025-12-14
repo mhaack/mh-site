@@ -194,7 +194,10 @@ function getClientIP(request) {
 }
 
 function getAccessKey(request, fromBody = false) {
-    return getDashboardConfig(getHostname(request, fromBody))?.accessKey ?? "";
+    const hostname = getHostname(request, fromBody);
+    const config = getDashboardConfig(hostname);
+    console.log("getAccessKey - hostname:", hostname, "config:", config);
+    return config?.accessKey ?? "";
 }
 
 function getRollupViews(request, fromBody = false) {
@@ -202,22 +205,47 @@ function getRollupViews(request, fromBody = false) {
 }
 
 function getDashboardConfig(hostname) {
+    console.log("getDashboardConfig - hostname:", hostname, "dashboards keys:", Object.keys(dashboards));
     for (const d in dashboards) {
-        if (d.replace(/^www\./, "") === hostname) {
+        const normalizedKey = d.replace(/^www\./, "");
+        console.log("getDashboardConfig - comparing:", normalizedKey, "===", hostname, "?", normalizedKey === hostname);
+        if (normalizedKey === hostname) {
+            console.log("getDashboardConfig - match found:", dashboards[d]);
             return dashboards[d];
         }
     }
 
+    console.log("getDashboardConfig - no match found, returning null");
     return null;
 }
 
 function getHostname(request, fromBody = false) {
     if (fromBody) {
-        return new URL(request.url).hostname.toLowerCase().trim().replace(/^www\./, "");
+        const hostname = new URL(request.url).hostname.toLowerCase().trim().replace(/^www\./, "");
+        console.log("getHostname (fromBody=true):", hostname);
+        return hostname;
     }
 
     const url = new URL(request.url);
-    return new URL(url.searchParams.get("url")).hostname.toLowerCase().trim().replace(/^www\./, "");
+    const urlParam = url.searchParams.get("url");
+    console.log("getHostname - request.url:", request.url, "urlParam:", urlParam);
+    
+    // If url query parameter exists, extract hostname from it
+    if (urlParam) {
+        try {
+            const hostname = new URL(urlParam).hostname.toLowerCase().trim().replace(/^www\./, "");
+            console.log("getHostname (from urlParam):", hostname);
+            return hostname;
+        } catch (e) {
+            console.log("getHostname - error parsing urlParam:", e);
+            // If URL parsing fails, fall back to request hostname
+        }
+    }
+    
+    // Fallback to request URL's hostname
+    const hostname = url.hostname.toLowerCase().trim().replace(/^www\./, "");
+    console.log("getHostname (fallback):", hostname);
+    return hostname;
 }
 
 function getBody(request, options = {}) {
