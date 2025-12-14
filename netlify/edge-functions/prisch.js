@@ -110,6 +110,9 @@ async function handlePageView(request) {
         body: JSON.stringify(getBody(request))
     });
     const body = JSON.stringify(getBody(request, getOptions(request)));
+
+    console.log("body", body);
+
     getRollupViews(request).forEach(async accessKey => {
         await fetch(pirschPageViewEndpoint, {
             method: "POST",
@@ -192,7 +195,6 @@ function getClientIP(request) {
 function getAccessKey(request, fromBody = false) {
     const hostname = getHostname(request, fromBody);
     const config = getDashboardConfig(hostname);
-    console.log("getAccessKey - hostname:", hostname, "config:", config);
     return config?.accessKey ?? "";
 }
 
@@ -232,7 +234,6 @@ function getHostname(request, fromBody = false) {
     
     // Fallback to request URL's hostname
     const hostname = url.hostname.toLowerCase().trim().replace(/^www\./, "");
-    console.log("getHostname (fallback):", hostname);
     return hostname;
 }
 
