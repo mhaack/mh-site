@@ -24,7 +24,7 @@ package = "netlify-plugin-cache"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[redirects]]
-  from = "/static/files/pa.js"
+  from = "/assets/pa.js"
   to = "https://p.markus-haack.org/static/files/pa.js"
   status = 200
   force = true
