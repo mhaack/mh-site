@@ -11,7 +11,7 @@ package = "netlify-plugin-cache"
 
   [plugins.inputs]
   paths = [
-    "dist/assets/images"
+    "img"
   ]
 
 [[headers]]
@@ -23,26 +23,3 @@ package = "netlify-plugin-cache"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
-[[redirects]]
-  from = "/assets/pa.js"
-  to = "https://p.markus-haack.org/static/files/pa.js"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/p/pv"
-  to = "https://p.markus-haack.org/p/pv"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/p/e"
-  to = "https://p.markus-haack.org/p/e"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/p/s"
-  to = "https://p.markus-haack.org/p/s"
-  status = 200
-  force = true
