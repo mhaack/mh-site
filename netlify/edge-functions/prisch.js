@@ -100,8 +100,7 @@ async function getScript(request, script) {
 }
 
 async function handlePageView(request) {
-    console.log("getAccessKey(request)", getAccessKey(request));
-    console.log("getBody(request)", getBody(request));
+    console.log("handlePageView", request);
     const response = await fetch(pirschPageViewEndpoint, {
         method: "POST",
         headers: {
@@ -110,9 +109,6 @@ async function handlePageView(request) {
         body: JSON.stringify(getBody(request))
     });
     const body = JSON.stringify(getBody(request, getOptions(request)));
-
-    console.log("body", body);
-
     getRollupViews(request).forEach(async accessKey => {
         await fetch(pirschPageViewEndpoint, {
             method: "POST",
@@ -128,6 +124,7 @@ async function handlePageView(request) {
 }
 
 async function handleEvent(request) {
+    console.log("handleEvent", request);
     const data = await getData(request);
     const response = await fetch(pirschEventEndpoint, {
         method: "POST",
@@ -154,6 +151,7 @@ async function handleEvent(request) {
 }
 
 async function handleSession(request) {
+    console.log("handleSession", request);
     const body = JSON.stringify({
         ip: getClientIP(request),
         user_agent: request.headers.get("User-Agent"),
