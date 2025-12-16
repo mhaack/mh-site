@@ -62,37 +62,14 @@ Rechtsgrundlage für diese Verarbeitung ist Art. 6 Abs. 1 lit. b) DSGVO.
 
 Ihre Daten werden gelöscht, sofern Ihre Anfrage abschließend beantwortet worden ist und der Löschung keine gesetzlichen Aufbewahrungspflichten entgegenstehen, wie bspw. bei einer sich etwaig anschließenden Vertragsabwicklung.
 
-### Plausible Analytics
+### Pirsch Analytics
 
-Wir nutzen den Webanalysedienst „Plausible Analytics“ um unser Angebot fortlaufend zu optimieren, sowohl technisch als auch inhaltlich. Plausible ist eine Marke der Plausible Insights OÜ, Västriku tn 2, 50403, Tartu, Estonia, Registration number 14709274, nachfolgend nur „Plausible“ genannt. Die Plausible Insights OÜ ist vollständig DSGVO-konform.
+Für die Webanalyse setzen wir Pirsch Analytics ein. Bei Pirsch Analytics handelt es sich um eine cookiefreie Webanalysesoftware, die nach dem Grundsatz Privacy by Design entwickelt wurde. Zur Analyse der Besucherströme generiert Pirsch Analytics bei Erhalt des Seitenaufrufs mit Hilfe eines Hashing-Algorithmus eine 16-stellige Zahl als Besucher-ID. Als Eingabewerte dienen die IP-Adresse, der User Agent, das Datum und ein Salt.
 
-Plausible verfolgt einen besonders datenschutzfreundlichen Ansatz zur Analyse Ihres Besuches. Plausible erfasst zu diesem Zweck unter anderem die folgenden Informationen: Datum und Uhrzeit ihres Besuches, Titel und URL der besuchten Seiten, eingehende Links, das Land in dem Sie sich befinden und den User Agent Ihrer Browser-Software. Plausible verwendet und speichert keine „Cookies“ auf Ihrem Endgerät. Sämtliche personenbezogenen Daten (bspw. Ihre IP-Adresse) werden vollständig anonymisiert in Form eines sogenannten Hashes gespeichert. Ein Hash ist eine Verschlüsselung von Daten, die nicht umkehrbar ist, also nicht „entschlüsselt“ werden kann. Auf diese Weise können wir Ihren Besuch analysieren ohne personenbezogenen Daten in einer Form zu speichern, die für uns, Plausible oder fremde Dritte lesbar wäre.
+Die IP-Adresse des Besuchers wird weder vollständig noch in Teilen persistiert und durch den Hash vollständig und nicht reversierbar anonymisiert. Durch die Einbindung des Datums und der Verwendung von einem Salt pro Webseite ist gewährleistet, dass Webseitenbesucher nicht länger als 24 Stunden wiederzuerkennen sind und nicht über mehrere Webseiten hinweg getrackt werden können. Über eine lokal eingebundene Datenbank wird eine grobe Lokalisierung vorgenommen (Land/Stadt).
 
-Um transparent zu machen welche Daten wir erheben, können Sie selbst einen Einblick in die vollständigen Statistiken dieser Seite nehmen: https://plausible.io/open-election-compass.com.
-
-Weitere Informationen zur technischen Implementierung findest du hier: https://plausible.io/privacy-focused-web-analytics.
-
-Weitere Informationen zum Datenschutz bei Plausible findest du unter https://plausible.io/data-policy.
-
-Die Rechtsgrundlage für die Verarbeitung ist Art. 6 Abs. 1 lit. f) DSGVO.
-
-## Google Fonts
-
-In unserem Internetauftritt setzen wir Google Fonts zur Darstellung externer Schriftarten ein. Es handelt sich hierbei um einen Dienst der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland, nachfolgend nur „Google“ genannt.
-
-Um die Darstellung bestimmter Schriften in unserem Internetauftritt zu ermöglichen, wird bei Aufruf unseres Internetauftritts eine Verbindung zu dem Google-Server in den USA aufgebaut.
-
-Rechtsgrundlage ist Art. 6 Abs. 1 lit. f) DSGVO. Unser berechtigtes Interesse liegt in der Optimierung und dem wirtschaftlichen Betrieb unseres Internetauftritts.
-
-Durch die bei Aufruf unseres Internetauftritts hergestellte Verbindung zu Google kann Google ermitteln, von welcher Website Ihre Anfrage gesendet worden ist und an welche IP-Adresse die Darstellung der Schrift zu übermitteln ist.
-
-Google bietet unter
-
-[https://adssettings.google.com/authenticated](https://adssettings.google.com/authenticated)
-
-[https://policies.google.com/privacy](https://policies.google.com/privacy)
-
-weitere Informationen an und zwar insbesondere zu den Möglichkeiten der Unterbindung der Datennutzung.
+Weitere Informationen zur technischen Implementierung findest du 
+hier: https://docs.pirsch.io/privacy.
 
 ## YouTube
 
