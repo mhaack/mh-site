@@ -2,9 +2,14 @@
  * Create an access key on the integration settings page for each of your dashboards and enter the hostname (in lowercase!) + access key here.
  * Additionally, you can configure one or more other dashboards to send the data to (rollup-views), a path prefix, and a path suffix.
  */
+// Access keys are read from environment variables to avoid committing secrets.
+// Configure these in your hosting provider (e.g. Netlify environment variables).
 const dashboards = {
     "markus-haack.com": {
-        accessKey: "pa_12rSzliJaxMEB7drY34KNA9HW5V3eF01r1Bsgh0LedjMU"
+        // Netlify Edge Functions expose environment variables via Netlify.env.get
+        accessKey: (typeof Netlify !== "undefined" && Netlify.env?.get)
+            ? (Netlify.env.get("PIRSCH_CLIENT_EDGE") ?? "")
+            : ""
     }
 };
 
