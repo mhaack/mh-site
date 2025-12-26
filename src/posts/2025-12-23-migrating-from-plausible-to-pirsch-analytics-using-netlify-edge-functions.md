@@ -34,15 +34,19 @@ Once you have created your account, generate a tracking script via the [Pirsch d
 
 There are also a large number of ready-made integrations for CMS (such as WordPress), e-commerce platforms (such as Shopify) or SSG frameworks (via Astro or Gatsby) available from the community.
 
+I went for a more advanced option via a bumpy round.
+
 ### Using a Proxy with Netlify Edge Functions
 
-I prefer to serve my analytics script through a proxy on my own domain. This ensures first-party data collection and helps bypass common ad-blocker issues. Since my sites are hosted on **Netlify**, I wanted to leverage **Edge Functions** for this.
+I prefer to serve my analytics script through a proxy on my own domain. This ensures first-party data collection and helps bypass common ad-blocker issues. I have already used this pattern for my previous Plausible Analytics integration.
 
-The Pirsch documentation includes a [Cloudflare Worker proxy guide](https://docs.pirsch.io/advanced/cf-workers), but since the environments differ, the code needed some adjustments for Netlify.
+Pirsch offers this proxy via a custom subdomain, but only with the Plus subscription. For those of us who want to save money, they provide [self-hosting proxy options](https://docs.pirsch.io/advanced/proxy#available-proxies) in three different languages. PHP, Go and JavaScript.
+
+Since my sites are hosted on Netlify, I wanted to leverage [Edge Functions](https://docs.netlify.com/build/edge-functions/overview/) for this. The Pirsch documentation includes a JavaScript [Cloudflare Worker proxy guide](https://docs.pirsch.io/advanced/cf-workers), but since the environments differ, the code needed some adjustments for Netlify.
 
 ### Refactoring with Cursor
 
-Instead of rewriting the logic manually, I used **Cursor**. I provided the Cloudflare example and asked it to convert the code to a Netlify Edge Function. 
+Instead of rewriting the logic manually, I used Cursor. I provided the Cloudflare example and asked it to convert the code to a Netlify Edge Function. 
 
 Cursor handled the conversion perfectly, mapping the correct Netlify header names and adjusting the fetch logic. I also had it move the Pirsch identification code into an environment variable to keep the repository clean.
 
