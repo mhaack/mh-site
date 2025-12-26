@@ -50,39 +50,213 @@ Instead of rewriting the logic manually, I used Cursor. I provided the Cloudflar
 
 Cursor handled the conversion perfectly, mapping the correct Netlify header names and adjusting the fetch logic. I also had it move the Pirsch identification code into an environment variable to keep the repository clean.
 
-You can find the full implementation in my GitHub repo:
-**[📄 pirsch.js on GitHub](https://github.com/mhaack/mh-site/blob/main/netlify/edge-functions/pirsch.js)**
-
 Here is a look at the core logic:
 
 ```javascript
-export default async (request, context) => {
-  const url = new URL(request.url);
-  
-  // Proxy the script
-  if (url.pathname === "/p.js") {
-    return await fetch("[https://api.pirsch.io/pa.js](https://api.pirsch.io/pa.js)");
-  }
-  
-  // Proxy the event collection
-  if (url.pathname === "/p/event") {
-    const payload = await request.json();
-    payload.code = Deno.env.get("PIRSCH_CODE"); 
-    
-    return await fetch("[https://api.pirsch.io/api/v1/event](https://api.pirsch.io/api/v1/event)", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "X-Forwarded-For": request.headers.get("x-nf-client-connection-ip"),
-        "User-Agent": request.headers.get("user-agent"),
-      },
-      body: JSON.stringify(payload),
+const dashboards = {
+    "markus-haack.com": {
+        accessKey: (typeof Netlify !== "undefined" && Netlify.env?.get)
+            ? (Netlify.env.get("PIRSCH_CLIENT_EDGE") ?? "")
+            : ""
+    }
+};
+
+const scriptPath = "/assets/js/pa.js";
+const pageViewPath = "/p/pv";
+const eventPath = "/p/e";
+const sessionPath = "/p/s";
+const accessControlAllowOrigin = "*";
+
+const pirschScriptURL = "https://api.pirsch.io/pa.js";
+const pirschPageViewEndpoint = "https://api.pirsch.io/api/v1/hit";
+const pirschEventEndpoint = "https://api.pirsch.io/api/v1/event";
+const pirschSessionEndpoint = "https://api.pirsch.io/api/v1/session";
+
+export default async (request) => {
+    return await handleRequest(request);
+}
+
+async function handleRequest(request) {
+    const path = new URL(request.url).pathname;
+    let result;
+
+    if (path === scriptPath) {
+        result = await getScript(request, pirschScriptURL);
+    } else if (path === pageViewPath) {
+        result = await handlePageView(request);
+    } else if (path === eventPath) {
+        result = await handleEvent(request);
+    } else if (path === sessionPath) {
+        result = await handleSession(request);
+    } else {
+        result = new Response(null, { status: 404 });
+    }
+
+    const response = new Response(result.body, result);
+    response.headers.set("Access-Control-Allow-Origin", accessControlAllowOrigin);
+    response.headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    response.headers.set("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    response.headers.set("Accept-CH", "Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-Width, Sec-CH-Viewport-Width");
+    return response;
+}
+
+async function getScript(request, script) {
+    return await fetch(script, {
+        headers: { 'Cache-Control': 'public, max-age=3600' }
     });
-  }
-  
-  return context.next();
+}
+
+async function handlePageView(request) {
+    const response = await fetch(pirschPageViewEndpoint, {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${getAccessKey(request)}` },
+        body: JSON.stringify(getBody(request))
+    });
+    const body = JSON.stringify(getBody(request, getOptions(request)));
+    getRollupViews(request).forEach(async accessKey => {
+        await fetch(pirschPageViewEndpoint, {
+            method: "POST",
+            headers: { "Authorization": `Bearer ${accessKey}` },
+            body
+        });
+    });
+    return new Response(response.body, { status: response.status });
+}
+
+async function handleEvent(request) {
+    const data = await getData(request);
+    const response = await fetch(pirschEventEndpoint, {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${getAccessKey(data, true)}` },
+        body: JSON.stringify(data)
+    });
+    const {prefix, suffix} = getOptions(data, true);
+    data.url = rewritePath(data.url, prefix, suffix);
+    const body = JSON.stringify(data);
+    getRollupViews(data, true).forEach(async accessKey => {
+        await fetch(pirschEventEndpoint, {
+            method: "POST",
+            headers: { "Authorization": `Bearer ${accessKey}` },
+            body
+        });
+    });
+    return new Response(response.body, { status: response.status });
+}
+
+async function handleSession(request) {
+    const body = JSON.stringify({
+        ip: getClientIP(request),
+        user_agent: request.headers.get("User-Agent"),
+        sec_ch_ua: request.headers.get("Sec-CH-UA"),
+        sec_ch_ua_mobile: request.headers.get("Sec-CH-UA-Mobile"),
+        sec_ch_ua_platform: request.headers.get("Sec-CH-UA-Platform"),
+        sec_ch_ua_platform_version: request.headers.get("Sec-CH-UA-Platform-Version"),
+        sec_ch_width: request.headers.get("Sec-CH-Width"),
+        sec_ch_viewport_width: request.headers.get("Sec-CH-Viewport-Width")
+    });
+    const response = await fetch(pirschSessionEndpoint, {
+        method: "POST",
+        headers: { "Authorization": `Bearer ${getAccessKey(request)}` },
+        body
+    });
+    getRollupViews(request).forEach(async accessKey => {
+        await fetch(pirschSessionEndpoint, {
+            method: "POST",
+            headers: { "Authorization": `Bearer ${accessKey}` },
+            body
+        });
+    });
+    return new Response(response.body, { status: response.status });
+}
+
+function getClientIP(request) {
+    return request.headers.get("x-nf-client-connection-ip") || 
+           request.headers.get("x-forwarded-for")?.split(',')[0]?.trim() || 
+           null;
+}
+
+function getAccessKey(request, fromBody = false) {
+    return getDashboardConfig(getHostname(request, fromBody))?.accessKey ?? "";
+}
+
+function getRollupViews(request, fromBody = false) {
+    return getDashboardConfig(getHostname(request, fromBody))?.rollup ?? [];
+}
+
+function getDashboardConfig(hostname) {
+    for (const d in dashboards) {
+        if (d.replace(/^www\./, "") === hostname) return dashboards[d];
+    }
+    return null;
+}
+
+function getHostname(request, fromBody = false) {
+    if (fromBody) return new URL(request.url).hostname.toLowerCase().trim().replace(/^www\./, "");
+    const url = new URL(request.url);
+    const urlParam = url.searchParams.get("url");
+    if (urlParam) {
+        try {
+            return new URL(urlParam).hostname.toLowerCase().trim().replace(/^www\./, "");
+        } catch (e) { }
+    }
+    return url.hostname.toLowerCase().trim().replace(/^www\./, "");
+}
+
+function getBody(request, options = {}) {
+    const { prefix, suffix } = options;
+    const url = new URL(request.url);
+    return {
+        url: rewritePath(url.searchParams.get("url"), prefix, suffix),
+        code: url.searchParams.get("code"),
+        ip: getClientIP(request),
+        user_agent: request.headers.get("User-Agent"),
+        accept_language: request.headers.get("Accept-Language"),
+        sec_ch_ua: request.headers.get("Sec-CH-UA"),
+        sec_ch_ua_mobile: request.headers.get("Sec-CH-UA-Mobile"),
+        sec_ch_ua_platform: request.headers.get("Sec-CH-UA-Platform"),
+        sec_ch_ua_platform_version: request.headers.get("Sec-CH-UA-Platform-Version"),
+        sec_ch_width: request.headers.get("Sec-CH-Width"),
+        sec_ch_viewport_width: request.headers.get("Sec-CH-Viewport-Width"),
+        title: url.searchParams.get("t"),
+        referrer: url.searchParams.get("ref"),
+        screen_width: Number.parseInt(url.searchParams.get("w"), 10),
+        screen_height: Number.parseInt(url.searchParams.get("h"), 10)
+    };
+}
+
+async function getData(request, options = {}) {
+    const { prefix, suffix } = options;
+    const data = await request.json();
+    data.url = rewritePath(data.url, prefix, suffix);
+    data.ip = getClientIP(request);
+    data.user_agent = request.headers.get("User-Agent");
+    data.accept_language = request.headers.get("Accept-Language");
+    data.sec_ch_ua = request.headers.get("Sec-CH-UA");
+    data.sec_ch_ua_mobile = request.headers.get("Sec-CH-UA-Mobile");
+    data.sec_ch_ua_platform = request.headers.get("Sec-CH-UA-Platform");
+    data.sec_ch_ua_platform_version = request.headers.get("Sec-CH-UA-Platform-Version");
+    data.sec_ch_width = request.headers.get("Sec-CH-Width");
+    data.sec_ch_viewport_width = request.headers.get("Sec-CH-Viewport-Width");
+    return data;
+}
+
+function getOptions(request, fromBody = false) {
+    return getDashboardConfig(getHostname(request, fromBody))?.options ?? {};
+}
+
+function rewritePath(url, prefix = "", suffix = "") {
+    const u = new URL(url);
+    u.pathname = prefix + u.pathname + suffix;
+    return u.toString();
+}
+
+export const config = {
+    path: [scriptPath, pageViewPath, eventPath, sessionPath]
 };
 ```
+
+You can find the full implementation, includuing comments and description in my GitHub repo:
+**[pirsch.js on GitHub](<>)**
 
 ## Configuration & Setup
 
