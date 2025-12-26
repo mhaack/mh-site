@@ -258,28 +258,27 @@ export const config = {
 You can find the full implementation, includuing comments and description in my GitHub repo:
 **[pirsch.js on GitHub](<>)**
 
+Depending on how the edge functions are stored in the project, they are either recognised automatically or must be declared separately in netlify.toml. In addition, you must map the function to one or more URL routes. This can be done automatically using function name matching, directly in the code, or via netlify.toml. I selected the code option via the `config` object export, mapping the four paths that we are interested in. See above.
+
+In addition to path mapping for a URL route, there are [other ways to link a function to a request](<>), for example via HTTP headers.
+
 ## Configuration & Setup
 
-To get this running, you need to add the `PIRSCH_CODE` to your Netlify environment variables. You can find this under Site configuration > Environment variables. Just create a new entry with your code from the Pirsch dashboard. For more details, check the Netlify Docs.
+To get this running, you need to add the `PIRSCH_CODE` to your Netlify environment variables. You can find this under Site configuration > Environment variables. Just create a new entry with your code from the Pirsch dashboard. For more details, check the [Netlify Docs](https://docs.netlify.com/build/configure-builds/environment-variables/).
 
-Next, register the function in your netlify.toml:
+## Page Setup
 
-Ini, TOML
+Finally, embed the script in your site's `<head>` is needed. You can use the script generated during the initial dashboard setup as a starting point. We need to adjust it slightly to ensure that the analytics events are sent to our proxy. This means we need to change or replace the hostname and add additional hints to the Pirsch Analytics script to indicate where to send the data, depending on the paths configured in our edge function. 
 
-\[[edge_functions]]
-  function = "pirsch"
-  path = "/p.js"
+The `src` attribute must point to the proxy path of the JavaScript file. If you are running the proxy on the main hostname of your website, the path must be relative. However, if you have chosen to bind the proxy to a subdomain, the `src` attribute must be an absolute URL. The same applies for the `data-hit-endpoint`, `data-event-endpoint` and `data-session-endpoint` attributes. For my website the script tag looks like the following:
 
-\[[edge_functions]]
-  function = "pirsch"
-  path = "/p/event"
-Finally, embed the script in your site's <head>. Note that we use our proxied /p.js as the source and define the data-endpoint to route events through our Edge Function:
-
-```HTML
-<script defer 
-  src="/p.js" 
-  id="pirschjs" 
-  data-endpoint="/p/event">
+```razor
+<script defer
+  src="/assets/js/pa.js"
+  id="pirschjs"
+  data-hit-endpoint="/p/pv"
+  data-event-endpoint="/p/e"
+  data-session-endpoint="/p/s">
 </script>
 ```
 
