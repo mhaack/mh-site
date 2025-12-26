@@ -18,13 +18,21 @@ That’s why I decided to move to [Pirsch.io](https://pirsch.io/). The analytics
 
 Plausible is certainly the more popular provider of the two, while Pirsch.io is the niche player from Germany. But in terms of pricing, Pirsch.io beats Plausible. They also offer a 100k plan for €120 + VAT per year. While the 10k page view plan is at €60 + VAT per year.
 
-### The Migration
+## The Migration
 
 The transition was remarkably smooth. Pirsch provides a built-in import tool for historical data from Google Analytics, Plausible Analytics and Fathom Analytics, so I didn't lose any of my existing stats.
 
 ![Pirsch Import Dashboard](/assets/images/pirsch-screenshot1.png)
 
 I was able to import all historical data from Plausible simply via a CSV file.
+
+## Setting up Pirsch Analytics
+
+Setting up Pirsch Analytics is really easy. 
+
+Once you have created your account, generate a tracking script via the [Pirsch dashboard](https://dashboard.pirsch.io/). You only need to provide the hostname of your website, an optional subdomain and a time zone. Once you have created your dashboard, you can select from the integration options. Finally, you will receive a custom JavaScript snippet specific to your website, which you should copy and paste into the `<head>` section of your website.
+
+There are also a large number of ready-made integrations for CMS (such as WordPress), e-commerce platforms (such as Shopify) or SSG frameworks (via Astro or Gatsby) available from the community.
 
 ### Using a Proxy with Netlify Edge Functions
 
