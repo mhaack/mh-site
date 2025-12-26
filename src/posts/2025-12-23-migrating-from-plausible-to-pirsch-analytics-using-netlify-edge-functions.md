@@ -12,9 +12,11 @@ date: 2025-12-20
 ---
 I’ve been a happy Plausible Analytics user for quite some time. The UI is clean, the solution is privacy-focused, and does exactly what it's supposed to do. Honestly, there was no technical reason to switch — until we exceed the current subscription plan.
 
-Lately, my websites — this one and the [dinosaur website of my daughte](https://dino-fakten.de/)r have seen a nice increase in traffic, consistently exceeding the 10k monthly pageview limit. While this growth is great, Plausible’s pricing model is a bit steep for hobby projects. The next tier jumps straight to 100k monthly pageviews for €190 + VAT (up from €90 + VAT). With both sites together receiving around 12,000 page views per month, there is certainly plenty of room for growth. However, I don't think we'll reach 100k in the next five years.
+Lately, my websites — this one and the [dinosaur website of my daughte](https://dino-fakten.de/)r have seen a nice increase in traffic, consistently exceeding the 10k monthly pageview limit. While this growth is great, Plausible’s pricing model is a bit steep for hobby projects. The next tier with 100k monthly pageviews jumps straight to €190 + VAT (up from €90 + VAT). With both sites together receiving around 12,000 page views per month, there is certainly plenty of room for growth. However, I don't think we'll reach 100k in the next five years.
 
-That’s why I decided to move to [Pirsch.io](https://pirsch.io/). The analytics features offered by Pirsch.io are comparable with those offered by Plausible. Both tools are privacy-focused, no-cookie analytics solutions. Plausible is certainly the more popular of the two, while Pirsch.io is the niche player from Germany. In terms of pricing, Pirsch.io beats Plausible. They also offer a 100k plan for €120 + VAT per year. 
+That’s why I decided to move to [Pirsch.io](https://pirsch.io/). The analytics features offered by Pirsch.io are comparable with those offered by Plausible. Both tools are privacy-focused, no-cookie analytics solutions. Fortunately, both providers offer good documentation. This makes comparison easy, as does subsequent migration. The way in which website visitors and page views are counted is quite similar. Pirsch.io has slightly better bot detection, or at least better documentation of it. Otherwise, I can't see any major differences.
+
+Plausible is certainly the more popular provider of the two, while Pirsch.io is the niche player from Germany. But in terms of pricing, Pirsch.io beats Plausible. They also offer a 100k plan for €120 + VAT per year. 
 
 ### The Migration
 
