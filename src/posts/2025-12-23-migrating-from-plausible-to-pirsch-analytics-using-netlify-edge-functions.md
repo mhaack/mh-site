@@ -44,6 +44,8 @@ Pirsch offers this proxy via a custom subdomain, but only with the Plus subscrip
 
 Since my sites are hosted on Netlify, I wanted to leverage [Edge Functions](https://docs.netlify.com/build/edge-functions/overview/) for this. The Pirsch documentation includes a JavaScript [Cloudflare Worker proxy guide](https://docs.pirsch.io/advanced/cf-workers), but since the environments differ, the code needed some adjustments for Netlify.
 
+In order for our Edge proxy function to send analytics events to Pirsch securely, we need to generate an access key via the Pirsch dashboard. Navigate to the Integration Settings page of your Pirsch dashboard and click Add Client to create a new client. Set the type to 'Access Key'. Give it a memorable name and click Create Client. Copy the access key and save it for later as it will not be visible again. 
+
 ### Refactoring with Cursor
 
 Instead of rewriting the logic manually, I used Cursor. I provided the Cloudflare example and asked it to convert the code to a Netlify Edge Function. 
