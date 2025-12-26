@@ -44,7 +44,7 @@ Pirsch offers this proxy via a custom subdomain, but only with the Plus subscrip
 
 Since my sites are hosted on Netlify, I wanted to leverage [Edge Functions](https://docs.netlify.com/build/edge-functions/overview/) for this. The Pirsch documentation includes a JavaScript [Cloudflare Worker proxy guide](https://docs.pirsch.io/advanced/cf-workers), but since the environments differ, the code needed some adjustments for Netlify.
 
-In order for our Edge proxy function to send analytics events to Pirsch securely, we need to generate an access key via the Pirsch dashboard. Navigate to the Integration Settings page of your Pirsch dashboard and click Add Client to create a new client. Set the type to 'Access Key'. Give it a memorable name and click Create Client. Copy the access key and save it for later as it will not be visible again. 
+In order for our Edge proxy function to send analytics events to Pirsch securely, we need to generate an access key via the Pirsch dashboard. Navigate to the Integration Settings page of your Pirsch dashboard and click Add Client to create a new client. Set the type to 'Access Key'. Give it a memorable name and click Create Client. Copy the access key and save it for later as it will not be visible again. We will configure it in Netlify as secure environment variable later.
 
 ### Refactoring with Cursor
 
@@ -286,4 +286,12 @@ The `src` attribute must point to the proxy path of the JavaScript file. If you 
 
 ## Summary
 
-The move to Pirsch.io was a great decision for my setup. It's more cost-effective for my current traffic, and thanks to Cursor, setting up the Netlify Edge Function proxy was a matter of minutes. The dashboard is intuitive, and the data is flowing in perfectly.
+Would moving to Pirsch.io be a good idea for my setup? How does it compare to Plausible in a real project? I suppose we'll find out over the next few months. It's definitely a more cost-effective option for my current level of traffic. pattern. The dashboard looks nice! as well. With the first data flowing in:
+
+
+
+<<< screenshot >>>
+
+
+
+From a technical perspective, setting up the Netlify Edge Function proxy with the help of Cursor took just minutes. For now, I can see that the proxy solution is working pretty reliably.
