@@ -23,7 +23,7 @@ Plausible is certainly the more popular provider of the two, while Pirsch.io is 
 
 The transition was remarkably smooth. Pirsch provides a built-in import tool for historical data from Google Analytics, Plausible Analytics and Fathom Analytics, so I didn't lose any of my existing stats.
 
-![Pirsch Import Dashboard](/assets/images/pirsch-screenshot1.png)
+![Pirsch Import Dashboard](/assets/images/pirsch-screenshot1.png){class="small"}
 
 I was able to import all historical data from Plausible simply via a CSV file.
 
@@ -289,6 +289,6 @@ The `src` attribute must point to the proxy path of the JavaScript file. If you 
 
 Would moving to Pirsch.io be a good idea for my setup? How does it compare to Plausible in a real project? I suppose we'll find out over the next few months. It's definitely a more cost-effective option for my current level of traffic. pattern. The dashboard looks nice! as well. With the first data flowing in:
 
-![Pirsch Dashboard for markus-haack.com](/assets/images/pirsch-screenshot2.png)
+![Pirsch Dashboard for markus-haack.com](/assets/images/pirsch-screenshot2.png){class="small"}
 
 From a technical perspective, setting up the Netlify Edge Function proxy with the help of Cursor took just minutes. For now, I can see that the proxy solution is working pretty reliably.
