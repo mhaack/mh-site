@@ -48,7 +48,7 @@
     <meta name="twitter:image" content="{% ogImageUrl ogImgSrv %}">
 
     {% if env.isProd -%}
-    <script defer src="/assets/js/pa.js" id="pianjs" data-hit-endpoint="/p/pv" data-event-endpoint="/p/e" data-session-endpoint="/p/s"></script>
+    <script defer src="http://p.markus-haack.org/assets/js/pa.js" id="pianjs" data-hit-endpoint="http://p.markus-haack.org/pv" data-event-endpoint="http://p.markus-haack.org/e" data-session-endpoint="http://p.markus-haack.org/s"></script>
     {%- endif %}
     {%- if layout == 'home' -%}
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
