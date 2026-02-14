@@ -38,7 +38,10 @@ export const imageShortcode = async (
     },
   });
 
-  const lowsrc = metadata.jpeg[metadata.jpeg.length - 1];
+  // Use jpeg as fallback, or the last format in the list if jpeg is not available
+  const lowsrc = metadata.jpeg
+    ? metadata.jpeg[metadata.jpeg.length - 1]
+    : Object.values(metadata)[Object.values(metadata).length - 1][0];
 
   const imageSources = Object.values(metadata)
     .map((imageFormat) => {

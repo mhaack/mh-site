@@ -23,16 +23,20 @@ if (codeBlocks) {
     `;
 
     button.addEventListener('click', (event) => {
-      const element = event.target;
-      const pre = element.closest('pre');
+      const button = event.currentTarget;
+      const pre = button.nextElementSibling;
+      if (!pre) return;
+
       const code = pre.querySelector('code');
+      if (!code) return;
+
       const range = document.createRange();
       range.selectNode(code);
       window.getSelection().removeAllRanges();
       window.getSelection().addRange(range);
 
-      const defaultMsg = pre.querySelector('#default-message');
-      const successMsg = pre.querySelector('#success-message');
+      const defaultMsg = button.querySelector('#default-message');
+      const successMsg = button.querySelector('#success-message');
 
       const showSuccess = () => {
         defaultMsg.classList.add('hidden');
@@ -53,6 +57,7 @@ if (codeBlocks) {
         navigator.clipboard.writeText(range.toString());
       } catch (error) {
         console.error(error);
+        resetToDefault();
       }
 
       window.getSelection().removeAllRanges();

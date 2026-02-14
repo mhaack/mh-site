@@ -6,7 +6,10 @@ export const popularPosts = (posts, analytics, dataset = 'allTime') => {
       if (topUrls.find((p) => p.page === post.url)) return true;
     })
     .sort((a, b) => {
-      const pageviews = (page) => analyticsData.filter((p) => p.page === page.url).pop().pageviews;
+      const pageviews = (page) => {
+        const stats = analyticsData.find((p) => p.page === page.url);
+        return stats ? stats.pageviews : 0;
+      };
       return pageviews(b) - pageviews(a);
     });
 };
