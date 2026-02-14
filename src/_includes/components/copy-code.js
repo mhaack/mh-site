@@ -24,7 +24,7 @@ if (codeBlocks) {
 
     button.addEventListener('click', (event) => {
       const button = event.currentTarget;
-      const pre = button.nextElementSibling;
+      const pre = button.closest('pre');
       if (!pre) return;
 
       const code = pre.querySelector('code');
