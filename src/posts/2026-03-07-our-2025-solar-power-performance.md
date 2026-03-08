@@ -54,7 +54,7 @@ In 2025 we self-consumed 5.761 kWh of solar energy, representing **€2,189 in a
 
 Total 2025 benefit: roughly **€2,400**.
 
-Over five years, we've self-consumed approximately **27,700 kWh** in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around **€8,300 in cumulative grid savings** — plus another ~€1,000 in feed-in revenue across the period.
+Over five years, we've self-consumed approximately **27,700 kWh** in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around **€8,300 in cumulative grid savings** — plus another around €1,000 in feed-in revenue across the period.
 
 The system is approaching the midpoint of its expected 20-year lifespan. At current benefit rates, we remain on track for a full payback well within that window.
 
@@ -70,13 +70,9 @@ Our self-consumption rate of 66.8% of production used on-site places us well wit
 
 ## What's Next
 
-We had a smart meter installed by our grid provider in late 2025. The obvious next step is switching to a dynamic electricity tariff. Since January 2025, all German electricity providers are legally required to offer dynamic tariffs, and providers like Tibber and aWATTar make it increasingly practical. In May 2025, electricity prices went negative in Germany for the first time — Tibber customers in some regions were effectively paid to consume electricity at midday. With our battery and evcc managing EV charging, we're well-positioned to take advantage of that kind of pricing. It's now just a matter of actually making the switch.
+We had a smart meter installed in late 2025. The obvious next step is switching to a dynamic electricity tariff — providers like Tibber and aWATTar make it increasingly practical, and with our battery and evcc managing EV charging, we're well-positioned to take advantage of variable pricing.
 
-As for the PV system itself — no changes planned. Five years in, the panels are performing as expected with no obvious degradation. The BYD battery is healthy. The SolarEdge inverter does its thing quietly. Sometimes the most interesting update is that everything just works.
-
-One thing I'm mulling: with consumption crossing 10,700 kWh in 2025 and likely to grow further as EV mileage increases, does the math shift enough to justify expanding the panel area? We're still importing about 4,950 kWh per year from the grid. At current prices, that's ~€1,880 annually that additional panels could displace.
-
-What does your setup look like? Are you seeing a consumption spike from an EV, or finding that solar covers more — or less — than you expected? I'm curious to hear from others running similar systems in Germany.
+As for the system itself: five years in, the panels show no obvious degradation, the battery is healthy, and the SolarEdge inverter does its thing quietly. Sometimes the most interesting update is that everything just works.
 
 ---
 
@@ -88,7 +84,7 @@ A residential system in southern Germany typically yields 1,000–1,200 kWh per 
 
 **What is a good self-consumption rate for a residential PV system with battery storage?**
 
-With battery storage, self-consumption rates of 60–80% of production are typical in Germany. We achieved 66.8% in 2025 — toward the high end of this range.
+With battery storage, self-consumption rates of 60–80% of production are typical in Germany. We achieved 66.8% in 2025 — towards the high end of this range.
 
 **How much money can a home solar system save per year in Germany?**
 
