@@ -78,17 +78,17 @@ Regarding the system itself, after five years the panels show no obvious signs o
 
 ## FAQ
 
-**How much does a home solar system produce per year in southern Germany?**
+**How much electricity does a home solar system produce per year?**
 
-A residential system in southern Germany typically yields 1,000–1,200 kWh per kWp of installed capacity. Our system produced 8,624 kWh in 2025.
+Ours produced 8,624 kWh in 2025 — roughly what a typical German household consumes in a year. For us that's no longer enough, since adding an EV pushed our annual consumption to over 10,700 kWh. We have 9.45 kWp installed; a typical single-family home in Germany can fit 10–12 kWp depending on roof size and orientation. The theoretical benchmark for a well-sited system is around 1,000–1,200 kWh per kWp installed.
 
-**What is a good self-consumption rate for a residential PV system with battery storage?**
+**Is a battery worth adding to a home solar system?**
 
-With battery storage, self-consumption rates of 60–80% of production are typical in Germany. We achieved 66.8% in 2025 — towards the high end of this range.
+For us, clearly yes. Without a battery we'd self-consume maybe 25–35% of what we produce — the rest goes to the grid at the low feed-in rate. With our 10.5 kWh battery we're at 66.8%. It shifts solar production from midday, when we don't need it, to mornings and evenings, when we do. Five years in, that call still looks right.
 
 **How much money can a home solar system save per year in Germany?**
 
-With electricity prices around €0.38/kWh in 2025, our system saved approximately €2,189 in avoided grid costs, plus ~€224 in feed-in tariff revenue — a total of roughly €2,400 for the year.
+In 2025 our system saved us around €2,400 in total: €2,189 from not buying that electricity from the grid, plus €224 in feed-in income. With grid prices at €0.38/kWh — and our own contract at €0.29/kWh — every kWh we produce ourselves is direct money saved. Five years in, the annual benefit has grown every year as prices have risen.
 
 ---
 
