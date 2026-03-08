@@ -14,13 +14,15 @@ date: 2026-03-07
 permalink: /our-2025-solar-power-performance/
 ---
 
-If you're researching whether a home solar system makes financial sense in Germany — or wondering how other people's systems actually perform after a few years — here's five years of real data from a rooftop PV system in southern Germany. In 2025, our 9.45 kWp system produced **8,624 kWh**, covered 54% of our household electricity consumption, and saved us around €2,200 in grid costs. The full breakdown is below.
+If you want to know if it makes financial sense to install a home solar system in Germany, or if you're curious about how long these systems last, we have the answers for you. Here is five years of real data from our own rooftop PV system in Germany. In 2025, our 9.45 kWp system produced **8,624 kWh**, covering 54% of our household electricity needs and saving us around €2,200 in grid costs. The full breakdown is below.
 
 This is our fifth annual solar review. You can find the previous ones for [2024](/our-2024-solar-power-performance/) and [2023](/solar-update-2023/), along with the original [installation posts from 2021](/our-own-electricity-1/). Quick system overview: 9.45 kWp of panels on a south-facing roof in southern Germany, installed in 2021, paired with a BYD battery and a SolarEdge inverter. Since mid-2025 we also have a Polestar 4 that we charge primarily on solar surplus using [evcc](/intro-into-evcc-charging/).
 
 ## 2025: Steady Production, Higher Consumption
 
 Our panels produced 8,624 kWh in 2025 — down just 0.9% from 2024. Essentially flat. Total household consumption climbed to 10,714 kWh, a 6.3% jump compared to the previous year. The new EV is almost certainly responsible for a big chunk of that.
+
+![Solar 2025 Scorecard](/assets/images/solar-2025-scorecard.png){class="small"}
 
 The seasonal pattern was familiar:
 
@@ -31,6 +33,8 @@ The seasonal pattern was familiar:
 What was different compared to 2024? Spring was notably stronger — February was up +55 kWh, May up +99 kWh. But July let us down badly: 1,074 kWh against July 2024's 1,299 kWh, a drop of 225 kWh. October was similarly disappointing (352 kWh vs. 482 kWh in 2024). Whatever the weather was doing in those months, it hit the panels hard.
 
 The flip side: December 2025 was almost double December 2024 — 166 kWh versus 85 kWh. That continues a pattern we've been watching for a few years now: milder winters, less snow cover on the panels, marginally better winter yields. Not much but it adds a little to our electricity savings.
+
+![Solar 2025 monthly view](/assets/images/solar-2025-months.png){class="small"}
 
 ## Five Years in One Table
 
@@ -50,29 +54,25 @@ The column I pay most attention to is self-consumed solar — up from 5,378 kWh 
 
 German residential electricity prices averaged around €0.38/kWh in 2025 — still the highest in the EU despite a slight easing from the 2023 peak of €0.47/kWh. Our current electricity contract is slightly lower at €0.29/kWh, however every kWh we produce ourselves is worth substantially more than when we installed the system.
 
-In 2025 we self-consumed 5,761 kWh of solar energy, representing **€2,189 in avoided grid costs**. We also exported 2,833 kWh back to the grid at the current feed-in tariff of ~7.9 ct/kWh, adding around **€224** in revenue.
+In 2025 we self-consumed 5,761 kWh of solar energy, representing €2,189 in avoided grid costs. We also exported 2,833 kWh back to the grid at the current feed-in tariff of ~7.9 ct/kWh, adding around €224 in income.
 
 Total 2025 benefit: roughly **€2,400**.
 
-Over five years, we've self-consumed approximately **27,700 kWh** in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around **€8,300 in cumulative grid savings** — plus another around €1,000 in feed-in revenue across the period.
+Over five years, we've self-consumed approximately 27,700 kWh in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around €8,300 in cumulative grid savings — plus another around €1,000 in feed-in revenue across the period.
 
 The system is approaching the midpoint of its expected 20-year lifespan. At current benefit rates, we remain on track for a full payback well within that window.
 
-One thing worth noting: the new coalition government has promised to cut German electricity prices by at least 5 ct/kWh. Whether that materialises is another question, but for now, high grid prices make self-generated solar electricity more valuable than ever.
-
 ## How We Compare to Other German Systems
 
-For southern Germany, the typical annual yield benchmark is **1,000–1,200 kWh per kWp of installed capacity** for ideally oriented systems. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. Our real-world yield reflects the actual installation geometry of our roof rather than an ideal orientation.
+For southern Germany, the typical annual yield benchmark is 1,000–1,200 kWh per kWp of installed capacity for ideally oriented systems. We live roughly in the middle of the country, where the forecast figures are somewhat lower. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. Our real-world yield reflects the actual installation geometry of our four-sided roof, with only the east, south and west sides covered by solar panels. 
 
-Nationally, 2025 was an exceptionally sunny year. Germany recorded around 1,945 sunshine hours — roughly 26% above the long-term climate mean — and total PV output across the country jumped 21%. Our flat production (-0.9%) against this national backdrop suggests our local weather, especially that weak July, diverged from the national trend.
-
-Our self-consumption rate of 66.8% of production used on-site places us well within the range for battery-equipped residential systems. According to Fraunhofer ISE, self-consumption across Germany rose from 13% to 17% of total PV generation in 2024, driven by growing battery storage adoption. Systems with batteries typically reach 60–80% — we're in the top portion of that range. Without a battery, residential systems typically self-consume only 25–35% of what they produce, which underlines why the battery has paid for itself in terms of system efficiency.
+Our 66.8% self-consumption rate places us well within the range for battery-equipped residential systems. [Fraunhofer ISE](https://www.ise.fraunhofer.de/en/press-media/press-releases/2025/self-consumption-of-solar-power-is-rising-sharply-in-germany.html) reports that self-consumption in Germany rose from 13% to 17% of total PV generation in 2024, driven by growing battery storage adoption. Systems with batteries typically reach 60–80% — we're in the top portion of that range. Without a battery, systems self-consume 25–35% of their production — an example of why the battery pays for itself in terms of system efficiency.
 
 ## What's Next
 
-We had a smart meter installed in late 2025. The obvious next step is switching to a dynamic electricity tariff — providers like Tibber and aWATTar make it increasingly practical, and with our battery and evcc managing EV charging, we're well-positioned to take advantage of variable pricing.
+We had a smart meter installed at the end of 2025. The next step is obvious: switch to a dynamic electricity tariff. I'm not 100% sure yet, but with our battery and EV charging, we're in a good place to make the most of changing prices.
 
-As for the system itself: five years in, the panels show no obvious degradation, the battery is healthy, and the SolarEdge inverter does its thing quietly. Sometimes the most interesting update is that everything just works.
+Regarding the system itself, after five years the panels show no obvious signs of degradation, the battery is in good condition and the SolarEdge inverter is working fine. Sometimes the best update is that everything just works.
 
 ---
 
@@ -92,4 +92,4 @@ With electricity prices around €0.38/kWh in 2025, our system saved approximate
 
 ---
 
-*This post is part of our annual solar performance series. Previous years: [2024](/our-2024-solar-power-performance/) · [2023](/solar-update-2023/)*
+*This post is part of my annual solar performance series. Previous years: [2024](/our-2024-solar-power-performance/) · [2023](/solar-update-2023/)*

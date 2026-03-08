@@ -20,7 +20,7 @@ This is our fifth annual solar review. You can find the previous ones for [2024]
 
 ## 2025: Steady Production, Higher Consumption
 
-Our panels produced 8,624 kWh in 2025 — down just 0.9% from 2024. Essentially flat. Total household consumption climbed to 0,714 kWh, a 6.3% jump compared to the previous year. The new EV is almost certainly responsible for a big chunk of that.
+Our panels produced 8,624 kWh in 2025 — down just 0.9% from 2024. Essentially flat. Total household consumption climbed to 10,714 kWh, a 6.3% jump compared to the previous year. The new EV is almost certainly responsible for a big chunk of that.
 
 ![Solar 2025 Scorecard](/assets/images/solar-2025-scorecard.png){class="small"}
 
@@ -66,11 +66,11 @@ The system is approaching the midpoint of its expected 20-year lifespan. At curr
 
 For southern Germany, the typical annual yield benchmark is 1,000–1,200 kWh per kWp of installed capacity for ideally oriented systems. We live roughly in the middle of the country, where the forecast figures are somewhat lower. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. Our real-world yield reflects the actual installation geometry of our four-sided roof, with only the east, south and west sides covered by solar panels. 
 
-Our 66.8% self-consumption rate places us well within the range for battery-equipped residential systems. Fraunhofer ISE reports that self-consumption in Germany rose from 13% to 17% of total PV generation in 2024, driven by growing battery storage adoption. Systems with batteries typically reach 60–80% — we're in the top portion of that range. Without a battery, systems self-consume 25–35% of their production — an example of why the battery pays for itself in terms of system efficiency.
+Our 66.8% self-consumption rate places us well within the range for battery-equipped residential systems. [Fraunhofer ISE](https://www.ise.fraunhofer.de/en/press-media/press-releases/2025/self-consumption-of-solar-power-is-rising-sharply-in-germany.html) reports that self-consumption in Germany rose from 13% to 17% of total PV generation in 2024, driven by growing battery storage adoption. Systems with batteries typically reach 60–80% — we're in the top portion of that range. Without a battery, systems self-consume 25–35% of their production — an example of why the battery pays for itself in terms of system efficiency.
 
 ## What's Next
 
-We had a smart meter installed at the end of 2025. The next step is obvious: switch to a dynamic electricity tariff. I'm still not 100% Yeah, I'm sure about that. It looks like, with our battery and EV charging, we're in a good place to make the most of changing prices.
+We had a smart meter installed at the end of 2025. The next step is obvious: switch to a dynamic electricity tariff. I'm not 100% sure yet, but with our battery and EV charging, we're in a good place to make the most of changing prices.
 
 Regarding the system itself, after five years the panels show no obvious signs of degradation, the battery is in good condition and the SolarEdge inverter is working fine. Sometimes the best update is that everything just works.
 
