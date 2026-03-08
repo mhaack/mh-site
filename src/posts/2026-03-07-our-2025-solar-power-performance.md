@@ -92,4 +92,4 @@ With electricity prices around €0.38/kWh in 2025, our system saved approximate
 
 ---
 
-*This post is part of our annual solar performance series. Previous years: [2024](/our-2024-solar-power-performance/) · [2023](/solar-update-2023/)*
+*This post is part of my annual solar performance series. Previous years: [2024](/our-2024-solar-power-performance/) · [2023](/solar-update-2023/)*
