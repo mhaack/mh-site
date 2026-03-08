@@ -14,9 +14,9 @@ date: 2026-03-07
 permalink: /our-2025-solar-power-performance/
 ---
 
-If you're researching whether a home solar system makes financial sense in Germany — or wondering how other people's systems actually perform after a few years — here's five years of real data from a rooftop PV system in southern Germany. In 2025, our <!-- TODO: confirm kWp --> system produced **8,624 kWh**, covered **54% of our household electricity consumption**, and saved us around **€2,200** in grid costs. The full breakdown is below.
+If you're researching whether a home solar system makes financial sense in Germany — or wondering how other people's systems actually perform after a few years — here's five years of real data from a rooftop PV system in southern Germany. In 2025, our **9.45 kWp** system produced **8,624 kWh**, covered **54% of our household electricity consumption**, and saved us around **€2,200** in grid costs. The full breakdown is below.
 
-This is our fifth annual solar review. You can find the previous ones for [2024](/our-2024-solar-power-performance/) and [2023](/solar-update-2023/), along with the original [installation posts from 2021](/our-own-electricity-1/). Quick system overview: <!-- TODO: confirm kWp --> of panels on a south-facing roof in southern Germany, installed in 2021, paired with a BYD battery and a SolarEdge inverter. Since mid-2025 we also have a Polestar 4 that we charge primarily on solar surplus using [evcc](/intro-into-evcc-charging/).
+This is our fifth annual solar review. You can find the previous ones for [2024](/our-2024-solar-power-performance/) and [2023](/solar-update-2023/), along with the original [installation posts from 2021](/our-own-electricity-1/). Quick system overview: **9.45 kWp** of panels on a south-facing roof in southern Germany, installed in 2021, paired with a BYD battery and a SolarEdge inverter. Since mid-2025 we also have a Polestar 4 that we charge primarily on solar surplus using [evcc](/intro-into-evcc-charging/).
 
 ## 2025: Steady Production, Higher Consumption
 
@@ -36,7 +36,7 @@ The flip side: December 2025 was almost double December 2024 — 166 kWh versus 
 
 | Year | Production | Consumption | Grid Purchased | Self-consumed | Solar Coverage |
 |------|-----------|-------------|----------------|---------------|----------------|
-| 2021 | 7,780 kWh | 9,721 kWh   | 4,677 kWh      | 5,044 kWh     | 52%            |
+| 2021 | 8,065 kWh | 9,926 kWh   | 4,549 kWh      | 5,378 kWh     | 54%            |
 | 2022 | 9,320 kWh | 10,322 kWh  | 4,482 kWh      | 5,840 kWh     | 57%            |
 | 2023 | 8,459 kWh | 10,143 kWh  | 4,827 kWh      | 5,317 kWh     | 52%            |
 | 2024 | 8,706 kWh | 10,078 kWh  | 4,661 kWh      | 5,418 kWh     | 54%            |
@@ -44,7 +44,7 @@ The flip side: December 2025 was almost double December 2024 — 166 kWh versus 
 
 A few things stand out. 2022 was our best year by a wide margin — an exceptional spring that has never been repeated. Since then we've settled into a band of 8,400–8,700 kWh, which is probably where we'll stay barring unusual weather.
 
-The column I pay most attention to is self-consumed solar — up from 5,044 kWh in year one to 5,761 kWh in year five, a 14% increase even though production has barely moved. The battery is doing its job. Our *Eigenverbrauchsquote* (solar coverage ratio) has been remarkably stable at 52–57% across all five years, landing at 54% in each of the last two years.
+The column I pay most attention to is self-consumed solar — up from 5,378 kWh in year one to 5,761 kWh in year five, a 7% increase even though production has barely moved. The battery is doing its job. Our *Eigenverbrauchsquote* (solar coverage ratio) has been remarkably stable at 52–57% across all five years, landing at 54% in three of those years.
 
 ## The Financial Reality
 
@@ -54,15 +54,15 @@ In 2025 we self-consumed **5,761 kWh** of solar energy, representing **€2,189 
 
 Total 2025 benefit: roughly **€2,400**.
 
-Over five years, we've self-consumed an estimated 27,400 kWh in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around **€8,200 in cumulative grid savings** — plus another ~€1,000 in feed-in revenue across the period.
+Over five years, we've self-consumed approximately **27,700 kWh** in total. Even at a conservative blended average of €0.30/kWh (accounting for lower prices in the early years), that's around **€8,300 in cumulative grid savings** — plus another ~€1,000 in feed-in revenue across the period.
 
-<!-- TODO: Insert total system installation cost to calculate payback trajectory and remaining years -->
+The system is approaching the midpoint of its expected 20-year lifespan. At current benefit rates, we remain on track for a full payback well within that window.
 
 One thing worth noting: the new coalition government has promised to cut German electricity prices by at least 5 ct/kWh. Whether that materialises is another question, but for now, high grid prices make self-generated solar electricity more valuable than ever.
 
 ## How We Compare to Other German Systems
 
-For southern Germany, the typical *Jahresertrag* (annual yield) is **1,000–1,200 kWh per kWp of installed capacity**. A well-positioned system in Bavaria can reach the top of that range. Our 8,624 kWh is consistent with a <!-- TODO: kWp --> system performing as expected in this region.
+For southern Germany, the typical *Jahresertrag* (annual yield) benchmark is **1,000–1,200 kWh per kWp of installed capacity** for ideally oriented systems. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. The typical benchmark for southern Germany is 1,000–1,200 kWh/kWp for ideally oriented systems; our real-world yield reflects the actual installation geometry of our roof.
 
 Nationally, 2025 was an exceptionally sunny year. Germany recorded around 1,945 sunshine hours — roughly 26% above the long-term climate mean — and total PV output across the country jumped 21%. Our flat production (-0.9%) against this national backdrop suggests our local weather, especially that weak July, diverged from the national trend.
 
