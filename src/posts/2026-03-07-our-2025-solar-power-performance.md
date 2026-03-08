@@ -62,7 +62,7 @@ One thing worth noting: the new coalition government has promised to cut German 
 
 ## How We Compare to Other German Systems
 
-For southern Germany, the typical *Jahresertrag* (annual yield) benchmark is **1,000–1,200 kWh per kWp of installed capacity** for ideally oriented systems. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. The typical benchmark for southern Germany is 1,000–1,200 kWh/kWp for ideally oriented systems; our real-world yield reflects the actual installation geometry of our roof.
+For southern Germany, the typical *Jahresertrag* (annual yield) benchmark is **1,000–1,200 kWh per kWp of installed capacity** for ideally oriented systems. Our 9.45 kWp system produced 8,624 kWh in 2025 — a specific yield of **912 kWh/kWp**. Our real-world yield reflects the actual installation geometry of our roof rather than an ideal orientation.
 
 Nationally, 2025 was an exceptionally sunny year. Germany recorded around 1,945 sunshine hours — roughly 26% above the long-term climate mean — and total PV output across the country jumped 21%. Our flat production (-0.9%) against this national backdrop suggests our local weather, especially that weak July, diverged from the national trend.
 
