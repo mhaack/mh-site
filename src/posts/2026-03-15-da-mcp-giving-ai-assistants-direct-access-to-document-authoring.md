@@ -25,11 +25,11 @@ So I built it.
 
 Think of it as giving your AI assistant a command-line-like interface to DA. Instead of switching between tools and copying content back and forth, you can say things like:
 
-> "Draft a new landing page at /products/overview and save it directly to DA."
+> Draft a new landing page at /products/overview and save it directly to DA.
 
 or
 
-> "Show me what changed in this document over the last week."
+> Show me what changed in this document over the last week.
 
 And it just does it.
 
