@@ -66,7 +66,7 @@ For **Claude Desktop**, add this to your config file — on macOS: `~/Library/Ap
 ```json
 {
   "mcpServers": {
-    "da-live-admin": {
+    "da-mcp": {
       "type": "streamable-http",
       "url": "https://mcp.adobeaemcloud.com/adobe/mcp/da"
     }
@@ -79,7 +79,7 @@ For **VS Code or Cursor**, add to `.vscode/mcp.json`:
 ```json
 {
   "mcpServers": {
-    "da-prod-mcp": {
+    "da-mcp": {
       "url": "https://mcp.adobeaemcloud.com/adobe/mcp/da"
     }
   }
