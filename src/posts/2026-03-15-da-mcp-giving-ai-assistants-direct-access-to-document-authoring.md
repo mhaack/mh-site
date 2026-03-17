@@ -29,7 +29,7 @@ Think of it as giving your AI assistant a command-line-like interface to DA. Ins
 
 or
 
-> Show me what changed in this document over the last week.
+> Show me what is in my /drafts folder.
 
 And it just does it.
 
@@ -37,25 +37,24 @@ And it just does it.
 
 DA MCP exposes 10 tools covering the full content lifecycle:
 
-| Tool | What it does |
-|------|-------------|
-| `da_list_sources` | Browse directories and list files in a repository |
-| `da_get_source` | Read the full content of any file |
-| `da_create_source` | Create a new file with provided content |
-| `da_update_source` | Update an existing file in place |
-| `da_delete_source` | Delete a file |
-| `da_copy_content` | Copy content from one location to another |
-| `da_move_content` | Move or rename content |
-| `da_get_versions` | View version history for a file |
-| `da_lookup_media` | Look up media asset references |
-| `da_lookup_fragment` | Look up content fragment references |
+| Tool                 | What it does                                      |
+| -------------------- | ------------------------------------------------- |
+| `da_list_sources`    | Browse directories and list files in a repository |
+| `da_get_source`      | Read the full content of any file                 |
+| `da_create_source`   | Create a new file with provided content           |
+| `da_update_source`   | Update an existing file in place                  |
+| `da_delete_source`   | Delete a file                                     |
+| `da_copy_content`    | Copy content from one location to another         |
+| `da_move_content`    | Move or rename content                            |
+| `da_get_versions`    | View version history for a file                   |
+| `da_lookup_media`    | Look up media asset references                    |
+| `da_lookup_fragment` | Look up content fragment references               |
 
 ## How It Works
 
 The server is built in TypeScript and runs on Cloudflare Workers. Authentication uses a token pass-through model — the client sends a DA Admin API token in the `Authorization` header, which the server forwards to the DA Admin API. If you use the public endpoint at `mcp.adobeaemcloud.com`, Adobe IMS authentication is handled automatically. No token configuration needed.
 
 The code is open source: [github.com/adobe-rnd/da-mcp](https://github.com/adobe-rnd/da-mcp). Pull requests and feedback welcome.
-
 
 ## Getting Connected
 
