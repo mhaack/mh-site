@@ -29,7 +29,7 @@ Think of it as giving your AI assistant a command-line-like interface to DA. Ins
 
 or
 
-> Show me what is in my /drafts folder.
+> Create 5 event pages with details for the provided CSV file.
 
 And it just does it.
 
