@@ -9,7 +9,7 @@ tags:
   - aem
   - ai
 images:
-  feature: /assets/images/adaptto-2023.jpeg
+  feature: /assets/images/da-mcp-hero.png
 date: 2026-03-16
 permalink: da-mcp/
 ---
