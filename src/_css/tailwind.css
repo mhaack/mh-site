@@ -180,7 +180,7 @@
   }
 
   code {
-    @apply lg:p-1 bg-gray-200 p-px font-normal border rounded-sm border-transparent;
+    @apply lg:p-1 bg-gray-200 p-px font-normal border rounded-sm border-transparent wrap-anywhere;
   }
 
   pre {
