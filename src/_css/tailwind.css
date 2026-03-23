@@ -215,6 +215,10 @@
     @apply text-center text-sm text-gray-500;
   }
 
+  table {
+    @apply block overflow-x-auto max-w-[calc(100vw-2rem)] md:max-w-none md:table;
+  }
+
   tbody tr {
     @apply border-b-0;
   }
