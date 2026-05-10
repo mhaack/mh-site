@@ -20,7 +20,8 @@ Over the past few weeks, I've been experimenting with different weather cards fo
 
 ## Why Upgrade From the Default?
 
-During my search for a better solution, I tested a handful of community cards that promise more features or a fancier look. Below are the four I’d recommend checking out, in order of increasing complexity and customization.
+The built-in card does the job — until you actually care about more details on your dashboard. No clock. Design options that make it hard to fit into a themed layout. No way to pull in a local temperature sensor alongside the cloud forecast.
+The community cards below fix all of that. Pick based on how much you want to tinker. Some custom cards do only one thing cleanly. Others show tons of details and can be fully customized. Spoiler: you can also combine multiple cards, no one says you can only have one.
 
 ## The setup
 
@@ -60,7 +61,7 @@ You get a clear display of the current time alongside the weather icon, temperat
 With a wide range of compatibility with different Lovelace themes, making it easy to fit into your overall dashboard look.
 
 **Configuration:**
-The Clock Weater Card currently only supports YAML configuration. A UI configuration mode is not yet available.
+The Clock Weather Card currently only supports YAML configuration. A UI configuration mode is not yet available.
 
 **My impression:**\
 The card is perfect if you want a simple, nice to look at info panel that shows both the time and weather. I find it works best in the mobile app dashboard and on always-on displays in the kitchen or hallway, as guests instantly see both the weather and what time it is. It doesn’t have as many advanced options or data points as the Platinum Weather Card, but it handles the basics very elegantly.
@@ -89,7 +90,7 @@ The card is fully configurable via the UI. It opens a full GUI editor with tons 
 To take advantage of the full feature set of this card, you will need multiple sensors. The default weather sensor may not be sufficient for this card. You will also need UV (such as from [OpenUV](https://www.home-assistant.io/integrations/openuv/) or [tomorrow.io](https://www.home-assistant.io/integrations/tomorrowio/)) and fire danger forecast. Local temperature sensors can also be used.
 
 **My impression:**\
-This Weather Card is perfect for anyone who wants to get and display all the data they can. The card allows extensive configuration and can be flexibly customised. However, this card is too much for a simple daily weather display that you look at on a tablet on the wall as you pass by. It is almost better suited for a seprated weather dashboard with a lot of details.
+This Weather Card is perfect for anyone who wants to get and display all the data they can. The card allows extensive configuration and can be flexibly customised. However, this card is too much for a simple daily weather display that you look at on a tablet on the wall as you pass by. It is almost better suited for a separated weather dashboard with a lot of details.
 
 ## 4. Simple Weather Card
 
@@ -108,16 +109,67 @@ The card has a nice day and night view and you can customise the background colo
 It works with standard `weather` entities, so it's compatible with the usual Home Assistant weather integrations. A local temperature sensor is also supported.
 
 **Configuration:**
-The Simple Weater Card currently only supports YAML configuration.
+The Simple Weather Card currently only supports YAML configuration.
 
 **My impression:**\
 I use the Simple Weather Card on my phone dashboard because it loads quickly and doesn’t overwhelm the screen. It’s also a good choice for secondary dashboard panels where I don’t need a detailed forecast, just a quick overview. If you have family members who get confused by too much detail, this card keeps things simple and usable.
 
-## Other options:
+## 5. Hourly Weather Card
 
-• [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather): A simple card to visualise upcoming weather conditions as a coloured horizontal bar. This card focuses on one thing and does it perfectly.
+The [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather) shows upcoming conditions as a colour-coded horizontal bar — each segment a forecast period, coloured by condition. Clear, cloudy, rain. You'll get an instant overview of the weather for the next few hours.
 
-• [Weather Chart Card](https://github.com/mlamberts78/weather-chart-card): If you prefer graphical trends, this card visualises forecast data such as temperature and precipitation over time. Similar to the Platinum Weather card this card, with all the details, deserves more space on the dashbaord.
+![Screenshot Hourly Weather Card](https://placehold.co/800x600/4A90E2/FFFFFF?text=Detail+Hourly+Weather+Card 'Screenshot 4: Hourly Weather Card'){class="x-small"}
+
+**Installation:**
+Install via HACS under *Frontend*. Search for "Hourly Weather Card", install, then add it as a custom card in the Lovelace editor.
+
+For this card, the choice of weather data provider is particularly important, as the hourly forecast can only be displayed if it is available. This is the only way to make full use of the Hourly Weather Card’s features. I'm using [Open-Meteo](https://www.home-assistant.io/integrations/open_meteo) which works pretty good. According to the docs [OpenWeatherMap](https://www.home-assistant.io/integrations/openweathermap/) should work as well.
+
+**Features:**
+It looks simple and the defaults are a great start. Simply add the card to you dashboard and link it to the weather entity. But there's a lot you can configure:
+
+- Forecast type — hourly, daily, or twice-daily
+- Number of forecast segments displayed
+- Wind speed and direction below the bar
+- Rain probability and amount, also below the bar
+- Custom colors and icons for weather conditions
+- Full control over the tap action behavior of the card
+
+**Configuration:**
+UI and YAML both work. Once installed, the card can be used directly on the dashboard. Simply select the Weather Entity and you’re done; further details and customisations can then be made directly via the visual editor.
+
+**My impression:**
+At first, I used the card a lot and placed it right on our main dashboard. It looks particularly good in the mobile app. The colour bar is simply easier to take in than a row of icons, especially if you want to know when it’s going to start raining.
+
+However, I’ve since moved the card to our weather dashboard. At least we don’t really need an hourly weather forecast. Even though the display and visualisation are really attractive and sophisticated, for us at least the added value isn’t quite enough to justify keeping the card permanently on the main dashboard.
+
+## 6. Weather Chart Card
+
+The [Weather Chart Card](https://github.com/mlamberts78/weather-chart-card) is for when a glance isn't enough. Temperature curves, precipitation bars, wind, humidity — plotted as actual charts across the coming days.
+
+**Installation:**
+Install via HACS under *Frontend*. Search for "Weather Chart Card", install, then add it as a custom card in the Lovelace editor.
+
+**Features:**
+The card renders forecast data as interactive charts: a temperature curve, precipitation bars, optional wind speed and humidity. You can configure which data to show, the forecast range, and units. Like the Platinum Weather Card, better data in means better charts out — if your weather integration is well set up, this card shows it.
+
+**Configuration:**
+YAML only. Less involved than Platinum, but you'll need a few minutes to wire up the right sensors and forecast types. The GitHub readme is clear on what goes where.
+
+**My impression:**
+This card needs space, and a main dashboard won't give it that. I put it on a dedicated weather page and that's where it makes sense. It's what I open when the forecast changes and I want to understand it — why rain at 3pm and not noon, what's happening overnight. If you're the type who actually reads the weather, this is worth setting up properly.
+
+## Other Options
+
+The cards above cover most use cases, but the community has a few more worth knowing about.
+
+**[Atmospheric Weather Card](https://github.com/shpongledsummer/atmospheric-weather-card)** is the most visually polished card on this list. It's detail-oriented — current conditions, forecast, the works — but the UI is genuinely nice to look at. Lots of configuration options too. If aesthetics matter as much as data for your dashboard, this one is worth trying before settling on Platinum.
+
+**[Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)** is a different card entirely. It doesn't show a forecast — it shows radar. Rain, clouds and snow radar images pulled from RainViewer, NOAA/NWS, or DWD, with optional hazard overlays. If you live somewhere where storms roll in fast, having a live radar tile on your dashboard is genuinely useful. Single-purpose, but it does that one thing well.
+
+**[Lovelace Windrose Card](https://github.com/aukedejong/lovelace-windrose-card)** renders wind speed and direction data as a windrose diagram. Not something most people need on their main dashboard, but if you have a local wind sensor and care about the data, this is a much better way to visualise it than a plain sensor card.
+
+**[Meteoalarm Card](https://github.com/MrBartusek/MeteoalarmCard)** shows weather warnings and alerts only — no forecast, no current conditions. When there's nothing active, it stays quiet or hides entirely. When an alert fires, the card changes colour by severity level. It supports a solid list of providers: MeteoAlarm (Europe-wide), Météo-France, DWD (Germany), Environnement Canada, NINA, WeatherAlerts (USA), and a few more. If you're in a region with serious weather events, this belongs on your dashboard alongside whichever forecast card you use.
 
 ## Which Card to Choose?
 
@@ -130,9 +182,15 @@ Try the Clock Weather Card, he animations are subtle but make a big difference. 
 If you want maximum control and like to experiment:\
 Platinum Weather Card is the most powerful option, letting you mix and match data sources and customize the look.
 
+For a quick hourly overview alongside your main cards:\
+The Hourly Weather Card. The colour bar format is faster to scan than icons and fits into an existing dashboard without taking up much room.
+
+For detailed forecast analysis, you want to see every detail:\
+Weather Chart Card is your go-to. Give it its own dashboard tab — that's when it's actually useful.
+
 ## My Setup
 
-At the moment I use the Clock Weather card in my main dashboard in combination with the forecast from the then standard built-in weather card. Using the custom `vertical-stack-in-card' card, these can be nicely stitched together to give them a "one card" look and feel. Here is the YAML of the combination:
+At the moment I use the Clock Weather card in my main dashboard in combination with the forecast from the then standard built-in weather card. Using the custom `vertical-stack-in-card` card, these can be nicely stitched together to give them a "one card" look and feel. Here is the YAML of the combination:
 
 ```yaml
 type: custom:vertical-stack-in-card
