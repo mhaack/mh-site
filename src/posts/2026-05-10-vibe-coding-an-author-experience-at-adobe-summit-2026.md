@@ -14,7 +14,7 @@ permalink: da-vide-coding-summit-lab/
 ---
 At Adobe Summit 2026 in Las Vegas, [Chris Millar](https://www.linkedin.com/in/auniverseaway/) and I ran a 90-minute hands-on lab — *Vibe Code an Author Experience for Edge Delivery Services*, session L613. We had developers, marketers, and authors in the room, gave everyone an AI coding agent and a live EDS project, and asked them to build a real authoring tool before the session ended. No prior technical skills needed.
 
-![Chris & Markus presenting L613](/assets/images/summitlab_photo_chirs_markus.jpeg)
+![Chris & Markus presenting L613](/assets/images/summitlab_photo_chirs_markus.jpeg){class="small"}
 
 ## What vibe coding means for EDS
 
