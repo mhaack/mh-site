@@ -1,5 +1,7 @@
 export const getAllPosts = (collection) => {
-  return collection.getFilteredByGlob('./src/posts/**/*.md').reverse();
+  return collection
+    .getFilteredByGlob('./src/posts/**/*.md')
+    .sort((a, b) => new Date(a.data.modified || a.data.date) - new Date(b.data.modified || b.data.date));
 };
 
 export const tagList = (collection) => {

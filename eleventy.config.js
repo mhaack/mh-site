@@ -19,7 +19,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addLayoutAlias('tags', 'tags.njk');
 
   // setup collections
-  eleventyConfig.addCollection('allPosts', getAllPosts);
+  eleventyConfig.addCollection('posts', getAllPosts);
   eleventyConfig.addCollection('tagList', tagList);
 
   // setup plugins
