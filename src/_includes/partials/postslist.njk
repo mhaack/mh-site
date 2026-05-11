@@ -3,7 +3,7 @@
 
   {%- if displayyears %}
   {%- set previousyear = currentyear %}
-  {%- set currentyear = post.date | year %}
+  {%- set currentyear = (post.data.modified or post.date) | year %}
   {%- if currentyear != year and ignoreYear != "true" %}
   <li class="md:col-span-3 flex justify-between border-dotted border-b-2 border-mountain-900 mt-6 mb-2 pb-2 items-baseline text-mountain-900" id="{{ currentyear }}">
     <h2 class="text-5xl font-semibold">{{ currentyear }}</h2>
@@ -29,9 +29,15 @@
         <div class="flex-1">
           <div class="flex text-sm justify-between text-blue-dianne-700 my-4 whitespace-nowrap overflow-hidden">
             <span>
+              {%- if post.data.modified %}
+              <time datetime="{{ post.data.modified | toIsoString }}">
+                {{ post.data.modified | readableDate }}
+              </time>
+              {%- else %}
               <time datetime="{{ post.date | toIsoString }}">
                 {{ post.date | readableDate }}
               </time>
+              {%- endif %}
               <span class="mx-1">·</span>
               <span>{{ post.rawInput | readingTime }} read</span>
             </span>
