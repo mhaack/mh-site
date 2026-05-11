@@ -2,17 +2,19 @@
 permalink: /about/
 title: About Markus
 description: I'm a developer, home automation enthusiast, married with my
- wonderful wife, proud dad and a software engineer at Adobe from Leipzig,
- Germany. Welcome to my virtual home my little corner on the internet.
+  wonderful wife, proud dad and a software engineer at Adobe from Leipzig,
+  Germany. Welcome to my virtual home my little corner on the internet.
 seo:
- title: "Markus Haack: Technology, Smart Home Automation, and Personal Blog"
- description: "Hi, I'm Markus Haack. By day, a Senior Technical Lead at Adobe. By night, a Smart Home enthusiast and tech blogger. Welcome to my personal corner of the internet."
+  title: "Markus Haack: Technology, Smart Home Automation, and Personal Blog"
+  description: Hi, I'm Markus Haack. By day, a Senior Technical Lead at Adobe. By
+    night, a Smart Home enthusiast and tech blogger. Welcome to my personal
+    corner of the internet.
 image: /assets/images/markus.jpeg
 layout: page
 eleventyNavigation:
- key: main
- title: About
- order: 9
+  key: main
+  title: About
+  order: 9
 ---
 
 <div class="float-none sm:float-right mx-auto mb-8 sm:-mt-8 sm:ml-4 sm:mb-16 w-40 h-40 sm:w-48 sm-h48">
@@ -56,6 +58,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 
 ## Talks
 
+- [Vibe Coding an Author Experience at Adobe Summit 2026](/da-vide-coding-summit-lab/), Adobe Summit, April 2025
 - [Unlocking Edge Delivery Authoring with AuthorBus](https://adapt.to/2025/schedule/unlocking-edge-delivery-authoring-with-authorbus), adaptTo(), September 2025
 - [Content Authoring With Universal Editor and Edge Delivery Services in AEM](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/adobe-summit-2025-aem-session-lab-l335-content-authoring-with/td-p/736572), Adobe Summit, March 2025
 - [Implement large-scale projects on AEM Edge Delivery Services](/implement-large-scale-projects-on-aem-edge-delivery-services/), adaptTo(), October 2024
