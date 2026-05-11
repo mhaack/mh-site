@@ -4,15 +4,13 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {%- for item in collections.all -%}
+  {%- for item in collections.all | sortByLastModified -%}
   {% if not item.data.sitemap.ignore == true -%}
   {% set absoluteUrl %}{{ item.url | htmlBaseUrl(site.url) }}{%- endset %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
     {% if item.data.modified %}
     <lastmod>{{ item.data.modified | toIsoString }}</lastmod>
-    {%- elif item.data.updated %}
-    <lastmod>{{ item.data.updated | toIsoString }}</lastmod>
     {%- else -%}
     <lastmod>{{ item.date | toIsoString }}</lastmod>
     {%- endif %}

@@ -70,6 +70,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('popularPosts', filters.popularPosts);
   eleventyConfig.addFilter('pageStats', filters.pageStats);
   eleventyConfig.addFilter('currentPage', filters.currentPage);
+  eleventyConfig.addFilter('sortByLastModified', filters.sortByLastModified);
 
   // setup shortcodes
   eleventyConfig.addShortcode('image', shortcodes.imageShortcode);

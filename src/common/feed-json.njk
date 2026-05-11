@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
 		"email": "{{ site.author.email }}"
 	},
 	"items": [
-		{%- for post in collections.posts | reverse %}
+		{%- for post in collections.posts | sortByLastModified %}
 		{%- set absolutePostUrl = post.url | htmlBaseUrl(site.url) %}
 		{
 			"id": "{{ absolutePostUrl }}",
