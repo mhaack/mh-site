@@ -13,7 +13,7 @@ images:
 date: 2026-03-16
 permalink: da-mcp/
 ---
-Over the past few months, AI assistants have gone from useful chat tools to something more interesting: agents that can actually *do* things. Not just draft text, but read files, write content, move things around, and connect to external systems. The key technology making this possible is the [Model Context Protocol](https://modelcontextprotocol.io) (MCP) — an open standard for giving AI tools structured access to external services.
+Over the past few months, AI assistants have gone from useful chat tools to something more interesting: agents that can actually *do* things. They can read files, call APIs, and interact with external systems. [Model Context Protocol](https://modelcontextprotocol.io) (MCP) is the open standard that makes that work — a structured way for AI tools to connect to services.
 
 I've been working deeply with [Document Authoring (DA)](https://da.live) — Adobe's content platform for Edge Delivery Services — and I kept thinking about the same question: what if Claude could just *talk* to DA directly? Not through copy-pasting, not through a browser, but as a first-class tool in a conversation?
 
@@ -87,7 +87,9 @@ For **VS Code or Cursor**, add to `.vscode/mcp.json`:
 
 ## What I've Been Using It For
 
-I've been running this day-to-day for a few weeks. A few things work well: drafting and saving content without leaving the conversation, bulk updates across multiple pages without writing scripts, and using `da_get_versions` to check what changed in a file without context-switching. Combining it with web research is also useful — Claude can look something up and save the result to DA in one pass.
+I've been running this daily for a few weeks. The obvious use case — draft and save without leaving the chat — works as expected. Bulk updates across multiple pages are where it actually saves time; writing a one-off script for that is tedious. `da_get_versions` is handy too, mostly because checking file history used to mean a context switch I'd often skip.
+
+For my [Adobe Summit 2026 Lab](/da-vide-coding-summit-lab/), I wrote most of the lab workbook directly in da.live with the help of Claude and the DA MCP. Here, I took on the role of content author and was able to put the solution through its paces.
 
 ## A Real-World Example
 
