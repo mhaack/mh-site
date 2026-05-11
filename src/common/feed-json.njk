@@ -22,6 +22,9 @@ eleventyExcludeFromCollections: true
 			"title": "{{ post.data.title }}",
 			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
 			"date_published": "{{ post.date | dateToRfc3339 }}"
+			{%- if post.data.modified %},
+			"date_modified": "{{ post.data.modified | dateToRfc3339 }}"
+			{%- endif %}
 		}
 		{%- if not loop.last %},{% endif %}
 		{%- endfor %}

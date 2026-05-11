@@ -9,7 +9,9 @@ eleventyExcludeFromCollections: true
   {% set absoluteUrl %}{{ item.url | htmlBaseUrl(site.url) }}{%- endset %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
-    {% if item.data.updated %}
+    {% if item.data.modified %}
+    <lastmod>{{ item.data.modified | toIsoString }}</lastmod>
+    {%- elif item.data.updated %}
     <lastmod>{{ item.data.updated | toIsoString }}</lastmod>
     {%- else -%}
     <lastmod>{{ item.date | toIsoString }}</lastmod>
