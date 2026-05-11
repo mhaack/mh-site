@@ -14,12 +14,12 @@ eleventyExcludeFromCollections: true
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {%- for post in collections.posts | reverse %}
+  {%- for post in collections.posts | sortByLastModified %}
   {%- set absolutePostUrl = post.url | htmlBaseUrl(site.url) %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ (post.data.modified or post.date) | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
   </entry>

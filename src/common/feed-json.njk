@@ -14,7 +14,7 @@ eleventyExcludeFromCollections: true
 		"email": "{{ site.author.email }}"
 	},
 	"items": [
-		{%- for post in collections.posts | reverse %}
+		{%- for post in collections.posts | sortByLastModified %}
 		{%- set absolutePostUrl = post.url | htmlBaseUrl(site.url) %}
 		{
 			"id": "{{ absolutePostUrl }}",
@@ -22,6 +22,9 @@ eleventyExcludeFromCollections: true
 			"title": "{{ post.data.title }}",
 			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
 			"date_published": "{{ post.date | dateToRfc3339 }}"
+			{%- if post.data.modified %},
+			"date_modified": "{{ post.data.modified | dateToRfc3339 }}"
+			{%- endif %}
 		}
 		{%- if not loop.last %},{% endif %}
 		{%- endfor %}

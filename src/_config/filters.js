@@ -8,6 +8,13 @@ import { popularPosts } from './filters/popularPosts.js';
 import { pageStats } from './filters/pageStats.js';
 import { currentPage } from './filters/currentPage.js';
 
+const sortByLastModified = (collection) =>
+  [...collection].sort((a, b) => {
+    const dateA = a.data.modified || a.date;
+    const dateB = b.data.modified || b.date;
+    return new Date(dateB) - new Date(dateA);
+  });
+
 export default {
   toISOString,
   formatDate,
@@ -22,4 +29,5 @@ export default {
   popularPosts,
   pageStats,
   currentPage,
+  sortByLastModified,
 };
