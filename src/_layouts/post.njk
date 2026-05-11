@@ -17,10 +17,17 @@ layout: default
         </p>
     </div>
     <div class="mx-8 py-4 border-b border-gray-200 md:justify-between md:items-start md:flex md:flex-row">
-      <div class="md:my-auto text-sm text-slate-700">
+      <div class="md:my-auto md:w-1/2 text-left text-sm text-slate-700">
+        {%- if modified %}
+        <time class="dt-modified" datetime="{{ modified | toIsoString }}">
+          {{ modified | readableDate }}
+        </time>
+        <span class="text-slate-500">(originally {{ date | readableDate }})</span>
+        {%- else %}
         <time class="dt-published" datetime="{{ date | toIsoString }}">
           {{ date | readableDate }}
         </time>
+        {%- endif %}
         <span class="mx-2">·</span>
         <span>{{ content | readingTime }} read</span>
         <span class="mx-2">·</span>
@@ -31,7 +38,7 @@ layout: default
         <span>&lt; 100 views</span>
         {%- endif %}
       </div>
-      <div class="mt-2 md:-mt-2 md:w-2/3 md:flex md:justify-end p-category">{% include "partials/taglist.njk" %}</div>
+      <div class="mt-2 md:-mt-2 md:w-1/2 md:flex md:justify-end p-category">{% include "partials/taglist.njk" %}</div>
     </div>
   </header>
   <section class="mx-4 max-w-none break-words prose prose-lg prose-code:before:content-none prose-code:after:content-none e-content">    

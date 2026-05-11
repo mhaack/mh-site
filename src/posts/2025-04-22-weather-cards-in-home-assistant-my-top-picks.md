@@ -10,7 +10,10 @@ tags:
 images:
  feature: /assets/images/weather_hero.png
 date: 2025-04-22
+modified: 2026-05-11
 ---
+
+*Updated May 2026*: Added full coverage of Hourly Weather Card and Weather Forecast Card plus more alternative options like Atmospheric Weather Card, Weather Radar Card, Lovelace Windrose Card, and Meteoalarm Card.
 
 Whether you want to see if you need an umbrella, trigger garden automation, or just want a nice weather forecast, it's easy to integrate weather data into your [Home Assistant](https://www.home-assistant.io/). I don't think I need to explain why having weather information on your Home Assistant dashboard is helpful. Almost every Home Assistant user has a weather card on the dashboard.
 
@@ -118,7 +121,7 @@ I use the Simple Weather Card on my phone dashboard because it loads quickly and
 
 The [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather) shows upcoming conditions as a colour-coded horizontal bar — each segment a forecast period, coloured by condition. Clear, cloudy, rain. You'll get an instant overview of the weather for the next few hours.
 
-![Screenshot Hourly Weather Card](https://placehold.co/800x600/4A90E2/FFFFFF?text=Detail+Hourly+Weather+Card 'Screenshot 4: Hourly Weather Card'){class="x-small"}
+![Screenshot Hourly Weather Card](/assets/images/weather_card_hourly.png 'Screenshot 4: Hourly Weather Card'){class="small"}
 
 **Installation:**
 Install via HACS under *Frontend*. Search for "Hourly Weather Card", install, then add it as a custom card in the Lovelace editor.
@@ -143,29 +146,36 @@ At first, I used the card a lot and placed it right on our main dashboard. It lo
 
 However, I’ve since moved the card to our weather dashboard. At least we don’t really need an hourly weather forecast. Even though the display and visualisation are really attractive and sophisticated, for us at least the added value isn’t quite enough to justify keeping the card permanently on the main dashboard.
 
-## 6. Weather Chart Card
+## 6. Weather Forecast Card
 
-The [Weather Chart Card](https://github.com/mlamberts78/weather-chart-card) is for when a glance isn't enough. Temperature curves, precipitation bars, wind, humidity — plotted as actual charts across the coming days.
+The [Weather Forecast Card](https://github.com/troinine/ha-weather-forecast-card) was created when a developer set out to combine the best features of several existing weather cards into a single one. The result is a new, beautifully designed Weather Card featuring a horizontally scrollable forecast for the next 7 days or more, the ability to switch between hourly and daily views, optional display of wind and precipitation, and animated weather effects.
+
+![Screenshot Weather Forecast Card](/assets/images/weather_card_forecast.png 'Screenshot 5: Weather Forecast Card'){class="small"}
 
 **Installation:**
-Install via HACS under *Frontend*. Search for "Weather Chart Card", install, then add it as a custom card in the Lovelace editor.
+Install via HACS under *Frontend*. Search for "Weather Forecast Card", install, then add it as a custom card in the Lovelace editor.
 
-**Features:**
-The card renders forecast data as interactive charts: a temperature curve, precipitation bars, optional wind speed and humidity. You can configure which data to show, the forecast range, and units. Like the Platinum Weather Card, better data in means better charts out — if your weather integration is well set up, this card shows it.
+**Features & Configuration:**
+The forecast list scrolls horizontally, so you can fit more data without the card taking over your dashboard. Tap it and it switches between hourly and daily views.
 
-**Configuration:**
-YAML only. Less involved than Platinum, but you'll need a few minutes to wire up the right sensors and forecast types. The GitHub readme is clear on what goes where.
+Each entry can show precipitation amounts, wind direction, wind bearing, and precipitation probability. If you want trends rather than a list, there's a chart mode with an interactive attribute selector. Hourly entries can be grouped to make longer forecasts easier to scan. Custom icons are supported, sunrise and sunset times can be overlaid, and there are animated condition effects if you want a bit of visual flair. The card editor covers all of the available features — no YAML required unless you want it.
 
 **My impression:**
-This card needs space, and a main dashboard won't give it that. I put it on a dedicated weather page and that's where it makes sense. It's what I open when the forecast changes and I want to understand it — why rain at 3pm and not noon, what's happening overnight. If you're the type who actually reads the weather, this is worth setting up properly.
+This weather map might even replace our current one (see [below](/#my-current-setup)) at some point. The weekly view, with its temperature and precipitation forecast charts, is particularly pleasing to the eye. The hourly view is also nice, but as mentioned above, it isn’t necessarily our main focus.
+
+All in all, it’s a lovely weather forecast card that’s also being actively developed.
 
 ## Other Options
 
 The cards above cover most use cases, but the community has a few more worth knowing about.
 
+**[Weather Chart Card](https://github.com/mlamberts78/weather-chart-card)** renders forecast data — temperature curves, precipitation bars, wind — as interactive charts across the coming days. The card is a full weather forcast dashboard on its own, it needs space to breathe, so a dedicated dashboard tab works better than squeezing it onto a main view. Worth knowing: the card is no longer actively maintained, so factor that in before building your setup around it.
+
 **[Atmospheric Weather Card](https://github.com/shpongledsummer/atmospheric-weather-card)** is the most visually polished card on this list. It's detail-oriented — current conditions, forecast, the works — but the UI is genuinely nice to look at. Lots of configuration options too. If aesthetics matter as much as data for your dashboard, this one is worth trying before settling on Platinum.
 
 **[Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)** is a different card entirely. It doesn't show a forecast — it shows radar. Rain, clouds and snow radar images pulled from RainViewer, NOAA/NWS, or DWD, with optional hazard overlays. If you live somewhere where storms roll in fast, having a live radar tile on your dashboard is genuinely useful. Single-purpose, but it does that one thing well.
+
+![Screenshot Weather Radar Card](/assets/images/weather_card_radar.png 'Screenshot 6: Weather Radar Card'){class="small"}
 
 **[Lovelace Windrose Card](https://github.com/aukedejong/lovelace-windrose-card)** renders wind speed and direction data as a windrose diagram. Not something most people need on their main dashboard, but if you have a local wind sensor and care about the data, this is a much better way to visualise it than a plain sensor card.
 
@@ -185,10 +195,7 @@ Platinum Weather Card is the most powerful option, letting you mix and match dat
 For a quick hourly overview alongside your main cards:\
 The Hourly Weather Card. The colour bar format is faster to scan than icons and fits into an existing dashboard without taking up much room.
 
-For detailed forecast analysis, you want to see every detail:\
-Weather Chart Card is your go-to. Give it its own dashboard tab — that's when it's actually useful.
-
-## My Setup
+## My current Setup
 
 At the moment I use the Clock Weather card in my main dashboard in combination with the forecast from the then standard built-in weather card. Using the custom `vertical-stack-in-card` card, these can be nicely stitched together to give them a "one card" look and feel. Here is the YAML of the combination:
 
@@ -223,7 +230,7 @@ cards:
    hide_today_section: true
 ```
 
-![Screenshot My Weather Card Combo](/assets/images/weather_card_my_combo.png 'Screenshot 4: My Weather Card Combo'){class="x-small"}
+![Screenshot My Weather Card Combo](/assets/images/weather_card_my_combo.png 'Screenshot 7: My Weather Card Combo'){class="small"}
 
 ## Conclusion
 
