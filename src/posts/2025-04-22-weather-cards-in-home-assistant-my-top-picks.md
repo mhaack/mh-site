@@ -23,7 +23,7 @@ Over the past few weeks, I've been experimenting with different weather cards fo
 
 ## Why Upgrade From the Default?
 
-The built-in card does the job — until you actually care about more details on your dashboard. No clock. Design options that make it hard to fit into a themed layout. No way to pull in a local temperature sensor alongside the cloud forecast.
+The built-in card is fine until you want more details on your dashboard. There is no clock. The design options make it difficult to fit into a themed layout. There is also no way to pull in a local temperature sensor alongside the cloud forecast.
 The community cards below fix all of that. Pick based on how much you want to tinker. Some custom cards do only one thing cleanly. Others show tons of details and can be fully customized. Spoiler: you can also combine multiple cards, no one says you can only have one.
 
 ## The setup
@@ -119,7 +119,7 @@ I use the Simple Weather Card on my phone dashboard because it loads quickly and
 
 ## 5. Hourly Weather Card
 
-The [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather) shows upcoming conditions as a colour-coded horizontal bar — each segment a forecast period, coloured by condition. Clear, cloudy, rain. You'll get an instant overview of the weather for the next few hours.
+The [Hourly Weather Card](https://github.com/decompil3d/lovelace-hourly-weather) shows upcoming conditions as a colour-coded horizontal bar - each segment a forecast period, coloured by condition. Clear, cloudy, rain. You'll get an instant overview of the weather for the next few hours.
 
 ![Screenshot Hourly Weather Card](/assets/images/weather_card_hourly.png 'Screenshot 4: Hourly Weather Card'){class="small"}
 
@@ -131,7 +131,7 @@ For this card, the choice of weather data provider is particularly important, as
 **Features:**
 It looks simple and the defaults are a great start. Simply add the card to you dashboard and link it to the weather entity. But there's a lot you can configure:
 
-- Forecast type — hourly, daily, or twice-daily
+- Forecast type  (hourly, daily, or twice-daily)
 - Number of forecast segments displayed
 - Wind speed and direction below the bar
 - Rain probability and amount, also below the bar
@@ -158,7 +158,7 @@ Install via HACS under *Frontend*. Search for "Weather Forecast Card", install, 
 **Features & Configuration:**
 The forecast list scrolls horizontally, so you can fit more data without the card taking over your dashboard. Tap it and it switches between hourly and daily views.
 
-Each entry can show precipitation amounts, wind direction, wind bearing, and precipitation probability. If you want trends rather than a list, there's a chart mode with an interactive attribute selector. Hourly entries can be grouped to make longer forecasts easier to scan. Custom icons are supported, sunrise and sunset times can be overlaid, and there are animated condition effects if you want a bit of visual flair. The card editor covers all of the available features — no YAML required unless you want it.
+Each entry can display information such as precipitation amounts, wind direction, wind bearing and precipitation probability. If you prefer to see trends rather than a list, there is a chart mode with an interactive attribute selector. Hourly entries can be grouped together to make longer forecasts easier to scan. You can use custom icons, overlay sunrise and sunset times, and add animated condition effects for a bit of visual flair. The card editor covers all the available features - no YAML required unless you want it.
 
 **My impression:**
 This weather map might even replace our current one (see [below](/#my-current-setup)) at some point. The weekly view, with its temperature and precipitation forecast charts, is particularly pleasing to the eye. The hourly view is also nice, but as mentioned above, it isn’t necessarily our main focus.
@@ -169,17 +169,17 @@ All in all, it’s a lovely weather forecast card that’s also being actively d
 
 The cards above cover most use cases, but the community has a few more worth knowing about.
 
-**[Weather Chart Card](https://github.com/mlamberts78/weather-chart-card)** renders forecast data — temperature curves, precipitation bars, wind — as interactive charts across the coming days. The card is a full weather forcast dashboard on its own, it needs space to breathe, so a dedicated dashboard tab works better than squeezing it onto a main view. Worth knowing: the card is no longer actively maintained, so factor that in before building your setup around it.
+**[Weather Chart Card](https://github.com/mlamberts78/weather-chart-card)** renders forecast data like temperature curves, precipitation bars, wind as interactive charts across the coming days. The card is a full weather forcast dashboard on its own, it needs space to breathe, so a dedicated dashboard tab works better than squeezing it onto a main view. Worth knowing: the card is no longer actively maintained, so factor that in before building your setup around it.
 
-**[Atmospheric Weather Card](https://github.com/shpongledsummer/atmospheric-weather-card)** is the most visually polished card on this list. It's detail-oriented — current conditions, forecast, the works — but the UI is genuinely nice to look at. Lots of configuration options too. If aesthetics matter as much as data for your dashboard, this one is worth trying before settling on Platinum.
+**[Atmospheric Weather Card](https://github.com/shpongledsummer/atmospheric-weather-card)** is the most visually polished card on this list. It's detail-oriented, shows current conditions, forecast, etc. and the UI is genuinely nice to look at. Lots of configuration options too. If aesthetics matter as much as data for your dashboard, this one is worth trying before settling on Platinum.
 
-**[Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)** is a different card entirely. It doesn't show a forecast — it shows radar. Rain, clouds and snow radar images pulled from RainViewer, NOAA/NWS, or DWD, with optional hazard overlays. If you live somewhere where storms roll in fast, having a live radar tile on your dashboard is genuinely useful. Single-purpose, but it does that one thing well.
+**[Weather Radar Card](https://github.com/Makin-Things/weather-radar-card)** is a different card entirely. It doesn't show a forecast, it shows radar. Rain, clouds and snow radar images pulled from RainViewer, NOAA/NWS, or DWD, with optional hazard overlays. If you live somewhere where storms roll in fast, having a live radar tile on your dashboard is genuinely useful. Single-purpose, but it does that one thing well.
 
 ![Screenshot Weather Radar Card](/assets/images/weather_card_radar.png 'Screenshot 6: Weather Radar Card'){class="small"}
 
 **[Lovelace Windrose Card](https://github.com/aukedejong/lovelace-windrose-card)** renders wind speed and direction data as a windrose diagram. Not something most people need on their main dashboard, but if you have a local wind sensor and care about the data, this is a much better way to visualise it than a plain sensor card.
 
-**[Meteoalarm Card](https://github.com/MrBartusek/MeteoalarmCard)** shows weather warnings and alerts only — no forecast, no current conditions. When there's nothing active, it stays quiet or hides entirely. When an alert fires, the card changes colour by severity level. It supports a solid list of providers: MeteoAlarm (Europe-wide), Météo-France, DWD (Germany), Environnement Canada, NINA, WeatherAlerts (USA), and a few more. If you're in a region with serious weather events, this belongs on your dashboard alongside whichever forecast card you use.
+**[Meteoalarm Card](https://github.com/MrBartusek/MeteoalarmCard)** shows weather warnings and alerts only; it does not show forecasts or current conditions. When there are no active alerts, the card either stays quiet or hides entirely. When an alert is triggered, the card changes colour according to the severity level. It supports a wide range of providers: MeteoAlarm (Europe-wide), Météo-France, DWD (Germany), Environnement Canada, NINA and WeatherAlerts (USA), among others. If you're in an area prone to severe weather, this card is a must-have for your dashboard, alongside your preferred forecast card.
 
 ## Which Card to Choose?
 
@@ -236,6 +236,6 @@ cards:
 
 There’s no one-size-fits-all answer. Home Assistant’s default forecast card covers the basics well, but the community has provided excellent alternatives for anyone wanting more features or a nicer look.
 
-If you haven’t tried a new card in a while, I recommend experimenting—weather is one of those bits of information you glance at every day, so it’s worth making it just right.
+If you haven’t tried using a new card for a while, I recommend giving it a go. Weather is one of those pieces of information that you glance at every day, so it’s worth getting it just right, as you and your family will see it on your Home Assistant dashboard almost every day.at every day, so it’s worth making it just right.
 
 Happy automating!

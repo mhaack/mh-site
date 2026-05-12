@@ -52,7 +52,7 @@ The software runs always on your local hardware. It is cloud-free, privacy-frien
 
 <github-badge repo="evcc-io/evcc" ></github-badge>
 
-As they don't receive any external funding from vendors, the developers have chosen a community-funding-based approach to maintain the software. To use some of the commercial EV charger devices, you will need a sponsoring token. See the [sponsorship documentation](https://docs.evcc.io/en/docs/sponsorship) for more details. If you are not yet sure whether evcc is right for you, don't worry — you can also get a trial token and test whether all your hardware works together properly.
+As they don't receive any external funding from vendors, the developers have chosen a community-funding-based approach to maintain the software. To use some of the commercial EV charger devices, you will need a sponsoring token. See the [sponsorship documentation](https://docs.evcc.io/en/docs/sponsorship) for more details. If you're not sure whether EVCC is right for you yet, don't worry! You can also get a trial token to test whether all your hardware works together properly.
 
 ## Understanding the Charging Modes
 

@@ -35,7 +35,7 @@ The core technologies powering our smart home:
 | [Rademacher DuoFern](https://www.rademacher.de/en/smart-home/smart-home-systeme)                                               | Continue to operate all the window blinds and shutters.                                                                                      |
 | [Ubiquiti UniFi](https://unifi-network.ui.com/)                                                                                | Our home network is operated by UniFi wired and wireless devices.                                                                            |
 | [Reolink](https://reolink.com/)                                                                                                | New to the house: a Reolink camera surveillance system.                                                                                      |
-| [Tasmota](https://tasmota.github.io/docs/) & [Shelly](https://www.shelly.com/)                                                 | A variety of Wi-Fi switches and sockets. The Shelly devices are permanently installed, whereas the Sonoff devices — primarily Wi-Fi sockets. |
+| [Tasmota](https://tasmota.github.io/docs/) & [Shelly](https://www.shelly.com/)                                                 | A variety of Wi-Fi switches and sockets. The Shelly devices are permanently installed, whereas the Sonoff devices are primarily Wi-Fi sockets. |
 | [Keba P30](https://www.keba.com/en/emobility/products/product-overview/keba-wallbox)                                           | Our EV charging station.                                                                                                                     |
 | [Solaregde Inverter](/our-own-electricity-3/)                                                                                  | We can harvest our own energy, free of charge, from the sun.                                                                                 |
 
@@ -92,7 +92,7 @@ The main dashboard has also been significantly overhauled. The dashboard is now 
 
 ### Backup
 
-Backing up to our Synology NAS using the native Home Assistant continues to work perfectly. However, the [new backup capabilities and cloud-based backup options ](/home-assistant-backup-2025/)introduced in early 2025 mean that we now have many more backup options and better control over backups when performing Home Assistant or add-on updates. Automated weekly backups provide peace of mind, and the integration is so seamless that I rarely think about it anymore — exactly as it should be!
+Backing up to our Synology NAS using the native Home Assistant continues to work perfectly. However, the [new backup capabilities and cloud-based backup options ](/home-assistant-backup-2025/)introduced in early 2025 mean that we now have many more backup options and better control over backups when performing Home Assistant or add-on updates. I rarely think about the integration, because it is so seamless. The automated weekly backups provide peace of mind, and that is exactly as it should be!
 
 ## Summary & Outlook
 
