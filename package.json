@@ -4,13 +4,13 @@
     "license": "MIT",
     "type": "module",
     "devDependencies": {
-        "@11ty/eleventy": "^3.1.1",
+        "@11ty/eleventy": "^3.1.6",
         "@11ty/eleventy-img": "latest",
         "@11ty/eleventy-navigation": "latest",
         "@11ty/eleventy-plugin-rss": "latest",
-        "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+        "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
         "@11ty/eleventy-plugin-webc": "^0.11.2",
-        "@netlify/plugin-lighthouse": "^6.0.0",
+        "@netlify/plugin-lighthouse": "^6.0.4",
         "@tailwindcss/postcss": "latest",
         "@tailwindcss/typography": "latest",
         "@toycode/markdown-it-class": "^1.2.4",
@@ -18,13 +18,13 @@
         "dotenv": "latest",
         "eleventy-plugin-youtube-embed": "latest",
         "html-minifier-terser": "^7.2.0",
-        "markdown-it": "^14.1.0",
+        "markdown-it": "^14.2.0",
         "markdown-it-abbr": "^2.0.0",
         "markdown-it-anchor": "latest",
-        "markdown-it-attrs": "^4.3.1",
+        "markdown-it-attrs": "^5.0.0",
         "markdown-it-emoji": "^3.0.0",
         "markdown-it-link-attributes": "^4.0.1",
-        "markdown-it-prism": "^3.0.0",
+        "markdown-it-prism": "^3.0.1",
         "netlify-plugin-cache": "^1.0.3",
         "npm-run-all": "^4.1.5",
         "pirsch-sdk": "^2.9.1",
@@ -45,7 +45,7 @@
         "clean": "rm -rf ./dist"
     },
     "dependencies": {
-        "@11ty/is-land": "^4.0.0",
+        "@11ty/is-land": "^5.0.1",
         "speedlify-score": "^4.0.4"
     },
     "packageManager": "yarn@3.6.1"
