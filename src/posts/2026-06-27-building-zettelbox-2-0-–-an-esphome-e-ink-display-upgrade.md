@@ -159,7 +159,7 @@ The page that wasn't included in v1 is the blog stats page. Rather than routing 
 
 There is also a Claude API usage page now, showing the session and weekly quota with a countdown to each reset. I check it more often than I'd like to admit.
 
-The full config is on [GitHub](https://github.com/mhaack/home-assistant-config).
+The full config is on [GitHub](https://github.com/mhaack/zettelbox-2).
 
 ## Wrapping up
 
