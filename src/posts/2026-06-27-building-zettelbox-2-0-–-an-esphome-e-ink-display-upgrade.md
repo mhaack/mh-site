@@ -7,7 +7,7 @@ tags:
   - home-assistant
   - esphome
 images:
-  feature: /assets/images/zettelbox-2.jpeg
+  feature: /assets/images/zettelbox-2-old-new.jpeg
 date: 2026-06-28
 permalink: zettelbox-2/
 ---
@@ -164,8 +164,6 @@ The full config is on [GitHub](https://github.com/mhaack/home-assistant-config).
 ## Wrapping up
 
 It's the same idea as two years ago. It's a small box on the desk that shows me what's going on at home without me having to reach for my phone. This time it's even better: a sharper display, a cleaner build, more data and a couple of extra pages that I created just for fun.
-
-![Zettelbox - old and new next to each other](/assets/images/zettelbox-2-old-new.jpeg "Zettelbox - old and new next to each other")
 
 And, honestly, I'm happy with it. The display size is perfect, and the woodwork is exactly what I wanted — no improvements needed.
 
