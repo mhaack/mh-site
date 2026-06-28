@@ -30,7 +30,6 @@ For Zettlebox 2.0, my friend Eric helped me out. He has a hobby CNC milling mach
 Eric also came up with the idea for the new curved front design. It's a perfectly mirrored curved line that would be hard to make manually. But with Eric's machine, it's just an extra 5-minute step in the cutter program.
 
 ![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model.png)
-
 ![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model2.png)
 
 This is the difference between something that was "made by hand over the weekend" and something that was "built properly". The whole box looks more professional and intentional.
@@ -47,6 +46,15 @@ Nothing exotic, it's the same parts as the first version. I already had the disp
 * Wood stain of your choice. I went with a dark walnut brown.
 
 I was so impressed by the CNC process, from the initial preparation in the cutter software right through to the final cutting, that I took a lot of pictures.
+
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-2.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-3.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-4.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-5.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-6.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-7.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-8.png)
 
 ## Software
 
@@ -123,7 +131,10 @@ The display cycles through 9 pages:
 * **Claude** — session and weekly API usage with countdown to reset
 * **System** — WiFi signal, IP address, uptime, time
 
-![](/assets/images/zettelbox-2-pages.jpeg)
+![Zettelbox 2.0 - Auto page](/assets/images/zettelbox-2-pages.jpeg)
+![Zettelbox 2.0 - Wetter page](/assets/images/zettelbox-2-pages-2.jpeg)
+![Zettelbox 2.0 - Pool page](/assets/images/zettelbox-2-pages-3.jpeg)
+![Zettelbox 2.0 - Klima page](/assets/images/zettelbox-2-pages-4.jpeg)
 
 Each page is a lambda that draws directly onto the e-ink canvas with x/y coordinates. To keep all 9 consistent, I reuse a `draw_card` helper: rectangle, label at the top, value in large font at the bottom, unit beside it in small font.
 
