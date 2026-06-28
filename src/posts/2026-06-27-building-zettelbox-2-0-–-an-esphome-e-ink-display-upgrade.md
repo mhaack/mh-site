@@ -29,24 +29,30 @@ For Zettlebox 2.0, my friend Eric helped me out. He has a hobby CNC milling mach
 
 Eric also came up with the idea for the new curved front design. It's a perfectly mirrored curved line that would be hard to make manually. But with Eric's machine, it's just an extra 5-minute step in the cutter program.
 
+![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model.png)
+![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model2.png)
+
 This is the difference between something that was "made by hand over the weekend" and something that was "built properly". The whole box looks more professional and intentional.
+
 ## Bill of materials
 
 Nothing exotic, it's the same parts as the first version. I already had the display and driver board lying around.
 
-- [Waveshare 2.7" e-Paper display](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_Manual)
-- [Universal e-Paper Raw Panel Driver Board, ESP32 WiFi / Bluetooth](https://www.waveshare.com/e-paper-esp32-driver-board.htm)
-- A USB cable
-- 4mm plywood
-- [Ponal wood glue](https://www.ponal.de/)
-- Wood stain of your choice. I went with a dark walnut brown.
+* [Waveshare 2.7" e-Paper display](https://www.waveshare.com/wiki/2.7inch_e-Paper_HAT_Manual)
+* [Universal e-Paper Raw Panel Driver Board, ESP32 WiFi / Bluetooth](https://www.waveshare.com/e-paper-esp32-driver-board.htm)
+* A USB cable
+* 4mm plywood
+* [Ponal wood glue](https://www.ponal.de/)
+* Wood stain of your choice. I went with a dark walnut brown.
 
 I was so impressed by the CNC process, from the initial preparation in the cutter software right through to the final cutting, that I took a lot of pictures.
 
 ......
+
 ## Software
 
 It's the same stack as v1: ESPHome and Home Assistant for almost all the data. There are now nine display pages instead of four, cycling every 30 seconds. The larger display allows me to display more sensor data and offers more design options.
+
 ### Hardware setup
 
 The 2.70" Waveshare wires up over SPI, same as the original. The main things to get right are the model string and the update strategy.
@@ -108,15 +114,15 @@ The weather entity is worth calling out. One HA entity, but multiple attributes 
 
 The display cycles through 9 pages:
 
-- **Wetter** — weather condition icon, temperature, wind speed and direction
-- **Energie** — solar yield, battery level, consumption, grid export/import, net balance
-- **Pool** — pump state, solar valve, water and heater temperatures
-- **Klima** — garden and indoor temperature, humidity, PM2.5 fine particulate
-- **Auto** — Polestar charge level, range, odometer, charging status
-- **Abfall** — next waste collection date
-- **Blog** — visitor and page view counts for markus-haack.com
-- **Claude** — session and weekly API usage with countdown to reset
-- **System** — WiFi signal, IP address, uptime, time
+* **Wetter** — weather condition icon, temperature, wind speed and direction
+* **Energie** — solar yield, battery level, consumption, grid export/import, net balance
+* **Pool** — pump state, solar valve, water and heater temperatures
+* **Klima** — garden and indoor temperature, humidity, PM2.5 fine particulate
+* **Auto** — Polestar charge level, range, odometer, charging status
+* **Abfall** — next waste collection date
+* **Blog** — visitor and page view counts for markus-haack.com
+* **Claude** — session and weekly API usage with countdown to reset
+* **System** — WiFi signal, IP address, uptime, time
 
 Each page is a lambda that draws directly onto the e-ink canvas with x/y coordinates. To keep all 9 consistent, I reuse a `draw_card` helper: rectangle, label at the top, value in large font at the bottom, unit beside it in small font.
 
