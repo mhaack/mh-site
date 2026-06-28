@@ -7,7 +7,7 @@ tags:
   - home-assistant
   - esphome
 images:
-  feature: /assets/images/adaptto-2023.jpeg
+  feature: /assets/images/zettelbox-2.jpeg
 date: 2026-06-28
 permalink: zettelbox-2/
 ---
@@ -30,6 +30,7 @@ For Zettlebox 2.0, my friend Eric helped me out. He has a hobby CNC milling mach
 Eric also came up with the idea for the new curved front design. It's a perfectly mirrored curved line that would be hard to make manually. But with Eric's machine, it's just an extra 5-minute step in the cutter program.
 
 ![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model.png)
+
 ![Zettelbox 2.0 cutting model](/assets/images/zettelbox-2-cutting-model2.png)
 
 This is the difference between something that was "made by hand over the weekend" and something that was "built properly". The whole box looks more professional and intentional.
@@ -46,8 +47,6 @@ Nothing exotic, it's the same parts as the first version. I already had the disp
 * Wood stain of your choice. I went with a dark walnut brown.
 
 I was so impressed by the CNC process, from the initial preparation in the cutter software right through to the final cutting, that I took a lot of pictures.
-
-......
 
 ## Software
 
@@ -124,6 +123,8 @@ The display cycles through 9 pages:
 * **Claude** — session and weekly API usage with countdown to reset
 * **System** — WiFi signal, IP address, uptime, time
 
+![](/assets/images/zettelbox-2-pages.jpeg)
+
 Each page is a lambda that draws directly onto the e-ink canvas with x/y coordinates. To keep all 9 consistent, I reuse a `draw_card` helper: rectangle, label at the top, value in large font at the bottom, unit beside it in small font.
 
 ```cpp
@@ -152,6 +153,8 @@ The full config is on [GitHub](https://github.com/mhaack/home-assistant-config).
 ## Wrapping up
 
 It's the same idea as two years ago. It's a small box on the desk that shows me what's going on at home without me having to reach for my phone. This time it's even better: a sharper display, a cleaner build, more data and a couple of extra pages that I created just for fun.
+
+![Zettelbox - old and new next to each other](/assets/images/zettelbox-2-old-new.jpeg "Zettelbox - old and new next to each other")
 
 And, honestly, I'm happy with it. The display size is perfect, and the woodwork is exactly what I wanted — no improvements needed.
 
