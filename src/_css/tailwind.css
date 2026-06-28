@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import './prism-okaidia.css';
+@import './bento.css';
 @plugin "@tailwindcss/typography";
 
 @theme {

@@ -41,6 +41,56 @@ export const markdownLib = markdownIt({
   .use(markdownItEmoji)
   .use(markdownitAbbr)
   .use((md) => {
+    // Group runs of consecutive image-only paragraphs into row/bento layouts.
+    // Consecutive image lines (no blank line between) parse into a single
+    // paragraph whose inline children are [image, softbreak, image, ...].
+    md.core.ruler.push('bento_images', (state) => {
+      const tokens = state.tokens;
+      for (let i = 0; i + 2 < tokens.length; i++) {
+        if (
+          tokens[i].type !== 'paragraph_open' ||
+          tokens[i + 1].type !== 'inline' ||
+          tokens[i + 2].type !== 'paragraph_close'
+        ) {
+          continue;
+        }
+
+        const inline = tokens[i + 1];
+        const children = inline.children || [];
+        const images = children.filter((t) => t.type === 'image');
+        const hasOtherContent = children.some(
+          (t) =>
+            t.type !== 'image' &&
+            t.type !== 'softbreak' &&
+            !(t.type === 'text' && t.content.trim() === '')
+        );
+
+        if (hasOtherContent || images.length < 2) {
+          continue;
+        }
+
+        const open = tokens[i];
+        const close = tokens[i + 2];
+        const n = images.length;
+
+        open.tag = 'div';
+        close.tag = 'div';
+        if (n === 2) {
+          open.attrSet('class', 'image-row');
+        } else if (n <= 6) {
+          open.attrSet('class', `image-bento image-bento--${n}`);
+        } else {
+          open.attrSet('class', 'image-bento image-bento--many');
+        }
+
+        // Keep only the images (drop softbreaks → no stray <br>) and flag them.
+        inline.children = images.map((img) => {
+          img.meta = { ...(img.meta || {}), lightbox: true };
+          return img;
+        });
+      }
+    });
+
     md.renderer.rules.image = (tokens, idx) => {
       const token = tokens[idx];
       const src = token.attrGet('src');
@@ -55,6 +105,14 @@ export const markdownLib = markdownIt({
 
       const attributesString = attributes.map(([key, value]) => `${key}="${value}"`).join(' ');
       const imgTag = `<img src="${src}" alt="${alt}" ${attributesString}>`;
-      return caption ? `<figure>${imgTag}<figcaption>${caption}</figcaption></figure>` : imgTag;
+      const figure = caption
+        ? `<figure>${imgTag}<figcaption>${caption}</figcaption></figure>`
+        : imgTag;
+
+      if (token.meta && token.meta.lightbox) {
+        const label = alt ? ` aria-label="${alt}"` : '';
+        return `<a class="lightbox-link" href="${src}"${label}>${figure}</a>`;
+      }
+      return figure;
     };
   });
