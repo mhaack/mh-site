@@ -1,10 +1,5 @@
 /* Multi-image layouts produced by the markdown bento plugin, plus lightbox. */
 
-/* All post images share the same rounded corners (single, 2-up row, and bento). */
-.e-content img {
-  border-radius: 0.5rem;
-}
-
 .e-content .image-row,
 .e-content .image-bento {
   display: grid;
@@ -17,7 +12,6 @@
   display: block;
   margin: 0;
   overflow: hidden;
-  border-radius: 0.5rem;
   cursor: zoom-in;
 }
 
@@ -115,7 +109,6 @@
   max-width: 92vw;
   max-height: 90vh;
   object-fit: contain;
-  border-radius: 0.25rem;
 }
 .lightbox-overlay button {
   position: absolute;
