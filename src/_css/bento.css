@@ -32,15 +32,9 @@
   grid-auto-rows: 16rem;
 }
 
-/* Bento: break out wider than prose at lg+, like the feature image. */
+/* Bento: stays within prose width. */
 .e-content .image-bento {
   grid-auto-rows: 14rem;
-}
-@media (min-width: 1024px) {
-  .e-content .image-bento {
-    margin-left: -10rem;
-    margin-right: -10rem;
-  }
 }
 
 /* 3: tall tile left, two stacked right. */
@@ -83,7 +77,7 @@
   grid-row: span 2;
 }
 
-/* Mobile: collapse grids; cancel area/span placement and the wide breakout. */
+/* Mobile: collapse grids; cancel area/span placement. */
 @media (max-width: 640px) {
   .e-content .image-bento {
     grid-template-columns: 1fr 1fr;
@@ -91,8 +85,6 @@
     grid-template-areas: none;
     grid-auto-flow: row;
     grid-auto-rows: 10rem;
-    margin-left: 0;
-    margin-right: 0;
   }
   .e-content .image-bento > .lightbox-link {
     grid-area: auto;

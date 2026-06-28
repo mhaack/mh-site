@@ -2,7 +2,7 @@
   if (window.__lightboxInit) return;
   window.__lightboxInit = true;
 
-  let overlay, imgEl, prevBtn, nextBtn, group = [], index = 0, lastFocus = null;
+  let overlay, imgEl, prevBtn, nextBtn, group = [], index = 0, lastFocus = null, savedOverflow = '';
 
   // eleventy-img rewrites <img> to /.11ty/image/ URLs and does not serve the
   // original src, so resolve the largest candidate from the rendered srcset.
@@ -40,9 +40,24 @@
     prevBtn = overlay.querySelector('.lightbox-prev');
     nextBtn = overlay.querySelector('.lightbox-next');
     overlay.querySelector('.lightbox-close').addEventListener('click', close);
-    prevBtn.addEventListener('click', (e) => { e.stopPropagation(); show(index - 1); });
-    nextBtn.addEventListener('click', (e) => { e.stopPropagation(); show(index + 1); });
+    prevBtn.addEventListener('click', () => show(index - 1));
+    nextBtn.addEventListener('click', () => show(index + 1));
     overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+    // Trap keyboard focus within the dialog while it is open.
+    overlay.addEventListener('keydown', (e) => {
+      if (e.key !== 'Tab') return;
+      const focusable = Array.from(overlay.querySelectorAll('button:not([hidden])'));
+      if (!focusable.length) return;
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
   }
 
   function show(i) {
@@ -63,6 +78,7 @@
     index = group.indexOf(link);
     lastFocus = document.activeElement;
     overlay.hidden = false;
+    savedOverflow = document.documentElement.style.overflow;
     document.documentElement.style.overflow = 'hidden';
     show(index);
     overlay.querySelector('.lightbox-close').focus();
@@ -71,7 +87,7 @@
 
   function close() {
     overlay.hidden = true;
-    document.documentElement.style.overflow = '';
+    document.documentElement.style.overflow = savedOverflow;
     document.removeEventListener('keydown', onKey);
     if (lastFocus && lastFocus.focus) lastFocus.focus();
   }
