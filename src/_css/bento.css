@@ -1,5 +1,10 @@
 /* Multi-image layouts produced by the markdown bento plugin, plus lightbox. */
 
+/* All post images share the same rounded corners (single, 2-up row, and bento). */
+.e-content img {
+  border-radius: 0.5rem;
+}
+
 .e-content .image-row,
 .e-content .image-bento {
   display: grid;
