@@ -25,7 +25,7 @@ The new panel is a Waveshare 2.7". Slightly smaller on the diagonal, but 264x176
 
 Version 1 used 8 mm plywood for the front and 4 mm plywood for the rest. Everything was cut with a jigsaw and then filed down and sanded by hand.
 
-For Zettlebox 2.0, my friend Eric helped me out. He had a hobby CNC milling machine. Using this, we cut all the parts from 4 mm plywood. This is half the thickness, which only works because the cuts are precise. The parts just fit. There was no need for filing afterwards, and only a little sanding was required for post-processing.
+For Zettlebox 2.0, my friend Eric helped me out. He has a hobby CNC milling machine. Using this, we cut all the parts from 4 mm plywood. This is half the thickness, which only works because the cuts are precise. The parts just fit. There was no need for filing afterwards, and only a little sanding was required for post-processing.
 
 Eric also came up with the idea for the new curved front design. It's a perfectly mirrored curved line that would be hard to make manually. But with Eric's machine, it's just an extra 5-minute step in the cutter program.
 
