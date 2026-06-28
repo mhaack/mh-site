@@ -47,14 +47,14 @@ Nothing exotic, it's the same parts as the first version. I already had the disp
 
 I was so impressed by the CNC process, from the initial preparation in the cutter software right through to the final cutting, that I took a lot of pictures.
 
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-2.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-3.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-4.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-5.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-6.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-7.png)
-![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-8.png)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-2.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-3.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-4.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-5.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-6.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-7.jpeg)
+![Zettelbox 2.0 cutting process](/assets/images/zettelbox-2-cutting-8.jpeg)
 
 ## Software
 
