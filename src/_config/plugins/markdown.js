@@ -111,7 +111,10 @@ export const markdownLib = markdownIt({
 
       if (token.meta && token.meta.lightbox) {
         const label = alt ? ` aria-label="${alt}"` : '';
-        return `<a class="lightbox-link" href="${src}"${label}>${figure}</a>`;
+        // eleventy-img does not serve the original src (it 404s), so use a hash
+        // href. The lightbox resolves the real image from the rendered srcset
+        // and preventDefault()s the click; this href is only a no-JS fallback.
+        return `<a class="lightbox-link" href="#"${label}>${figure}</a>`;
       }
       return figure;
     };

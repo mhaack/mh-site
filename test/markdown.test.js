@@ -38,9 +38,9 @@ test('eight consecutive images become image-bento--many with eight links', () =>
   assert.equal(count(html, 'lightbox-link'), 8);
 });
 
-test('lightbox link carries href to src and aria-label from alt', () => {
+test('lightbox link uses a hash href and aria-label from alt', () => {
   const html = markdownLib.render('![Hello world](/a.jpg)\n![b](/b.jpg)');
-  assert.ok(html.includes('href="/a.jpg"'), 'href is src');
+  assert.ok(html.includes('href="#"'), 'href is a hash (original src is not served)');
   assert.ok(html.includes('aria-label="Hello world"'), 'aria-label is alt');
 });
 
