@@ -42,7 +42,7 @@ The first review blogs and podcasts appeared shortly after the Adobe Summit. Arb
 
 ## Resources
 
-* [Lab website](https://adobelabs.dev/developers/l613/1) - the full exercises are still live
+* [Lab website](https://adobelabs.dev/events/summit26/developers/l613/) - the full exercises are still live
 * [Developing with AI Tools for EDS](https://www.aem.live/developer/ai-coding-agents) - Adobe's guide to AI-assisted EDS development
 * [AEM EDS Skills on GitHub](https://github.com/adobe/skills) - the skills used in the lab
 * [DA MCP](/da-mcp/) - the MCP server featured in Exercise 5

@@ -1,14 +1,15 @@
 ---
 permalink: /about/
 title: About Markus
-description: I'm a developer, home automation enthusiast, married with my
-  wonderful wife, proud dad and a software engineer at Adobe from Leipzig,
-  Germany. Welcome to my virtual home my little corner on the internet.
+description: I'm a developer, home automation and maker enthusiast, married to my
+  wonderful wife, proud dad, and a Principal at Adobe from Leipzig,
+  Germany. Welcome to my virtual home, my little corner of the internet.
 seo:
   title: "Markus Haack: Technology, Smart Home Automation, and Personal Blog"
-  description: Hi, I'm Markus Haack. By day, a Senior Technical Lead at Adobe. By
-    night, a Smart Home enthusiast and tech blogger. Welcome to my personal
-    corner of the internet.
+  description: Hi, I'm Markus Haack. By day, a Principal at Adobe
+    working on Edge Delivery Services and AI-assisted developer experiences. By
+    night, a smart home tinkerer, maker, and tech blogger. Welcome to my
+    personal corner of the internet.
 image: /assets/images/markus.jpeg
 layout: page
 eleventyNavigation:
@@ -24,13 +25,13 @@ Hi, I'm Markus Haack and this site is my virtual online home, my little corner o
 
 ## Thanks for stopping by
 
-About me: I'm a Senior Technical Lead at [Adobe](https://www.adobe.com) working on [AEM Content & Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html). Our team builds and maintains e-commerce integration for [Adobe Experience Manager](https://www.adobe.com/marketing/experience-manager.html). If you are interested to find out more, see my [work](/work/) section. You can view [my LinkedIn profile](https://de.linkedin.com/in/markushaack/) for all the gory details.
+About me: I'm a Principal at [Adobe](https://www.adobe.com), where I work on [AEM Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview), [da.live](https://da.live), and Experience Workspace. Lately I've also been spending a lot of time exploring how AI-assisted, agentic workflows change the way we build software in them AEM Sites team. A theme I dug into at Adobe Summit 2026 with my ["vibe coding" session](/da-vide-coding-summit-lab/). Earlier in my career I worked on [AEM Content & Commerce](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content-and-commerce/home.html), building and maintaining e-commerce integrations for Adobe Experience Manager. If you'd like to know more, check out my [work](/work/) section or [my LinkedIn profile](https://de.linkedin.com/in/markushaack/) for all the gory details.
 
 ## Home in the world
 
-Together with my wonderful wife, our daughter, and our 2 cats I live in the beautiful city of Leipzig, Germany.
+Together with my wonderful wife, our daughter, and our 2 cats, I live in the beautiful city of Leipzig, Germany.
 
-If time allows I play with Nintendo consoles, old and new ones. I'm interested in various electronic topics, Arduino micro controllers & IOT stuff. I'm passionate about smart homes, [Home Assistant](https://www.home-assistant.io/) in particular and automating our house with all kinds of useful and useless smart devices. I wrote about my [Home Assistant journey](/home-assistant/) and some of [my projects](/projects/) here as well.
+When I'm not at a keyboard, I'm usually tinkering with something. I'm passionate about smart homes — [Home Assistant](https://www.home-assistant.io/) in particular — and I love automating our house with all kinds of useful (and gloriously useless) smart devices. That curiosity spills over into 3D printing, Arduino and ESP32 microcontrollers, and IoT projects in general, whether that's a custom sensor for Home Assistant or a print for my daughter. If time allows, I also enjoy playing with Nintendo consoles, old and new. I've written about my [Home Assistant journey](/home-assistant/) and some of [my projects](/projects/) here as well.
 
 ## Home on the world wide web
 
