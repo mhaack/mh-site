@@ -1,15 +1,15 @@
 ---
 permalink: /about/
 title: About Markus
-description: I'm a developer, home automation and maker enthusiast, married to my
-  wonderful wife, proud dad, and a Principal at Adobe from Leipzig,
-  Germany. Welcome to my virtual home, my little corner of the internet.
+description: I'm a developer, home automation and maker enthusiast, married to
+  my wonderful wife, proud dad, and a Principal at Adobe from Leipzig, Germany.
+  Welcome to my virtual home, my little corner of the internet.
 seo:
   title: "Markus Haack: Technology, Smart Home Automation, and Personal Blog"
-  description: Hi, I'm Markus Haack. By day, a Principal at Adobe
-    working on Edge Delivery Services and AI-assisted developer experiences. By
-    night, a smart home tinkerer, maker, and tech blogger. Welcome to my
-    personal corner of the internet.
+  description: Hi, I'm Markus Haack. By day, a Principal at Adobe working on Edge
+    Delivery Services and AI-assisted developer experiences. By night, a smart
+    home tinkerer, maker, and tech blogger. Welcome to my personal corner of the
+    internet.
 image: /assets/images/markus.jpeg
 layout: page
 eleventyNavigation:
@@ -57,7 +57,7 @@ Most of my professional posts and articles are published on the [Adobe Tech Blog
 * [Use AEM as a Cloud Service with Multiple Adobe Commerce Systems](https://medium.com/adobetech/use-aem-as-a-cloud-service-with-multiple-adobe-commerce-systems-9295612a9554) together with my colleague Dirk Rudolph
 
 ## Talks
-
+* [Experience Workspace, the agentic content engine](https://www.youtube.com/watch?v=b8IeoY4SKBI), Adobe Developers Live Online Series, September 2026
 * [Vibe Coding an Author Experience at Adobe Summit 2026](/da-vide-coding-summit-lab/), Adobe Summit, April 2026
 * [Unlocking Edge Delivery Authoring with AuthorBus](https://adapt.to/2025/schedule/unlocking-edge-delivery-authoring-with-authorbus), adaptTo(), September 2025
 * [Content Authoring With Universal Editor and Edge Delivery Services in AEM](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-manager/adobe-summit-2025-aem-session-lab-l335-content-authoring-with/td-p/736572), Adobe Summit, March 2025
