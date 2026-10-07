@@ -20,7 +20,7 @@ permalink: making-your-reolink-camera-talk/
 
 Ever wish your security camera could actually speak? Let's talk about camera alerts and how we can make them even smarter. You've got your smart home cameras connected to the Home Assistant, and you get notifications whenever there's motion. In my article [Automate Reolink camera notifications](https://markus-haack.com/automate-reolink-camera-notifications/), I explained how you can automate the camera notifications. That's useful, sure. But a generic "person/car/animal detected" alert often leaves you pulling out your phone, opening the app, and waiting for the live feed to figure out what's actually going on. More often than not, it's just the cat from next door or the postman doing his rounds.
 
-I wanted something smarter. I wanted Home Assistant to not just tell me that something happened, but what happened. Turns out with a little help from AI my smart home actually understand the camera feed.
+I wanted something smarter. I wanted Home Assistant to not just tell me that something happened, but what happened. Turns out with a little help from AI my smart home can actually understand the camera feed.
 
 The idea for this little automation is simple: when motion is detected, take a quick picture (or multiple), send that picture to an AI for analysis, and then have Home Assistant tell you the AI's description out loud.
 
@@ -31,7 +31,7 @@ Here's what you'll need:
 1. **A Camera:** Integrated into Home Assistant and capable of taking snapshots. I'm using Reolink, but the steps for the automation part are generic.
 2. **A Speaker/Media Player:** Also integrated into Home Assistant (like a Sonos, Google Home/Nest speaker, etc.) to play the audio message.
 3. **A Text-to-speech integration**: I use Home Assistant Cloud TTS for this.
-4. **Google Generative AI Access:** You'll need an [Google AI Studio](https://aistudio.google.com) account and an API key for Gemini. We'll cover how to get the integration set up.
+4. **Google Generative AI Access:** You'll need a [Google AI Studio](https://aistudio.google.com) account and an API key for Gemini. We'll cover how to get the integration set up.
 
 You can also build this automation flow with other AI conversation integrations like [Anthropic Conversation](https://www.home-assistant.io/integrations/anthropic/) or [OpenAI Conversation](https://www.home-assistant.io/integrations/openai_conversation/). I used [Google AI Studio](https://www.home-assistant.io/integrations/google_generative_ai_conversation/) because it has a decent free tier with enough tokens for testing.
 
@@ -62,7 +62,7 @@ Search the _Google Generative AI: Generate content_ integration as shown in the 
 
 ## Step 3: Set up Text-to-Speech (TTS)
 
-The automation uses the Text-to-Speech feature to speak the response text from the AI's analysis. I'm using the Home Assistant Cloud TTS in the example, but any configured TTS service like [\# Microsoft Text-to-Speech](https://www.home-assistant.io/integrations/microsoft/) or [Google Translate text-to-speech](https://www.home-assistant.io/integrations/google_translate/) will work as well.
+The automation uses the Text-to-Speech feature to speak the response text from the AI's analysis. I'm using the Home Assistant Cloud TTS in the example, but any configured TTS service like [Microsoft Text-to-Speech](https://www.home-assistant.io/integrations/microsoft/) or [Google Translate text-to-speech](https://www.home-assistant.io/integrations/google_translate/) will work as well.
 
 Make sure you have a TTS integration set up and a media_player entity ready to receive the audio. If you're using Home Assistant Cloud, the tts.home_assistant_cloud entity should be available by default if you have Nabu Casa subscribed.
 
@@ -98,7 +98,7 @@ Now for the fun part: putting it all together in an automation. We'll mostly use
 
 We won't add any conditions for a basic example. Click *+ Add Condition* if you want to refine when this automation runs (e.g., only during the day).
 
-In my example, I use a condition to run the automation only when we are at home using a simple stage condition.
+In my example, I use a condition to run the automation only when we are at home using a simple state condition.
 
 ### Actions
 

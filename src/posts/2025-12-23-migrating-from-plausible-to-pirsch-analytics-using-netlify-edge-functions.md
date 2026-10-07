@@ -35,7 +35,7 @@ Once you have created your account, generate a tracking script via the [Pirsch d
 
 There are also a large number of ready-made integrations for CMS (such as WordPress), e-commerce platforms (such as Shopify) or SSG frameworks (via Astro or Gatsby) available from the community.
 
-I went for a more advanced option via a bumpy round.
+I went for a more advanced option via a roundabout way.
 
 ### Using a Proxy with Netlify Edge Functions
 
@@ -258,7 +258,7 @@ export const config = {
 };
 ```
 
-You can find the full implementation, includuing comments and description in my GitHub repo:
+You can find the full implementation, including comments and description in my GitHub repo:
 **[pirsch.js on GitHub](<>)**
 
 Depending on how the edge functions are stored in the project, they are either recognised automatically or must be declared separately in netlify.toml. In addition, you must map the function to one or more URL routes. This can be done automatically using function name matching, directly in the code, or via netlify.toml. I selected the code option via the `config` object export, mapping the four paths that we are interested in. See above.
@@ -271,7 +271,7 @@ To get this running, you need to add the `PIRSCH_CODE` to your Netlify environme
 
 ## Page Setup
 
-Finally, embed the script in your site's `<head>` is needed. You can use the script generated during the initial dashboard setup as a starting point. We need to adjust it slightly to ensure that the analytics events are sent to our proxy. This means we need to change or replace the hostname and add additional hints to the Pirsch Analytics script to indicate where to send the data, depending on the paths configured in our edge function. 
+Finally, the script needs to be embedded in your site's `<head>`. You can use the script generated during the initial dashboard setup as a starting point. We need to adjust it slightly to ensure that the analytics events are sent to our proxy. This means we need to change or replace the hostname and add additional hints to the Pirsch Analytics script to indicate where to send the data, depending on the paths configured in our edge function. 
 
 The `src` attribute must point to the proxy path of the JavaScript file. If you are running the proxy on the main hostname of your website, the path must be relative. However, if you have chosen to bind the proxy to a subdomain, the `src` attribute must be an absolute URL. The same applies for the `data-hit-endpoint`, `data-event-endpoint` and `data-session-endpoint` attributes. For my website the script tag looks like the following:
 
@@ -287,7 +287,7 @@ The `src` attribute must point to the proxy path of the JavaScript file. If you 
 
 ## Summary
 
-Would moving to Pirsch.io be a good idea for my setup? How does it compare to Plausible in a real project? I suppose we'll find out over the next few months. It's definitely a more cost-effective option for my current level of traffic. pattern. The dashboard looks nice! as well. With the first data flowing in:
+Would moving to Pirsch.io be a good idea for my setup? How does it compare to Plausible in a real project? I suppose we'll find out over the next few months. It's definitely a more cost-effective option for my current level of traffic. The dashboard looks nice as well, now that the first data is flowing in:
 
 ![Pirsch Dashboard for markus-haack.com](/assets/images/pirsch-screenshot2.png){class="small"}
 

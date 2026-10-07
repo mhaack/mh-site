@@ -17,7 +17,7 @@ date: 2024-09-13
 permalink: reolink-cameras-in-home-assistant/
 ---
 
-I recently replaced all our security cameras around the house with new [Reolink](https://reolink.com) network cameras with either Wifi or PoE (Power of Ethernet). In this post, we will walk through the process of integrating Reolink Network Cameras into Home Assistant. With this integration, you can stream live footage, set up motion detection automations, and even record clips based on events. Here is why, and more importantly, how to set up the new cameras in [Home Assistant](https://home-assistant.io/).
+I recently replaced all our security cameras around the house with new [Reolink](https://reolink.com) network cameras with either Wifi or PoE (Power over Ethernet). In this post, we will walk through the process of integrating Reolink Network Cameras into Home Assistant. With this integration, you can stream live footage, set up motion detection automations, and even record clips based on events. Here is why, and more importantly, how to set up the new cameras in [Home Assistant](https://home-assistant.io/).
 
 ## Why I Switched from Arlo to Reolink
 
@@ -41,8 +41,8 @@ Our setup now consists of 6 cameras:
 
 - [5MP RLC-540A PoE dome camera](https://reolink.com/us/product/rlc-540a/) at the front door
 - [5MP RLC-520A PoE camera](https://reolink.com/us/product/rlc-520a/) in the carport
-- [2K 4MP CX410 camera](https://reolink.com/us/product/cx410/)with color night vision
-- [4K Smart Dual-Lens PoE Camera](https://reolink.com/us/product/rlc-81ma/)with super large diagonal via for the garden
+- [2K 4MP CX410 camera](https://reolink.com/us/product/cx410/) with color night vision
+- [4K Smart Dual-Lens PoE Camera](https://reolink.com/us/product/rlc-81ma/) with super large diagonal view for the garden
 - 2 [4K Camera RLC-810WA](https://reolink.com/us/product/rlc-810wa/) with Wifi 6 for the garden and pool
 
 Reolink also offers battery powered cameras, dual view cameras or video door bells. Most of them [should also work with Home Assistant](https://www.home-assistant.io/integrations/reolink/#tested-models), however I only could test the cameras listed above.
@@ -52,7 +52,7 @@ IMHO Reolink cameras offer excellent hardware at a reasonable price, with featur
 However, not everything is perfect, and even Reolink's cameras have a few minor flaws.
 
 - Most models, including the one I got, are only available with a white casing. Sometimes (like the RLC-520A) the different colour models have different specifications, such as different lenses.
-- There is not much room for the antenna mounts on the wifi cameras, such as the RCL-810WA models. If the bracket is very tilted, the antennas cannot be mounted due to lack of space. The solution is a short extension cable [such as this one](https://www.amazon.de/dp/B07MT3VZXZ).
+- There is not much room for the antenna mounts on the wifi cameras, such as the RLC-810WA models. If the bracket is very tilted, the antennas cannot be mounted due to lack of space. The solution is a short extension cable [such as this one](https://www.amazon.de/dp/B07MT3VZXZ).
 - Push notification in mixed languages, some cameras send notifications in German like the newer CX410 models, others only in English.
 
 The biggest missing features are camera automation and geo-fencing, as we want to automatically activate the cameras when nobody is at home and after sunset. Arlo was much better at this. The good news is that this problem can be solved by using some automation in the Home Assistant. Finally, we only use the iOS application to view recordings when we receive notifications.
@@ -79,7 +79,7 @@ Optional: Enable the optional camera protocols
 
 ### Step 2: Add Reolink Integration to Home Assistant
 
-At first we need to enabled the Reolink integration in Home Assistant.
+At first we need to enable the Reolink integration in Home Assistant.
 
 - Log in to your **Home Assistant** instance.
 - Go to **Settings** > **Devices & Services** > **+ Add Integration**.
@@ -87,7 +87,7 @@ At first we need to enabled the Reolink integration in Home Assistant.
 
 ### Step 3: Add your cameras
 
-Reolink IP cameras - cable network or WiFi connected - can be auto-discovered by Home Assistant. If an device was found, it will be shown as _discovered_. You can then set it up right away.
+Reolink IP cameras - cable network or WiFi connected - can be auto-discovered by Home Assistant. If a device was found, it will be shown as _discovered_. You can then set it up right away.
 
 If the camera is not auto-discovered it can be manually added by clicking on **Add Entry**. In the following dialog enter:
 
@@ -98,7 +98,7 @@ If the camera is not auto-discovered it can be manually added by clicking on **A
 
 ![Set up a Reolink camera in Home Assistant](/assets/images/reolink-setup-1.png 'Set up a Reolink camera in Home Assistant'){class="x-small"}
 
-Once configured you can change the camera protocol used by Home Assistant to communicated with the camera. You can choose between RTSP, RTMP, or FLV streaming protocol. If there are no streaming issues, lagging video etc. I recommend to leave this setting at RTSP as this should give you the best video results and is the only protocol which can stream 4K camera streams.
+Once configured you can change the camera protocol used by Home Assistant to communicate with the camera. You can choose between RTSP, RTMP, or FLV streaming protocol. If there are no streaming issues, lagging video etc. I recommend leaving this setting at RTSP as this should give you the best video results and is the only protocol which can stream 4K camera streams.
 
 ### Step 4: Confirm the Camera is added to Home Assistant
 
@@ -113,7 +113,7 @@ If the Reolink device view is not already open:
 - Go to **Settings** > **Devices & Services**.
 - Under **Devices**, you should now see your Reolink camera listed as a device. Click on it to view more information and entities that have been created for the camera (e.g., video feed, motion sensor, etc.).
 
-Depending on the features and capabilities of the camera the Reolink integration creates 40 or more entities for each camera device. It is very verbose and detailed. All the configuration setting you have in the Reolink app are exposed as well in Home Assistant. I personally disable most of the entires in the _Configuration_ group as I do not plan to change these from within Home Assistant. Like for other devices in Home Assistant associated automations and events are shown on the detail view as well.
+Depending on the features and capabilities of the camera the Reolink integration creates 40 or more entities for each camera device. It is very verbose and detailed. All the configuration setting you have in the Reolink app are exposed as well in Home Assistant. I personally disable most of the entries in the _Configuration_ group as I do not plan to change these from within Home Assistant. Like for other devices in Home Assistant associated automations and events are shown on the detail view as well.
 
 ![Camera detail view in Home Assistant](/assets/images/reolink-setup-3.jpeg 'Camera detail view in Home Assistant'){class="small"}
 
@@ -121,7 +121,7 @@ I usually only keep the important switches, the camera stream(s), the motion det
 
 By clicking on the round image, you should be able to access the camera's video stream. Typically, you will first see a snapshot while the camera stream is loading in the background. Once available, the snapshot image will be replaced by the playing video.
 
-### Step 5: Viewing Your Reolink Camera in Lovelace Dashboard
+### Step 6: Viewing Your Reolink Camera in Lovelace Dashboard
 
 Once the Reolink camera is added to Home Assistant and you have checked the sensors and the camera stream in the device detail view, you can easily view the live video feed from your dashboard.
 

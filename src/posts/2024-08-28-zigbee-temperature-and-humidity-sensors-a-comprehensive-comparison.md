@@ -21,13 +21,13 @@ permalink: zigbee-temperature-sensors/
 
 ---
 
-Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second for to measure the pool water temp.
+Smart homes are becoming increasingly popular, and temperature and humidity sensors play a crucial role in automating home environments. Over the last years I have added > 10 in and around the house. Every room got one, the attic as well and one was added into the fridge. Of course there is a sensor outside in the garden and a second one to measure the pool water temp.
 
 ![ZigBee temperature and humidity sensors](/assets/images/temperature-sensors.jpeg){class="small"}
 
 ZigBee sensors are great for this use case. They are known for their low power consumption and reliable communication. They can run on battery power for several months, even years.
 
-Most of the sensors we have installed are Aqara Temperature and Humidity sensors of the first generation. So far, these have been very reliable and most of them still are. But there are also a few, 3 so far, that have had failures recently and have repeatedly lost the connection. Only a re-paring helped, which is quite annoying. Different batteries, different position, nothing really brings any improvement. That's why I've been looking around for alternatives.
+Most of the sensors we have installed are Aqara Temperature and Humidity sensors of the first generation. So far, these have been very reliable and most of them still are. But there are also a few, 3 so far, that have had failures recently and have repeatedly lost the connection. Only a re-pairing helped, which is quite annoying. Different batteries, different position, nothing really brings any improvement. That's why I've been looking around for alternatives.
 
 In this blog post, we'll compare five popular ZigBee temperature and humidity sensors to help you make an informed choice. We'll evaluate each sensor based on accuracy, battery life, size, ease of integration with Home Assistant, and more.
 
@@ -70,10 +70,10 @@ To understand how each sensor performs in real-world scenarios, I tested the sen
 
 From the data recorded in the last 24 hours:
 
-- The **SONOFF Zigbee** sensor shows slight deviations but remains close to the average readings, indicating good accuracy. It reacts more quickly to temperature changes then the Aqara sensors.
-- The **Aqara (Old Version)** and new **Aqara T1** getting almost identical measurements for temperature, while the humidity values of the old version are minimal higher than the T1 and average.
-- The **NOUS E5** seams to be calibrated very good, the temperature and humidity readings are always in the middle.
-- The **OWON Remote Probe** sensor provides readings slightly higher then the other sensors and it reacts more quickly to temperature changes.
+- The **SONOFF Zigbee** sensor shows slight deviations but remains close to the average readings, indicating good accuracy. It reacts more quickly to temperature changes than the Aqara sensors.
+- The **Aqara (Old Version)** and new **Aqara T1** get almost identical measurements for temperature, while the humidity values of the old version are minimal higher than the T1 and average.
+- The **NOUS E5** seems to be calibrated very well, the temperature and humidity readings are always in the middle.
+- The **OWON Remote Probe** sensor provides readings slightly higher than the other sensors and it reacts more quickly to temperature changes.
 
 ## Integrating with Home Assistant
 
@@ -87,7 +87,7 @@ I can confirm that all the tested sensors work with ZHA without any issue. I am 
 
 Here’s a quick guide to get started:
 
-1. **Hardware Requirements**: You’ll need a ZigBee coordinator, such as the [Home Assistant Connect ZBT-1](https://www.home-assistant.io/connectzbt1/), [ITead SONOFF Zigbee 3.0 USB Dongle)](https://itead.cc/product/zigbee-3-0-usb-dongle/) or [ConBee II USB adapter](https://phoscon.de/conbee2), to act as a bridge between your ZigBee devices and Home Assistant.
+1. **Hardware Requirements**: You’ll need a ZigBee coordinator, such as the [Home Assistant Connect ZBT-1](https://www.home-assistant.io/connectzbt1/), [ITead SONOFF Zigbee 3.0 USB Dongle](https://itead.cc/product/zigbee-3-0-usb-dongle/) or [ConBee II USB adapter](https://phoscon.de/conbee2), to act as a bridge between your ZigBee devices and Home Assistant.
 2. **Setting Up ZHA**:
 
    - Go to the **Integrations** section in Home Assistant.
@@ -103,11 +103,11 @@ ZigBee2MQTT & deCONZ are other popular and powerful options to integrate ZigBee 
 
 **ZigBee2MQTT** allows for a broader range of devices and more advanced configuration options. It works by bridging ZigBee devices to MQTT, a lightweight messaging protocol used by Home Assistant. A full setup requires an MQTT broker like Mosquitto running standalone or as [Home Assistant Add-on](https://github.com/home-assistant/addons/tree/master/mosquitto).
 
-Another alternative to ZHA is **deCONZ**, powerful integration for ZigBee devices, particularly popular for its detailed device visualization and management. Is has specially requirements on the supported ZigBee gateways and only works with selected radios like the [RaspBee II](https://phoscon.de/en/raspbee2), [ConBee II](https://phoscon.de/en/conbee2), or [ConBee III](https://phoscon.de/en/conbee3) . I used this before I switched to ZHA and it worked super reliable. The setup requires a few more components. The [deCONZ](https://github.com/home-assistant/addons/tree/master/deconz) can also be easily installed as a home assistant add-on via the Add-on store. New devices and sensors are usually paired in the deCONZ software, which then exposes them to the Home Assistant.
+Another alternative to ZHA is **deCONZ**, powerful integration for ZigBee devices, particularly popular for its detailed device visualization and management. It has special requirements for the supported ZigBee gateways and only works with selected radios like the [RaspBee II](https://phoscon.de/en/raspbee2), [ConBee II](https://phoscon.de/en/conbee2), or [ConBee III](https://phoscon.de/en/conbee3) . I used this before I switched to ZHA and it worked super reliable. The setup requires a few more components. The [deCONZ](https://github.com/home-assistant/addons/tree/master/deconz) can also be easily installed as a home assistant add-on via the Add-on store. New devices and sensors are usually paired in the deCONZ software, which then exposes them to the Home Assistant.
 
 ## Summary
 
-When choosing a ZigBee temperature and humidity sensor, consider what features are most important for your specific needs. For indoor usage all for sensors are good choices.
+When choosing a ZigBee temperature and humidity sensor, consider what features are most important for your specific needs. For indoor usage, all four sensors are good choices.
 
 - **For General Home Use**: The SONOFF Zigbee Temperature and Humidity Sensor offers a good balance between price, accuracy, making it an excellent choice for most users.
 - **For "I want an established Brand"**: Both Aqara sensors are reliable choices, go with the newer T1 version.

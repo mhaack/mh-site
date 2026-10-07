@@ -1,8 +1,8 @@
 ---
 title: "Our 2025 Home Solar Performance: 5 Years of Real Data"
-description: Five years of home solar in southern Germany. Our 2025 PV system produced 8,624 kWh, covered 54% of our consumption, and saved us over €2,000. Here's the full picture.
+description: Five years of home solar in central Germany. Our 2025 PV system produced 8,624 kWh, covered 54% of our consumption, and saved us over €2,000. Here's the full picture.
 seo:
-  description: "Our 2025 home PV system produced 8,624 kWh - real southern Germany data, 5-year comparison table, and €2,200+ in annual savings. Real numbers, no estimates."
+  description: "Our 2025 home PV system produced 8,624 kWh - real data from central Germany, 5-year comparison table, and €2,200+ in annual savings. Real numbers, no estimates."
 category: project
 tags:
   - solar
@@ -16,7 +16,7 @@ permalink: /our-2025-solar-power-performance/
 
 If you want to know if it makes financial sense to install a home solar system in Germany, or if you're curious about how long these systems last, we have the answers for you. Here is five years of real data from our own rooftop PV system in Germany. In 2025, our 9.45 kWp system produced **8,624 kWh**, covering 54% of our household electricity needs and saving us around €2,200 in grid costs. The full breakdown is below.
 
-This is our fifth annual solar review. You can find the previous ones for [2024](/our-2024-solar-power-performance/) and [2023](/solar-update-2023/), along with the original [installation posts from 2021](/our-own-electricity-1/). Quick system overview: 9.45 kWp of panels on a south-facing roof in southern Germany, installed in 2021, paired with a BYD battery and a SolarEdge inverter. Since mid-2025 we also have a Polestar 4 that we charge primarily on solar surplus using [evcc](/intro-into-evcc-charging/).
+This is our fifth annual solar review. You can find the previous ones for [2024](/our-2024-solar-power-performance/) and [2023](/solar-update-2023/), along with the original [installation posts from 2021](/our-own-electricity-1/). Quick system overview: 9.45 kWp of panels on a south-facing roof in central Germany, installed in 2021, paired with a BYD battery and a SolarEdge inverter. Since mid-2025 we also have a Polestar 4 that we charge primarily on solar surplus using [evcc](/intro-into-evcc-charging/).
 
 ## 2025: Steady Production, Higher Consumption
 
@@ -46,9 +46,9 @@ The flip side: In December 2025, the yield was almost double that of December 20
 | 2024 | 8,706 kWh | 10,078 kWh  | 4,661 kWh      | 5,418 kWh     | 54%            |
 | 2025 | 8,624 kWh | 10,714 kWh  | 4,953 kWh      | 5,761 kWh     | 54%            |
 
-A few things stand out. 2022 was our best year by far, especially because of an exceptional spring that has never been repeated. Since then, our usage has stabilised at around 8,400–8,700 kWh, and we expect this to continue unless there is unusual weather.
+A few things stand out. 2022 was our best year by far, especially because of an exceptional spring that has never been repeated. Since then, our production has stabilised at around 8,400–8,700 kWh, and we expect this to continue unless there is unusual weather.
 
-The column I pay the most attention to is 'self-consumed solar', which has increased by 7% from 5,378 kWh in year one to 5,761 kWh in year five, despite production barely moving. The battery is doing its job. Our *Eigenverbrauchsquote* (to use one of our famous long German words) aka. the solar coverage ratio has been remarkably stable at 52–57% across all five years, landing at 54% in three of those years.
+The column I pay the most attention to is 'self-consumed solar', which has increased by 7% from 5,378 kWh in year one to 5,761 kWh in year five, despite production barely moving. The battery is doing its job. Our *Autarkiegrad* (to use one of our famous long German words), aka the solar coverage ratio, has been remarkably stable at 52–57% across all five years, landing at 54% in three of those years.
 
 ## The Financial Reality
 

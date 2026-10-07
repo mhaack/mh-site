@@ -44,7 +44,7 @@ In addition, evcc can be integrated into Home Assistant with just a REST and an 
 
 ## Our Hardware Setup
 
-As you could already read in my [Going Green](/our-own-electricity-1/) articles, our photovoltaic system features a SolarEdge inverter with a 10 kW BYD Battery. As EV Charger we have a Keba P30 c-series and currently we drive a Polestar. I will now provide an explanation of how to integrate these components into evcc and use them as examples.
+As you could already read in my [Going Green](/our-own-electricity-1/) articles, our photovoltaic system features a SolarEdge inverter with a 10.5 kWh BYD battery. As EV Charger we have a Keba P30 c-series and currently we drive a Polestar. I will now provide an explanation of how to integrate these components into evcc and use them as examples.
 
 The first configuration steps are the global `site` settings such as name and the existing `loadpoints`. A load point is the designation for your charging station, for example a garage or carport. evcc supports more complex setups such as apartment blocks with several charging points. In our case it is only one EV charger in the carport.
 
@@ -68,7 +68,7 @@ loadpoints:
 
 The next step is to define the `meters`. These are the existing electricity meters for the different sources, but at least the solar inverter and electricity grid. Optionally, if a home battery is installed, it will be metered as well.
 
-Our case the [SolarEdge hybrid inverter](https://docs.evcc.io/en/docs/devices/meters#solaredge) with battery storage required three meter configurations:
+In our case, the [SolarEdge hybrid inverter](https://docs.evcc.io/en/docs/devices/meters#solaredge) with battery storage required three meter configurations:
 
 ```yaml
 meters:

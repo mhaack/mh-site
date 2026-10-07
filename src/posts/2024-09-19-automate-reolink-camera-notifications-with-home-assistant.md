@@ -39,7 +39,7 @@ Just like us, almost all camera users only want to receive push notifications at
 
 When we're at home in the garden, we don't need notifications from the cameras in the garden or by the pool. It's only us who would trigger them anyway. However, if someone is at the entrance and rings the doorbell, we don't notice this in the garden, so notifications from the entrance camera are important.
 
-In our case the notifications will follow this patten:
+In our case the notifications will follow this pattern:
 
 |  Camera   | Week - Day | Weekend - Day | Nights |
 | :-------: | :--------: | :-----------: | :----: |
@@ -47,7 +47,7 @@ In our case the notifications will follow this patten:
 |  Carport  |     on     |      off      |   on   |
 |  Garden   |    off     |      off      |   on   |
 
-To enable / disable the notifications as needed I use two automations in Home Assistant. The first on is triggered at sunset to enable the push notification settings of all the cameras:
+To enable / disable the notifications as needed I use two automations in Home Assistant. The first one is triggered at sunset to enable the push notification settings of all the cameras:
 
 ![Screenshot Home Assistant Automation](/assets/images/ha-activate-reolink-notifications-sunset.png){class="small"}
 
@@ -72,7 +72,7 @@ action:
 mode: single
 ```
 
-The second time-based automation is triggered at sunrise in the morning to switch the notifications back on. This only runs when we are at home, as we do not want the push notifications to be turned off when we are away. The carport camera notifications are only disabled at weekends.
+The second time-based automation is triggered at sunrise in the morning to switch the notifications off again. This only runs when we are at home, as we do not want the push notifications to be turned off when we are away. The carport camera notifications are only disabled at weekends.
 
 ![Screenshot Home Assistant Automation](/assets/images/ha-de-activate-reolink-notifications-sunrise.png){class="small"}
 

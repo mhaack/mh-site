@@ -60,7 +60,7 @@ If you get the Waveshare Universal e-Paper Driver Board, no soldering is require
 
 The software stack is quite simple. All you need is [ESPHome](https://esphome.io/index.html) and [Home Assistant](https://www.home-assistant.io/). The ESPHome code runs on the microcontroller that drives the display. Home Assistant is responsible for providing all the data you want to display. ESPHome can integrate a number of different sensors. However, I prefer to get the data from the Home Assistant as it is already available and integrated.
 
-The full configuration for my display is available on [GitHub](https://github.com/mhaack/home-assistant-config/blob/master/config/esphome/home-display.yaml). To use the ESPHome configuration, simply copy it to the ESHome Config folder. You can then customise it for your own display and sensors. Change the display layout, data sources and update intervals according to the requirements of your project.
+The full configuration for my display is available on [GitHub](https://github.com/mhaack/home-assistant-config/blob/master/config/esphome/home-display.yaml). To use the ESPHome configuration, simply copy it to the ESPHome config folder. You can then customise it for your own display and sensors. Change the display layout, data sources and update intervals according to the requirements of your project.
 
 The ESPHome configuration for my e-ink display project consists of 4 sections. Let me explain the most important parts.
 
@@ -104,7 +104,7 @@ Two components are needed to configure the display. The `display` [component](ht
 
 For an e-ink display such as the Waveshare E-Paper modules, the platform type `waveshare_epaper` must be specified and the `spi` component is also required to specify the pins to which the display is connected. The `model` parameter specifies the display type used [ESPHome documentation](https://esphome.io/components/display/waveshare_epaper) has a full guide to the list of display variants.
 
-If you connect additional sensors such as a temperature sensor or an ambient light sensor, additional ping and sensor setup is required.
+If you connect additional sensors such as a temperature sensor or an ambient light sensor, additional pin and sensor setup is required.
 
 ### 2. Get the data
 
@@ -257,7 +257,7 @@ font:
 
 The main rendering and data display logic is also configured via the `display` component. All rendering is done through a large `lambda` configuration option. This allows you to draw on the display, write text, render images, QR codes or diagrams.
 
-It is possible to draw directly on the display or to use so-called [Display Pages](https://esphome.io/components/display/#display-pages). These allow you to configure multiple virtual screens that you can switch between. I'm using display pages to group and separate the different values I want to show on the e-pager display. I currently use 4 display pages. Every minute I switch to a new display page and update the display. Lets have a look at one of them:
+It is possible to draw directly on the display or to use so-called [Display Pages](https://esphome.io/components/display/#display-pages). These allow you to configure multiple virtual screens that you can switch between. I'm using display pages to group and separate the different values I want to show on the e-paper display. I currently use 4 display pages. Every minute I switch to a new display page and update the display. Let's have a look at one of them:
 
 ```yaml
 pages:
@@ -326,7 +326,7 @@ When you are finished, use the ESPHome add-on in Home Assistant to flash the con
 
 ## Summary
 
-Building my e-ink display with ESPHome has been a fun and rewarding experience. Whether it's for real-time weather updates, monitoring home energy consumption or display traffic information, I love how versatile the combo ESPHome & Home Assistant is for such kind of projects. Seeing the notepad box with the display on my desk every day brings me a sense of satisfaction and keeps me connected to my home automation system. I often think about what else might be useful to display. And, of course, what I could build with the second e-ink display that is still on the shelf.
+Building my e-ink display with ESPHome has been a fun and rewarding experience. Whether it's for real-time weather updates, monitoring home energy consumption or displaying traffic information, I love how versatile the combo ESPHome & Home Assistant is for such kind of projects. Seeing the notepad box with the display on my desk every day brings me a sense of satisfaction and keeps me connected to my home automation system. I often think about what else might be useful to display. And, of course, what I could build with the second e-ink display that is still on the shelf.
 
 ## References
 

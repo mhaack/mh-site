@@ -37,7 +37,7 @@ Fortunately, most modern smart home chargers address this issue by offering buil
 
 ## Detecting the car
 
-The second challenge is recognising the vehicle and, above all, the right vehicle. We only want to activate the charger when our own vehicle is parked and not a other random vehicle.
+The second challenge is recognising the vehicle and, above all, the right vehicle. We only want to activate the charger when our own vehicle is parked and not another random vehicle.
 
 You can try to recognise the car with the help of distance or motion sensors. At least whether an object, i.e. a vehicle, is in the carport or garage. But how do you know which vehicle it is?
 
@@ -49,11 +49,11 @@ I used the cameras to recognise our car. The vehicle and the number plate are re
 
 ## Compatible EV Charger Requirements
 
-This automation works with any smart EV home chargeer that supports authentication control and Home Assistant integration. Whether you have a KEBA - like our [Keba P30](https://www.keba.com/en/emobility/products/c-series/c-series?changelanguage=en), Wallbox, Ohme, Easee, Myenergi, go-e Charger, OpenWB, or other compatible charging station, the core principles remain the same. 
+This automation works with any smart EV home charger that supports authentication control and Home Assistant integration. Whether you have a KEBA - like our [Keba P30](https://www.keba.com/en/emobility/products/c-series/c-series?changelanguage=en), Wallbox, Ohme, Easee, Myenergi, go-e Charger, OpenWB, or other compatible charging station, the core principles remain the same. 
 
 If the charging station is installed in a garage or locked area, this is of course the easiest way. Since our carport is open and accessible to anyone passing by, we need a charger which can be locked and is only useable after authorization.
 
-For this automation to work with your setup, your EV charger must integrated with Home Assistant and needs to meet these essential requirements:
+For this automation to work with your setup, your EV charger must be integrated with Home Assistant and needs to meet these essential requirements:
 
 * Lock entity: For controlling authentication/access (`lock.wallbox_authentication`)
 * Binary sensors: For plug state and charging state monitoring
@@ -66,7 +66,7 @@ The core setup consists of three components.
 
 ### The EV charger
 
-The heart of our setup is the **KEBA P30 wallbox**, which has [excellent integration](https://www.home-assistant.io/integrations/keba/) into Home Assistant. The KEBA integration provides binary sensors for charging state, plug state, energy counters, and crucially, a lock entity for authentication control and start/stop of the actually charging session.
+The heart of our setup is the **KEBA P30 wallbox**, which has [excellent integration](https://www.home-assistant.io/integrations/keba/) into Home Assistant. The KEBA integration provides binary sensors for charging state, plug state, energy counters, and crucially, a lock entity for authentication control and start/stop of the actual charging session.
 
 ### Camera System
 
@@ -111,14 +111,14 @@ Ideally, the camera will already have built-in object and person detection, whic
 
 Set up the AI integration for image analysis capabilities. In case of Google Generative AI you'll need an API key from Google AI Studio. For others the setup process is mostly similar. 
 
-## Lets make it Smart
+## Let's make it Smart
 
 The automation follows a sophisticated workflow that balances security with convenience:
 
 ![EV Charging Flow](/assets/images/ev-charging-flow.png "EV Charging Flow"){class="small"}
 
 1. Motion Detection: Camera sensors detect movement in the carport area via two different cameras
-2. Condition Checks: Verify if the is already charging?
+2. Condition Checks: Verify the car is not already charging
 3. Patience Delay: 5-minute wait to allow parking and cable connection
 4. Condition Checks: Verify the car is plugged in, the EV charger is locked, and not already charging
 5. AI Analysis: Capture and analyze a snapshot to identify the license plate
@@ -250,13 +250,13 @@ Even if it is not a blueprint, the automation can be adapted relatively easily. 
 * Device and Entity IDs
   Replace all device IDs and entity IDs with those from your specific setup. Use *Developer Tools → States* to find the correct entities for your cameras and charger.
 * Licence plate check:
-  Assuming your licence plate is different to ours :-), you need to change the check in line XX as well.
+  Assuming your licence plate is different to ours :-), you need to change the plate check in the template condition (`ai.data.license_plate in [...]`) as well.
 * Unlock the charger:
   Depending on how Home Assistant integrates with the EV charger, this might involve unlocking a lock, as in our case, or sending a command via MQTT or triggering a service to authorise and start charging.
 * Notification:
   Replace the notification service and adapt the messages as required.
 
-Licence plate recognition may require 2-3 attempts and some trial and error. AI recognition was not 100% accurate in our case, so I configured three options. False positive detection might be possible. If the Home Assistant integration for your vehicle provides location data, I would also use this for an additional check and incorporate it into the automation.
+Licence plate recognition may require 2-3 attempts and some trial and error. AI recognition was not 100% accurate in our case, so I configured two options. False positive detection might be possible. If the Home Assistant integration for your vehicle provides location data, I would also use this for an additional check and incorporate it into the automation.
 
 ## Conclusion and Future Enhancements
 

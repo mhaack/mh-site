@@ -24,7 +24,7 @@ As always, here's the updated architecture diagram to help visualize the entire 
 
 The [Odroid N2](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram/) continues its remarkable run as the backbone of our system. Five years in, and it remains rock-solid reliable. I've already thought about upgrading to a Home Assistant Green Box, but so far there's no real reason to upgrade. Sometimes the best upgrade is no upgrade at all.
 
-The same applies to our Ubiquiti network infrastructure, which remains unchanged with the Unifi UDM Pro](https://ui.com/eu/en/cloud-gateways/dream-machine)o handling all routing duties. While this may be excessive for a residential setup, the stability and range of features make me confident that the investment is worthwhile.
+The same applies to our Ubiquiti network infrastructure, which remains unchanged with the [Unifi UDM Pro](https://ui.com/eu/en/cloud-gateways/dream-machine) handling all routing duties. While this may be excessive for a residential setup, the stability and range of features make me confident that the investment is worthwhile.
 
 The core technologies powering our smart home:
 
@@ -82,13 +82,13 @@ The full list remains extensive, covering everything from [ZHA](https://www.home
 
 ### Dashboards
 
-I have made progress towards my goal of migrating from YAML to UI-based dashboards. All dashboards and automations are now managed via the UI. When working on the automations however I Still switch to YAML mode from time to time.
+I have made progress towards my goal of migrating from YAML to UI-based dashboards. All dashboards and automations are now managed via the UI. When working on the automations however, I still switch to YAML mode from time to time.
 
-I also change the main theme; our dashboards now have a shiny ~~liquid~~ [frosted glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) look. 
+I also changed the main theme; our dashboards now have a shiny ~~liquid~~ [frosted glass](https://github.com/wessamlauf/homeassistant-frosted-glass-themes) look. 
 
 ![Home Assistant Frosted Glass Dashboard](/assets/images/ha-dashboard-2025.png)
 
-The main dashboard has also been significantly overhauled. The dashboard is now cleaner. It got a [nice weather card](https://markus-haack.com/weather-cards-in-home-assistant-my-top-picks/), and many details are displayed based on conditions. Information only shows up when it is really important and needed. I'm also a big fan of the [new dashboard headers introduced](https://www.home-assistant.io/blog/2025/03/05/release-20253/) in HA 2025.3 and with the new theme almost all custom CSS & card-mod styles go removed.
+The main dashboard has also been significantly overhauled. The dashboard is now cleaner. It got a [nice weather card](https://markus-haack.com/weather-cards-in-home-assistant-my-top-picks/), and many details are displayed based on conditions. Information only shows up when it is really important and needed. I'm also a big fan of the [new dashboard headers introduced](https://www.home-assistant.io/blog/2025/03/05/release-20253/) in HA 2025.3 and with the new theme almost all custom CSS & card-mod styles got removed.
 
 ### Backup
 

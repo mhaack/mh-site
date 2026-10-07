@@ -24,7 +24,7 @@ Since I'm an IT guy I have to draw an architecture diagram :-) Ok I hope this is
 ## The foundation
 
 The [Odroid N2](https://www.hardkernel.com/shop/odroid-n2-with-4gbyte-ram/) system has proven to be an extremely reliable and stable system. It is still in use today as it was 4 years ago. The second Raspberry Pi is gone as I consolidated the ZigBee router to the Odroid N2 as well.
-While the overall network setup hasn't undergone significant changes, our home remains an Ubiquiti stronghold. The Unifi USG has been swapped out for the [Unifi UDM Pro](https://ui.com/eu/en/cloud-gateways/dream-machine), a powerhouse that may be deemed a bit oversized for a standard household. Today I my preferable choice would be the more streamlined [Unifi Express](https://ui.com/eu/en/cloud-gateways/express) box.
+While the overall network setup hasn't undergone significant changes, our home remains an Ubiquiti stronghold. The Unifi USG has been swapped out for the [Unifi UDM Pro](https://ui.com/eu/en/cloud-gateways/dream-machine), a powerhouse that may be deemed a bit oversized for a standard household. Today, my preferred choice would be the more streamlined [Unifi Express](https://ui.com/eu/en/cloud-gateways/express) box.
 
 The main gear and integrations driving our home are:
 
@@ -41,7 +41,7 @@ The major changes, compared to our setup [from 2020](/jama-villa/), are:
 
 ### Cameras
 
-The Arlo cameras go replaced with local network cameras. While [Arlo cameras work well with Home Assistant](/arlo-cameras-in-home-assistant/) I decided to ditch them for two main reasons: a) Arlo's shift to a subscription-based model for both new and existing customers, and b) the frequent release of new models without adequate support for older ones.
+The Arlo cameras got replaced with local network cameras. While [Arlo cameras work well with Home Assistant](/arlo-cameras-in-home-assistant/) I decided to ditch them for two main reasons: a) Arlo's shift to a subscription-based model for both new and existing customers, and b) the frequent release of new models without adequate support for older ones.
 
 Our new setup uses network cameras that operate entirely locally and record to either on device SD cards, our NAS storage or a combination of both. At the front door, we've installed a high-resolution 4K [Hikvision DS-2CD2086G2-IU](https://www.hikvision.com/en/products/IP-Products/Network-Cameras/Pro-Series-EasyIP-/ds-2cd2086g2-i-u/) connected and powered via Ethernet. Around the house, we've deployed [4 Tapo C320WS](https://www.tapo.com/en/product/smart-camera/tapo-c320ws/) cameras connected via WiFi, recording in 2K. Despite their affordable price point of approximately 50 Euros, the Tapo cameras deliver impressive image quality, especially in low-light conditions.
 
@@ -49,15 +49,13 @@ For recording all camera streams, I'm currently experimenting with various solut
 
 ### Wireless devices
 
-The major change in out smart home setup in the last 4 years was the switch of the ZigBee network. I transitioned from using Deconz with the Conbee II stick to ZHA, utilizing the SonOff ZigBee 3.0 USB dongle. This switch was motivated by the desire to eliminate the Raspberry Pi sidecar, prompting the relocation of two wireless integrations to the main Home Assistant device.
+The major change in our smart home setup in the last 4 years was the switch of the ZigBee network. I transitioned from using Deconz with the Conbee II stick to ZHA, utilizing the SonOff ZigBee 3.0 USB dongle. This switch was motivated by the desire to eliminate the Raspberry Pi sidecar, prompting the relocation of two wireless integrations to the main Home Assistant device.
 
 The migration included moving the Rademacher DuoFern stick and custom integration seamlessly. However, for ZigBee, I decided to explore ZHA based on a friend's recommendation. Building a new ZigBee network and re-pairing around 25 devices took approximately 4 hours.
 
 Over time, the smart home ecosystem expanded with the addition of various sensors, sockets, and devices. Notable additions include the [SilverCrest Power Strip](https://zigbee.blakadder.com/Lidl_HG06338.html) with 3 AC sockets and 4 USB outlets, strategically placed on my home office desk.
 
-One noticeable shift was the decline in reliability of Homematic devices, particularly the contact sensors on windows and doors. known for their .
-
-The biggest loser on the wireless device side is Homematic. For some reason out of sudden we had many issues with the contact sensors on the windows and doors. These all got replaced with [Aqara Door and Window Sensors](https://www.aqara.com/eu/product/door-and-window-sensor/). These little beasts are great have a discreet design. They can be hidden in almost any (German) window or door. In 2 years I only had to replace a battery from time to time.
+The biggest loser on the wireless device side is Homematic. For some reason, all of a sudden we had many issues with the contact sensors on the windows and doors. These all got replaced with [Aqara Door and Window Sensors](https://www.aqara.com/eu/product/door-and-window-sensor/). These little beasts are great and have a discreet design. They can be hidden in almost any (German) window or door. In 2 years I only had to replace a battery from time to time.
 
 The wireless device landscape also saw the integration of more Shelly switches, such as the [Shelly Plus 2PM](https://www.shelly.com/en-de/products/product-overview/shelly-plus-2-pm) with a custom 3D printed DIN rail mount, replacing Homematic DIN rail switching actuators.
 
@@ -67,7 +65,7 @@ Next to the Shelly switches we got a bunch of additional [Tasmota](https://tasmo
 
 In addition to the main changes mentioned earlier, here are a few other noteworthy hardware updates:
 
-- Replaced the old QNAP NAS (T-219P) with a more powerful Synology DS220+ NAS featuring an Intel CPU. This upgrade enables running Docker containers on the NAS like Frigate NVP or Scrypted (see above).
+- Replaced the old QNAP NAS (T-219P) with a more powerful Synology DS220+ NAS featuring an Intel CPU. This upgrade enables running Docker containers on the NAS like Frigate NVR or Scrypted (see above).
 
 - Upgraded our lawn mower robot to a Gardena Sileno life 750, replacing the old Landroid. The new robot can be seamlessly connected to Home Assistant and operates with significantly reduced noise levels during mowing.
 
@@ -102,7 +100,7 @@ Like any other Home Assistant setup, we have many integrations. And with every u
 - [Open-Meteo](https://www.home-assistant.io/integrations/open_meteo)
 - [Season](https://www.home-assistant.io/integrations/season)
 - [Shelly](https://www.home-assistant.io/integrations/shelly)
-- [Skrypted](https://community.home-assistant.io/t/add-on-scrypted-homekit-secure-video/398487)
+- [Scrypted](https://community.home-assistant.io/t/add-on-scrypted-homekit-secure-video/398487)
 - [SolarEdge Modbus](https://github.com/binsentsu/home-assistant-solaredge-modbus)
 - [SolarEdge](https://www.home-assistant.io/integrations/solaredge)
 - [Sonos](https://www.home-assistant.io/integrations/sonos)
@@ -132,4 +130,4 @@ With the introduction of native support for mounted network storage in Home Assi
 
 This blog post provides an updated overview of our current 2024 Home Assistant setup, showcasing shifts to ZHA for ZigBee, and integration of Shelly and Tasmota devices. Changes in hardware include a Synology NAS upgrade and a new lawn mower robot.
 
-For this year I plan to move more and more configuration to the UI and get right of the YAML files. I'm looking forward to UI improvements and potential dashboard changes in the future to migrate all my dashboards.
+For this year I plan to move more and more configuration to the UI and get rid of the YAML files. I'm looking forward to UI improvements and potential dashboard changes in the future to migrate all my dashboards.

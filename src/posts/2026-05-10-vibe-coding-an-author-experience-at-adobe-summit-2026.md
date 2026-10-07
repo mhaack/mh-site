@@ -20,7 +20,7 @@ At Adobe Summit 2026 in Las Vegas, [Chris Millar](https://www.linkedin.com/in/au
 
 Vibe coding is an AI-assisted development process in which you describe what you want in natural language and let the agent write the code. You provide intent, goals, constraints and context, and then iterate from there. This approach saves time on syntax and allows you to focus on the decisions that require human input.
 
-EDS is a good fit for this. The architecture is predictable: blocks, scripts, styles, consistent HTML structure. An AI agent trained on EDS docs has solid context to work within, which means fewer wrong turns. Adobe has published guidance on [developing with AI tools for EDS](https://www.aem.live/developer/ai-coding-agents), and there's an open-source set of [EDS Skills on GitHub](https://github.com/adobe/skills) that give agents accurate knowledge of block patterns and EDS conventions so the generated block code, content structures fit the framework rather than fighting it.
+EDS is a good fit for this. The architecture is predictable: blocks, scripts, styles, consistent HTML structure. An AI agent trained on EDS docs has solid context to work within, which means fewer wrong turns. Adobe has published guidance on [developing with AI tools for EDS](https://www.aem.live/developer/ai-coding-agents), and there's an open-source set of [EDS Skills on GitHub](https://github.com/adobe/skills) that give agents accurate knowledge of block patterns and EDS conventions so the generated block code and content structures fit the framework rather than fighting it.
 
 ## What attendees built
 
@@ -38,7 +38,7 @@ Not form-driven, not click-driven. You say what you want and the agent does it. 
 
 ## What people said
 
-The first review blogs and podcasts appeared shortly after the Adobe Summit. Arbory Digital covered the lab in their [Summit 2026 recap podcast](https://blog.arborydigital.com/en/podcast/adobe-summit-2026-recap) (YouTube + Spotify) our session comes up at the 28-minute mark. They wrote that Chris and my lab "should have convinced positively anyone that a brand-new era of author customizability is at hand." Perficient's Raf Winterpacht [called it one of his favourite sessions](https://blogs.perficient.com/top-adobe-summit-2026-takeaways/) of the entire conference.
+The first review blogs and podcasts appeared shortly after the Adobe Summit. Arbory Digital covered the lab in their [Summit 2026 recap podcast](https://blog.arborydigital.com/en/podcast/adobe-summit-2026-recap) (YouTube + Spotify); our session comes up at the 28-minute mark. They wrote that Chris's and my lab "should have convinced positively anyone that a brand-new era of author customizability is at hand." Perficient's Raf Winterpacht [called it one of his favourite sessions](https://blogs.perficient.com/top-adobe-summit-2026-takeaways/) of the entire conference.
 
 ## Resources
 

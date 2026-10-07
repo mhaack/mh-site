@@ -16,15 +16,15 @@ permalink: home-assistant-backup-2025/
 
 Two years ago, I wrote about [backing up Home Assistant to a Synology NAS](/home-assistant-backup-to-synology-nas/) using NFS shares. While that method still works, the Home Assistant team has gone all-in on backups and massively improved Home Assistant's native backup capabilities with the [2025.1](https://www.home-assistant.io/blog/2025/01/03/release-20251/) and [2025.2](https://www.home-assistant.io/blog/2025/02/05/release-20252/) releases. I have already adjusted my backup configuration. Let's explore what's new and why you should update your approach.
 
-The Home Assistant team calls the now backup strategy: [3…2…1… Backup](https://www.home-assistant.io/blog/2025/01/03/3-2-1-backup/). This means a solid backup strategy follows the 3-2-1 rule:
+The Home Assistant team calls the new backup strategy: [3…2…1… Backup](https://www.home-assistant.io/blog/2025/01/03/3-2-1-backup/). This means a solid backup strategy follows the 3-2-1 rule:
 
 - 3 copies of your data
 - 2 stored on different media
 - 1 kept off-site
 
-The recommendation is to backup regular and frequently. IMHO once a week is a good rule of a thumb. Keep backups at different locations. If you house burns down or a lightning strike you local and NAS backup could be extinguished. To be prepared for this, I synchronise important data from our NAS to the cloud (AWS S3 in our case). With the new cloud backup destinations, this can now be done directly from Home Assistant.
+The recommendation is to back up regularly and frequently. IMHO once a week is a good rule of thumb. Keep backups at different locations. If your house burns down or is struck by lightning, your local and NAS backups could be destroyed. To be prepared for this, I synchronise important data from our NAS to the cloud (AWS S3 in our case). With the new cloud backup destinations, this can now be done directly from Home Assistant.
 
-## Upgrade your backup strategy with Home Assistant's 2025 features.
+## Upgrade your backup strategy with Home Assistant's 2025 features
 
 Let's have a quick look at them together, and then I'll give you step-by-step instructions on how to configure a backup from Home Assistant 2025 onwards.
 
@@ -86,9 +86,9 @@ In order to select Synology as a backup target for Home Assistant, an extra conf
 - Go to Settings > Devices
 - Select the "Synology DSM" integration
 - Click on "Configure"
-- In the dialog select one of the shared folders and enter an folder name.
+- In the dialog select one of the shared folders and enter a folder name.
 
-The shared folders are configured on the Synology NAS. If this list is empty or the desired folder for the backups does not appear here, this must be set on Synology. See [my first article](https://markus-haack.com/home-assistant-backup-to-synology-nas/) on how to achive this.
+The shared folders are configured on the Synology NAS. If this list is empty or the desired folder for the backups does not appear here, this must be set on Synology. See [my first article](https://markus-haack.com/home-assistant-backup-to-synology-nas/) on how to achieve this.
 
 The dialog should look similar to:
 
@@ -100,7 +100,7 @@ Go back to the backup settings and click configure again. Synology DSM is now av
 
 ![screenshot 5](/assets/images/ha-backup-screenshot-2025-5.png 'Screenshot 5: Synology Backup Location'){class="x-small"}
 
-The generic NAS backup localtion can still be used, but is not requiered any more.
+The generic NAS backup location can still be used, but is not required any more.
 
 Other integrations are not automatically configured as a backup target and must be set up separately. See the integration documentation for more information.
 
@@ -116,7 +116,7 @@ Automatic backups allow a very flexible setting of when - day & time - a backup 
 
 In my case, I have a backup created at the weekend, every Saturday at 4.45am. The days, frequency and even the backup time can be set to suit your needs. Retention can be configured based on the number of backups you want to keep or the number of days you want to keep them.
 
-If the recommended settings to not fit go to: **Settings → System → Backups** and select the first option in the **Backup settings** area. This will bring you to the automatic backups options which can be flexibly adjusted here.
+If the recommended settings do not fit, go to: **Settings → System → Backups** and select the first option in the **Backup settings** area. This will bring you to the automatic backups options which can be flexibly adjusted here.
 
 ![screenshot 6](/assets/images/ha-backup-screenshot-2025-6.png 'Screenshot 6: Home Assistant Automatic Backup Options'){class="x-small"}
 
@@ -126,7 +126,7 @@ In addition to all the automatic backup settings, you also have the option of cr
 
 This makes sense, for example, if a fixed schedule cannot be used because, for example, the NAS server is switched off at night. Home Assistant provides the `backup.create_automatic` action for automations.
 
-The following sample automation trigger backups when your NAS is awake:
+The following sample automation triggers backups when your NAS is awake:
 
 ```yaml
 automation:

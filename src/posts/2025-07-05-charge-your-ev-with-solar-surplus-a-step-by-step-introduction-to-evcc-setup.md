@@ -48,11 +48,11 @@ The basic functions of evcc are pretty simple. The software handles your electri
 
 It uses all the data points to work out the best charge rate and time for your electric vehicle, based on how much solar power is being produced at the moment and the electricity tariff. The idea is to make sure you've got as much surplus energy as possible, while also keeping grid electricity costs as low as possible.
 
-The software runs always on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicles brands. It is an open-source development, and the entire codebase can be found on GitHub.
+The software always runs on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicles brands. It is an open-source development, and the entire codebase can be found on GitHub.
 
 <github-badge repo="evcc-io/evcc" ></github-badge>
 
-As they don't receive any external funding from vendors, the developers have chosen a community-funding-based approach to maintain the software. To use some of the commercial EV charger devices, you will need a sponsoring token. See the [sponsorship documentation](https://docs.evcc.io/en/docs/sponsorship) for more details. If you're not sure whether EVCC is right for you yet, don't worry! You can also get a trial token to test whether all your hardware works together properly.
+As they don't receive any external funding from vendors, the developers have chosen a community-funding-based approach to maintain the software. To use some of the commercial EV charger devices, you will need a sponsoring token. See the [sponsorship documentation](https://docs.evcc.io/en/docs/sponsorship) for more details. If you're not sure whether evcc is right for you yet, don't worry! You can also get a trial token to test whether all your hardware works together properly.
 
 ## Understanding the Charging Modes
 
@@ -70,7 +70,7 @@ It offers the best of both worlds, starting to charge immediately at a minimum p
 
 The beauty of evcc's approach is the continuous power adjustment. Unlike simple on/off solar charging solutions, evcc adjusts the charging current in real time based on available surplus, ensuring that every watt counts.
 
-You can also configure a minimum SOC for the car battery. If the current charging state is below this level, evcc will charge in fast mode until the minimum SOC is reached and than switch to solar surplus charging. This ensures that you have enough power the next time you need the car.
+You can also configure a minimum SOC for the car battery. If the current charging state is below this level, evcc will charge in fast mode until the minimum SOC is reached and then switch to solar surplus charging. This ensures that you have enough power the next time you need the car.
 
 ### Fast Mode
 
@@ -127,7 +127,7 @@ Here's why I'm such a fan:
 
 **Real Cost Savings:** Instead of selling your excess solar power back to the grid for a few cents and then buying expensive grid electricity to charge your car, evcc helps you use your own renewable energy directly.
 
-**Privacy-Focused:** The software runs always on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicle brands.
+**Privacy-Focused:** The software always runs on your local hardware. It is cloud-free, privacy-friendly and independent of any charging, solar or electric vehicle brands.
 
 ## What's Next: Ready to Set It Up?
 

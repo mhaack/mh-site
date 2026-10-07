@@ -25,9 +25,9 @@ In this annual update I give an update on the 2023 performance of our photovolta
 
 ![screenshot monthly energy production 2023](/assets/images/screenshot-energy-2023.png 'Diagram 1: monthly energy production 2023'){class="x-small"}
 
-5.180 kWh of the produced energy was consumed by ourselves which is a ration of 62%. The surplus of 3.112 kWh was fed back into the grid.
+5.180 kWh of the produced energy was consumed by ourselves which is a ratio of 62%. The surplus of 3.112 kWh was fed back into the grid.
 
-On the consumption side we used a total of 10.312 kWh of electricity. Most of this was for the heat pump (2.865 kWh), second highest consumer is our car which we charged with 2.095 kWh. 50% (5.180 kWh) of the consumed electricity produced by our selfs and the second 50% we got it from the power grid.
+On the consumption side we used a total of 10.312 kWh of electricity. Most of this was for the heat pump (2.865 kWh), second highest consumer is our car which we charged with 2.095 kWh. 50% (5.180 kWh) of the consumed electricity was produced by ourselves, and the other 50% came from the power grid.
 
 ## Comparing with Previous Years
 
@@ -41,7 +41,7 @@ November 2023 we got already some snow very early, for the area we live. As a re
 
 Overall, 2023 was still the 2nd best year for our solar system.
 
-By harnessing the power of the sun we have reduced our carbon footprint and already saved more then 12 tones of CO2 emissions. Especially in the summer month were are mostly energy independent and don't consume many kWh from the power grid.
+By harnessing the power of the sun we have reduced our carbon footprint and already saved more than 12 tonnes of CO2 emissions. Especially in the summer months we are mostly energy independent and don't consume many kWh from the power grid.
 
 I'm curious to see what the numbers will look like at the end of the year for 2024. So far the first 3 months are looking very good. January was actually the best January so far.
 
