@@ -13,7 +13,7 @@ images:
 date: 2026-10-07
 permalink: aem-experince-workspace-explained/
 ---
-What if you could build a complete, on-brand landing page from **one prompt**, inside AEM? That's one of the demos in our new Adobe Developers Live session, where my colleague Martin Buergi and I introduce **AEM Experience Workspace**. If you followed my posts on [DA MCP](TODO: link) or our [Summit 2026 lab](TODO: link), this is where that work is heading.
+What if you could build a complete, on-brand landing page from **one prompt**, inside AEM? That's one of the demos in our new Adobe Developers Live session, where my colleague Martin Buergi and I introduce **AEM Experience Workspace**. If you followed my posts on [DA MCP](/da-mcp/) or our [Summit 2026 lab](/da-vide-coding-summit-lab/), this is where that work is heading.
 
 https://www.youtube.com/watch?v=b8IeoY4SKBI
 
