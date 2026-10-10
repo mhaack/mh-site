@@ -78,7 +78,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
 
 
-  ['src/assets/fonts/', 'src/assets/icons/', 'admin', 'netlify/edge-functions'].forEach(path =>
+  ['src/assets/fonts/', 'src/assets/icons/', 'src/assets/video/', 'admin', 'netlify/edge-functions'].forEach(path =>
     eleventyConfig.addPassthroughCopy(path)
   );
 

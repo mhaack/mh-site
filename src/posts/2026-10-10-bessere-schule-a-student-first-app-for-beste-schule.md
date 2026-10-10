@@ -7,6 +7,7 @@ tags:
   - ai
 images:
   feature: /assets/images/bessere-schule-hero.png
+  video: /assets/video/bessere-schule-promo.mp4
 date: 2026-10-10
 permalink: bessere-schule/
 ---
@@ -117,8 +118,6 @@ It's not perfect, and some of it is out of my hands:
 ## Wrapping Up
 
 bessere.schule does one thing: it shows a student what matters today, this week and this term, quickly and without sending data anywhere else. The most important verdict is in: my daughter likes it. Coming from a teenager, that's high praise.
-
-https://youtu.be/6uo3t41QDKk
 
 **Try it yourself:** [bessere.schule](https://better-student-app.mhaack.workers.dev/). All you need is a beste.schule login, either as a student or as a parent.
 
