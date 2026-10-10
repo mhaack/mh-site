@@ -4,7 +4,11 @@ layout: default
 
 <article class="max-w-6xl mx-auto justify-start h-entry">
   <header class="mb-4 text-center">
-    {%- if images.feature %}
+    {%- if images.video %}
+    <figure class="lg:-mx-40 aspect-video">
+      <video src="{{ images.video }}" autoplay muted loop playsinline preload="auto" aria-label="{{ title }}" class="object-cover w-full h-full"></video>
+    </figure>
+    {%- elif images.feature %}
     <figure class="lg:-mx-40 {{ images.height or " h-72 md:h-2/3" }}">
       <img src="{{images.feature}}" alt="{{title}}" loading="eager" decoding="sync" class="object-cover w-full h-full">
     </figure>

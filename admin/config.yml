@@ -58,6 +58,10 @@ collections:
           - label: Feature
             name: feature
             widget: image
+          - label: Feature Video (mp4, replaces the image on the post page)
+            name: video
+            widget: file
+            required: false
           - label: Feature Height
             name: height
             widget: select
