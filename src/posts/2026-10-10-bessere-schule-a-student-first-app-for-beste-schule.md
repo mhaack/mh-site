@@ -119,7 +119,7 @@ It's not perfect, and some of it is out of my hands:
 
 bessere.schule does one thing: it shows a student what matters today, this week and this term, quickly and without sending data anywhere else. The most important verdict is in: my daughter likes it. Coming from a teenager, that's high praise.
 
-**Try it yourself:** [bessere.schule](https://better-student-app.mhaack.workers.dev/). All you need is a beste.schule login, either as a student or as a parent.
+**Try it yourself:** [bessere.schule](http://bessere.schule/). All you need is a beste.schule login, either as a student or as a parent.
 
 The code is on [GitHub](https://github.com/mhaack/better-student-app). So far, the app has only been tested with our school's setup. If your school also uses beste.schule, I'd love to hear from you. Feedback from students and parents at other schools is the best way to find out what works elsewhere and what needs fixing. Open an issue on GitHub or just get in touch.
 
