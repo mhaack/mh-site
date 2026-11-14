@@ -1,0 +1,62 @@
+---
+layout: base
+permalink: /opengraph/
+eleventyExcludeFromCollections: true
+---
+{#-
+  Card page for the screenshot service: /opengraph/?page=/slug/ fills in that
+  post's title and date. Text only comes from the list below, never from the
+  URL. Unknown or missing `page` renders the default card.
+-#}
+<script type="application/json" id="og-data">{
+{%- for post in collections.posts %}
+{{ post.url | dump | safe }}:{{ [post.data.title, post.date | readableDate, post.date | toIsoString] | dump | replace('<', '\\u003c') | safe }}{{ "," if not loop.last }}
+{%- endfor %}
+}</script>
+
+<main class="w-[1200px] h-[630px] flex flex-row bg-repeat-x bg-bottom bg-[url('/assets/icons/rainbow-bg.png')]">
+  <div class="basis-1/4 px-8">
+    <div class="bg-gray-800 w-64 pt-40 px-6 pb-8 text-white [&_svg]:w-32 [&_svg]:h-32">
+      {% include 'icons/mh.svg' %}
+    </div>
+  </div>
+  <div id="og-default" class="basis-3/4 mx-4 mt-36">
+    <h2 class="text-7xl font-semibold text-blue-dianne-900">{{ site.name }}</h2>
+    <p class="mt-8 text-2xl text-blue-dianne-900">Welcome to my virtual home, my little corner on the internet.</p>
+  </div>
+  <div id="og-post" class="basis-3/4 mx-4 pr-8 h-[510px] flex flex-col justify-center" hidden>
+    <div id="og-post-inner">
+      <time id="og-date" class="block ml-1 text-3xl font-medium text-blue-dianne-800"></time>
+      <h2 id="og-title" class="mt-3 text-7xl font-semibold text-blue-dianne-900"></h2>
+      <p class="mt-6 text-3xl text-blue-dianne-700">{{ site.url | replace('https://', '') }}</p>
+    </div>
+  </div>
+</main>
+
+<script>
+  (() => {
+    const data = JSON.parse(document.getElementById('og-data').textContent);
+    const key = new URLSearchParams(location.search).get('page');
+    const post = key && Object.hasOwn(data, key) ? data[key] : null;
+    if (!post) return;
+
+    const [title, date, iso] = post;
+    const titleEl = document.getElementById('og-title');
+    titleEl.textContent = title;
+    const time = document.getElementById('og-date');
+    time.textContent = date;
+    time.dateTime = iso;
+    document.getElementById('og-default').hidden = true;
+    document.getElementById('og-post').hidden = false;
+
+    // Shrink the title until the text block clears the stripes (they start at y=510).
+    const inner = document.getElementById('og-post-inner');
+    const fit = () => {
+      let size = 72;
+      titleEl.style.fontSize = size + 'px';
+      while (size > 40 && inner.offsetHeight > 440) titleEl.style.fontSize = (size -= 4) + 'px';
+    };
+    fit();
+    document.fonts.ready.then(fit);
+  })();
+</script>
