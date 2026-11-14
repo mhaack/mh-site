@@ -1,6 +1,7 @@
 {
   "name": "Markus Haack // Software Engineer",
   "description": "Markus is a software engineer at Adobe based in Leipzig, Germany, also a home automation enthusiast, married to my wonderful wife and a proud dad.",
+  "summary": "Markus Haack writes about home automation (Home Assistant, ESPHome, Zigbee, solar), DIY and maker projects, and his work at Adobe on AEM, Edge Delivery Services and Document Authoring.",
   "keywords": "Software Engineer, Adobe, JavaScript, Smarthome, Home Automation, Home Assistant, ESPHome, Arduino, Micro Controller, Germany, Europe",
   "url": "https://markus-haack.com",
   "language": "en",

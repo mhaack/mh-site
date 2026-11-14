@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: true
 
 > {{ site.description | safe }}
 
-{{ site.author.name }} writes about home automation (Home Assistant, ESPHome, Zigbee, solar), DIY and maker projects, and his work at Adobe on AEM, Edge Delivery Services and Document Authoring.
+{{ site.summary | safe }}
 
 ## Pages
 {% for item in collections.pages | sort(false, false, "url") %}
