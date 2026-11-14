@@ -1,0 +1,20 @@
+---
+permalink: /humans.txt
+layout: null
+eleventyExcludeFromCollections: true
+---
+/* TEAM */
+Developer: {{ site.author.name }}
+Contact: {{ site.author.email }}
+Site: {{ site.url }}
+Location: {{ site.author.location }}
+{%- for item in site.socialLinks %}
+{{ item.text }}: {{ item.url }}
+{%- endfor %}
+
+/* SITE */
+{%- set latest = collections.posts | last %}
+Last update: {{ (latest.data.modified or latest.date) | toIsoString }}
+{%- for label, value in site.humans %}
+{{ label }}: {{ value }}
+{%- endfor %}

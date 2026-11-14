@@ -1,0 +1,32 @@
+---
+permalink: /llms.txt
+layout: null
+eleventyExcludeFromCollections: true
+---
+{#-
+  Machine-readable summary of this site for LLMs and AI agents,
+  following the llms.txt convention: https://llmstxt.org/
+-#}
+# {{ site.name | safe }}
+
+> {{ site.description | safe }}
+
+{{ site.summary | safe }}
+
+## Pages
+{% for item in collections.pages | sort(false, false, "url") %}
+{%- if item.url and item.url != "/" and "/pages/" in item.inputPath %}
+- [{{ item.data.title | safe }}]({{ site.url }}{{ item.url }}){% if item.data.description %}: {{ item.data.description | striptags(true) | safe }}{% endif %}
+{%- endif %}
+{%- endfor %}
+
+## Posts
+{% for post in collections.posts | reverse %}
+- [{{ post.data.title | safe }}]({{ site.url }}{{ post.url }}){% if post.data.description %}: {{ post.data.description | striptags(true) | safe }}{% endif %}
+{%- endfor %}
+
+## Optional
+
+- [Sitemap]({{ site.url }}/sitemap.xml): XML sitemap of all pages
+- [Atom feed]({{ site.url }}/feed/feed.xml): The latest posts as an Atom feed
+- [JSON feed]({{ site.url }}/feed/feed.json): The latest posts as a JSON feed
