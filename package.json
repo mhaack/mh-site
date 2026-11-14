@@ -18,7 +18,7 @@
         "dotenv": "^18.0.10",
         "eleventy-plugin-youtube-embed": "^1.13.2",
         "html-minifier-terser": "^7.2.0",
-        "markdown-it": "^14.2.0",
+        "markdown-it": "^15.0.3",
         "markdown-it-abbr": "^2.0.0",
         "markdown-it-anchor": "^10.1.0",
         "markdown-it-attrs": "^5.0.1",
