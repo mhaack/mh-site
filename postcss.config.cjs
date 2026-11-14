@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ quiet: true });
 
 const isProd = process.env.ELEVENTY_ENV === 'production';
 

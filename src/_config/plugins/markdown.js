@@ -1,6 +1,5 @@
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
-import markdownItPrism from 'markdown-it-prism';
 import markdownItAnchor from 'markdown-it-anchor';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
@@ -14,10 +13,10 @@ export const markdownLib = markdownIt({
   typographer: true,
 })
   .disable('code')
+  // markdown-it 15 (linkify-it 6) no longer auto-links bare domains like
+  // "www.example.com" by default; existing posts rely on that behavior.
+  .use((md) => md.linkify.set({ fuzzyLink: true }))
   .use(markdownItAttrs)
-  .use(markdownItPrism, {
-    defaultLanguage: 'plaintext',
-  })
   .use(markdownItAnchor, {
     tabIndex: false,
     level: [2, 3],
