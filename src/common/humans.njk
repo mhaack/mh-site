@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 Developer: {{ site.author.name }}
 Contact: {{ site.author.email }}
 Site: {{ site.url }}
-Location: Leipzig, Germany
+Location: {{ site.author.location }}
 {%- for item in site.socialLinks %}
 {{ item.text }}: {{ item.url }}
 {%- endfor %}
@@ -15,8 +15,6 @@ Location: Leipzig, Germany
 /* SITE */
 {%- set latest = collections.posts | last %}
 Last update: {{ (latest.data.modified or latest.date) | toIsoString }}
-Language: English
-Doctype: HTML5
-Standards: HTML5, CSS3, Web Components
-Components: Eleventy, Tailwind CSS, WebC, is-land
-Hosting: Netlify
+{%- for label, value in site.humans %}
+{{ label }}: {{ value }}
+{%- endfor %}
