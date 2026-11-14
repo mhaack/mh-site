@@ -4494,13 +4494,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-anchor@npm:^9.2.0":
-  version: 9.2.1
-  resolution: "markdown-it-anchor@npm:9.2.1"
+"markdown-it-anchor@npm:^10.1.0":
+  version: 10.1.0
+  resolution: "markdown-it-anchor@npm:10.1.0"
   peerDependencies:
     "@types/markdown-it": "*"
     markdown-it: "*"
-  checksum: 80482638158d8c2821120f8dc7619dc4abb03e026eb701857215f21324d3e1aa635afae3680cb2cbbb87f96de0e2e89daa408b61b4b553d132dbbaafcd771a26
+  peerDependenciesMeta:
+    "@types/markdown-it":
+      optional: true
+  checksum: a12f921ff2a034f5ac87eede475d04f830cd27f6cfdac49e3ef7b3a6f7375d8a83e07b5abf582d000b9aa5eb639e210ab7d1430c0e9feefa9d90a2a0968e1c57
   languageName: node
   linkType: hard
 
@@ -4675,7 +4678,7 @@ __metadata:
     html-minifier-terser: ^7.2.0
     markdown-it: ^14.2.0
     markdown-it-abbr: ^2.0.0
-    markdown-it-anchor: ^9.2.0
+    markdown-it-anchor: ^10.1.0
     markdown-it-attrs: ^5.0.1
     markdown-it-emoji: ^3.1.0
     markdown-it-link-attributes: ^4.0.1
