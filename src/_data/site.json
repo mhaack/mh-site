@@ -15,6 +15,7 @@
     "Language": "English",
     "Standards": "HTML5, CSS3, Web Components"
   },
+  "ogImageVersion": "1",
   "defaultSocialImage": "/images/default-social-image.png",
   "headerLinks": [
     {

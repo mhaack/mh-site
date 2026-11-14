@@ -1,0 +1,52 @@
+---
+layout: base
+permalink: /opengraph/
+eleventyExcludeFromCollections: true
+---
+{#-
+  One page for all Open Graph images. The screenshot service renders
+  /opengraph/?page=/some-post/ and the inline script below fills in that post's
+  title and date, so we don't build one HTML page per post.
+
+  The text only comes from the list embedded here, looked up by the `page` URL.
+  There is deliberately no parameter to set arbitrary text. Unknown or missing
+  `page` renders the default card.
+-#}
+<script type="application/json" id="og-data">{
+{%- for post in collections.posts %}
+{{ post.url | dump | safe }}:{{ [post.data.title, post.date | readableDate, post.date | toIsoString] | dump | replace('<', '\\u003c') | safe }}{{ "," if not loop.last }}
+{%- endfor %}
+}</script>
+
+<main class="w-[1200px] h-[630px] flex flex-row bg-repeat-x bg-bottom bg-[url('/assets/icons/rainbow-bg.png')]">
+  <div class="basis-1/4 px-8">
+    <div class="bg-gray-800 w-64 pt-40 px-6 pb-6 text-white">
+      {% include 'icons/mh.svg' %}
+    </div>
+  </div>
+  <div id="og-default" class="basis-3/4 mx-4 mt-36">
+    <h2 class="text-7xl font-semibold text-blue-dianne-900">{{ site.name }}</h2>
+    <p class="mt-8 text-2xl text-blue-dianne-900">Welcome to my virtual home, my little corner on the internet.</p>
+  </div>
+  <div id="og-post" class="basis-3/4 mx-4 mt-32" hidden>
+    <span class="ml-2 text-xl text-blue-dianne-600"><time id="og-date"></time></span>
+    <h2 id="og-title" class="mt-2 text-7xl font-semibold text-blue-dianne-900"></h2>
+  </div>
+</main>
+
+<script>
+  (() => {
+    const data = JSON.parse(document.getElementById('og-data').textContent);
+    const key = new URLSearchParams(location.search).get('page');
+    const post = key && Object.hasOwn(data, key) ? data[key] : null;
+    if (!post) return;
+
+    const [title, date, iso] = post;
+    document.getElementById('og-title').textContent = title;
+    const time = document.getElementById('og-date');
+    time.textContent = date;
+    time.dateTime = iso;
+    document.getElementById('og-default').hidden = true;
+    document.getElementById('og-post').hidden = false;
+  })();
+</script>
