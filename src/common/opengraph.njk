@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: true
 -#}
 <script type="application/json" id="og-data">{
 {%- for post in collections.posts %}
-{{ post.url | dump | safe }}:{{ [post.data.title, post.date | readableDate, post.date | toIsoString, post.data.category or ""] | dump | replace('<', '\\u003c') | safe }}{{ "," if not loop.last }}
+{{ post.url | dump | safe }}:{{ [post.data.title, post.date | readableDate, post.date | toIsoString] | dump | replace('<', '\\u003c') | safe }}{{ "," if not loop.last }}
 {%- endfor %}
 }</script>
 
@@ -28,7 +28,7 @@ eleventyExcludeFromCollections: true
     <div id="og-post-inner">
       <time id="og-date" class="block ml-1 text-3xl font-medium text-blue-dianne-800"></time>
       <h2 id="og-title" class="mt-3 text-7xl font-semibold text-blue-dianne-900"></h2>
-      <p class="mt-6 text-3xl text-blue-dianne-700">{{ site.url | replace('https://', '') }}<span id="og-category" class="capitalize"></span></p>
+      <p class="mt-6 text-3xl text-blue-dianne-700">{{ site.url | replace('https://', '') }}</p>
     </div>
   </div>
 </main>
@@ -40,13 +40,12 @@ eleventyExcludeFromCollections: true
     const post = key && Object.hasOwn(data, key) ? data[key] : null;
     if (!post) return;
 
-    const [title, date, iso, category] = post;
+    const [title, date, iso] = post;
     const titleEl = document.getElementById('og-title');
     titleEl.textContent = title;
     const time = document.getElementById('og-date');
     time.textContent = date;
     time.dateTime = iso;
-    if (category) document.getElementById('og-category').textContent = ' \u00b7 ' + category;
     document.getElementById('og-default').hidden = true;
     document.getElementById('og-post').hidden = false;
 
