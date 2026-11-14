@@ -128,15 +128,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-plugin-rss@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "@11ty/eleventy-plugin-rss@npm:2.0.4"
+"@11ty/eleventy-plugin-rss@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "@11ty/eleventy-plugin-rss@npm:3.1.0"
   dependencies:
-    "@11ty/eleventy-utils": ^2.0.0
-    "@11ty/posthtml-urls": ^1.0.1
-    debug: ^4.4.0
-    posthtml: ^0.16.6
-  checksum: 922e6b0a4ff78761169ad78c4252d8dd384b685785546759107ac329b7b6a42557d868adf61b33e9fb21832077ce71383d147a44402135e530f0e07efdc8e885
+    "@11ty/eleventy-utils": ^2.0.7
+    "@11ty/posthtml-urls": ^1.0.3
+    obug: ^3.0.0
+    posthtml: ^0.16.7
+  checksum: db7e8b5f987517a1221b336c15848c96302ea04e6bdb10d8ff6992eef65d88263b2da5cab5c8ab973065e95b40f458deedd12341760ae0483327948582f1f046
   languageName: node
   linkType: hard
 
@@ -168,7 +168,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@11ty/eleventy-utils@npm:^2.0.0, @11ty/eleventy-utils@npm:^2.0.1, @11ty/eleventy-utils@npm:^2.0.2, @11ty/eleventy-utils@npm:^2.0.7":
+"@11ty/eleventy-utils@npm:^2.0.1, @11ty/eleventy-utils@npm:^2.0.2, @11ty/eleventy-utils@npm:^2.0.7":
   version: 2.0.7
   resolution: "@11ty/eleventy-utils@npm:2.0.7"
   checksum: 2cf84336be1f30ee26ed1014fe4900b97b115ff1affa893acdd6d77fa95c38efafb6c06f4d38e8a919d99ffa7219d38ba46d265dd84a6db1726124cf5bf5d4a5
@@ -236,18 +236,6 @@ __metadata:
   version: 4.17.21
   resolution: "@11ty/lodash-custom@npm:4.17.21"
   checksum: 531c399d65b36ed89dbdb0680250ca1231a156dba8f2885cd97c65b42c8d0a5882431b8e04f73a04fb73cb357f8086747e249d4252bebef244a02403c2c5c32d
-  languageName: node
-  linkType: hard
-
-"@11ty/posthtml-urls@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@11ty/posthtml-urls@npm:1.0.1"
-  dependencies:
-    evaluate-value: ^2.0.0
-    http-equiv-refresh: ^2.0.1
-    list-to-array: ^1.1.0
-    parse-srcset: ^1.0.2
-  checksum: 2c63f9079769e8a6e8bd20004f5c41e6ac279117ec79a22e1684a090b767cc915a7224755c0ad07d3d007141bb1edae787008df89feebb1598c2b5d4676464f4
   languageName: node
   linkType: hard
 
@@ -4673,7 +4661,7 @@ __metadata:
     "@11ty/eleventy": ^3.1.8
     "@11ty/eleventy-img": ^7.1.1
     "@11ty/eleventy-navigation": ^1.0.5
-    "@11ty/eleventy-plugin-rss": ^2.0.4
+    "@11ty/eleventy-plugin-rss": ^3.1.0
     "@11ty/eleventy-plugin-syntaxhighlight": ^5.0.2
     "@11ty/eleventy-plugin-webc": ^0.11.2
     "@11ty/is-land": ^5.3.0
@@ -5998,16 +5986,6 @@ __metadata:
   dependencies:
     is-json: ^2.0.1
   checksum: 5ed2d6e8813af63c4e5a2d9d026f611fd178c9052a16b302a6e0e81d1badb64dab36e3fc1531b5bdd376465f39d19a6488299b3c6dfe13beae3dd525ff856573
-  languageName: node
-  linkType: hard
-
-"posthtml@npm:^0.16.6":
-  version: 0.16.6
-  resolution: "posthtml@npm:0.16.6"
-  dependencies:
-    posthtml-parser: ^0.11.0
-    posthtml-render: ^3.0.0
-  checksum: 8b9b9d27bd2417d6b5b7d408000b23316c3c4d2a2d0ea62080a8fbec5654cc7376ea9d6317b290c030d616142144a8ca0a96ffe1e919493e3eac17442d362596
   languageName: node
   linkType: hard
 
