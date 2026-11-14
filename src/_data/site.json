@@ -13,10 +13,7 @@
   },
   "humans": {
     "Language": "English",
-    "Doctype": "HTML5",
-    "Standards": "HTML5, CSS3, Web Components",
-    "Components": "Eleventy, Tailwind CSS, WebC, is-land",
-    "Hosting": "Netlify"
+    "Standards": "HTML5, CSS3, Web Components"
   },
   "defaultSocialImage": "/images/default-social-image.png",
   "headerLinks": [
