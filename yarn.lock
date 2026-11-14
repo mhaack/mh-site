@@ -4199,7 +4199,7 @@ __metadata:
     postcss: ^8.5.33
     postcss-cli: ^12.0.0
     prettier: ^3.10.1
-    speedlify-score: ^4.0.5
+    speedlify2-score: ^1.1.0
     tailwindcss: ^4.3.5
     tailwindcss-debug-screens: ^3.0.1
   languageName: unknown
@@ -5838,10 +5838,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"speedlify-score@npm:^4.0.5":
-  version: 4.0.5
-  resolution: "speedlify-score@npm:4.0.5"
-  checksum: 9b0daf2cbd0be166115ffc47e4a35ec4396c9ad47161d687952beb3f6788f71e91d02364ca32278752797e73a702e0caa8a163a7835963fdae279cbf26e85aa2
+"speedlify2-score@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "speedlify2-score@npm:1.1.0"
+  checksum: 8df7153d85269f15ec4ad9468d6d3313c6d3f16607aa4c7e972e5e193dd51affc0e7afb9bc14c7847f16da1a9a3e28eaa2dc190588d2ae567c98ea57ce2401bd
   languageName: node
   linkType: hard
 

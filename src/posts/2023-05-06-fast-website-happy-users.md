@@ -19,7 +19,7 @@ As I have run this website for a few years now and have been doing [some re-desi
 This page now regularly scores [4x 100 in Google Lighthouse](https://pagespeed.web.dev/analysis/https-markus-haack-com/qdsgvo539g?hl=EN&form_factor=mobile) tests and is in the [top 100](https://www.11ty.dev/speedlify/markus-haack-com/) of the [Eleventy Leaderboards](https://www.11ty.dev/speedlify/).
 
 <div class="flex">
-<is-land on:visible class="mx-auto"><a href="https://www.11ty.dev/speedlify/markus-haack-com/" aria-label="Speedlify lighthous score" class="mx-auto no-underline text-mountain-300 hover:text-mountain-600"><speedlify-score speedlify-url="https://www.11ty.dev/speedlify" hash="39ea9d4a" score weight ></speedlify-score></a><template data-island="once"><script src="/assets/js/speedlify-score.js"></script></template></is-land>
+<is-land on:visible class="mx-auto"><speedlify2-score speedlify-url="https://www.speedlify.dev/" url="https://markus-haack.com/"></speedlify2-score><template data-island="once"><script type="module" src="/assets/js/speedlify2-score.js"></script></template></is-land>
 </div>
 
 So, what is [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) and why are Core Web Vitals important?
