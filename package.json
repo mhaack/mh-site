@@ -15,7 +15,7 @@
         "@tailwindcss/typography": "^0.5.20",
         "@toycode/markdown-it-class": "^1.2.4",
         "cssnano": "^9.9.0",
-        "dotenv": "^16.5.0",
+        "dotenv": "^18.0.10",
         "eleventy-plugin-youtube-embed": "^1.13.2",
         "html-minifier-terser": "^7.2.0",
         "markdown-it": "^14.2.0",

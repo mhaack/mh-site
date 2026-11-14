@@ -2217,10 +2217,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:^16.5.0":
-  version: 16.6.1
-  resolution: "dotenv@npm:16.6.1"
-  checksum: e8bd63c9a37f57934f7938a9cf35de698097fadf980cb6edb61d33b3e424ceccfe4d10f37130b904a973b9038627c2646a3365a904b4406514ea94d7f1816b69
+"dotenv@npm:^18.0.10":
+  version: 18.0.10
+  resolution: "dotenv@npm:18.0.10"
+  bin:
+    dotenv: dist/cli.cjs
+  checksum: 24227eecb13e5109cf511ce7ca8aa523b1c9740cbad4de95c7d4a02bdd0840dfd9d0158e4cc8dc80e237718fa23163f536bfb542247f121dd5f7b3a88f09979b
   languageName: node
   linkType: hard
 
@@ -4211,7 +4213,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.20
     "@toycode/markdown-it-class": ^1.2.4
     cssnano: ^9.9.0
-    dotenv: ^16.5.0
+    dotenv: ^18.0.10
     eleventy-plugin-youtube-embed: ^1.13.2
     html-minifier-terser: ^7.2.0
     markdown-it: ^14.2.0
