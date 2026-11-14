@@ -4,13 +4,9 @@ permalink: /opengraph/
 eleventyExcludeFromCollections: true
 ---
 {#-
-  One page for all Open Graph images. The screenshot service renders
-  /opengraph/?page=/some-post/ and the inline script below fills in that post's
-  title and date, so we don't build one HTML page per post.
-
-  The text only comes from the list embedded here, looked up by the `page` URL.
-  There is deliberately no parameter to set arbitrary text. Unknown or missing
-  `page` renders the default card.
+  Card page for the screenshot service: /opengraph/?page=/slug/ fills in that
+  post's title and date. Text only comes from the list below, never from the
+  URL. Unknown or missing `page` renders the default card.
 -#}
 <script type="application/json" id="og-data">{
 {%- for post in collections.posts %}

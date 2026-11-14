@@ -6,7 +6,7 @@
     {% endif -%}
     <link rel="canonical" href="{{ page.url | url | absoluteUrl(site.url) }}">
 
-    {#- One client-rendered card page; the image URL's cache key only changes with what the card shows. -#}
+    {#- OG image: one card page, cache key changes only with the card content -#}
     {%- set ogImgSrv = site.url + '/opengraph/' -%}
     {%- set ogKey = site.ogImageVersion ~ '|' ~ site.name -%}
     {%- if layout == 'post' -%}
