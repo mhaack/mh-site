@@ -4080,21 +4080,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"markdown-it-prism@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "markdown-it-prism@npm:4.0.0"
-  dependencies:
-    prismjs: 1.30.0
-  peerDependencies:
-    markdown-it: ">=7.0.1 <15.0.0"
-    markdown-it-attrs: ">=5.0.0"
-  peerDependenciesMeta:
-    markdown-it-attrs:
-      optional: true
-  checksum: 4c999030a001d5853c04321b3a69ebd32987135e96f84c0f50afaf0b94bfb4642c6ac4ee05069fb82539b4d9860079190afe225e2e8047b5a7364dfda4c488da
-  languageName: node
-  linkType: hard
-
 "markdown-it@npm:^14.2.0":
   version: 14.2.0
   resolution: "markdown-it@npm:14.2.0"
@@ -4222,7 +4207,6 @@ __metadata:
     markdown-it-attrs: ^5.0.1
     markdown-it-emoji: ^3.1.0
     markdown-it-link-attributes: ^4.0.1
-    markdown-it-prism: ^4.0.0
     netlify-plugin-cache: ^1.0.3
     npm-run-all: ^4.1.5
     pirsch-sdk: ^2.10.1
@@ -5070,7 +5054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prismjs@npm:1.30.0, prismjs@npm:^1.30.0":
+"prismjs@npm:^1.30.0":
   version: 1.30.0
   resolution: "prismjs@npm:1.30.0"
   checksum: a68eddd4c5f1c506badb5434b0b28a7cc2479ed1df91bc4218e6833c7971ef40c50ec481ea49749ac964256acb78d8b66a6bd11554938e8998e46c18b5f9a580

@@ -1,6 +1,5 @@
 import markdownIt from 'markdown-it';
 import markdownItAttrs from 'markdown-it-attrs';
-import markdownItPrism from 'markdown-it-prism';
 import markdownItAnchor from 'markdown-it-anchor';
 import markdownItClass from '@toycode/markdown-it-class';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
@@ -15,9 +14,6 @@ export const markdownLib = markdownIt({
 })
   .disable('code')
   .use(markdownItAttrs)
-  .use(markdownItPrism, {
-    defaultLanguage: 'plaintext',
-  })
   .use(markdownItAnchor, {
     tabIndex: false,
     level: [2, 3],
