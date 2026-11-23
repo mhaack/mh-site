@@ -20,7 +20,7 @@ tags:
 
 The mqtt-bme280-homie sensor project is a small and easy to integrate temperature, air pressure and humidity monitoring solution with an extra SSD1306 OLED display. Sensor data is send via MQTT and displayed on the small screen. Local time is loaded via NTP. The project is built with a cost-effective ESP8266 WiFi chip.
 
-The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable an easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
+The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable an easy integration with home automation systems like [OpenHab](https://www.openhab.org/).
 
 ![fully assembled](/assets/images/2017-01-11-mqtt-bme280-homie/box.jpg){class="x-small"}
 

@@ -26,7 +26,7 @@ I don't even remember exactly what the site was about and what content I put the
 
 ## V2 - www.markus-haack.de
 
-On December 12th, 1999 I registered my first domain markus-haack.de at [NetBeat](http://www.netbeat.de/). Initially, it was just a HTML [frameset](https://www.w3schools.com/tags/tag_frameset.asp) embedding the Geocities site. "frameset" is not used anymore these days, it was only available till HTML 4.
+On December 12th, 1999 I registered my first domain markus-haack.de at [NetBeat](https://www.netbeat.de/). Initially, it was just a HTML [frameset](https://www.w3schools.com/tags/tag_frameset.asp) embedding the Geocities site. "frameset" is not used anymore these days, it was only available till HTML 4.
 
 A few weeks later I rebuild the site with [Dreamweaver](https://www.adobe.com/products/dreamweaver.html), all static HTML with some basic CSS and Javascript. It was the first time I dipped my toe in the cold water of web development.
 
@@ -48,7 +48,7 @@ How the time flies ... In 2019, 9 years later, I reactivated the domain and star
 
 ![Screenshot of my website from 2019](/assets/images/website-2.jpeg)
 
-The redesigned blog also got a new [markus-haack.com](https://markus-haack.com) domain. The .de domain [markus-haack.de](http://www.markus-haack.de) still exists, it redirects to the .com domain.
+The redesigned blog also got a new [markus-haack.com](https://markus-haack.com) domain. The .de domain [markus-haack.de](https://www.markus-haack.de) still exists, it redirects to the .com domain.
 
 I started writing in English, which was something I had never done on my blog before. I mostly write about smart home and IoT (Internet of Things) projects I have built. I also post professional news occasionally.
 

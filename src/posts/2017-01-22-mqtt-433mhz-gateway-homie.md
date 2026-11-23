@@ -24,7 +24,7 @@ It enables you to:
 - receive 433Mhz signal from a traditional remote, optional map it to a channel and publish the data to a MQTT topic.
 - additionally, a simple temperature sensor can record the room temperature of the room where the gateway is installed.
 
-The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable easy integration with home automation systems like [OpenHab](http://www.openhab.org/).
+The software is based on [Homie](https://github.com/marvinroger/homie-esp8266) to enable easy integration with home automation systems like [OpenHab](https://www.openhab.org/).
 
 The final assembly looks like this:
 

@@ -36,7 +36,7 @@ The website was built with [Eleventy](https://www.11ty.dev/), just like my own b
 
 The starter template was already prepared to work with [Netlify CMS](https://www.netlifycms.org/) - a simple CMS UI built on top of markdown files in a Git repository. This was super helpful for us. I didn't want my daughter learning and playing around with Markdown files. A mini CMS is exactly the right thing here. She was able to start and enter dino content while I was still working on the website. Meanwhile, after getting used to the editor, markdown is no longer a problem either. I've observed her every now and then she switches from rich text editor to markdown to type in her dinosaur descriptions.
 
-On the technical side of things, the template was built around [SASS](https://sass-lang.com/) for CSS processing and [Alpine.JS](https://alpinejs.dev/) for interactions, such as search, on the website. This was a good foundation for the world map I added using the [DataMaps](http://datamaps.github.io/) library.
+On the technical side of things, the template was built around [SASS](https://sass-lang.com/) for CSS processing and [Alpine.JS](https://alpinejs.dev/) for interactions, such as search, on the website. This was a good foundation for the world map I added using the [DataMaps](https://datamaps.github.io/) library.
 
 The site itself is now hosted on [Netlify](https://www.netlify.com/), with the domain managed by [all-inkl.com](https://all-inkl.com/).
 
