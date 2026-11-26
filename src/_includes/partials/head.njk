@@ -58,8 +58,36 @@
     <meta name="twitter:image" content="{{ ogImage | safe }}">
     <meta name="twitter:image:alt" content="{{ ogAlt | escape }}">
 
+    {#- Run non-critical work only after first paint and load, when the browser is idle,
+        so it never lands on the critical path (Lighthouse counts requests started before paint) -#}
+    <script>
+      window.afterPaint = (fn) => {
+        let done = false;
+        let painted = !(PerformanceObserver.supportedEntryTypes || []).includes('paint') || performance.getEntriesByName('first-contentful-paint').length > 0;
+        let loaded = document.readyState === 'complete';
+        const run = () => {
+          if (done || !painted || !loaded) return;
+          done = true;
+          'requestIdleCallback' in window ? requestIdleCallback(fn, { timeout: 3000 }) : setTimeout(fn, 200);
+        };
+        if (!painted) new PerformanceObserver((list, obs) => { if (list.getEntriesByName('first-contentful-paint').length) { obs.disconnect(); painted = true; run(); } }).observe({ type: 'paint', buffered: true });
+        {#- Safety net: never wait on paint for more than 3s after load (e.g. a background tab) -#}
+        const onLoad = () => { loaded = true; run(); setTimeout(() => { painted = true; run(); }, 3000); };
+        loaded ? onLoad() : addEventListener('load', onLoad, { once: true });
+      };
+    </script>
     {% if env.isProd -%}
-    <script defer src="https://p.markus-haack.org/assets/js/pa.js" id="pianjs" data-hit-endpoint="https://p.markus-haack.org/pv" data-event-endpoint="https://p.markus-haack.org/e" data-session-endpoint="https://p.markus-haack.org/s"></script>
+    <script>
+      afterPaint(() => {
+        const s = document.createElement('script');
+        s.id = 'pianjs';
+        s.src = 'https://p.markus-haack.org/assets/js/pa.js';
+        s.dataset.hitEndpoint = 'https://p.markus-haack.org/pv';
+        s.dataset.eventEndpoint = 'https://p.markus-haack.org/e';
+        s.dataset.sessionEndpoint = 'https://p.markus-haack.org/s';
+        document.head.appendChild(s);
+      });
+    </script>
     {%- endif %}
     {%- if layout == 'home' -%}
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>

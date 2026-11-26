@@ -7,10 +7,5 @@ layout: base
 </main>
 {% include "partials/footer.njk" %}
 <scroll-to-top></scroll-to-top>
-{# Load is-land only after the page has loaded, so it never competes with LCP resources #}
-<script type="module">
-  const loadIsland = () => import('/assets/js/is-land.js');
-  const whenIdle = () => ('requestIdleCallback' in window ? requestIdleCallback(loadIsland, { timeout: 2000 }) : setTimeout(loadIsland, 200));
-  if (document.readyState === 'complete') whenIdle();
-  else addEventListener('load', whenIdle, { once: true });
-</script>
+{# Load is-land only after first paint and load, so it never competes with LCP resources #}
+<script>afterPaint(() => import('/assets/js/is-land.js'));</script>
