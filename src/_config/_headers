@@ -7,6 +7,3 @@
 /img/*
   Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
 
-# Pirsch script proxied via _redirects -> cache for a month
-/p/pa.js
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
