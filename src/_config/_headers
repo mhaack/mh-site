@@ -2,6 +2,11 @@
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Optimized images from eleventy-img rarely change -> cache for a week
+# Optimized images from eleventy-img rarely change -> cache for a month
+# (filenames are not content-hashed: rename the source image when replacing it)
 /img/*
-  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
+
+# Pirsch script proxied via _redirects -> cache for a month
+/p/pa.js
+  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
