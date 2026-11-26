@@ -1,12 +1,12 @@
 import dotenv from 'dotenv';
 dotenv.config({ quiet: true });
 
-import path from "node:path";
 
 import { getAllPosts, tagList } from './src/_config/collections.js';
 import filters from './src/_config/filters.js';
 import plugins from './src/_config/plugins.js';
 import shortcodes from './src/_config/shortcodes.js';
+import { imageFilename } from './src/_config/shortcodes/image.js';
 
 export default async function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/assets/**/*.{css,js,svg,png,jpeg}');
@@ -46,11 +46,7 @@ export default async function (eleventyConfig) {
       },
       pictureAttributes: {}
     },
-    filenameFormat: function (id, src, width, format, options) {
-      const extension = path.extname(src);
-      const name = path.basename(src, extension);
-      return `${name}-${width}w.${format}`;
-    },
+    filenameFormat: imageFilename,
   });
 
   // setup markdown library
