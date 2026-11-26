@@ -1,6 +1,14 @@
 import Image from '@11ty/eleventy-img';
 import path from 'node:path';
 
+// Readable name plus eleventy-img's content hash: a changed image gets a new URL,
+// so /img/* can be cached as immutable.
+export const imageFilename = (id, src, width, format) => {
+  const extension = path.extname(src);
+  const name = path.basename(src, extension);
+  return `${name}-${id}-${width}w.${format}`;
+};
+
 const stringifyAttributes = (attributeMap) => {
   return Object.entries(attributeMap)
     .map(([attribute, value]) => {
@@ -31,11 +39,7 @@ export const imageShortcode = async (
     formats: [...formats],
     //urlPath: '/assets/images/',
     outputDir: './dist/img/',
-    filenameFormat: (id, src, width, format, options) => {
-      const extension = path.extname(src);
-      const name = path.basename(src, extension);
-      return `${name}-${width}w.${format}`;
-    },
+    filenameFormat: imageFilename,
   });
 
   // Use jpeg as fallback, or the last format in the list if jpeg is not available
