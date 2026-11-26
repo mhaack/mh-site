@@ -1,3 +1,5 @@
+/hdr-test   https://httpbin.org/headers   200
+/ip-test    https://httpbin.org/ip        200
 # Analytics proxied through this origin (saves a connection to a second host)
 /p/pa.js   https://p.markus-haack.org/assets/js/pa.js   200
 /p/pv      https://p.markus-haack.org/pv                200
