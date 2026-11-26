@@ -86,7 +86,8 @@ export default async function (eleventyConfig) {
     'node_modules/speedlify2-score/speedlify2-score.js': 'assets/js/speedlify2-score.js',
     'node_modules/@11ty/is-land/is-land.js': 'assets/js/is-land.js',
     'src/_includes/components/*.js': 'assets/js/',
-    'src/_config/_redirects': '_redirects'
+    'src/_config/_redirects': '_redirects',
+    'src/_config/_headers': '_headers'
   });
 
   // general config
