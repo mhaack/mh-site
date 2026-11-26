@@ -1,3 +1,9 @@
+# Analytics proxied through this origin (saves a connection to a second host)
+/p/pa.js   https://p.markus-haack.org/assets/js/pa.js   200
+/p/pv      https://p.markus-haack.org/pv                200
+/p/e       https://p.markus-haack.org/e                 200
+/p/s       https://p.markus-haack.org/s                 200
+
 /watertank-                                                                   /watertank-esphome/
 /ultrasonic-                                                                  /ultrasonic-distance-sensors-esphome/
 /home-assistant-                                                              /home-assistant-backup-to-synology-nas/

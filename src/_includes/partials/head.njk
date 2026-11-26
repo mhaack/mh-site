@@ -59,7 +59,7 @@
     <meta name="twitter:image:alt" content="{{ ogAlt | escape }}">
 
     {% if env.isProd -%}
-    <script defer src="https://p.markus-haack.org/assets/js/pa.js" id="pianjs" data-hit-endpoint="https://p.markus-haack.org/pv" data-event-endpoint="https://p.markus-haack.org/e" data-session-endpoint="https://p.markus-haack.org/s"></script>
+    <script defer src="/p/pa.js" id="pianjs" data-hit-endpoint="/p/pv" data-event-endpoint="/p/e" data-session-endpoint="/p/s"></script>
     {%- endif %}
     {%- if layout == 'home' -%}
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","url":"https://markus-haack.com/","name":"{{ site.name }}","description":"{{site.description }}"}</script>
